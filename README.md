@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-The web app runs in read-only mode when Supabase variables are absent. It includes a real MapLibre GL JS map, OpenFreeMap vector tiles with an OpenStreetMap raster fallback, OpenStreetMap attribution, 20px gym markers, neighborhood and price filters, gym detail cards, save/compare state, and the Google OAuth callback path.
+The web app runs in a safe read-only demo mode when Supabase variables are absent or invalid. It includes a real MapLibre GL JS map, OpenFreeMap vector tiles with an OpenStreetMap raster fallback, OpenStreetMap attribution, 20px gym markers, neighborhood and price filters, gym detail cards, local save/compare state, and the Google OAuth callback path. The page explains which capability is unavailable instead of failing during static rendering.
 
 ### Refresh the San Francisco directory
 
@@ -51,9 +51,20 @@ The API exposes `/healthz`, `/api/v1/gyms`, and the versioned OpenAPI contract. 
 2. Run `supabase/migrations/0001_initial.sql` in the SQL editor or with the Supabase CLI.
 3. Configure Google under Supabase Auth providers.
 4. Add exact redirect URLs for local development and GitHub Pages.
-5. Copy `.env.example` to `.env` and fill in the publishable key and server-only values.
+5. Copy `.env.example` to `.env` and fill in the browser-safe public URL and publishable key.
+
+The web client accepts `NEXT_PUBLIC_SUPABASE_URL` plus either a current `sb_publishable_...` key or an older browser-safe anon JWT. When both are valid, Google sign-in uses Supabase Auth with PKCE and the session is persisted by the Supabase browser client. When they are missing, incomplete, placeholder values, or malformed, the directory stays usable in demo mode and does not expose a stack trace or secret-shaped value. The current static prototype stores saved gyms locally; cloud-save syncing should be enabled only after imported listings have stable Supabase `gym_location_id` values and their RLS policies are verified.
 
 Never put `SUPABASE_SERVICE_ROLE_KEY`, database credentials, or Google client secrets in the frontend or GitHub Pages artifact.
+
+For GitHub Pages, public build variables must be provided to the Pages build job (for example as GitHub Actions **Variables**, not committed files):
+
+```text
+NEXT_PUBLIC_SUPABASE_URL
+NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
+```
+
+These values are intentionally public in the static bundle. Do not substitute `SUPABASE_SERVICE_ROLE_KEY`, `sb_secret_...`, a database password, or a Google OAuth client secret. The repository's CI currently builds the public demo fixture; enabling cloud authentication in the deployed Pages artifact requires wiring these two public variables into the Pages build environment after the Supabase redirect allowlist is configured.
 
 ## GitHub Pages
 
