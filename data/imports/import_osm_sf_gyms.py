@@ -19,6 +19,30 @@ from urllib.request import Request, urlopen
 ROOT = Path(__file__).resolve().parents[2]
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 SF_BBOX = "37.70,-122.53,37.84,-122.35"
+PRICE_OVERRIDES_PATH = ROOT / "data" / "imports" / "official-price-overrides.json"
+NEIGHBORHOOD_BOXES = (
+    ("Bayview–Hunters Point", 37.705, 37.745, -122.405, -122.355),
+    ("Visitacion Valley", 37.705, 37.735, -122.445, -122.405),
+    ("Excelsior", 37.715, 37.755, -122.475, -122.425),
+    ("Outer Mission", 37.735, 37.765, -122.455, -122.405),
+    ("Bernal Heights", 37.735, 37.765, -122.445, -122.405),
+    ("Mission", 37.745, 37.78, -122.435, -122.405),
+    ("Potrero Hill", 37.745, 37.775, -122.415, -122.38),
+    ("Sunset", 37.735, 37.79, -122.53, -122.455),
+    ("Parkside", 37.735, 37.775, -122.49, -122.44),
+    ("Haight–Ashbury", 37.755, 37.785, -122.465, -122.43),
+    ("Castro", 37.75, 37.775, -122.45, -122.425),
+    ("SOMA", 37.765, 37.795, -122.42, -122.38),
+    ("Downtown", 37.775, 37.81, -122.425, -122.385),
+    ("Nob Hill", 37.785, 37.81, -122.43, -122.405),
+    ("North Beach", 37.79, 37.82, -122.42, -122.39),
+    ("Russian Hill", 37.795, 37.82, -122.45, -122.415),
+    ("Pacific Heights", 37.785, 37.81, -122.46, -122.425),
+    ("Marina", 37.795, 37.825, -122.48, -122.44),
+    ("Presidio", 37.78, 37.81, -122.52, -122.45),
+    ("Inner Richmond", 37.775, 37.805, -122.51, -122.46),
+    ("Outer Richmond", 37.775, 37.81, -122.53, -122.49),
+)
 QUERY = f"""
 [out:json][timeout:120];
 (
@@ -48,13 +72,18 @@ def address_from_tags(tags: dict[str, Any]) -> str:
     return ", ".join(part for part in (first_line, city, postcode) if part) or city
 
 
-def neighborhood_from_tags(tags: dict[str, Any]) -> str:
-    return (
+def neighborhood_from_tags(tags: dict[str, Any], latitude: float, longitude: float) -> str:
+    tagged = (
         text(tags.get("addr:neighbourhood"))
         or text(tags.get("addr:suburb"))
         or text(tags.get("addr:district"))
-        or "San Francisco"
     )
+    if tagged:
+        return tagged
+    for name, min_lat, max_lat, min_lon, max_lon in NEIGHBORHOOD_BOXES:
+        if min_lat <= latitude <= max_lat and min_lon <= longitude <= max_lon:
+            return name
+    return "San Francisco"
 
 
 def gym_type(tags: dict[str, Any]) -> str:
@@ -100,13 +129,18 @@ def element_coordinates(element: dict[str, Any]) -> tuple[float, float] | None:
     return None
 
 
-def normalize(element: dict[str, Any], imported_at: str) -> dict[str, Any] | None:
+def normalize(
+    element: dict[str, Any], imported_at: str, price_overrides: list[dict[str, Any]]
+) -> dict[str, Any] | None:
     tags = element.get("tags") or {}
     name = text(tags.get("name")) or text(tags.get("official_name"))
     coordinates = element_coordinates(element)
     if not name or coordinates is None:
         return None
     latitude, longitude = coordinates
+    city = text(tags.get("addr:city")).casefold()
+    if city and city not in {"san francisco", "sf"}:
+        return None
     osm_type = text(element.get("type"))
     osm_id = int(element["id"])
     osm_url = f"https://www.openstreetmap.org/{osm_type}/{osm_id}"
@@ -114,17 +148,21 @@ def normalize(element: dict[str, Any], imported_at: str) -> dict[str, Any] | Non
     is_open_247 = "24/7" in hours.replace(" ", "").lower()
     website = safe_url(text(tags.get("contact:website")) or text(tags.get("website")))
     display_address = address_from_tags(tags)
+    price = next(
+        (override for override in price_overrides if re.search(text(override.get("match")), name, re.IGNORECASE)),
+        {},
+    )
     return {
         "id": f"osm-{osm_type}-{osm_id}",
         "name": name,
-        "neighborhood": neighborhood_from_tags(tags),
+        "neighborhood": neighborhood_from_tags(tags, latitude, longitude),
         "address": display_address,
         "gymType": gym_type(tags),
         "latitude": round(latitude, 7),
         "longitude": round(longitude, 7),
-        "monthlyPrice": None,
-        "dayPassPrice": None,
-        "freshness": "unknown",
+        "monthlyPrice": price.get("monthlyPrice"),
+        "dayPassPrice": price.get("dayPassPrice"),
+        "freshness": "verified" if price else "unknown",
         "isOpen247": is_open_247,
         "amenities": amenities_from_tags(tags),
         "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -134,6 +172,10 @@ def normalize(element: dict[str, Any], imported_at: str) -> dict[str, Any] | Non
         "sourceId": f"{osm_type}/{osm_id}",
         "sourceUrl": osm_url,
         "importedAt": imported_at,
+        "priceSource": price.get("priceSource", ""),
+        "priceSourceUrl": price.get("priceSourceUrl", ""),
+        "priceNote": price.get("priceNote", ""),
+        "priceObservedAt": price.get("priceObservedAt", ""),
     }
 
 
@@ -180,10 +222,11 @@ def main() -> int:
         print(f"Overpass import failed: {error}", file=sys.stderr)
         return 1
 
+    price_overrides = json.loads(PRICE_OVERRIDES_PATH.read_text(encoding="utf-8"))
     gyms: list[dict[str, Any]] = []
     seen: set[tuple[str, float, float]] = set()
     for element in elements:
-        gym = normalize(element, imported_at)
+        gym = normalize(element, imported_at, price_overrides)
         if gym is None:
             continue
         dedupe_key = (gym["name"].casefold(), round(gym["latitude"], 5), round(gym["longitude"], 5))
