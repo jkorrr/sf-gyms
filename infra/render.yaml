@@ -1,0 +1,19 @@
+services:
+  - type: web
+    name: sf-gyms-api
+    runtime: docker
+    dockerfilePath: infra/Dockerfile.api
+    healthCheckPath: /healthz
+    envVars:
+      - key: APP_ENV
+        value: production
+      - key: DEMO_MODE
+        value: "false"
+      - key: DATABASE_URL
+        sync: false
+      - key: SUPABASE_JWKS_URL
+        sync: false
+      - key: SUPABASE_JWT_ISSUER
+        sync: false
+      - key: CORS_ORIGINS
+        value: https://jkorrr.github.io

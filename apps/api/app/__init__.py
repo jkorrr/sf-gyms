@@ -1,0 +1,1 @@
+"""SF Gyms FastAPI application."""

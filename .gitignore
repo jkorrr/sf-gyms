@@ -1,0 +1,36 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.pip-audit-cache/
+.coverage
+htmlcov/
+.venv/
+venv/
+*.egg-info/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+*.tsbuildinfo
+
+# Local environment and secrets
+.env
+.env.*
+!.env.example
+!.env.local.example
+*.pem
+*.key
+
+# IDE / OS
+.DS_Store
+.idea/
+.vscode/
+
+# Local Supabase / Docker artifacts
+.supabase/
+*.log
+coverage.xml
