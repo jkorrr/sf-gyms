@@ -9,21 +9,6 @@ import type { GeoPoint } from "../lib/geo";
 
 const OPENFREEMAP_STYLE = "https://tiles.openfreemap.org/styles/liberty";
 const SF_CENTER: [number, number] = [-122.4194, 37.7749];
-const OSM_RASTER_STYLE = {
-  version: 8 as const,
-  sources: {
-    osm: {
-      type: "raster" as const,
-      tiles: ["https://tile.openstreetmap.org/{z}/{x}/{y}.png"],
-      tileSize: 256,
-      attribution: "© OpenStreetMap contributors",
-    },
-  },
-  layers: [{ id: "osm-raster", type: "raster" as const, source: "osm" }],
-};
-
-type Basemap = "openfreemap" | "osm";
-
 // OSM is the reliable visual baseline. OpenFreeMap remains available as a
 // vector style, but a slow or blocked vector source must never leave a blank map.
 const OSM_RASTER_STYLE = {
@@ -115,20 +100,6 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
     });
     mapRef.current = map;
     setIsReady(true);
-
-    const fallbackToOsm = () => {
-      if (mapRef.current !== map || basemap !== "openfreemap") return;
-      setMapError("OpenFreeMap tiles did not finish loading, so the map switched to OpenStreetMap streets.");
-      setBasemap("osm");
-      map.setStyle(OSM_RASTER_STYLE);
-    };
-    fallbackTimerRef.current = window.setTimeout(fallbackToOsm, 3500);
-    map.on("sourcedata", (event) => {
-      if (event.sourceId === "openmaptiles" && event.isSourceLoaded && fallbackTimerRef.current !== null) {
-        window.clearTimeout(fallbackTimerRef.current);
-        fallbackTimerRef.current = null;
-      }
-    });
 
     return () => {
       clearFallbackTimer();
