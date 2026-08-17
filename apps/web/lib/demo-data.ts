@@ -22,6 +22,10 @@ export type Gym = {
   sourceId: string;
   sourceUrl: string;
   importedAt: string;
+  priceSource?: string;
+  priceSourceUrl?: string;
+  priceNote?: string;
+  priceObservedAt?: string;
 };
 
 type ImportedGym = Omit<Gym, "monthlyPrice" | "dayPassPrice"> & {

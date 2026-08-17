@@ -4,7 +4,7 @@
     "sourceUrl": "https://www.openstreetmap.org/",
     "queryUrl": "https://overpass-api.de/api/interpreter",
     "boundingBox": "37.70,-122.53,37.84,-122.35",
-    "importedAt": "2026-08-17T00:39:44Z",
+    "importedAt": "2026-08-17T01:10:11Z",
     "license": "ODbL 1.0",
     "notes": "Named OSM-tagged fitness facilities in the San Francisco bounding box; coverage is not exhaustive."
   },
@@ -12,7 +12,7 @@
     {
       "id": "osm-node-13163731721",
       "name": "'N Motion Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7732592,
@@ -31,12 +31,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13163731721",
       "sourceUrl": "https://www.openstreetmap.org/node/13163731721",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4270584674",
       "name": "10th Planet Jiu Jitsu - San Francisco",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "261 South Van Ness Avenue, San Francisco, 94103",
       "gymType": "Sports centre",
       "latitude": 37.7690568,
@@ -55,19 +59,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4270584674",
       "sourceUrl": "https://www.openstreetmap.org/node/4270584674",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-417957202",
       "name": "24 Hour Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1200 Van Ness Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7867992,
       "longitude": -122.4212723,
-      "monthlyPrice": null,
+      "monthlyPrice": 38.99,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": true,
       "amenities": [
         "Hours listed"
@@ -78,19 +86,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/417957202",
       "sourceUrl": "https://www.openstreetmap.org/node/417957202",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
+      "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
+      "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-8641835222",
       "name": "24 Hour Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "1850 Ocean Avenue, San Francisco, 94112",
       "gymType": "Fitness centre",
       "latitude": 37.7253132,
       "longitude": -122.461745,
-      "monthlyPrice": null,
+      "monthlyPrice": 38.99,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -101,19 +113,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/8641835222",
       "sourceUrl": "https://www.openstreetmap.org/node/8641835222",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
+      "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
+      "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-392204795",
       "name": "24 Hour Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7898626,
       "longitude": -122.40233,
-      "monthlyPrice": null,
+      "monthlyPrice": 38.99,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "24Hour Fitness"
@@ -124,12 +140,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/392204795",
       "sourceUrl": "https://www.openstreetmap.org/node/392204795",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
+      "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
+      "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-4613901103",
       "name": "24 hours fitness active",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.8059854,
@@ -145,12 +165,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4613901103",
       "sourceUrl": "https://www.openstreetmap.org/node/4613901103",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2819256103",
       "name": "Academy of Tae Kwon Do",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "998 Oak Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7734734,
@@ -166,12 +190,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2819256103",
       "sourceUrl": "https://www.openstreetmap.org/node/2819256103",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10733903069",
       "name": "ACHILLES STRETCH",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7666313,
@@ -189,12 +217,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10733903069",
       "sourceUrl": "https://www.openstreetmap.org/node/10733903069",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11038336709",
       "name": "ACHILLLES STRETCH",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7869804,
@@ -212,12 +244,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11038336709",
       "sourceUrl": "https://www.openstreetmap.org/node/11038336709",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5840675556",
       "name": "Active Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "9 Clement Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7830588,
@@ -235,12 +271,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5840675556",
       "sourceUrl": "https://www.openstreetmap.org/node/5840675556",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12724420917",
       "name": "Advanced Wellness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "523 Clement Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7828093,
@@ -258,12 +298,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12724420917",
       "sourceUrl": "https://www.openstreetmap.org/node/12724420917",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-586709251",
       "name": "Alex Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2275 Market Street, San Francisco, 94114",
       "gymType": "Sports centre",
       "latitude": 37.7646725,
@@ -279,12 +323,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/586709251",
       "sourceUrl": "https://www.openstreetmap.org/node/586709251",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-93703728",
       "name": "Alice Marble Tennis Courts",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.8015544,
@@ -300,12 +348,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/93703728",
       "sourceUrl": "https://www.openstreetmap.org/way/93703728",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3485460052",
       "name": "Alinea Crossfit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7623626,
@@ -321,12 +373,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3485460052",
       "sourceUrl": "https://www.openstreetmap.org/node/3485460052",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-276880820",
       "name": "American Gymnastics Club",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "2520 Judah Street, San Francisco",
       "gymType": "Gymnastics",
       "latitude": 37.7614131,
@@ -344,12 +400,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/276880820",
       "sourceUrl": "https://www.openstreetmap.org/way/276880820",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-287871312",
       "name": "American Gymnastics Club",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "390 Bayshore Boulevard, San Francisco",
       "gymType": "Gymnastics",
       "latitude": 37.7412943,
@@ -367,12 +427,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/287871312",
       "sourceUrl": "https://www.openstreetmap.org/way/287871312",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12337873692",
       "name": "Anthony Silva Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "858 Stanyan Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7665072,
@@ -392,12 +456,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12337873692",
       "sourceUrl": "https://www.openstreetmap.org/node/12337873692",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-417275907",
       "name": "Aquatic Park Bocce Ball",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Nob Hill",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.806234,
@@ -415,12 +483,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/417275907",
       "sourceUrl": "https://www.openstreetmap.org/node/417275907",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9775741769",
       "name": "Ascent Athletics",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "6101 Geary Boulevard, San Francisco, 94121",
       "gymType": "Fitness centre",
       "latitude": 37.7798939,
@@ -436,12 +508,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9775741769",
       "sourceUrl": "https://www.openstreetmap.org/node/9775741769",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-585968188",
       "name": "Asham Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Gymnastics",
       "latitude": 37.758916,
@@ -460,12 +536,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/585968188",
       "sourceUrl": "https://www.openstreetmap.org/node/585968188",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10047742013",
       "name": "Asta Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "417 14th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7679986,
@@ -481,12 +561,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10047742013",
       "sourceUrl": "https://www.openstreetmap.org/node/10047742013",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3542720509",
       "name": "Back to Sports",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "342 West Portal Avenue, San Francisco, 94127",
       "gymType": "Sports centre",
       "latitude": 37.7375105,
@@ -504,19 +588,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3542720509",
       "sourceUrl": "https://www.openstreetmap.org/node/3542720509",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-996696401",
       "name": "Bakar Fitness Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "1675 Owens Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.767814,
       "longitude": -122.393368,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "multi",
@@ -528,12 +616,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/996696401",
       "sourceUrl": "https://www.openstreetmap.org/node/996696401",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "UCSF Fitness & Recreation day pass page",
+      "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/day-and-shower-passes",
+      "priceNote": "Adult single-day pass; member-hosted and student rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-6636000320",
       "name": "BALANCE BEAM",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7670692,
@@ -551,12 +643,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000320",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000320",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10090042978",
       "name": "Barry's",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "2246, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7996807,
@@ -572,12 +668,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10090042978",
       "sourceUrl": "https://www.openstreetmap.org/node/10090042978",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6496142801",
       "name": "Barry's",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2280 Market Street, San Francisco, 94114",
       "gymType": "Strength gym",
       "latitude": 37.7648157,
@@ -596,12 +696,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6496142801",
       "sourceUrl": "https://www.openstreetmap.org/node/6496142801",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9411404744",
       "name": "Barry's",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "333 Bush Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.790492,
@@ -621,12 +725,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9411404744",
       "sourceUrl": "https://www.openstreetmap.org/node/9411404744",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2537352227",
       "name": "Bay Area Strength and Nutrition",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "150 Lombard Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.804055,
@@ -645,12 +753,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2537352227",
       "sourceUrl": "https://www.openstreetmap.org/node/2537352227",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-24460896",
       "name": "Bay Club Gateway",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "370 Drumm Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7974988,
@@ -670,12 +782,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/24460896",
       "sourceUrl": "https://www.openstreetmap.org/way/24460896",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6693646146",
       "name": "Bay Jiu-jitsu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Nob Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7858423,
@@ -691,12 +807,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6693646146",
       "sourceUrl": "https://www.openstreetmap.org/node/6693646146",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-27211224",
       "name": "Beach Chalet Soccer Fields",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7673719,
@@ -712,12 +832,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/27211224",
       "sourceUrl": "https://www.openstreetmap.org/way/27211224",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3161283284",
       "name": "Beach Glass Hot Yoga & Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "1461 Church Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7474593,
@@ -736,12 +860,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3161283284",
       "sourceUrl": "https://www.openstreetmap.org/node/3161283284",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000317",
       "name": "BENCH LEG-RAISE",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.768052,
@@ -759,12 +887,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000317",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000317",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4004802465",
       "name": "Benchmark Climbing",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1414 Van Ness Avenue, San Francisco, 94109",
       "gymType": "Sports centre",
       "latitude": 37.7888897,
@@ -785,12 +917,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4004802465",
       "sourceUrl": "https://www.openstreetmap.org/node/4004802465",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4637222973",
       "name": "Bernal Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "908 Cortland Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7388822,
@@ -809,12 +945,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4637222973",
       "sourceUrl": "https://www.openstreetmap.org/node/4637222973",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11777394338",
       "name": "Bhakti SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1227 Folsom Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.774512,
@@ -833,12 +973,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11777394338",
       "sourceUrl": "https://www.openstreetmap.org/node/11777394338",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12300049959",
       "name": "Bija Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "1348 9th Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7631464,
@@ -858,12 +1002,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12300049959",
       "sourceUrl": "https://www.openstreetmap.org/node/12300049959",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6829148264",
       "name": "Bikram Hot Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "5644 Geary Boulevard, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7804862,
@@ -882,12 +1030,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6829148264",
       "sourceUrl": "https://www.openstreetmap.org/node/6829148264",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13507740638",
       "name": "Blik Yoga Shala",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "1515 Waller Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7687271,
@@ -906,12 +1058,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13507740638",
       "sourceUrl": "https://www.openstreetmap.org/node/13507740638",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11103972677",
       "name": "Body Tonic SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1586 Bush Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7884063,
@@ -930,12 +1086,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11103972677",
       "sourceUrl": "https://www.openstreetmap.org/node/11103972677",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4190906588",
       "name": "BODY-CURL",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7875102,
@@ -953,12 +1113,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4190906588",
       "sourceUrl": "https://www.openstreetmap.org/node/4190906588",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000321",
       "name": "BODY-CURL",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7699476,
@@ -976,12 +1140,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000321",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000321",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6815206679",
       "name": "Bodyrok",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "1529 Haight Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7698338,
@@ -1001,12 +1169,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6815206679",
       "sourceUrl": "https://www.openstreetmap.org/node/6815206679",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12251148868",
       "name": "Bodyrok",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7921753,
@@ -1022,12 +1194,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12251148868",
       "sourceUrl": "https://www.openstreetmap.org/node/12251148868",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3379321522",
       "name": "BodyROK Studios",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7999353,
@@ -1045,12 +1221,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3379321522",
       "sourceUrl": "https://www.openstreetmap.org/node/3379321522",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12727181306",
       "name": "Bright Star Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7612632,
@@ -1068,7 +1248,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12727181306",
       "sourceUrl": "https://www.openstreetmap.org/node/12727181306",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-256495543",
@@ -1078,9 +1262,9 @@
       "gymType": "Sports centre",
       "latitude": 37.7841975,
       "longitude": -122.4291749,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -1089,12 +1273,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/256495543",
       "sourceUrl": "https://www.openstreetmap.org/way/256495543",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-way-173103606",
       "name": "Buena Vista Park Tennis Courts",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7694874,
@@ -1112,12 +1300,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/173103606",
       "sourceUrl": "https://www.openstreetmap.org/way/173103606",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10553760194",
       "name": "California Martial Arts",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1217 Polk Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7880274,
@@ -1133,12 +1325,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10553760194",
       "sourceUrl": "https://www.openstreetmap.org/node/10553760194",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-89802412",
       "name": "Charlie Sava Pool",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "2695 19th Avenue, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7377812,
@@ -1156,12 +1352,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/89802412",
       "sourceUrl": "https://www.openstreetmap.org/way/89802412",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2653231297",
       "name": "Chin up bar",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Nob Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.8038042,
@@ -1179,12 +1379,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2653231297",
       "sourceUrl": "https://www.openstreetmap.org/node/2653231297",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000313",
       "name": "CHIN-UP",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7695315,
@@ -1202,12 +1406,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000313",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000313",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-162056248",
       "name": "Chinese Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7942179,
@@ -1223,12 +1431,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/162056248",
       "sourceUrl": "https://www.openstreetmap.org/way/162056248",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3204993502",
       "name": "Church Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "1710 Church Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7433709,
@@ -1244,12 +1456,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3204993502",
       "sourceUrl": "https://www.openstreetmap.org/node/3204993502",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-248782086",
       "name": "Church of 8 Wheels",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "554 Fillmore Street, San Francisco, 94117",
       "gymType": "Sports centre",
       "latitude": 37.7747689,
@@ -1268,12 +1484,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/248782086",
       "sourceUrl": "https://www.openstreetmap.org/way/248782086",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000324",
       "name": "CIRCLE BODY",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7693021,
@@ -1291,12 +1511,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000324",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000324",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13905876759",
       "name": "City CrossFit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2 Brook Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7408251,
@@ -1314,7 +1538,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13905876759",
       "sourceUrl": "https://www.openstreetmap.org/node/13905876759",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6615295110",
@@ -1324,9 +1552,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7297769,
       "longitude": -122.4761865,
-      "monthlyPrice": null,
+      "monthlyPrice": 34.99,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -1335,12 +1563,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6615295110",
       "sourceUrl": "https://www.openstreetmap.org/node/6615295110",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "City Sports Club San Francisco membership rate page",
+      "priceSourceUrl": "https://citysportsfitness.com/Pages/MembershipSignUpRate.aspx?id=wead5DoGQM1uFv9DRrzRyg%3D%3D",
+      "priceNote": "Classic multi-club state-of-enrollment plan; $69 annual fee and taxes may apply.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-4238377195",
       "name": "Classical Pilates Studio",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "2636 Ocean Avenue, San Francisco, 94127",
       "gymType": "Fitness centre",
       "latitude": 37.7320741,
@@ -1356,12 +1588,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4238377195",
       "sourceUrl": "https://www.openstreetmap.org/node/4238377195",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10917024236",
       "name": "Club Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "635 8th Street, San Francisco, 94103",
       "gymType": "Fitness centre",
       "latitude": 37.7710571,
@@ -1381,12 +1617,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10917024236",
       "sourceUrl": "https://www.openstreetmap.org/node/10917024236",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-288705759",
       "name": "Coffman Pool",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Visitacion Valley",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7132292,
@@ -1404,12 +1644,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/288705759",
       "sourceUrl": "https://www.openstreetmap.org/way/288705759",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11701513373",
       "name": "CORE MVMT",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2349 Market Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7632431,
@@ -1427,12 +1671,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11701513373",
       "sourceUrl": "https://www.openstreetmap.org/node/11701513373",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10276089929",
       "name": "Core40",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "1390 Larkin Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.790612,
@@ -1450,12 +1698,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10276089929",
       "sourceUrl": "https://www.openstreetmap.org/node/10276089929",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3658328826",
       "name": "Core40",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "827 Irving Street, San Francisco, 94122",
       "gymType": "Fitness centre",
       "latitude": 37.7638942,
@@ -1471,12 +1723,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3658328826",
       "sourceUrl": "https://www.openstreetmap.org/node/3658328826",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-663533939",
       "name": "CorePower Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "100 Church Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7693496,
@@ -1494,12 +1750,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/663533939",
       "sourceUrl": "https://www.openstreetmap.org/node/663533939",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10806697937",
       "name": "CorePower Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "1200 4th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7723982,
@@ -1517,12 +1777,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10806697937",
       "sourceUrl": "https://www.openstreetmap.org/node/10806697937",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6604031903",
       "name": "CorePower Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "150 Van Ness Avenue, San Francisco, 94102",
       "gymType": "Fitness centre",
       "latitude": 37.777004,
@@ -1542,12 +1806,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6604031903",
       "sourceUrl": "https://www.openstreetmap.org/node/6604031903",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9465192363",
       "name": "CorePower Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1900 Van Ness Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7932437,
@@ -1565,12 +1833,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9465192363",
       "sourceUrl": "https://www.openstreetmap.org/node/9465192363",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2337759318",
       "name": "CorePower Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "2909 Webster Street, San Francisco, 94123",
       "gymType": "Fitness centre",
       "latitude": 37.7975935,
@@ -1589,12 +1861,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2337759318",
       "sourceUrl": "https://www.openstreetmap.org/node/2337759318",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4548624459",
       "name": "CorePower Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "619 Divisadero Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7753105,
@@ -1612,12 +1888,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4548624459",
       "sourceUrl": "https://www.openstreetmap.org/node/4548624459",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10542243253",
       "name": "Crossfit Golden Gate",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7938033,
@@ -1635,12 +1915,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10542243253",
       "sourceUrl": "https://www.openstreetmap.org/node/10542243253",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-8660742534",
       "name": "CrossFit Potrero Hill",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "175 De Haro Street, San Francisco, 94103",
       "gymType": "Fitness centre",
       "latitude": 37.7680274,
@@ -1658,19 +1942,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/8660742534",
       "sourceUrl": "https://www.openstreetmap.org/node/8660742534",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-272700932",
       "name": "Crunch Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "2324 Chestnut Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.8003977,
       "longitude": -122.4417636,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -1679,19 +1967,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/272700932",
       "sourceUrl": "https://www.openstreetmap.org/way/272700932",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Crunch Fitness official FAQ",
+      "priceSourceUrl": "https://www.crunch.com/faq",
+      "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-2167144976",
       "name": "Crunch Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "2330 Polk Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7983396,
       "longitude": -122.422077,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed",
@@ -1703,19 +1995,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2167144976",
       "sourceUrl": "https://www.openstreetmap.org/node/2167144976",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Crunch Fitness official FAQ",
+      "priceSourceUrl": "https://www.crunch.com/faq",
+      "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-10859142467",
       "name": "Crunch Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "350 3rd Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7833784,
       "longitude": -122.3986881,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed"
@@ -1726,19 +2022,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10859142467",
       "sourceUrl": "https://www.openstreetmap.org/node/10859142467",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Crunch Fitness official FAQ",
+      "priceSourceUrl": "https://www.crunch.com/faq",
+      "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-5136124421",
       "name": "Crunch Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Nob Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7979248,
       "longitude": -122.4277598,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -1747,12 +2047,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5136124421",
       "sourceUrl": "https://www.openstreetmap.org/node/5136124421",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Crunch Fitness official FAQ",
+      "priceSourceUrl": "https://www.crunch.com/faq",
+      "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-11017139804",
       "name": "Custom Fit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "323 Octavia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7749811,
@@ -1771,12 +2075,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11017139804",
       "sourceUrl": "https://www.openstreetmap.org/node/11017139804",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9718392241",
       "name": "Custom Fit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7715262,
@@ -1792,12 +2100,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9718392241",
       "sourceUrl": "https://www.openstreetmap.org/node/9718392241",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13737433654",
       "name": "DeSisto Strength Training",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "150 Lombard Street, San Francisco, 94111-1139",
       "gymType": "Fitness centre",
       "latitude": 37.804132,
@@ -1816,12 +2128,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13737433654",
       "sourceUrl": "https://www.openstreetmap.org/node/13737433654",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10869882845",
       "name": "Divine Yoga Studio",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "406 Brannan Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7800307,
@@ -1840,12 +2156,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10869882845",
       "sourceUrl": "https://www.openstreetmap.org/node/10869882845",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4057014702",
       "name": "Dogpatch Boulders",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "2573 3rd Street, San Francisco, 94107",
       "gymType": "Sports centre",
       "latitude": 37.7566304,
@@ -1865,12 +2185,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4057014702",
       "sourceUrl": "https://www.openstreetmap.org/node/4057014702",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-162518014",
       "name": "DuPont Tennis Courts",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "336 31st Avenue, San Francisco, 94121",
       "gymType": "Sports centre",
       "latitude": 37.7826865,
@@ -1889,12 +2213,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/162518014",
       "sourceUrl": "https://www.openstreetmap.org/way/162518014",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10689773926",
       "name": "Eden Fitness Studio",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1650 Bush Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7882855,
@@ -1910,12 +2238,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10689773926",
       "sourceUrl": "https://www.openstreetmap.org/node/10689773926",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12559170747",
       "name": "EHS",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "1452 Valencia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7496267,
@@ -1934,12 +2266,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12559170747",
       "sourceUrl": "https://www.openstreetmap.org/node/12559170747",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6499455087",
       "name": "Empire Jiu Jitsu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2356 Mission Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7593836,
@@ -1955,12 +2291,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6499455087",
       "sourceUrl": "https://www.openstreetmap.org/node/6499455087",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10069564222",
       "name": "Equinox",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1560 Mission Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7735357,
@@ -1976,12 +2316,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10069564222",
       "sourceUrl": "https://www.openstreetmap.org/node/10069564222",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6848648284",
       "name": "Equinox",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "747 Market Street, San Francisco, 94103",
       "gymType": "Fitness centre",
       "latitude": 37.7865523,
@@ -1999,12 +2343,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6848648284",
       "sourceUrl": "https://www.openstreetmap.org/node/6848648284",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-8722619583",
       "name": "Equinox",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7919223,
@@ -2020,12 +2368,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/8722619583",
       "sourceUrl": "https://www.openstreetmap.org/node/8722619583",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2341083525",
       "name": "Equinox Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7972838,
@@ -2041,12 +2393,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2341083525",
       "sourceUrl": "https://www.openstreetmap.org/node/2341083525",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11558519647",
       "name": "Ethan Rich Performance",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "290 Division Street, San Francisco, 94103",
       "gymType": "Fitness centre",
       "latitude": 37.7695236,
@@ -2066,12 +2422,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11558519647",
       "sourceUrl": "https://www.openstreetmap.org/node/11558519647",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5180870606",
       "name": "Ever Strong SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "218 Fillmore Street, San Francisco, 94117",
       "gymType": "Fitness centre",
       "latitude": 37.7715105,
@@ -2087,12 +2447,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5180870606",
       "sourceUrl": "https://www.openstreetmap.org/node/5180870606",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2652517824",
       "name": "Evolve Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "1201A Guerrero Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7518051,
@@ -2111,12 +2475,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2652517824",
       "sourceUrl": "https://www.openstreetmap.org/node/2652517824",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-478789263",
       "name": "Exercise area",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.806138,
@@ -2134,12 +2502,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/478789263",
       "sourceUrl": "https://www.openstreetmap.org/way/478789263",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9966877631",
       "name": "F45 Training",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.8059286,
@@ -2155,12 +2527,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9966877631",
       "sourceUrl": "https://www.openstreetmap.org/node/9966877631",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11279968189",
       "name": "F45 Training",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7815574,
@@ -2176,12 +2552,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11279968189",
       "sourceUrl": "https://www.openstreetmap.org/node/11279968189",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-257161411",
       "name": "fit Bernal fit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "701 Cortland Avenue, San Francisco, 94110",
       "gymType": "Fitness centre",
       "latitude": 37.7390792,
@@ -2197,12 +2577,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/257161411",
       "sourceUrl": "https://www.openstreetmap.org/way/257161411",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13910388898",
       "name": "fitGLENfit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Visitacion Valley",
       "address": "666 Chenery Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7345977,
@@ -2221,12 +2605,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13910388898",
       "sourceUrl": "https://www.openstreetmap.org/node/13910388898",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-262286607",
       "name": "Fitlife",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.8055017,
@@ -2242,7 +2630,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/262286607",
       "sourceUrl": "https://www.openstreetmap.org/way/262286607",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3833169025",
@@ -2263,7 +2655,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3833169025",
       "sourceUrl": "https://www.openstreetmap.org/node/3833169025",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2714942367",
@@ -2284,19 +2680,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2714942367",
       "sourceUrl": "https://www.openstreetmap.org/node/2714942367",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3881440385",
       "name": "Fitness SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "1455 Fillmore Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7829647,
       "longitude": -122.433826,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 129.95,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed",
@@ -2308,19 +2708,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3881440385",
       "sourceUrl": "https://www.openstreetmap.org/node/3881440385",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "FITNESS SF official help center",
+      "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+      "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-2338837133",
       "name": "Fitness SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2301 Market Street, San Francisco, 94114",
       "gymType": "Sports centre",
       "latitude": 37.763734,
       "longitude": -122.433329,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 129.95,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed"
@@ -2331,19 +2735,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2338837133",
       "sourceUrl": "https://www.openstreetmap.org/node/2338837133",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "FITNESS SF official help center",
+      "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+      "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-14077434881",
       "name": "Fitness SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7759707,
       "longitude": -122.4160917,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 129.95,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -2352,19 +2760,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/14077434881",
       "sourceUrl": "https://www.openstreetmap.org/node/14077434881",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "FITNESS SF official help center",
+      "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+      "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-relation-16437206",
       "name": "Fitness SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7884783,
       "longitude": -122.3975344,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 129.95,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed",
@@ -2376,19 +2788,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "relation/16437206",
       "sourceUrl": "https://www.openstreetmap.org/relation/16437206",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "FITNESS SF official help center",
+      "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+      "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-way-25371830",
       "name": "Fitness SF SOMA",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1001 Brannan Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7696742,
       "longitude": -122.4069617,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 129.95,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed",
@@ -2400,12 +2816,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/25371830",
       "sourceUrl": "https://www.openstreetmap.org/way/25371830",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "FITNESS SF official help center",
+      "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+      "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-8660768875",
       "name": "Fitness Urbano",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "80 Missouri Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7656784,
@@ -2423,12 +2843,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/8660768875",
       "sourceUrl": "https://www.openstreetmap.org/node/8660768875",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4069447302",
       "name": "Five Animals Choy Lay Fut Kung Fu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "2408 19th Avenue, San Francisco, 94116",
       "gymType": "Sports centre",
       "latitude": 37.7428654,
@@ -2446,12 +2870,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4069447302",
       "sourceUrl": "https://www.openstreetmap.org/node/4069447302",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-261268792",
       "name": "Flagship",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7683734,
@@ -2467,12 +2895,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/261268792",
       "sourceUrl": "https://www.openstreetmap.org/way/261268792",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10874914159",
       "name": "Flagship Athletic Performance",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "201 King Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7777137,
@@ -2488,12 +2920,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10874914159",
       "sourceUrl": "https://www.openstreetmap.org/node/10874914159",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13189660932",
       "name": "Fluxfit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7765272,
@@ -2509,12 +2945,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13189660932",
       "sourceUrl": "https://www.openstreetmap.org/node/13189660932",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13712240860",
       "name": "Fog City Community Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "1643 Valencia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7468481,
@@ -2532,12 +2972,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13712240860",
       "sourceUrl": "https://www.openstreetmap.org/node/13712240860",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-263806345",
       "name": "Folk",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "286 Divisadero Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7719843,
@@ -2556,12 +3000,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/263806345",
       "sourceUrl": "https://www.openstreetmap.org/way/263806345",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-28283272",
       "name": "Garfield Pool",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7501006,
@@ -2579,12 +3027,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/28283272",
       "sourceUrl": "https://www.openstreetmap.org/way/28283272",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-37180632",
       "name": "Glen Park Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7370461,
@@ -2602,12 +3054,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/37180632",
       "sourceUrl": "https://www.openstreetmap.org/way/37180632",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3702219080",
       "name": "Glow Yoga & Wellness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1548 Stockton Street, San Francisco, 94133",
       "gymType": "Fitness centre",
       "latitude": 37.8000761,
@@ -2626,12 +3082,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3702219080",
       "sourceUrl": "https://www.openstreetmap.org/node/3702219080",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10764775827",
       "name": "Gracie Jiu-Jitsu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.784003,
@@ -2647,7 +3107,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10764775827",
       "sourceUrl": "https://www.openstreetmap.org/node/10764775827",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2713442479",
@@ -2668,12 +3132,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2713442479",
       "sourceUrl": "https://www.openstreetmap.org/node/2713442479",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11198894699",
       "name": "Gymworx",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "415 De Haro Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7647359,
@@ -2689,12 +3157,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11198894699",
       "sourceUrl": "https://www.openstreetmap.org/node/11198894699",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12439601098",
       "name": "H3 Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7846442,
@@ -2710,12 +3182,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12439601098",
       "sourceUrl": "https://www.openstreetmap.org/node/12439601098",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5270986784",
       "name": "Hamilton Pool",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7845657,
@@ -2735,12 +3211,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5270986784",
       "sourceUrl": "https://www.openstreetmap.org/node/5270986784",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-545151976",
       "name": "Hamilton Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7843934,
@@ -2758,12 +3238,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/545151976",
       "sourceUrl": "https://www.openstreetmap.org/way/545151976",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000334",
       "name": "HAND-WALK",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.767448,
@@ -2781,12 +3265,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000334",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000334",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4069447294",
       "name": "Hapkido Jiu-Jitsu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "603 Taraval Street, San Francisco, 94116",
       "gymType": "Sports centre",
       "latitude": 37.7430602,
@@ -2804,12 +3292,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4069447294",
       "sourceUrl": "https://www.openstreetmap.org/node/4069447294",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3801395450",
       "name": "Haum",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "780 Stanyan Street, San Francisco, 94117",
       "gymType": "Fitness centre",
       "latitude": 37.7677295,
@@ -2829,12 +3321,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3801395450",
       "sourceUrl": "https://www.openstreetmap.org/node/3801395450",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9354883876",
       "name": "Hit Fit SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "1150 Sutter Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7879675,
@@ -2853,12 +3349,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9354883876",
       "sourceUrl": "https://www.openstreetmap.org/node/9354883876",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10665980914",
       "name": "Hit Fit SF",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2345 Harrison Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7598185,
@@ -2876,12 +3376,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10665980914",
       "sourceUrl": "https://www.openstreetmap.org/node/10665980914",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000316",
       "name": "HOP-KICK",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7692119,
@@ -2899,12 +3403,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000316",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000316",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12044095332",
       "name": "Hot Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "248 Sutter Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7898127,
@@ -2922,12 +3430,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12044095332",
       "sourceUrl": "https://www.openstreetmap.org/node/12044095332",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-1516960485",
       "name": "Infinity Training Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7677839,
@@ -2943,12 +3455,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/1516960485",
       "sourceUrl": "https://www.openstreetmap.org/node/1516960485",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5595070837",
       "name": "Invincible Barbell",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2310 Mission Street, San Francisco, 94110",
       "gymType": "Fitness centre",
       "latitude": 37.7599931,
@@ -2968,12 +3484,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5595070837",
       "sourceUrl": "https://www.openstreetmap.org/node/5595070837",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2975978386",
       "name": "Iron + Mettle",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "3769 24th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7516463,
@@ -2991,12 +3511,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2975978386",
       "sourceUrl": "https://www.openstreetmap.org/node/2975978386",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6471102057",
       "name": "Iron + Mettle Personal Training Annex",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "3920B 24th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.751624,
@@ -3014,12 +3538,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6471102057",
       "sourceUrl": "https://www.openstreetmap.org/node/6471102057",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10869882844",
       "name": "J Body Works",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "410 Brannan Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7799986,
@@ -3037,12 +3565,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10869882844",
       "sourceUrl": "https://www.openstreetmap.org/node/10869882844",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2786114658",
       "name": "Jaime's Martial Arts",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "1201 Church Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7516207,
@@ -3061,12 +3593,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2786114658",
       "sourceUrl": "https://www.openstreetmap.org/node/2786114658",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11166132566",
       "name": "Jolt",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "839 Bryant Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7751383,
@@ -3085,7 +3621,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11166132566",
       "sourceUrl": "https://www.openstreetmap.org/node/11166132566",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-109022547",
@@ -3106,12 +3646,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/109022547",
       "sourceUrl": "https://www.openstreetmap.org/way/109022547",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-120481450",
       "name": "Kezar Pavilion",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "755 Stanyan Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7674867,
@@ -3127,12 +3671,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/120481450",
       "sourceUrl": "https://www.openstreetmap.org/way/120481450",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10733903065",
       "name": "KNEE LIFT",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7669517,
@@ -3150,19 +3698,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10733903065",
       "sourceUrl": "https://www.openstreetmap.org/node/10733903065",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-368174394",
       "name": "Koret Health And Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7766628,
       "longitude": -122.4546072,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -3171,12 +3723,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/368174394",
       "sourceUrl": "https://www.openstreetmap.org/node/368174394",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "USF Koret Health & Recreation Center membership page",
+      "priceSourceUrl": "https://www.usfca.edu/koret/membership/membership-types",
+      "priceNote": "Public daily-use pass. Eligibility and annual/15-use passes have different pricing.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-way-1119503894",
       "name": "Krav Maga Institute",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7784275,
@@ -3192,12 +3748,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/1119503894",
       "sourceUrl": "https://www.openstreetmap.org/way/1119503894",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-288325533",
       "name": "La Petite Baleen",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Marina",
       "address": "933 Mason Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.805392,
@@ -3215,12 +3775,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/288325533",
       "sourceUrl": "https://www.openstreetmap.org/way/288325533",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10897941853",
       "name": "Lagree Fit 415",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "112 Channel Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7746636,
@@ -3239,12 +3803,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10897941853",
       "sourceUrl": "https://www.openstreetmap.org/node/10897941853",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4611606987",
       "name": "Lalanne Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7806919,
@@ -3260,12 +3828,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4611606987",
       "sourceUrl": "https://www.openstreetmap.org/node/4611606987",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5735236443",
       "name": "Lama's Kenpo Karate",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "461 Cortland Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7391743,
@@ -3284,12 +3856,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5735236443",
       "sourceUrl": "https://www.openstreetmap.org/node/5735236443",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000328",
       "name": "LEG-STRETCH",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7672083,
@@ -3307,12 +3883,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000328",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000328",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11009320684",
       "name": "LEG-STRETCH",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7868788,
@@ -3330,12 +3910,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11009320684",
       "sourceUrl": "https://www.openstreetmap.org/node/11009320684",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4022645782",
       "name": "Lily Cai Chinese Dance Company",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.8069371,
@@ -3353,12 +3937,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4022645782",
       "sourceUrl": "https://www.openstreetmap.org/node/4022645782",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-25309187",
       "name": "Lisa and Douglas Goldman Tennis Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "50 Bowling Green Drive, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7701051,
@@ -3377,19 +3965,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/25309187",
       "sourceUrl": "https://www.openstreetmap.org/way/25309187",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4631674513",
       "name": "Live Fit Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "1094 Bush Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7894482,
       "longitude": -122.4152712,
-      "monthlyPrice": null,
+      "monthlyPrice": 117,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -3400,19 +3992,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4631674513",
       "sourceUrl": "https://www.openstreetmap.org/node/4631674513",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Live Fit Gym official signup page",
+      "priceSourceUrl": "https://livefitgym.com/signup-old/",
+      "priceNote": "Basic plan; location access varies by membership tier.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-412109978",
       "name": "Live Fit Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1630 Polk Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7920227,
       "longitude": -122.42085,
-      "monthlyPrice": null,
+      "monthlyPrice": 117,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed",
@@ -3424,19 +4020,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/412109978",
       "sourceUrl": "https://www.openstreetmap.org/node/412109978",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Live Fit Gym official signup page",
+      "priceSourceUrl": "https://livefitgym.com/signup-old/",
+      "priceNote": "Basic plan; location access varies by membership tier.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-way-137602240",
       "name": "Live Fit Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "2145 Market Street, San Francisco, 94114",
       "gymType": "Fitness centre",
       "latitude": 37.7666446,
       "longitude": -122.4295202,
-      "monthlyPrice": null,
+      "monthlyPrice": 117,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -3447,12 +4047,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/137602240",
       "sourceUrl": "https://www.openstreetmap.org/way/137602240",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Live Fit Gym official signup page",
+      "priceSourceUrl": "https://livefitgym.com/signup-old/",
+      "priceNote": "Basic plan; location access varies by membership tier.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-6496135009",
       "name": "Live Fit Gym Elite Training",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "673 Valencia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7620449,
@@ -3471,12 +4075,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6496135009",
       "sourceUrl": "https://www.openstreetmap.org/node/6496135009",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-9659815458",
       "name": "LiveFitGym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "301 Fell Street, San Francisco, 94102",
       "gymType": "Fitness centre",
       "latitude": 37.775777,
@@ -3494,12 +4102,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9659815458",
       "sourceUrl": "https://www.openstreetmap.org/node/9659815458",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5840675565",
       "name": "LiveFitGym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "403 Arguello Boulevard, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7829806,
@@ -3515,12 +4127,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5840675565",
       "sourceUrl": "https://www.openstreetmap.org/node/5840675565",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3790822677",
       "name": "LiveFitGym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "957 Cole Street, San Francisco, 94117",
       "gymType": "Fitness centre",
       "latitude": 37.7650143,
@@ -3539,12 +4155,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3790822677",
       "sourceUrl": "https://www.openstreetmap.org/node/3790822677",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-968356991",
       "name": "LiveFitGym Wellness Club",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "780 Valencia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7605228,
@@ -3563,12 +4183,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/968356991",
       "sourceUrl": "https://www.openstreetmap.org/node/968356991",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6591743880",
       "name": "Local's Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "2940 Geary Boulevard, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7822797,
@@ -3587,12 +4211,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6591743880",
       "sourceUrl": "https://www.openstreetmap.org/node/6591743880",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5359937504",
       "name": "Log Jumps",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7645889,
@@ -3610,12 +4238,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5359937504",
       "sourceUrl": "https://www.openstreetmap.org/node/5359937504",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2666409791",
       "name": "Lotusland",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "1360 Valencia Street, San Francisco, 94110",
       "gymType": "Fitness centre",
       "latitude": 37.7511093,
@@ -3635,12 +4267,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2666409791",
       "sourceUrl": "https://www.openstreetmap.org/node/2666409791",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12569789803",
       "name": "Love Story Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "473 Valencia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7654039,
@@ -3659,12 +4295,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12569789803",
       "sourceUrl": "https://www.openstreetmap.org/node/12569789803",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12152934880",
       "name": "Luxfit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7747722,
@@ -3680,7 +4320,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12152934880",
       "sourceUrl": "https://www.openstreetmap.org/node/12152934880",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-634526276",
@@ -3703,12 +4347,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/634526276",
       "sourceUrl": "https://www.openstreetmap.org/way/634526276",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-273590287",
       "name": "Memorial Gymnasium",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "Golden Gate Avenue, San Francisco, 94117",
       "gymType": "Sports centre",
       "latitude": 37.7768668,
@@ -3724,12 +4372,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/273590287",
       "sourceUrl": "https://www.openstreetmap.org/way/273590287",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5810883731",
       "name": "Mighty Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Pacific Heights",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7875496,
@@ -3745,12 +4397,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5810883731",
       "sourceUrl": "https://www.openstreetmap.org/node/5810883731",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-113283290",
       "name": "Mission Cliffs",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2295 Harrison Street, San Francisco, 94110",
       "gymType": "Sports centre",
       "latitude": 37.7606787,
@@ -3771,12 +4427,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/113283290",
       "sourceUrl": "https://www.openstreetmap.org/way/113283290",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-1107106606",
       "name": "Mission Dolores Park",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7610402,
@@ -3794,12 +4454,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/1107106606",
       "sourceUrl": "https://www.openstreetmap.org/way/1107106606",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-1107106610",
       "name": "Mission Dolores Park",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7610743,
@@ -3817,12 +4481,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/1107106610",
       "sourceUrl": "https://www.openstreetmap.org/way/1107106610",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-1111843035",
       "name": "Mission Playground",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7590757,
@@ -3840,12 +4508,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/1111843035",
       "sourceUrl": "https://www.openstreetmap.org/way/1111843035",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3674255661",
       "name": "Moon and Stars Studio",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "1262 9th Avenue, San Francisco, 94122",
       "gymType": "Fitness centre",
       "latitude": 37.7648022,
@@ -3864,12 +4536,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3674255661",
       "sourceUrl": "https://www.openstreetmap.org/node/3674255661",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11021366849",
       "name": "Motus",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7853748,
@@ -3888,12 +4564,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11021366849",
       "sourceUrl": "https://www.openstreetmap.org/node/11021366849",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-24334661",
       "name": "Movement San Francisco",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Marina",
       "address": "924 Mason Street, San Francisco, 94129",
       "gymType": "Sports centre",
       "latitude": 37.8043617,
@@ -3913,12 +4593,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/24334661",
       "sourceUrl": "https://www.openstreetmap.org/way/24334661",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4754013404",
       "name": "Moxie",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7853439,
@@ -3936,12 +4620,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4754013404",
       "sourceUrl": "https://www.openstreetmap.org/node/4754013404",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11777394274",
       "name": "Mukunda",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1250 Folsom Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7744693,
@@ -3959,12 +4647,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11777394274",
       "sourceUrl": "https://www.openstreetmap.org/node/11777394274",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13743991602",
       "name": "Muscle Beach",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "4027 Noriega Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7527473,
@@ -3984,12 +4676,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13743991602",
       "sourceUrl": "https://www.openstreetmap.org/node/13743991602",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4098815839",
       "name": "Muscle Beach",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "710 La Playa Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7749894,
@@ -4010,12 +4706,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4098815839",
       "sourceUrl": "https://www.openstreetmap.org/node/4098815839",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10054566861",
       "name": "MX3 Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "3166 16th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7649486,
@@ -4031,12 +4731,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10054566861",
       "sourceUrl": "https://www.openstreetmap.org/node/10054566861",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6471124711",
       "name": "MX3 Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "4045A 24th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7512716,
@@ -4054,12 +4758,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6471124711",
       "sourceUrl": "https://www.openstreetmap.org/node/6471124711",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2484293076",
       "name": "MX3 Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "520 Waller Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7710356,
@@ -4079,12 +4787,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2484293076",
       "sourceUrl": "https://www.openstreetmap.org/node/2484293076",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10198521798",
       "name": "MX3 Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7635885,
@@ -4100,12 +4812,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10198521798",
       "sourceUrl": "https://www.openstreetmap.org/node/10198521798",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-1107523056",
       "name": "Nate Thurmond Basketball Court",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.772284,
@@ -4124,12 +4840,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/1107523056",
       "sourceUrl": "https://www.openstreetmap.org/way/1107523056",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11384826394",
       "name": "Nice Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "5059 Geary Boulevard, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7804022,
@@ -4147,12 +4867,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11384826394",
       "sourceUrl": "https://www.openstreetmap.org/node/11384826394",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-70948786",
       "name": "North Beach Clubhouse",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.8027177,
@@ -4168,12 +4892,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/70948786",
       "sourceUrl": "https://www.openstreetmap.org/way/70948786",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-70948785",
       "name": "North Beach Swimming Pool",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.8027052,
@@ -4191,12 +4919,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/70948785",
       "sourceUrl": "https://www.openstreetmap.org/way/70948785",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-276587703",
       "name": "Northern Tiger Kenpo",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "1319 20th Avenue, San Francisco, 94122",
       "gymType": "Sports centre",
       "latitude": 37.7631035,
@@ -4214,12 +4946,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/276587703",
       "sourceUrl": "https://www.openstreetmap.org/way/276587703",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-283457626",
       "name": "One Martial Arts",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "850 Taraval Street, San Francisco, 94116",
       "gymType": "Sports centre",
       "latitude": 37.7433075,
@@ -4237,12 +4973,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/283457626",
       "sourceUrl": "https://www.openstreetmap.org/way/283457626",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13574072411",
       "name": "Orange Theory",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Haight–Ashbury",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7846695,
@@ -4258,19 +4998,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13574072411",
       "sourceUrl": "https://www.openstreetmap.org/node/13574072411",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11254215578",
       "name": "Orangetheory Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1255 Columbus Avenue, San Francisco, 94133",
       "gymType": "Fitness centre",
       "latitude": 37.8057908,
       "longitude": -122.418471,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -4279,19 +5023,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11254215578",
       "sourceUrl": "https://www.openstreetmap.org/node/11254215578",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
+      "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-10131461286",
       "name": "Orangetheory Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1411 Market Street, San Francisco, 94103",
       "gymType": "Fitness centre",
       "latitude": 37.7761003,
       "longitude": -122.417714,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -4300,19 +5048,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10131461286",
       "sourceUrl": "https://www.openstreetmap.org/node/10131461286",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
+      "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-10874914162",
       "name": "Orangetheory Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "215 King Street, San Francisco, 94107",
       "gymType": "Fitness centre",
       "latitude": 37.7774743,
       "longitude": -122.39214,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -4321,19 +5073,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10874914162",
       "sourceUrl": "https://www.openstreetmap.org/node/10874914162",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
+      "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-10538306970",
       "name": "Orangetheory Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "343 Sansome Street, San Francisco, 94104",
       "gymType": "Fitness centre",
       "latitude": 37.7938086,
       "longitude": -122.4019303,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -4342,12 +5098,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10538306970",
       "sourceUrl": "https://www.openstreetmap.org/node/10538306970",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
+      "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-4891328528",
       "name": "Pacific Wushu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "33 Vicente Street, San Francisco, 94127",
       "gymType": "Fitness centre",
       "latitude": 37.7394486,
@@ -4365,12 +5125,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4891328528",
       "sourceUrl": "https://www.openstreetmap.org/node/4891328528",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-195470156",
       "name": "Palega Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Visitacion Valley",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.729107,
@@ -4386,12 +5150,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/195470156",
       "sourceUrl": "https://www.openstreetmap.org/way/195470156",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4558023336",
       "name": "Park Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Pacific Heights",
       "address": "1823 Divisadero Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7864309,
@@ -4410,12 +5178,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4558023336",
       "sourceUrl": "https://www.openstreetmap.org/node/4558023336",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4069447292",
       "name": "Parkside Pilates",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "545 Taraval Street, San Francisco, 94116",
       "gymType": "Fitness centre",
       "latitude": 37.7430813,
@@ -4431,12 +5203,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4069447292",
       "sourceUrl": "https://www.openstreetmap.org/node/4069447292",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12132354827",
       "name": "Perform for Golf",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1700 Market Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7729922,
@@ -4454,12 +5230,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12132354827",
       "sourceUrl": "https://www.openstreetmap.org/node/12132354827",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10859142546",
       "name": "PerformForLife",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "650 Mission Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7872219,
@@ -4475,12 +5255,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10859142546",
       "sourceUrl": "https://www.openstreetmap.org/node/10859142546",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5735236442",
       "name": "Pilates Heights",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "333 Cortland Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7392829,
@@ -4498,12 +5282,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5735236442",
       "sourceUrl": "https://www.openstreetmap.org/node/5735236442",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6177260821",
       "name": "Pilates on Page",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "10 Page Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7743877,
@@ -4521,12 +5309,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6177260821",
       "sourceUrl": "https://www.openstreetmap.org/node/6177260821",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3540256794",
       "name": "Pilates Story",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "183 West Portal Avenue, San Francisco, 94127",
       "gymType": "Fitness centre",
       "latitude": 37.738891,
@@ -4542,19 +5334,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3540256794",
       "sourceUrl": "https://www.openstreetmap.org/node/3540256794",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-1206893699",
       "name": "Planet Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "417 Montgomery Street, San Francisco, 94104",
       "gymType": "Fitness centre",
       "latitude": 37.7933814,
       "longitude": -122.4030566,
-      "monthlyPrice": null,
+      "monthlyPrice": 15,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -4563,35 +5359,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/1206893699",
       "sourceUrl": "https://www.openstreetmap.org/node/1206893699",
-      "importedAt": "2026-08-17T00:39:44Z"
-    },
-    {
-      "id": "osm-way-981481297",
-      "name": "Point Bonita YMCA",
-      "neighborhood": "San Francisco",
-      "address": "981 Fort Barry, Sausalito, 94965",
-      "gymType": "Sports centre",
-      "latitude": 37.8232359,
-      "longitude": -122.5295093,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
-      "isOpen247": false,
-      "amenities": [
-        "Website listed"
-      ],
-      "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
-      "hours": "Hours not listed",
-      "websiteUrl": "https://www.ymcasf.org/locations/point-bonita-ymca",
-      "sourceName": "OpenStreetMap",
-      "sourceId": "way/981481297",
-      "sourceUrl": "https://www.openstreetmap.org/way/981481297",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "Planet Fitness San Francisco (Lakeshore) membership page",
+      "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
+      "priceNote": "Classic plan; plus taxes and fees, including a $49 annual fee. Plans and promotions can change.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-10553806544",
       "name": "Polk st. Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1436 Polk Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7901349,
@@ -4607,12 +5384,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10553806544",
       "sourceUrl": "https://www.openstreetmap.org/node/10553806544",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-27393835",
       "name": "Potrero Hill Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "801 Arkansas Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7561686,
@@ -4628,12 +5409,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/27393835",
       "sourceUrl": "https://www.openstreetmap.org/way/27393835",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2815132111",
       "name": "Powerplay",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "1235 4th Street, San Francisco, 94158",
       "gymType": "Fitness centre",
       "latitude": 37.7724751,
@@ -4649,19 +5434,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2815132111",
       "sourceUrl": "https://www.openstreetmap.org/node/2815132111",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-69020085",
       "name": "Presidio YMCA",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Pacific Heights",
       "address": "63 Funston Avenue, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7997092,
       "longitude": -122.4547549,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -4670,12 +5459,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/69020085",
       "sourceUrl": "https://www.openstreetmap.org/way/69020085",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-3622501398",
       "name": "Pure Barre",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "162 West Portal Avenue, San Francisco, 94127",
       "gymType": "Fitness centre",
       "latitude": 37.7392516,
@@ -4693,12 +5486,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3622501398",
       "sourceUrl": "https://www.openstreetmap.org/node/3622501398",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2996292603",
       "name": "Pure Barre",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "3800 24th Street, San Francisco, 94114",
       "gymType": "Fitness centre",
       "latitude": 37.751785,
@@ -4717,12 +5514,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2996292603",
       "sourceUrl": "https://www.openstreetmap.org/node/2996292603",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4349256209",
       "name": "Purusha YogaStudio",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "3729 Balboa Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7755099,
@@ -4741,12 +5542,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4349256209",
       "sourceUrl": "https://www.openstreetmap.org/node/4349256209",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000325",
       "name": "PUSH-UP",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7687014,
@@ -4764,12 +5569,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000325",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000325",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11009320687",
       "name": "PUSH-UP",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7867788,
@@ -4787,12 +5596,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11009320687",
       "sourceUrl": "https://www.openstreetmap.org/node/11009320687",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4199680597",
       "name": "Raise the Bar Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "1655 Taraval Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7425579,
@@ -4810,12 +5623,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4199680597",
       "sourceUrl": "https://www.openstreetmap.org/node/4199680597",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6424602096",
       "name": "Regular Exercise",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "1401 Clement Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7823924,
@@ -4833,19 +5650,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6424602096",
       "sourceUrl": "https://www.openstreetmap.org/node/6424602096",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-286276068",
       "name": "Richmond District YMCA",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "360 18th Avenue, San Francisco, 94121",
       "gymType": "Fitness centre",
       "latitude": 37.7812706,
       "longitude": -122.4770282,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed",
@@ -4857,12 +5678,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/286276068",
       "sourceUrl": "https://www.openstreetmap.org/way/286276068",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-way-85796805",
       "name": "Richmond Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "237;251 18th Avenue, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7832997,
@@ -4880,12 +5705,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/85796805",
       "sourceUrl": "https://www.openstreetmap.org/way/85796805",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-7044717960",
       "name": "Rise Combat Sports",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "123 South Van Ness Avenue, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7715856,
@@ -4901,12 +5730,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/7044717960",
       "sourceUrl": "https://www.openstreetmap.org/node/7044717960",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-360958312",
       "name": "Roar",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "1500 Castro Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7495407,
@@ -4924,12 +5757,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/360958312",
       "sourceUrl": "https://www.openstreetmap.org/node/360958312",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10806697932",
       "name": "Row House",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "1375 4th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7713323,
@@ -4947,12 +5784,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10806697932",
       "sourceUrl": "https://www.openstreetmap.org/node/10806697932",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-263347521",
       "name": "Rumble",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "3322 Fillmore Street, San Francisco, 94123",
       "gymType": "Fitness centre",
       "latitude": 37.8003414,
@@ -4971,12 +5812,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/263347521",
       "sourceUrl": "https://www.openstreetmap.org/way/263347521",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-264527987",
       "name": "Sabrofit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "784 Stanyan Street, San Francisco, 94117",
       "gymType": "Fitness centre",
       "latitude": 37.7676776,
@@ -4996,12 +5841,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/264527987",
       "sourceUrl": "https://www.openstreetmap.org/way/264527987",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-32145314",
       "name": "Saint Mary's Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Visitacion Valley",
       "address": "95 Justin Drive, San Francisco, 94112",
       "gymType": "Sports centre",
       "latitude": 37.7342699,
@@ -5020,12 +5869,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/32145314",
       "sourceUrl": "https://www.openstreetmap.org/way/32145314",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4101104064",
       "name": "San Francisco Fencers' Club",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "4000 Balboa Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7756524,
@@ -5044,12 +5897,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4101104064",
       "sourceUrl": "https://www.openstreetmap.org/node/4101104064",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2637241462",
       "name": "Sanchez Street Studios",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "1589 Sanchez Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7437802,
@@ -5068,12 +5925,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2637241462",
       "sourceUrl": "https://www.openstreetmap.org/node/2637241462",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10744098187",
       "name": "Sessions Training Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "1874 Market Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7711015,
@@ -5089,12 +5950,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10744098187",
       "sourceUrl": "https://www.openstreetmap.org/node/10744098187",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3315887614",
       "name": "SF Iron",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "545 Folsom Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7865545,
@@ -5110,7 +5975,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3315887614",
       "sourceUrl": "https://www.openstreetmap.org/node/3315887614",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-288978321",
@@ -5134,12 +6003,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/288978321",
       "sourceUrl": "https://www.openstreetmap.org/way/288978321",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3986912499",
       "name": "Sheila Kelly S Factor",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "245 Columbus Avenue, San Francisco, 94133",
       "gymType": "Sports centre",
       "latitude": 37.7974541,
@@ -5155,12 +6028,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3986912499",
       "sourceUrl": "https://www.openstreetmap.org/node/3986912499",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10733903068",
       "name": "SIT & REACH",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7666566,
@@ -5178,12 +6055,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10733903068",
       "sourceUrl": "https://www.openstreetmap.org/node/10733903068",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11038336710",
       "name": "SIT & REACH",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7870061,
@@ -5201,12 +6082,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11038336710",
       "sourceUrl": "https://www.openstreetmap.org/node/11038336710",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000322",
       "name": "SIT-UP",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7696292,
@@ -5224,12 +6109,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000322",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000322",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11009320686",
       "name": "SIT-UP",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7867795,
@@ -5247,12 +6136,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11009320686",
       "sourceUrl": "https://www.openstreetmap.org/node/11009320686",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11777326257",
       "name": "Skyefit Personal Training",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7809934,
@@ -5268,12 +6161,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11777326257",
       "sourceUrl": "https://www.openstreetmap.org/node/11777326257",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13910165495",
       "name": "Sol Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Visitacion Valley",
       "address": "2838 Diamond Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7340122,
@@ -5291,12 +6188,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13910165495",
       "sourceUrl": "https://www.openstreetmap.org/node/13910165495",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-13185224799",
       "name": "Solidcore",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "2175 Market Street, San Francisco, 94114",
       "gymType": "Fitness centre",
       "latitude": 37.7662018,
@@ -5314,12 +6215,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/13185224799",
       "sourceUrl": "https://www.openstreetmap.org/node/13185224799",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6493825931",
       "name": "Soluna Yoga and Wellness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Visitacion Valley",
       "address": "701 Chenery Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7344378,
@@ -5338,12 +6243,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6493825931",
       "sourceUrl": "https://www.openstreetmap.org/node/6493825931",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4001664955",
       "name": "SoulCycle",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "400 Castro Street, San Francisco, 94114",
       "gymType": "Fitness centre",
       "latitude": 37.7622098,
@@ -5362,12 +6271,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4001664955",
       "sourceUrl": "https://www.openstreetmap.org/node/4001664955",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5251308681",
       "name": "SoulCycle",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7972137,
@@ -5385,12 +6298,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5251308681",
       "sourceUrl": "https://www.openstreetmap.org/node/5251308681",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-162470887",
       "name": "South Sunset Playground",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.737379,
@@ -5406,12 +6323,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/162470887",
       "sourceUrl": "https://www.openstreetmap.org/way/162470887",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000331",
       "name": "STEP-UP",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.768727,
@@ -5429,12 +6350,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000331",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000331",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-8867020483",
       "name": "Stretch Lab",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Potrero Hill",
       "address": "875 Brannan Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7714848,
@@ -5452,12 +6377,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/8867020483",
       "sourceUrl": "https://www.openstreetmap.org/node/8867020483",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3674255652",
       "name": "Sunset Gym",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "1247 9th Avenue, San Francisco, 94122",
       "gymType": "Sports centre",
       "latitude": 37.7650797,
@@ -5476,12 +6405,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3674255652",
       "sourceUrl": "https://www.openstreetmap.org/node/3674255652",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12440345642",
       "name": "Synergy Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7880824,
@@ -5497,12 +6430,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12440345642",
       "sourceUrl": "https://www.openstreetmap.org/node/12440345642",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3969590469",
       "name": "Tantara",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "915 Pacific Avenue, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7965444,
@@ -5520,12 +6457,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3969590469",
       "sourceUrl": "https://www.openstreetmap.org/node/3969590469",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6373000373",
       "name": "Telegraph Crossfit",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "3545 Geary Boulevard, San Francisco, 94118",
       "gymType": "Fitness centre",
       "latitude": 37.7811367,
@@ -5541,12 +6482,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6373000373",
       "sourceUrl": "https://www.openstreetmap.org/node/6373000373",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-71209420",
       "name": "Tenderloin Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "570 Ellis Street, San Francisco, 94109",
       "gymType": "Sports centre",
       "latitude": 37.7848122,
@@ -5564,7 +6509,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/71209420",
       "sourceUrl": "https://www.openstreetmap.org/way/71209420",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-28353177",
@@ -5587,12 +6536,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/28353177",
       "sourceUrl": "https://www.openstreetmap.org/way/28353177",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-2340010642",
       "name": "The Bar Method",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.800265,
@@ -5611,12 +6564,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2340010642",
       "sourceUrl": "https://www.openstreetmap.org/node/2340010642",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-11021164500",
       "name": "The Firm Fitness",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Parkside",
       "address": "225 Frederick Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7670502,
@@ -5636,12 +6593,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/11021164500",
       "sourceUrl": "https://www.openstreetmap.org/node/11021164500",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6471124706",
       "name": "The Lotus Method",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "3989 24th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7513498,
@@ -5659,12 +6620,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6471124706",
       "sourceUrl": "https://www.openstreetmap.org/node/6471124706",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-12337829335",
       "name": "Tiny Haven Yoga",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "211 Hugo Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7651466,
@@ -5684,12 +6649,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/12337829335",
       "sourceUrl": "https://www.openstreetmap.org/node/12337829335",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10733903067",
       "name": "TOUCH TOES",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7668201,
@@ -5707,7 +6676,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10733903067",
       "sourceUrl": "https://www.openstreetmap.org/node/10733903067",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-34313547",
@@ -5717,9 +6690,9 @@
       "gymType": "Sports centre",
       "latitude": 37.8264652,
       "longitude": -122.3684782,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -5728,12 +6701,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/34313547",
       "sourceUrl": "https://www.openstreetmap.org/way/34313547",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-way-261142907",
       "name": "Uforia Studios",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Downtown",
       "address": "1561 California Street, San Francisco, 94109",
       "gymType": "Sports centre",
       "latitude": 37.7903443,
@@ -5749,12 +6726,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/261142907",
       "sourceUrl": "https://www.openstreetmap.org/way/261142907",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10609148147",
       "name": "United Barbell",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "681 4th Street, San Francisco, 94107",
       "gymType": "CrossFit / functional fitness",
       "latitude": 37.7776143,
@@ -5773,12 +6754,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10609148147",
       "sourceUrl": "https://www.openstreetmap.org/node/10609148147",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-270766450",
       "name": "Upper Noe Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "295 Day Street, San Francisco, 94131",
       "gymType": "Sports centre",
       "latitude": 37.7424028,
@@ -5794,12 +6779,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/270766450",
       "sourceUrl": "https://www.openstreetmap.org/way/270766450",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-364222310",
       "name": "Upper Noe Recreation Center",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7424327,
@@ -5815,7 +6804,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/364222310",
       "sourceUrl": "https://www.openstreetmap.org/way/364222310",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-1450184240",
@@ -5836,12 +6829,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/1450184240",
       "sourceUrl": "https://www.openstreetmap.org/node/1450184240",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-497304176",
       "name": "Valencia Street Muscle",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "333 Valencia Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7675553,
@@ -5857,12 +6854,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/497304176",
       "sourceUrl": "https://www.openstreetmap.org/node/497304176",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6636000333",
       "name": "VAULT-BAR",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7695492,
@@ -5880,12 +6881,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6636000333",
       "sourceUrl": "https://www.openstreetmap.org/node/6636000333",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-1364959516",
       "name": "VRV3 Studios",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "520 Haight Street, San Francisco, 94117",
       "gymType": "Fitness centre",
       "latitude": 37.7721463,
@@ -5904,12 +6909,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/1364959516",
       "sourceUrl": "https://www.openstreetmap.org/node/1364959516",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-10538306968",
       "name": "Wheel House",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7944117,
@@ -5925,12 +6934,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10538306968",
       "sourceUrl": "https://www.openstreetmap.org/node/10538306968",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-5613323269",
       "name": "World Class Boxing",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7659847,
@@ -5948,19 +6961,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/5613323269",
       "sourceUrl": "https://www.openstreetmap.org/node/5613323269",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-way-193054131",
       "name": "YMCA",
-      "neighborhood": "San Francisco",
+      "neighborhood": "SOMA",
       "address": "169 Steuart Street, San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.7925236,
       "longitude": -122.3919898,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Hours listed",
@@ -5973,7 +6990,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "way/193054131",
       "sourceUrl": "https://www.openstreetmap.org/way/193054131",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-6615153559",
@@ -5983,9 +7004,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7308076,
       "longitude": -122.4767843,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -5996,19 +7017,23 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6615153559",
       "sourceUrl": "https://www.openstreetmap.org/node/6615153559",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-9953947674",
       "name": "YMCA",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Russian Hill",
       "address": "San Francisco",
       "gymType": "Sports centre",
       "latitude": 37.8010617,
       "longitude": -122.448539,
-      "monthlyPrice": null,
+      "monthlyPrice": 91,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
@@ -6017,12 +7042,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9953947674",
       "sourceUrl": "https://www.openstreetmap.org/node/9953947674",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "YMCA of Greater San Francisco membership page",
+      "priceSourceUrl": "https://www.ymcasf.org/membership/",
+      "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+      "priceObservedAt": "2026-08-16"
     },
     {
       "id": "osm-node-6471124709",
       "name": "Yoga Flow",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "4049 24th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7512719,
@@ -6040,12 +7069,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6471124709",
       "sourceUrl": "https://www.openstreetmap.org/node/6471124709",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-4395534973",
       "name": "Yoga Mayu",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Outer Mission",
       "address": "2051 Harrison Street, San Francisco, 94110",
       "gymType": "Sports centre",
       "latitude": 37.7647995,
@@ -6063,12 +7096,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/4395534973",
       "sourceUrl": "https://www.openstreetmap.org/node/4395534973",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-6471401829",
       "name": "Yubalance",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Excelsior",
       "address": "4159 24th Street, San Francisco",
       "gymType": "Fitness centre",
       "latitude": 37.7511208,
@@ -6086,12 +7123,16 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/6471401829",
       "sourceUrl": "https://www.openstreetmap.org/node/6471401829",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     },
     {
       "id": "osm-node-3522837919",
       "name": "Yubalance",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Sunset",
       "address": "447 Irving Street, San Francisco, 94122",
       "gymType": "Fitness centre",
       "latitude": 37.7640802,
@@ -6109,7 +7150,11 @@
       "sourceName": "OpenStreetMap",
       "sourceId": "node/3522837919",
       "sourceUrl": "https://www.openstreetmap.org/node/3522837919",
-      "importedAt": "2026-08-17T00:39:44Z"
+      "importedAt": "2026-08-17T01:10:11Z",
+      "priceSource": "",
+      "priceSourceUrl": "",
+      "priceNote": "",
+      "priceObservedAt": ""
     }
   ]
 }

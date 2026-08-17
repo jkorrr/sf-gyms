@@ -1,0 +1,92 @@
+[
+  {
+    "match": "^Planet Fitness$",
+    "monthlyPrice": 15,
+    "dayPassPrice": null,
+    "priceSource": "Planet Fitness San Francisco (Lakeshore) membership page",
+    "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
+    "priceNote": "Classic plan; plus taxes and fees, including a $49 annual fee. Plans and promotions can change.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^24 Hour Fitness$",
+    "monthlyPrice": 38.99,
+    "dayPassPrice": null,
+    "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
+    "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
+    "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^City Sports Club$",
+    "monthlyPrice": 34.99,
+    "dayPassPrice": null,
+    "priceSource": "City Sports Club San Francisco membership rate page",
+    "priceSourceUrl": "https://citysportsfitness.com/Pages/MembershipSignUpRate.aspx?id=wead5DoGQM1uFv9DRrzRyg%3D%3D",
+    "priceNote": "Classic multi-club state-of-enrollment plan; $69 annual fee and taxes may apply.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^Fitness SF($| SOMA$)",
+    "monthlyPrice": 129.95,
+    "dayPassPrice": 35,
+    "priceSource": "FITNESS SF official help center",
+    "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+    "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^Live Fit Gym$",
+    "monthlyPrice": 117,
+    "dayPassPrice": null,
+    "priceSource": "Live Fit Gym official signup page",
+    "priceSourceUrl": "https://livefitgym.com/signup-old/",
+    "priceNote": "Basic plan; location access varies by membership tier.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^Orangetheory Fitness$",
+    "monthlyPrice": null,
+    "dayPassPrice": 35,
+    "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
+    "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+    "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^Crunch Fitness$",
+    "monthlyPrice": null,
+    "dayPassPrice": 35,
+    "priceSource": "Crunch Fitness official FAQ",
+    "priceSourceUrl": "https://www.crunch.com/faq",
+    "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "YMCA$",
+    "monthlyPrice": 91,
+    "dayPassPrice": null,
+    "priceSource": "YMCA of Greater San Francisco membership page",
+    "priceSourceUrl": "https://www.ymcasf.org/membership/",
+    "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^Koret Health And Recreation Center$",
+    "monthlyPrice": null,
+    "dayPassPrice": 30,
+    "priceSource": "USF Koret Health & Recreation Center membership page",
+    "priceSourceUrl": "https://www.usfca.edu/koret/membership/membership-types",
+    "priceNote": "Public daily-use pass. Eligibility and annual/15-use passes have different pricing.",
+    "priceObservedAt": "2026-08-16"
+  },
+  {
+    "match": "^Bakar Fitness Center$",
+    "monthlyPrice": null,
+    "dayPassPrice": 30,
+    "priceSource": "UCSF Fitness & Recreation day pass page",
+    "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/day-and-shower-passes",
+    "priceNote": "Adult single-day pass; member-hosted and student rates differ.",
+    "priceObservedAt": "2026-08-16"
+  }
+]

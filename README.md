@@ -18,7 +18,7 @@ npm install
 npm run dev
 ```
 
-The web app runs in read-only mode when Supabase variables are absent. It includes a real MapLibre GL JS map, OpenFreeMap vector tiles, OpenStreetMap attribution, 20px gym markers, filters, gym detail cards, save/compare state, and the Google OAuth callback path.
+The web app runs in read-only mode when Supabase variables are absent. It includes a real MapLibre GL JS map, OpenFreeMap vector tiles with an OpenStreetMap raster fallback, OpenStreetMap attribution, 20px gym markers, neighborhood and price filters, gym detail cards, save/compare state, and the Google OAuth callback path.
 
 ### Refresh the San Francisco directory
 
@@ -28,7 +28,9 @@ The committed directory is a normalized snapshot of named fitness facilities fou
 python data/imports/import_osm_sf_gyms.py
 ```
 
-The importer writes both the source fixture at `data/imports/sf-gyms-osm.json` and the static web fixture at `apps/web/lib/sf-gyms-osm.json`. OSM coverage is useful but not exhaustive; pricing and hours should be verified before publishing them as trusted facts.
+The importer writes both the source fixture at `data/imports/sf-gyms-osm.json` and the static web fixture at `apps/web/lib/sf-gyms-osm.json`. Neighborhood labels are tagged from OSM when available and otherwise assigned from approximate San Francisco coordinate boxes. OSM coverage is useful but not exhaustive.
+
+Official price observations are kept separately in `data/imports/official-price-overrides.json`. Each observation includes the official source URL, the date checked, and a note explaining whether the value is a starting price, day pass, or plan-specific rate. These values are intentionally displayed with provenance and a reminder to confirm current rates; they are not a promise that every plan at a gym costs that amount. Refresh them manually when a gym changes its public pricing.
 
 Location search is an explicit, user-triggered single lookup against public Nominatim. It is not autocomplete or bulk geocoding. The current-location option computes distance locally in the browser.
 
@@ -73,4 +75,4 @@ Before the first deployment, open the repository's **Settings → Pages** and se
 - RLS is enabled on all exposed Supabase tables.
 - OAuth uses PKCE and a root callback compatible with static GitHub Pages hosting.
 - API contracts are versioned so a future Expo/React Native app can use the same backend.
-- MapLibre uses `https://tiles.openfreemap.org/styles/liberty`; the map displays provider/OSM attribution and can later switch to a self-hosted or commercial vector-tile source without changing gym data.
+- MapLibre uses `https://tiles.openfreemap.org/styles/liberty`; if the public vector style does not finish loading, the UI automatically switches to OpenStreetMap raster streets and also exposes a manual provider toggle. The map displays provider/OSM attribution and can later switch to a self-hosted or commercial vector-tile source without changing gym data. The public OpenStreetMap tile service is suitable for this prototype, not an ad-scale production workload; review tile-provider terms and move to an appropriate hosted or self-hosted source as usage grows.
