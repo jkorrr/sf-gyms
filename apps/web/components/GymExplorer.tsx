@@ -335,30 +335,47 @@ export default function GymExplorer() {
   return (
     <main className="shell">
       <header className="topbar">
-        <div className="brand">
-          <div className="logo" aria-hidden="true">S</div>
-          <div><h1>SF Gyms</h1><p>A softer way to find your next gym.</p></div>
-        </div>
-        <button className="login-button" onClick={() => void signIn()} disabled={!isCloudAuthReady} title={isCloudAuthReady ? "Sign in with Google" : "Supabase public configuration is not available in this build"}>{isCloudAuthReady ? authLabel : "Google login unavailable"}</button>
+        <a className="brand" href={`${basePath}/`} aria-label="SFGYMS home">
+          <div className="logo brand-mark" aria-hidden="true">S</div>
+          <div className="brand-lockup"><h1>SFGYMS</h1><p>The independent SF gym guide.</p></div>
+        </a>
+        <nav className="topnav" aria-label="Primary navigation">
+          <a href="#map">Explore gyms</a>
+          <a href="#compare">Compare prices</a>
+          <button className="login-button" onClick={() => void signIn()} disabled={!isCloudAuthReady} title={isCloudAuthReady ? "Sign in with Google" : "Supabase public configuration is not available in this build"}>{isCloudAuthReady ? authLabel : "Google login unavailable"}</button>
+        </nav>
       </header>
 
       <section className="hero">
-        <div>
-          <div className="eyebrow">Move in. Look around. Find your fit.</div>
-          <h2>Find a gym that feels like your neighborhood.</h2>
-          <p className="hero-copy">Explore the San Francisco fitness directory, compare verified rates, and let the map narrow your search by neighborhood, price, or distance.</p>
+        <div className="hero-main">
+          <div className="eyebrow">The independent SF gym guide</div>
+          <h2>Find your<br /><span>iron home.</span></h2>
+          <p className="hero-copy">Real equipment details, transparent prices when they are available, and a map that helps you find the right place to train.</p>
+          <div className="hero-proof"><span className="proof-dot" aria-hidden="true" />{gyms.length} local listings · free to explore</div>
         </div>
-        <div className="hero-note"><strong>Start with a map, not five tabs.</strong> Prices are shown only when a trusted source has supplied them. Listings without pricing stay visible so the directory can grow through gym and member updates.</div>
+        <div className="hero-note"><strong>Start with a map.</strong><br />Search by neighborhood, price, amenity, or distance from wherever you are.</div>
       </section>
 
       {authMessage && <div className="auth-message" role="status">{authMessage}</div>}
 
       <section className="toolbar" aria-label="Gym filters">
-        <label className="search"><span aria-hidden="true">Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a gym or amenity" aria-label="Search gyms" /></label>
-        <label className="filter">Neighborhood <select value={neighborhoodFilter} onChange={(event) => setNeighborhoodFilter(event.target.value)} aria-label="Neighborhood"><option value="">All neighborhoods</option>{neighborhoodOptions.map((neighborhood) => <option value={neighborhood} key={neighborhood}>{neighborhood}</option>)}</select></label>
-        <label className="filter">Under $<input inputMode="numeric" value={maxMonthly} onChange={(event) => setMaxMonthly(event.target.value.replace(/[^0-9]/g, ""))} placeholder="any" aria-label="Maximum monthly price" /> / month</label>
-        <label className="filter">Within <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius" disabled={!origin} title={origin ? "Filter by distance from your selected location" : "Set a location first"}><option value="">any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
-        <label className="filter">Sort <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
+        <div className="search-row">
+          <label className="search search-field"><span className="search-icon" aria-hidden="true">⌕</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try the Mission, squat racks, or a gym by name" aria-label="Search gyms" /></label>
+          {query && <button className="clear-search" type="button" onClick={() => setQuery("")} aria-label="Clear gym search">×</button>}
+        </div>
+        <div className="filter-row" aria-label="Filter and sort options">
+          <label className="filter filter-control">Budget <span className="filter-input-wrap"><span aria-hidden="true">$</span><input id="max-monthly" inputMode="numeric" value={maxMonthly} onChange={(event) => setMaxMonthly(event.target.value.replace(/[^0-9]/g, ""))} placeholder="Any" aria-label="Maximum monthly price" /></span><span className="filter-suffix">/ month</span></label>
+          <label className="filter filter-control">Distance <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius" disabled={!origin} title={origin ? "Filter by distance from your selected location" : "Set a location first"}><option value="">Any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
+          <label className="filter filter-control">Sort by <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
+        </div>
+      </section>
+
+      <section className="neighborhood-filter" aria-label="Filter by neighborhood">
+        <div className="section-label">Browse by neighborhood</div>
+        <div className="filter-chips" role="group" aria-label="San Francisco neighborhoods">
+          <button className={`filter-chip ${neighborhoodFilter === "" ? "active" : ""}`} type="button" aria-pressed={neighborhoodFilter === ""} onClick={() => setNeighborhoodFilter("")}>All neighborhoods</button>
+          {neighborhoodOptions.map((neighborhood) => <button className={`filter-chip ${neighborhoodFilter === neighborhood ? "active" : ""}`} type="button" aria-pressed={neighborhoodFilter === neighborhood} onClick={() => setNeighborhoodFilter(neighborhood)} key={neighborhood}>{neighborhood}</button>)}
+        </div>
       </section>
 
       <section className="location-toolbar" aria-label="Distance from a location">
@@ -372,13 +389,17 @@ export default function GymExplorer() {
         {locationStatus && <span className="location-status" role="status">{locationStatus}</span>}
       </section>
 
-      {compareIds.length > 0 && <div className="compare-bar"><span><strong>{compareIds.length}</strong> gym{compareIds.length === 1 ? "" : "s"} ready to compare.</span><button onClick={() => { setCompareIds([]); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button></div>}
+      {compareIds.length > 0 && <div className="compare-bar" id="compare"><span><strong>{compareIds.length}</strong> gym{compareIds.length === 1 ? "" : "s"} ready to compare.</span><button onClick={() => { setCompareIds([]); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button></div>}
 
-      <section className="explorer map-first-explorer" aria-label="Gym map and listings">
+      <section className="explorer map-first-explorer map-section" id="map" aria-label="Gym map and listings">
+        <div className="map-heading-row">
+          <div><div className="eyebrow">Explore the city</div><h3>{filteredGyms.length} gyms in San Francisco</h3></div>
+          <span className="map-hint">Pan, zoom, and click a dot to inspect</span>
+        </div>
         <div className="map-panel">
           <div className="map-topbar">
-            <div><strong>{filteredGyms.length}</strong> matches{neighborhoodFilter ? ` in ${neighborhoodFilter}` : " across San Francisco"}</div>
-            <span>Click a dot to inspect</span>
+            <div><strong>{filteredGyms.length}</strong> {neighborhoodFilter ? `in ${neighborhoodFilter}` : "across San Francisco"}</div>
+            <span>Map view</span>
           </div>
           <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
           {filteredGyms.length > 0 && <div className="results-strip" aria-label="Map result previews">

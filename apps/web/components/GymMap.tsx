@@ -86,8 +86,19 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
       center: SF_CENTER,
       zoom: 12.1,
       attributionControl: { compact: true },
-      cooperativeGestures: true,
     });
+
+    // Keep interaction local to the map widget. Cooperative gestures make a
+    // normal wheel gesture require Ctrl/Command, which is surprising here and
+    // makes the map feel like a static image. Explicitly enabling the handlers
+    // also documents the interaction contract for future style/provider swaps.
+    map.scrollZoom.enable();
+    map.dragPan.enable();
+    map.touchZoomRotate.enable();
+    map.doubleClickZoom.enable();
+    map.keyboard.enable();
+    map.getCanvas().style.touchAction = "none";
+
     map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-right");
     map.addControl(new maplibregl.FullscreenControl(), "top-right");
     map.once("load", () => map.resize());
@@ -184,14 +195,26 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
 
   return (
     <div className="map-shell">
-      <div ref={containerRef} className="real-map" aria-label="Interactive map of San Francisco gyms" />
-      <div className="map-provider-control">
+      <div
+        ref={containerRef}
+        className="real-map"
+        aria-label="Interactive map of San Francisco gyms"
+        role="application"
+        style={{ touchAction: "none" }}
+      />
+      <div className="map-provider-control" style={{ pointerEvents: "none" }}>
         <span>{basemap === "openfreemap" ? "OpenFreeMap vector" : "OpenStreetMap streets"}</span>
-        <button type="button" onClick={switchBasemap}>{basemap === "openfreemap" ? "Use OSM streets" : "Try OpenFreeMap"}</button>
+        <button
+          type="button"
+          onClick={switchBasemap}
+          style={{ pointerEvents: "auto" }}
+        >
+          {basemap === "openfreemap" ? "Use OSM streets" : "Try OpenFreeMap"}
+        </button>
       </div>
       <div className="map-help" aria-hidden="true">Drag to explore - scroll to zoom - tap a dot for details</div>
-      {mapError && <div className="map-status" role="status">{mapError}</div>}
-      {gyms.length === 0 && <div className="map-empty">No gyms match those filters. Try another neighborhood.</div>}
+      {mapError && <div className="map-status" role="status" style={{ pointerEvents: "none" }}>{mapError}</div>}
+      {gyms.length === 0 && <div className="map-empty" style={{ pointerEvents: "none" }}>No gyms match those filters. Try another neighborhood.</div>}
     </div>
   );
 }
