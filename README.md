@@ -18,7 +18,19 @@ npm install
 npm run dev
 ```
 
-The web app runs in demo mode when Supabase variables are absent. It includes a map-style explorer, filters, gym detail cards, save/compare state, and the Google OAuth callback path.
+The web app runs in read-only mode when Supabase variables are absent. It includes a real MapLibre GL JS map, OpenFreeMap vector tiles, OpenStreetMap attribution, 20px gym markers, filters, gym detail cards, save/compare state, and the Google OAuth callback path.
+
+### Refresh the San Francisco directory
+
+The committed directory is a normalized snapshot of named fitness facilities found in OpenStreetMap through the Overpass API. It intentionally does not scrape Google or private business sites. Refresh it from the repository root with:
+
+```powershell
+python data/imports/import_osm_sf_gyms.py
+```
+
+The importer writes both the source fixture at `data/imports/sf-gyms-osm.json` and the static web fixture at `apps/web/lib/sf-gyms-osm.json`. OSM coverage is useful but not exhaustive; pricing and hours should be verified before publishing them as trusted facts.
+
+Location search is an explicit, user-triggered single lookup against public Nominatim. It is not autocomplete or bulk geocoding. The current-location option computes distance locally in the browser.
 
 ### API
 
@@ -61,3 +73,4 @@ Before the first deployment, open the repository's **Settings → Pages** and se
 - RLS is enabled on all exposed Supabase tables.
 - OAuth uses PKCE and a root callback compatible with static GitHub Pages hosting.
 - API contracts are versioned so a future Expo/React Native app can use the same backend.
+- MapLibre uses `https://tiles.openfreemap.org/styles/liberty`; the map displays provider/OSM attribution and can later switch to a self-hosted or commercial vector-tile source without changing gym data.
