@@ -51,6 +51,8 @@ https://jkorrr.github.io/sf-gyms/
 
 GitHub Pages only hosts the static frontend. The FastAPI service is independently deployable as a Docker container. The Pages workflow uses `NEXT_PUBLIC_BASE_PATH=/sf-gyms` and deploys only from `main`.
 
+Before the first deployment, open the repository's **Settings → Pages** and select **GitHub Actions** as the source. The repository must be public or the GitHub account must have a plan that supports Pages for private repositories. If the workflow's build job succeeds but deployment returns `404: Ensure GitHub Pages has been enabled`, enable that setting (or use the public-repository/static-host fallback described in the system design); no source code change is required.
+
 ## Design and architecture notes
 
 - Public reads are safe to cache; authenticated responses are not.
