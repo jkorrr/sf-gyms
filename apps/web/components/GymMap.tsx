@@ -9,6 +9,8 @@ import type { GeoPoint } from "../lib/geo";
 
 const OPENFREEMAP_STYLE = "https://tiles.openfreemap.org/styles/liberty";
 const SF_CENTER: [number, number] = [-122.4194, 37.7749];
+// OSM is the reliable visual baseline. OpenFreeMap remains available as a
+// vector style, but a slow or blocked vector source must never leave a blank map.
 const OSM_RASTER_STYLE = {
   version: 8 as const,
   sources: {
@@ -39,8 +41,9 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
   const originMarkerRef = useRef<maplibregl.Marker | null>(null);
   const onSelectRef = useRef(onSelect);
   const fallbackTimerRef = useRef<number | null>(null);
+  const basemapRef = useRef<Basemap>("osm");
   const [isReady, setIsReady] = useState(false);
-  const [basemap, setBasemap] = useState<Basemap>("openfreemap");
+  const [basemap, setBasemap] = useState<Basemap>("osm");
   const [mapError, setMapError] = useState("");
 
   useEffect(() => {
@@ -51,12 +54,35 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
     onSelectRef.current = onSelect;
   }, [onSelect]);
 
+  const clearFallbackTimer = () => {
+    if (fallbackTimerRef.current !== null) {
+      window.clearTimeout(fallbackTimerRef.current);
+      fallbackTimerRef.current = null;
+    }
+  };
+
+  const fallbackToOsm = () => {
+    const map = mapRef.current;
+    if (!map || basemapRef.current !== "openfreemap") return;
+    clearFallbackTimer();
+    basemapRef.current = "osm";
+    setBasemap("osm");
+    setMapError("OpenFreeMap did not finish loading, so the map is using OpenStreetMap streets.");
+    map.setStyle(OSM_RASTER_STYLE);
+    map.once("style.load", () => map.resize());
+  };
+
+  const watchOpenFreeMap = () => {
+    clearFallbackTimer();
+    fallbackTimerRef.current = window.setTimeout(fallbackToOsm, 1800);
+  };
+
   useEffect(() => {
     if (!containerRef.current || mapRef.current) return;
 
     const map = new maplibregl.Map({
       container: containerRef.current,
-      style: OPENFREEMAP_STYLE,
+      style: OSM_RASTER_STYLE,
       center: SF_CENTER,
       zoom: 12.1,
       attributionControl: { compact: true },
@@ -67,27 +93,16 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
     map.once("load", () => map.resize());
     map.on("click", () => onSelectRef.current(null));
     map.on("error", (event) => {
-      if (event.error?.message) setMapError(event.error.message);
+      if (basemapRef.current === "osm" && event.error?.message) setMapError("Map tiles could not load. Try the OpenFreeMap vector option.");
+    });
+    map.on("sourcedata", (event) => {
+      if (basemapRef.current === "openfreemap" && event.sourceId === "openmaptiles" && event.isSourceLoaded) clearFallbackTimer();
     });
     mapRef.current = map;
     setIsReady(true);
 
-    const fallbackToOsm = () => {
-      if (mapRef.current !== map || basemap !== "openfreemap") return;
-      setMapError("OpenFreeMap tiles did not finish loading, so the map switched to OpenStreetMap streets.");
-      setBasemap("osm");
-      map.setStyle(OSM_RASTER_STYLE);
-    };
-    fallbackTimerRef.current = window.setTimeout(fallbackToOsm, 3500);
-    map.on("sourcedata", (event) => {
-      if (event.sourceId === "openmaptiles" && event.isSourceLoaded && fallbackTimerRef.current !== null) {
-        window.clearTimeout(fallbackTimerRef.current);
-        fallbackTimerRef.current = null;
-      }
-    });
-
     return () => {
-      if (fallbackTimerRef.current !== null) window.clearTimeout(fallbackTimerRef.current);
+      clearFallbackTimer();
       originMarkerRef.current?.remove();
       markersRef.current.forEach((marker) => marker.remove());
       markersRef.current.clear();
@@ -95,7 +110,7 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
       mapRef.current = null;
       setIsReady(false);
     };
-    // The initial map must only be constructed once. Basemap switches use setStyle below.
+    // The map is constructed once. Basemap switches use setStyle below.
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
@@ -157,15 +172,14 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
   const switchBasemap = () => {
     const map = mapRef.current;
     if (!map) return;
-    if (fallbackTimerRef.current !== null) {
-      window.clearTimeout(fallbackTimerRef.current);
-      fallbackTimerRef.current = null;
-    }
-    const next: Basemap = basemap === "openfreemap" ? "osm" : "openfreemap";
+    clearFallbackTimer();
+    const next: Basemap = basemapRef.current === "openfreemap" ? "osm" : "openfreemap";
+    basemapRef.current = next;
     setBasemap(next);
     setMapError("");
     map.setStyle(next === "openfreemap" ? OPENFREEMAP_STYLE : OSM_RASTER_STYLE);
     map.once("style.load", () => map.resize());
+    if (next === "openfreemap") watchOpenFreeMap();
   };
 
   return (
@@ -175,7 +189,7 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
         <span>{basemap === "openfreemap" ? "OpenFreeMap vector" : "OpenStreetMap streets"}</span>
         <button type="button" onClick={switchBasemap}>{basemap === "openfreemap" ? "Use OSM streets" : "Try OpenFreeMap"}</button>
       </div>
-      <div className="map-help" aria-hidden="true">Drag to explore · scroll to zoom · tap a dot for details</div>
+      <div className="map-help" aria-hidden="true">Drag to explore - scroll to zoom - tap a dot for details</div>
       {mapError && <div className="map-status" role="status">{mapError}</div>}
       {gyms.length === 0 && <div className="map-empty">No gyms match those filters. Try another neighborhood.</div>}
     </div>

@@ -29,7 +29,12 @@ jobs:
         working-directory: apps/web
         env:
           NEXT_PUBLIC_BASE_PATH: /sf-gyms
-          NEXT_PUBLIC_DEMO_MODE: "true"
+          # These are browser-safe Supabase values, supplied as repository
+          # Variables when Google sign-in is enabled. Missing variables keep
+          # the public directory in honest browse-only demo mode.
+          NEXT_PUBLIC_SUPABASE_URL: ${{ vars.NEXT_PUBLIC_SUPABASE_URL }}
+          NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY: ${{ vars.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY }}
+          NEXT_PUBLIC_DEMO_MODE: ${{ vars.NEXT_PUBLIC_DEMO_MODE || 'true' }}
         run: npm run build
       - name: Upload Pages artifact
         uses: actions/upload-pages-artifact@56afc609e74202658d3ffba0e8f6dda462b719fa # v3.0.1

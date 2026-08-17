@@ -3,10 +3,10 @@
 import { useEffect, useMemo, useRef, useState } from "react";
 
 import GymMap from "./GymMap";
-import { appOrigin } from "../lib/config";
+import { basePath, oauthRedirectUrl } from "../lib/config";
 import { demoGyms, type Gym } from "../lib/demo-data";
 import { distanceMiles, formatDistanceMiles, type GeoPoint } from "../lib/geo";
-import { getSupabaseClient } from "../lib/supabase";
+import { getSupabaseClient, getSupabaseStatus } from "../lib/supabase";
 
 type ApiGym = {
   id: string;
@@ -38,6 +38,10 @@ type LocationSearchResult = {
 };
 
 type SortOrder = "recommended" | "monthly" | "day_pass" | "distance";
+
+function readableOAuthError(value: string): string {
+  return value.trim().replace(/\s+/g, " ").slice(0, 240);
+}
 
 function fromApiGym(gym: ApiGym): Gym {
   const sourceUrl = gym.source_url ?? "https://www.openstreetmap.org/";
@@ -87,6 +91,10 @@ function compareNullablePrices(left: number | null, right: number | null): numbe
   return left - right;
 }
 
+function gymDetailHref(id: string): string {
+  return `${basePath}/gyms/${encodeURIComponent(id)}/`;
+}
+
 export default function GymExplorer() {
   const [gyms, setGyms] = useState<Gym[]>(demoGyms);
   const [query, setQuery] = useState("");
@@ -98,14 +106,17 @@ export default function GymExplorer() {
   const [origin, setOrigin] = useState<GeoPoint | null>(null);
   const [locationStatus, setLocationStatus] = useState("");
   const [isSearchingLocation, setIsSearchingLocation] = useState(false);
-  const [selected, setSelected] = useState<Gym | null>(demoGyms[0] ?? null);
+  const [selected, setSelected] = useState<Gym | null>(null);
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [compareIds, setCompareIds] = useState<string[]>([]);
   const [authMessage, setAuthMessage] = useState("");
   const [authLabel, setAuthLabel] = useState("Sign in with Google");
   const locationControllerRef = useRef<AbortController | null>(null);
+  const oauthCallbackRef = useRef(false);
 
   const supabase = getSupabaseClient();
+  const supabaseStatus = getSupabaseStatus();
+  const isCloudAuthReady = supabaseStatus.status === "configured" && supabase !== null;
 
   useEffect(() => {
     const stored = window.localStorage.getItem("sf-gyms:saved");
@@ -118,13 +129,18 @@ export default function GymExplorer() {
       }
     }
 
-    if (!supabase) {
-      setAuthMessage("Demo mode is active. Add Supabase keys to enable Google login and cloud saves.");
+    if (!isCloudAuthReady) {
+      if (oauthCallbackRef.current) return;
+      setAuthMessage(supabaseStatus.message);
       return;
     }
 
     const loadSession = async () => {
-      const { data } = await supabase.auth.getSession();
+      const { data, error } = await supabase.auth.getSession();
+      if (error) {
+        setAuthMessage("Supabase could not restore the session. You can continue browsing or try Google sign-in again.");
+        return;
+      }
       if (data.session?.user.email) setAuthLabel(data.session.user.email);
     };
     void loadSession();
@@ -132,25 +148,46 @@ export default function GymExplorer() {
       setAuthLabel(session?.user.email ?? "Sign in with Google");
     });
     return () => data.subscription.unsubscribe();
-  }, [supabase]);
+  }, [isCloudAuthReady, supabase, supabaseStatus.message]);
 
   useEffect(() => {
-    const code = new URLSearchParams(window.location.search).get("code");
-    const oauthError = new URLSearchParams(window.location.search).get("error_description");
+    const stored = window.localStorage.getItem("sf-gyms:compare");
+    if (!stored) return;
+    try {
+      const parsed = JSON.parse(stored) as unknown;
+      if (Array.isArray(parsed) && parsed.every((item) => typeof item === "string")) setCompareIds(parsed.slice(0, 3));
+    } catch {
+      window.localStorage.removeItem("sf-gyms:compare");
+    }
+  }, []);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
+    const code = params.get("code");
+    const oauthError = params.get("error_description") ?? params.get("error");
+    if (code || oauthError) oauthCallbackRef.current = true;
     if (oauthError) {
-      setAuthMessage(`Google login could not finish: ${oauthError}`);
-      window.history.replaceState({}, "", `${appOrigin()}/`);
+      setAuthMessage(`Google sign-in could not finish: ${readableOAuthError(oauthError) || "the provider returned an error."}`);
+      window.history.replaceState({}, "", oauthRedirectUrl());
       return;
     }
-    if (!code || !supabase) return;
+    if (!code) return;
+
+    // The authorization code is single-use. Remove it before the async
+    // exchange so refreshes, screenshots, and copied URLs cannot retain it.
+    window.history.replaceState({}, "", oauthRedirectUrl());
+    if (!isCloudAuthReady || !supabase) {
+      setAuthMessage("Google sign-in returned a code, but Supabase is not available in this build. Check the public configuration and try again.");
+      return;
+    }
+
     let cancelled = false;
     void supabase.auth.exchangeCodeForSession(code).then(({ error }) => {
       if (cancelled) return;
-      window.history.replaceState({}, "", `${appOrigin()}/`);
-      setAuthMessage(error ? "Google login expired. Please try again." : "You are signed in.");
+      setAuthMessage(error ? "Google sign-in expired or was already used. Start sign-in again." : "You are signed in with Google. Saved gyms remain local in this prototype.");
     });
     return () => { cancelled = true; };
-  }, [supabase]);
+  }, [isCloudAuthReady, supabase]);
 
   useEffect(() => {
     const apiBase = process.env.NEXT_PUBLIC_API_BASE_URL;
@@ -163,7 +200,6 @@ export default function GymExplorer() {
         const next = data.items.map(fromApiGym);
         if (next.length > 0) {
           setGyms(next);
-          setSelected(next[0]);
         }
       })
       .catch(() => setAuthMessage("Showing the published OSM listings while the API is unavailable."));
@@ -206,9 +242,7 @@ export default function GymExplorer() {
   }, [gyms, maxMonthly, neighborhoodFilter, origin, query, radiusMiles, sortOrder]);
 
   const filteredGyms = useMemo(() => visibleRows.map(({ gym }) => gym), [visibleRows]);
-  const selectedGym = selected && filteredGyms.some((gym) => gym.id === selected.id)
-    ? selected
-    : filteredGyms[0] ?? null;
+  const selectedGym = selected && filteredGyms.some((gym) => gym.id === selected.id) ? selected : null;
   const selectedDistance = selectedGym && origin ? distanceMiles(origin, selectedGym) : null;
 
   const toggleSaved = (id: string) => {
@@ -220,9 +254,13 @@ export default function GymExplorer() {
   };
 
   const toggleCompare = (id: string) => {
-    setCompareIds((current) => current.includes(id)
-      ? current.filter((item) => item !== id)
-      : current.length < 3 ? [...current, id] : current);
+    setCompareIds((current) => {
+      const next = current.includes(id)
+        ? current.filter((item) => item !== id)
+        : current.length < 3 ? [...current, id] : current;
+      window.localStorage.setItem("sf-gyms:compare", JSON.stringify(next));
+      return next;
+    });
   };
 
   const useCurrentLocation = () => {
@@ -281,12 +319,17 @@ export default function GymExplorer() {
   };
 
   const signIn = async () => {
-    if (!supabase) {
-      setAuthMessage("Google login is scaffolded but disabled in demo mode. Configure Supabase Auth to enable it.");
+    if (!isCloudAuthReady || !supabase) {
+      setAuthMessage(supabaseStatus.message);
       return;
     }
-    const { error } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo: `${appOrigin()}/` } });
-    if (error) setAuthMessage(error.message);
+    const redirectTo = oauthRedirectUrl();
+    if (!redirectTo) {
+      setAuthMessage("Google sign-in can only start in the browser. Refresh the page and try again.");
+      return;
+    }
+    const { error } = await supabase.auth.signInWithOAuth({ provider: "google", options: { redirectTo } });
+    if (error) setAuthMessage("Google sign-in could not start. Check that Google is enabled in Supabase Auth and that this exact callback URL is allowed.");
   };
 
   return (
@@ -296,7 +339,7 @@ export default function GymExplorer() {
           <div className="logo" aria-hidden="true">S</div>
           <div><h1>SF Gyms</h1><p>A softer way to find your next gym.</p></div>
         </div>
-        <button className="login-button" onClick={() => void signIn()}>{authLabel}</button>
+        <button className="login-button" onClick={() => void signIn()} disabled={!isCloudAuthReady} title={isCloudAuthReady ? "Sign in with Google" : "Supabase public configuration is not available in this build"}>{isCloudAuthReady ? authLabel : "Google login unavailable"}</button>
       </header>
 
       <section className="hero">
@@ -314,7 +357,7 @@ export default function GymExplorer() {
         <label className="search"><span aria-hidden="true">Search</span><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search a gym or amenity" aria-label="Search gyms" /></label>
         <label className="filter">Neighborhood <select value={neighborhoodFilter} onChange={(event) => setNeighborhoodFilter(event.target.value)} aria-label="Neighborhood"><option value="">All neighborhoods</option>{neighborhoodOptions.map((neighborhood) => <option value={neighborhood} key={neighborhood}>{neighborhood}</option>)}</select></label>
         <label className="filter">Under $<input inputMode="numeric" value={maxMonthly} onChange={(event) => setMaxMonthly(event.target.value.replace(/[^0-9]/g, ""))} placeholder="any" aria-label="Maximum monthly price" /> / month</label>
-        <label className="filter">Within <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius"><option value="">any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
+        <label className="filter">Within <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius" disabled={!origin} title={origin ? "Filter by distance from your selected location" : "Set a location first"}><option value="">any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
         <label className="filter">Sort <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
       </section>
 
@@ -329,7 +372,7 @@ export default function GymExplorer() {
         {locationStatus && <span className="location-status" role="status">{locationStatus}</span>}
       </section>
 
-      {compareIds.length > 0 && <div className="compare-bar"><span><strong>{compareIds.length}</strong> gym{compareIds.length === 1 ? "" : "s"} ready to compare.</span><button onClick={() => setCompareIds([])}>Clear comparison</button></div>}
+      {compareIds.length > 0 && <div className="compare-bar"><span><strong>{compareIds.length}</strong> gym{compareIds.length === 1 ? "" : "s"} ready to compare.</span><button onClick={() => { setCompareIds([]); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button></div>}
 
       <section className="explorer map-first-explorer" aria-label="Gym map and listings">
         <div className="map-panel">
@@ -340,10 +383,11 @@ export default function GymExplorer() {
           <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
           {filteredGyms.length > 0 && <div className="results-strip" aria-label="Map result previews">
             <div className="results-strip-header"><strong>Preview matches</strong><span>Showing {Math.min(6, filteredGyms.length)} of {filteredGyms.length}</span></div>
-            <div className="mini-results">{visibleRows.slice(0, 6).map(({ gym, distance }) => <button key={gym.id} type="button" className={`mini-result ${selectedGym?.id === gym.id ? "active" : ""}`} onClick={() => setSelected(gym)}>
+            <div className="mini-results">{visibleRows.slice(0, 6).map(({ gym, distance }) => <a key={gym.id} className={`mini-result ${selectedGym?.id === gym.id ? "active" : ""}`} href={gymDetailHref(gym.id)} onClick={() => setSelected(gym)}>
               <span className="mini-result-name">{gym.name}</span>
               <span className="mini-result-meta">{gym.neighborhood} - {priceLabel(gym.monthlyPrice, "/mo")}{distance !== null ? ` - ${formatDistanceMiles(distance)}` : ""}</span>
-            </button>)}</div>
+              <span className="mini-result-link">Open full listing</span>
+            </a>)}</div>
           </div>}
           {selectedGym && <aside className="detail" aria-live="polite">
             <div className="card-top"><div><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
@@ -351,7 +395,7 @@ export default function GymExplorer() {
             <p><strong>{priceLabel(selectedGym.monthlyPrice, "/mo")}</strong> - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
             <div className="price-row">{selectedGym.amenities.slice(0, 4).map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div>
             {selectedGym.priceNote && <p className="price-note">{selectedGym.priceNote}</p>}
-            <div className="detail-actions"><a className="primary" href={selectedGym.websiteUrl} target="_blank" rel="noreferrer">{selectedGym.websiteUrl === selectedGym.sourceUrl ? "View source listing" : "Visit gym site"}</a><button className="secondary" onClick={() => toggleCompare(selectedGym.id)}>{compareIds.includes(selectedGym.id) ? "Remove from compare" : "Add to compare"}</button></div>
+            <div className="detail-actions"><a className="primary" href={gymDetailHref(selectedGym.id)}>Open full listing</a><a className="secondary" href={selectedGym.websiteUrl} target="_blank" rel="noreferrer">{selectedGym.websiteUrl === selectedGym.sourceUrl ? "View source listing" : "Visit gym site"}</a><button className="secondary" onClick={() => toggleCompare(selectedGym.id)}>{compareIds.includes(selectedGym.id) ? "Remove from compare" : "Add to compare"}</button></div>
             <p className="source-note">{freshnessLabel(selectedGym)}. {selectedGym.priceSourceUrl && <><a href={selectedGym.priceSourceUrl} target="_blank" rel="noreferrer">See official price source</a>. </>}Listing source: <a href={selectedGym.sourceUrl} target="_blank" rel="noreferrer">{selectedGym.sourceName}</a>. Confirm pricing and hours before visiting.</p>
           </aside>}
         </div>
