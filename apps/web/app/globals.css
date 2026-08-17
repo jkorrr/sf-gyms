@@ -117,7 +117,7 @@ button { cursor: pointer; }
   .footer { flex-direction: column; }
 }
 
-/* Map-first explorer: keep the map dominant and show only a small result preview strip. */
+/* Map-first explorer: keep the map dominant and unobstructed. */
 .map-first-explorer { display: block; min-height: 760px; }
 .map-first-explorer .map-panel { min-height: 760px; }
 .map-topbar { position: absolute; top: 1rem; left: 1rem; right: 13rem; z-index: 5; display: flex; align-items: center; justify-content: space-between; gap: 1rem; padding: .7rem .85rem; border: 1px solid rgba(216,228,220,.9); border-radius: 13px; background: rgba(255,255,255,.92); color: var(--muted); font-size: .78rem; box-shadow: 0 5px 18px rgba(36,51,47,.1); pointer-events: none; }
@@ -125,15 +125,6 @@ button { cursor: pointer; }
 .map-provider-control { position: absolute; top: 1rem; right: 1rem; z-index: 6; display: flex; align-items: center; gap: .45rem; padding: .35rem .4rem .35rem .65rem; border: 1px solid rgba(216,228,220,.9); border-radius: 13px; background: rgba(255,255,255,.92); color: var(--muted); font-size: .68rem; box-shadow: 0 5px 18px rgba(36,51,47,.1); }
 .map-provider-control button { border: 1px solid var(--line); border-radius: 999px; padding: .35rem .55rem; background: var(--mint); color: var(--ink); font-size: .68rem; font-weight: 800; }
 .map-status { position: absolute; top: 4.6rem; left: 1rem; z-index: 6; max-width: 370px; padding: .55rem .7rem; border-radius: 10px; background: rgba(255,248,238,.94); color: #765737; font-size: .72rem; box-shadow: 0 4px 14px rgba(36,51,47,.1); }
-.results-strip { position: absolute; top: 5.1rem; left: 1rem; right: 1rem; z-index: 5; padding: .65rem .7rem .7rem; border: 1px solid rgba(216,228,220,.9); border-radius: 16px; background: rgba(251,253,249,.84); box-shadow: 0 8px 22px rgba(36,51,47,.1); backdrop-filter: blur(12px); }
-.results-strip-header { display: flex; justify-content: space-between; gap: 1rem; padding: 0 .15rem .45rem; color: var(--muted); font-size: .72rem; }
-.results-strip-header strong { color: var(--ink); }
-.mini-results { display: flex; gap: .6rem; overflow-x: auto; padding: .1rem .05rem .2rem; }
-.mini-result { display: block; flex: 0 0 210px; min-width: 0; padding: .7rem; border: 1px solid var(--line); border-radius: 13px; background: rgba(255,255,255,.94); color: var(--ink); text-align: left; text-decoration: none; transition: transform .18s ease, border-color .18s ease, box-shadow .18s ease; }
-.mini-result:hover, .mini-result.active { transform: translateY(-2px); border-color: var(--sage); box-shadow: 0 7px 16px rgba(67,93,80,.12); }
-.mini-result-name { display: block; overflow: hidden; font-size: .82rem; font-weight: 800; text-overflow: ellipsis; white-space: nowrap; }
-.mini-result-meta { display: block; overflow: hidden; margin-top: .3rem; color: var(--muted); font-size: .7rem; text-overflow: ellipsis; white-space: nowrap; }
-.mini-result-link { display: block; margin-top: .45rem; color: #4f8262; font-size: .68rem; font-weight: 800; }
 .map-help { top: auto; right: 1rem; bottom: 1rem; left: auto; }
 .price-note { margin-bottom: .35rem; font-size: .78rem; }
 
@@ -189,7 +180,6 @@ button { cursor: pointer; }
   .map-topbar { right: 1rem; top: .75rem; }
   .map-topbar span { display: none; }
   .map-provider-control { top: 4.1rem; right: 1rem; }
-  .results-strip { top: 7.2rem; }
   .map-status { top: 10.1rem; }
   .map-first-explorer, .map-first-explorer .map-panel { min-height: 680px; }
   .detail-page-wrap { width: min(100% - 1.4rem, 1120px); }
@@ -266,7 +256,6 @@ button { cursor: pointer; }
 }
 
 .eyebrow,
-.results-strip-header,
 .map-provider-control,
 .location-search label,
 .freshness,
@@ -347,7 +336,9 @@ button { cursor: pointer; }
 .filter-suffix { color: var(--muted); }
 
 .neighborhood-filter { align-items: center; }
+.neighborhood-filter-head { display: flex; align-items: baseline; flex: 0 0 auto; gap: .55rem; min-width: max-content; }
 .neighborhood-filter > .section-label { flex: 0 0 auto; margin-right: .25rem; color: var(--muted); font-family: var(--mono-font); font-size: .7rem; text-transform: uppercase; letter-spacing: .08em; }
+.neighborhood-filter-status { color: var(--muted); font-family: var(--mono-font); font-size: .65rem; white-space: nowrap; }
 .neighborhood-filter > .filter-chips { flex: 1 1 auto; min-width: 0; max-width: none; margin: 0; padding: 0; overflow-x: auto; }
 .map-section { overflow: hidden; }
 .map-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 1rem; padding: 1.2rem 1.25rem .95rem; background: white; }
@@ -408,7 +399,6 @@ button { cursor: pointer; }
 
 /* Optional chip markup can be introduced without changing this visual contract. */
 .neighborhood-chips,
-.neighborhood-filter,
 .filter-chips,
 .chip-row {
   display: flex;
@@ -422,7 +412,6 @@ button { cursor: pointer; }
 }
 
 .neighborhood-chips::-webkit-scrollbar,
-.neighborhood-filter::-webkit-scrollbar,
 .filter-chips::-webkit-scrollbar,
 .chip-row::-webkit-scrollbar { display: none; }
 
@@ -532,23 +521,6 @@ button { cursor: pointer; }
 
 .map-provider-control button { font-family: var(--mono-font); }
 
-.results-strip {
-  top: 7.1rem;
-  right: 1.15rem;
-  left: 1.15rem;
-  padding: .65rem .75rem .75rem;
-  border-color: rgba(216, 228, 220, .9);
-  border-radius: 18px;
-  background: rgba(251, 253, 249, .86);
-  pointer-events: none;
-}
-
-.results-strip > * { pointer-events: auto; }
-.results-strip-header { font-size: .68rem; }
-.mini-results { scrollbar-width: thin; }
-.mini-result { border-radius: 15px; }
-.mini-result-name, .mini-result-link { font-family: var(--mono-font); }
-
 .maplibregl-ctrl-top-right {
   top: 1.15rem !important;
   right: 1.15rem !important;
@@ -615,7 +587,8 @@ button { cursor: pointer; }
   .filter { flex: 1 1 10rem; min-width: 0; }
   .filter-row { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
   .filter-control { width: 100%; }
-  .neighborhood-filter { align-items: flex-start; flex-direction: column; gap: .55rem; }
+  .neighborhood-filter { align-items: stretch; flex-direction: column; gap: .55rem; }
+  .neighborhood-filter-head { justify-content: space-between; }
   .neighborhood-filter > .filter-chips { width: 100%; }
   .map-heading-row { align-items: flex-start; flex-direction: column; gap: .5rem; }
   .map-first-explorer,
@@ -623,7 +596,6 @@ button { cursor: pointer; }
   .map-topbar { top: .8rem; right: .8rem; left: .8rem; }
   .map-topbar span { display: none; }
   .map-provider-control { top: auto; right: .8rem; bottom: 3.2rem; }
-  .results-strip { top: 9.5rem; right: .8rem; left: .8rem; }
   .maplibregl-ctrl-top-right { top: .8rem !important; right: .8rem !important; }
   .detail { right: .8rem; bottom: .8rem; left: .8rem; max-width: none; }
 }
@@ -631,3 +603,54 @@ button { cursor: pointer; }
 /* Keep the icon and placeholder comfortably separated without recreating the
    original label/placeholder overlap. */
 .search-field input { padding-left: 3.2rem; }
+
+/* The reference mark is a compact lifting cue, not a letterform. */
+.brand .logo,
+.not-found-card .logo {
+  display: grid;
+  place-items: center;
+}
+
+.brand-mark-icon {
+  width: 1.65rem;
+  height: 1.65rem;
+  fill: none;
+  stroke: currentColor;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  stroke-width: 1.9;
+}
+
+.neighborhood-filter {
+  display: flex;
+  width: min(1400px, calc(100% - 2rem));
+  margin: 0 auto 1.25rem;
+  padding: 0;
+  overflow: visible;
+}
+
+.neighborhood-filter > .filter-chips {
+  scrollbar-width: thin;
+  scrollbar-color: rgba(117, 167, 137, .55) transparent;
+  overscroll-behavior-inline: contain;
+  -webkit-overflow-scrolling: touch;
+}
+
+.neighborhood-filter > .filter-chips:focus-visible {
+  outline: 3px solid rgba(117, 167, 137, .28);
+  outline-offset: .2rem;
+  border-radius: 999px;
+}
+
+.filter-chip.active,
+.filter-chip[aria-pressed="true"] {
+  border-color: var(--forest);
+  background: var(--forest);
+  color: white;
+  box-shadow: 0 5px 12px rgba(31, 48, 44, .14);
+}
+
+/* There is intentionally no result-card strip over the map. */
+.map-panel {
+  isolation: isolate;
+}

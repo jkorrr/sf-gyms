@@ -81,6 +81,7 @@ function freshnessLabel(gym: Gym): string {
 }
 
 function priceLabel(value: number | null, suffix: string): string {
+  if (value === 0) return `Free${suffix}`;
   return value === null ? "Not listed" : `$${value}${suffix}`;
 }
 
@@ -336,7 +337,11 @@ export default function GymExplorer() {
     <main className="shell">
       <header className="topbar">
         <a className="brand" href={`${basePath}/`} aria-label="SFGYMS home">
-          <div className="logo brand-mark" aria-hidden="true">S</div>
+          <div className="logo brand-mark" aria-hidden="true">
+            <svg className="brand-mark-icon" viewBox="0 0 24 24" focusable="false">
+              <path d="M5.5 8.25v7.5M8.25 6.5v11M10.25 10.75h3.5M15.75 6.5v11M18.5 8.25v7.5M8.25 12h7.5" />
+            </svg>
+          </div>
           <div className="brand-lockup"><h1>SFGYMS</h1><p>The independent SF gym guide.</p></div>
         </a>
         <nav className="topnav" aria-label="Primary navigation">
@@ -371,10 +376,13 @@ export default function GymExplorer() {
       </section>
 
       <section className="neighborhood-filter" aria-label="Filter by neighborhood">
-        <div className="section-label">Browse by neighborhood</div>
-        <div className="filter-chips" role="group" aria-label="San Francisco neighborhoods">
+        <div className="neighborhood-filter-head">
+          <div className="section-label">Neighborhoods</div>
+          <span className="neighborhood-filter-status" aria-live="polite">{neighborhoodFilter ? `${filteredGyms.length} gyms in ${neighborhoodFilter}` : "Filter the map by area"}</span>
+        </div>
+        <div className="filter-chips" role="group" aria-label="San Francisco neighborhood filters" tabIndex={0}>
           <button className={`filter-chip ${neighborhoodFilter === "" ? "active" : ""}`} type="button" aria-pressed={neighborhoodFilter === ""} onClick={() => setNeighborhoodFilter("")}>All neighborhoods</button>
-          {neighborhoodOptions.map((neighborhood) => <button className={`filter-chip ${neighborhoodFilter === neighborhood ? "active" : ""}`} type="button" aria-pressed={neighborhoodFilter === neighborhood} onClick={() => setNeighborhoodFilter(neighborhood)} key={neighborhood}>{neighborhood}</button>)}
+          {neighborhoodOptions.map((neighborhood) => <button className={`filter-chip ${neighborhoodFilter === neighborhood ? "active" : ""}`} type="button" aria-label={`Filter gyms in ${neighborhood}`} aria-pressed={neighborhoodFilter === neighborhood} onClick={() => setNeighborhoodFilter(neighborhood)} key={neighborhood}>{neighborhood}</button>)}
         </div>
       </section>
 
@@ -402,14 +410,6 @@ export default function GymExplorer() {
             <span>Map view</span>
           </div>
           <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
-          {filteredGyms.length > 0 && <div className="results-strip" aria-label="Map result previews">
-            <div className="results-strip-header"><strong>Preview matches</strong><span>Showing {Math.min(6, filteredGyms.length)} of {filteredGyms.length}</span></div>
-            <div className="mini-results">{visibleRows.slice(0, 6).map(({ gym, distance }) => <a key={gym.id} className={`mini-result ${selectedGym?.id === gym.id ? "active" : ""}`} href={gymDetailHref(gym.id)} onClick={() => setSelected(gym)}>
-              <span className="mini-result-name">{gym.name}</span>
-              <span className="mini-result-meta">{gym.neighborhood} - {priceLabel(gym.monthlyPrice, "/mo")}{distance !== null ? ` - ${formatDistanceMiles(distance)}` : ""}</span>
-              <span className="mini-result-link">Open full listing</span>
-            </a>)}</div>
-          </div>}
           {selectedGym && <aside className="detail" aria-live="polite">
             <div className="card-top"><div><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
             <p>{selectedGym.description}</p>

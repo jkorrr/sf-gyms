@@ -1,0 +1,478 @@
+{
+  "1601 lane street san francisco ca 94124": {
+    "status": "ok",
+    "query": "1601 Lane Street, San Francisco, CA 94124",
+    "displayName": "Bayview Hunters Point YMCA, 1601, Lane Street, Bayview District, San Francisco, California, 94124, United States",
+    "latitude": 37.731874,
+    "longitude": -122.389734
+  },
+  "855 sacramento street san francisco ca 94108": {
+    "status": "ok",
+    "query": "855 Sacramento Street, San Francisco, CA 94108",
+    "displayName": "855, Sacramento Street, Chinatown, South of Market, San Francisco, California, 94108, United States",
+    "latitude": 37.7932009,
+    "longitude": -122.4068842
+  },
+  "701 illinois street san francisco ca 94107": {
+    "status": "ok",
+    "query": "701 Illinois Street, San Francisco, CA 94107",
+    "displayName": "701, Illinois Street, Pier 70, Mission Bay, South of Market, San Francisco, California, 94107, United States",
+    "latitude": 37.7635539,
+    "longitude": -122.3877337
+  },
+  "4080 mission street san francisco ca 94112": {
+    "status": "ok",
+    "query": "4080 Mission Street, San Francisco, CA 94112",
+    "displayName": "4080 Mission Street, Mission Street, St. Mary's Park, San Francisco, California, 94112, United States",
+    "latitude": 37.7322268,
+    "longitude": -122.428003
+  },
+  "246 eddy street san francisco ca 94102": {
+    "status": "ok",
+    "query": "246 Eddy Street, San Francisco, CA 94102",
+    "displayName": "246, Eddy Street, Union Square, Tenderloin, South of Market, San Francisco, California, 94102, United States",
+    "latitude": 37.7841126,
+    "longitude": -122.4118366
+  },
+  "500 parnassus avenue level b1 san francisco ca 94143": {
+    "status": "not_found",
+    "query": "500 Parnassus Avenue, Level B1, San Francisco, CA 94143"
+  },
+  "3200 california street san francisco ca 94118": {
+    "status": "ok",
+    "query": "3200 California Street, San Francisco, CA 94118",
+    "displayName": "Jewish Community Center of San Francisco, 3200, California Street, Laurel Heights, San Francisco, California, 94118, United States",
+    "latitude": 37.7873854,
+    "longitude": -122.4478439
+  },
+  "150 greenwich street san francisco ca 94111": {
+    "status": "ok",
+    "query": "150 Greenwich Street, San Francisco, CA 94111",
+    "displayName": "150, Greenwich Street, Telegraph Hill, North Beach, San Francisco, California, 94111, United States",
+    "latitude": 37.8032494,
+    "longitude": -122.4025954
+  },
+  "555 california street san francisco ca 94104": {
+    "status": "ok",
+    "query": "555 California Street, San Francisco, CA 94104",
+    "displayName": "555 California Street, 555, California Street, Chinatown, South of Market, San Francisco, California, 94108, United States",
+    "latitude": 37.7921219,
+    "longitude": -122.4037191
+  },
+  "1110 gorgas avenue san francisco ca 94129": {
+    "status": "ok",
+    "query": "1110 Gorgas Avenue, San Francisco, CA 94129",
+    "displayName": "1110, Gorgas Avenue, San Francisco, California, 94129, United States",
+    "latitude": 37.8010376,
+    "longitude": -122.4486961
+  },
+  "2055 union street san francisco ca 94123": {
+    "status": "ok",
+    "query": "2055 Union Street, San Francisco, CA 94123",
+    "displayName": "Metro Theatre, 2055, Union Street, Cow Hollow, Pacific Heights, San Francisco, California, 94123, United States",
+    "latitude": 37.7971054,
+    "longitude": -122.4330789
+  },
+  "301 pine street san francisco ca 94105": {
+    "status": "ok",
+    "query": "301 Pine Street, San Francisco, CA 94105",
+    "displayName": "San Francisco Pacific Exchange Building, 301, Pine Street, Transbay, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.7918287,
+    "longitude": -122.4013004
+  },
+  "320 mission street san francisco ca 94105": {
+    "status": "ok",
+    "query": "320 Mission Street, San Francisco, CA 94105",
+    "displayName": "320, Mission Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+    "latitude": 37.7910183,
+    "longitude": -122.3961309
+  },
+  "780 valencia street san francisco ca 94110": {
+    "status": "ok",
+    "query": "780 Valencia Street, San Francisco, CA 94110",
+    "displayName": "780, Valencia Street, Mission, San Francisco, California, 94143, United States",
+    "latitude": 37.7605102,
+    "longitude": -122.4217806
+  },
+  "403 arguello boulevard san francisco ca 94118": {
+    "status": "ok",
+    "query": "403 Arguello Boulevard, San Francisco, CA 94118",
+    "displayName": "LiveFitGym, 403, Arguello Boulevard, Jordan Park, Inner Richmond, Richmond District, San Francisco, California, 94118, United States",
+    "latitude": 37.7829806,
+    "longitude": -122.4592159
+  },
+  "301 fell street san francisco ca 94102": {
+    "status": "ok",
+    "query": "301 Fell Street, San Francisco, CA 94102",
+    "displayName": "LiveFitGym, 301, Fell Street, Hayes Valley, Western Addition, San Francisco, California, 94102, United States",
+    "latitude": 37.775777,
+    "longitude": -122.422934
+  },
+  "950 california street san francisco ca 94108": {
+    "status": "ok",
+    "query": "950 California Street, San Francisco, CA 94108",
+    "displayName": "950, California Street, Union Square, Nob Hill, South of Market, San Francisco, California, 94108, United States",
+    "latitude": 37.7920188,
+    "longitude": -122.4100247
+  },
+  "957 cole street san francisco ca 94117": {
+    "status": "ok",
+    "query": "957 Cole Street, San Francisco, CA 94117",
+    "displayName": "925;929;937;941;957, Cole Street, Cole Valley, Haight-Ashbury, Richmond District, San Francisco, California, 94117, United States",
+    "latitude": 37.7653105,
+    "longitude": -122.4501091
+  },
+  "141 kearny street san francisco ca 94108": {
+    "status": "ok",
+    "query": "141 Kearny Street, San Francisco, CA 94108",
+    "displayName": "141, Kearny Street, Union Square, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.7894374,
+    "longitude": -122.4041127
+  },
+  "1533 sloat boulevard san francisco ca 94132 1222": {
+    "status": "ok",
+    "query": "1533 Sloat Boulevard, San Francisco, CA 94132-1222",
+    "displayName": "1533, Sloat Boulevard, San Francisco, California, 94132, United States",
+    "latitude": 37.7342769,
+    "longitude": -122.4893543
+  },
+  "1725 union street san francisco ca 94123": {
+    "status": "ok",
+    "query": "1725 Union Street, San Francisco, CA 94123",
+    "displayName": "1717;1719;1723;1725, Union Street, Pacific Heights, San Francisco, California, 94123, United States",
+    "latitude": 37.7978454,
+    "longitude": -122.4277433
+  },
+  "432 octavia street san francisco ca 94102": {
+    "status": "ok",
+    "query": "432 Octavia Street, San Francisco, CA 94102",
+    "displayName": "432, Octavia Street, Hayes Valley, Western Addition, San Francisco, California, 94102, United States",
+    "latitude": 37.776342,
+    "longitude": -122.4241956
+  },
+  "1090 dr maya angelou lane suite e san francisco ca 94158": {
+    "status": "not_found",
+    "query": "1090 Dr Maya Angelou Lane, Suite E, San Francisco, CA 94158"
+  },
+  "1600 jackson street san francisco ca 94109": {
+    "status": "ok",
+    "query": "1600 Jackson Street, San Francisco, CA 94109",
+    "displayName": "Lombardi Sports (closed), 1600, Jackson Street, Polk Gulch, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+    "latitude": 37.7944204,
+    "longitude": -122.4218484
+  },
+  "1825 market st san francisco ca 94103": {
+    "status": "ok",
+    "query": "1825 Market St, San Francisco, CA 94103",
+    "displayName": "1825, Market Street, Civic Center, Mission, San Francisco, California, 94103, United States",
+    "latitude": 37.7711983,
+    "longitude": -122.4240386
+  },
+  "5509 geary blvd san francisco ca 94121": {
+    "status": "ok",
+    "query": "5509 Geary Blvd, San Francisco, CA 94121",
+    "displayName": "5509, Geary Boulevard, Richmond District, San Francisco, California, 94121, United States",
+    "latitude": 37.780073,
+    "longitude": -122.4785912
+  },
+  "201 king st san francisco ca": {
+    "status": "ok",
+    "query": "201 King St, San Francisco, CA",
+    "displayName": "201;207;213, King Street, Mission Bay, San Francisco, California, 94017, United States",
+    "latitude": 37.7775415,
+    "longitude": -122.3915675
+  },
+  "160 church st san francisco ca": {
+    "status": "ok",
+    "query": "160 Church St, San Francisco, CA",
+    "displayName": "160, Church Street, Duboce Triangle, San Francisco, California, 94114, United States",
+    "latitude": 37.7684002,
+    "longitude": -122.4291331
+  },
+  "250 montgomery st san francisco ca": {
+    "status": "ok",
+    "query": "250 Montgomery St, San Francisco, CA",
+    "displayName": "250, Montgomery Street, Union Square, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.791454,
+    "longitude": -122.4023749
+  },
+  "1995 union st san francisco ca": {
+    "status": "ok",
+    "query": "1995 Union St, San Francisco, CA",
+    "displayName": "1995, Union Street, Cow Hollow, Pacific Heights, San Francisco, California, 94123, United States",
+    "latitude": 37.797308,
+    "longitude": -122.4319606
+  },
+  "2940 geary blvd san francisco ca 94118": {
+    "status": "ok",
+    "query": "2940 Geary Blvd, San Francisco, CA 94118",
+    "displayName": "2940;2950, Geary Boulevard, Laurel Heights, Richmond District, San Francisco, California, 94118, United States",
+    "latitude": 37.7823602,
+    "longitude": -122.4508987
+  },
+  "175 de haro st san francisco ca 94103": {
+    "status": "ok",
+    "query": "175 De Haro St, San Francisco, CA 94103",
+    "displayName": "175, De Haro Street, Mission Bay, South of Market, San Francisco, California, 94103, United States",
+    "latitude": 37.7679669,
+    "longitude": -122.4015965
+  },
+  "361 brannan st san francisco ca 94107": {
+    "status": "ok",
+    "query": "361 Brannan St, San Francisco, CA 94107",
+    "displayName": "361, Brannan Street, South Beach, South of Market, San Francisco, California, 94107, United States",
+    "latitude": 37.780493,
+    "longitude": -122.393644
+  },
+  "2 brook st san francisco ca 94110": {
+    "status": "ok",
+    "query": "2 Brook St, San Francisco, CA 94110",
+    "displayName": "City CrossFit, 2, Brook Street, San Francisco, California, 94110, United States",
+    "latitude": 37.7408251,
+    "longitude": -122.4232888
+  },
+  "2275 market street second floor san francisco ca 94114": {
+    "status": "not_found",
+    "query": "2275 Market Street, Second Floor, San Francisco, CA 94114"
+  },
+  "1823 divisadero st san francisco ca 94115": {
+    "status": "ok",
+    "query": "1823 Divisadero St, San Francisco, CA 94115",
+    "displayName": "1823;1825, Divisadero Street, Lower Pacific Heights, Western Addition, San Francisco, California, 94115, United States",
+    "latitude": 37.7864436,
+    "longitude": -122.4404978
+  },
+  "450 golden gate avenue san francisco ca 94102": {
+    "status": "ok",
+    "query": "450 Golden Gate Avenue, San Francisco, CA 94102",
+    "displayName": "Phillip Burton Federal Building & United States Courthouse, 450, Golden Gate Avenue, Civic Center, South of Market, San Francisco, California, 94102, United States",
+    "latitude": 37.7819468,
+    "longitude": -122.4180883
+  },
+  "169 steuart street san francisco ca 94105": {
+    "status": "ok",
+    "query": "169 Steuart Street, San Francisco, CA 94105",
+    "displayName": "YMCA, 169, Steuart Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+    "latitude": 37.7925423,
+    "longitude": -122.39199
+  },
+  "1530 buchanan st san francisco ca": {
+    "status": "ok",
+    "query": "1530 Buchanan St, San Francisco, CA",
+    "displayName": "Buchanan YMCA, 1530, Buchanan Street, St. Francis Square Homes, Western Addition, San Francisco, California, 95115, United States",
+    "latitude": 37.7842386,
+    "longitude": -122.4291749
+  },
+  "855 sacramento st san francisco ca": {
+    "status": "ok",
+    "query": "855 Sacramento St, San Francisco, CA",
+    "displayName": "855, Sacramento Street, Chinatown, South of Market, San Francisco, California, 94108, United States",
+    "latitude": 37.7932009,
+    "longitude": -122.4068842
+  },
+  "63 funston ave san francisco ca": {
+    "status": "ok",
+    "query": "63 Funston Ave, San Francisco, CA",
+    "displayName": "Presidio YMCA, 63, Funston Avenue, Richmond District, San Francisco, California, 94129, United States",
+    "latitude": 37.7997091,
+    "longitude": -122.4547549
+  },
+  "360 18th ave san francisco ca": {
+    "status": "ok",
+    "query": "360 18th Ave, San Francisco, CA",
+    "displayName": "Richmond District YMCA, 360, 18th Avenue, Richmond District, San Francisco, California, 94121, United States",
+    "latitude": 37.7812657,
+    "longitude": -122.477027
+  },
+  "333 eucalyptus dr san francisco ca": {
+    "status": "ok",
+    "query": "333 Eucalyptus Dr, San Francisco, CA",
+    "displayName": "333, Eucalyptus Drive, San Francisco, California, 94312, United States",
+    "latitude": 37.7307751,
+    "longitude": -122.4764501
+  },
+  "william j rutter center 1675 owens street san francisco ca 94158": {
+    "status": "ok",
+    "query": "William J. Rutter Center, 1675 Owens Street, San Francisco, CA 94158",
+    "displayName": "UCSF Community Center, 1675, Owens Street, Mission Bay, San Francisco, California, 94143, United States",
+    "latitude": 37.7679596,
+    "longitude": -122.3931134
+  },
+  "millberry union 500 parnassus avenue level b1 san francisco ca 94143": {
+    "status": "not_found",
+    "query": "Millberry Union, 500 Parnassus Avenue, Level B1, San Francisco, CA 94143"
+  },
+  "2130 fulton st san francisco ca 94117": {
+    "status": "ok",
+    "query": "2130 Fulton St, San Francisco, CA 94117",
+    "displayName": "St. Ignatius of Loyola, 2130, Fulton Street, Panhandle, San Francisco, California, 94117, United States",
+    "latitude": 37.7760972,
+    "longitude": -122.4504638
+  },
+  "2295 harrison street san francisco ca 94110": {
+    "status": "ok",
+    "query": "2295 Harrison Street, San Francisco, CA 94110",
+    "displayName": "Mission Cliffs, 2295, Harrison Street, Mission, San Francisco, California, 94110, United States",
+    "latitude": 37.7606654,
+    "longitude": -122.4124129
+  },
+  "2573 3rd street san francisco ca 94107": {
+    "status": "ok",
+    "query": "2573 3rd Street, San Francisco, CA 94107",
+    "displayName": "2573, 3rd Street, Dogpatch, Potrero Hill, San Francisco, California, 94107, United States",
+    "latitude": 37.7566416,
+    "longitude": -122.3879743
+  },
+  "1414 van ness ave san francisco ca 94109": {
+    "status": "ok",
+    "query": "1414 Van Ness Ave, San Francisco, CA 94109",
+    "displayName": "Benchmark Climbing, 1414, Van Ness Avenue, Polk Gulch, Nob Hill, South of Market, San Francisco, California, 94109, United States",
+    "latitude": 37.7888897,
+    "longitude": -122.4217728
+  },
+  "1217 polk san francisco ca": {
+    "status": "ok",
+    "query": "1217 Polk, San Francisco, CA",
+    "displayName": "1217;1219;1221, Polk Street, Polk Gulch, Tenderloin, South of Market, San Francisco, California, 94164, United States",
+    "latitude": 37.7880747,
+    "longitude": -122.4204571
+  },
+  "539 gough st san francisco ca 94102": {
+    "status": "ok",
+    "query": "539 Gough St, San Francisco, CA 94102",
+    "displayName": "539, Gough Street, Hayes Valley, Western Addition, San Francisco, California, 94102, United States",
+    "latitude": 37.7781908,
+    "longitude": -122.4233469
+  },
+  "640 stanyan st san francisco ca 94117": {
+    "status": "ok",
+    "query": "640 Stanyan St, San Francisco, CA 94117",
+    "displayName": "636;638;640;644, Stanyan Street, Cole Valley, Inner Richmond, Richmond District, San Francisco, California, 94117, United States",
+    "latitude": 37.7703868,
+    "longitude": -122.4535211
+  },
+  "2068 union st san francisco ca 94123": {
+    "status": "ok",
+    "query": "2068 Union St, San Francisco, CA 94123",
+    "displayName": "2062;2064;2066;2068, Union Street, Cow Hollow, Pacific Heights, San Francisco, California, 94123, United States",
+    "latitude": 37.7975936,
+    "longitude": -122.4333556
+  },
+  "445 judah st san francisco ca 94122": {
+    "status": "ok",
+    "query": "445 Judah St, San Francisco, CA 94122",
+    "displayName": "445, Judah Street, Inner Sunset, San Francisco, California, 94122, United States",
+    "latitude": 37.7618459,
+    "longitude": -122.4669857
+  },
+  "panhandle park at clayton street or ashbury street between fell and oak streets san francisco ca": {
+    "status": "not_found",
+    "query": "Panhandle Park at Clayton Street or Ashbury Street between Fell and Oak Streets, San Francisco, CA"
+  },
+  "3915 noriega st san francisco ca 94122": {
+    "status": "ok",
+    "query": "3915 Noriega St, San Francisco, CA 94122",
+    "displayName": "3915, Noriega Street, Outer Sunset, Sunset District, San Francisco, California, 94122, United States",
+    "latitude": 37.7528108,
+    "longitude": -122.5056817
+  },
+  "3729 balboa st san francisco ca 94121": {
+    "status": "ok",
+    "query": "3729 Balboa St, San Francisco, CA 94121",
+    "displayName": "3725;3729, Balboa Street, Outer Richmond, San Francisco, California, 94121, United States",
+    "latitude": 37.7754506,
+    "longitude": -122.498881
+  },
+  "1360 valencia street san francisco ca 94110": {
+    "status": "ok",
+    "query": "1360 Valencia Street, San Francisco, CA 94110",
+    "displayName": "1360;1362, Valencia Street, Mission, San Francisco, California, 94110, United States",
+    "latitude": 37.7510781,
+    "longitude": -122.4208748
+  },
+  "4501 irving street at 46th avenue san francisco ca": {
+    "status": "not_found",
+    "query": "4501 Irving Street at 46th Avenue, San Francisco, CA"
+  },
+  "455 judah street san francisco ca": {
+    "status": "ok",
+    "query": "455 Judah Street, San Francisco, CA",
+    "displayName": "455, Judah Street, Inner Sunset, San Francisco, California, 94122, United States",
+    "latitude": 37.7620052,
+    "longitude": -122.4671148
+  },
+  "2010 balboa street san francisco ca": {
+    "status": "ok",
+    "query": "2010 Balboa Street, San Francisco, CA",
+    "displayName": "2010, Balboa Street, Richmond District, San Francisco, California, 94121, United States",
+    "latitude": 37.7765694,
+    "longitude": -122.4804138
+  },
+  "910 columbus ave san francisco ca": {
+    "status": "ok",
+    "query": "910 Columbus Ave, San Francisco, CA",
+    "displayName": "900, 910, Columbus Avenue, Russian Hill, North Beach, San Francisco, California, 94133, United States",
+    "latitude": 37.8030291,
+    "longitude": -122.4137875
+  },
+  "97 collingwood street san francisco ca": {
+    "status": "ok",
+    "query": "97 Collingwood Street, San Francisco, CA",
+    "displayName": "97, Collingwood Street, Castro District, Mission, San Francisco, California, 94114, United States",
+    "latitude": 37.7609744,
+    "longitude": -122.4360251
+  },
+  "three embarcadero center lobby level san francisco ca 94111": {
+    "status": "not_found",
+    "query": "Three Embarcadero Center, Lobby Level, San Francisco, CA 94111"
+  },
+  "1201a guerrero st san francisco ca 94110": {
+    "status": "ok",
+    "query": "1201A Guerrero St, San Francisco, CA 94110",
+    "displayName": "Evolve Pilates, 1201A, Guerrero Street, Mission, San Francisco, California, 94110, United States",
+    "latitude": 37.7518051,
+    "longitude": -122.4227203
+  },
+  "1452 valencia st san francisco ca 94110": {
+    "status": "ok",
+    "query": "1452 Valencia St, San Francisco, CA 94110",
+    "displayName": "1452, Valencia Street, Mission, San Francisco, California, 94110, United States",
+    "latitude": 37.7496172,
+    "longitude": -122.4207406
+  },
+  "3460 geary street san francisco ca 94118": {
+    "status": "ok",
+    "query": "3460 Geary Street, San Francisco, CA 94118",
+    "displayName": "Geary Street, Lower Nob Hill, Tenderloin, South of Market, San Francisco, California, 94164, United States",
+    "latitude": 37.785736,
+    "longitude": -122.4210649
+  },
+  "2652 mcallister street san francisco ca 94118": {
+    "status": "ok",
+    "query": "2652 McAllister Street, San Francisco, CA 94118",
+    "displayName": "2652, McAllister Street, Inner Richmond, Richmond District, San Francisco, California, 94118, United States",
+    "latitude": 37.7757288,
+    "longitude": -122.4557637
+  },
+  "417 montgomery st san francisco ca 94104": {
+    "status": "ok",
+    "query": "417 Montgomery St, San Francisco, CA 94104",
+    "displayName": "417, Montgomery Street, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.7933839,
+    "longitude": -122.4032165
+  },
+  "141 kearny st san francisco ca 94108": {
+    "status": "ok",
+    "query": "141 Kearny St, San Francisco, CA 94108",
+    "displayName": "141, Kearny Street, Union Square, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.7894374,
+    "longitude": -122.4041127
+  },
+  "1533 sloat blvd san francisco ca 94132": {
+    "status": "ok",
+    "query": "1533 Sloat Blvd, San Francisco, CA 94132",
+    "displayName": "1533, Sloat Boulevard, San Francisco, California, 94132, United States",
+    "latitude": 37.7342769,
+    "longitude": -122.4893543
+  }
+}
