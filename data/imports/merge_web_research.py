@@ -28,6 +28,7 @@ CACHE_PATH = ROOT / "data" / "imports" / "sf-gym-geocode-cache.json"
 RESEARCH_PATHS = (
     ROOT / "data" / "imports" / "sf-gym-web-research-a.json",
     ROOT / "data" / "imports" / "sf-gym-web-research-b.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-c.json",
 )
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 SF_BOUNDS = (37.68, 37.86, -122.56, -122.30)

@@ -99,7 +99,7 @@ function gymDetailHref(id: string): string {
 export default function GymExplorer() {
   const [gyms, setGyms] = useState<Gym[]>(demoGyms);
   const [query, setQuery] = useState("");
-  const [neighborhoodFilter, setNeighborhoodFilter] = useState("");
+  const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<string[]>([]);
   const [maxMonthly, setMaxMonthly] = useState("");
   const [radiusMiles, setRadiusMiles] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOrder>("recommended");
@@ -110,6 +110,7 @@ export default function GymExplorer() {
   const [selected, setSelected] = useState<Gym | null>(null);
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [compareMessage, setCompareMessage] = useState("");
   const [authMessage, setAuthMessage] = useState("");
   const [authLabel, setAuthLabel] = useState("Sign in with Google");
   const locationControllerRef = useRef<AbortController | null>(null);
@@ -222,7 +223,7 @@ export default function GymExplorer() {
       .filter(({ gym, distance }) => {
         const matchesText = !needle || [gym.name, gym.neighborhood, gym.address, gym.gymType, ...gym.amenities]
           .join(" ").toLowerCase().includes(needle);
-        const matchesNeighborhood = !neighborhoodFilter || gym.neighborhood === neighborhoodFilter;
+        const matchesNeighborhood = selectedNeighborhoods.length === 0 || selectedNeighborhoods.includes(gym.neighborhood);
         const matchesBudget = !maxMonthly || (gym.monthlyPrice !== null && gym.monthlyPrice <= budget);
         const matchesRadius = distance === null || distance <= radius;
         return matchesText && matchesNeighborhood && matchesBudget && matchesRadius;
@@ -240,11 +241,20 @@ export default function GymExplorer() {
       }
       return left.gym.name.localeCompare(right.gym.name);
     });
-  }, [gyms, maxMonthly, neighborhoodFilter, origin, query, radiusMiles, sortOrder]);
+  }, [gyms, maxMonthly, origin, query, radiusMiles, selectedNeighborhoods, sortOrder]);
 
   const filteredGyms = useMemo(() => visibleRows.map(({ gym }) => gym), [visibleRows]);
   const selectedGym = selected && filteredGyms.some((gym) => gym.id === selected.id) ? selected : null;
   const selectedDistance = selectedGym && origin ? distanceMiles(origin, selectedGym) : null;
+  const compareGyms = useMemo(() => compareIds
+    .map((id) => gyms.find((gym) => gym.id === id))
+    .filter((gym): gym is Gym => Boolean(gym)), [compareIds, gyms]);
+
+  const toggleNeighborhood = (neighborhood: string) => {
+    setSelectedNeighborhoods((current) => current.includes(neighborhood)
+      ? current.filter((item) => item !== neighborhood)
+      : [...current, neighborhood]);
+  };
 
   const toggleSaved = (id: string) => {
     setSavedIds((current) => {
@@ -259,6 +269,11 @@ export default function GymExplorer() {
       const next = current.includes(id)
         ? current.filter((item) => item !== id)
         : current.length < 3 ? [...current, id] : current;
+      if (!current.includes(id) && current.length >= 3) {
+        setCompareMessage("Compare up to three gyms at a time. Remove one to add another.");
+      } else {
+        setCompareMessage("");
+      }
       window.localStorage.setItem("sf-gyms:compare", JSON.stringify(next));
       return next;
     });
@@ -378,12 +393,21 @@ export default function GymExplorer() {
       <section className="neighborhood-filter" aria-label="Filter by neighborhood">
         <div className="neighborhood-filter-head">
           <div className="section-label">Neighborhoods</div>
-          <span className="neighborhood-filter-status" aria-live="polite">{neighborhoodFilter ? `${filteredGyms.length} gyms in ${neighborhoodFilter}` : "Filter the map by area"}</span>
+          <span className="neighborhood-filter-status" aria-live="polite">{selectedNeighborhoods.length > 0 ? `${filteredGyms.length} gyms across ${selectedNeighborhoods.length} area${selectedNeighborhoods.length === 1 ? "" : "s"}` : "Filter the map by area"}</span>
         </div>
-        <div className="filter-chips" role="group" aria-label="San Francisco neighborhood filters" tabIndex={0}>
-          <button className={`filter-chip ${neighborhoodFilter === "" ? "active" : ""}`} type="button" aria-pressed={neighborhoodFilter === ""} onClick={() => setNeighborhoodFilter("")}>All neighborhoods</button>
-          {neighborhoodOptions.map((neighborhood) => <button className={`filter-chip ${neighborhoodFilter === neighborhood ? "active" : ""}`} type="button" aria-label={`Filter gyms in ${neighborhood}`} aria-pressed={neighborhoodFilter === neighborhood} onClick={() => setNeighborhoodFilter(neighborhood)} key={neighborhood}>{neighborhood}</button>)}
-        </div>
+        <details className="neighborhood-select">
+          <summary aria-label="Choose one or more San Francisco neighborhoods">
+            <span>{selectedNeighborhoods.length === 0 ? "All neighborhoods" : `${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"} selected`}</span>
+            <span className="neighborhood-select-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div className="neighborhood-menu">
+            <button className="neighborhood-clear" type="button" onClick={() => setSelectedNeighborhoods([])} disabled={selectedNeighborhoods.length === 0}>Clear selection</button>
+            {neighborhoodOptions.map((neighborhood) => <label className="neighborhood-option" key={neighborhood}>
+              <input type="checkbox" checked={selectedNeighborhoods.includes(neighborhood)} onChange={() => toggleNeighborhood(neighborhood)} />
+              <span>{neighborhood}</span>
+            </label>)}
+          </div>
+        </details>
       </section>
 
       <section className="location-toolbar" aria-label="Distance from a location">
@@ -397,7 +421,25 @@ export default function GymExplorer() {
         {locationStatus && <span className="location-status" role="status">{locationStatus}</span>}
       </section>
 
-      {compareIds.length > 0 && <div className="compare-bar" id="compare"><span><strong>{compareIds.length}</strong> gym{compareIds.length === 1 ? "" : "s"} ready to compare.</span><button onClick={() => { setCompareIds([]); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button></div>}
+      {compareGyms.length > 0 && <section className="compare-panel" id="compare" aria-labelledby="compare-heading">
+        <div className="compare-panel-head">
+          <div><div className="section-label">Side by side</div><h3 id="compare-heading">Compare prices</h3><p>Keep up to three gyms here while you explore the map.</p></div>
+          <button className="compare-clear" type="button" onClick={() => { setCompareIds([]); setCompareMessage(""); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button>
+        </div>
+        <div className="compare-table-wrap">
+          <table className="compare-table">
+            <thead><tr><th scope="col">Gym</th><th scope="col">Neighborhood</th><th scope="col">Monthly</th><th scope="col">Day pass</th><th scope="col"><span className="sr-only">Remove</span></th></tr></thead>
+            <tbody>{compareGyms.map((gym) => <tr key={gym.id}>
+              <th scope="row"><a href={gymDetailHref(gym.id)}>{gym.name}</a></th>
+              <td>{gym.neighborhood}</td>
+              <td><strong>{priceLabel(gym.monthlyPrice, "/mo")}</strong>{gym.priceSourceUrl && <a className="compare-source" href={gym.priceSourceUrl} target="_blank" rel="noreferrer">Source</a>}</td>
+              <td><strong>{priceLabel(gym.dayPassPrice, " day pass")}</strong></td>
+              <td><button className="compare-remove" type="button" onClick={() => toggleCompare(gym.id)} aria-label={`Remove ${gym.name} from comparison`}>×</button></td>
+            </tr>)}</tbody>
+          </table>
+        </div>
+        {compareMessage && <p className="compare-message" role="status">{compareMessage}</p>}
+      </section>}
 
       <section className="explorer map-first-explorer map-section" id="map" aria-label="Gym map and listings">
         <div className="map-heading-row">
@@ -406,7 +448,7 @@ export default function GymExplorer() {
         </div>
         <div className="map-panel">
           <div className="map-topbar">
-            <div><strong>{filteredGyms.length}</strong> {neighborhoodFilter ? `in ${neighborhoodFilter}` : "across San Francisco"}</div>
+          <div><strong>{filteredGyms.length}</strong> {selectedNeighborhoods.length > 0 ? `across ${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"}` : "across San Francisco"}</div>
             <span>Map view</span>
           </div>
           <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
