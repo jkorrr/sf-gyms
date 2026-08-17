@@ -5,6 +5,7 @@ export function getGymById(id: string): Gym | undefined {
 }
 
 export function priceText(value: number | null, suffix: string): string {
+  if (value === 0) return `Free${suffix}`;
   return value === null ? "Not listed" : `$${value.toFixed(2)}${suffix}`;
 }
 
