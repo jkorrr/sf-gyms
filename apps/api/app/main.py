@@ -17,6 +17,7 @@ from .schemas import (
     GymSearchResponse,
     LeadCreate,
     ReportCreate,
+    VenueType,
 )
 from .security import JwksCache, required_user
 
@@ -79,13 +80,14 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     async def list_gyms(
         query: str | None = Query(default=None, max_length=100),
         max_monthly: float | None = Query(default=None, ge=0, le=10000),
+        venue_type: list[VenueType] | None = Query(default=None),
     ):
         if settings.demo_mode or app.state.sessions is None:
-            items = await app.state.demo_repository.search(query=query, max_monthly=max_monthly)
+            items = await app.state.demo_repository.search(query=query, max_monthly=max_monthly, venue_types=venue_type)
             return response(items, demo_mode=True)
         async with app.state.sessions() as session:
             async with session.begin():
-                items = await SqlAlchemyGymRepository(session).search(query=query, max_monthly=max_monthly)
+                items = await SqlAlchemyGymRepository(session).search(query=query, max_monthly=max_monthly, venue_types=venue_type)
             return response(items, demo_mode=False)
 
     @app.get("/api/v1/gyms/{gym_id}", response_model=GymDetail, tags=["gyms"])

@@ -4,14 +4,19 @@
     "sourceUrl": "https://www.openstreetmap.org/",
     "queryUrl": "https://overpass-api.de/api/interpreter",
     "boundingBox": "37.70,-122.53,37.84,-122.35",
-    "importedAt": "2026-08-17T06:01:30Z",
+    "importedAt": "2026-08-18T04:04:04Z",
     "license": "ODbL 1.0",
     "notes": "Named OSM-tagged fitness facilities in the San Francisco bounding box; coverage is not exhaustive.",
     "supplementalSources": [
       "data/imports/sf-gym-web-research-a.json",
-      "data/imports/sf-gym-web-research-b.json"
+      "data/imports/sf-gym-web-research-b.json",
+      "data/imports/sf-gym-web-research-c.json",
+      "data/imports/sf-gym-web-research-d.json",
+      "data/imports/sf-gym-web-research-e.json",
+      "data/imports/sf-gym-web-research-f.json"
     ],
-    "supplementalNotes": "Official web research is provenance-backed and may describe starting rates, day passes, promotions, eligibility-limited plans, or free trials. Null means the public source did not publish a safe comparable price. Confirm all rates before joining."
+    "supplementalNotes": "Official web research is provenance-backed and may describe starting rates, day passes, promotions, eligibility-limited plans, or free trials. Null means the public source did not publish a safe comparable price. Confirm all rates before joining.",
+    "venueTaxonomyVersion": 1
   },
   "gyms": [
     {
@@ -40,7 +45,50 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
+    },
+    {
+      "id": "web-885cf10a16da0d",
+      "name": "17 Reasons Athletic Club",
+      "neighborhood": "Mission",
+      "address": "1920 Bryant Street, San Francisco, CA 94110",
+      "gymType": "independent strength and fitness gym",
+      "latitude": 37.762691,
+      "longitude": -122.4103144,
+      "monthlyPrice": 125,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": null,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "free weights",
+        "strength equipment",
+        "cardio",
+        "independent gym"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://17reasonsathleticclub.com/",
+      "sourceName": "17 Reasons Athletic Club",
+      "sourceId": "web-research/web-885cf10a16da0d",
+      "sourceUrl": "https://17reasonsathleticclub.com/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "17 Reasons Athletic Club",
+      "priceSourceUrl": "https://17reasonsathleticclub.com/membership",
+      "priceNote": "Official membership page lists monthly options at $125 for 5 classes, $170 for 9 classes, and $195 unlimited. A 7-class pack is mentioned, but the reviewed public page did not expose a regular single-class or day-pass price.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-417957202",
@@ -67,7 +115,10 @@
       "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
       "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
       "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-8641835222",
@@ -94,7 +145,10 @@
       "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
       "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
       "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-392204795",
@@ -121,7 +175,10 @@
       "priceSource": "24 Hour Fitness Ocean Sport Gym membership page",
       "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
       "priceNote": "Gold plan shown as low as $38.99/month; plan, commitment, club, taxes, and fees vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-4613901103",
@@ -146,7 +203,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2819256103",
@@ -171,7 +231,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-10733903069",
@@ -198,7 +261,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-11038336709",
@@ -225,7 +291,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-5840675556",
@@ -252,7 +321,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-12724420917",
@@ -279,7 +351,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-586709251",
@@ -304,7 +379,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-93703728",
@@ -329,7 +407,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-3485460052",
@@ -354,7 +435,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-276880820",
@@ -381,7 +465,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "gymnastics"
     },
     {
       "id": "osm-way-287871312",
@@ -408,7 +495,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "gymnastics"
     },
     {
       "id": "osm-node-12337873692",
@@ -437,7 +527,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-417275907",
@@ -464,7 +557,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-9775741769",
@@ -489,7 +585,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-585968188",
@@ -517,7 +616,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-10047742013",
@@ -542,7 +644,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-3542720509",
@@ -569,7 +674,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-996696401",
@@ -597,7 +705,10 @@
       "priceSource": "UCSF Fitness & Recreation day pass page",
       "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/day-and-shower-passes",
       "priceNote": "Adult single-day pass; member-hosted and student rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-af8c0bcc212030",
@@ -624,7 +735,10 @@
       "priceSource": "UCSF Fitness & Recreation membership, day-pass, and Bakar pages",
       "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
       "priceNote": "Official Bakar single-site membership is $144/month; dual-site is $170/month. Adult single-day pass is $30, or $15 when hosted by a member. F45 is a separate add-on.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6636000320",
@@ -651,7 +765,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-10090042978",
@@ -676,7 +793,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-6496142801",
@@ -704,7 +824,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-9411404744",
@@ -733,7 +856,117 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
+    },
+    {
+      "id": "web-6684c1b9e3dfcb",
+      "name": "Barry's San Francisco - Castro",
+      "neighborhood": "Castro",
+      "address": "2280 Market Street, San Francisco, CA 94114",
+      "gymType": "HIIT and strength studio",
+      "latitude": 37.7648157,
+      "longitude": -122.4327172,
+      "monthlyPrice": null,
+      "dayPassPrice": 38,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "Red Room HIIT",
+        "LIFT classes",
+        "Fuel Bar",
+        "lockers",
+        "hot showers",
+        "complimentary towels",
+        "parking"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Mon-Thu 5:00am-9:00pm; Fri 5:00am-8:00pm; Sat 6:00am-4:00pm; Sun 7:00am-5:00pm",
+      "websiteUrl": "https://www.barrys.com/studio/castro",
+      "sourceName": "Barry's",
+      "sourceId": "web-research/web-6684c1b9e3dfcb",
+      "sourceUrl": "https://www.barrys.com/studio/castro",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Barry's",
+      "priceSourceUrl": "https://app.barrys.com/pricing?location=10298",
+      "priceNote": "Official Barry's pricing page lists Northern California 1 Class at $38. Location page confirms the Castro studio address and amenities. Monthly membership prices were not exposed in the reviewed public page.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
+    },
+    {
+      "id": "web-c55f6836183a91",
+      "name": "Barry's San Francisco - FiDi",
+      "neighborhood": "Financial District",
+      "address": "333 Bush Street, San Francisco, CA 94104",
+      "gymType": "HIIT and strength studio",
+      "latitude": 37.7905749,
+      "longitude": -122.4030716,
+      "monthlyPrice": null,
+      "dayPassPrice": 38,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "Red Room HIIT",
+        "Fuel Bar",
+        "locker rooms",
+        "showers",
+        "strength training",
+        "treadmills"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Mon-Thu 5:30am-8:00pm; Fri 5:30am-7:00pm; Sat-Sun 7:00am-1:30pm",
+      "websiteUrl": "https://www.barrys.com/studio/fidi",
+      "sourceName": "Barry's",
+      "sourceId": "web-research/web-c55f6836183a91",
+      "sourceUrl": "https://www.barrys.com/studio/fidi",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Barry's",
+      "priceSourceUrl": "https://app.barrys.com/pricing?location=10298",
+      "priceNote": "Official Barry's pricing page lists Northern California 1 Class at $38. Location page confirms the FiDi studio address. Monthly membership prices were not exposed in the reviewed public page.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
+    },
+    {
+      "id": "web-18e908eb2543ab",
+      "name": "Barry's San Francisco - Marina",
+      "neighborhood": "Marina",
+      "address": "2246 Lombard Street, San Francisco, CA 94123",
+      "gymType": "HIIT and strength studio",
+      "latitude": 37.7998754,
+      "longitude": -122.4387486,
+      "monthlyPrice": null,
+      "dayPassPrice": 38,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "Red Room HIIT",
+        "Fuel Bar",
+        "lockers",
+        "hot showers",
+        "complimentary towels",
+        "grooming products",
+        "changing rooms"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Mon 6:00am-8:00pm; Tue 5:00am-8:00pm; Wed 6:00am-8:00pm; Thu 5:00am-8:00pm; Fri 5:00am-7:00pm; Sat-Sun 7:00am-2:00pm",
+      "websiteUrl": "https://www.barrys.com/studio/san-francisco-marina",
+      "sourceName": "Barry's",
+      "sourceId": "web-research/web-18e908eb2543ab",
+      "sourceUrl": "https://www.barrys.com/studio/san-francisco-marina",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Barry's",
+      "priceSourceUrl": "https://app.barrys.com/pricing?location=10298",
+      "priceNote": "Official Barry's pricing page lists Northern California 1 Class at $38, 5 classes at $185, 10 classes at $365, 20 classes at $710, and 50 classes at $1,680. A first-timer 3-pack is $75 but treated as an intro offer, not the regular drop-in.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-2537352227",
@@ -761,7 +994,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-a8dd7473a48e9c",
@@ -791,7 +1027,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://www.bayclubs.com/memberships",
       "priceNote": "SF campus membership pricing and day-pass pricing were not listed on the public pages reviewed. The membership page's displayed $350 starting price is explicitly for Executive Club North Bay and was not applied to this SF location.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-24460896",
@@ -820,7 +1059,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-1018f0171ffa8e",
@@ -851,7 +1093,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://www.bayclubs.com/memberships",
       "priceNote": "SF campus membership pricing and day-pass pricing were not listed on the public pages reviewed. The membership page's displayed $350 starting price is explicitly for Executive Club North Bay and was not applied to this SF location.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6693646146",
@@ -876,7 +1121,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "web-94d9302c37678b",
@@ -904,7 +1152,10 @@
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-27211224",
@@ -929,7 +1180,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-3161283284",
@@ -957,7 +1211,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-6636000317",
@@ -984,7 +1241,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-4004802465",
@@ -1015,7 +1275,10 @@
       "priceSource": "Benchmark Climbing official passes page",
       "priceSourceUrl": "https://www.benchmarkclimbing.com/new-memberships-1",
       "priceNote": "Official day pass is $30. Rental shoes and chalk are an additional $5. The reviewed official passes page did not show a standard monthly membership price.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "climbing_gym"
     },
     {
       "id": "osm-node-4637222973",
@@ -1025,9 +1288,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7388822,
       "longitude": -122.4135568,
-      "monthlyPrice": null,
+      "monthlyPrice": 140,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -1040,10 +1303,14 @@
       "sourceId": "node/4637222973",
       "sourceUrl": "https://www.openstreetmap.org/node/4637222973",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.bernalyoga.com/rates/",
+      "priceNote": "Official rates page publishes a One Month Pass for unlimited regular classes at $140. Regular single drop-in amount was not cleanly exposed in the crawled public text.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 140,
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-11777394338",
@@ -1071,7 +1338,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-12300049959",
@@ -1100,7 +1370,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-6829148264",
@@ -1110,9 +1383,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7804862,
       "longitude": -122.4801862,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 149,
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -1125,10 +1398,15 @@
       "sourceId": "node/6829148264",
       "sourceUrl": "https://www.openstreetmap.org/node/6829148264",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
+      "priceNote": "Official Seacliff rates page lists monthly auto-pay unlimited at $149, single class at $30, and 12-month unlimited at $1,450.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 149,
+      "annualPrepayPrice": 1450,
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-13507740638",
@@ -1156,7 +1434,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-4190906588",
@@ -1183,7 +1464,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-6636000321",
@@ -1210,7 +1494,46 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
+    },
+    {
+      "id": "web-1b2f42bb1e4bcb",
+      "name": "Body Temp Yoga",
+      "neighborhood": "Marina",
+      "address": "2425 Chestnut Street, San Francisco, CA 94123",
+      "gymType": "Hot yoga and mat Pilates studio",
+      "latitude": 37.7996973,
+      "longitude": -122.4433095,
+      "monthlyPrice": 139,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "hot yoga",
+        "hot mat Pilates",
+        "hot sculpt",
+        "hot HIIT",
+        "yin",
+        "rolling",
+        "filtered water"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://bodytempyoga.com/",
+      "sourceName": "Body Temp Yoga",
+      "sourceId": "web-research/web-1b2f42bb1e4bcb",
+      "sourceUrl": "https://bodytempyoga.com/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Body Temp Yoga",
+      "priceSourceUrl": "https://www.bodytempyoga.com/memberships",
+      "priceNote": "Official memberships page lists Standard Membership at $139/month and Premium Membership at $169/month. Official product and rules pages list single live classes at $35; older limited-capacity pages also show $29-$35 in-studio class references, so $35 is the current safer drop-in figure.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-11103972677",
@@ -1238,7 +1561,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6815206679",
@@ -1267,7 +1593,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-12251148868",
@@ -1292,7 +1621,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-3379321522",
@@ -1319,7 +1651,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-12727181306",
@@ -1346,7 +1681,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-way-256495543",
@@ -1371,7 +1709,10 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-173103606",
@@ -1398,7 +1739,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-10553760194",
@@ -1423,7 +1767,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "web-9cb9e987c99d39",
@@ -1450,7 +1797,10 @@
       "priceSource": "California Martial Athletics official pricing page",
       "priceSourceUrl": "https://www.cmasf.com/pricing",
       "priceNote": "Official month-to-month membership is $214/month plus a $50 enrollment fee. First class is $25. Six-month and 12-month plans reduce the monthly equivalent to $196 and $183 respectively.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-89802412",
@@ -1477,7 +1827,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6636000313",
@@ -1504,7 +1857,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-2653231297",
@@ -1531,7 +1887,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "web-e220d3accf950e",
@@ -1560,7 +1919,10 @@
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-162056248",
@@ -1585,7 +1947,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-3204993502",
@@ -1610,7 +1975,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-248782086",
@@ -1638,7 +2006,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6636000324",
@@ -1665,7 +2036,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "web-671ce25da68f7d",
@@ -1693,7 +2067,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://www.ccsf.edu/academics/contract-education-and-extension-programs/fitness-center-and-pool-semester-memberships",
       "priceNote": "CCSF publicly describes a semester membership that includes the Fitness Center and Pool, but the current public page does not expose the semester fee or a day-pass price.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-13905876759",
@@ -1721,7 +2098,10 @@
       "priceSource": "City CrossFit official membership page",
       "priceSourceUrl": "https://www.thecitycrossfit.com/memberships",
       "priceNote": "Official membership page lists $250/month for 12 classes and $275/month unlimited. Drop-in is $35. New athletes must complete a 3-session introduction series or test out.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6615295110",
@@ -1746,7 +2126,10 @@
       "priceSource": "City Sports Club San Francisco membership rate page",
       "priceSourceUrl": "https://citysportsfitness.com/Pages/MembershipSignUpRate.aspx?id=wead5DoGQM1uFv9DRrzRyg%3D%3D",
       "priceNote": "Classic multi-club state-of-enrollment plan; $69 annual fee and taxes may apply.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-4238377195",
@@ -1771,7 +2154,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-10917024236",
@@ -1800,7 +2186,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-way-288705759",
@@ -1827,7 +2216,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-11701513373",
@@ -1854,7 +2246,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10276089929",
@@ -1881,7 +2276,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-3658328826",
@@ -1906,7 +2304,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-663533939",
@@ -1933,7 +2334,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-10806697937",
@@ -1960,7 +2364,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-6604031903",
@@ -1989,7 +2396,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-9465192363",
@@ -2016,7 +2426,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-2337759318",
@@ -2044,7 +2457,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-4548624459",
@@ -2071,7 +2487,45 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
+    },
+    {
+      "id": "web-0701b04c78c76f",
+      "name": "CrossFit Alinea",
+      "neighborhood": "Mission",
+      "address": "674 South Van Ness Avenue, San Francisco, CA 94110",
+      "gymType": "CrossFit, HYROX, and strength gym",
+      "latitude": 37.7557611,
+      "longitude": -122.4166037,
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "freshness": "unknown",
+      "isOpen247": false,
+      "amenities": [
+        "CrossFit",
+        "HYROX",
+        "weightlifting",
+        "Build class",
+        "private coaching",
+        "on-ramp"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Mon-Fri 6:30am-7:30pm; Sat 8:30am-12:00pm; Sun closed",
+      "websiteUrl": "https://www.crossfitalinea.com/",
+      "sourceName": "CrossFit Alinea",
+      "sourceId": "web-research/web-0701b04c78c76f",
+      "sourceUrl": "https://www.crossfitalinea.com/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "",
+      "priceSourceUrl": "https://www.crossfitalinea.com/",
+      "priceNote": "Official site lists free intro and visiting-athlete drop-in booking paths, but no numeric membership or drop-in amount was published in the reviewed public text. CrossFit directory also advises contacting the gym for prices.",
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10542243253",
@@ -2098,7 +2552,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-8660742534",
@@ -2108,25 +2565,32 @@
       "gymType": "Fitness centre",
       "latitude": 37.7680274,
       "longitude": -122.401741,
-      "monthlyPrice": 299,
+      "monthlyPrice": 219,
       "dayPassPrice": 35,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed",
-        "CrossFit; custom pull-up rigs; lifting platforms; bathrooms/changing space; two-location access; sliding-scale memberships"
+        "CrossFit; custom pull-up rigs; lifting platforms; bathrooms/changing space; two-location access; sliding-scale memberships",
+        "CrossFit classes",
+        "strength training",
+        "coaching"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
-      "hours": "Hours not listed",
+      "hours": "Not audited in this pricing pass",
       "websiteUrl": "https://crossfitpotrerohill.com/",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/8660742534",
       "sourceUrl": "https://www.openstreetmap.org/node/8660742534",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "CrossFit Potrero Hill official membership page",
+      "priceSource": "CrossFit Potrero Hill",
       "priceSourceUrl": "https://crossfitpotrerohill.com/membership/",
-      "priceNote": "Official unlimited membership is $299/month with access to both locations. 2x weekly is $219/month and 3x weekly is $259/month. Affiliate drop-in is $35.",
-      "priceObservedAt": "2026-08-16"
+      "priceNote": "Official membership page lists two-location month-to-month memberships at $219/month for 2 classes/week, $259/month for 3 classes/week, and $299/month unlimited. Visitor drop-in is $35. Paid-in-advance discounts are noted but not used as the primary monthly rate.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-c3b2830a9bc6f1",
@@ -2136,12 +2600,15 @@
       "gymType": "CrossFit, HYROX, and gymnastics gym",
       "latitude": 37.780493,
       "longitude": -122.393644,
-      "monthlyPrice": 299,
-      "dayPassPrice": null,
+      "monthlyPrice": 219,
+      "dayPassPrice": 35,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
-        "CrossFit; HYROX; gymnastics; lifting platforms; two-location access; Elements onboarding; premium FitExec workspace option"
+        "CrossFit; HYROX; gymnastics; lifting platforms; two-location access; Elements onboarding; premium FitExec workspace option",
+        "CrossFit classes",
+        "strength training",
+        "coaching"
       ],
       "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
       "hours": "Elements classes listed at South Park mornings and Potrero Hill evenings; exact full facility hours not published",
@@ -2150,10 +2617,14 @@
       "sourceId": "web-research/web-c3b2830a9bc6f1",
       "sourceUrl": "https://www.crossfitsouthpark.com/",
       "importedAt": "2026-08-17T06:01:30Z",
-      "priceSource": "CrossFit South Park official membership page",
+      "priceSource": "CrossFit South Park",
       "priceSourceUrl": "https://www.crossfitsouthpark.com/membership",
-      "priceNote": "Official recurring unlimited membership is $299/month with access to South Park and Potrero Hill. 2x weekly is $219/month and 3x weekly is $259/month. The page does not publish a visitor day-pass amount.",
-      "priceObservedAt": "2026-08-16"
+      "priceNote": "Official membership page lists two-location month-to-month memberships at $219/month for 2 classes/week, $259/month for 3 classes/week, and $299/month unlimited. Visitor drop-in is $35 through CrossFit Potrero Hill's shared drop-in page. Paid-in-advance discounts are noted but not used as the primary monthly rate.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-272700932",
@@ -2178,7 +2649,10 @@
       "priceSource": "Crunch Fitness official FAQ",
       "priceSourceUrl": "https://www.crunch.com/faq",
       "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2167144976",
@@ -2206,7 +2680,10 @@
       "priceSource": "Crunch Fitness official FAQ",
       "priceSourceUrl": "https://www.crunch.com/faq",
       "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10859142467",
@@ -2233,7 +2710,10 @@
       "priceSource": "Crunch Fitness official FAQ",
       "priceSourceUrl": "https://www.crunch.com/faq",
       "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5136124421",
@@ -2258,7 +2738,10 @@
       "priceSource": "Crunch Fitness official FAQ",
       "priceSourceUrl": "https://www.crunch.com/faq",
       "priceNote": "Crunch Signature non-member guest pass price; membership pricing varies by club and plan.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-99a718d670cb34",
@@ -2292,7 +2775,10 @@
       "priceSource": "Crunch Fitness",
       "priceSourceUrl": "https://www.crunch.com/faq",
       "priceNote": "Crunch's official FAQ lists a $35/day Signature guest pass for a non-member visiting alone; a $25 member-hosted pass is also listed. The Union Street location page did not publish regular membership pricing and advertises a free first-visit trial.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-11017139804",
@@ -2320,7 +2806,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-9718392241",
@@ -2345,7 +2834,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-13737433654",
@@ -2373,7 +2865,49 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-eb5b330a8db82f",
+      "name": "DIAKADI",
+      "neighborhood": "SOMA",
+      "address": "290 Division Street, San Francisco, CA 94103",
+      "gymType": "personal training and independent trainer facility",
+      "latitude": 37.7695366,
+      "longitude": -122.4083108,
+      "monthlyPrice": null,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate annual fee found on the reviewed public facility details and get-started pages.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public facility details and get-started pages.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": null,
+      "freshness": "unknown",
+      "isOpen247": false,
+      "amenities": [
+        "personal training",
+        "independent trainers",
+        "strength equipment"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://www.diakadi.life/",
+      "sourceName": "DIAKADI",
+      "sourceId": "web-research/web-eb5b330a8db82f",
+      "sourceUrl": "https://www.diakadi.life/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "",
+      "priceSourceUrl": "https://www.diakadi.life/general-info-details",
+      "priceNote": "Official public pages describe trainer matching, facility details, and getting started, but reviewed pages did not expose a comparable public monthly membership or drop-in gym price. Pricing likely depends on trainer/package selection.",
+      "priceObservedAt": "",
+      "venueType": "personal_training"
     },
     {
       "id": "osm-node-10869882845",
@@ -2384,8 +2918,8 @@
       "latitude": 37.7800307,
       "longitude": -122.3946534,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 18,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -2398,10 +2932,13 @@
       "sourceId": "node/10869882845",
       "sourceUrl": "https://www.openstreetmap.org/node/10869882845",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.divineyogastudiosf.com/yoga-classes",
+      "priceNote": "Official SF class pages expose scheduled classes at $18 and a three-class pass on the booking page; no clean ongoing monthly SF membership was found publicly.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-4057014702",
@@ -2412,14 +2949,17 @@
       "latitude": 37.7566304,
       "longitude": -122.3877723,
       "monthlyPrice": 112,
-      "dayPassPrice": 35,
+      "dayPassPrice": 30,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "climbing",
         "Hours listed",
         "Website listed",
-        "Bouldering; fitness area; climbing classes; member community; Touchstone multi-gym access; financial assistance"
+        "Bouldering; fitness area; climbing classes; member community; Touchstone multi-gym access; financial assistance",
+        "bouldering",
+        "training area",
+        "fitness classes"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
       "hours": "Mo 07:00-22:00; Tu 11:00-23:00; We 07:00-22:00; Th 11:00-23:00; Fr 07:00-22:00; Sa-Su 10:00-19:00",
@@ -2428,10 +2968,15 @@
       "sourceId": "node/4057014702",
       "sourceUrl": "https://www.openstreetmap.org/node/4057014702",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "Touchstone Dogpatch Boulders official FAQ page",
-      "priceSourceUrl": "https://touchstoneclimbing.com/dogpatch-boulders/faq/",
-      "priceNote": "Official individual membership is $112/month plus a $100 initiation fee. Day pass is $35 after 3pm or $30 before 3pm Monday-Friday excluding holidays. Ten-visit pass is $300.",
-      "priceObservedAt": "2026-08-16"
+      "priceSource": "Touchstone Climbing",
+      "priceSourceUrl": "https://touchstoneclimbing.com/dogpatch-boulders/membership-and-passes/",
+      "priceNote": "Official Touchstone page lists standard membership at $112/month, a $100 initiation fee, day pass at $30 before 3:00 PM Monday-Friday excluding holidays, and $35 after 3:00 PM. Student, child, senior, family, and prepaid rates are eligibility or commitment variants and not used as the main monthly price.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate annual fee found on the reviewed public memberships page.",
+      "initiationFee": 100,
+      "initiationFeeNote": "Official Touchstone memberships page lists a $100 initiation fee for standard monthly memberships.",
+      "venueType": "climbing_gym"
     },
     {
       "id": "web-abd8e24f4af4d8",
@@ -2460,7 +3005,10 @@
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-162518014",
@@ -2488,7 +3036,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-10689773926",
@@ -2513,7 +3064,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-12559170747",
@@ -2541,7 +3095,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-1e75d4973e7cfb",
@@ -2568,7 +3125,10 @@
       "priceSource": "EHS Pilates official pricing page",
       "priceSourceUrl": "https://www.ehspilates.com/pricing-and-packages",
       "priceNote": "Official deluxe membership is $288/month for eight equipment classes and standard membership is $237/month for six equipment classes. Equipment drop-in is $43; no-equipment drop-in is $31.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-6499455087",
@@ -2593,7 +3153,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-10069564222",
@@ -2618,7 +3181,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6848648284",
@@ -2645,7 +3211,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-8722619583",
@@ -2670,7 +3239,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-e71c82ac2eb475",
@@ -2703,7 +3275,10 @@
       "priceSource": "Equinox",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
       "priceNote": "The location page displays a $242/month single-club Select plan. Day-pass pricing was not listed.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2341083525",
@@ -2728,7 +3303,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-678cd02ed5fd30",
@@ -2761,7 +3339,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
       "priceNote": "The official location page lists the club and amenities but did not render a location-specific membership price at research time. Day-pass pricing was not listed.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-8a074bb0e133c0",
@@ -2794,7 +3375,10 @@
       "priceSource": "Equinox",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
       "priceNote": "The location page displays a $310/month single-club Select plan. Day-pass pricing was not listed.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-11558519647",
@@ -2823,7 +3407,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5180870606",
@@ -2848,7 +3435,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2652517824",
@@ -2876,7 +3466,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "web-0bddc278597205",
@@ -2903,7 +3496,10 @@
       "priceSource": "Evolve Pilates official packages page",
       "priceSourceUrl": "https://evolvestronger.com/packages/",
       "priceNote": "Official memberships list 4x/month at $110, 8x/month at $220, and unlimited at $290/month with a three-month minimum. Drop-in is $38. New-student one-month unlimited is $199.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-way-478789263",
@@ -2930,7 +3526,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "web-af9d34b6146771",
@@ -2957,7 +3556,10 @@
       "priceSource": "Fíor Fitness official pricing and home pages",
       "priceSourceUrl": "https://www.fiorfitness.org/pricing",
       "priceNote": "Official unlimited membership is $290/month. Limited membership is $250/month. Single-class drop-in is $30; 21-day trial is $199 and should not be treated as the regular monthly rate.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-9966877631",
@@ -2982,7 +3584,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-11279968189",
@@ -3007,7 +3612,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "web-27e606755f1ba8",
@@ -3034,7 +3642,10 @@
       "priceSource": "Federal Fitness Center official facility page",
       "priceSourceUrl": "https://www.federalfitnesscenters.com/federal-fitness-center",
       "priceNote": "Official page lists General Public membership at $47/month, Federal Contractor at $40/month, and Federal Employee at $40 or $43/month depending on access. A day pass was not published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-257161411",
@@ -3059,7 +3670,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-13910388898",
@@ -3087,7 +3701,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-262286607",
@@ -3112,7 +3729,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-3833169025",
@@ -3137,7 +3757,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2714942367",
@@ -3162,7 +3785,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-3881440385",
@@ -3190,7 +3816,10 @@
       "priceSource": "FITNESS SF official help center",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2338837133",
@@ -3217,7 +3846,10 @@
       "priceSource": "FITNESS SF official help center",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-14077434881",
@@ -3242,7 +3874,10 @@
       "priceSource": "FITNESS SF official help center",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-relation-16437206",
@@ -3270,7 +3905,10 @@
       "priceSource": "FITNESS SF official help center",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-e802f50ad959fa",
@@ -3304,7 +3942,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://www.fitnesssf.com/location/sf-polk",
       "priceNote": "Official page says gym opening September 2026 and that founding memberships are in presale, but the founding price is not publicly displayed. Current all-gym access pricing for open FITNESS SF locations is separate and was not applied to this future location.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-25371830",
@@ -3320,19 +3961,67 @@
       "isOpen247": false,
       "amenities": [
         "Website listed",
-        "Fitness SF"
+        "Fitness SF",
+        "free weights",
+        "cardio",
+        "strength equipment",
+        "group fitness"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
-      "hours": "Hours not listed",
+      "hours": "Not audited in this pricing pass",
       "websiteUrl": "https://fitnesssf.com/location/soma/",
       "sourceName": "OpenStreetMap",
       "sourceId": "way/25371830",
       "sourceUrl": "https://www.openstreetmap.org/way/25371830",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "FITNESS SF official help center",
+      "priceSource": "FITNESS SF",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
-      "priceNote": "All-Gym Access membership. One-day pass is $35, or $30 with a member.",
-      "priceObservedAt": "2026-08-16"
+      "priceNote": "Official help center lists All-Gym Access membership at $129.95/month and upfront prorated first month plus full last month. FITNESS SF help page lists guest pass options including a 1-day pass at $35. Published rates may vary by location, term, or promotion.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "Official help center article did not list an annual fee for All-Gym Access.",
+      "initiationFeeNote": "Official help center article lists upfront prorated first month plus full last month, not a separate initiation fee.",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-396cf2ddf3bead",
+      "name": "FITNESS SF - Transbay",
+      "neighborhood": "East Cut",
+      "address": "425 Mission Street, San Francisco, CA 94105",
+      "gymType": "full-service fitness club",
+      "latitude": 37.7878011,
+      "longitude": -122.3984389,
+      "monthlyPrice": 129.95,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "Official help center says FITNESS SF has no annual fees.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "Official help center says FITNESS SF has no enrollment, processing, or initiation fees. Upfront costs include prorated first month plus full last month.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "free weights",
+        "cardio",
+        "strength equipment",
+        "group fitness"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://www.fitnesssf.com/",
+      "sourceName": "FITNESS SF",
+      "sourceId": "web-research/web-396cf2ddf3bead",
+      "sourceUrl": "https://www.fitnesssf.com/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "FITNESS SF",
+      "priceSourceUrl": "https://www.fitnesssf.com/pricing",
+      "priceNote": "Official help center lists All-Gym Access membership at $129.95/month and a 1-day San Francisco All Gym Access pass at $35. Published rates may vary by location, term, or promotion.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-8660768875",
@@ -3342,9 +4031,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7656784,
       "longitude": -122.39701,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 135,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -3356,10 +4045,16 @@
       "sourceId": "node/8660768875",
       "sourceUrl": "https://www.openstreetmap.org/node/8660768875",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://fitnessurbano.com/gym-memberships/",
+      "priceNote": "Official memberships page lists day pass at $35, monthly anytime access at $135/month, no enrollment fee, and yearly access at $1,458.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 135,
+      "annualPrepayPrice": 1458,
+      "enrollmentFee": 0,
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-4069447302",
@@ -3386,7 +4081,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-261268792",
@@ -3411,7 +4109,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10874914159",
@@ -3436,7 +4137,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-38b781fe26e1b4",
@@ -3463,7 +4167,10 @@
       "priceSource": "Flagship Training official home and new-member pages",
       "priceSourceUrl": "https://www.trainflagship.com/new-member-promo",
       "priceNote": "Official all-location unlimited plan auto-renews at $329 after the $189 first-4-week trial; ongoing options range from $108 to $329. Branch-specific day pass not published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-a16276afbf72d9",
@@ -3490,7 +4197,10 @@
       "priceSource": "Flagship Training official home and new-member pages",
       "priceSourceUrl": "https://www.trainflagship.com/new-member-promo",
       "priceNote": "Official all-location unlimited plan auto-renews at $329 after the $189 first-4-week trial; ongoing options range from $108 to $329. Branch-specific day pass not published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-d8fd393e3b5ef7",
@@ -3517,7 +4227,10 @@
       "priceSource": "Flagship Training official home and new-member pages",
       "priceSourceUrl": "https://www.trainflagship.com/new-member-promo",
       "priceNote": "Official all-location unlimited plan auto-renews at $329 after the $189 first-4-week trial; ongoing options range from $108 to $329. Branch-specific day pass not published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-5bb1dc70e6be8f",
@@ -3544,7 +4257,10 @@
       "priceSource": "Flagship Training official home and new-member pages",
       "priceSourceUrl": "https://www.trainflagship.com/new-member-promo",
       "priceNote": "Official page says the $189 first 4-week trial auto-renews into all-location unlimited at $329 after the trial; ongoing membership options range from $108 to $329. No stable day-pass amount was shown.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-13189660932",
@@ -3569,7 +4285,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-13712240860",
@@ -3579,9 +4298,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7468481,
       "longitude": -122.4197299,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 299,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -3593,10 +4312,15 @@
       "sourceId": "node/13712240860",
       "sourceUrl": "https://www.openstreetmap.org/node/13712240860",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.fogcitycf.com/membership",
+      "priceNote": "Official membership page lists unlimited month-to-month auto-bill at $299, prepaid annual unlimited at $3,250, and drop-ins at $35 for visitors with prior CrossFit experience.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 299,
+      "annualPrepayPrice": 3250,
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-263806345",
@@ -3606,9 +4330,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7719843,
       "longitude": -122.4368863,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 89,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -3621,10 +4345,48 @@
       "sourceId": "way/263806345",
       "sourceUrl": "https://www.openstreetmap.org/way/263806345",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://folksf.com/memberships/",
+      "priceNote": "Official memberships page lists Mini membership at $89/month for up to 4 classes, single drop-in at $35, and usual unlimited membership at $199/month after the new-student intro month.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 199,
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-ca39a334f29594",
+      "name": "Folk Yoga - Richmond",
+      "neighborhood": "Inner Richmond",
+      "address": "182 6th Avenue, San Francisco, CA 94118",
+      "gymType": "Yoga and fitness studio",
+      "latitude": 37.7853553,
+      "longitude": -122.4644938,
+      "monthlyPrice": 199,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "yoga",
+        "fitness classes",
+        "livestream",
+        "on-demand library",
+        "workshops"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://folksf.com/classes/schedule/richmond/",
+      "sourceName": "Folk Yoga",
+      "sourceId": "web-research/web-ca39a334f29594",
+      "sourceUrl": "https://folksf.com/classes/schedule/richmond/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Folk Yoga",
+      "priceSourceUrl": "https://folksf.com/memberships/",
+      "priceNote": "Official membership page lists single drop-in at $35 and a new-student first month at $79 with usual price $199/month. Richmond schedule page exposes the address.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "web-06bc58a9a5ca84",
@@ -3651,7 +4413,44 @@
       "priceSource": "Forge Krav Maga official pricing and home pages",
       "priceSourceUrl": "https://www.forgekravmaga.com/pricing",
       "priceNote": "Official pricing page lists $200/month, $40 drop-in day pass, $375 ten-class pack, and $2,160/year. Two trial classes cost $30 total. No enrollment fee is listed.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
+    },
+    {
+      "id": "web-a3d8ded3014a16",
+      "name": "Funky Door Yoga San Francisco",
+      "neighborhood": "Polk Gulch",
+      "address": "1336 Polk St, San Francisco, CA 94109",
+      "gymType": "Hot yoga and Pilates studio",
+      "latitude": 37.7893203,
+      "longitude": -122.420223,
+      "monthlyPrice": 129,
+      "dayPassPrice": 36,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "hot yoga",
+        "hot Pilates",
+        "10-class packs",
+        "24-class packs",
+        "livestream options"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://www.funkydoor.com/san-francisco-pricing",
+      "sourceName": "Funky Door Yoga",
+      "sourceId": "web-research/web-a3d8ded3014a16",
+      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Funky Door Yoga",
+      "priceSourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
+      "priceNote": "Official SF pricing page lists drop-in classes at $36, auto monthly unlimited at $129 with a one-time $49 sign-up fee, all-access month at $219, and annual membership at $1,199.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-way-28283272",
@@ -3678,7 +4477,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-37180632",
@@ -3705,7 +4507,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-3702219080",
@@ -3715,9 +4520,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.8000761,
       "longitude": -122.408999,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 85,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -3730,10 +4535,16 @@
       "sourceId": "node/3702219080",
       "sourceUrl": "https://www.openstreetmap.org/node/3702219080",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
+      "priceNote": "Official class rates page lists Silver Glow 4 classes/month at $85, Golden Glow unlimited at $240/month, one class at $35, and a $40 enrollment fee for several monthly memberships. Prepay offer lists 10 plus 2 months Golden Glow at $2,400.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 240,
+      "annualPrepayPrice": 2400,
+      "enrollmentFee": 40,
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-10764775827",
@@ -3758,7 +4569,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-2713442479",
@@ -3783,7 +4597,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-11198894699",
@@ -3808,7 +4625,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-12439601098",
@@ -3833,7 +4653,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5270986784",
@@ -3862,7 +4685,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-545151976",
@@ -3889,7 +4715,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6636000334",
@@ -3916,7 +4745,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-4069447294",
@@ -3943,7 +4775,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-3801395450",
@@ -3953,9 +4788,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7677295,
       "longitude": -122.4530621,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 108,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -3969,10 +4804,48 @@
       "sourceId": "node/3801395450",
       "sourceUrl": "https://www.openstreetmap.org/node/3801395450",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
+      "priceNote": "Official HAUM buy-classes page lists cash prices: Mini membership at $108/month for 4 classes, unlimited monthly with 3-month commitment at $169/month, no-commitment unlimited at $199/month, and drop-in at $35. Page notes card/ACH processing fees may apply.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 169,
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-ce5c5ffa4da2b2",
+      "name": "HAUM Studios - Haight-Ashbury",
+      "neighborhood": "Haight-Ashbury",
+      "address": "780 Stanyan Street, San Francisco, CA 94117",
+      "gymType": "Yoga studio",
+      "latitude": 37.7677711,
+      "longitude": -122.4529518,
+      "monthlyPrice": 199,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "yoga",
+        "livestream classes",
+        "class packs",
+        "workshops",
+        "LGBTQ-owned studio"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://www.haumstudios.com/",
+      "sourceName": "HAUM Studios",
+      "sourceId": "web-research/web-ce5c5ffa4da2b2",
+      "sourceUrl": "https://www.haumstudios.com/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "HAUM Studios",
+      "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
+      "priceNote": "Official buy-classes page lists cash pricing: $199/month no-commitment unlimited, $169/month with 3-month commitment, $108/month mini membership, and $35 in-person drop-in. Card and ACH fees are extra.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-9354883876",
@@ -3982,25 +4855,34 @@
       "gymType": "Fitness centre",
       "latitude": 37.7879675,
       "longitude": -122.4194144,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 220,
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "martial_arts",
-        "Website listed"
+        "Website listed",
+        "boxing",
+        "HIIT",
+        "strength classes"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
-      "hours": "Hours not listed",
+      "hours": "Not audited in this pricing pass",
       "websiteUrl": "https://hitfitsf.com/nobhill/",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9354883876",
       "sourceUrl": "https://www.openstreetmap.org/node/9354883876",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.hitfitsf.com/purchase",
+      "priceNote": "Official purchase page lists month-to-month unlimited classes/open gym at $220 every 4 weeks, class drop-in at $30, and a $75 club joining fee. Annual prepay text is internally inconsistent, so it is not recorded as a numeric annual prepay here.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public purchase page.",
+      "monthlyUnlimitedPrice": 220,
+      "enrollmentFee": 75,
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-10665980914",
@@ -4010,24 +4892,32 @@
       "gymType": "Fitness centre",
       "latitude": 37.7598185,
       "longitude": -122.412434,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 220,
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
-        "Website listed"
+        "Website listed",
+        "boxing",
+        "HIIT",
+        "open gym",
+        "class packs",
+        "morning boot camps"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
-      "hours": "Hours not listed",
+      "hours": "Mon-Thu 7:00am-1:00pm and 4:00pm-8:00pm; Fri 7:00am-1:00pm and 4:00pm-7:00pm; Sat 8:00am-12:00pm; Sun 8:45am-10:15am",
       "websiteUrl": "https://hitfitsf.com/",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/10665980914",
       "sourceUrl": "https://www.openstreetmap.org/node/10665980914",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Hit Fit SF",
+      "priceSourceUrl": "https://www.hitfitsf.com/purchase",
+      "priceNote": "Official purchase page lists month-to-month membership at $220 every 4 weeks plus a $75 club joining fee. It also lists 6-payment and prepaid options. Single class drop-in is $30; new client 7-day trial is $40.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6636000316",
@@ -4054,7 +4944,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-12044095332",
@@ -4081,7 +4974,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-1516960485",
@@ -4106,7 +5002,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5595070837",
@@ -4135,7 +5034,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2975978386",
@@ -4145,24 +5047,31 @@
       "gymType": "Fitness centre",
       "latitude": 37.7516463,
       "longitude": -122.4267621,
-      "monthlyPrice": null,
+      "monthlyPrice": 229,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
-        "Website listed"
+        "Website listed",
+        "strength training",
+        "personal training",
+        "small-group training"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
-      "hours": "Hours not listed",
+      "hours": "Not audited in this pricing pass",
       "websiteUrl": "https://www.ironandmettlefitness.com/",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2975978386",
       "sourceUrl": "https://www.openstreetmap.org/node/2975978386",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Iron & Mettle",
+      "priceSourceUrl": "https://ironandmettlesf.com/memberships/",
+      "priceNote": "Official memberships page lists starting monthly membership at $229/month. The reviewed page did not expose a regular public day pass. Included as an adjacent-neighborhood strength gym because public price was clear.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public memberships page.",
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public memberships page.",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6471102057",
@@ -4189,7 +5098,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "personal_training"
     },
     {
       "id": "osm-node-10869882844",
@@ -4216,7 +5128,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2786114658",
@@ -4244,7 +5159,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "web-d2fecdc44e5d1c",
@@ -4275,10 +5193,13 @@
       "sourceId": "web-research/web-d2fecdc44e5d1c",
       "sourceUrl": "https://www.jccsf.org/join/",
       "importedAt": "2026-08-17T06:01:30Z",
-      "priceSource": "JCCSF official membership page",
+      "priceSource": "Jewish Community Center of San Francisco",
       "priceSourceUrl": "https://www.jccsf.org/join/",
-      "priceNote": "Official adult full-access membership is $198/month plus a $200 enrollment fee. The page advertises a temporary $0 enrollment-fee offer for new members through August 31, 2026. No public day-pass price was listed.",
-      "priceObservedAt": "2026-08-16"
+      "priceNote": "Adult Full Access regular rate is $198/month plus a $200 enrollment fee. The page showed a limited-time $0 enrollment promotion through August 31, 2026. Day-pass pricing was not listed.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-11166132566",
@@ -4306,7 +5227,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-109022547",
@@ -4331,7 +5255,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-120481450",
@@ -4356,7 +5283,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-10733903065",
@@ -4383,7 +5313,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-368174394",
@@ -4408,7 +5341,10 @@
       "priceSource": "USF Koret Health & Recreation Center membership page",
       "priceSourceUrl": "https://www.usfca.edu/koret/membership/membership-types",
       "priceNote": "Public daily-use pass. Eligibility and annual/15-use passes have different pricing.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-4ae861d141e4b8",
@@ -4435,7 +5371,10 @@
       "priceSource": "USF Koret official membership, facility, and home pages",
       "priceSourceUrl": "https://www.usfca.edu/koret/membership/membership-types",
       "priceNote": "Official public daily-use adult pass is $30 for one entry. The center also lists 15-use passes and annual neighborhood memberships; a standard monthly public rate was not shown on the reviewed page. USF students have student access.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-1119503894",
@@ -4460,7 +5399,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-288325533",
@@ -4487,7 +5429,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-10897941853",
@@ -4515,7 +5460,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-4611606987",
@@ -4540,7 +5488,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5735236443",
@@ -4568,7 +5519,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "web-852a9696d7af62",
@@ -4595,10 +5549,13 @@
       "sourceId": "web-research/web-852a9696d7af62",
       "sourceUrl": "https://ldac.fit/",
       "importedAt": "2026-08-17T06:01:30Z",
-      "priceSource": "LDAC Fitness Center official site",
+      "priceSource": "LDAC Fitness Center / NCFIT",
       "priceSourceUrl": "https://ldac.fit/",
-      "priceNote": "Official page lists $65/month open-gym membership and a $20 one-day pass, but states access is reserved exclusively for One Letterman campus employees and the facility is not open to the public.",
-      "priceObservedAt": "2026-08-16"
+      "priceNote": "Open gym membership is $65/month and a one-day pass is $20, including shower access and towel service. Official site states access is reserved exclusively for One Letterman campus employees and the facility is not open to the public.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6636000328",
@@ -4625,7 +5582,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-11009320684",
@@ -4652,7 +5612,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-4022645782",
@@ -4679,7 +5642,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "dance_movement"
     },
     {
       "id": "osm-way-25309187",
@@ -4707,7 +5673,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-4631674513",
@@ -4734,7 +5703,10 @@
       "priceSource": "Live Fit Gym official signup page",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Basic plan; location access varies by membership tier.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-412109978",
@@ -4762,7 +5734,10 @@
       "priceSource": "Live Fit Gym official signup page",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Basic plan; location access varies by membership tier.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-137602240",
@@ -4789,7 +5764,10 @@
       "priceSource": "Live Fit Gym official signup page",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Basic plan; location access varies by membership tier.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-6123d4a1928a35",
@@ -4818,7 +5796,10 @@
       "priceSource": "Live Fit Gym",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "The public signup page lists a $117 Basic plan with access to Cole Valley, Bush, and Polk locations. Free pass is advertised; dollar day-pass price was not listed.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6496135009",
@@ -4846,7 +5827,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-b1dcfdcb7b4d2a",
@@ -4875,7 +5859,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Live Fit's public signup page shows a $117 Basic tier for access to select locations, but does not publish a location-specific Fairmont rate. Free pass is advertised; dollar price was not listed.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-732bcfc12da917",
@@ -4904,7 +5891,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Live Fit's public signup page shows a $117 Basic tier for access to select locations, but does not publish a location-specific Hayes Valley rate. Free pass is advertised; dollar price was not listed.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-2d8ab33422a507",
@@ -4933,7 +5923,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Live Fit's public signup page shows a $117 Basic tier for access to select locations, but does not publish a location-specific Inner Richmond rate. Free pass is advertised; dollar price was not listed.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-d34b520e613785",
@@ -4962,7 +5955,10 @@
       "priceSource": "",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Live Fit's public signup page shows a $117 Basic tier for access to select locations, but does not publish a location-specific Mission rate. Free pass is advertised; dollar price was not listed.",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-9659815458",
@@ -4989,7 +5985,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5840675565",
@@ -5014,7 +6013,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-3790822677",
@@ -5042,7 +6044,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-968356991",
@@ -5070,7 +6075,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6591743880",
@@ -5099,7 +6107,10 @@
       "priceSource": "Local's Fitness official site",
       "priceSourceUrl": "https://localsfitness.com/",
       "priceNote": "Official page lists $99/month with a one-year commitment or $109/month with no commitment. The site offers a free one-day pass to local residents with proof of SF residency; non-locals pay a day rate that is not published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5359937504",
@@ -5126,7 +6137,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-2666409791",
@@ -5155,7 +6169,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-1a41b4840aac85",
@@ -5182,7 +6199,10 @@
       "priceSource": "Lotusland Yoga official schedule and pricing page",
       "priceSourceUrl": "https://lotuslandyogasf.com/schedule/",
       "priceNote": "Official page lists monthly unlimited at $135-$175 and sliding-scale drop-in at $18-$38. Values use the low end of each published range; exact rate depends on the selected scale.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-12569789803",
@@ -5210,7 +6230,42 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
+    },
+    {
+      "id": "web-5f77b574935a5e",
+      "name": "Love Story Yoga - Valencia",
+      "neighborhood": "Mission",
+      "address": "473 Valencia Street, San Francisco, CA 94103",
+      "gymType": "Yoga studio",
+      "latitude": 37.7653845,
+      "longitude": -122.4216342,
+      "monthlyPrice": null,
+      "dayPassPrice": 30,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "hot yoga sculpt",
+        "yoga",
+        "member packages"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "sourceName": "Love Story Yoga",
+      "sourceId": "web-research/web-5f77b574935a5e",
+      "sourceUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Love Story Yoga",
+      "priceSourceUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "priceNote": "Official workshop/class page for the Valencia studio lists regular drop-in at $30 and says it is included for members with an active package. A recurring membership amount was not visible on the reviewed public page.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-12152934880",
@@ -5235,7 +6290,88 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-9fd5fafea5b099",
+      "name": "LuxFit - East Cut",
+      "neighborhood": "East Cut",
+      "address": "250 Main Street, San Francisco, CA 94105",
+      "gymType": "outdoor and small-group strength gym",
+      "latitude": 37.7899221,
+      "longitude": -122.3926929,
+      "monthlyPrice": 149,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "outdoor gym",
+        "strength training",
+        "small-group training"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://luxfitsf.com/",
+      "sourceName": "LuxFit",
+      "sourceId": "web-research/web-9fd5fafea5b099",
+      "sourceUrl": "https://luxfitsf.com/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "LuxFit",
+      "priceSourceUrl": "https://luxfitsf.com/pricing/",
+      "priceNote": "Official pricing page lists Core Access at $149/month and a drop-in at $35. Price appears to be brand-level for the reviewed LuxFit locations; verify location-specific availability before publication.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-39a7aaee0c6c77",
+      "name": "LuxFit - Mission Rock",
+      "neighborhood": "Mission Bay",
+      "address": "1201 3rd Street, San Francisco, CA 94158",
+      "gymType": "outdoor and small-group strength gym",
+      "latitude": 37.7737295,
+      "longitude": -122.3898475,
+      "monthlyPrice": 149,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "outdoor gym",
+        "strength training",
+        "small-group training"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://luxfitsf.com/",
+      "sourceName": "LuxFit",
+      "sourceId": "web-research/web-39a7aaee0c6c77",
+      "sourceUrl": "https://luxfitsf.com/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "LuxFit",
+      "priceSourceUrl": "https://luxfitsf.com/pricing/",
+      "priceNote": "Official pricing page lists Core Access at $149/month and a drop-in at $35. Higher memberships with additional classes or personal training are not used as the base monthly rate.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-0f9db70c7df82e",
@@ -5267,7 +6403,10 @@
       "priceSource": "LuxFit SF",
       "priceSourceUrl": "https://www.luxfitsf.com/services/open-gym",
       "priceNote": "Core Access open-gym membership is listed at $150/month and single-day drop-in is $25. Group classes and trainer fees are separate.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "personal_training"
     },
     {
       "id": "osm-way-634526276",
@@ -5294,7 +6433,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-273590287",
@@ -5319,7 +6461,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5810883731",
@@ -5344,7 +6489,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-way-113283290",
@@ -5355,7 +6503,7 @@
       "latitude": 37.7606787,
       "longitude": -122.4124142,
       "monthlyPrice": 112,
-      "dayPassPrice": 35,
+      "dayPassPrice": 30,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
@@ -5363,7 +6511,10 @@
         "Hours listed",
         "Website listed",
         "Touchstone Climbing Inc.",
-        "23,000 sq ft climbing terrain; 50-foot lead wall; bouldering; weight room; cardio; yoga; locker rooms; showers; sauna"
+        "23,000 sq ft climbing terrain; 50-foot lead wall; bouldering; weight room; cardio; yoga; locker rooms; showers; sauna",
+        "roped climbing",
+        "bouldering",
+        "fitness equipment"
       ],
       "description": "OpenStreetMap listing. Verify current pricing and hours with the gym.",
       "hours": "Mo-Fr 06:00-22:00; Sa-Su 08:00-19:00",
@@ -5372,10 +6523,15 @@
       "sourceId": "way/113283290",
       "sourceUrl": "https://www.openstreetmap.org/way/113283290",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "Touchstone Mission Cliffs official home and FAQ pages",
-      "priceSourceUrl": "https://touchstoneclimbing.com/mission-cliffs/faq/",
-      "priceNote": "Official individual membership is $112/month plus a $100 initiation fee. Day pass is $35 after 3pm or $30 before 3pm Monday-Friday excluding holidays. One-month membership is $130.",
-      "priceObservedAt": "2026-08-16"
+      "priceSource": "Touchstone Climbing",
+      "priceSourceUrl": "https://touchstoneclimbing.com/mission-cliffs/membership-and-passes/",
+      "priceNote": "Official Touchstone page lists standard membership at $112/month, a $100 initiation fee, day pass at $30 before 3:00 PM Monday-Friday excluding holidays, and $35 after 3:00 PM. Student, child, senior, family, and prepaid rates are eligibility or commitment variants and not used as the main monthly price.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate annual fee found on the reviewed public memberships page.",
+      "initiationFee": 100,
+      "initiationFeeNote": "Official Touchstone memberships page lists a $100 initiation fee for standard monthly memberships.",
+      "venueType": "climbing_gym"
     },
     {
       "id": "osm-way-1107106606",
@@ -5402,7 +6558,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-1107106610",
@@ -5429,7 +6588,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-1111843035",
@@ -5456,7 +6618,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-0509e54f1e3c89",
@@ -5485,7 +6650,45 @@
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
+    },
+    {
+      "id": "web-f23343cfc28b93",
+      "name": "Mission Yoga",
+      "neighborhood": "Mission",
+      "address": "2415 Mission Street, San Francisco, CA 94110",
+      "gymType": "Yoga and wellness studio",
+      "latitude": 37.7583229,
+      "longitude": -122.4189196,
+      "monthlyPrice": 99,
+      "dayPassPrice": 10,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "hot yoga",
+        "Pilates",
+        "dance",
+        "breathwork",
+        "sound baths",
+        "Hot Box Yoga"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://newmissionyoga.com/mission-yoga-classes/",
+      "sourceName": "Mission Yoga",
+      "sourceId": "web-research/web-f23343cfc28b93",
+      "sourceUrl": "https://newmissionyoga.com/mission-yoga-classes/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Mission Yoga",
+      "priceSourceUrl": "https://newmissionyoga.com/mission-yoga-classes/",
+      "priceNote": "Official classes page says memberships start from $99/month. Drop-ins range from $10 community classes up to $42 Hot Box Yoga, so dayPassPrice uses the lowest public drop-in and the range is preserved here.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-3674255661",
@@ -5513,7 +6716,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-11021366849",
@@ -5541,7 +6747,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-24334661",
@@ -5551,9 +6760,9 @@
       "gymType": "Sports centre",
       "latitude": 37.8043617,
       "longitude": -122.4683743,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 121,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "climbing",
@@ -5567,10 +6776,15 @@
       "sourceId": "way/24334661",
       "sourceUrl": "https://www.openstreetmap.org/way/24334661",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://movementgyms.com/memberships-passes/",
+      "priceNote": "Official memberships and passes page includes San Francisco in the Western Region and lists monthly memberships starting at $121, annual memberships starting at $1,331, 30-day membership at $149, and day pass at $35.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 121,
+      "annualPrepayPrice": 1331,
+      "venueType": "climbing_gym"
     },
     {
       "id": "osm-node-4754013404",
@@ -5597,7 +6811,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-11777394274",
@@ -5624,7 +6841,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-13743991602",
@@ -5653,7 +6873,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-4098815839",
@@ -5683,7 +6906,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10054566861",
@@ -5708,7 +6934,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6471124711",
@@ -5735,7 +6964,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-2484293076",
@@ -5764,7 +6996,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10198521798",
@@ -5789,7 +7024,150 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-118d20c83f7f36",
+      "name": "MX3 Fitness - Castro",
+      "neighborhood": "Castro",
+      "address": "2336 Market Street, San Francisco, CA 94114",
+      "gymType": "Reservation-based personal fitness stations",
+      "latitude": 37.7637278,
+      "longitude": -122.4341428,
+      "monthlyPrice": 129,
+      "dayPassPrice": 30,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "private fitness stations",
+        "squat racks",
+        "functional cable machines",
+        "free weights",
+        "small group classes",
+        "keyless entry"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Member reservation hours vary by booking system",
+      "websiteUrl": "https://mx3fitness.com/gym-near-me",
+      "sourceName": "MX3 Fitness",
+      "sourceId": "web-research/web-118d20c83f7f36",
+      "sourceUrl": "https://mx3fitness.com/gym-near-me",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "MX3 Fitness",
+      "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+      "priceNote": "Official monthly signup page lists reservation tiers from $129/month plus $75 setup; Open Gym Only is not applicable to Castro because the operator describes Castro as reservation-only. Official day-pass page lists 1 credit at $30 usable for Castro and Mission.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-0a2585fb887434",
+      "name": "MX3 Fitness - Lower Haight",
+      "neighborhood": "Lower Haight",
+      "address": "520 Waller Street, San Francisco, CA 94117",
+      "gymType": "Reservation-based personal fitness stations",
+      "latitude": 37.7710356,
+      "longitude": -122.4322021,
+      "monthlyPrice": 129,
+      "dayPassPrice": null,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "private fitness stations",
+        "cardio equipment",
+        "personal training",
+        "keyless entry"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Member reservation hours vary by booking system",
+      "websiteUrl": "https://mx3fitness.com/gym-near-me",
+      "sourceName": "MX3 Fitness",
+      "sourceId": "web-research/web-0a2585fb887434",
+      "sourceUrl": "https://mx3fitness.com/gym-near-me",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "MX3 Fitness",
+      "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+      "priceNote": "Official monthly signup page lists reservation tiers from $129/month plus $75 setup. Official day-pass page says Lower Haight is limited to monthly members only, so no day-pass price is recorded.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-5f696d480ecaa0",
+      "name": "MX3 Fitness - Mission",
+      "neighborhood": "Mission",
+      "address": "3166 16th Street, San Francisco, CA 94103",
+      "gymType": "Reservation-based open gym and personal fitness stations",
+      "latitude": 37.7650611,
+      "longitude": -122.4234158,
+      "monthlyPrice": 149,
+      "dayPassPrice": 30,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "open gym",
+        "private fitness stations",
+        "squat racks",
+        "functional cable machines",
+        "free weights",
+        "small group classes",
+        "keyless entry",
+        "personal training"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Member reservation hours vary by booking system",
+      "websiteUrl": "https://mx3fitness.com/mission",
+      "sourceName": "MX3 Fitness",
+      "sourceId": "web-research/web-5f696d480ecaa0",
+      "sourceUrl": "https://mx3fitness.com/mission",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "MX3 Fitness",
+      "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+      "priceNote": "Official monthly signup page lists Open Gym membership at $149/month. Official gym credits page lists a single open-gym credit at $30. Higher personal-training memberships are listed separately and not used as the base gym membership rate.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public monthly signup page.",
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public monthly signup page.",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-9f71a061a7a9bc",
+      "name": "MX3 Fitness - Noe Valley",
+      "neighborhood": "Noe Valley",
+      "address": "4045 24th Street, San Francisco, CA 94114",
+      "gymType": "Open gym and reservation-based personal fitness stations",
+      "latitude": 37.7512165,
+      "longitude": -122.4328741,
+      "monthlyPrice": 109,
+      "dayPassPrice": null,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "open gym",
+        "private fitness stations",
+        "cardio equipment",
+        "personal training",
+        "keyless entry"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Member reservation hours vary by booking system",
+      "websiteUrl": "https://mx3fitness.com/noe-valley",
+      "sourceName": "MX3 Fitness",
+      "sourceId": "web-research/web-9f71a061a7a9bc",
+      "sourceUrl": "https://mx3fitness.com/noe-valley",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "MX3 Fitness",
+      "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+      "priceNote": "Official monthly signup page lists Open Gym Only at $109/month plus $75 setup and higher reservation tiers. Official day-pass page says Noe Valley is limited to monthly members only, so no day-pass price is recorded.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-13163731721",
@@ -5817,7 +7195,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-1107523056",
@@ -5845,7 +7226,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-11384826394",
@@ -5872,7 +7256,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-way-70948786",
@@ -5897,7 +7284,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-70948785",
@@ -5924,7 +7314,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-276587703",
@@ -5951,7 +7344,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-283457626",
@@ -5978,7 +7374,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-13574072411",
@@ -6003,7 +7402,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-11254215578",
@@ -6028,7 +7430,10 @@
       "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
       "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
       "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-10131461286",
@@ -6053,7 +7458,10 @@
       "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
       "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
       "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-10874914162",
@@ -6078,7 +7486,10 @@
       "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
       "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
       "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-10538306970",
@@ -6103,7 +7514,10 @@
       "priceSource": "Orangetheory San Francisco Pacific Heights official location page",
       "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
       "priceNote": "Recommended casual-visit retail price; studio membership plans vary by independently operated location.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-4891328528",
@@ -6130,7 +7544,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-195470156",
@@ -6155,7 +7572,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-4558023336",
@@ -6184,7 +7604,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-4069447292",
@@ -6209,7 +7632,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-12132354827",
@@ -6236,7 +7662,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10859142546",
@@ -6261,7 +7690,44 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-70ca27f287a58c",
+      "name": "Pilates Addiction - SF King Street",
+      "neighborhood": "Mission Bay",
+      "address": "272 King Street, San Francisco, CA 94107",
+      "gymType": "Reformer Pilates studio",
+      "latitude": 37.776726,
+      "longitude": -122.3932046,
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "freshness": "unknown",
+      "isOpen247": false,
+      "amenities": [
+        "reformer Pilates",
+        "Core+",
+        "Ignite",
+        "Max",
+        "Mobility Rx"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Opening schedule not yet published",
+      "websiteUrl": "https://pilatesaddiction.com/location/sf-king-street",
+      "sourceName": "Pilates Addiction",
+      "sourceId": "web-research/web-70ca27f287a58c",
+      "sourceUrl": "https://pilatesaddiction.com/location/sf-king-street",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "",
+      "priceSourceUrl": "https://pilatesaddiction.com/location/sf-king-street",
+      "priceNote": "Official page lists founding memberships at $220/month for unlimited Gold and $161/month for 8-class Silver, but labels them as limited founding pricing before opening. Regular post-founding monthly and drop-in prices were not published.",
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-5735236442",
@@ -6288,7 +7754,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-6177260821",
@@ -6299,8 +7768,8 @@
       "latitude": 37.7743877,
       "longitude": -122.4209975,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 17,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -6312,10 +7781,13 @@
       "sourceId": "node/6177260821",
       "sourceUrl": "https://www.openstreetmap.org/node/6177260821",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://pop-sf.com/rates.html",
+      "priceNote": "Official POP! rates page lists mat group class single at $17 and springboard class single at $30; no monthly membership was published.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-3540256794",
@@ -6340,7 +7812,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-1206893699",
@@ -6365,7 +7840,10 @@
       "priceSource": "Planet Fitness San Francisco (Lakeshore) membership page",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
       "priceNote": "Classic plan; plus taxes and fees, including a $49 annual fee. Plans and promotions can change.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-6985a6919243c7",
@@ -6392,7 +7870,10 @@
       "priceSource": "Planet Fitness official SF club directory and offer page",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/offers?q=Newark%2C+ca",
       "priceNote": "Official SF offer page shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes/fees and a $49 annual fee. Directory labels this club as a relocation; confirm opening status before publication.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-2eb77e8e14996c",
@@ -6419,7 +7900,10 @@
       "priceSource": "Planet Fitness official SF club directory and offer page",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/offers?q=Newark%2C+ca",
       "priceNote": "Official SF offer page shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes/fees and a $49 annual fee; offers can expire and club status may change. Club directory currently marks 417 Montgomery as temporarily closed for relocation.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-bbf32ec975a42d",
@@ -6450,7 +7934,10 @@
       "priceSource": "Planet Fitness",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
       "priceNote": "Pre-grand-opening offer shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes and a $49 annual fee. This location is marked relocation/pre-grand opening and hours are not yet published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-859ef7f95053f4",
@@ -6483,7 +7970,10 @@
       "priceSource": "Planet Fitness official SF club directory and offer page",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/offers?q=Newark%2C+ca",
       "priceNote": "Official SF offer page shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes/fees and a $49 annual fee. Promotions and club-specific terms can change.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10553806544",
@@ -6508,7 +7998,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-27393835",
@@ -6533,7 +8026,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-2815132111",
@@ -6558,7 +8054,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-69020085",
@@ -6583,7 +8082,10 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-3622501398",
@@ -6610,7 +8112,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-2996292603",
@@ -6638,7 +8143,44 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
+    },
+    {
+      "id": "web-164572c938e7e3",
+      "name": "Pure Barre San Francisco - Noe Valley",
+      "neighborhood": "Noe Valley",
+      "address": "3800 24th Street, San Francisco, CA 94114",
+      "gymType": "Barre studio",
+      "latitude": 37.751785,
+      "longitude": -122.4277279,
+      "monthlyPrice": null,
+      "dayPassPrice": 38,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "barre",
+        "Pure Barre Classic",
+        "Align",
+        "Empower",
+        "Define"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "sourceName": "Pure Barre",
+      "sourceId": "web-research/web-164572c938e7e3",
+      "sourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Pure Barre",
+      "priceSourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "priceNote": "Official location page displays 'Enjoy A Single Class for $38'. Pure Barre help pages state membership prices vary by locally owned studio, and this reviewed location page did not expose a recurring membership amount.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "web-aad2d32fab6264",
@@ -6665,7 +8207,10 @@
       "priceSource": "Purusha Yoga & Pilates official pricing page",
       "priceSourceUrl": "https://purushayoga.org/pricing/",
       "priceNote": "Official unlimited monthly membership is $149/month. Regular class drop-in is $30. New-student and promotional passes are lower and should not be treated as the regular membership rate.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-4349256209",
@@ -6675,9 +8220,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7755099,
       "longitude": -122.4989205,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 149,
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -6690,10 +8235,15 @@
       "sourceId": "node/4349256209",
       "sourceUrl": "https://www.openstreetmap.org/node/4349256209",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://purushayoga.org/pricing/",
+      "priceNote": "Official pricing page lists unlimited monthly membership at $149/month, annual unlimited at $1,499/year, and regular class drop-in at $30.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 149,
+      "annualPrepayPrice": 1499,
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-6636000325",
@@ -6720,7 +8270,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-11009320687",
@@ -6747,7 +8300,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-4199680597",
@@ -6774,7 +8330,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6424602096",
@@ -6786,7 +8345,7 @@
       "longitude": -122.4742415,
       "monthlyPrice": null,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -6798,10 +8357,14 @@
       "sourceId": "node/6424602096",
       "sourceUrl": "https://www.openstreetmap.org/node/6424602096",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://regularexercise.net/",
+      "priceNote": "Official website states professional fees range from $110 to $150 depending on practitioner credentials and specialty. This is a private-session price, not an open-gym day pass or monthly membership.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "personalTrainingSessionPrice": 110,
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-286276068",
@@ -6829,7 +8392,10 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-85796805",
@@ -6856,7 +8422,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-7044717960",
@@ -6881,7 +8450,49 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
+    },
+    {
+      "id": "web-0b97115e233592",
+      "name": "Ritual Hot Yoga - SoMa",
+      "neighborhood": "SOMA",
+      "address": "57 Langton Street, San Francisco, CA 94103",
+      "gymType": "hot yoga studio",
+      "latitude": 37.7769179,
+      "longitude": -122.4089834,
+      "monthlyPrice": 179,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate annual fee found on the reviewed public San Francisco SoMa pricing page.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public San Francisco SoMa pricing page.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": 37,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "hot yoga",
+        "showers",
+        "towel service"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://www.ritualhotyoga.com/",
+      "sourceName": "Ritual Hot Yoga",
+      "sourceId": "web-research/web-0b97115e233592",
+      "sourceUrl": "https://www.ritualhotyoga.com/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "Ritual Hot Yoga",
+      "priceSourceUrl": "https://www.ritualhotyoga.com/san-francisco-soma-pricing",
+      "priceNote": "Official SoMa pricing page lists monthly unlimited at $179/month and a single class at $37. Intro and package pricing are not used as the primary monthly comparator.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-360958312",
@@ -6908,7 +8519,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10806697932",
@@ -6935,7 +8549,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-way-263347521",
@@ -6963,7 +8580,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-264527987",
@@ -6992,7 +8612,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-32145314",
@@ -7020,7 +8643,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-4101104064",
@@ -7030,9 +8656,9 @@
       "gymType": "Sports centre",
       "latitude": 37.7756524,
       "longitude": -122.5018331,
-      "monthlyPrice": null,
+      "monthlyPrice": 200,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "fencing",
@@ -7045,10 +8671,13 @@
       "sourceId": "node/4101104064",
       "sourceUrl": "https://www.openstreetmap.org/node/4101104064",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://sffencers.com/faq/",
+      "priceNote": "Official FAQ says classes start at $200 per month; no day pass or open-gym price was published.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-2637241462",
@@ -7076,7 +8705,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10744098187",
@@ -7101,7 +8733,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-3315887614",
@@ -7126,7 +8761,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-288978321",
@@ -7154,7 +8792,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-3986912499",
@@ -7179,7 +8820,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-d335e6ba867d00",
@@ -7204,7 +8848,10 @@
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer. The official hours page says this branch is temporarily closed for indoor wellness and senior programming.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-10733903068",
@@ -7231,7 +8878,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-11038336710",
@@ -7258,7 +8908,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-6636000322",
@@ -7285,7 +8938,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-11009320686",
@@ -7312,7 +8968,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "web-0b96f513d9f804",
@@ -7339,7 +8998,10 @@
       "priceSource": "Skrap Pack Marina official join page",
       "priceSourceUrl": "https://skrappackmarina.com/join",
       "priceNote": "Official adult membership is $220/month on a yearly contract or $250/month month-to-month; day pass is $40. The $225 value is not a standard plan; records should choose the plan matching user commitment.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-node-11777326257",
@@ -7364,7 +9026,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "personal_training"
     },
     {
       "id": "osm-node-13910165495",
@@ -7391,7 +9056,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-44c39e1d4144c1",
@@ -7418,7 +9086,10 @@
       "priceSource": "Sol Hot Yoga & Movement official membership page",
       "priceSourceUrl": "https://www.solyogasf.com/membership",
       "priceNote": "Official monthly unlimited membership is $100/month; drop-in is $25. New-student one-month unlimited is $60 and a 10-class pass is $150.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-13185224799",
@@ -7445,7 +9116,106 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
+    },
+    {
+      "id": "web-0ed19b0a7a3073",
+      "name": "[solidcore] Laurel Village",
+      "neighborhood": "Laurel Heights",
+      "address": "3407 California Street, San Francisco, CA 94118",
+      "gymType": "High-intensity low-impact resistance training studio",
+      "latitude": 37.7865372,
+      "longitude": -122.4502566,
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "freshness": "unknown",
+      "isOpen247": false,
+      "amenities": [
+        "resistance training",
+        "small classes",
+        "coach-led workouts"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://solidcore.co/studios/laurel-village",
+      "sourceName": "[solidcore]",
+      "sourceId": "web-research/web-0ed19b0a7a3073",
+      "sourceUrl": "https://solidcore.co/studios/laurel-village",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "",
+      "priceSourceUrl": "https://solidcore.co/studios/laurel-village",
+      "priceNote": "Official studio page exposes the address and booking entry point but not numeric package or membership prices in the reviewed public text. Membership and package pages require studio selection or app/booking flow to see prices.",
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
+    },
+    {
+      "id": "web-c585a394b269ab",
+      "name": "[solidcore] Marina",
+      "neighborhood": "Marina",
+      "address": "3225 Fillmore St, San Francisco, CA 94123",
+      "gymType": "High-intensity low-impact resistance training studio",
+      "latitude": 37.7992619,
+      "longitude": -122.4362074,
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "freshness": "unknown",
+      "isOpen247": false,
+      "amenities": [
+        "resistance training",
+        "small classes",
+        "coach-led workouts"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://solidcore.co/studios/marina",
+      "sourceName": "[solidcore]",
+      "sourceId": "web-research/web-c585a394b269ab",
+      "sourceUrl": "https://solidcore.co/studios/marina",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "",
+      "priceSourceUrl": "https://solidcore.co/studios/marina",
+      "priceNote": "Official studio page exposes the address and booking entry point but not numeric package or membership prices in the reviewed public text. Membership and package pages require studio selection or app/booking flow to see prices.",
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
+    },
+    {
+      "id": "web-8a0d4e16015d6d",
+      "name": "[solidcore] Mission Bay",
+      "neighborhood": "Mission Bay",
+      "address": "1155 4th Street, San Francisco, CA 94158",
+      "gymType": "High-intensity low-impact resistance training studio",
+      "latitude": 37.7732666,
+      "longitude": -122.3912391,
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "freshness": "unknown",
+      "isOpen247": false,
+      "amenities": [
+        "resistance training",
+        "small classes",
+        "coach-led workouts"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://solidcore.co/studios/mission-bay",
+      "sourceName": "[solidcore]",
+      "sourceId": "web-research/web-8a0d4e16015d6d",
+      "sourceUrl": "https://solidcore.co/studios/mission-bay",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "",
+      "priceSourceUrl": "https://solidcore.co/studios/mission-bay",
+      "priceNote": "Official studio page exposes the address and booking entry point but not numeric package or membership prices in the reviewed public text. Membership and package pages require studio selection or app/booking flow to see prices.",
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-6493825931",
@@ -7455,9 +9225,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7344378,
       "longitude": -122.4340102,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 100,
+      "dayPassPrice": 35,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -7470,10 +9240,14 @@
       "sourceId": "node/6493825931",
       "sourceUrl": "https://www.openstreetmap.org/node/6493825931",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.solunayogaandwellness.com/home",
+      "priceNote": "Official homepage lists Basic Membership at $100 for 5 classes/month, Standard at $160 for 9/month, Unlimited at $189/month, single drop-in at $35, and intro three classes for $30.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 189,
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-4001664955",
@@ -7501,7 +9275,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-node-5251308681",
@@ -7528,7 +9305,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "boutique_fitness"
     },
     {
       "id": "osm-way-162470887",
@@ -7553,7 +9333,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6636000331",
@@ -7580,7 +9363,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-8867020483",
@@ -7607,7 +9393,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "personal_training"
     },
     {
       "id": "web-c745e6dbdcadb6",
@@ -7634,7 +9423,10 @@
       "priceSource": "Strong Friends official location and drop-in pages",
       "priceSourceUrl": "https://www.strongfriendsgym.com/programs/drop-in",
       "priceNote": "Official drop-in price is $60 and the credit can be used for a class. The page says semi-private classes start at $43 per class with membership; no standard monthly total was published.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-0c3933dd5d019f",
@@ -7661,7 +9453,10 @@
       "priceSource": "Studio By Live Better official pricing page",
       "priceSourceUrl": "https://www.studiobylivebetter.com/pricing",
       "priceNote": "Official yoga or Pilates membership is $150/month. All-access membership is $210/month. Yoga drop-in is $30; mat Pilates is $35. A $99 four-week intro pass is separate.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "osm-node-3674255652",
@@ -7689,7 +9484,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-12440345642",
@@ -7714,7 +9512,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-3969590469",
@@ -7741,7 +9542,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6373000373",
@@ -7766,7 +9570,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-71209420",
@@ -7793,7 +9600,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-28353177",
@@ -7820,7 +9630,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-2340010642",
@@ -7848,7 +9661,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-9bcdd50c2d4426",
@@ -7875,7 +9691,10 @@
       "priceSource": "The Castro Room official purchase page",
       "priceSourceUrl": "https://www.castroroom.com/purchase",
       "priceNote": "Official purchase page lists $180 for one month, $165 for a promotional one-month option, and a $30 drop-in; drop-in plus mat is $35.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-11021164500",
@@ -7904,7 +9723,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6471124706",
@@ -7931,7 +9753,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-8e0d13fb9738f9",
@@ -7958,7 +9783,10 @@
       "priceSource": "The Pilates School SF official programs and pricing page",
       "priceSourceUrl": "https://www.pilatesschoolsf.com/programs-pricing/",
       "priceNote": "Official site says drop-in memberships start at $189/month and class packs start at $50; it offers a free introductory class. The reviewed public page did not expose a standard single-class dollar price.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "web-8209841346c6d0",
@@ -7985,7 +9813,10 @@
       "priceSource": "The Pilates School SF official programs and pricing page",
       "priceSourceUrl": "https://www.pilatesschoolsf.com/programs-pricing/",
       "priceNote": "Official site says drop-in memberships start at $189/month and class packs start at $50; it offers a free introductory class. The reviewed public page did not expose a standard single-class dollar price.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "pilates_barre"
     },
     {
       "id": "web-46a150f089f8a7",
@@ -8012,7 +9843,10 @@
       "priceSource": "The Yoga Shala SF official pricing page",
       "priceSourceUrl": "https://theyogashalasf.com/pricing",
       "priceNote": "Official page lists a six-month unlimited pass for $829, described as $133/month, and a $35 drop-in. The $133 value is a prepaid six-month equivalent rather than a month-to-month price.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "web-c195ac37294a74",
@@ -8039,7 +9873,10 @@
       "priceSource": "The Yoga Shala SF official pricing page",
       "priceSourceUrl": "https://theyogashalasf.com/pricing",
       "priceNote": "Official page lists a six-month unlimited pass for $829, described as $133/month, and a $35 drop-in. The $133 value is a prepaid six-month equivalent rather than a month-to-month price.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-12337829335",
@@ -8050,8 +9887,8 @@
       "latitude": 37.7651466,
       "longitude": -122.4603044,
       "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "dayPassPrice": 28,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -8065,10 +9902,13 @@
       "sourceId": "node/12337829335",
       "sourceUrl": "https://www.openstreetmap.org/node/12337829335",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.tinyhavenyogasf.com/classes",
+      "priceNote": "Official classes page lists single in-person class drop-in at $28 and 4-class in-person package at $100; no monthly membership was published.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-10733903067",
@@ -8095,7 +9935,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-way-34313547",
@@ -8120,7 +9963,50 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
+    },
+    {
+      "id": "web-fb203eb0ac1ead",
+      "name": "UCSF Bakar Fitness & Recreation Center",
+      "neighborhood": "Mission Bay",
+      "address": "1675 Owens Street, San Francisco, CA 94158",
+      "gymType": "university recreation and fitness center",
+      "latitude": 37.7679911,
+      "longitude": -122.392759,
+      "monthlyPrice": 98,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate annual fee found on the reviewed public membership-rates page.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": 25,
+      "initiationFeeNote": "Official membership-rates page lists a $25 initiation fee for community members.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": 25,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "fitness center",
+        "pool",
+        "group exercise",
+        "recreation facilities"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation",
+      "sourceName": "UCSF Fitness & Recreation",
+      "sourceId": "web-research/web-fb203eb0ac1ead",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "UCSF Fitness & Recreation",
+      "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership/membership-rates",
+      "priceNote": "Official rates page lists community monthly membership at $98 and guest pass at $25. UCSF student, faculty, staff, affiliate, senior, and family rates are eligibility-based and not used as the main public comparator.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-261142907",
@@ -8145,7 +10031,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-10609148147",
@@ -8173,7 +10062,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-way-270766450",
@@ -8198,7 +10090,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-way-364222310",
@@ -8223,7 +10118,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-1450184240",
@@ -8248,7 +10146,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-497304176",
@@ -8273,7 +10174,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-6636000333",
@@ -8300,7 +10204,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "outdoor_fitness"
     },
     {
       "id": "osm-node-1364959516",
@@ -8328,7 +10235,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-10538306968",
@@ -8353,7 +10263,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-5613323269",
@@ -8380,7 +10293,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "web-76a8863d9951eb",
@@ -8407,7 +10323,10 @@
       "priceSource": "World Team USA official services page",
       "priceSourceUrl": "https://www.worldteamusa.net/services",
       "priceNote": "Official page lists a $49 single-class day pass, $79 introduction lesson, and $285 30-day trial with unlimited classes and coaching. The $285 option is a trial product, not confirmed as a recurring monthly membership.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     },
     {
       "id": "osm-way-193054131",
@@ -8436,7 +10355,10 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6615153559",
@@ -8463,7 +10385,10 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-9953947674",
@@ -8488,7 +10413,10 @@
       "priceSource": "YMCA of Greater San Francisco membership page",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult membership rate; young adult, teen, older adult, household, and assistance rates differ.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-626299e55c8ff0",
@@ -8515,7 +10443,10 @@
       "priceSource": "YMCA of Greater San Francisco membership and location materials",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-865e385061a6e4",
@@ -8542,7 +10473,10 @@
       "priceSource": "YMCA of Greater San Francisco membership and Chinatown location materials",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-c918742306b9ec",
@@ -8552,24 +10486,31 @@
       "gymType": "Community YMCA fitness center",
       "latitude": 37.7925423,
       "longitude": -122.39199,
-      "monthlyPrice": 91,
-      "dayPassPrice": 0,
+      "monthlyPrice": 103,
+      "dayPassPrice": null,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
-        "Wellness equipment; group exercise; pool access at participating branches; basketball; pickleball; childcare benefits on household memberships; financial assistance"
+        "Wellness equipment; group exercise; pool access at participating branches; basketball; pickleball; childcare benefits on household memberships; financial assistance",
+        "fitness center",
+        "group exercise",
+        "community programs"
       ],
       "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
-      "hours": "Hours not listed",
+      "hours": "Not audited in this pricing pass",
       "websiteUrl": "https://www.ymcasf.org/",
       "sourceName": "YMCA of Greater San Francisco membership, branch, and free-pass pages",
       "sourceId": "web-research/web-c918742306b9ec",
       "sourceUrl": "https://www.ymcasf.org/",
       "importedAt": "2026-08-17T06:01:30Z",
-      "priceSource": "YMCA of Greater San Francisco membership, branch, and free-pass pages",
-      "priceSourceUrl": "https://www.ymcasf.org/membership/",
-      "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. YMCA’s official free-day-pass page advertises a free one-day pass; eligibility and branch availability should be confirmed.",
-      "priceObservedAt": "2026-08-16"
+      "priceSource": "YMCA of San Francisco",
+      "priceSourceUrl": "https://www.ymcasf.org/join",
+      "priceNote": "Official YMCA of San Francisco join page lists adult membership at $103/month. Youth, young adult, senior, family, branch-specific, financial assistance, and promo rates were not used as the main adult monthly comparator.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "No separate annual fee found on the reviewed public membership rates page.",
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public membership rates page.",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-ed4147155656ad",
@@ -8596,7 +10537,10 @@
       "priceSource": "YMCA of Greater San Francisco membership and location materials",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-26e56c51255445",
@@ -8623,7 +10567,10 @@
       "priceSource": "YMCA of Greater San Francisco membership and location materials",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "web-f141f189045511",
@@ -8650,7 +10597,10 @@
       "priceSource": "YMCA of Greater San Francisco membership and location materials",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "recreation_sports"
     },
     {
       "id": "osm-node-6471124709",
@@ -8677,7 +10627,151 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
+    },
+    {
+      "id": "web-39dd263c4c9d1c",
+      "name": "Yoga Flow SF Noe Valley",
+      "neighborhood": "Noe Valley",
+      "address": "4049 24th St, San Francisco, CA 94114",
+      "gymType": "Heated yoga studio",
+      "latitude": 37.7511233,
+      "longitude": -122.4329957,
+      "monthlyPrice": 100,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "heated vinyasa",
+        "prenatal and postnatal yoga",
+        "restorative yoga",
+        "yoga nidra",
+        "sound healing"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://yogaflowsf.com/membership/",
+      "sourceName": "Yoga Flow SF",
+      "sourceId": "web-research/web-39dd263c4c9d1c",
+      "sourceUrl": "https://yogaflowsf.com/membership/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Yoga Flow SF",
+      "priceSourceUrl": "https://yogaflowsf.com/membership/",
+      "priceNote": "Official membership page lists 4 classes per month at $100, 8 classes per month at $175, and unlimited at $210/month across all locations. FAQ states $35 single-class drop-ins are available.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
+    },
+    {
+      "id": "web-c8031adb1f022c",
+      "name": "Yoga Flow SF Ocean Ave",
+      "neighborhood": "Ingleside",
+      "address": "385 Ashton Ave, San Francisco, CA 94112",
+      "gymType": "Heated yoga studio",
+      "latitude": 37.7202888,
+      "longitude": -122.4622667,
+      "monthlyPrice": 100,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "heated vinyasa",
+        "slow flow",
+        "yin",
+        "restorative yoga",
+        "workshops",
+        "mat and towel service option"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://yogaflowsf.com/membership/",
+      "sourceName": "Yoga Flow SF",
+      "sourceId": "web-research/web-c8031adb1f022c",
+      "sourceUrl": "https://yogaflowsf.com/membership/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Yoga Flow SF",
+      "priceSourceUrl": "https://yogaflowsf.com/membership/",
+      "priceNote": "Official membership page lists 4 classes per month at $100, 8 classes per month at $175, and unlimited at $210/month across all locations. FAQ states 5-class packs and $35 single-class drop-ins are available. New student offers are not used as primary rates.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
+    },
+    {
+      "id": "web-982849bdb030ca",
+      "name": "Yoga Flow SF Union St",
+      "neighborhood": "Cow Hollow",
+      "address": "1892 Union St, San Francisco, CA 94123",
+      "gymType": "Heated yoga studio",
+      "latitude": 37.7978274,
+      "longitude": -122.4303401,
+      "monthlyPrice": 100,
+      "dayPassPrice": 35,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "heated vinyasa",
+        "slow flow",
+        "Yoga 101",
+        "workshops",
+        "mat and towel service option"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://yogaflowsf.com/membership/",
+      "sourceName": "Yoga Flow SF",
+      "sourceId": "web-research/web-982849bdb030ca",
+      "sourceUrl": "https://yogaflowsf.com/membership/",
+      "importedAt": "2026-08-17T06:20:32Z",
+      "priceSource": "Yoga Flow SF",
+      "priceSourceUrl": "https://yogaflowsf.com/membership/",
+      "priceNote": "Official membership page lists 4 classes per month at $100, 8 classes per month at $175, and unlimited at $210/month across all locations. FAQ states $35 single-class drop-ins are available.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
+    },
+    {
+      "id": "web-cdc2e8cd71cc6d",
+      "name": "Yoga Mayu",
+      "neighborhood": "Potrero Hill",
+      "address": "1501 20th Street, San Francisco, CA 94107",
+      "gymType": "yoga studio",
+      "latitude": 37.759934,
+      "longitude": -122.396431,
+      "monthlyPrice": 165,
+      "monthlyUnlimitedPrice": null,
+      "annualFee": null,
+      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
+      "annualPrepayPrice": null,
+      "enrollmentFee": null,
+      "enrollmentFeeNote": "",
+      "initiationFee": null,
+      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
+      "personalTrainingSessionPrice": null,
+      "dayPassPrice": 30,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "yoga classes",
+        "workshops"
+      ],
+      "description": "Official web research listing. Verify current pricing, terms, and hours before visiting.",
+      "hours": "Not audited in this pricing pass",
+      "websiteUrl": "https://www.yogamayu.com/",
+      "sourceName": "Yoga Mayu",
+      "sourceId": "web-research/web-cdc2e8cd71cc6d",
+      "sourceUrl": "https://www.yogamayu.com/",
+      "importedAt": "2026-08-18T03:52:44Z",
+      "priceSource": "Yoga Mayu",
+      "priceSourceUrl": "https://www.yogamayu.com/pricing",
+      "priceNote": "Official pricing page lists unlimited monthly membership at $165/month and drop-in at $30. Intro offers and class packs are recorded as alternatives only.",
+      "priceObservedAt": "2026-08-17",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-4395534973",
@@ -8704,7 +10798,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "yoga_studio"
     },
     {
       "id": "osm-node-6471401829",
@@ -8714,9 +10811,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7511208,
       "longitude": -122.4353562,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
+      "monthlyPrice": 109,
+      "dayPassPrice": 30,
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "Website listed"
@@ -8728,10 +10825,15 @@
       "sourceId": "node/6471401829",
       "sourceUrl": "https://www.openstreetmap.org/node/6471401829",
       "importedAt": "2026-08-17T01:10:11Z",
-      "priceSource": "",
-      "priceSourceUrl": "",
-      "priceNote": "",
-      "priceObservedAt": ""
+      "priceSource": "Official website",
+      "priceSourceUrl": "https://www.yubalance.com/noe-valley/",
+      "priceNote": "Official Noe Valley page lists monthly class memberships: 4-class pack at $109, 8-class at $189, unlimited at $229, drop-in at $30, and annual unlimited at $2,399. Personal training drop-in is listed separately at $75.",
+      "priceObservedAt": "2026-08-17",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "monthlyUnlimitedPrice": 229,
+      "annualPrepayPrice": 2399,
+      "venueType": "traditional_gym"
     },
     {
       "id": "osm-node-3522837919",
@@ -8758,7 +10860,10 @@
       "priceSource": "",
       "priceSourceUrl": "",
       "priceNote": "",
-      "priceObservedAt": ""
+      "priceObservedAt": "",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "traditional_gym"
     },
     {
       "id": "web-a1af705ba3b80c",
@@ -8785,7 +10890,10 @@
       "priceSource": "Zanshin Dojo official site",
       "priceSourceUrl": "https://sfgoju.com/",
       "priceNote": "Official site advertises one month of unlimited classes plus a free uniform for $99 and says a trial class is free. This is a new-member offer, not necessarily the ongoing monthly rate.",
-      "priceObservedAt": "2026-08-16"
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "annualFeeNote": "",
+      "venueType": "martial_arts_boxing"
     }
   ]
 }

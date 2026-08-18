@@ -5,6 +5,20 @@ from uuid import UUID
 
 from pydantic import BaseModel, ConfigDict, Field, HttpUrl
 
+VenueType = Literal[
+    "traditional_gym",
+    "boutique_fitness",
+    "yoga_studio",
+    "pilates_barre",
+    "martial_arts_boxing",
+    "climbing_gym",
+    "gymnastics",
+    "personal_training",
+    "recreation_sports",
+    "outdoor_fitness",
+    "dance_movement",
+]
+
 
 class PriceSnapshot(BaseModel):
     model_config = ConfigDict(from_attributes=True)
@@ -13,6 +27,7 @@ class PriceSnapshot(BaseModel):
     amount: Decimal | None = None
     billing_interval: str | None = None
     initiation_fee: Decimal | None = None
+    annual_fee: Decimal | None = None
     verified_at: datetime | None = None
     freshness: Literal["verified", "gym_reported", "user_reported", "stale", "unknown"]
 
@@ -25,9 +40,11 @@ class GymSummary(BaseModel):
     latitude: float
     longitude: float
     gym_type: str
+    venue_type: VenueType = "traditional_gym"
     is_open_24_7: bool = False
     amenities: list[str] = Field(default_factory=list)
     monthly_price: Decimal | None = None
+    annual_fee: Decimal | None = None
     day_pass_price: Decimal | None = None
     price_freshness: str = "unknown"
     updated_at: datetime | None = None

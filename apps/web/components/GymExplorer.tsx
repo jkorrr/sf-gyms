@@ -4,7 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import GymMap from "./GymMap";
 import { basePath, oauthRedirectUrl } from "../lib/config";
-import { demoGyms, type Gym } from "../lib/demo-data";
+import { demoGyms, type Gym, type VenueType, venueTypeLabels, venueTypes } from "../lib/demo-data";
 import { distanceMiles, formatDistanceMiles, type GeoPoint } from "../lib/geo";
 import { getSupabaseClient, getSupabaseStatus } from "../lib/supabase";
 
@@ -16,14 +16,17 @@ type ApiGym = {
   latitude: number;
   longitude: number;
   gym_type: string;
+  venue_type?: VenueType | null;
   is_open_24_7: boolean;
   amenities: string[];
   monthly_price?: number | null;
+  annual_fee?: number | null;
   day_pass_price?: number | null;
   price_freshness: Gym["freshness"];
   price_source?: string | null;
   price_source_url?: string | null;
   price_note?: string | null;
+  annual_fee_note?: string | null;
   price_observed_at?: string | null;
   source_name?: string | null;
   source_id?: string | null;
@@ -51,9 +54,11 @@ function fromApiGym(gym: ApiGym): Gym {
     neighborhood: gym.neighborhood ?? "San Francisco",
     address: gym.address,
     gymType: gym.gym_type,
+    venueType: gym.venue_type ?? "traditional_gym",
     latitude: gym.latitude,
     longitude: gym.longitude,
     monthlyPrice: gym.monthly_price ?? null,
+    annualFee: gym.annual_fee ?? null,
     dayPassPrice: gym.day_pass_price ?? null,
     freshness: gym.price_freshness ?? "unknown",
     isOpen247: gym.is_open_24_7,
@@ -68,6 +73,7 @@ function fromApiGym(gym: ApiGym): Gym {
     priceSource: gym.price_source ?? undefined,
     priceSourceUrl: gym.price_source_url ?? undefined,
     priceNote: gym.price_note ?? undefined,
+    annualFeeNote: gym.annual_fee_note ?? undefined,
     priceObservedAt: gym.price_observed_at ?? undefined,
   };
 }
@@ -99,7 +105,9 @@ function gymDetailHref(id: string): string {
 export default function GymExplorer() {
   const [gyms, setGyms] = useState<Gym[]>(demoGyms);
   const [query, setQuery] = useState("");
-  const [neighborhoodFilter, setNeighborhoodFilter] = useState("");
+  const [selectedNeighborhoods, setSelectedNeighborhoods] = useState<string[]>([]);
+  const [selectedVenueTypes, setSelectedVenueTypes] = useState<VenueType[]>([]);
+  const [venueParamsLoaded, setVenueParamsLoaded] = useState(false);
   const [maxMonthly, setMaxMonthly] = useState("");
   const [radiusMiles, setRadiusMiles] = useState("");
   const [sortOrder, setSortOrder] = useState<SortOrder>("recommended");
@@ -110,6 +118,7 @@ export default function GymExplorer() {
   const [selected, setSelected] = useState<Gym | null>(null);
   const [savedIds, setSavedIds] = useState<string[]>([]);
   const [compareIds, setCompareIds] = useState<string[]>([]);
+  const [compareMessage, setCompareMessage] = useState("");
   const [authMessage, setAuthMessage] = useState("");
   const [authLabel, setAuthLabel] = useState("Sign in with Google");
   const locationControllerRef = useRef<AbortController | null>(null);
@@ -164,6 +173,21 @@ export default function GymExplorer() {
 
   useEffect(() => {
     const params = new URLSearchParams(window.location.search);
+    const requested = params.getAll("venue").filter((value): value is VenueType => venueTypes.includes(value as VenueType));
+    setSelectedVenueTypes(Array.from(new Set(requested)));
+    setVenueParamsLoaded(true);
+  }, []);
+
+  useEffect(() => {
+    if (!venueParamsLoaded) return;
+    const url = new URL(window.location.href);
+    url.searchParams.delete("venue");
+    selectedVenueTypes.forEach((venueType) => url.searchParams.append("venue", venueType));
+    window.history.replaceState({}, "", `${url.pathname}${url.search}${url.hash}`);
+  }, [selectedVenueTypes, venueParamsLoaded]);
+
+  useEffect(() => {
+    const params = new URLSearchParams(window.location.search);
     const code = params.get("code");
     const oauthError = params.get("error_description") ?? params.get("error");
     if (code || oauthError) oauthCallbackRef.current = true;
@@ -213,6 +237,11 @@ export default function GymExplorer() {
       .filter((neighborhood) => neighborhood && neighborhood !== "San Francisco"),
   )).sort((left, right) => left.localeCompare(right)), [gyms]);
 
+  const venueTypeCounts = useMemo(() => gyms.reduce<Record<VenueType, number>>((counts, gym) => {
+    counts[gym.venueType] += 1;
+    return counts;
+  }, Object.fromEntries(venueTypes.map((venueType) => [venueType, 0])) as Record<VenueType, number>), [gyms]);
+
   const visibleRows = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const budget = maxMonthly ? Number(maxMonthly) : Number.POSITIVE_INFINITY;
@@ -220,12 +249,13 @@ export default function GymExplorer() {
     const rows = gyms
       .map((gym) => ({ gym, distance: origin ? distanceMiles(origin, gym) : null }))
       .filter(({ gym, distance }) => {
-        const matchesText = !needle || [gym.name, gym.neighborhood, gym.address, gym.gymType, ...gym.amenities]
+        const matchesText = !needle || [gym.name, gym.neighborhood, gym.address, gym.gymType, venueTypeLabels[gym.venueType], ...gym.amenities]
           .join(" ").toLowerCase().includes(needle);
-        const matchesNeighborhood = !neighborhoodFilter || gym.neighborhood === neighborhoodFilter;
+        const matchesNeighborhood = selectedNeighborhoods.length === 0 || selectedNeighborhoods.includes(gym.neighborhood);
+        const matchesVenueType = selectedVenueTypes.length === 0 || selectedVenueTypes.includes(gym.venueType);
         const matchesBudget = !maxMonthly || (gym.monthlyPrice !== null && gym.monthlyPrice <= budget);
         const matchesRadius = distance === null || distance <= radius;
-        return matchesText && matchesNeighborhood && matchesBudget && matchesRadius;
+        return matchesText && matchesNeighborhood && matchesVenueType && matchesBudget && matchesRadius;
       });
 
     return rows.sort((left, right) => {
@@ -240,11 +270,26 @@ export default function GymExplorer() {
       }
       return left.gym.name.localeCompare(right.gym.name);
     });
-  }, [gyms, maxMonthly, neighborhoodFilter, origin, query, radiusMiles, sortOrder]);
+  }, [gyms, maxMonthly, origin, query, radiusMiles, selectedNeighborhoods, selectedVenueTypes, sortOrder]);
 
   const filteredGyms = useMemo(() => visibleRows.map(({ gym }) => gym), [visibleRows]);
   const selectedGym = selected && filteredGyms.some((gym) => gym.id === selected.id) ? selected : null;
   const selectedDistance = selectedGym && origin ? distanceMiles(origin, selectedGym) : null;
+  const compareGyms = useMemo(() => compareIds
+    .map((id) => gyms.find((gym) => gym.id === id))
+    .filter((gym): gym is Gym => Boolean(gym)), [compareIds, gyms]);
+
+  const toggleNeighborhood = (neighborhood: string) => {
+    setSelectedNeighborhoods((current) => current.includes(neighborhood)
+      ? current.filter((item) => item !== neighborhood)
+      : [...current, neighborhood]);
+  };
+
+  const toggleVenueType = (venueType: VenueType) => {
+    setSelectedVenueTypes((current) => current.includes(venueType)
+      ? current.filter((item) => item !== venueType)
+      : [...current, venueType]);
+  };
 
   const toggleSaved = (id: string) => {
     setSavedIds((current) => {
@@ -259,6 +304,11 @@ export default function GymExplorer() {
       const next = current.includes(id)
         ? current.filter((item) => item !== id)
         : current.length < 3 ? [...current, id] : current;
+      if (!current.includes(id) && current.length >= 3) {
+        setCompareMessage("Compare up to three gyms at a time. Remove one to add another.");
+      } else {
+        setCompareMessage("");
+      }
       window.localStorage.setItem("sf-gyms:compare", JSON.stringify(next));
       return next;
     });
@@ -369,6 +419,20 @@ export default function GymExplorer() {
           {query && <button className="clear-search" type="button" onClick={() => setQuery("")} aria-label="Clear gym search">×</button>}
         </div>
         <div className="filter-row" aria-label="Filter and sort options">
+          <details className="venue-select filter-control">
+            <summary aria-label="Choose one or more venue types">
+              <span>{selectedVenueTypes.length === 0 ? "All venue types" : `${selectedVenueTypes.length} venue type${selectedVenueTypes.length === 1 ? "" : "s"}`}</span>
+              <span className="neighborhood-select-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div className="venue-menu">
+              <button className="neighborhood-clear" type="button" onClick={() => setSelectedVenueTypes([])} disabled={selectedVenueTypes.length === 0}>Clear selection</button>
+              {venueTypes.map((venueType) => <label className="neighborhood-option" key={venueType}>
+                <input type="checkbox" checked={selectedVenueTypes.includes(venueType)} onChange={() => toggleVenueType(venueType)} />
+                <span>{venueTypeLabels[venueType]}</span>
+                <span className="venue-count">{venueTypeCounts[venueType]}</span>
+              </label>)}
+            </div>
+          </details>
           <label className="filter filter-control">Budget <span className="filter-input-wrap"><span aria-hidden="true">$</span><input id="max-monthly" inputMode="numeric" value={maxMonthly} onChange={(event) => setMaxMonthly(event.target.value.replace(/[^0-9]/g, ""))} placeholder="Any" aria-label="Maximum monthly price" /></span><span className="filter-suffix">/ month</span></label>
           <label className="filter filter-control">Distance <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius" disabled={!origin} title={origin ? "Filter by distance from your selected location" : "Set a location first"}><option value="">Any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
           <label className="filter filter-control">Sort by <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
@@ -378,12 +442,21 @@ export default function GymExplorer() {
       <section className="neighborhood-filter" aria-label="Filter by neighborhood">
         <div className="neighborhood-filter-head">
           <div className="section-label">Neighborhoods</div>
-          <span className="neighborhood-filter-status" aria-live="polite">{neighborhoodFilter ? `${filteredGyms.length} gyms in ${neighborhoodFilter}` : "Filter the map by area"}</span>
+          <span className="neighborhood-filter-status" aria-live="polite">{selectedNeighborhoods.length > 0 ? `${filteredGyms.length} venues across ${selectedNeighborhoods.length} area${selectedNeighborhoods.length === 1 ? "" : "s"}` : "Filter the map by area"}</span>
         </div>
-        <div className="filter-chips" role="group" aria-label="San Francisco neighborhood filters" tabIndex={0}>
-          <button className={`filter-chip ${neighborhoodFilter === "" ? "active" : ""}`} type="button" aria-pressed={neighborhoodFilter === ""} onClick={() => setNeighborhoodFilter("")}>All neighborhoods</button>
-          {neighborhoodOptions.map((neighborhood) => <button className={`filter-chip ${neighborhoodFilter === neighborhood ? "active" : ""}`} type="button" aria-label={`Filter gyms in ${neighborhood}`} aria-pressed={neighborhoodFilter === neighborhood} onClick={() => setNeighborhoodFilter(neighborhood)} key={neighborhood}>{neighborhood}</button>)}
-        </div>
+        <details className="neighborhood-select">
+          <summary aria-label="Choose one or more San Francisco neighborhoods">
+            <span>{selectedNeighborhoods.length === 0 ? "All neighborhoods" : `${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"} selected`}</span>
+            <span className="neighborhood-select-chevron" aria-hidden="true">⌄</span>
+          </summary>
+          <div className="neighborhood-menu">
+            <button className="neighborhood-clear" type="button" onClick={() => setSelectedNeighborhoods([])} disabled={selectedNeighborhoods.length === 0}>Clear selection</button>
+            {neighborhoodOptions.map((neighborhood) => <label className="neighborhood-option" key={neighborhood}>
+              <input type="checkbox" checked={selectedNeighborhoods.includes(neighborhood)} onChange={() => toggleNeighborhood(neighborhood)} />
+              <span>{neighborhood}</span>
+            </label>)}
+          </div>
+        </details>
       </section>
 
       <section className="location-toolbar" aria-label="Distance from a location">
@@ -397,25 +470,45 @@ export default function GymExplorer() {
         {locationStatus && <span className="location-status" role="status">{locationStatus}</span>}
       </section>
 
-      {compareIds.length > 0 && <div className="compare-bar" id="compare"><span><strong>{compareIds.length}</strong> gym{compareIds.length === 1 ? "" : "s"} ready to compare.</span><button onClick={() => { setCompareIds([]); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button></div>}
+      {compareGyms.length > 0 && <section className="compare-panel" id="compare" aria-labelledby="compare-heading">
+        <div className="compare-panel-head">
+          <div><div className="section-label">Side by side</div><h3 id="compare-heading">Compare prices</h3><p>Keep up to three gyms here while you explore the map.</p></div>
+          <button className="compare-clear" type="button" onClick={() => { setCompareIds([]); setCompareMessage(""); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button>
+        </div>
+        <div className="compare-table-wrap">
+          <table className="compare-table">
+            <thead><tr><th scope="col">Gym</th><th scope="col">Neighborhood</th><th scope="col">Monthly</th><th scope="col">Annual fee</th><th scope="col">Day pass</th><th scope="col"><span className="sr-only">Remove</span></th></tr></thead>
+            <tbody>{compareGyms.map((gym) => <tr key={gym.id}>
+              <th scope="row"><a href={gymDetailHref(gym.id)}>{gym.name}</a></th>
+              <td>{gym.neighborhood}</td>
+              <td><strong>{priceLabel(gym.monthlyPrice, "/mo")}</strong>{gym.priceSourceUrl && <a className="compare-source" href={gym.priceSourceUrl} target="_blank" rel="noreferrer">Source</a>}</td>
+              <td><strong>{priceLabel(gym.annualFee, "/yr")}</strong></td>
+              <td><strong>{priceLabel(gym.dayPassPrice, " day pass")}</strong></td>
+              <td><button className="compare-remove" type="button" onClick={() => toggleCompare(gym.id)} aria-label={`Remove ${gym.name} from comparison`}>×</button></td>
+            </tr>)}</tbody>
+          </table>
+        </div>
+        {compareMessage && <p className="compare-message" role="status">{compareMessage}</p>}
+      </section>}
 
       <section className="explorer map-first-explorer map-section" id="map" aria-label="Gym map and listings">
         <div className="map-heading-row">
-          <div><div className="eyebrow">Explore the city</div><h3>{filteredGyms.length} gyms in San Francisco</h3></div>
+          <div><div className="eyebrow">Explore the city</div><h3>{filteredGyms.length} fitness venues in San Francisco</h3></div>
           <span className="map-hint">Pan, zoom, and click a dot to inspect</span>
         </div>
         <div className="map-panel">
           <div className="map-topbar">
-            <div><strong>{filteredGyms.length}</strong> {neighborhoodFilter ? `in ${neighborhoodFilter}` : "across San Francisco"}</div>
+          <div><strong>{filteredGyms.length}</strong> {selectedNeighborhoods.length > 0 ? `across ${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"}` : "across San Francisco"}</div>
             <span>Map view</span>
           </div>
           <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
           {selectedGym && <aside className="detail" aria-live="polite">
-            <div className="card-top"><div><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
+            <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
             <p>{selectedGym.description}</p>
-            <p><strong>{priceLabel(selectedGym.monthlyPrice, "/mo")}</strong> - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
+            <p><strong>{priceLabel(selectedGym.monthlyPrice, "/mo")}</strong> - {priceLabel(selectedGym.annualFee, " annual fee")} - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
             <div className="price-row">{selectedGym.amenities.slice(0, 4).map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div>
             {selectedGym.priceNote && <p className="price-note">{selectedGym.priceNote}</p>}
+            {selectedGym.annualFeeNote && <p className="price-note">Annual fee: {selectedGym.annualFeeNote}</p>}
             <div className="detail-actions"><a className="primary" href={gymDetailHref(selectedGym.id)}>Open full listing</a><a className="secondary" href={selectedGym.websiteUrl} target="_blank" rel="noreferrer">{selectedGym.websiteUrl === selectedGym.sourceUrl ? "View source listing" : "Visit gym site"}</a><button className="secondary" onClick={() => toggleCompare(selectedGym.id)}>{compareIds.includes(selectedGym.id) ? "Remove from compare" : "Add to compare"}</button></div>
             <p className="source-note">{freshnessLabel(selectedGym)}. {selectedGym.priceSourceUrl && <><a href={selectedGym.priceSourceUrl} target="_blank" rel="noreferrer">See official price source</a>. </>}Listing source: <a href={selectedGym.sourceUrl} target="_blank" rel="noreferrer">{selectedGym.sourceName}</a>. Confirm pricing and hours before visiting.</p>
           </aside>}

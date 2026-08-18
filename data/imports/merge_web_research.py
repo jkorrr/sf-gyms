@@ -15,11 +15,13 @@ import math
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+
+from classify_venue import classify_all, classify_venue
 
 ROOT = Path(__file__).resolve().parents[2]
 OSM_PATH = ROOT / "data" / "imports" / "sf-gyms-osm.json"
@@ -28,6 +30,10 @@ CACHE_PATH = ROOT / "data" / "imports" / "sf-gym-geocode-cache.json"
 RESEARCH_PATHS = (
     ROOT / "data" / "imports" / "sf-gym-web-research-a.json",
     ROOT / "data" / "imports" / "sf-gym-web-research-b.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-c.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-d.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-e.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-f.json",
 )
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 SF_BOUNDS = (37.68, 37.86, -122.56, -122.30)
@@ -132,7 +138,7 @@ def geocode_address(address: str, cache: dict[str, Any], last_request: list[floa
 
 
 def stable_id(name: str, address: str) -> str:
-    digest = hashlib.sha1(f"{normalized(name)}|{normalized(address)}".encode("utf-8")).hexdigest()[:14]
+    digest = hashlib.sha1(f"{normalized(name)}|{normalized(address)}".encode()).hexdigest()[:14]
     return f"web-{digest}"
 
 
@@ -142,7 +148,10 @@ def is_open_247(hours: str) -> bool:
 
 
 def has_price(record: dict[str, Any]) -> bool:
-    return record.get("monthlyPrice") is not None or record.get("dayPassPrice") is not None
+    return any(record.get(field) is not None for field in (
+        "monthlyPrice", "annualFee", "dayPassPrice", "enrollmentFee", "initiationFee",
+        "annualPrepayPrice", "personalTrainingSessionPrice",
+    ))
 
 
 def research_date(record: dict[str, Any], fallback: str) -> str:
@@ -150,6 +159,11 @@ def research_date(record: dict[str, Any], fallback: str) -> str:
 
 
 def enrich(existing: dict[str, Any], record: dict[str, Any], observed: str) -> None:
+    existing.setdefault("annualFee", None)
+    existing.setdefault("annualFeeNote", "")
+    for field in ("monthlyUnlimitedPrice", "annualPrepayPrice", "enrollmentFee", "enrollmentFeeNote", "initiationFee", "initiationFeeNote", "personalTrainingSessionPrice"):
+        if record.get(field) is not None:
+            existing[field] = record[field]
     if record.get("websiteUrl") and existing.get("websiteUrl", "").startswith("https://www.openstreetmap.org"):
         existing["websiteUrl"] = record["websiteUrl"]
     if existing.get("neighborhood") in {"", "San Francisco"} and record.get("neighborhood"):
@@ -161,11 +175,13 @@ def enrich(existing: dict[str, Any], record: dict[str, Any], observed: str) -> N
         current_date = text(existing.get("priceObservedAt"))
         if not existing.get("priceSource") or observed >= current_date:
             existing["monthlyPrice"] = record.get("monthlyPrice")
+            existing["annualFee"] = record.get("annualFee")
             existing["dayPassPrice"] = record.get("dayPassPrice")
             existing["freshness"] = "verified"
             existing["priceSource"] = record.get("sourceName", "Official web research")
             existing["priceSourceUrl"] = record.get("priceSourceUrl") or record.get("websiteUrl", "")
             existing["priceNote"] = record.get("priceNote", "")
+            existing["annualFeeNote"] = record.get("annualFeeNote", "")
             existing["priceObservedAt"] = observed
 
 
@@ -174,7 +190,7 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
     address = text(record.get("address")) or "San Francisco"
     website = text(record.get("websiteUrl"))
     price_url = text(record.get("priceSourceUrl"))
-    return {
+    gym = {
         "id": stable_id(name, address),
         "name": name,
         "neighborhood": text(record.get("neighborhood")) or "San Francisco",
@@ -183,6 +199,15 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
         "latitude": round(point[0], 7),
         "longitude": round(point[1], 7),
         "monthlyPrice": record.get("monthlyPrice"),
+        "monthlyUnlimitedPrice": record.get("monthlyUnlimitedPrice"),
+        "annualFee": record.get("annualFee"),
+        "annualFeeNote": text(record.get("annualFeeNote")),
+        "annualPrepayPrice": record.get("annualPrepayPrice"),
+        "enrollmentFee": record.get("enrollmentFee"),
+        "enrollmentFeeNote": text(record.get("enrollmentFeeNote")),
+        "initiationFee": record.get("initiationFee"),
+        "initiationFeeNote": text(record.get("initiationFeeNote")),
+        "personalTrainingSessionPrice": record.get("personalTrainingSessionPrice"),
         "dayPassPrice": record.get("dayPassPrice"),
         "freshness": "verified" if has_price(record) else "unknown",
         "isOpen247": is_open_247(text(record.get("hours"))),
@@ -199,13 +224,16 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
         "priceNote": text(record.get("priceNote")),
         "priceObservedAt": observed if has_price(record) else "",
     }
+    gym["venueType"] = classify_venue(gym)
+    return gym
 
 
 def main() -> int:
     base = load_json(OSM_PATH)
     cache = load_json(CACHE_PATH) if CACHE_PATH.exists() else {}
-    research_documents = [load_json(path) for path in RESEARCH_PATHS]
-    imported_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    research_paths = [path for path in RESEARCH_PATHS if path.exists()]
+    research_documents = [load_json(path) for path in research_paths]
+    imported_at = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     gyms = list(base.get("gyms", []))
     address_index = {normalized(gym.get("address", "")): gym for gym in gyms if gym.get("address")}
@@ -256,13 +284,20 @@ def main() -> int:
             address_index[normalized(address)] = gym
             added += 1
 
+    for gym in gyms:
+        gym.setdefault("annualFee", None)
+        gym.setdefault("annualFeeNote", "")
+
+    classify_all(gyms)
+
     gyms.sort(key=lambda gym: (normalized(gym.get("name", "")), normalized(gym.get("address", ""))))
     metadata = dict(base.get("_meta", {}))
     metadata.update(
         {
             "source": "OpenStreetMap plus official web research supplements",
             "importedAt": imported_at,
-            "supplementalSources": [str(path.relative_to(ROOT)).replace("\\", "/") for path in RESEARCH_PATHS],
+            "supplementalSources": [str(path.relative_to(ROOT)).replace("\\", "/") for path in research_paths],
+            "venueTaxonomyVersion": 1,
             "supplementalNotes": "Official web research is provenance-backed and may describe starting rates, day passes, promotions, eligibility-limited plans, or free trials. Null means the public source did not publish a safe comparable price. Confirm all rates before joining.",
         }
     )

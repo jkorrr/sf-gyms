@@ -214,7 +214,7 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
       </div>
       <div className="map-help" aria-hidden="true">Drag to explore - scroll to zoom - tap a dot for details</div>
       {mapError && <div className="map-status" role="status" style={{ pointerEvents: "none" }}>{mapError}</div>}
-      {gyms.length === 0 && <div className="map-empty" style={{ pointerEvents: "none" }}>No gyms match those filters. Try another neighborhood.</div>}
+      {gyms.length === 0 && <div className="map-empty" style={{ pointerEvents: "none" }}>No venues match those filters. Try another type or neighborhood.</div>}
     </div>
   );
 }

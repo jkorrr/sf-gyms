@@ -1,6 +1,6 @@
 import GymDetailActions from "../../../components/GymDetailActions";
 import { basePath } from "../../../lib/config";
-import { demoGyms } from "../../../lib/demo-data";
+import { demoGyms, venueTypeLabels } from "../../../lib/demo-data";
 import { getGymById, priceFreshnessText, priceText, safeExternalUrl } from "../../../lib/gym-detail";
 import { notFound } from "next/navigation";
 
@@ -38,7 +38,7 @@ export default async function GymPage({ params }: GymPageProps) {
 
         <section className="detail-page-hero">
           <div>
-            <div className="eyebrow">{gym.neighborhood} / {gym.gymType}</div>
+            <div className="eyebrow">{gym.neighborhood} / {venueTypeLabels[gym.venueType]}</div>
             <h1>{gym.name}</h1>
             <p className="detail-page-address">{gym.address}</p>
             <p className="detail-page-intro">{gym.description}</p>
@@ -51,10 +51,19 @@ export default async function GymPage({ params }: GymPageProps) {
             <div className="detail-card-heading"><div><div className="eyebrow">Cost snapshot</div><h2>Prices</h2></div><span className={`freshness ${gym.priceSource ? "" : "stale"}`}>{gym.priceSource ? "Source checked" : "Verify first"}</span></div>
             <div className="detail-price-grid">
               <div><span>Monthly membership</span><strong>{priceText(gym.monthlyPrice, "/mo")}</strong></div>
+              <div><span>Annual fee</span><strong>{priceText(gym.annualFee, "/yr")}</strong></div>
               <div><span>Day pass</span><strong>{priceText(gym.dayPassPrice, "")}</strong></div>
             </div>
+            {(gym.monthlyUnlimitedPrice !== undefined || gym.annualPrepayPrice !== undefined || gym.enrollmentFee !== undefined || gym.initiationFee !== undefined || gym.personalTrainingSessionPrice !== undefined) && <div className="detail-price-extras">
+              {gym.monthlyUnlimitedPrice !== undefined && <div><span>Unlimited monthly</span><strong>{priceText(gym.monthlyUnlimitedPrice, "/mo")}</strong></div>}
+              {gym.annualPrepayPrice !== undefined && <div><span>Prepaid annual</span><strong>{priceText(gym.annualPrepayPrice, "/yr")}</strong></div>}
+              {gym.enrollmentFee !== undefined && <div><span>Joining fee</span><strong>{priceText(gym.enrollmentFee, "")}</strong></div>}
+              {gym.enrollmentFee === undefined && gym.initiationFee !== undefined && <div><span>Initiation fee</span><strong>{priceText(gym.initiationFee, "")}</strong></div>}
+              {gym.personalTrainingSessionPrice !== undefined && <div><span>Personal training</span><strong>{priceText(gym.personalTrainingSessionPrice, "/session")}</strong></div>}
+            </div>}
             <p className="detail-muted">{priceFreshnessText(gym)}</p>
             {gym.priceNote && <p className="price-note">{gym.priceNote}</p>}
+            {gym.annualFeeNote && <p className="price-note">Annual fee details: {gym.annualFeeNote}</p>}
             {priceSourceUrl && <a className="detail-source-link" href={priceSourceUrl} target="_blank" rel="noreferrer">Read the official price source</a>}
           </section>
 
