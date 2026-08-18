@@ -1,6 +1,6 @@
 import GymDetailActions from "../../../components/GymDetailActions";
 import { basePath } from "../../../lib/config";
-import { demoGyms } from "../../../lib/demo-data";
+import { demoGyms, venueTypeLabels } from "../../../lib/demo-data";
 import { getGymById, priceFreshnessText, priceText, safeExternalUrl } from "../../../lib/gym-detail";
 import { notFound } from "next/navigation";
 
@@ -38,7 +38,7 @@ export default async function GymPage({ params }: GymPageProps) {
 
         <section className="detail-page-hero">
           <div>
-            <div className="eyebrow">{gym.neighborhood} / {gym.gymType}</div>
+            <div className="eyebrow">{gym.neighborhood} / {venueTypeLabels[gym.venueType]}</div>
             <h1>{gym.name}</h1>
             <p className="detail-page-address">{gym.address}</p>
             <p className="detail-page-intro">{gym.description}</p>

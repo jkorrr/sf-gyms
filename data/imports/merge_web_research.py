@@ -15,11 +15,13 @@ import math
 import re
 import sys
 import time
-from datetime import datetime, timezone
+from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
+
+from classify_venue import classify_all, classify_venue
 
 ROOT = Path(__file__).resolve().parents[2]
 OSM_PATH = ROOT / "data" / "imports" / "sf-gyms-osm.json"
@@ -136,7 +138,7 @@ def geocode_address(address: str, cache: dict[str, Any], last_request: list[floa
 
 
 def stable_id(name: str, address: str) -> str:
-    digest = hashlib.sha1(f"{normalized(name)}|{normalized(address)}".encode("utf-8")).hexdigest()[:14]
+    digest = hashlib.sha1(f"{normalized(name)}|{normalized(address)}".encode()).hexdigest()[:14]
     return f"web-{digest}"
 
 
@@ -188,7 +190,7 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
     address = text(record.get("address")) or "San Francisco"
     website = text(record.get("websiteUrl"))
     price_url = text(record.get("priceSourceUrl"))
-    return {
+    gym = {
         "id": stable_id(name, address),
         "name": name,
         "neighborhood": text(record.get("neighborhood")) or "San Francisco",
@@ -222,6 +224,8 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
         "priceNote": text(record.get("priceNote")),
         "priceObservedAt": observed if has_price(record) else "",
     }
+    gym["venueType"] = classify_venue(gym)
+    return gym
 
 
 def main() -> int:
@@ -229,7 +233,7 @@ def main() -> int:
     cache = load_json(CACHE_PATH) if CACHE_PATH.exists() else {}
     research_paths = [path for path in RESEARCH_PATHS if path.exists()]
     research_documents = [load_json(path) for path in research_paths]
-    imported_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
+    imported_at = datetime.now(UTC).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     gyms = list(base.get("gyms", []))
     address_index = {normalized(gym.get("address", "")): gym for gym in gyms if gym.get("address")}
@@ -284,6 +288,8 @@ def main() -> int:
         gym.setdefault("annualFee", None)
         gym.setdefault("annualFeeNote", "")
 
+    classify_all(gyms)
+
     gyms.sort(key=lambda gym: (normalized(gym.get("name", "")), normalized(gym.get("address", ""))))
     metadata = dict(base.get("_meta", {}))
     metadata.update(
@@ -291,6 +297,7 @@ def main() -> int:
             "source": "OpenStreetMap plus official web research supplements",
             "importedAt": imported_at,
             "supplementalSources": [str(path.relative_to(ROOT)).replace("\\", "/") for path in research_paths],
+            "venueTaxonomyVersion": 1,
             "supplementalNotes": "Official web research is provenance-backed and may describe starting rates, day passes, promotions, eligibility-limited plans, or free trials. Null means the public source did not publish a safe comparable price. Confirm all rates before joining.",
         }
     )

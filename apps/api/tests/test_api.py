@@ -27,6 +27,20 @@ def test_search_filter_and_detail():
         assert detail.json()["prices"][0]["plan_type"] == "monthly"
 
 
+def test_filter_by_multiple_venue_types():
+    app = create_app(Settings(demo_mode=True))
+    with TestClient(app) as client:
+        response = client.get(
+            "/api/v1/gyms",
+            params=[("venue_type", "boutique_fitness"), ("venue_type", "recreation_sports")],
+        )
+        assert response.status_code == 200
+        assert {item["venue_type"] for item in response.json()["items"]} == {
+            "boutique_fitness",
+            "recreation_sports",
+        }
+
+
 def test_commands_require_idempotency_key():
     app = create_app(Settings(demo_mode=True))
     with TestClient(app) as client:

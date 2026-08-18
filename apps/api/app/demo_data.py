@@ -3,7 +3,7 @@ from uuid import UUID
 
 from pydantic import HttpUrl
 
-from .schemas import GymDetail, GymSummary, PriceSnapshot
+from .schemas import GymDetail, GymSummary, PriceSnapshot, VenueType
 
 DEMO_GYMS: list[GymDetail] = [
     GymDetail(
@@ -14,6 +14,7 @@ DEMO_GYMS: list[GymDetail] = [
         latitude=37.7614,
         longitude=-122.4181,
         gym_type="Strength gym",
+        venue_type="traditional_gym",
         is_open_24_7=True,
         amenities=["free weights", "squat racks", "showers", "24/7 access"],
         monthly_price=Decimal("89"),
@@ -36,6 +37,7 @@ DEMO_GYMS: list[GymDetail] = [
         latitude=37.7765,
         longitude=-122.4248,
         gym_type="Boutique fitness",
+        venue_type="boutique_fitness",
         is_open_24_7=False,
         amenities=["classes", "sauna", "showers", "yoga"],
         monthly_price=Decimal("139"),
@@ -58,6 +60,7 @@ DEMO_GYMS: list[GymDetail] = [
         latitude=37.7999,
         longitude=-122.4089,
         gym_type="Community gym",
+        venue_type="recreation_sports",
         is_open_24_7=False,
         amenities=["cardio", "free weights", "basketball", "student discount"],
         monthly_price=Decimal("49"),
@@ -76,7 +79,12 @@ DEMO_GYMS: list[GymDetail] = [
 
 
 class DemoGymRepository:
-    async def search(self, query: str | None = None, max_monthly: float | None = None) -> list[GymSummary]:
+    async def search(
+        self,
+        query: str | None = None,
+        max_monthly: float | None = None,
+        venue_types: list[VenueType] | None = None,
+    ) -> list[GymSummary]:
         items = DEMO_GYMS
         if query:
             needle = query.casefold()
@@ -88,6 +96,8 @@ class DemoGymRepository:
             ]
         if max_monthly is not None:
             items = [gym for gym in items if gym.monthly_price is not None and gym.monthly_price <= max_monthly]
+        if venue_types:
+            items = [gym for gym in items if gym.venue_type in venue_types]
         return [GymSummary.model_validate(gym) for gym in items]
 
     async def get(self, gym_id: UUID) -> GymDetail | None:

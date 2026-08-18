@@ -8,11 +8,11 @@ insert into public.amenities (slug, label) values
   ('cardio', 'Cardio')
 on conflict (slug) do nothing;
 
-insert into public.gyms (id, name, slug, gym_type, description, status)
+insert into public.gyms (id, name, slug, gym_type, venue_type, description, status)
 values
-  ('11111111-1111-4111-8111-111111111111', 'Mission Strength Co.', 'mission-strength-co', 'Strength gym', 'A welcoming strength-focused gym with serious equipment and a neighborhood feel.', 'published'),
-  ('22222222-2222-4222-8222-222222222222', 'Hayes Valley Movement', 'hayes-valley-movement', 'Boutique fitness', 'Small-group classes and open-gym hours in a bright, calm studio.', 'published'),
-  ('33333333-3333-4333-8333-333333333333', 'North Beach Community Gym', 'north-beach-community-gym', 'Community gym', 'An affordable local option with broad equipment and court access.', 'published')
+  ('11111111-1111-4111-8111-111111111111', 'Mission Strength Co.', 'mission-strength-co', 'Strength gym', 'traditional_gym', 'A welcoming strength-focused gym with serious equipment and a neighborhood feel.', 'published'),
+  ('22222222-2222-4222-8222-222222222222', 'Hayes Valley Movement', 'hayes-valley-movement', 'Boutique fitness', 'boutique_fitness', 'Small-group classes and open-gym hours in a bright, calm studio.', 'published'),
+  ('33333333-3333-4333-8333-333333333333', 'North Beach Community Gym', 'north-beach-community-gym', 'Community gym', 'recreation_sports', 'An affordable local option with broad equipment and court access.', 'published')
 on conflict (id) do nothing;
 
 insert into public.gym_locations (id, gym_id, address, neighborhood, coordinates, is_open_24_7, hours, source_key)

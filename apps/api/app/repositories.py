@@ -6,7 +6,7 @@ from uuid import UUID
 from sqlalchemy import text
 from sqlalchemy.ext.asyncio import AsyncSession
 
-from .schemas import GymDetail, GymSearchResponse, GymSummary, PriceSnapshot
+from .schemas import GymDetail, GymSearchResponse, GymSummary, PriceSnapshot, VenueType
 
 
 def _summary(row: Mapping[str, Any]) -> GymSummary:
@@ -18,6 +18,7 @@ def _summary(row: Mapping[str, Any]) -> GymSummary:
         latitude=float(row["latitude"]),
         longitude=float(row["longitude"]),
         gym_type=row.get("gym_type") or "Gym",
+        venue_type=row.get("venue_type") or "traditional_gym",
         is_open_24_7=bool(row.get("is_open_24_7", False)),
         amenities=list(row.get("amenities") or []),
         monthly_price=row.get("monthly_price"),
@@ -32,7 +33,12 @@ class SqlAlchemyGymRepository:
     def __init__(self, session: AsyncSession):
         self.session = session
 
-    async def search(self, query: str | None = None, max_monthly: float | None = None) -> list[GymSummary]:
+    async def search(
+        self,
+        query: str | None = None,
+        max_monthly: float | None = None,
+        venue_types: list[VenueType] | None = None,
+    ) -> list[GymSummary]:
         result = await self.session.execute(
             text(
                 """
@@ -49,7 +55,7 @@ class SqlAlchemyGymRepository:
                 SELECT gl.id, g.name, gl.address, gl.neighborhood,
                        ST_Y(gl.coordinates::geometry) AS latitude,
                        ST_X(gl.coordinates::geometry) AS longitude,
-                       g.gym_type, gl.is_open_24_7,
+                       g.gym_type, g.venue_type, gl.is_open_24_7,
                        ARRAY_REMOVE(ARRAY_AGG(DISTINCT a.slug), NULL) AS amenities,
                        MAX(CASE WHEN cp.plan_type = 'monthly' THEN cp.amount END) AS monthly_price,
                        MAX(CASE WHEN cp.plan_type = 'monthly' THEN cp.annual_fee END) AS annual_fee,
@@ -63,14 +69,20 @@ class SqlAlchemyGymRepository:
                 LEFT JOIN current_prices cp ON cp.gym_location_id = gl.id
                 WHERE g.status = 'published'
                   AND (:query IS NULL OR g.name ILIKE :like_query OR gl.neighborhood ILIKE :like_query)
+                  AND (:venue_types IS NULL OR g.venue_type = ANY(CAST(:venue_types AS text[])))
                 GROUP BY gl.id, g.name, gl.address, gl.neighborhood, gl.coordinates,
-                         g.gym_type, gl.is_open_24_7, g.updated_at, gl.updated_at
+                         g.gym_type, g.venue_type, gl.is_open_24_7, g.updated_at, gl.updated_at
                 HAVING (:max_monthly IS NULL OR MAX(CASE WHEN cp.plan_type = 'monthly' THEN cp.amount END) <= :max_monthly)
                 ORDER BY monthly_price NULLS LAST, g.name
                 LIMIT 100
                 """
             ),
-            {"query": query, "like_query": f"%{query}%" if query else None, "max_monthly": max_monthly},
+            {
+                "query": query,
+                "like_query": f"%{query}%" if query else None,
+                "max_monthly": max_monthly,
+                "venue_types": venue_types or None,
+            },
         )
         return [_summary(cast(Mapping[str, Any], row)) for row in result.mappings().all()]
 
@@ -81,7 +93,7 @@ class SqlAlchemyGymRepository:
                 SELECT gl.id, g.name, gl.address, gl.neighborhood,
                        ST_Y(gl.coordinates::geometry) AS latitude,
                        ST_X(gl.coordinates::geometry) AS longitude,
-                       g.gym_type, g.description, g.website_url, g.phone,
+                       g.gym_type, g.venue_type, g.description, g.website_url, g.phone,
                        gl.is_open_24_7,
                        ARRAY_REMOVE(ARRAY_AGG(DISTINCT a.slug), NULL) AS amenities,
                        GREATEST(g.updated_at, gl.updated_at) AS updated_at
@@ -91,7 +103,7 @@ class SqlAlchemyGymRepository:
                 LEFT JOIN public.amenities a ON a.id = gla.amenity_id
                 WHERE gl.id = :gym_id AND g.status = 'published'
                 GROUP BY gl.id, g.name, gl.address, gl.neighborhood, gl.coordinates,
-                         g.gym_type, g.description, g.website_url, g.phone,
+                         g.gym_type, g.venue_type, g.description, g.website_url, g.phone,
                          gl.is_open_24_7, g.updated_at, gl.updated_at
                 """
             ),

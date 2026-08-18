@@ -22,6 +22,14 @@ paths:
         - name: max_monthly
           in: query
           schema: { type: number, minimum: 0 }
+        - name: venue_type
+          in: query
+          description: Repeat this parameter to include multiple venue categories.
+          schema:
+            type: array
+            items: { $ref: '#/components/schemas/VenueType' }
+          style: form
+          explode: true
       responses:
         '200':
           description: A page of published gym locations
@@ -61,6 +69,21 @@ paths:
       responses:
         '202': { description: Accepted for moderation processing }
 components:
+  schemas:
+    VenueType:
+      type: string
+      enum:
+        - traditional_gym
+        - boutique_fitness
+        - yoga_studio
+        - pilates_barre
+        - martial_arts_boxing
+        - climbing_gym
+        - gymnastics
+        - personal_training
+        - recreation_sports
+        - outdoor_fitness
+        - dance_movement
   parameters:
     IdempotencyKey:
       name: Idempotency-Key
