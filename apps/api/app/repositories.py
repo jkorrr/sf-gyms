@@ -21,6 +21,7 @@ def _summary(row: Mapping[str, Any]) -> GymSummary:
         is_open_24_7=bool(row.get("is_open_24_7", False)),
         amenities=list(row.get("amenities") or []),
         monthly_price=row.get("monthly_price"),
+        annual_fee=row.get("annual_fee"),
         day_pass_price=row.get("day_pass_price"),
         price_freshness=row.get("price_freshness") or "unknown",
         updated_at=row.get("updated_at"),
@@ -36,12 +37,14 @@ class SqlAlchemyGymRepository:
             text(
                 """
                 WITH current_prices AS (
-                    SELECT DISTINCT ON (pp.gym_location_id)
-                        pp.gym_location_id, pp.plan_type, pp.amount, pa.freshness
+                    SELECT DISTINCT ON (pp.gym_location_id, pp.plan_type)
+                        pp.gym_location_id, pp.plan_type, pp.amount,
+                        COALESCE(pa.annual_fee, pp.annual_fee) AS annual_fee,
+                        pa.freshness
                     FROM public.price_plans pp
                     JOIN public.price_assertions pa ON pa.price_plan_id = pp.id
                     WHERE pa.status = 'published'
-                    ORDER BY pp.gym_location_id, pa.verified_at DESC NULLS LAST
+                    ORDER BY pp.gym_location_id, pp.plan_type, pa.verified_at DESC NULLS LAST
                 )
                 SELECT gl.id, g.name, gl.address, gl.neighborhood,
                        ST_Y(gl.coordinates::geometry) AS latitude,
@@ -49,6 +52,7 @@ class SqlAlchemyGymRepository:
                        g.gym_type, gl.is_open_24_7,
                        ARRAY_REMOVE(ARRAY_AGG(DISTINCT a.slug), NULL) AS amenities,
                        MAX(CASE WHEN cp.plan_type = 'monthly' THEN cp.amount END) AS monthly_price,
+                       MAX(CASE WHEN cp.plan_type = 'monthly' THEN cp.annual_fee END) AS annual_fee,
                        MAX(CASE WHEN cp.plan_type = 'day_pass' THEN cp.amount END) AS day_pass_price,
                        MAX(cp.freshness) AS price_freshness,
                        GREATEST(g.updated_at, gl.updated_at) AS updated_at
@@ -101,7 +105,9 @@ class SqlAlchemyGymRepository:
             text(
                 """
                 SELECT pp.plan_type, pp.amount, pp.billing_interval,
-                       pp.initiation_fee, pa.verified_at, pa.freshness
+                       pp.initiation_fee,
+                       COALESCE(pa.annual_fee, pp.annual_fee) AS annual_fee,
+                       pa.verified_at, pa.freshness
                 FROM public.price_plans pp
                 JOIN public.price_assertions pa ON pa.price_plan_id = pp.id
                 WHERE pp.gym_location_id = :gym_id AND pa.status = 'published'

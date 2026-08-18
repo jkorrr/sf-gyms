@@ -19,11 +19,13 @@ type ApiGym = {
   is_open_24_7: boolean;
   amenities: string[];
   monthly_price?: number | null;
+  annual_fee?: number | null;
   day_pass_price?: number | null;
   price_freshness: Gym["freshness"];
   price_source?: string | null;
   price_source_url?: string | null;
   price_note?: string | null;
+  annual_fee_note?: string | null;
   price_observed_at?: string | null;
   source_name?: string | null;
   source_id?: string | null;
@@ -54,6 +56,7 @@ function fromApiGym(gym: ApiGym): Gym {
     latitude: gym.latitude,
     longitude: gym.longitude,
     monthlyPrice: gym.monthly_price ?? null,
+    annualFee: gym.annual_fee ?? null,
     dayPassPrice: gym.day_pass_price ?? null,
     freshness: gym.price_freshness ?? "unknown",
     isOpen247: gym.is_open_24_7,
@@ -68,6 +71,7 @@ function fromApiGym(gym: ApiGym): Gym {
     priceSource: gym.price_source ?? undefined,
     priceSourceUrl: gym.price_source_url ?? undefined,
     priceNote: gym.price_note ?? undefined,
+    annualFeeNote: gym.annual_fee_note ?? undefined,
     priceObservedAt: gym.price_observed_at ?? undefined,
   };
 }
@@ -428,11 +432,12 @@ export default function GymExplorer() {
         </div>
         <div className="compare-table-wrap">
           <table className="compare-table">
-            <thead><tr><th scope="col">Gym</th><th scope="col">Neighborhood</th><th scope="col">Monthly</th><th scope="col">Day pass</th><th scope="col"><span className="sr-only">Remove</span></th></tr></thead>
+            <thead><tr><th scope="col">Gym</th><th scope="col">Neighborhood</th><th scope="col">Monthly</th><th scope="col">Annual fee</th><th scope="col">Day pass</th><th scope="col"><span className="sr-only">Remove</span></th></tr></thead>
             <tbody>{compareGyms.map((gym) => <tr key={gym.id}>
               <th scope="row"><a href={gymDetailHref(gym.id)}>{gym.name}</a></th>
               <td>{gym.neighborhood}</td>
               <td><strong>{priceLabel(gym.monthlyPrice, "/mo")}</strong>{gym.priceSourceUrl && <a className="compare-source" href={gym.priceSourceUrl} target="_blank" rel="noreferrer">Source</a>}</td>
+              <td><strong>{priceLabel(gym.annualFee, "/yr")}</strong></td>
               <td><strong>{priceLabel(gym.dayPassPrice, " day pass")}</strong></td>
               <td><button className="compare-remove" type="button" onClick={() => toggleCompare(gym.id)} aria-label={`Remove ${gym.name} from comparison`}>×</button></td>
             </tr>)}</tbody>
@@ -455,9 +460,10 @@ export default function GymExplorer() {
           {selectedGym && <aside className="detail" aria-live="polite">
             <div className="card-top"><div><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
             <p>{selectedGym.description}</p>
-            <p><strong>{priceLabel(selectedGym.monthlyPrice, "/mo")}</strong> - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
+            <p><strong>{priceLabel(selectedGym.monthlyPrice, "/mo")}</strong> - {priceLabel(selectedGym.annualFee, " annual fee")} - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
             <div className="price-row">{selectedGym.amenities.slice(0, 4).map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div>
             {selectedGym.priceNote && <p className="price-note">{selectedGym.priceNote}</p>}
+            {selectedGym.annualFeeNote && <p className="price-note">Annual fee: {selectedGym.annualFeeNote}</p>}
             <div className="detail-actions"><a className="primary" href={gymDetailHref(selectedGym.id)}>Open full listing</a><a className="secondary" href={selectedGym.websiteUrl} target="_blank" rel="noreferrer">{selectedGym.websiteUrl === selectedGym.sourceUrl ? "View source listing" : "Visit gym site"}</a><button className="secondary" onClick={() => toggleCompare(selectedGym.id)}>{compareIds.includes(selectedGym.id) ? "Remove from compare" : "Add to compare"}</button></div>
             <p className="source-note">{freshnessLabel(selectedGym)}. {selectedGym.priceSourceUrl && <><a href={selectedGym.priceSourceUrl} target="_blank" rel="noreferrer">See official price source</a>. </>}Listing source: <a href={selectedGym.sourceUrl} target="_blank" rel="noreferrer">{selectedGym.sourceName}</a>. Confirm pricing and hours before visiting.</p>
           </aside>}

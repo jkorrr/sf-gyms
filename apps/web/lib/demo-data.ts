@@ -11,6 +11,13 @@ export type Gym = {
   latitude: number;
   longitude: number;
   monthlyPrice: number | null;
+  monthlyUnlimitedPrice?: number | null;
+  annualFee: number | null;
+  annualPrepayPrice?: number | null;
+  enrollmentFee?: number | null;
+  initiationFee?: number | null;
+  initiationFeeNote?: string;
+  personalTrainingSessionPrice?: number | null;
   dayPassPrice: number | null;
   freshness: PriceFreshness;
   isOpen247: boolean;
@@ -25,15 +32,18 @@ export type Gym = {
   priceSource?: string;
   priceSourceUrl?: string;
   priceNote?: string;
+  annualFeeNote?: string;
   priceObservedAt?: string;
 };
 
-type ImportedGym = Omit<Gym, "monthlyPrice" | "dayPassPrice"> & {
+type ImportedGym = Omit<Gym, "monthlyPrice" | "annualFee" | "dayPassPrice"> & {
   monthlyPrice: number | null;
+  annualFee?: number | null;
   dayPassPrice: number | null;
 };
 
 export const demoGyms: Gym[] = (importedData.gyms as ImportedGym[]).map((gym) => ({
   ...gym,
+  annualFee: gym.annualFee ?? null,
   amenities: [...gym.amenities],
 }));

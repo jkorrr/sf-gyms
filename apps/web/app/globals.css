@@ -148,10 +148,14 @@ button { cursor: pointer; }
 .detail-page-card h2 { margin: .4rem 0 1rem; font-size: 1.35rem; letter-spacing: -.03em; }
 .detail-card-heading { display: flex; align-items: start; justify-content: space-between; gap: 1rem; }
 .detail-card-heading .freshness { margin-top: .1rem; white-space: nowrap; }
-.detail-price-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; }
+.detail-price-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .7rem; }
 .detail-price-grid > div { display: flex; flex-direction: column; gap: .35rem; padding: .9rem; border-radius: 16px; background: var(--mint); }
 .detail-price-grid span { color: var(--muted); font-size: .78rem; }
 .detail-price-grid strong { font-size: 1.2rem; }
+.detail-price-extras { display: flex; flex-wrap: wrap; gap: .55rem; margin-top: .7rem; }
+.detail-price-extras > div { display: flex; flex-direction: column; gap: .2rem; min-width: 8.5rem; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: 13px; background: rgba(255, 255, 255, .68); }
+.detail-price-extras span { color: var(--muted); font-size: .68rem; }
+.detail-price-extras strong { font-size: .9rem; }
 .detail-muted { color: var(--muted); line-height: 1.55; }
 .detail-source-link { color: #4f8262; font-size: .82rem; font-weight: 800; }
 .detail-amenities { display: flex; flex-wrap: wrap; gap: .5rem; }
@@ -737,7 +741,7 @@ button { cursor: pointer; }
 .compare-clear { padding: .55rem .75rem; white-space: nowrap; }
 .compare-clear:hover, .compare-remove:hover { background: white; border-color: var(--forest); }
 .compare-table-wrap { margin-top: .9rem; overflow-x: auto; border: 1px solid rgba(216, 228, 220, .9); border-radius: 15px; background: rgba(255, 255, 255, .76); }
-.compare-table { width: 100%; min-width: 680px; border-collapse: collapse; font-family: var(--mono-font); font-size: .7rem; }
+.compare-table { width: 100%; min-width: 780px; border-collapse: collapse; font-family: var(--mono-font); font-size: .7rem; }
 .compare-table th, .compare-table td { padding: .75rem .8rem; border-bottom: 1px solid rgba(216, 228, 220, .82); text-align: left; vertical-align: middle; }
 .compare-table thead th { color: var(--muted); font-size: .62rem; letter-spacing: .06em; text-transform: uppercase; }
 .compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
@@ -762,4 +766,5 @@ button { cursor: pointer; }
   .compare-panel { width: calc(100% - 1.4rem); padding-inline: .8rem; }
   .compare-panel-head { align-items: stretch; flex-direction: column; }
   .compare-clear { align-self: start; }
+  .detail-price-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }

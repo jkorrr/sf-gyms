@@ -29,6 +29,9 @@ RESEARCH_PATHS = (
     ROOT / "data" / "imports" / "sf-gym-web-research-a.json",
     ROOT / "data" / "imports" / "sf-gym-web-research-b.json",
     ROOT / "data" / "imports" / "sf-gym-web-research-c.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-d.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-e.json",
+    ROOT / "data" / "imports" / "sf-gym-web-research-f.json",
 )
 NOMINATIM_URL = "https://nominatim.openstreetmap.org/search"
 SF_BOUNDS = (37.68, 37.86, -122.56, -122.30)
@@ -143,7 +146,10 @@ def is_open_247(hours: str) -> bool:
 
 
 def has_price(record: dict[str, Any]) -> bool:
-    return record.get("monthlyPrice") is not None or record.get("dayPassPrice") is not None
+    return any(record.get(field) is not None for field in (
+        "monthlyPrice", "annualFee", "dayPassPrice", "enrollmentFee", "initiationFee",
+        "annualPrepayPrice", "personalTrainingSessionPrice",
+    ))
 
 
 def research_date(record: dict[str, Any], fallback: str) -> str:
@@ -151,6 +157,11 @@ def research_date(record: dict[str, Any], fallback: str) -> str:
 
 
 def enrich(existing: dict[str, Any], record: dict[str, Any], observed: str) -> None:
+    existing.setdefault("annualFee", None)
+    existing.setdefault("annualFeeNote", "")
+    for field in ("monthlyUnlimitedPrice", "annualPrepayPrice", "enrollmentFee", "enrollmentFeeNote", "initiationFee", "initiationFeeNote", "personalTrainingSessionPrice"):
+        if record.get(field) is not None:
+            existing[field] = record[field]
     if record.get("websiteUrl") and existing.get("websiteUrl", "").startswith("https://www.openstreetmap.org"):
         existing["websiteUrl"] = record["websiteUrl"]
     if existing.get("neighborhood") in {"", "San Francisco"} and record.get("neighborhood"):
@@ -162,11 +173,13 @@ def enrich(existing: dict[str, Any], record: dict[str, Any], observed: str) -> N
         current_date = text(existing.get("priceObservedAt"))
         if not existing.get("priceSource") or observed >= current_date:
             existing["monthlyPrice"] = record.get("monthlyPrice")
+            existing["annualFee"] = record.get("annualFee")
             existing["dayPassPrice"] = record.get("dayPassPrice")
             existing["freshness"] = "verified"
             existing["priceSource"] = record.get("sourceName", "Official web research")
             existing["priceSourceUrl"] = record.get("priceSourceUrl") or record.get("websiteUrl", "")
             existing["priceNote"] = record.get("priceNote", "")
+            existing["annualFeeNote"] = record.get("annualFeeNote", "")
             existing["priceObservedAt"] = observed
 
 
@@ -184,6 +197,15 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
         "latitude": round(point[0], 7),
         "longitude": round(point[1], 7),
         "monthlyPrice": record.get("monthlyPrice"),
+        "monthlyUnlimitedPrice": record.get("monthlyUnlimitedPrice"),
+        "annualFee": record.get("annualFee"),
+        "annualFeeNote": text(record.get("annualFeeNote")),
+        "annualPrepayPrice": record.get("annualPrepayPrice"),
+        "enrollmentFee": record.get("enrollmentFee"),
+        "enrollmentFeeNote": text(record.get("enrollmentFeeNote")),
+        "initiationFee": record.get("initiationFee"),
+        "initiationFeeNote": text(record.get("initiationFeeNote")),
+        "personalTrainingSessionPrice": record.get("personalTrainingSessionPrice"),
         "dayPassPrice": record.get("dayPassPrice"),
         "freshness": "verified" if has_price(record) else "unknown",
         "isOpen247": is_open_247(text(record.get("hours"))),
@@ -205,7 +227,8 @@ def new_gym(record: dict[str, Any], point: tuple[float, float], imported_at: str
 def main() -> int:
     base = load_json(OSM_PATH)
     cache = load_json(CACHE_PATH) if CACHE_PATH.exists() else {}
-    research_documents = [load_json(path) for path in RESEARCH_PATHS]
+    research_paths = [path for path in RESEARCH_PATHS if path.exists()]
+    research_documents = [load_json(path) for path in research_paths]
     imported_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace("+00:00", "Z")
 
     gyms = list(base.get("gyms", []))
@@ -257,13 +280,17 @@ def main() -> int:
             address_index[normalized(address)] = gym
             added += 1
 
+    for gym in gyms:
+        gym.setdefault("annualFee", None)
+        gym.setdefault("annualFeeNote", "")
+
     gyms.sort(key=lambda gym: (normalized(gym.get("name", "")), normalized(gym.get("address", ""))))
     metadata = dict(base.get("_meta", {}))
     metadata.update(
         {
             "source": "OpenStreetMap plus official web research supplements",
             "importedAt": imported_at,
-            "supplementalSources": [str(path.relative_to(ROOT)).replace("\\", "/") for path in RESEARCH_PATHS],
+            "supplementalSources": [str(path.relative_to(ROOT)).replace("\\", "/") for path in research_paths],
             "supplementalNotes": "Official web research is provenance-backed and may describe starting rates, day passes, promotions, eligibility-limited plans, or free trials. Null means the public source did not publish a safe comparable price. Confirm all rates before joining.",
         }
     )
