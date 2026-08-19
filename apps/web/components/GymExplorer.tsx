@@ -408,7 +408,6 @@ export default function GymExplorer() {
           <p className="hero-copy">Real equipment details, transparent prices when they are available, and a map that helps you find the right place to train.</p>
           <div className="hero-proof"><span className="proof-dot" aria-hidden="true" />{gyms.length} local listings · free to explore</div>
         </div>
-        <div className="hero-note"><strong>Start with a map.</strong><br />Search by neighborhood, price, amenity, or distance from wherever you are.</div>
       </section>
 
       {authMessage && <div className="auth-message" role="status">{authMessage}</div>}
@@ -419,6 +418,19 @@ export default function GymExplorer() {
           {query && <button className="clear-search" type="button" onClick={() => setQuery("")} aria-label="Clear gym search">×</button>}
         </div>
         <div className="filter-row" aria-label="Filter and sort options">
+          <details className="neighborhood-select filter-control">
+            <summary aria-label="Choose one or more San Francisco neighborhoods">
+              <span>{selectedNeighborhoods.length === 0 ? "All neighborhoods" : `${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"}`}</span>
+              <span className="neighborhood-select-chevron" aria-hidden="true">⌄</span>
+            </summary>
+            <div className="neighborhood-menu">
+              <button className="neighborhood-clear" type="button" onClick={() => setSelectedNeighborhoods([])} disabled={selectedNeighborhoods.length === 0}>Clear selection</button>
+              {neighborhoodOptions.map((neighborhood) => <label className="neighborhood-option" key={neighborhood}>
+                <input type="checkbox" checked={selectedNeighborhoods.includes(neighborhood)} onChange={() => toggleNeighborhood(neighborhood)} />
+                <span>{neighborhood}</span>
+              </label>)}
+            </div>
+          </details>
           <details className="venue-select filter-control">
             <summary aria-label="Choose one or more venue types">
               <span>{selectedVenueTypes.length === 0 ? "All venue types" : `${selectedVenueTypes.length} venue type${selectedVenueTypes.length === 1 ? "" : "s"}`}</span>
@@ -437,26 +449,6 @@ export default function GymExplorer() {
           <label className="filter filter-control">Distance <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius" disabled={!origin} title={origin ? "Filter by distance from your selected location" : "Set a location first"}><option value="">Any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
           <label className="filter filter-control">Sort by <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
         </div>
-      </section>
-
-      <section className="neighborhood-filter" aria-label="Filter by neighborhood">
-        <div className="neighborhood-filter-head">
-          <div className="section-label">Neighborhoods</div>
-          <span className="neighborhood-filter-status" aria-live="polite">{selectedNeighborhoods.length > 0 ? `${filteredGyms.length} venues across ${selectedNeighborhoods.length} area${selectedNeighborhoods.length === 1 ? "" : "s"}` : "Filter the map by area"}</span>
-        </div>
-        <details className="neighborhood-select">
-          <summary aria-label="Choose one or more San Francisco neighborhoods">
-            <span>{selectedNeighborhoods.length === 0 ? "All neighborhoods" : `${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"} selected`}</span>
-            <span className="neighborhood-select-chevron" aria-hidden="true">⌄</span>
-          </summary>
-          <div className="neighborhood-menu">
-            <button className="neighborhood-clear" type="button" onClick={() => setSelectedNeighborhoods([])} disabled={selectedNeighborhoods.length === 0}>Clear selection</button>
-            {neighborhoodOptions.map((neighborhood) => <label className="neighborhood-option" key={neighborhood}>
-              <input type="checkbox" checked={selectedNeighborhoods.includes(neighborhood)} onChange={() => toggleNeighborhood(neighborhood)} />
-              <span>{neighborhood}</span>
-            </label>)}
-          </div>
-        </details>
       </section>
 
       <section className="location-toolbar" aria-label="Distance from a location">
@@ -497,10 +489,6 @@ export default function GymExplorer() {
           <span className="map-hint">Pan, zoom, and click a dot to inspect</span>
         </div>
         <div className="map-panel">
-          <div className="map-topbar">
-          <div><strong>{filteredGyms.length}</strong> {selectedNeighborhoods.length > 0 ? `across ${selectedNeighborhoods.length} neighborhood${selectedNeighborhoods.length === 1 ? "" : "s"}` : "across San Francisco"}</div>
-            <span>Map view</span>
-          </div>
           <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
           {selectedGym && <aside className="detail" aria-live="polite">
             <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
