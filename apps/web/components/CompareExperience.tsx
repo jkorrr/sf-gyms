@@ -118,7 +118,7 @@ export default function CompareExperience() {
   const dayPasses = gyms.map((gym) => gym.dayPassPrice);
 
   return (
-    <main className="shell compare-page">
+    <main className={`shell compare-page${hydrated && gyms.length > 0 ? " has-comparison" : ""}`} aria-busy={!hydrated}>
       <header className="topbar">
         <a className="brand" href={`${basePath}/`} aria-label="SFGYMS home">
           <div className="logo brand-mark" aria-hidden="true"><svg className="brand-mark-icon" viewBox="0 0 24 24"><path d="M5.5 8.25v7.5M8.25 6.5v11M10.25 10.75h3.5M15.75 6.5v11M18.5 8.25v7.5M8.25 12h7.5" /></svg></div>
@@ -132,6 +132,10 @@ export default function CompareExperience() {
         <button className="secondary" type="button" onClick={() => void shareComparison()}>Share comparison</button>
       </section>
 
+      {!hydrated ? <section className="compare-loading" role="status" aria-live="polite">
+        <div className="compare-loading-copy"><span className="compare-loading-dot" aria-hidden="true" /><div><strong>Loading your comparison</strong><small>Restoring your selected gyms and cost assumptions.</small></div></div>
+        <div className="compare-loading-bars" aria-hidden="true"><span /><span /><span /></div>
+      </section> : <>
       <section className="simulator-controls" aria-label="Comparison assumptions">
         <label>Visits each week<select value={assumptions.visitsPerWeek} onChange={(event) => setAssumptions((current) => ({ ...current, visitsPerWeek: Number(event.target.value) }))}>{Array.from({ length: 14 }, (_, index) => <option key={index + 1} value={index + 1}>{index + 1}</option>)}</select></label>
         <label>Membership horizon<select value={assumptions.months} onChange={(event) => setAssumptions((current) => ({ ...current, months: Number(event.target.value) as ComparisonAssumptions["months"] }))}>{ALLOWED_MONTHS.map((months) => <option key={months} value={months}>{months} month{months === 1 ? "" : "s"}</option>)}</select></label>
@@ -184,6 +188,7 @@ export default function CompareExperience() {
 
         <section className="break-even-panel" aria-labelledby="break-even-heading"><div><div className="section-label">Membership optimizer</div><h3 id="break-even-heading">When does membership beat day passes?</h3></div><div className="break-even-list">{gyms.map((gym, index) => <BreakEvenRow key={gym.id} gym={gym} estimate={estimates[index]} />)}</div></section>
       </>}
+      </>}
     </main>
   );
 }
@@ -216,4 +221,3 @@ function BreakEvenRow({ gym, estimate }: { gym: Gym; estimate: GymCostEstimate }
           : "Not enough public pricing to calculate.";
   return <article><div><strong>{gym.name}</strong><span>{breakEven === null ? "Break-even unavailable" : `${breakEven} visits/month to break even`}</span><small>{recommendation}</small></div><div className="break-even-track" aria-hidden="true"><span style={{ width: `${width}%` }} /></div></article>;
 }
-
