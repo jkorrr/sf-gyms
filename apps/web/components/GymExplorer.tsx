@@ -503,7 +503,7 @@ export default function GymExplorer() {
           <span className="map-hint">Pan, zoom, and click a dot to inspect</span>
         </div>
         <div className="map-panel">
-          <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} highlightedId={highlightedId} rankedIds={rankedRows.slice(0, 10).map((row) => row.gym.id)} origin={origin} onSelect={setSelected} />
+          <GymMap gyms={filteredBaseGyms} selectedId={selectedGym?.id} highlightedId={highlightedId} rankedIds={rankedRows.slice(0, 10).map((row) => row.gym.id)} origin={origin} onSelect={setSelected} />
           {selectedGym && <aside className="detail" aria-live="polite">
             <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
             <p>{selectedGym.description}</p>

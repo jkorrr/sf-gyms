@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import type { Gym } from "./demo-data";
+import { demoGyms, type Gym } from "./demo-data";
 import { DEFAULT_COMPARISON_ASSUMPTIONS, estimateGymCost, rankGyms } from "./gym-value";
 
 function gym(overrides: Partial<Gym> = {}): Gym {
@@ -57,6 +57,12 @@ describe("estimateGymCost", () => {
     const result = estimateGymCost(gym(), { ...DEFAULT_COMPARISON_ASSUMPTIONS, months: 24 });
     expect(result.membershipTotal).toBe(2520);
   });
+
+  it("keeps disclosed catalog fees in structured comparison totals", () => {
+    const planetFitness = demoGyms.find((item) => item.id === "osm-node-1206893699");
+    expect(planetFitness?.annualFee).toBe(49);
+    expect(estimateGymCost(planetFitness as Gym, DEFAULT_COMPARISON_ASSUMPTIONS).membershipTotal).toBe(229);
+  });
 });
 
 describe("rankGyms", () => {
@@ -76,4 +82,3 @@ describe("rankGyms", () => {
     expect(ranked.map((row) => row.gym.name)).toEqual(["Alpha", "Beta"]);
   });
 });
-
