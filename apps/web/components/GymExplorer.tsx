@@ -121,6 +121,7 @@ export default function GymExplorer() {
   const [compareMessage, setCompareMessage] = useState("");
   const [authMessage, setAuthMessage] = useState("");
   const [authLabel, setAuthLabel] = useState("Sign in with Google");
+  const locationInputRef = useRef<HTMLInputElement | null>(null);
   const locationControllerRef = useRef<AbortController | null>(null);
   const oauthCallbackRef = useRef(false);
 
@@ -291,6 +292,26 @@ export default function GymExplorer() {
       : [...current, venueType]);
   };
 
+  const handleRadiusChange = (value: string) => {
+    setRadiusMiles(value);
+    if (!value) {
+      if (origin) setLocationStatus(`Showing all venues. Distances are measured from ${origin.label}.`);
+      return;
+    }
+
+    setSortOrder("distance");
+    if (origin) {
+      setLocationStatus(`Showing venues within ${value} ${value === "1" ? "mile" : "miles"} of ${origin.label}, nearest first.`);
+      return;
+    }
+
+    setLocationStatus(`To use the ${value}-mile filter, enter a starting location below and select Find location.`);
+    window.requestAnimationFrame(() => {
+      locationInputRef.current?.focus();
+      locationInputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+    });
+  };
+
   const toggleSaved = (id: string) => {
     setSavedIds((current) => {
       const next = current.includes(id) ? current.filter((item) => item !== id) : [...current, id];
@@ -324,7 +345,10 @@ export default function GymExplorer() {
       (position) => {
         setOrigin({ latitude: position.coords.latitude, longitude: position.coords.longitude, label: "Your location" });
         setLocationQuery("");
-        setLocationStatus("Distance is calculated in your browser; your coordinates are not sent to SF Gyms.");
+        if (radiusMiles) setSortOrder("distance");
+        setLocationStatus(radiusMiles
+          ? `Showing venues within ${radiusMiles} ${radiusMiles === "1" ? "mile" : "miles"} of your location, nearest first.`
+          : "Distance is calculated in your browser; your coordinates are not sent to SF Gyms.");
       },
       () => setLocationStatus("Location permission was unavailable. Search for a neighborhood or address instead."),
       { enableHighAccuracy: false, maximumAge: 300_000, timeout: 10_000 },
@@ -356,8 +380,11 @@ export default function GymExplorer() {
         setLocationStatus("No matching San Francisco location found.");
         return;
       }
-      setOrigin({ latitude: Number(first.lat), longitude: Number(first.lon), label: first.display_name });
-      setLocationStatus("Distances are straight-line estimates. Use a route planner for walking or driving time.");
+      setOrigin({ latitude: Number(first.lat), longitude: Number(first.lon), label: queryValue });
+      if (radiusMiles) setSortOrder("distance");
+      setLocationStatus(radiusMiles
+        ? `Showing venues within ${radiusMiles} ${radiusMiles === "1" ? "mile" : "miles"} of ${queryValue}, nearest first.`
+        : `Using ${queryValue} as your starting point. Choose a distance to narrow the map.`);
     } catch (error) {
       if (error instanceof DOMException && error.name === "AbortError") return;
       setLocationStatus("Location search could not complete. Try again or use your browser location.");
@@ -446,18 +473,26 @@ export default function GymExplorer() {
             </div>
           </details>
           <label className="filter filter-control">Budget <span className="filter-input-wrap"><span aria-hidden="true">$</span><input id="max-monthly" inputMode="numeric" value={maxMonthly} onChange={(event) => setMaxMonthly(event.target.value.replace(/[^0-9]/g, ""))} placeholder="Any" aria-label="Maximum monthly price" /></span><span className="filter-suffix">/ month</span></label>
-          <label className="filter filter-control">Distance <select value={radiusMiles} onChange={(event) => setRadiusMiles(event.target.value)} aria-label="Distance radius" disabled={!origin} title={origin ? "Filter by distance from your selected location" : "Set a location first"}><option value="">Any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
+          <label className="filter filter-control">Distance <select value={radiusMiles} onChange={(event) => handleRadiusChange(event.target.value)} aria-label="Distance radius" title={origin ? `Filter by distance from ${origin.label}` : "Choose a radius, then set a starting location"}><option value="">Any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
           <label className="filter filter-control">Sort by <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
         </div>
+        {selectedNeighborhoods.length > 0 && <div className="active-neighborhoods" aria-label="Selected neighborhoods" aria-live="polite">
+          <span className="active-filter-label">Neighborhoods</span>
+          {selectedNeighborhoods.map((neighborhood) => <button className="active-filter-chip" type="button" key={neighborhood} onClick={() => toggleNeighborhood(neighborhood)} aria-label={`Remove ${neighborhood} neighborhood filter`}>
+            {neighborhood}<span aria-hidden="true">×</span>
+          </button>)}
+          {selectedNeighborhoods.length > 1 && <button className="active-filter-clear" type="button" onClick={() => setSelectedNeighborhoods([])}>Clear all</button>}
+        </div>}
       </section>
 
       <section className="location-toolbar" aria-label="Distance from a location">
         <form className="location-search" onSubmit={(event) => { event.preventDefault(); void searchLocation(); }}>
           <label htmlFor="location-query">Distance from</label>
-          <input id="location-query" value={locationQuery} onChange={(event) => setLocationQuery(event.target.value)} placeholder="a neighborhood, address, or landmark" />
+          <input ref={locationInputRef} id="location-query" value={locationQuery} onChange={(event) => setLocationQuery(event.target.value)} placeholder="a neighborhood, address, or landmark" />
           <button className="secondary" type="submit" disabled={isSearchingLocation}>{isSearchingLocation ? "Searching..." : "Find location"}</button>
         </form>
         <button className="secondary" type="button" onClick={useCurrentLocation}>Use my location</button>
+        {origin && <span className="location-origin-pill">From <strong>{origin.label}</strong>{radiusMiles && <> · within {radiusMiles} mi</>}</span>}
         {origin && <button className="text-button" type="button" onClick={() => { setOrigin(null); setRadiusMiles(""); setLocationStatus(""); }}>Clear</button>}
         {locationStatus && <span className="location-status" role="status">{locationStatus}</span>}
       </section>

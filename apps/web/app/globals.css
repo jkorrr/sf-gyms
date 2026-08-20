@@ -72,7 +72,14 @@ button { cursor: pointer; }
 .map-panel { position: relative; min-height: 650px; background: var(--sky); overflow: hidden; }
 .map-shell { position: absolute; inset: 0; }
 .map-shell .real-map { position: absolute !important; inset: 0; width: 100%; height: 100% !important; background: var(--sky); }
+.gym-marker { width: 18px; height: 18px; padding: 0; border: 3px solid white; border-radius: 50%; background: var(--sage); box-shadow: 0 3px 10px rgba(36,51,47,.3); cursor: pointer; transition: transform .14s ease, box-shadow .14s ease, background .14s ease; }
+.gym-marker:hover, .gym-marker:focus-visible, .gym-marker.active { transform: scale(1.22); background: #4f8262; box-shadow: 0 0 0 5px rgba(117,167,137,.25), 0 4px 12px rgba(36,51,47,.34); }
+.gym-marker:focus-visible { outline: 2px solid #263b33; outline-offset: 3px; }
 .origin-marker { width: 16px; height: 16px; border: 3px solid white; border-radius: 50%; background: #806aa9; box-shadow: 0 0 0 7px rgba(128,106,169,.22), 0 4px 12px rgba(36,51,47,.28); }
+.map-recenter-control { position: absolute; top: 8.4rem; right: .65rem; z-index: 3; display: grid; place-items: center; width: 40px; height: 40px; padding: 0; border: 1px solid var(--line); border-radius: 12px; background: rgba(255,255,255,.94); color: var(--forest); box-shadow: 0 5px 16px rgba(36,51,47,.14); }
+.map-recenter-control:hover { background: white; color: #4f8262; }
+.map-recenter-control:focus-visible { outline: 3px solid rgba(117,167,137,.45); outline-offset: 2px; }
+.map-recenter-control svg { width: 21px; height: 21px; fill: none; stroke: currentColor; stroke-width: 1.9; stroke-linecap: round; }
 .map-help { position: absolute; top: 1rem; left: 1rem; padding: .55rem .7rem; border-radius: 10px; background: rgba(255,255,255,.86); color: var(--muted); font-size: .72rem; pointer-events: none; box-shadow: 0 4px 14px rgba(36,51,47,.1); }
 .map-empty { position: absolute; inset: 35% 20% auto; padding: 1rem; border-radius: 14px; background: rgba(255,255,255,.9); color: var(--muted); text-align: center; box-shadow: var(--shadow); }
 .maplibregl-ctrl-group { border: 1px solid var(--line) !important; border-radius: 12px !important; overflow: hidden; box-shadow: 0 5px 16px rgba(36,51,47,.12) !important; }
@@ -322,6 +329,12 @@ button { cursor: pointer; }
 .filter-input-wrap { display: inline-flex; align-items: center; gap: .15rem; }
 .filter-input-wrap input { width: 3.8rem; padding: 0; border: 0; outline: 0; background: transparent; }
 .filter-suffix { color: var(--muted); }
+.active-neighborhoods { display: flex; align-items: center; flex-wrap: wrap; gap: .45rem; width: 100%; padding-top: .15rem; }
+.active-filter-label { color: var(--muted); font-family: var(--mono-font); font-size: .66rem; text-transform: uppercase; letter-spacing: .07em; }
+.active-filter-chip { display: inline-flex; align-items: center; gap: .42rem; min-height: 2rem; padding: .35rem .65rem; border: 1px solid rgba(79, 130, 98, .42); border-radius: 999px; background: var(--mint); color: var(--forest); font-family: var(--mono-font); font-size: .68rem; font-weight: 700; }
+.active-filter-chip:hover { border-color: var(--forest); background: white; }
+.active-filter-chip span { font-size: .92rem; line-height: .7; }
+.active-filter-clear { padding: .3rem .25rem; border: 0; background: transparent; color: #4f8262; font-family: var(--mono-font); font-size: .66rem; text-decoration: underline; }
 
 .map-section { overflow: hidden; }
 .map-heading-row { display: flex; align-items: end; justify-content: space-between; gap: 1rem; padding: 1.2rem 1.25rem .95rem; background: white; }
@@ -379,6 +392,8 @@ button { cursor: pointer; }
 }
 
 .location-search input { font-size: .8rem; }
+.location-origin-pill { display: inline-flex; align-items: center; gap: .3rem; max-width: min(30rem, 100%); padding: .6rem .8rem; border: 1px solid rgba(79, 130, 98, .35); border-radius: 999px; background: var(--mint); color: var(--forest); font-family: var(--mono-font); font-size: .68rem; }
+.location-origin-pill strong { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 
 /* Optional chip markup can be introduced without changing this visual contract. */
 .neighborhood-chips,
