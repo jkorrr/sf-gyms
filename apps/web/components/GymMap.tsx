@@ -16,6 +16,8 @@ type Basemap = "openfreemap" | "osm";
 type GymMapProps = {
   gyms: Gym[];
   selectedId?: string;
+  highlightedId?: string | null;
+  rankedIds?: string[];
   origin: GeoPoint | null;
   onSelect: (gym: Gym | null) => void;
 };
@@ -50,11 +52,12 @@ function fitMapToGyms(map: maplibregl.Map, gyms: Gym[], duration = 500) {
   map.fitBounds(bounds, { padding: compactPadding, maxZoom: 14, duration, essential: true });
 }
 
-export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapProps) {
+export default function GymMap({ gyms, selectedId, highlightedId, rankedIds = [], origin, onSelect }: GymMapProps) {
   const containerRef = useRef<HTMLDivElement | null>(null);
   const mapRef = useRef<maplibregl.Map | null>(null);
   const gymsRef = useRef(gyms);
   const gymsByIdRef = useRef(new globalThis.Map(gyms.map((gym) => [gym.id, gym])));
+  const rankByIdRef = useRef(new globalThis.Map(rankedIds.slice(0, 10).map((id, index) => [id, index + 1])));
   const markersRef = useRef<globalThis.Map<string, GymMarker>>(new globalThis.Map());
   const originMarkerRef = useRef<maplibregl.Marker | null>(null);
   const onSelectRef = useRef(onSelect);
@@ -68,6 +71,16 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
     gymsRef.current = gyms;
     gymsByIdRef.current = new globalThis.Map(gyms.map((gym) => [gym.id, gym]));
   }, [gyms]);
+
+  useEffect(() => {
+    rankByIdRef.current = new globalThis.Map(rankedIds.slice(0, 10).map((id, index) => [id, index + 1]));
+    markersRef.current.forEach(({ element }, id) => {
+      const rank = rankByIdRef.current.get(id);
+      element.classList.toggle("ranked", Boolean(rank));
+      element.textContent = rank ? String(rank) : "";
+      element.setAttribute("aria-label", `${rank ? `Rank ${rank}. ` : ""}Open ${gymsByIdRef.current.get(id)?.name ?? "gym"}`);
+    });
+  }, [rankedIds]);
 
   useEffect(() => {
     onSelectRef.current = onSelect;
@@ -160,27 +173,24 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
       const existing = markersRef.current.get(gym.id);
       if (existing) {
         existing.marker.setLngLat([gym.longitude, gym.latitude]);
-        existing.element.classList.toggle("active", gym.id === selectedId);
+        existing.element.classList.toggle("active", gym.id === selectedId || gym.id === highlightedId);
         return;
       }
 
       const element = document.createElement("button");
       element.type = "button";
       element.className = "gym-marker";
-      element.setAttribute("aria-label", `Open ${gym.name}`);
+      const rank = rankByIdRef.current.get(gym.id);
+      element.classList.toggle("ranked", Boolean(rank));
+      element.textContent = rank ? String(rank) : "";
+      element.setAttribute("aria-label", `${rank ? `Rank ${rank}. ` : ""}Open ${gym.name}`);
       element.title = gym.name;
-      element.classList.toggle("active", gym.id === selectedId);
+      element.classList.toggle("active", gym.id === selectedId || gym.id === highlightedId);
       element.addEventListener("click", (event) => {
         event.stopPropagation();
         const currentGym = gymsByIdRef.current.get(gym.id);
         if (!currentGym) return;
         onSelectRef.current(currentGym);
-        map.flyTo({
-          center: [currentGym.longitude, currentGym.latitude],
-          zoom: Math.max(map.getZoom(), 14),
-          duration: 500,
-          essential: true,
-        });
       });
       const marker = new maplibregl.Marker({ element, anchor: "center" })
         .setLngLat([gym.longitude, gym.latitude])
@@ -197,8 +207,12 @@ export default function GymMap({ gyms, selectedId, origin, onSelect }: GymMapPro
 
   useEffect(() => {
     if (!isReady) return;
-    markersRef.current.forEach(({ element }, id) => element.classList.toggle("active", id === selectedId));
-  }, [selectedId, isReady]);
+    markersRef.current.forEach(({ element }, id) => element.classList.toggle("active", id === selectedId || id === highlightedId));
+    if (!selectedId) return;
+    const gym = gymsByIdRef.current.get(selectedId);
+    const map = mapRef.current;
+    if (gym && map) map.flyTo({ center: [gym.longitude, gym.latitude], zoom: Math.max(map.getZoom(), 14), duration: 500, essential: true });
+  }, [highlightedId, selectedId, isReady]);
 
   useEffect(() => {
     const map = mapRef.current;

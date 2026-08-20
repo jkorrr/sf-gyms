@@ -4,7 +4,7 @@
     "sourceUrl": "https://www.openstreetmap.org/",
     "queryUrl": "https://overpass-api.de/api/interpreter",
     "boundingBox": "37.70,-122.53,37.84,-122.35",
-    "importedAt": "2026-08-18T04:04:04Z",
+    "importedAt": "2026-08-20T06:04:03Z",
     "license": "ODbL 1.0",
     "notes": "Named OSM-tagged fitness facilities in the San Francisco bounding box; coverage is not exhaustive.",
     "supplementalSources": [
@@ -1800,7 +1800,9 @@
       "priceObservedAt": "2026-08-16",
       "annualFee": null,
       "annualFeeNote": "",
-      "venueType": "martial_arts_boxing"
+      "venueType": "martial_arts_boxing",
+      "enrollmentFee": 50,
+      "enrollmentFeeNote": "The official month-to-month offer lists a $50 enrollment fee."
     },
     {
       "id": "osm-way-89802412",
@@ -2127,8 +2129,8 @@
       "priceSourceUrl": "https://citysportsfitness.com/Pages/MembershipSignUpRate.aspx?id=wead5DoGQM1uFv9DRrzRyg%3D%3D",
       "priceNote": "Classic multi-club state-of-enrollment plan; $69 annual fee and taxes may apply.",
       "priceObservedAt": "2026-08-16",
-      "annualFee": null,
-      "annualFeeNote": "",
+      "annualFee": 69,
+      "annualFeeNote": "The published Classic plan lists a $69 annual fee.",
       "venueType": "traditional_gym"
     },
     {
@@ -4882,7 +4884,8 @@
       "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public purchase page.",
       "monthlyUnlimitedPrice": 220,
       "enrollmentFee": 75,
-      "venueType": "martial_arts_boxing"
+      "venueType": "martial_arts_boxing",
+      "enrollmentFeeNote": "The official purchase page lists a $75 club joining fee."
     },
     {
       "id": "osm-node-10665980914",
@@ -4917,7 +4920,9 @@
       "priceObservedAt": "2026-08-16",
       "annualFee": null,
       "annualFeeNote": "",
-      "venueType": "traditional_gym"
+      "venueType": "traditional_gym",
+      "enrollmentFee": 75,
+      "enrollmentFeeNote": "The official purchase page lists a $75 club joining fee."
     },
     {
       "id": "osm-node-6636000316",
@@ -5199,7 +5204,9 @@
       "priceObservedAt": "2026-08-16",
       "annualFee": null,
       "annualFeeNote": "",
-      "venueType": "recreation_sports"
+      "venueType": "recreation_sports",
+      "enrollmentFee": 200,
+      "enrollmentFeeNote": "The regular Adult Full Access rate lists a $200 enrollment fee; temporary promotions may waive it."
     },
     {
       "id": "osm-node-11166132566",
@@ -7841,8 +7848,8 @@
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
       "priceNote": "Classic plan; plus taxes and fees, including a $49 annual fee. Plans and promotions can change.",
       "priceObservedAt": "2026-08-16",
-      "annualFee": null,
-      "annualFeeNote": "",
+      "annualFee": 49,
+      "annualFeeNote": "The published San Francisco offers list a $49 annual fee.",
       "venueType": "traditional_gym"
     },
     {
@@ -7871,8 +7878,8 @@
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/offers?q=Newark%2C+ca",
       "priceNote": "Official SF offer page shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes/fees and a $49 annual fee. Directory labels this club as a relocation; confirm opening status before publication.",
       "priceObservedAt": "2026-08-16",
-      "annualFee": null,
-      "annualFeeNote": "",
+      "annualFee": 49,
+      "annualFeeNote": "The published San Francisco offers list a $49 annual fee.",
       "venueType": "traditional_gym"
     },
     {
@@ -7901,8 +7908,8 @@
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/offers?q=Newark%2C+ca",
       "priceNote": "Official SF offer page shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes/fees and a $49 annual fee; offers can expire and club status may change. Club directory currently marks 417 Montgomery as temporarily closed for relocation.",
       "priceObservedAt": "2026-08-16",
-      "annualFee": null,
-      "annualFeeNote": "",
+      "annualFee": 49,
+      "annualFeeNote": "The published San Francisco offers list a $49 annual fee.",
       "venueType": "traditional_gym"
     },
     {
@@ -7935,8 +7942,8 @@
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
       "priceNote": "Pre-grand-opening offer shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes and a $49 annual fee. This location is marked relocation/pre-grand opening and hours are not yet published.",
       "priceObservedAt": "2026-08-16",
-      "annualFee": null,
-      "annualFeeNote": "",
+      "annualFee": 49,
+      "annualFeeNote": "The published San Francisco offers list a $49 annual fee.",
       "venueType": "traditional_gym"
     },
     {
@@ -7971,8 +7978,8 @@
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/offers?q=Newark%2C+ca",
       "priceNote": "Official SF offer page shows Classic at $15/month and PF Black Card at $24.99/month, plus taxes/fees and a $49 annual fee. Promotions and club-specific terms can change.",
       "priceObservedAt": "2026-08-16",
-      "annualFee": null,
-      "annualFeeNote": "",
+      "annualFee": 49,
+      "annualFeeNote": "The published San Francisco offers list a $49 annual fee.",
       "venueType": "traditional_gym"
     },
     {

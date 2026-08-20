@@ -2,10 +2,14 @@
 
 import { useEffect, useMemo, useRef, useState } from "react";
 
+import CompareTray from "./CompareTray";
 import GymMap from "./GymMap";
+import RankedResultsDrawer from "./RankedResultsDrawer";
+import { readCompareIds, writeCompareIds } from "../lib/compare-state";
 import { basePath, oauthRedirectUrl } from "../lib/config";
 import { demoGyms, type Gym, type VenueType, venueTypeLabels, venueTypes } from "../lib/demo-data";
 import { distanceMiles, formatDistanceMiles, type GeoPoint } from "../lib/geo";
+import { DEFAULT_COMPARISON_ASSUMPTIONS, rankGyms, type SortOrder } from "../lib/gym-value";
 import { getSupabaseClient, getSupabaseStatus } from "../lib/supabase";
 
 type ApiGym = {
@@ -39,8 +43,6 @@ type LocationSearchResult = {
   lon: string;
   display_name: string;
 };
-
-type SortOrder = "recommended" | "monthly" | "day_pass" | "distance";
 
 function readableOAuthError(value: string): string {
   return value.trim().replace(/\s+/g, " ").slice(0, 240);
@@ -91,13 +93,6 @@ function priceLabel(value: number | null, suffix: string): string {
   return value === null ? "Not listed" : `$${value}${suffix}`;
 }
 
-function compareNullablePrices(left: number | null, right: number | null): number {
-  if (left === null && right === null) return 0;
-  if (left === null) return 1;
-  if (right === null) return -1;
-  return left - right;
-}
-
 function gymDetailHref(id: string): string {
   return `${basePath}/gyms/${encodeURIComponent(id)}/`;
 }
@@ -110,7 +105,9 @@ export default function GymExplorer() {
   const [venueParamsLoaded, setVenueParamsLoaded] = useState(false);
   const [maxMonthly, setMaxMonthly] = useState("");
   const [radiusMiles, setRadiusMiles] = useState("");
-  const [sortOrder, setSortOrder] = useState<SortOrder>("recommended");
+  const [sortOrder, setSortOrder] = useState<SortOrder>("best_match");
+  const [resultsExpanded, setResultsExpanded] = useState(false);
+  const [highlightedId, setHighlightedId] = useState<string | null>(null);
   const [locationQuery, setLocationQuery] = useState("");
   const [origin, setOrigin] = useState<GeoPoint | null>(null);
   const [locationStatus, setLocationStatus] = useState("");
@@ -162,14 +159,7 @@ export default function GymExplorer() {
   }, [isCloudAuthReady, supabase, supabaseStatus.message]);
 
   useEffect(() => {
-    const stored = window.localStorage.getItem("sf-gyms:compare");
-    if (!stored) return;
-    try {
-      const parsed = JSON.parse(stored) as unknown;
-      if (Array.isArray(parsed) && parsed.every((item) => typeof item === "string")) setCompareIds(parsed.slice(0, 3));
-    } catch {
-      window.localStorage.removeItem("sf-gyms:compare");
-    }
+    setCompareIds(readCompareIds(window.localStorage, new Set(demoGyms.map((gym) => gym.id))));
   }, []);
 
   useEffect(() => {
@@ -243,11 +233,11 @@ export default function GymExplorer() {
     return counts;
   }, Object.fromEntries(venueTypes.map((venueType) => [venueType, 0])) as Record<VenueType, number>), [gyms]);
 
-  const visibleRows = useMemo(() => {
+  const filteredBaseGyms = useMemo(() => {
     const needle = query.trim().toLowerCase();
     const budget = maxMonthly ? Number(maxMonthly) : Number.POSITIVE_INFINITY;
     const radius = radiusMiles ? Number(radiusMiles) : Number.POSITIVE_INFINITY;
-    const rows = gyms
+    return gyms
       .map((gym) => ({ gym, distance: origin ? distanceMiles(origin, gym) : null }))
       .filter(({ gym, distance }) => {
         const matchesText = !needle || [gym.name, gym.neighborhood, gym.address, gym.gymType, venueTypeLabels[gym.venueType], ...gym.amenities]
@@ -257,29 +247,19 @@ export default function GymExplorer() {
         const matchesBudget = !maxMonthly || (gym.monthlyPrice !== null && gym.monthlyPrice <= budget);
         const matchesRadius = distance === null || distance <= radius;
         return matchesText && matchesNeighborhood && matchesVenueType && matchesBudget && matchesRadius;
-      });
+      })
+      .map(({ gym }) => gym);
+  }, [gyms, maxMonthly, origin, query, radiusMiles, selectedNeighborhoods, selectedVenueTypes]);
 
-    return rows.sort((left, right) => {
-      if (sortOrder === "monthly") {
-        return compareNullablePrices(left.gym.monthlyPrice, right.gym.monthlyPrice) || left.gym.name.localeCompare(right.gym.name);
-      }
-      if (sortOrder === "day_pass") {
-        return compareNullablePrices(left.gym.dayPassPrice, right.gym.dayPassPrice) || left.gym.name.localeCompare(right.gym.name);
-      }
-      if ((sortOrder === "distance" || sortOrder === "recommended") && left.distance !== null && right.distance !== null) {
-        return left.distance - right.distance || left.gym.name.localeCompare(right.gym.name);
-      }
-      return left.gym.name.localeCompare(right.gym.name);
-    });
-  }, [gyms, maxMonthly, origin, query, radiusMiles, selectedNeighborhoods, selectedVenueTypes, sortOrder]);
-
-  const filteredGyms = useMemo(() => visibleRows.map(({ gym }) => gym), [visibleRows]);
+  const rankedRows = useMemo(() => rankGyms(filteredBaseGyms, {
+    sortOrder,
+    query,
+    origin,
+    assumptions: { ...DEFAULT_COMPARISON_ASSUMPTIONS, origin },
+  }), [filteredBaseGyms, origin, query, sortOrder]);
+  const filteredGyms = useMemo(() => rankedRows.map(({ gym }) => gym), [rankedRows]);
   const selectedGym = selected && filteredGyms.some((gym) => gym.id === selected.id) ? selected : null;
   const selectedDistance = selectedGym && origin ? distanceMiles(origin, selectedGym) : null;
-  const compareGyms = useMemo(() => compareIds
-    .map((id) => gyms.find((gym) => gym.id === id))
-    .filter((gym): gym is Gym => Boolean(gym)), [compareIds, gyms]);
-
   const toggleNeighborhood = (neighborhood: string) => {
     setSelectedNeighborhoods((current) => current.includes(neighborhood)
       ? current.filter((item) => item !== neighborhood)
@@ -299,8 +279,8 @@ export default function GymExplorer() {
       return;
     }
 
-    setSortOrder("distance");
     if (origin) {
+      setSortOrder("distance");
       setLocationStatus(`Showing venues within ${value} ${value === "1" ? "mile" : "miles"} of ${origin.label}, nearest first.`);
       return;
     }
@@ -330,9 +310,29 @@ export default function GymExplorer() {
       } else {
         setCompareMessage("");
       }
-      window.localStorage.setItem("sf-gyms:compare", JSON.stringify(next));
+      writeCompareIds(window.localStorage, next);
       return next;
     });
+  };
+
+  const handleSortChange = (value: SortOrder) => {
+    if (value === "distance" && !origin) {
+      setLocationStatus("Set a starting location before sorting by nearest.");
+      window.requestAnimationFrame(() => {
+        locationInputRef.current?.focus();
+        locationInputRef.current?.scrollIntoView({ behavior: "smooth", block: "center" });
+      });
+      return;
+    }
+    setSortOrder(value);
+    setResultsExpanded(true);
+  };
+
+  const selectRankedGym = (id: string) => {
+    const gym = filteredGyms.find((item) => item.id === id);
+    if (!gym) return;
+    setSelected(gym);
+    document.getElementById("map")?.scrollIntoView({ behavior: "smooth", block: "start" });
   };
 
   const useCurrentLocation = () => {
@@ -423,7 +423,7 @@ export default function GymExplorer() {
         </a>
         <nav className="topnav" aria-label="Primary navigation">
           <a href="#map">Explore gyms</a>
-          <a href="#compare">Compare prices</a>
+          <a href={`${basePath}/compare/`}>Compare prices</a>
           <button className="login-button" onClick={() => void signIn()} disabled={!isCloudAuthReady} title={isCloudAuthReady ? "Sign in with Google" : "Supabase public configuration is not available in this build"}>{isCloudAuthReady ? authLabel : "Google login unavailable"}</button>
         </nav>
       </header>
@@ -474,7 +474,7 @@ export default function GymExplorer() {
           </details>
           <label className="filter filter-control">Budget <span className="filter-input-wrap"><span aria-hidden="true">$</span><input id="max-monthly" inputMode="numeric" value={maxMonthly} onChange={(event) => setMaxMonthly(event.target.value.replace(/[^0-9]/g, ""))} placeholder="Any" aria-label="Maximum monthly price" /></span><span className="filter-suffix">/ month</span></label>
           <label className="filter filter-control">Distance <select value={radiusMiles} onChange={(event) => handleRadiusChange(event.target.value)} aria-label="Distance radius" title={origin ? `Filter by distance from ${origin.label}` : "Choose a radius, then set a starting location"}><option value="">Any distance</option><option value="1">1 mile</option><option value="3">3 miles</option><option value="5">5 miles</option><option value="10">10 miles</option><option value="25">25 miles</option></select></label>
-          <label className="filter filter-control">Sort by <select value={sortOrder} onChange={(event) => setSortOrder(event.target.value as SortOrder)} aria-label="Sort results"><option value="recommended">Recommended</option><option value="monthly">Lowest monthly</option><option value="day_pass">Lowest day pass</option><option value="distance">Nearest</option></select></label>
+          <label className="filter filter-control">Sort by <select value={sortOrder} onChange={(event) => handleSortChange(event.target.value as SortOrder)} aria-label="Sort results"><option value="best_match">Best match</option><option value="first_year_cost">Lowest first-year cost</option><option value="monthly">Lowest monthly price</option><option value="day_pass">Lowest day pass</option><option value="cost_per_visit">Lowest cost per visit</option><option value="distance">Nearest</option><option value="name">Name A–Z</option></select></label>
         </div>
         {selectedNeighborhoods.length > 0 && <div className="active-neighborhoods" aria-label="Selected neighborhoods" aria-live="polite">
           <span className="active-filter-label">Neighborhoods</span>
@@ -497,34 +497,13 @@ export default function GymExplorer() {
         {locationStatus && <span className="location-status" role="status">{locationStatus}</span>}
       </section>
 
-      {compareGyms.length > 0 && <section className="compare-panel" id="compare" aria-labelledby="compare-heading">
-        <div className="compare-panel-head">
-          <div><div className="section-label">Side by side</div><h3 id="compare-heading">Compare prices</h3><p>Keep up to three gyms here while you explore the map.</p></div>
-          <button className="compare-clear" type="button" onClick={() => { setCompareIds([]); setCompareMessage(""); window.localStorage.removeItem("sf-gyms:compare"); }}>Clear comparison</button>
-        </div>
-        <div className="compare-table-wrap">
-          <table className="compare-table">
-            <thead><tr><th scope="col">Gym</th><th scope="col">Neighborhood</th><th scope="col">Monthly</th><th scope="col">Annual fee</th><th scope="col">Day pass</th><th scope="col"><span className="sr-only">Remove</span></th></tr></thead>
-            <tbody>{compareGyms.map((gym) => <tr key={gym.id}>
-              <th scope="row"><a href={gymDetailHref(gym.id)}>{gym.name}</a></th>
-              <td>{gym.neighborhood}</td>
-              <td><strong>{priceLabel(gym.monthlyPrice, "/mo")}</strong>{gym.priceSourceUrl && <a className="compare-source" href={gym.priceSourceUrl} target="_blank" rel="noreferrer">Source</a>}</td>
-              <td><strong>{priceLabel(gym.annualFee, "/yr")}</strong></td>
-              <td><strong>{priceLabel(gym.dayPassPrice, " day pass")}</strong></td>
-              <td><button className="compare-remove" type="button" onClick={() => toggleCompare(gym.id)} aria-label={`Remove ${gym.name} from comparison`}>×</button></td>
-            </tr>)}</tbody>
-          </table>
-        </div>
-        {compareMessage && <p className="compare-message" role="status">{compareMessage}</p>}
-      </section>}
-
       <section className="explorer map-first-explorer map-section" id="map" aria-label="Gym map and listings">
         <div className="map-heading-row">
           <div><div className="eyebrow">Explore the city</div><h3>{filteredGyms.length} fitness venues in San Francisco</h3></div>
           <span className="map-hint">Pan, zoom, and click a dot to inspect</span>
         </div>
         <div className="map-panel">
-          <GymMap gyms={filteredGyms} selectedId={selectedGym?.id} origin={origin} onSelect={setSelected} />
+          <GymMap gyms={filteredBaseGyms} selectedId={selectedGym?.id} highlightedId={highlightedId} rankedIds={rankedRows.slice(0, 10).map((row) => row.gym.id)} origin={origin} onSelect={setSelected} />
           {selectedGym && <aside className="detail" aria-live="polite">
             <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
             <p>{selectedGym.description}</p>
@@ -536,7 +515,11 @@ export default function GymExplorer() {
             <p className="source-note">{freshnessLabel(selectedGym)}. {selectedGym.priceSourceUrl && <><a href={selectedGym.priceSourceUrl} target="_blank" rel="noreferrer">See official price source</a>. </>}Listing source: <a href={selectedGym.sourceUrl} target="_blank" rel="noreferrer">{selectedGym.sourceName}</a>. Confirm pricing and hours before visiting.</p>
           </aside>}
         </div>
+        <RankedResultsDrawer rows={rankedRows} sortOrder={sortOrder} expanded={resultsExpanded} compareIds={compareIds} onToggle={() => setResultsExpanded((current) => !current)} onSelect={selectRankedGym} onCompare={toggleCompare} onHighlight={setHighlightedId} />
       </section>
+
+      {compareMessage && <p className="global-compare-message" role="status">{compareMessage}</p>}
+      <CompareTray gyms={gyms} compareIds={compareIds} onRemove={toggleCompare} />
 
       <footer className="footer"><span>Map tiles: OpenFreeMap / OpenStreetMap - Map data: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a> - Listings are community source data.</span><span>More cities after the data earns your trust.</span></footer>
     </main>

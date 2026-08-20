@@ -27,6 +27,7 @@ ROOT = Path(__file__).resolve().parents[2]
 OSM_PATH = ROOT / "data" / "imports" / "sf-gyms-osm.json"
 WEB_PATH = ROOT / "apps" / "web" / "lib" / "sf-gyms-osm.json"
 CACHE_PATH = ROOT / "data" / "imports" / "sf-gym-geocode-cache.json"
+STRUCTURED_FEE_OVERRIDES_PATH = ROOT / "data" / "imports" / "official-price-overrides.json"
 RESEARCH_PATHS = (
     ROOT / "data" / "imports" / "sf-gym-web-research-a.json",
     ROOT / "data" / "imports" / "sf-gym-web-research-b.json",
@@ -287,6 +288,23 @@ def main() -> int:
     for gym in gyms:
         gym.setdefault("annualFee", None)
         gym.setdefault("annualFeeNote", "")
+
+    # Some official pages disclose mandatory fees in prose. Keep these values
+    # in one audited override file and reapply them after every research merge
+    # so comparison totals cannot silently omit a known fee.
+    fee_overrides = load_json(STRUCTURED_FEE_OVERRIDES_PATH)
+    fee_fields = (
+        "annualFee", "annualFeeNote", "enrollmentFee", "enrollmentFeeNote",
+        "initiationFee", "initiationFeeNote",
+    )
+    for gym in gyms:
+        name = text(gym.get("name"))
+        for override in fee_overrides:
+            pattern = text(override.get("match"))
+            if pattern and re.search(pattern, name, re.IGNORECASE):
+                for field in fee_fields:
+                    if field in override:
+                        gym[field] = override[field]
 
     classify_all(gyms)
 
