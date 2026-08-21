@@ -5,7 +5,7 @@
       "id": "osm-node-8641835222",
       "name": "24 Hour Fitness Ocean",
       "address": "1850 Ocean Avenue, San Francisco, CA 94112",
-      "websiteUrl": "https://link.24go.co/TIh6r00EI1",
+      "websiteUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
       "entityKind": "gym",
       "modality": "budget-full-service",
       "pricingStatus": "verified",
@@ -15,11 +15,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-8641835222:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-8641835222:plan:silver-monthly-no-commitment",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -57,11 +57,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-4aaec1680acf72:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-4aaec1680acf72:plan:silver-monthly-no-commitment",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -99,11 +99,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-8891970863af87:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-8891970863af87:plan:silver-monthly-no-commitment",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -141,11 +141,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-417957202:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-417957202:plan:silver-monthly-no-commitment",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -3176,8 +3176,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -3504,11 +3504,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-e71c82ac2eb475:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-e71c82ac2eb475:plan:15",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -3546,11 +3546,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-678cd02ed5fd30:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-678cd02ed5fd30:plan:15",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -3588,11 +3588,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6848648284:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-6848648284:plan:2735",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -3630,11 +3630,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-8a074bb0e133c0:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-8a074bb0e133c0:plan:15",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -3672,11 +3672,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-10069564222:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-10069564222:plan:15",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6312,12 +6312,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6773,8 +6773,8 @@
           "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7697,8 +7697,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -7776,8 +7776,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -8464,18 +8464,18 @@
       "websiteUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
       "entityKind": "gym",
       "modality": "budget-full-service",
-      "pricingStatus": "verified",
-      "pricingBlocker": "",
+      "pricingStatus": "gated",
+      "pricingBlocker": "This location is not open for ordinary enrollment yet.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-bbf32ec975a42d:plan:legacy-reviewed-selected",
+      "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -8513,11 +8513,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-859ef7f95053f4:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-859ef7f95053f4:plan:pfx:offers:eb6c8771-8c4b-11f1-8cdc-623b4c39050c",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -9160,12 +9160,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10375,8 +10375,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -10768,12 +10768,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",

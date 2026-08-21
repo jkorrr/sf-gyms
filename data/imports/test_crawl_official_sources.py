@@ -167,6 +167,73 @@ Processing Fee $49.95 $39.95 $49.95 $39.95 $49.95 $39.95 Subtotal"""
         self.assertTrue(all(offer["method"] == "visible-crunch-plan-card" for offer in offers))
         self.assertTrue(all(not offer["autoPublishEligible"] for offer in offers))
 
+    def test_24_hour_matrix_preserves_variants_and_selectable_silver(self) -> None:
+        visible = """Offer on select monthly memberships. $69.99 Annual Fee required.
+Monthly
+$10 OFF* Platinum as low as 49.99 per month 50.99 Due Today
+$10 OFF* Gold as low as 34.99 per month 34.99 Due Today
+Silver as low as 29.99 per month 29.99 Due Today
+Monthly Commitment
+Platinum 56.99 per month $1.00 Due Today
+Yearly
+Platinum 28.99 per month 347.88 Due Today
+National 24.99 per month 299.88 Due Today
+Choose the gym membership option for you"""
+        offers = crawler.visible_candidates(
+            visible, "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport"
+        )
+        self.assertEqual(len(offers), 6)
+        silver = next(item for item in offers if item["sourceProductId"] == "silver-monthly-no-commitment")
+        yearly = next(item for item in offers if item["sourceProductId"] == "platinum-yearly-auto-renewal")
+        self.assertEqual(silver["amount"], 29.99)
+        self.assertFalse(silver["promotion"]["isPromotion"])
+        self.assertEqual(silver["fees"][0]["amount"], 69.99)
+        self.assertEqual(yearly["amount"], 347.88)
+        self.assertEqual(yearly["billingInterval"], "year")
+        self.assertTrue(next(item for item in offers if item["sourceProductId"] == "gold-monthly-no-commitment")["promotion"]["isPromotion"])
+        self.assertTrue(all(item["method"] == "visible-24-hour-membership-matrix" for item in offers))
+
+    def test_equinox_cards_retain_most_popular_operator_label(self) -> None:
+        visible = """Select $297 / mo Access to one Club with immaculate spaces.
+All-Access Most Popular $350 / mo Access to 90+ Clubs across North America.
+Destination $370 / mo Access to 110+ Clubs globally.
+Destination West $410 / mo Everything a Destination Membership offers."""
+        offers = crawler.visible_candidates(visible, "https://www.equinox.com/clubs/northern-california/pinest")
+        self.assertEqual([item["amount"] for item in offers], [297, 350, 370, 410])
+        self.assertTrue(next(item for item in offers if item["sourceProductId"] == "2931")["bestValueLabel"])
+        self.assertFalse(next(item for item in offers if item["sourceProductId"] == "15")["bestValueLabel"])
+        self.assertTrue(all(item["method"] == "visible-equinox-plan-card" for item in offers))
+
+    def test_planet_fitness_cards_link_each_startup_fee_to_its_plan(self) -> None:
+        visible = """PF BLACK CARD® Best Value $24.99 /mo plus taxes & fees.
+$1 Startup Fee $49 Annual Fee No Commitment Offer Expires August 30th.
+Classic $15 /mo plus taxes & fees. Unlimited access to your home club.
+$49 Startup Fee $49 Annual Fee No Commitment Offer Expires August 30th.
+CLUB INFO"""
+        offers = crawler.visible_candidates(
+            visible, "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca"
+        )
+        black = next(item for item in offers if item["sourceProductId"] == "pf-black-card")
+        classic = next(item for item in offers if item["sourceProductId"] == "classic")
+        self.assertEqual([(fee["type"], fee["amount"]) for fee in black["fees"]], [("enrollment", 1), ("annual", 49)])
+        self.assertEqual([(fee["type"], fee["amount"]) for fee in classic["fees"]], [("enrollment", 49), ("annual", 49)])
+        self.assertTrue(black["bestValueLabel"])
+        self.assertEqual(classic["commitment"]["type"], "month-to-month")
+
+    def test_planet_fitness_presale_is_not_an_eligible_ordinary_plan(self) -> None:
+        visible = """PF BLACK CARD® $24.99 /mo Pre-Grand Opening Sale Extended!
+$0 Startup Fee $49 Annual Fee No Commitment.
+SPECIAL DEAL Classic $15 /mo Pre-Grand Opening Sale Extended!
+$1 Startup Fee $49 Annual Fee 12 Month Commitment.
+CLUB INFO"""
+        offers = crawler.visible_candidates(
+            visible, "https://www.planetfitness.com/gyms/san-francisco-ca-relocation"
+        )
+        self.assertTrue(all(item["promotion"]["isPromotion"] for item in offers))
+        classic = next(item for item in offers if item["sourceProductId"] == "classic")
+        self.assertEqual(classic["commitment"], {"type": "fixed-term", "minimumMonths": 12})
+        self.assertEqual(classic["fees"][0]["amount"], 1)
+
     def test_follows_owned_storefront_but_not_marketplace(self) -> None:
         links = [
             "https://clients.mindbodyonline.com/classic/ws?studioid=1",

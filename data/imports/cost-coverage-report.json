@@ -6,13 +6,13 @@
   "pricingStatusCounts": {
     "estimated": 10,
     "free": 22,
-    "gated": 15,
+    "gated": 16,
     "not-applicable": 15,
     "operator-confirmed": 0,
     "pay-per-visit": 25,
     "reported": 0,
     "unresolved": 5,
-    "verified": 156
+    "verified": 155
   },
   "suppressedAliasCount": 107,
   "suppressedAliases": [
@@ -577,11 +577,11 @@
     "public-recreation": 38,
     "studio": 106
   },
-  "verifiedMonthlyCount": 156,
+  "verifiedMonthlyCount": 155,
   "verifiedDayPassCount": 122,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 135,
-  "approvedOperatorCatalogLocationsApplied": 44,
+  "approvedOperatorCatalogLocationsApplied": 55,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
   "approvedDealsApplied": 11,
@@ -603,95 +603,51 @@
     "hoursNotApplicableCount": 0,
     "amenitiesListedCount": 245,
     "operatorLocationIdCount": 124,
-    "sourcePlanCatalogCount": 144,
+    "sourcePlanCatalogCount": 155,
     "sourcePlanFragmentCount": 1,
-    "selectedOnlyPlanCatalogCount": 35,
-    "noPlanCatalogCount": 68,
+    "selectedOnlyPlanCatalogCount": 31,
+    "noPlanCatalogCount": 61,
     "sourceDropInCatalogCount": 112,
     "sourceDropInFragmentCount": 1,
-    "selectedOnlyDropInCatalogCount": 15,
-    "noDropInCatalogCount": 120,
-    "selectedUnknownCommitmentCount": 69,
+    "selectedOnlyDropInCatalogCount": 19,
+    "noDropInCatalogCount": 116,
+    "selectedUnknownCommitmentCount": 64,
     "selectedUndisclosedClassAllowanceCount": 9,
-    "typicalPlanSelectedCount": 120,
-    "highestAccessPlanSelectedCount": 120,
-    "bestValuePlanSelectedCount": 6,
+    "typicalPlanSelectedCount": 130,
+    "highestAccessPlanSelectedCount": 130,
+    "bestValuePlanSelectedCount": 11,
     "explicitMonthlyPriceStateCount": 248,
     "explicitDayPassPriceStateCount": 248,
     "metadataGapStatusCount": 248
   },
-  "commercialListings": 184,
-  "commercialAttemptedSourceListings": 184,
+  "commercialListings": 183,
+  "commercialAttemptedSourceListings": 183,
   "commercialAttemptedSourceCoverage": 1.0,
   "commercialUnattemptedSourceListings": [],
-  "commercialExactAddressListings": 184,
+  "commercialExactAddressListings": 183,
   "commercialExactAddressCoverage": 1.0,
-  "actionableCommercialListings": 182,
+  "actionableCommercialListings": 181,
   "actionableCommercialCoverage": 0.9891,
-  "meaningfulCostCommercialListings": 184,
+  "meaningfulCostCommercialListings": 183,
   "meaningfulCostCommercialCoverage": 1.0,
   "officialSiteUnresolvedCount": 2,
   "officialPagePresentCount": 246,
   "officialSiteDiscoveryQueue": 0,
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
-    "publiclyPricedCommercialListings": 171,
-    "reconstructedRelevantCatalogListings": 132,
-    "reconstructedRelevantCatalogCoverage": 0.7719,
+    "publiclyPricedCommercialListings": 170,
+    "reconstructedRelevantCatalogListings": 142,
+    "reconstructedRelevantCatalogCoverage": 0.8353,
     "targetCoverage": 0.9,
     "targetMet": false,
     "priorityPlatformCounts": {
-      "generic-official": 32,
+      "generic-official": 21,
       "mindbody": 4,
       "mariana-tek": 1,
       "momence": 1,
       "wellnessliving": 1
     },
     "priorityRecords": [
-      {
-        "id": "osm-node-8641835222",
-        "name": "24 Hour Fitness Ocean",
-        "operatorId": "24-hour-fitness",
-        "platforms": [],
-        "monthlyPrice": 38.99,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport"
-      },
-      {
-        "id": "web-4aaec1680acf72",
-        "name": "24 Hour Fitness Potrero Sport",
-        "operatorId": "24-hour-fitness",
-        "platforms": [],
-        "monthlyPrice": 34.99,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport"
-      },
-      {
-        "id": "web-8891970863af87",
-        "name": "24 Hour Fitness Sutter-Montgomery Sport",
-        "operatorId": "24-hour-fitness",
-        "platforms": [],
-        "monthlyPrice": 34.99,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/sutter-montgomery-sport"
-      },
-      {
-        "id": "osm-node-417957202",
-        "name": "24 Hour Fitness Van Ness Sport",
-        "operatorId": "24-hour-fitness",
-        "platforms": [],
-        "monthlyPrice": 44.99,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/van-ness-sport"
-      },
       {
         "id": "osm-node-996696401",
         "name": "Bakar Fitness Center at UCSF Mission Bay",
@@ -724,61 +680,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://www.thecitycrossfit.com/memberships"
-      },
-      {
-        "id": "web-e71c82ac2eb475",
-        "name": "Equinox Beale Street",
-        "operatorId": "equinox",
-        "platforms": [],
-        "monthlyPrice": 242.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest"
-      },
-      {
-        "id": "web-678cd02ed5fd30",
-        "name": "Equinox Pine Street",
-        "operatorId": "equinox",
-        "platforms": [],
-        "monthlyPrice": 297.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.equinox.com/join/step2/720"
-      },
-      {
-        "id": "osm-node-6848648284",
-        "name": "Equinox Sports Club San Francisco",
-        "operatorId": "equinox",
-        "platforms": [],
-        "monthlyPrice": 370.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.equinox.com/join/step2/724"
-      },
-      {
-        "id": "web-8a074bb0e133c0",
-        "name": "Equinox Union Street",
-        "operatorId": "equinox",
-        "platforms": [],
-        "monthlyPrice": 310.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet"
-      },
-      {
-        "id": "osm-node-10069564222",
-        "name": "Equinox Van Mission",
-        "operatorId": "equinox",
-        "platforms": [],
-        "monthlyPrice": 280.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission"
       },
       {
         "id": "web-27e606755f1ba8",
@@ -963,28 +864,6 @@
         "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150"
       },
       {
-        "id": "web-bbf32ec975a42d",
-        "name": "Planet Fitness San Francisco Kearny Relocation",
-        "operatorId": "planet-fitness",
-        "platforms": [],
-        "monthlyPrice": 15.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation"
-      },
-      {
-        "id": "web-859ef7f95053f4",
-        "name": "Planet Fitness San Francisco Lakeshore",
-        "operatorId": "planet-fitness",
-        "platforms": [],
-        "monthlyPrice": 15.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca"
-      },
-      {
         "id": "web-44c39e1d4144c1",
         "name": "Sol Hot Yoga & Movement",
         "operatorId": "solyogasf.com",
@@ -1093,9 +972,9 @@
       }
     ],
     "sourceFragmentPlanCatalogs": 1,
-    "selectedOnlyPlanCatalogs": 35,
+    "selectedOnlyPlanCatalogs": 31,
     "sourceFragmentDropInCatalogs": 1,
-    "selectedOnlyDropInCatalogs": 15
+    "selectedOnlyDropInCatalogs": 19
   },
   "crawlSummary": {
     "attemptedGyms": 288,
@@ -1138,9 +1017,9 @@
   },
   "estimatorValidation": {
     "budget-full-service": {
-      "sampleSize": 23,
+      "sampleSize": 30,
       "medianAbsolutePercentageError": 0.011,
-      "rangeCoverage": 0.913
+      "rangeCoverage": 0.9667
     },
     "crossfit-strength": {
       "sampleSize": 9,
@@ -1173,9 +1052,9 @@
       "rangeCoverage": 0.8
     },
     "overall": {
-      "sampleSize": 70,
-      "medianAbsolutePercentageError": 0.0877,
-      "rangeCoverage": 0.8286
+      "sampleSize": 77,
+      "medianAbsolutePercentageError": 0.0853,
+      "rangeCoverage": 0.8571
     }
   },
   "withheldEstimateModalities": {},
