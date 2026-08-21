@@ -2214,6 +2214,92 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-12337873692",
+      "gymName": "Peak Physio",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "discipline-2-treatment-4",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "Personal Training: Follow Up",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 1,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "One trainer-led 60-minute session",
+      "durationMinutes": 60,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "rendered-jane-service-card",
+      "adapter": "jane",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://peakphysiosf.janeapp.com/#/personal-training",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12337873692",
+      "gymName": "Peak Physio",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "discipline-2-treatment-3",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "Personal Training: Initial Evaluation",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 1,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "One trainer-led 60-minute session",
+      "durationMinutes": 60,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "rendered-jane-service-card",
+      "adapter": "jane",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://peakphysiosf.janeapp.com/#/personal-training",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "osm-node-12559170747",
       "gymName": "EHS",
       "capturedAt": "2026-08-20",

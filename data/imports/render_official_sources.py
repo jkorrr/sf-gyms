@@ -28,7 +28,7 @@ STATIC_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "official-crawl-observati
 ATTEMPTS_PATH = ROOT / "data" / "imports" / "rendered-crawl-attempts.json"
 OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 MAX_JSON_BYTES = 4_000_000
-PUBLIC_TAB_LABELS = {"membership", "memberships", "package", "packages", "pricing", "rates", "passes"}
+PUBLIC_TAB_LABELS = {"membership", "memberships", "package", "packages", "pricing", "rates", "passes", "personal training"}
 PRICE_CARD_SELECTOR = "article, [role='listitem'], [class*='price' i], [class*='plan' i], [class*='membership' i], [class*='package' i]"
 ACCESS_BLOCK_COOLDOWN_DAYS = 28
 RENDER_RESEARCH_PATH_RE = re.compile(
@@ -64,6 +64,15 @@ def allowed_network_response(operator_url: str, response_url: str) -> bool:
 
 def is_safe_public_tab_label(label: str) -> bool:
     return " ".join(text(label).casefold().split()) in PUBLIC_TAB_LABELS
+
+
+def is_safe_mindbody_category_label(label: str) -> bool:
+    """Bound selector traversal to public product categories, never account actions."""
+
+    value = " ".join(text(label).casefold().split())
+    if not value or value == "select item" or any(term in value for term in ("gift", "account", "login", "sign in")):
+        return False
+    return bool(re.search(r"\b(?:memberships?|packages?|classes?|passes|series|workshops?|open pole|training|access|privates?)\b", value))
 
 
 def safe_public_tab_href(current_url: str, href: str) -> bool:
@@ -216,7 +225,16 @@ def candidate_gyms(
         url = text(gym.get("websiteUrl"))
         if not static_crawler.is_public_http_url(url) or static_crawler.coverage.is_osm_url(url):
             continue
-        if gym.get("publicationStatus") != "publish" or gym.get("accessModel") in {"free-public", "restricted", "not-applicable"}:
+        restricted_public_catalog = any(
+            static_crawler.platform_adapters.platform_for_url(text(value))
+            for value in (gym.get("websiteUrl"), gym.get("officialUrl"), gym.get("priceSourceUrl"))
+            if text(value)
+        )
+        if (
+            gym.get("publicationStatus") != "publish"
+            or gym.get("accessModel") in {"free-public", "not-applicable"}
+            or (gym.get("accessModel") == "restricted" and not restricted_public_catalog)
+        ):
             continue
         if static_crawler.deal_eligible_gym(gym):
             candidates.append(gym)
@@ -305,6 +323,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     visible = ""
     visible_sources: list[tuple[str, str]] = []
     visible_card_sources: list[tuple[str, str]] = []
+    platform_card_candidates: list[dict[str, Any]] = []
     clicked_tabs: list[str] = []
     access_blocker = ""
     page_title = ""
@@ -313,7 +332,8 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         # Crunch hydrates regular rates and plan-linked fee tables after its
         # summary prices. Waiting for that operator-owned DOM prevents the
         # early summary amounts from being mistaken for complete plan cards.
-        dynamic_platform = static_crawler.platform_name(url) in {"approach", "mariana-tek", "xponential-member-app"}
+        platform = static_crawler.platform_name(url)
+        dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "jane"}
         page.wait_for_timeout(4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com")) else 1500)
         if static_crawler.platform_name(url) == "approach":
             choices: list[tuple[int, Any]] = []
@@ -347,6 +367,47 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     clicked_tabs.append(label)
             except Exception:
                 continue
+        if platform == "mindbody":
+            category_options: list[tuple[str, str]] = []
+            try:
+                first_select = page.locator("select").first
+                for option in first_select.locator("option").all()[:80]:
+                    label = " ".join(option.inner_text(timeout=300).split())
+                    value = text(option.get_attribute("value"))
+                    if value and is_safe_mindbody_category_label(label):
+                        category_options.append((label, value))
+            except Exception:
+                category_options = []
+            for category_label, value in category_options[:20]:
+                try:
+                    page.locator("select").first.select_option(value=value, timeout=1500)
+                    page.wait_for_timeout(800)
+                    clicked_tabs.append(category_label)
+                    for row in page.locator("li:has(.purchaseItem)").all()[:100]:
+                        if not row.is_visible():
+                            continue
+                        card_text = "\n".join(line.strip() for line in row.inner_text(timeout=500).splitlines() if line.strip())
+                        product = row.locator(".purchaseItem").first
+                        product_id = text(product.get_attribute("value"))
+                        platform_card_candidates.extend(
+                            static_crawler.platform_adapters.mindbody_purchase_item_candidates(
+                                category_label, card_text, page.url, product_id
+                            )
+                        )
+                except Exception:
+                    continue
+        if platform == "jane":
+            for service in page.locator("a[href*='/treatment/']").all()[:200]:
+                try:
+                    if not service.is_visible():
+                        continue
+                    platform_card_candidates.extend(
+                        static_crawler.platform_adapters.jane_service_card_candidates(
+                            service.inner_text(timeout=500), page.url, text(service.get_attribute("href"))
+                        )
+                    )
+                except Exception:
+                    continue
         visible = page.locator("body").inner_text(timeout=timeout_ms)
         page_title = page.title()
         visible_sources.append((page.url, visible))
@@ -396,7 +457,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             candidate["cardAssociationHash"] = hashlib.sha256(card_text.encode("utf-8")).hexdigest()
             dom_candidates.append(candidate)
     dom_candidates = remove_unattached_crunch_promotions(dom_candidates, url)
-    observations = network_candidates + dom_candidates
+    observations = network_candidates + platform_card_candidates + dom_candidates
     deduplicated: list[dict[str, Any]] = []
     seen: set[tuple[Any, ...]] = set()
     for candidate in observations:

@@ -3472,26 +3472,31 @@
       "gymId": "osm-node-3986912499",
       "monthlyPrice": null,
       "dayPassPrice": null,
-      "officialPriceConflict": true,
-      "priceSource": "Sisters in Motion official home, discovery, and terms pages",
-      "priceSourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+      "officialPriceConflict": false,
+      "officialTermsConflict": {
+        "status": "unresolved",
+        "fields": ["early-cancellation fee", "post-minimum-term amount"],
+        "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+        "note": "Two live policy blocks state different early-cancellation fees; only one block states a $220 every-four-weeks post-term amount. Neither disputed value is selected."
+      },
+      "priceSource": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+      "priceSourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
       "priceObservedAt": "2026-08-21",
-      "priceNote": "The live terms page contains two contradictory policy blocks, including different early-cancellation fees and only one $220/every-four-weeks statement. Current neutral membership pricing therefore fails closed. The $29 discovery and $199 four-week-unlimited products are time-limited introductory promotions and remain unselected.",
+      "priceNote": "The current official page says ongoing in-studio membership costs about $27–$32 per class and provides eight classes every four weeks. The public Mindbody storefront currently exposes $699 three-month promotional products. A separate duplicate-terms conflict remains disclosed, but no disputed amount or promotional product is selected as the standard plan.",
       "costContextOffers": [
         {
-          "kind": "conflicting-price",
-          "label": "One current terms block: month-to-month membership after the minimum term",
-          "amount": 220,
-          "cadence": "4 weeks",
-          "normalizedMonthlyLow": 238.33,
-          "normalizedMonthlyHigh": 238.33,
+          "kind": "range",
+          "label": "Ongoing in-studio membership — approximate per-class cost",
+          "low": 27,
+          "high": 32,
+          "cadence": "class",
           "productType": "class-membership",
-          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "sourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
           "observedAt": "2026-08-21",
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
-          "conflictFlags": ["duplicate-contradictory-live-terms", "early-cancellation-fee-conflict"],
-          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms."
+          "conflictFlags": [],
+          "note": "The operator describes the amount as approximate; it remains cost context rather than an exact selected recurring price."
         }
       ],
       "planOffers": [
@@ -3534,8 +3539,121 @@
             ]
           },
           "fees": []
+        },
+        {
+          "sourceProductId": "mindbody-11259",
+          "name": "3 Month In Studio Special",
+          "productType": "class-pack",
+          "accessScope": "Three-month in-studio promotional term",
+          "amount": 699,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": true,
+            "label": "Public Mindbody special"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": ["Promotional product; ordinary ongoing terms are not established by this card"]
+          },
+          "purchaseMethod": "direct-public",
+          "fees": []
+        },
+        {
+          "sourceProductId": "mindbody-11057",
+          "name": "3 Month Summer Embodiment Series",
+          "productType": "class-pack",
+          "accessScope": "Three-month seasonal embodiment series",
+          "amount": 699,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": true,
+            "label": "Seasonal public Mindbody product"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": ["Seasonal product; ordinary ongoing terms are not established by this card"]
+          },
+          "purchaseMethod": "direct-public",
+          "fees": []
         }
-      ]
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      }
+    },
+    {
+      "gymId": "osm-node-12337873692",
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "priceSource": "Peak Physio official site and linked public Jane appointment catalog",
+      "priceSourceUrl": "https://peakphysiosf.janeapp.com/",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The exact-address current operator publishes 60-minute one-to-one personal-training evaluations and follow-ups at $250. These are exact trainer-led appointment prices, not an ordinary unrestricted gym membership or class drop-in, so compatibility prices remain null.",
+      "planOffers": [
+        {
+          "sourceProductId": "discipline-2-treatment-3",
+          "name": "Personal Training: Initial Evaluation",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training evaluation",
+          "classAllowance": 1,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": ["One-to-one appointment; not an ordinary unrestricted gym or class drop-in"]
+          },
+          "promotion": {"isPromotion": false, "label": ""},
+          "fees": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/3",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Initial Evaluation — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-3",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "discipline-2-treatment-4",
+          "name": "Personal Training: Follow Up",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training follow-up",
+          "classAllowance": 1,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": ["One-to-one appointment; not an ordinary unrestricted gym or class drop-in"]
+          },
+          "promotion": {"isPromotion": false, "label": ""},
+          "fees": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/4",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Follow Up — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-4",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "none-observed"
+      }
     },
     {
       "gymId": "osm-node-4069447302",

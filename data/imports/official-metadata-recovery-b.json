@@ -758,9 +758,9 @@
       "operatorLocationId": "san-francisco",
       "hours": "Access is during scheduled pole, embodiment, and open-pole sessions on the live studio calendar; no fixed reception hours are published.",
       "recordStatus": "open",
-      "pricingAccess": "official-price-conflict",
+      "pricingAccess": "public-official-range",
       "amenities": ["pole dance", "embodiment classes", "open pole", "women-focused classes"],
-      "note": "The official home describes eight classes every four weeks, while the current terms page contains contradictory duplicate cancellation and ongoing-price blocks. Pricing remains unresolved pending review."
+      "note": "The official home describes eight classes every four weeks and an approximate $27–$32 per-class range. Duplicate cancellation and post-term policy blocks remain a disclosed terms conflict, but they do not invalidate the separate official range."
     },
     {
       "gymId": "osm-node-11777326257",

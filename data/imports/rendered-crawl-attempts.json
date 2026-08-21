@@ -1030,16 +1030,21 @@
     },
     {
       "gymId": "osm-node-12337873692",
-      "name": "Anthony Silva Fitness",
-      "url": "https://anthonysilvafitness.com",
-      "attemptedAt": "2026-08-18",
+      "name": "Peak Physio",
+      "url": "https://peakphysiosf.janeapp.com/",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "f28ecd952da6b296756c94ddd4272e2474d0c010fc0c60602b031bbf1d6cc636",
-      "networkEvidenceHashes": [],
-      "clickedPublicTabs": [],
-      "candidateCount": 0,
-      "requiresReview": false,
+      "contentHash": "d19ae2e4a6a5cd17b3eeec83afc9c078ec038fb5abd85c77d14f57600415c3eb",
+      "networkEvidenceHashes": [
+        "51e1ae5413aea60eb3c4193b33744b2ecf277e612d305ccca9c2f8065d2a1787"
+      ],
+      "clickedPublicTabs": [
+        "Personal Training"
+      ],
+      "candidateCount": 2,
+      "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
@@ -2132,7 +2137,7 @@
       "attemptedAt": "2026-08-21",
       "status": "access-blocked",
       "robotsStatus": "robots-http-404",
-      "contentHash": "00d7b5fe3fcbad0099a596bc5dfb8a09661ef8b46d4c5a3783e3f52d95433e03",
+      "contentHash": "90c8772d09d87c4f963b64dccbea86f424d94c9d379a799afabc6fc25de88c32",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,
@@ -2148,7 +2153,45 @@
       "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "b3415494464e583cacef87dffd06f5e3136174d990765ce3de9e7dc723675d76",
+      "contentHash": "d25014209f1ac08713a08ea3c82cbea1b11d5c3ec69478486e9efc96d0f6edfb",
+      "networkEvidenceHashes": [
+        "aa8ff9b91ce76fa761b00b4c33adbbad3ce84553b838aa728ef6fff9198d3786",
+        "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-3986912499",
+      "name": "Sisters in Motion — S Factor",
+      "url": "https://www.sistersinmotionsf.com/discoverypackage",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "21190019f5a5e35811e75445e46751d2e2693478e4a4091aeb2a3b700e16cc15",
+      "networkEvidenceHashes": [
+        "aa8ff9b91ce76fa761b00b4c33adbbad3ce84553b838aa728ef6fff9198d3786",
+        "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-3986912499",
+      "name": "Sisters in Motion — S Factor",
+      "url": "https://www.sistersinmotionsf.com/studioschedule",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "cf36873f230f0089612c66f71104c0d77e7838d48ff44fc20699104d9e42e023",
       "networkEvidenceHashes": [
         "aa8ff9b91ce76fa761b00b4c33adbbad3ce84553b838aa728ef6fff9198d3786",
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
