@@ -11352,12 +11352,16 @@
   },
   "https://www.soul-cycle.com": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
-    "etag": "\"13xnuoz8wvf8jdh\"",
+    "etag": "\"11sii7ll60n8jdh\"",
     "lastModified": "",
-    "contentHash": "6aa696068d74131370affd00f1e22c7af6198bf8d15c2eb810011c6bac4ff935",
+    "parserVersion": "selected-plan-catalog-v21",
+    "contentHash": "d7d3ce7f7eefe8ef7e34d9dd50f9a8aba7f4fc8f1530709bd7dadb0af9d722dc",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://www.soul-cycle.com/faq"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -11376,12 +11380,16 @@
   },
   "https://www.soul-cycle.com/studios/ca-sanfrancisco-unionstreet/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "ab53f793406dfcbc6596433293aee887b48d49ad143cd673cdfb5663224b5461",
+    "parserVersion": "selected-plan-catalog-v21",
+    "contentHash": "cb67cb00aaf8101c16507a02dc7729a06bf1f2a5e5e2bfb4eaa49301821f8026",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://www.soul-cycle.com/faq/"
+    ],
     "locationCandidates": [
       {
         "name": "SoulCycle Union Street",
@@ -48014,12 +48022,17 @@
   },
   "https://www.soul-cycle.com/series/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "492fafa1ce8780eed12a6ce6bf8fc3af690d56be68b6b50ad4350c67e59df15c",
+    "parserVersion": "selected-plan-catalog-v21",
+    "contentHash": "862ac4932c5607721f0c020ecb4497399eb5537e5636b1a5fe65c7492486731b",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+      "https://www.soul-cycle.com/faq/"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -58679,5 +58692,848 @@
     ],
     "linkedStorefronts": [],
     "locationCandidates": []
+  },
+  "https://www.soul-cycle.com/faq": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"k2voy741jq7ffg\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v21",
+    "contentHash": "61cad0333097d00f1323906470b273b56201ef652ff41ce5564d187734848cf5",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.soul-cycle.com/faq/#general"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "609 Greenwich Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.soul-cycle.com/faq/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 609 Greenwich Street",
+        "contentHash": "446c8d1f98abb52dc2936995507777021707b831344201efaa78aeb2d8f7a9d9",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://www.soul-cycle.com/series/json/27/?active-menu=cycle": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v21",
+    "contentHash": "62b3f77c87258e5c8ac8aad579f30a2f7aaa0fb6df2fb3389b53fd70a311ca69",
+    "candidates": [
+      {
+        "sourceProductId": "652214",
+        "sourceProductAliases": [
+          "soul-renew-4"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Soul Renew 4",
+        "amount": 127.0,
+        "currency": "USD",
+        "cadence": "30 days",
+        "billingInterval": "30 days",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 4.0,
+          "period": "30 days",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "Soul Renew 4 — 4 4 Classes $127 Let's Ride Soul Renew SF $127 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "652215",
+        "sourceProductAliases": [
+          "soul-renew-8"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Soul Renew 8",
+        "amount": 245.0,
+        "currency": "USD",
+        "cadence": "30 days",
+        "billingInterval": "30 days",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 8.0,
+          "period": "30 days",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "Soul Renew 8 — 8 8 Classes $245 Let's Ride Soul Renew SF $245 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "652216",
+        "sourceProductAliases": [
+          "soul-renew-12"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Soul Renew 12",
+        "amount": 355.0,
+        "currency": "USD",
+        "cadence": "30 days",
+        "billingInterval": "30 days",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 12.0,
+          "period": "30 days",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "Soul Renew 12 — 12 12 Classes $355 Let's Ride Soul Renew SF $355 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "652217",
+        "sourceProductAliases": [
+          "soul-renew-16"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Soul Renew 16",
+        "amount": 456.0,
+        "currency": "USD",
+        "cadence": "30 days",
+        "billingInterval": "30 days",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 16.0,
+          "period": "30 days",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "Soul Renew 16 — 16 16 Classes $456 Let's Ride Soul Renew SF $456 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "597762",
+        "sourceProductAliases": [
+          "soulcycle-starter-1-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle Starter 1 Classes",
+        "amount": 25.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "New-rider starter offer"
+        },
+        "expiration": {
+          "count": 30,
+          "unit": "days"
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle Starter 1 Classes — 1 New Rider Take your first ride at SOUL at a reduced rate. New Rider 1 Class $25 Let's Ride SOULCYCLE New Rider $25 Dollars Expires in 30 days",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596483",
+        "sourceProductAliases": [
+          "soulcycle-starter-3-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle Starter 3 Classes",
+        "amount": 75.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 3.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "New-rider starter offer"
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle Starter 3 Classes — 3 SOULCYCLE Starter After your first class, keep riding with The Starter Pack —three classes at a special price, just for you!* *Offer only available before booking your sixth ride. SOULCYCLE Starter 3 Classes $75 Let's ",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "654004",
+        "sourceProductAliases": [
+          "soulcycle-starter-unlimited"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle Starter Unlimited",
+        "amount": 89.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 14.0,
+          "period": "purchase",
+          "unlimited": true
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "New-rider starter offer"
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle Starter Unlimited — ∞ Unlimited Starter San Francisco Ride once a day for 2 weeks with a special introductory price. Includes a $15 no show fee. SOULCYCLE Starter Unlimited ∞ Classes $89 Let's Ride SOULCYCLE Starter Unlimited $89 Dollars Ex",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596478",
+        "sourceProductAliases": [
+          "single-class"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Single Class",
+        "amount": 38.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "One ordinary SoulCycle class in the San Francisco market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": 30,
+          "unit": "days"
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "rawLabel": "Single Class — 1 SOULCYCLE 1 Class $38 Let's Ride SOULCYCLE 1 Class $38 Dollars Expires in 30 days",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596479",
+        "sourceProductAliases": [
+          "soulcycle-5-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle 5 Classes",
+        "amount": 185.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 5.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": 45,
+          "unit": "days"
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle 5 Classes — 5 SOULCYCLE 5 Classes $185 Let's Ride SOULCYCLE 5 Classes $185 Dollars Expires in 45 days",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596480",
+        "sourceProductAliases": [
+          "soulcycle-10-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle 10 Classes",
+        "amount": 365.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 10.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": 3,
+          "unit": "months"
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle 10 Classes — 10 SOULCYCLE 10 Classes $365 Let's Ride SOULCYCLE 10 Classes $365 Dollars Expires in 3 months",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596481",
+        "sourceProductAliases": [
+          "soulcycle-20-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle 20 Classes",
+        "amount": 710.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 20.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": 9,
+          "unit": "months"
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle 20 Classes — 20 SOULCYCLE 20 Classes $710 Let's Ride SOULCYCLE 20 Classes $710 Dollars Expires in 9 months",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596482",
+        "sourceProductAliases": [
+          "soulcycle-30-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle 30 Classes",
+        "amount": 1020.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 30.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": 12,
+          "unit": "months"
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle 30 Classes — 30 SOULCYCLE 30 Classes $1,020 Let's Ride SOULCYCLE 30 Classes $1,020 Dollars Expires in 12 months",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "596484",
+        "sourceProductAliases": [
+          "soulcycle-50-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle 50 Classes",
+        "amount": 3600.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 50.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle 50 Classes — 50 SuperSoul Allows riders to reserve classes in advance of sign-ups. Includes full concierge service and priority on waitlists. Learn more here. SuperSoul 50 Classes $3,600 Let's Ride SuperSoul San Francisco $3,600 Doll",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "634444",
+        "sourceProductAliases": [
+          "soulcycle-student-1-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle Student 1 Classes",
+        "amount": 30.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "student",
+          "restrictions": [
+            "Student eligibility"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle Student 1 Classes — 1 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for special pricing. Learn more here. SOULCYCLE Student 1 Class $30 Let's Ride San Francisco U",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "634445",
+        "sourceProductAliases": [
+          "soulcycle-student-5-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle Student 5 Classes",
+        "amount": 145.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 5.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "student",
+          "restrictions": [
+            "Student eligibility"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle Student 5 Classes — 5 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for special pricing. Learn more here. SOULCYCLE Student 5 Classes $145 Let's Ride San Francisc",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "634446",
+        "sourceProductAliases": [
+          "soulcycle-student-10-classes"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "SoulCycle Student 10 Classes",
+        "amount": 280.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "San Francisco SoulCycle market",
+        "scopeType": "operator-market",
+        "classAllowance": {
+          "count": 10.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "student",
+          "restrictions": [
+            "Student eligibility"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "expiration": {
+          "count": null,
+          "unit": ""
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "rawLabel": "SoulCycle Student 10 Classes — 10 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for special pricing. Learn more here. SOULCYCLE Student 10 Classes $280 Let's Ride San Franci",
+        "method": "public-soulcycle-series-json",
+        "adapter": "soulcycle-official",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.soul-cycle.com/series/",
+        "publicApiUrl": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.soul-cycle.com/faq/": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"k2voy741jq7ffg\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v21",
+    "contentHash": "61cad0333097d00f1323906470b273b56201ef652ff41ce5564d187734848cf5",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.soul-cycle.com/faq/#general"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "609 Greenwich Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.soul-cycle.com/faq/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 609 Greenwich Street",
+        "contentHash": "446c8d1f98abb52dc2936995507777021707b831344201efaa78aeb2d8f7a9d9",
+        "autoPublishEligible": false
+      }
+    ]
   }
 }

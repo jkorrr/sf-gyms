@@ -44,7 +44,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v20"
+PARSER_VERSION = "selected-plan-catalog-v21"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -155,6 +155,12 @@ REDPOINT_ID_PREFIXES = {
     "facility": "RmFjaWxpdHk6",
     "enrollment": "RW5yb2xsbWVudFR5cGU6",
 }
+SOULCYCLE_HOSTS = {"soul-cycle.com", "www.soul-cycle.com"}
+SOULCYCLE_SERIES_PATH = "/series/"
+SOULCYCLE_SERIES_API_RE = re.compile(
+    r"^/series/json/(?P<region_id>\d{1,4})/?$",
+    re.IGNORECASE,
+)
 
 
 class PageParser(HTMLParser):
@@ -238,6 +244,57 @@ class PageParser(HTMLParser):
             self.visible.append(data.strip())
             if self._squarespace_block_depth is not None:
                 self._squarespace_block_parts.append(data.strip())
+
+
+class SoulCyclePackParser(HTMLParser):
+    """Capture complete public price cards while preserving input metadata."""
+
+    def __init__(self) -> None:
+        super().__init__(convert_charrefs=True)
+        self.cards: list[dict[str, Any]] = []
+        self._div_depth = 0
+        self._card_depth: int | None = None
+        self._text_parts: list[str] = []
+        self._attributes: dict[str, str] = {}
+
+    def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
+        values = {key.casefold(): value or "" for key, value in attrs}
+        if tag.casefold() == "div":
+            self._div_depth += 1
+            classes = {value.casefold() for value in values.get("class", "").split()}
+            if self._card_depth is None and "pack-card" in classes:
+                self._card_depth = self._div_depth
+                self._text_parts = []
+                self._attributes = {
+                    "cardQaId": values.get("data-qa-id", ""),
+                    "cardClass": values.get("class", ""),
+                }
+        if self._card_depth is None:
+            return
+        if tag.casefold() == "input":
+            name = values.get("name", "")
+            if name and values.get("value", ""):
+                self._attributes[f"input:{name}"] = values["value"]
+            for key, value in values.items():
+                if key.startswith("data-") and value:
+                    self._attributes[key] = value
+
+    def handle_endtag(self, tag: str) -> None:
+        if tag.casefold() != "div":
+            return
+        if self._card_depth is not None and self._div_depth == self._card_depth:
+            self.cards.append({
+                "text": " ".join(" ".join(self._text_parts).split()),
+                "attributes": dict(self._attributes),
+            })
+            self._card_depth = None
+            self._text_parts = []
+            self._attributes = {}
+        self._div_depth = max(0, self._div_depth - 1)
+
+    def handle_data(self, data: str) -> None:
+        if self._card_depth is not None and data.strip():
+            self._text_parts.append(data.strip())
 
 
 def text(value: Any) -> str:
@@ -2967,6 +3024,215 @@ def may_follow_nested_catalog(source_url: str, depth: int) -> bool:
     )
 
 
+def is_soulcycle_series_api_url(source_url: str) -> bool:
+    """Allow only SoulCycle's public, read-only regional series endpoint."""
+
+    parsed = urlparse(text(source_url))
+    return bool(
+        parsed.scheme.casefold() == "https"
+        and parsed.netloc.casefold() in SOULCYCLE_HOSTS
+        and SOULCYCLE_SERIES_API_RE.fullmatch(parsed.path)
+        and parse_qs(parsed.query).get("active-menu") == ["cycle"]
+    )
+
+
+def soulcycle_market_label(gym: dict[str, Any] | None) -> str:
+    """Derive the reviewed operator market from canonical location metadata."""
+
+    if not isinstance(gym, dict):
+        return ""
+    explicit = text(gym.get("market") or gym.get("city"))
+    if explicit:
+        return explicit
+    identity_text = " ".join(text(gym.get(key)) for key in ("name", "address", "canonicalAddress"))
+    if re.search(r"\bSan Francisco\b", identity_text, re.IGNORECASE):
+        return "San Francisco"
+    return ""
+
+
+def html_attribute(tag: str, name: str) -> str:
+    match = re.search(
+        rf"\b{re.escape(name)}\s*=\s*(['\"])(?P<value>.*?)\1",
+        tag,
+        re.IGNORECASE | re.DOTALL,
+    )
+    return unescape(match.group("value")) if match else ""
+
+
+def soulcycle_series_catalog_routes(
+    html: str,
+    source_url: str,
+    gym: dict[str, Any] | None,
+) -> list[str]:
+    """Resolve one exact-market SoulCycle catalog route from public HTML."""
+
+    parsed = urlparse(text(source_url))
+    if (
+        parsed.netloc.casefold() not in SOULCYCLE_HOSTS
+        or not parsed.path.casefold().startswith(SOULCYCLE_SERIES_PATH)
+        or not text(html)
+    ):
+        return []
+    market = soulcycle_market_label(gym)
+    if not market:
+        return []
+    region_id = ""
+    for tag_match in re.finditer(r"<a\b[^>]*>", html, re.IGNORECASE | re.DOTALL):
+        tag = tag_match.group(0)
+        title = html_attribute(tag, "title")
+        if title.casefold() != f"change region to {market}".casefold():
+            continue
+        candidate = html_attribute(tag, "data-id")
+        if re.fullmatch(r"\d{1,4}", candidate):
+            region_id = candidate
+            break
+    if not region_id:
+        return []
+    menu = "cycle"
+    page_match = re.search(
+        r"<[^>]*\bclass\s*=\s*(['\"])[^'\"]*\bjs-series-page\b[^'\"]*\1[^>]*>",
+        html,
+        re.IGNORECASE | re.DOTALL,
+    )
+    if page_match:
+        menu = html_attribute(page_match.group(0), "data-menu") or menu
+    if not re.fullmatch(r"[a-z][a-z0-9-]{0,30}", menu, re.IGNORECASE):
+        return []
+    return [
+        f"https://www.soul-cycle.com/series/json/{region_id}/?{urlencode({'active-menu': menu})}"
+    ]
+
+
+def soulcycle_money(value: Any) -> float | None:
+    match = re.search(r"\$?\s*(\d{1,6}(?:,\d{3})*(?:\.\d{1,2})?)", text(value))
+    return float(match.group(1).replace(",", "")) if match else None
+
+
+def soulcycle_series_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct SoulCycle's complete market catalog from bounded cards."""
+
+    if not is_soulcycle_series_api_url(source_url) or not isinstance(payload, dict):
+        return []
+    route_match = SOULCYCLE_SERIES_API_RE.fullmatch(urlparse(source_url).path)
+    route_region = int(route_match.group("region_id")) if route_match else 0
+    payload_region = numeric(payload.get("region_id"))
+    if payload_region is None or int(payload_region) != route_region:
+        return []
+    fragments = [
+        text(payload.get("purchasable_renewable_series")),
+        text(payload.get("purchasable_cycle_series")),
+    ]
+    candidates: list[dict[str, Any]] = []
+    for fragment in fragments:
+        if not fragment:
+            continue
+        parser = SoulCyclePackParser()
+        try:
+            parser.feed(fragment)
+        except Exception:
+            continue
+        for card in parser.cards:
+            attributes = card.get("attributes") or {}
+            card_text = normalized_label(text(card.get("text")))
+            price_label = text(attributes.get("data-series-price"))
+            amount = soulcycle_money(price_label)
+            product_id = text(attributes.get("input:product"))
+            size_label = text(attributes.get("input:size"))
+            series_id = text(attributes.get("data-series-id"))
+            series_name = text(attributes.get("data-series-name"))
+            semantic = " ".join((series_id, series_name, card_text))
+            if amount is None or not 0 < amount <= 10_000 or not product_id:
+                continue
+            count_match = re.fullmatch(r"\d{1,3}", size_label)
+            count = float(size_label) if count_match else None
+            unlimited = bool(re.search(r"\bunlimited\b|∞", semantic, re.IGNORECASE))
+            recurring = bool(re.search(r"SOUL\s*RENEW|recurring payment", semantic, re.IGNORECASE))
+            restricted_student = bool(re.search(r"\b(?:student|university)\b", semantic, re.IGNORECASE))
+            promotion = bool(re.search(r"\b(?:new rider|starter)\b", semantic, re.IGNORECASE))
+            ordinary_single = bool(not recurring and not promotion and not restricted_student and count == 1)
+            if recurring:
+                name = f"Soul Renew {int(count)}" if count is not None else "Soul Renew"
+                product_type = "monthly"
+                cadence = "30 days"
+                allowance_period = "30 days"
+            elif ordinary_single:
+                name = "Single Class"
+                product_type = "drop-in"
+                cadence = "visit"
+                allowance_period = "visit"
+            else:
+                base_name = "SoulCycle Student" if restricted_student else "SoulCycle Starter" if promotion else "SoulCycle"
+                suffix = "Unlimited" if unlimited else f"{int(count)} Classes" if count is not None else "Class Pack"
+                name = f"{base_name} {suffix}"
+                product_type = "class-pack"
+                cadence = "one-time"
+                allowance_period = "purchase"
+            aliases: list[str] = []
+            if recurring and count is not None:
+                aliases.append(f"soul-renew-{int(count)}")
+            if ordinary_single:
+                aliases.append("single-class")
+            semantic_slug = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+            if semantic_slug:
+                aliases.append(semantic_slug)
+            expiration_match = re.search(
+                r"\bExpires?\s+in\s+(\d{1,3})\s+(days?|months?)\b",
+                card_text,
+                re.IGNORECASE,
+            )
+            candidates.append({
+                "sourceProductId": product_id,
+                "sourceProductAliases": list(dict.fromkeys(aliases)),
+                "sourceProductIdAuthority": "operator-widget",
+                "name": name,
+                "amount": amount,
+                "currency": "USD",
+                "cadence": cadence,
+                "billingInterval": cadence,
+                "intervalCount": 1,
+                "productType": product_type,
+                "accessScope": (
+                    "San Francisco SoulCycle market"
+                    if recurring or product_type == "class-pack"
+                    else "One ordinary SoulCycle class in the San Francisco market"
+                ),
+                "scopeType": "operator-market",
+                "classAllowance": {
+                    "count": count,
+                    "period": allowance_period,
+                    "unlimited": unlimited,
+                },
+                "eligibility": {
+                    "type": "student" if restricted_student else "standard-adult",
+                    "restrictions": ["Student eligibility"] if restricted_student else [],
+                },
+                "commitment": {
+                    "type": "unknown" if recurring else "none",
+                    "minimumMonths": None,
+                },
+                "promotion": {
+                    "isPromotion": promotion,
+                    "label": "New-rider starter offer" if promotion else "",
+                },
+                "expiration": {
+                    "count": int(expiration_match.group(1)) if expiration_match else None,
+                    "unit": expiration_match.group(2).casefold() if expiration_match else "",
+                },
+                "fees": [],
+                "ordinaryUse": ordinary_single,
+                "bestValueLabel": False,
+                "rawLabel": f"{name} — {card_text}"[:500],
+                "method": "public-soulcycle-series-json",
+                "adapter": "soulcycle-official",
+                "evidenceTier": "official-public",
+                "exactLocationMatch": "operator-market-multi-location",
+                "sourceUrl": "https://www.soul-cycle.com/series/",
+                "publicApiUrl": source_url,
+                "autoPublishEligible": False,
+            })
+    return deduplicate_candidates(candidates)
+
+
 def public_platform_json_candidates(
     payload: Any,
     source_url: str,
@@ -2984,6 +3250,8 @@ def public_platform_json_candidates(
         return equinox_membership_catalog_candidates(payload, source_url), []
     if is_bay_club_api_url(source_url):
         return bay_club_public_api_candidates(payload, source_url, gym)
+    if is_soulcycle_series_api_url(source_url):
+        return soulcycle_series_candidates(payload, source_url), []
     platform = platform_name(source_url)
     if platform == "mariana-tek":
         return mariana_buy_page_candidates(payload if isinstance(payload, dict) else {}, source_url), []
@@ -4004,7 +4272,11 @@ def parse_page(
     source_url = text(result.get("url"))
     is_json = "json" in text(result.get("contentType")).casefold()
     public_platform = platform_adapters.platform_for_url(source_url)
-    approved_public_catalog = bool(public_platform) or is_equinox_membership_api_url(source_url)
+    approved_public_catalog = (
+        bool(public_platform)
+        or is_equinox_membership_api_url(source_url)
+        or is_soulcycle_series_api_url(source_url)
+    )
     json_shaped = html.lstrip().startswith(("{", "["))
     if approved_public_catalog and (is_json or json_shaped):
         try:
@@ -4053,6 +4325,7 @@ def parse_page(
     stores: list[str] = []
     stores.extend(equinox_membership_catalog_routes(parser.hydration_json, source_url))
     stores.extend(bay_club_catalog_routes(source_url, gym))
+    stores.extend(soulcycle_series_catalog_routes(html, source_url, gym))
     redpoint_preview = redpoint_preview_route(html, source_url)
     if redpoint_preview:
         stores.append(redpoint_preview)

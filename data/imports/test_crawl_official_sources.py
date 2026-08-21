@@ -1057,6 +1057,88 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(candidate["method"], "public-redpoint-preview-query")
         self.assertEqual(candidate["sourceUrl"], source)
 
+    def test_soulcycle_page_resolves_only_the_reviewed_sf_market_catalog(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "soulcycle-series-page.html"
+        html = fixture.read_text(encoding="utf-8")
+        source = "https://www.soul-cycle.com/series/"
+        gym = {
+            "name": "SoulCycle Castro",
+            "address": "400 Castro Street, San Francisco, CA 94114",
+        }
+
+        offers, stores, digest = crawler.parse_page({"html": html, "url": source}, gym)
+
+        self.assertEqual(offers, [])
+        self.assertEqual(
+            stores,
+            ["https://www.soul-cycle.com/series/json/27/?active-menu=cycle"],
+        )
+        self.assertTrue(digest)
+        self.assertEqual(
+            crawler.soulcycle_series_catalog_routes(
+                html,
+                source,
+                {"name": "SoulCycle NYC", "address": "New York, NY"},
+            ),
+            [],
+        )
+
+    def test_soulcycle_public_json_reconstructs_recurring_dropin_and_restrictions(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "soulcycle-series-sf.json"
+        payload = json.loads(fixture.read_text(encoding="utf-8"))
+        source = "https://www.soul-cycle.com/series/json/27/?active-menu=cycle"
+
+        offers, nested, digest = crawler.parse_page({
+            "html": json.dumps(payload),
+            "url": source,
+            "contentType": "application/json",
+        })
+
+        self.assertEqual(nested, [])
+        self.assertTrue(digest)
+        self.assertEqual(len(offers), 5)
+        renew = next(item for item in offers if "soul-renew-4" in item.get("sourceProductAliases", []))
+        single = next(item for item in offers if "single-class" in item.get("sourceProductAliases", []))
+        starter = next(item for item in offers if item.get("promotion", {}).get("isPromotion"))
+        student = next(item for item in offers if item.get("eligibility", {}).get("type") == "student")
+        self.assertEqual((renew["sourceProductId"], renew["amount"], renew["cadence"]), ("652214", 127, "30 days"))
+        self.assertEqual(renew["classAllowance"], {"count": 4.0, "period": "30 days", "unlimited": False})
+        self.assertEqual((single["amount"], single["productType"], single["ordinaryUse"]), (38, "drop-in", True))
+        self.assertEqual(starter["name"], "SoulCycle Starter 3 Classes")
+        self.assertEqual(student["eligibility"]["restrictions"], ["Student eligibility"])
+        self.assertTrue(all(item["method"] == "public-soulcycle-series-json" for item in offers))
+        self.assertTrue(all(item["publicApiUrl"] == source for item in offers))
+
+    def test_soulcycle_selected_plan_alias_audits_both_sf_locations(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "soulcycle-series-sf.json"
+        payload = json.loads(fixture.read_text(encoding="utf-8"))
+        source = "https://www.soul-cycle.com/series/json/27/?active-menu=cycle"
+        renew = next(
+            item for item in crawler.soulcycle_series_candidates(payload, source)
+            if "soul-renew-4" in item.get("sourceProductAliases", [])
+        )
+        gym = {
+            "id": "soulcycle-sf",
+            "monthlyPrice": 128.85,
+            "priceSourceUrl": "https://www.soul-cycle.com/series/",
+            "selectedPlanId": "soulcycle-sf:plan:soul-renew-4",
+            "plans": [{
+                "id": "soulcycle-sf:plan:soul-renew-4",
+                "sourceProductId": "soul-renew-4",
+                "name": "Soul Renew 4",
+                "classAllowance": {"count": 4, "period": "30 days", "unlimited": False, "disclosed": True},
+                "billing": {"amount": 127, "normalizedMonthly": 128.85},
+                "commitment": {"type": "month-to-month", "minimumMonths": None},
+                "evidence": {"url": "https://www.soul-cycle.com/series/"},
+            }],
+        }
+
+        audit = crawler.audit_selected_plan_price(gym, [{"gymId": "soulcycle-sf", **renew}])
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "source-product-alias")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 128.85)
+
     def test_abc_fitness_catalog_expands_plan_list_and_plan_linked_fee(self) -> None:
         join_url = "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=general"
         self.assertEqual(

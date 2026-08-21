@@ -13800,9 +13800,19 @@
           "candidateCount": 0
         },
         {
+          "url": "https://www.soul-cycle.com/faq",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.soul-cycle.com/series/",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+          "status": "fetched",
+          "candidateCount": 16
         },
         {
           "url": "https://www.soul-cycle.com",
@@ -13842,9 +13852,19 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.soul-cycle.com/faq/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.soul-cycle.com/series/",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.soul-cycle.com/series/json/27/?active-menu=cycle",
+          "status": "fetched",
+          "candidateCount": 16
         },
         {
           "url": "https://www.soul-cycle.com/studios/ca-sanfrancisco-unionstreet/",
