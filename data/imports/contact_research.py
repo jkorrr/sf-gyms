@@ -39,6 +39,11 @@ EMAIL_MARKETING_RE = re.compile(r"\b(?:email|newsletter|mailing list|marketing m
 TERMS_RE = re.compile(r"\b(?:terms|privacy|policy|consent)\b", re.I)
 ACCOUNT_RE = re.compile(r"\b(?:create (?:an )?account|register account|password|log ?in|sign ?in)\b", re.I)
 PRICING_RE = re.compile(r"\b(?:price|pricing|rate|cost|membership|tuition|dues|quote|plan)\b", re.I)
+HUMAN_CHALLENGE_RE = re.compile(
+    r"\b(?:captcha|human verification|prove (?:you are|you're) human|what is\s+\d+\s*[+x×*\-/]\s*\d+|"
+    r"solve\s+(?:this\s+)?(?:math|problem)|security question)\b",
+    re.I,
+)
 PROHIBITED_FIELD_RE = re.compile(
     r"\b(?:password|passcode|otp|credit|debit|card|cvv|cvc|billing|bank|routing|ssn|social security|"
     r"date of birth|dob|birthdate|street address|home address|emergency contact)\b",
@@ -172,6 +177,8 @@ def evaluate_form_policy(form: dict[str, Any]) -> dict[str, Any]:
             "fieldIndex", "tag", "type", "name", "id", "autocomplete", "label", "required", "disabled"
         )}
         field["category"] = classify_field(field)
+        if field["category"] == "unknown" and HUMAN_CHALLENGE_RE.search(" ".join((text(field.get("label")), text(field.get("name"))))):
+            field["category"] = "human-challenge"
         field["consentType"] = classify_consent(field) if field["category"] == "consent" else ""
         normalized_fields.append(field)
         if field["category"] == "prohibited":
@@ -180,6 +187,8 @@ def evaluate_form_policy(form: dict[str, Any]) -> dict[str, Any]:
             blockers.append("required-split-name-fields")
         if field["category"] == "unknown" and field.get("required"):
             blockers.append("unknown-required-field")
+        if field["category"] == "human-challenge":
+            blockers.append("captcha-or-human-challenge")
         if field["category"] == "consent" and field.get("required") and field["consentType"] in {"phone-marketing", "unknown"}:
             blockers.append(f"required-{field['consentType']}-consent")
     visible = " ".join((text(form.get("formText")), text(form.get("submitLabel"))))
@@ -237,7 +246,13 @@ def candidate_gyms(document: dict[str, Any]) -> list[dict[str, Any]]:
             if gym.get("publicationStatus") == "publish"
             and gym.get("recordStatus") != "coming_soon"
             and gym.get("entityKind") in {"gym", "studio", "martial-arts"}
-            and gym.get("pricingStatus") in {"gated", "unresolved"}
+            and (
+                gym.get("pricingStatus") in {"gated", "unresolved"}
+                or (
+                    gym.get("pricingStatus") == "estimated"
+                    and gym.get("pricingAccess") in {"account-required", "contact-required", "form-required"}
+                )
+            )
             and crawler.is_public_http_url(text(gym.get("websiteUrl")))
             and not crawler.coverage.is_osm_url(text(gym.get("websiteUrl")))
         ],
@@ -245,17 +260,32 @@ def candidate_gyms(document: dict[str, Any]) -> list[dict[str, Any]]:
     )
 
 
-def build_discovery_report(records: list[dict[str, Any]], generated_at: str) -> dict[str, Any]:
-    forms = [form for record in records for form in record.get("forms", [])]
+def build_discovery_report(
+    records: list[dict[str, Any]], generated_at: str, current_candidates: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
+    current_by_id = {text(gym.get("id")): gym for gym in current_candidates or []}
+    active_records = (
+        [record for record in records if text(record.get("gymId")) in current_by_id]
+        if current_candidates is not None else records
+    )
+    forms = [form for record in active_records for form in record.get("forms", [])]
     eligible = [
         (record, form)
-        for record in records for form in record.get("forms", [])
+        for record in active_records for form in record.get("forms", [])
         if form.get("submissionStatus") == "eligible-after-domain-approval"
     ]
+    active_ids = {text(record.get("gymId")) for record in active_records}
+    candidate_statuses = current_candidates if current_candidates is not None else active_records
     return {
         "generatedAt": generated_at,
-        "candidateGymsScanned": len(records),
-        "recordStatusCounts": dict(sorted(Counter(text(item.get("status")) for item in records).items())),
+        "currentCandidateGymCount": len(current_candidates) if current_candidates is not None else len(active_records),
+        "candidateGymsScanned": len(active_records),
+        "candidateGymsPendingScan": len(current_by_id.keys() - active_ids),
+        "pendingScanGymIds": sorted(current_by_id.keys() - active_ids),
+        "staleManifestRecordCount": len(records) - len(active_records),
+        "candidatePricingStatusCounts": dict(sorted(Counter(text(item.get("pricingStatus")) for item in candidate_statuses).items())),
+        "estimatedReplacementCandidates": sum(item.get("pricingStatus") == "estimated" for item in candidate_statuses),
+        "recordStatusCounts": dict(sorted(Counter(text(item.get("status")) for item in active_records).items())),
         "formsFound": len(forms),
         "eligibleFormCount": len(eligible),
         "eligibleGymCount": len({text(record.get("gymId")) for record, _form in eligible}),
@@ -272,11 +302,15 @@ def build_discovery_report(records: list[dict[str, Any]], generated_at: str) -> 
             for record, form in eligible
         ],
         "submissionPolicy": "No submission without an exact local domain/action-domain and terms-hash approval.",
+        "outreachGoal": "Replace estimates and unresolved/gated states with reviewed operator-confirmed facts where operators voluntarily reply.",
     }
 
 
 def write_discovery_report(manifest: dict[str, Any]) -> int:
-    report = build_discovery_report(manifest.get("records", []), text(manifest.get("generatedAt")))
+    document = load_json(SOURCE_PATH, {"gyms": []})
+    report = build_discovery_report(
+        manifest.get("records", []), text(manifest.get("generatedAt")), candidate_gyms(document),
+    )
     save_json(REPORT_PATH, report)
     print(json.dumps({key: report[key] for key in ("candidateGymsScanned", "formsFound", "eligibleGymCount", "blockedFormCount")}))
     return 0
@@ -325,6 +359,7 @@ def discover_gym(browser: Any, gym: dict[str, Any], timeout_ms: int, observed_at
     allowed, robots_status = crawler.robots_allowed(operator_url, timeout_ms / 1000)
     result: dict[str, Any] = {
         "gymId": text(gym.get("id")), "gymName": text(gym.get("name")), "operatorUrl": operator_url,
+        "pricingStatus": text(gym.get("pricingStatus")), "pricingAccess": text(gym.get("pricingAccess")),
         "discoveredAt": observed_at, "robotsStatus": robots_status, "forms": [], "status": "robots-disallowed" if not allowed else "scanned",
     }
     if not allowed:
@@ -357,7 +392,7 @@ def discover_gym(browser: Any, gym: dict[str, Any], timeout_ms: int, observed_at
             for item in raw_forms(page, page.url):
                 evaluated = evaluate_form_policy(item)
                 evaluated["formId"] = hashlib.sha256(
-                    f"{gym['id']}|{evaluated['url']}|{evaluated['formIndex']}|{evaluated['termsHash']}".encode("utf-8")
+                    f"{gym['id']}|{evaluated['url']}|{evaluated['formIndex']}|{evaluated['termsHash']}".encode()
                 ).hexdigest()[:20]
                 result["forms"].append(evaluated)
         result["forms"] = list({item["formId"]: item for item in result["forms"]}.values())
@@ -377,7 +412,8 @@ def discover(args: argparse.Namespace) -> int:
     except ImportError as exc:
         raise SystemExit("Form discovery requires Playwright: pip install playwright && python -m playwright install chromium") from exc
     document = load_json(SOURCE_PATH, {"gyms": []})
-    gyms = candidate_gyms(document)
+    current_candidates = candidate_gyms(document)
+    gyms = current_candidates
     if args.gym_id:
         ids = set(args.gym_id)
         gyms = [gym for gym in gyms if text(gym.get("id")) in ids]
@@ -399,7 +435,7 @@ def discover(args: argparse.Namespace) -> int:
         "policy": "Read-only discovery; submission requires an exact local domain and terms-hash approval.",
         "records": records,
     })
-    save_json(REPORT_PATH, build_discovery_report(records, observed_at))
+    save_json(REPORT_PATH, build_discovery_report(records, observed_at, current_candidates))
     print(json.dumps({"candidateGyms": len(gyms), "forms": sum(len(item.get("forms", [])) for item in records)}))
     return 0
 

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "policy": "Read-only discovery; submission requires an exact local domain and terms-hash approval.",
   "records": [
     {
@@ -2737,6 +2737,184 @@
       "robotsStatus": "checked",
       "forms": [],
       "status": "no-form-found"
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "operatorUrl": "https://lotuslandyogasf.com/",
+      "pricingStatus": "unresolved",
+      "pricingAccess": "",
+      "discoveredAt": "2026-08-21",
+      "robotsStatus": "checked",
+      "forms": [
+        {
+          "formIndex": 0,
+          "url": "https://lotuslandyogasf.com/",
+          "action": "https://lotuslandyogasf.com/",
+          "method": "GET",
+          "submitLabel": "Submit",
+          "domain": "lotuslandyogasf.com",
+          "actionDomain": "lotuslandyogasf.com",
+          "fields": [
+            {
+              "fieldIndex": 0,
+              "tag": "input",
+              "type": "email",
+              "name": "email",
+              "id": "momence-lead_form-input-email",
+              "autocomplete": "",
+              "label": "Email*",
+              "required": false,
+              "disabled": false,
+              "category": "email",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 1,
+              "tag": "input",
+              "type": "text",
+              "name": "_website",
+              "id": "",
+              "autocomplete": "off",
+              "label": "",
+              "required": false,
+              "disabled": false,
+              "category": "unknown",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 2,
+              "tag": "button",
+              "type": "submit",
+              "name": "",
+              "id": "",
+              "autocomplete": "",
+              "label": "",
+              "required": false,
+              "disabled": false,
+              "category": "ignored",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 3,
+              "tag": "input",
+              "type": "hidden",
+              "name": "pum_form_popup_id",
+              "id": "",
+              "autocomplete": "",
+              "label": "",
+              "required": false,
+              "disabled": false,
+              "category": "ignored",
+              "consentType": ""
+            }
+          ],
+          "blockers": [
+            "not-a-pricing-inquiry-form"
+          ],
+          "policyTextHash": "79e5ba3b7a1054e1ca52223e4baefb3234b74dc0dcf590b77ae9f127fe67c084",
+          "termsHash": "78a099608315897b8af4932b0ced122b701762855b701280f085f1bfbf9cb088",
+          "submissionStatus": "blocked",
+          "formId": "509a61d680ccbcabc418"
+        },
+        {
+          "formIndex": 0,
+          "url": "https://lotuslandyogasf.com/contact/",
+          "action": "https://lotuslandyogasf.com/contact/",
+          "method": "GET",
+          "submitLabel": "Send Message",
+          "domain": "lotuslandyogasf.com",
+          "actionDomain": "lotuslandyogasf.com",
+          "fields": [
+            {
+              "fieldIndex": 0,
+              "tag": "input",
+              "type": "text",
+              "name": "nf-field-1-textbox",
+              "id": "nf-field-1",
+              "autocomplete": "on",
+              "label": "Name *",
+              "required": true,
+              "disabled": false,
+              "category": "name",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 1,
+              "tag": "input",
+              "type": "email",
+              "name": "email",
+              "id": "nf-field-2",
+              "autocomplete": "email",
+              "label": "Email *",
+              "required": true,
+              "disabled": false,
+              "category": "email",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 2,
+              "tag": "textarea",
+              "type": "textarea",
+              "name": "nf-field-3",
+              "id": "nf-field-3",
+              "autocomplete": "on",
+              "label": "Message *",
+              "required": true,
+              "disabled": false,
+              "category": "message",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 3,
+              "tag": "input",
+              "type": "text",
+              "name": "nf-field-90-spam",
+              "id": "nf-field-90",
+              "autocomplete": "on",
+              "label": "What is 2 + 7?",
+              "required": true,
+              "disabled": false,
+              "category": "human-challenge",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 4,
+              "tag": "input",
+              "type": "submit",
+              "name": "",
+              "id": "nf-field-4",
+              "autocomplete": "",
+              "label": "",
+              "required": false,
+              "disabled": false,
+              "category": "ignored",
+              "consentType": ""
+            },
+            {
+              "fieldIndex": 5,
+              "tag": "input",
+              "type": "text",
+              "name": "nf-field-hp",
+              "id": "nf-field-hp-1",
+              "autocomplete": "",
+              "label": "If you are a human seeing this field, please leave it empty.",
+              "required": false,
+              "disabled": false,
+              "category": "unknown",
+              "consentType": ""
+            }
+          ],
+          "blockers": [
+            "captcha-or-human-challenge"
+          ],
+          "policyTextHash": "95fd2ee10a204e02f49ca129a9d16b42145f8597df7eea756d481b2887d5cfa4",
+          "termsHash": "1bb634f9255a883efc26cee8b60268a0e2d0d6d1f98627e1c011e053f59b13fd",
+          "submissionStatus": "blocked",
+          "formId": "99dcc60b55c499b881f9"
+        }
+      ],
+      "status": "scanned"
     },
     {
       "gymId": "osm-way-283457626",

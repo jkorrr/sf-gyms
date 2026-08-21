@@ -44,6 +44,60 @@ class OperatorReplyImportTests(unittest.TestCase):
         self.assertIsNone(replies.parse_message(raw, {"gym-1"}))
         self.assertIsNone(replies.parse_message(raw, {"gym-1"}, "other"))
 
+    def test_structured_reply_keeps_allowance_commitment_fees_dropin_and_effective_date(self) -> None:
+        result = replies.parse_message(self.message_bytes(
+            "Standard Membership is $120 per month for 4 classes per month, with a 3-month minimum.\n"
+            "The enrollment fee is $25 and the annual fee is $49.\n"
+            "A single class is $35 per visit. Rates took effect August 1, 2026."
+        ), {"gym-1"})
+        assert result is not None
+        recurring = next(item for item in result["priceCandidates"] if item["productType"] == "monthly")
+        drop_in = next(item for item in result["priceCandidates"] if item["productType"] == "drop-in")
+        self.assertEqual(recurring["amount"], 120)
+        self.assertEqual(recurring["classAllowance"]["count"], 4)
+        self.assertEqual(recurring["commitment"], {"type": "fixed-term", "minimumMonths": 3})
+        self.assertEqual([(fee["type"], fee["amount"]) for fee in recurring["fees"]], [("enrollment", 25), ("annual", 49)])
+        self.assertEqual(drop_in["amount"], 35)
+        self.assertEqual(result["effectiveDate"], "2026-08-01")
+
+    def test_ranges_are_not_misrepresented_as_exact_prices(self) -> None:
+        result = replies.parse_message(
+            self.message_bytes("One-on-one training costs $150–$250 per session depending on coach."), {"gym-1"}
+        )
+        assert result is not None
+        self.assertEqual(result["priceCandidates"], [])
+        self.assertEqual(result["rangeCandidates"][0]["low"], 150)
+        self.assertEqual(result["rangeCandidates"][0]["high"], 250)
+        self.assertEqual(result["rangeCandidates"][0]["cadence"], "visit")
+
+    def test_multiple_recurring_plans_do_not_inherit_unlinked_fees(self) -> None:
+        result = replies.parse_message(self.message_bytes(
+            "Basic plan is $100 per month.\nUnlimited plan is $180 per month.\nEnrollment fee is $40."
+        ), {"gym-1"})
+        assert result is not None
+        recurring = [item for item in result["priceCandidates"] if item["productType"] == "monthly"]
+        self.assertEqual(len(recurring), 2)
+        self.assertTrue(all(item["fees"] == [] for item in recurring))
+        self.assertEqual(result["feeCandidates"][0]["amount"], 40)
+
+    def test_quoted_thread_prices_are_ignored(self) -> None:
+        result = replies.parse_message(self.message_bytes(
+            "Our current plan is $125 per month.\n\nOn Tue, Aug 18, 2026 at 9:00 AM Research wrote:\n"
+            "> An old directory listed $75 per month."
+        ), {"gym-1"})
+        assert result is not None
+        self.assertEqual([item["amount"] for item in result["priceCandidates"]], [125])
+
+    def test_no_plan_and_custom_quote_statements_are_preserved(self) -> None:
+        result = replies.parse_message(self.message_bytes(
+            "We do not offer a standard monthly membership. Pricing depends on the trainer and program."
+        ), {"gym-1"})
+        assert result is not None
+        self.assertEqual(result["status"], "operator-statement-found")
+        self.assertEqual(result["operatorStatements"], [
+            "no-standard-plan-or-drop-in-offered", "custom-or-personalized-pricing",
+        ])
+
 
 if __name__ == "__main__":
     unittest.main()
