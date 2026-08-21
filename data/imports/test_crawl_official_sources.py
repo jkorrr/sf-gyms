@@ -1191,6 +1191,100 @@ Destination West $410 / mo Everything a Destination Membership offers."""
         self.assertFalse(next(item for item in offers if item["sourceProductId"] == "15")["bestValueLabel"])
         self.assertTrue(all(item["method"] == "visible-equinox-plan-card" for item in offers))
 
+    def test_equinox_hydration_routes_only_exact_club_and_api_reconstructs_catalog(self) -> None:
+        club_url = "https://www.equinox.com/clubs/northern-california/bealest"
+        hydration = {
+            "props": {"pageProps": {"club": {"fields": {
+                "clubData": {"fields": {"facilityId": "727"}},
+                "scheduleAVisitModule": {"fields": {"config": {"fields": {
+                    "clubsForAppointment": [
+                        {"fields": {"facilityId": "720"}},
+                        {"fields": {"facilityId": "724"}},
+                    ]
+                }}}},
+            }}}},
+            "query": {"facilityId": "999"},
+        }
+        html = (
+            '<script id="__NEXT_DATA__" type="application/json">'
+            + json.dumps(hydration)
+            + "</script>"
+        )
+        _offers, nested, _digest = crawler.parse_page({"html": html, "url": club_url, "contentType": "text/html"})
+        api_url = "https://www.equinox.com/api/cms/facilities/727/membership/plans"
+
+        self.assertEqual(nested, [api_url])
+        self.assertTrue(crawler.is_equinox_membership_api_url(api_url))
+        self.assertFalse(crawler.is_equinox_membership_api_url("http://www.equinox.com/api/cms/facilities/727/membership/plans"))
+        self.assertFalse(crawler.is_equinox_membership_api_url("https://example.com/api/cms/facilities/727/membership/plans"))
+
+        payload = {
+            "clubName": "Beale Street",
+            "country": "US",
+            "facilityStatus": "Open",
+            "isPresale": False,
+            "result": [
+                {
+                    "id": 15,
+                    "planType": "Select",
+                    "planDescription": "Access to Beale Street only.",
+                    "promotion": {
+                        "description": "Join now for $100 initiation and receive a $200 Spa credit.",
+                    },
+                    "planProperties": {
+                        "monthlyFee": 242,
+                        "initiation": {"totalDues": 500},
+                        "promotionalSavings": 400,
+                    },
+                },
+                {
+                    "id": 2931,
+                    "planType": "All-Access",
+                    "planDescription": "Access to 90+ Clubs across North America.",
+                    "planProperties": {"monthlyFee": 350, "initiation": {"totalDues": 500}},
+                },
+            ],
+        }
+        candidates, deeper, _digest = crawler.parse_page({
+            "html": json.dumps(payload), "url": api_url, "contentType": "application/json",
+        })
+        select = next(item for item in candidates if item["sourceProductId"] == "15")
+
+        self.assertEqual(deeper, [])
+        self.assertEqual([item["amount"] for item in candidates], [242, 350])
+        self.assertEqual(select["scopeType"], "single-location")
+        self.assertEqual(select["fees"], [{
+            "type": "initiation", "name": "Initiation Fee", "amount": 500,
+            "currency": "USD", "cadence": "one-time", "mandatory": True,
+        }])
+        self.assertFalse(select["promotion"]["isPromotion"])
+        self.assertIn("$100 initiation", select["promotion"]["context"])
+        self.assertEqual(select["method"], "public-equinox-membership-api")
+
+        gym = {
+            "id": "equinox-beale", "monthlyPrice": 242,
+            "selectedPlanId": "equinox-beale:plan:15", "priceSourceUrl": club_url,
+            "plans": [{
+                "id": "equinox-beale:plan:15", "sourceProductId": "15", "name": "Select",
+                "billing": {"amount": 242, "normalizedMonthly": 242},
+                "evidence": {"url": club_url, "rawLabel": "Select"},
+            }],
+        }
+        observation = {**select, "gymId": gym["id"], "catalogSourceUrl": club_url}
+        audit = crawler.audit_selected_plan_price(gym, [observation])
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "source-product-id")
+
+        observation["catalogSourceUrl"] = "https://www.equinox.com/clubs/new-york/nomad"
+        self.assertEqual(
+            crawler.audit_selected_plan_price(gym, [observation])["status"],
+            "selected-plan-not-observed",
+        )
+        self.assertEqual(
+            crawler.equinox_membership_catalog_candidates({**payload, "facilityStatus": "Closed"}, api_url),
+            [],
+        )
+
     def test_planet_fitness_cards_link_each_startup_fee_to_its_plan(self) -> None:
         visible = """PF BLACK CARD® Best Value $24.99 /mo plus taxes & fees.
 $1 Startup Fee $49 Annual Fee No Commitment Offer Expires August 30th.
