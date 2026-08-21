@@ -142,6 +142,7 @@ jobs:
             data/imports/operator-confirmed-observations.json \
             data/imports/contact-submission-attempts.json \
             data/imports/operator-document-candidates.json \
+            data/imports/operator-document-cache.json \
             data/imports/archive-status-signals.json \
             data/imports/official-crawl-observations.json \
             data/imports/rendered-crawl-attempts.json \

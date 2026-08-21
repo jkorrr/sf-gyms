@@ -1,18 +1,2537 @@
 {
   "_meta": {
-    "generatedAt": "",
+    "generatedAt": "2026-08-21",
     "policy": "Official sitemap URL leads only. Every identity and price still requires source review.",
-    "operatorHostCount": 0,
-    "sitemapRequestCount": 0,
-    "candidateUrlCount": 0
+    "operatorHostCount": 145,
+    "workerCount": 8,
+    "sitemapRequestCount": 229,
+    "candidateUrlCount": 88,
+    "cacheNotModifiedCount": 68,
+    "cacheFallbackCount": 3
   },
   "attempts": [
     {
       "operatorOrigin": "https://active-pilates.com",
-      "url": "https://active-pilates.com/sitemap.xml",
+      "url": "https://active-pilates.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://active-pilates.com",
+      "url": "https://active-pilates.com/wp-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://astayoga.com",
+      "url": "https://astayoga.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://backtosports.com",
+      "url": "https://backtosports.com/sitemap.ola.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://backtosports.com",
+      "url": "https://backtosports.com/sitemap.website.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://backtosports.com",
+      "url": "https://backtosports.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://barmethod.com",
+      "url": "https://barmethod.com/page-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://barmethod.com",
+      "url": "https://barmethod.com/post-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://barmethod.com",
+      "url": "https://barmethod.com/sitemap_index.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://bodyrok.com",
+      "url": "https://bodyrok.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://bodyrok.com",
+      "url": "https://bodyrok.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://bodyrok.com",
+      "url": "https://bodyrok.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://bodytempyoga.com",
+      "url": "https://body-temp-yoga-wellness-revamp.lovable.app/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://bodytonicsfonline.com",
+      "url": "https://bodytonicsfonline.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://campuslifeserviceshome.ucsf.edu",
+      "url": "https://campuslifeserviceshome.ucsf.edu/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://castro-fitness.com",
+      "url": "https://castro-fitness.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://churchfitness-sf.com",
+      "url": "https://churchfitness-sf.com/sitemap.ols.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://churchfitness-sf.com",
+      "url": "https://churchfitness-sf.com/sitemap.website.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://churchfitness-sf.com",
+      "url": "https://churchfitness-sf.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://citysportsfitness.com",
+      "url": "https://citysportsfitness.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://clubs.healthclubsystems.com",
+      "url": "https://clubs.healthclubsystems.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://core40.com",
+      "url": "https://core40.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://core40.com",
+      "url": "https://core40.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://core40.com",
+      "url": "https://core40.com/team-category-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://crossfitpotrerohill.com",
+      "url": "https://crossfitpotrerohill.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://crossfitpotrerohill.com",
+      "url": "https://crossfitpotrerohill.com/post-sitemap2.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://crossfitpotrerohill.com",
+      "url": "https://crossfitpotrerohill.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://customfitsf.com",
+      "url": "https://customfitsf.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://evolution-ma.com",
+      "url": "https://evolution-ma.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://evolvestronger.com",
+      "url": "https://evolvestronger.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://evolvestronger.com",
+      "url": "https://evolvestronger.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://f45training.com",
+      "url": "http://f45training.com/sitemap-studios.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://f45training.com",
+      "url": "http://f45training.com/sitemap_index.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://f45training.com",
+      "url": "https://f45training.com/post-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://fitlocalfit.com",
+      "url": "https://fitlocalfit.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://fitness2function.com",
+      "url": "https://fitness2function.com/sitemap.website.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://fitness2function.com",
+      "url": "https://fitness2function.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://fitnesssf.com",
+      "url": "https://fitnesssf.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://fitnessurbano.com",
+      "url": "https://fitnessurbano.com/news-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://fitnessurbano.com",
+      "url": "https://fitnessurbano.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://fitnessurbano.com",
+      "url": "https://fitnessurbano.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://folksf.com",
+      "url": "https://folksf.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://folksf.com",
+      "url": "https://folksf.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://folksf.com",
+      "url": "https://folksf.com/sitemap_index.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://gymworx.fit",
+      "url": "https://gymworx.fit/wp-sitemap-posts-page-1.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://gymworx.fit",
+      "url": "https://gymworx.fit/wp-sitemap-posts-trainer-1.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://gymworx.fit",
+      "url": "https://gymworx.fit/wp-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://haumsf.com",
+      "url": "https://haumsf.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://hitfitsf.com",
+      "url": "https://www.hitfitsf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://hotyogaplus-sf.com",
+      "url": "https://hotyogaplus-sf.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://hotyogaplus-sf.com",
+      "url": "https://hotyogaplus-sf.com/wp-sitemap-posts-post-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://hotyogaplus-sf.com",
+      "url": "https://hotyogaplus-sf.com/wp-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://ldac.fit",
+      "url": "https://ldac.fit/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://lfgelitetraining.com",
+      "url": "https://lfgelitetraining.com/sitemap-home.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://lfgelitetraining.com",
+      "url": "https://lfgelitetraining.com/sitemap-posts.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://lfgelitetraining.com",
+      "url": "https://lfgelitetraining.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://livefitgym.com",
+      "url": "https://livefitgym.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://livefitgym.com",
+      "url": "https://livefitgym.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://livefitgym.com",
+      "url": "https://livefitgym.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://lotuslandyogasf.com",
+      "url": "https://lotuslandyogasf.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://lotuslandyogasf.com",
+      "url": "https://lotuslandyogasf.com/wp-sitemap-posts-post-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://lotuslandyogasf.com",
+      "url": "https://lotuslandyogasf.com/wp-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://movementgyms.com",
+      "url": "https://movementgyms.com/englewood/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://movementgyms.com",
+      "url": "https://movementgyms.com/rino/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://movementgyms.com",
+      "url": "https://movementgyms.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://mx3fitness.com",
+      "url": "https://mx3fitness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://newmissionyoga.com",
+      "url": "https://newmissionyoga.com/sitemap.rss",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://newmissionyoga.com",
+      "url": "https://newmissionyoga.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://nicepilates.studio",
+      "url": "https://nicepilates.studio/sitemap.ols.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://nicepilates.studio",
+      "url": "https://nicepilates.studio/sitemap.website.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://nicepilates.studio",
+      "url": "https://nicepilates.studio/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://nmotionfitness.com",
+      "url": "https://www.nmotionfitness.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://nptest.my.canva.site",
+      "url": "https://nptest.my.canva.site/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://onemartialarts.com",
+      "url": "https://onemartialarts.com/sitemap-posttype-post.2026.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://onemartialarts.com",
+      "url": "https://onemartialarts.com/sitemap-root.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://onemartialarts.com",
+      "url": "https://onemartialarts.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://peakphysiosf.janeapp.com",
+      "url": "https://peakphysiosf.janeapp.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://pilatesaddiction.com",
+      "url": "https://pilatesaddiction.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://pilatesstorystudio.com",
+      "url": "https://pilatesstorystudio.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://pilatesstorystudio.com",
+      "url": "https://pilatesstorystudio.com/wp-sitemap-posts-us_portfolio-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://pilatesstorystudio.com",
+      "url": "https://pilatesstorystudio.com/wp-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://pop-sf.com",
+      "url": "https://pop-sf.com/sitemap.xml",
       "status": "network-error",
-      "robotsStatus": "robots-unavailable"
+      "robotsStatus": "robots-unavailable",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://powerplaysf.com",
+      "url": "https://powerplaysf.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://powerplaysf.com",
+      "url": "https://powerplaysf.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://powerplaysf.com",
+      "url": "https://powerplaysf.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://regularexercise.net",
+      "url": "https://regularexercise.net/sitemap.xml",
+      "status": "robots-disallowed",
+      "robotsStatus": "robots-http-403",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://risecombatsf.com",
+      "url": "https://risecombatsf.com/sitemap.ols.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://risecombatsf.com",
+      "url": "https://risecombatsf.com/sitemap.website.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://risecombatsf.com",
+      "url": "https://risecombatsf.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://sabrofit.com",
+      "url": "https://sabrofit.com/sitemap.ols.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sabrofit.com",
+      "url": "https://sabrofit.com/sitemap.website.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://sabrofit.com",
+      "url": "https://sabrofit.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://sanchezstreetstudios.com",
+      "url": "https://sanchezstreetstudios.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sanchezstreetstudios.com",
+      "url": "https://sanchezstreetstudios.com/wp-sitemap-posts-post-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sanchezstreetstudios.com",
+      "url": "https://sanchezstreetstudios.com/wp-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sffencers.com",
+      "url": "https://sffencers.com/sitemap.xml",
+      "status": "network-error",
+      "robotsStatus": "robots-unavailable",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://sffitlife.com",
+      "url": "https://sffitlife.com/news-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sffitlife.com",
+      "url": "https://sffitlife.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://sfgoju.com",
+      "url": "http://sfgoju.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sfgoju.com",
+      "url": "https://sfgoju.com/news-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://sfgoju.com",
+      "url": "https://sfgoju.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://solgym.com",
+      "url": "https://solgym.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://solidcore.co",
+      "url": "https://solidcore.co/sitemap.xml",
+      "status": "robots-disallowed",
+      "robotsStatus": "robots-http-403",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://sunsetgym.com",
+      "url": "https://sunsetgym.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://thecoremvmt.com",
+      "url": "https://thecoremvmt.com/wp-sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://thelotusmethod.com",
+      "url": "https://thelotusmethod.com/wp-sitemap-posts-page-1.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://thelotusmethod.com",
+      "url": "https://thelotusmethod.com/wp-sitemap-posts-post-1.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://thelotusmethod.com",
+      "url": "https://thelotusmethod.com/wp-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://theyogashalasf.com",
+      "url": "https://theyogashalasf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://touchstoneclimbing.com",
+      "url": "https://touchstoneclimbing.com/post-sitemap1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://touchstoneclimbing.com",
+      "url": "https://touchstoneclimbing.com/post-sitemap2.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://touchstoneclimbing.com",
+      "url": "https://touchstoneclimbing.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.24hourfitness.com",
+      "url": "https://www.24hourfitness.com/sitemap",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.24hourfitness.com",
+      "url": "https://www.24hourfitness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.advancedwellness.com",
+      "url": "https://www.advancedwellness.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.advancedwellness.com",
+      "url": "https://www.advancedwellness.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.advancedwellness.com",
+      "url": "https://www.advancedwellness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.americangymnasticsclub.com",
+      "url": "https://www.americangymnasticsclub.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.americangymnasticsclub.com",
+      "url": "https://www.americangymnasticsclub.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.americangymnasticsclub.com",
+      "url": "https://www.americangymnasticsclub.com/wp-sitemap-taxonomies-scope-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.ascentathletics.com",
+      "url": "https://www.ascentathletics.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/es/webflow-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/webflow-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.bayclubs.com",
+      "url": "https://proxy.bayclubs.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.bayjiujitsu.com",
+      "url": "https://www.bayjiujitsu.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.beachglasshyp.com",
+      "url": "https://www.beachglasshyp.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.benchmarkclimbing.com",
+      "url": "https://www.benchmarkclimbing.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.bhaktisf.com",
+      "url": "https://www.bhaktisf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.bijayoga.com",
+      "url": "https://www.bijayoga.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.bijayoga.com",
+      "url": "https://www.bijayoga.com/store-categories-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.bijayoga.com",
+      "url": "https://www.bijayoga.com/store-products-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.bilikyoga.com",
+      "url": "https://www.bilikyoga.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.brightstarpilates.com",
+      "url": "https://www.brightstarpilates.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.brightstarpilates.com",
+      "url": "https://www.brightstarpilates.com/store-categories-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.brightstarpilates.com",
+      "url": "https://www.brightstarpilates.com/store-products-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.castroroom.com",
+      "url": "https://www.castroroom.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.cmasf.com",
+      "url": "https://www.cmasf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/sitemap-0.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.crossfitalinea.com",
+      "url": "https://www.crossfitalinea.com/sitemap.xml",
+      "status": "http-502",
+      "robotsStatus": "checked",
+      "cacheStatus": "stale-fallback"
+    },
+    {
+      "operatorOrigin": "https://www.crossfitgoldengate.com",
+      "url": "https://www.crossfitgoldengate.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.crossfitsouthpark.com",
+      "url": "https://www.crossfitsouthpark.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.crunch.com",
+      "url": "https://www.crunch.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.desistostrengthtraining.com",
+      "url": "https://www.desistostrengthtraining.com/page-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.desistostrengthtraining.com",
+      "url": "https://www.desistostrengthtraining.com/post-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.desistostrengthtraining.com",
+      "url": "https://www.desistostrengthtraining.com/sitemap_index.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.diakadi.life",
+      "url": "https://www.diakadi.life/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.edensf.com",
+      "url": "https://www.edensf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.ehspilates.com",
+      "url": "https://www.ehspilates.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.empirebjj.com",
+      "url": "https://www.empirebjj.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/article.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/clubDetails.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/sitemap-index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.ethanrichperformance.com",
+      "url": "https://www.ethanrichperformance.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.federalfitnesscenters.com",
+      "url": "https://www.federalfitnesscenters.com/pages-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.federalfitnesscenters.com",
+      "url": "https://www.federalfitnesscenters.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.fiorfitness.org",
+      "url": "https://www.fiorfitness.org/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.fitnesssf.com",
+      "url": "https://www.fitnesssf.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.fiveanimalskungfu-sf.com",
+      "url": "https://www.fiveanimalskungfu-sf.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.fogcitycf.com",
+      "url": "https://www.fogcitycf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.forgekravmaga.com",
+      "url": "https://www.forgekravmaga.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.funkydoor.com",
+      "url": "https://www.funkydoor.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.glowyogasf.com",
+      "url": "https://www.glowyogasf.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.graciesanfrancisco.com",
+      "url": "https://www.graciesanfrancisco.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.hapkidousa.com",
+      "url": "https://www.hapkidousa.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.hapkidousa.com",
+      "url": "https://www.hapkidousa.com/wp-sitemap-posts-page-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.hapkidousa.com",
+      "url": "https://www.hapkidousa.com/wp-sitemap-posts-post-1.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.haumstudios.com",
+      "url": "https://www.haumstudios.com/sitemap.xml",
+      "status": "http-502",
+      "robotsStatus": "checked",
+      "cacheStatus": "stale-fallback"
+    },
+    {
+      "operatorOrigin": "https://www.hot8yoga.com",
+      "url": "https://www.hot8yoga.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.infinitytrainingcentersf.com",
+      "url": "https://www.infinitytrainingcentersf.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.invinciblebarbell.com",
+      "url": "https://www.invinciblebarbell.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.ironandmettlefitness.com",
+      "url": "https://www.ironandmettlefitness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.jbodyworks.com",
+      "url": "https://www.jbodyworks.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.jccsf.org",
+      "url": "https://www.jccsf.org/3d-flip-book-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.jccsf.org",
+      "url": "https://www.jccsf.org/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.jccsf.org",
+      "url": "https://www.jccsf.org/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.joltathletics.com",
+      "url": "https://www.joltathletics.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.lagreefit415.com",
+      "url": "https://www.lagreefit415.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.lamaskenpokarate.com",
+      "url": "https://www.lamaskenpokarate.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.livefitgym.com",
+      "url": "https://livefitgym.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.localsfitness.com",
+      "url": "https://www.localsfitness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.luxfitsf.com",
+      "url": "https://www.luxfitsf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.mightypilates.com",
+      "url": "https://www.mightypilates.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.moonandstars.studio",
+      "url": "https://www.moonandstars.studio/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "robots-http-404",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.musclebeachsf.com",
+      "url": "https://www.musclebeachsf.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.mx3fitness.com",
+      "url": "https://www.mx3fitness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.orangetheory.com",
+      "url": "https://www.orangetheory.com/es-co/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.orangetheory.com",
+      "url": "https://www.orangetheory.com/ja-jp/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.orangetheory.com",
+      "url": "https://www.orangetheory.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.pacificwushu.com",
+      "url": "https://www.pacificwushu.com/sitemap.xml",
+      "status": "http-300",
+      "robotsStatus": "robots-http-300",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.performforgolf.com",
+      "url": "https://www.performforgolf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.performforlifesf.com",
+      "url": "https://www.performforlifesf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.pilatesschoolsf.com",
+      "url": "http://www.pilatesschoolsf.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.planetfitness.com",
+      "url": "https://www.planetfitness.com/sitemap.xml",
+      "status": "robots-disallowed",
+      "robotsStatus": "robots-http-403",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.purebarre.com",
+      "url": "https://www.purebarre.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.raisethebarfitness.net",
+      "url": "https://www.raisethebarfitness.net/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.roarsf.com",
+      "url": "https://www.roarsf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.sistersinmotionsf.com",
+      "url": "https://www.sistersinmotionsf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.skrappackmarina.com",
+      "url": "https://skrappackmarina.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.solidcore.co",
+      "url": "https://www.solidcore.co/sitemap.xml",
+      "status": "robots-disallowed",
+      "robotsStatus": "robots-http-403",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.solunayogaandwellness.com",
+      "url": "https://www.solunayogaandwellness.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.solyogasf.com",
+      "url": "https://www.solyogasf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.soul-cycle.com",
+      "url": "https://www.soul-cycle.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.stretchlab.com",
+      "url": "https://www.stretchlab.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.strongfriendsgym.com",
+      "url": "https://www.strongfriendsgym.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.studiobylivebetter.com",
+      "url": "https://www.studiobylivebetter.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.swimlpb.com",
+      "url": "https://swimlpb.com/sitemap_index.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.tcstrengthandfitness.com",
+      "url": "https://www.tcstrengthandfitness.com/sitemap.xml",
+      "status": "http-502",
+      "robotsStatus": "checked",
+      "cacheStatus": "stale-fallback"
+    },
+    {
+      "operatorOrigin": "https://www.thecitycrossfit.com",
+      "url": "https://www.thecitycrossfit.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.thefirmsf.com",
+      "url": "https://www.thefirmsf.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.theparkgym.com",
+      "url": "https://www.theparkgym.com/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.tinyhavenyogasf.com",
+      "url": "https://www.tinyhavenyogasf.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.trainflagship.com",
+      "url": "https://www.trainflagship.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.usfca.edu",
+      "url": "https://www.usfca.edu/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.usfca.edu",
+      "url": "https://www.usfca.edu/sitemap.xml?page=1",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.usfca.edu",
+      "url": "https://www.usfca.edu/sitemap.xml?page=2",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.vrv3studios.com",
+      "url": "https://www.vrv3studios.com/sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.worldteamusa.net",
+      "url": "https://www.worldteamusa.net/sitemap.xml",
+      "status": "http-429",
+      "robotsStatus": "robots-http-429",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://www.ymcasf.org",
+      "url": "https://www.ymcasf.org/page-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.ymcasf.org",
+      "url": "https://www.ymcasf.org/post-sitemap.xml",
+      "status": "not-modified",
+      "robotsStatus": "checked",
+      "cacheStatus": "not-modified"
+    },
+    {
+      "operatorOrigin": "https://www.ymcasf.org",
+      "url": "https://www.ymcasf.org/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.yogamayu.com",
+      "url": "https://www.yogamayu.com/sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://www.yubalance.com",
+      "url": "https://yubalance.com/sitemap.xml",
+      "status": "http-404",
+      "robotsStatus": "checked",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://yogaflowsf.com",
+      "url": "https://yogaflowsf.com/sitemap.xml",
+      "status": "robots-disallowed",
+      "robotsStatus": "robots-http-403",
+      "cacheStatus": "miss"
+    },
+    {
+      "operatorOrigin": "https://yogamukunda.com",
+      "url": "https://yogamukunda.com/page-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://yogamukunda.com",
+      "url": "https://yogamukunda.com/post-sitemap.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
+    },
+    {
+      "operatorOrigin": "https://yogamukunda.com",
+      "url": "https://yogamukunda.com/sitemap_index.xml",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "cacheStatus": "refreshed"
     }
   ],
-  "candidates": []
+  "candidates": [
+    {
+      "operatorOrigin": "https://active-pilates.com",
+      "url": "https://active-pilates.com/rates/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://bodytempyoga.com",
+      "url": "https://bodytempyoga.com/memberships",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://bodytempyoga.com",
+      "url": "https://bodytempyoga.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://campuslifeserviceshome.ucsf.edu",
+      "url": "https://campuslifeserviceshome.ucsf.edu/documents-and-media/news/studio-ucsf-documents-and-media-and-uc-cyber-risk-coordination-center",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-996696401",
+        "web-4289bb94baeda1"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://customfitsf.com",
+      "url": "https://customfitsf.com/locations/market-street",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-9718392241"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://customfitsf.com",
+      "url": "https://customfitsf.com/memberships",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://evolvestronger.com",
+      "url": "https://evolvestronger.com/packages/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://folksf.com",
+      "url": "https://folksf.com/memberships/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://gymworx.fit",
+      "url": "https://gymworx.fit/memberships/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://pilatesaddiction.com",
+      "url": "https://pilatesaddiction.com/location/sf-king-street",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-70ca27f287a58c"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://risecombatsf.com",
+      "url": "https://risecombatsf.com/rates",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://sabrofit.com",
+      "url": "https://sabrofit.com/rates",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://theyogashalasf.com",
+      "url": "https://theyogashalasf.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.24hourfitness.com",
+      "url": "https://www.24hourfitness.com/membership/membership-options",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.24hourfitness.com",
+      "url": "https://www.24hourfitness.com/membership/membership-options-2",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.advancedwellness.com",
+      "url": "https://www.advancedwellness.com/join/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.advancedwellness.com",
+      "url": "https://www.advancedwellness.com/memberships-join-us/pricing/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.ascentathletics.com",
+      "url": "https://www.ascentathletics.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/es/pricing/san-francisco-marina",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-18e908eb2543ab"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/es/studio/san-francisco-marina",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-18e908eb2543ab"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/pricing/san-francisco-marina",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-18e908eb2543ab"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.barrys.com",
+      "url": "https://www.barrys.com/studio/san-francisco-marina",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-18e908eb2543ab"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/club-pilates-launches-apple-watch-integration-to-offer-enhanced-member-experience",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/club-pilates-named-entrepreneur-esteemed-franichse500list",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/club-pilates-set-to-expand-in-south-korea-through-master-franchise-agreement",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/club-pilates-signs-deal-to-bring-50-studios-to-spain",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/club-pilates-signs-master-franchise-agreement-in-australia",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/club-pilates-tees-off-mens-health-month-with-golf-championship-sweepstakes",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-announces-their-300th-location",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-at-san-diegos-healthy-living-festival",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-bozeman-commits-to-water-sustainability",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-brings-group-reformer-pilates-to-buckhead-atlanta",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-coming-to-darien-this-fall",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-continues-to-expand",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-expands-to-downtown-phoenix",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-hits-impressive-mid-year-growth-mark-eyes-new-york-for-expansion",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-in-brentwood-to-celebrate-grand-opening-this-weekend",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-is-the-workout-for-you",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-launches-reconstructed-comprehensive-instructor-training-program",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-named-americas-fourth-fastest-growing-company-by-inc-magazine",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-opens-first-studio-in-bellevue",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-opens-in-frisco",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-owner-learns-as-she-grows",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-readies-for-opening-in-ashburn",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-signs-franchise-agreement-to-open-first-locations-in-dallas",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-stretches-into-texas-with-new-houston-studio",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-the-space-coasts-newest-fitness-community",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.clubpilates.com",
+      "url": "https://www.clubpilates.com/news-and-press/press/club-pilates-to-open-locations-in-fullerton-brea",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-10917024236"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.cmasf.com",
+      "url": "https://www.cmasf.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/content/buy",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/yoga-fitness-classes/corepower-1/studio",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/yoga-fitness-classes/corepower-15/studio",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/yoga-fitness-classes/corepower-2/studio",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/yoga-fitness-classes/corepower-3/studio",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.corepoweryoga.com",
+      "url": "https://www.corepoweryoga.com/yoga-fitness-classes/corepower-strength-x/studio",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.crossfitalinea.com",
+      "url": "https://www.crossfitalinea.com/memberships",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.crossfitgoldengate.com",
+      "url": "https://www.crossfitgoldengate.com/membership",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.crossfitsouthpark.com",
+      "url": "https://www.crossfitsouthpark.com/join-crossfit-southpark",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-c3b2830a9bc6f1"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.crossfitsouthpark.com",
+      "url": "https://www.crossfitsouthpark.com/membership",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.crunch.com",
+      "url": "https://www.crunch.com/join",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/clubs/boston/sportsclubboston",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-6848648284"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/clubs/new-york/uptown/sportsclubnewyork",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-6848648284"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-6848648284"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-8a074bb0e133c0"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.equinox.com",
+      "url": "https://www.equinox.com/clubs/washington-dc/sportsclubwashingtondc",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-6848648284"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.fiorfitness.org",
+      "url": "https://www.fiorfitness.org/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.fogcitycf.com",
+      "url": "https://www.fogcitycf.com/membership",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.forgekravmaga.com",
+      "url": "https://www.forgekravmaga.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.funkydoor.com",
+      "url": "https://www.funkydoor.com/memberships",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.hapkidousa.com",
+      "url": "https://www.hapkidousa.com/membership/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.hot8yoga.com",
+      "url": "https://www.hot8yoga.com/studio/san-francisco-fidi",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-12044095332"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.ironandmettlefitness.com",
+      "url": "https://www.ironandmettlefitness.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.jccsf.org",
+      "url": "https://www.jccsf.org/join/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.performforgolf.com",
+      "url": "https://www.performforgolf.com/locations/hayes-valley",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-12132354827"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.purebarre.com",
+      "url": "https://www.purebarre.com/location/san-francisco-west-portal-ca",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-3622501398"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.solyogasf.com",
+      "url": "https://www.solyogasf.com/membership",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.soul-cycle.com",
+      "url": "https://www.soul-cycle.com/studios/ca-sanfrancisco-unionstreet/",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "web-7935d5eb8b6a85"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.stretchlab.com",
+      "url": "https://www.stretchlab.com/memberships",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.studiobylivebetter.com",
+      "url": "https://www.studiobylivebetter.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.tcstrengthandfitness.com",
+      "url": "https://www.tcstrengthandfitness.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.thecitycrossfit.com",
+      "url": "https://www.thecitycrossfit.com/drop-in",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.thecitycrossfit.com",
+      "url": "https://www.thecitycrossfit.com/memberships",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.trainflagship.com",
+      "url": "https://www.trainflagship.com/drop-in",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.usfca.edu",
+      "url": "https://www.usfca.edu/koret/membership",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-368174394"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.usfca.edu",
+      "url": "https://www.usfca.edu/koret/membership/membership-types",
+      "candidateType": "exact-location-document",
+      "matchingGymIds": [
+        "osm-node-368174394"
+      ],
+      "identityScore": 2,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.ymcasf.org",
+      "url": "https://www.ymcasf.org/membership/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.ymcasf.org",
+      "url": "https://www.ymcasf.org/membership/types-of-membership/",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "operatorOrigin": "https://www.yogamayu.com",
+      "url": "https://www.yogamayu.com/pricing",
+      "candidateType": "operator-document",
+      "matchingGymIds": [],
+      "identityScore": 1,
+      "reviewStatus": "pending",
+      "autoApply": false
+    }
+  ]
 }
