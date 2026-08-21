@@ -2122,12 +2122,15 @@
   },
   "https://core40.com/nob-hill/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 27 Mar 2026 11:56:10 GMT",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "c6095350c2436e714d6f9137e792f011061521ae443f51852f927ffd157cf8b9",
     "candidates": [],
     "linkedStorefronts": [
+      "https://core40.com/faq/",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41"
@@ -2149,20 +2152,26 @@
     ]
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "1544c4a2dd8c6d94d99da77091abfaca5cd0849429396b86d3e335e16b3ef257",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=39007&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -7610,9 +7619,11 @@
   },
   "https://haumsf.com/haight-ashbury-studio/": {
     "status": "http-404",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -7620,9 +7631,11 @@
   },
   "https://www.haumstudios.com/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"-70724470\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "8f70283c964236820b727ae8210816c7fa413face164b86908111069737e5ce1",
     "candidates": [],
     "linkedStorefronts": [],
@@ -12339,26 +12352,29 @@
   },
   "https://theyogashalasf.com/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"79de717b7bad6e5947434a7123a72a52--gzip\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "c8df2cd34ee8b3bd3eda8549ff78818c2b6488e08fda6a5c1f3ce419460878c1",
     "candidates": [],
     "linkedStorefronts": [
-      "https://theyogashalasf.com/pricing"
+      "https://theyogashalasf.com/pricing",
+      "https://theyogashalasf.com/faqs"
     ],
     "locationCandidates": [
       {
         "name": "",
-        "address": "455 Judah Street San Francisco, CA",
+        "address": "2026 Schedule 455 Judah Street San Francisco, CA",
         "latitude": null,
         "longitude": null,
         "hours": [],
         "amenities": [],
         "sourceUrl": "https://theyogashalasf.com/",
         "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 455 Judah Street San Francisco, CA",
-        "contentHash": "9ca5bdb3c22a2079db7a6fb211409e14a213668b6651b3ff56e4c702d034e895",
+        "rawLabel": "Visible address: 2026 Schedule 455 Judah Street San Francisco, CA",
+        "contentHash": "841576d1b76246ebce595f39f020e005943efe3151b6f3c07b48f8313dd3b59b",
         "autoPublishEligible": false
       },
       {
@@ -12995,12 +13011,15 @@
   },
   "https://core40.com/sunset/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Sat, 28 Mar 2026 08:49:29 GMT",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "349ecfe6a3592b1c2defe175ab07da492f9299a56062da3dd0e1a43f8d5e952e",
     "candidates": [],
     "linkedStorefronts": [
+      "https://core40.com/faq/",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41"
@@ -39170,42 +39189,92 @@
   },
   "https://core40.com/get-classes/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Tue, 17 Mar 2026 11:11:18 GMT",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "f5401e5c8210e7291596bf2c63684a69b726e6d2405bf596ad0d471d6b076bbe",
     "candidates": [
       {
+        "sourceProductId": "186",
+        "name": "VIP UNLIMITED MONTHLY SPECIAL",
         "amount": 229.0,
         "currency": "USD",
-        "rawLabel": "R MOST POPULAR OPTION! TRANSFORM VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment *$80 savings a month! $229 *Limit 1 visit per day VIP UNLIMITED MONTHLY",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
         "classAllowance": {
-          "count": 1.0,
-          "period": "month"
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
+          "count": null,
+          "period": "month",
+          "unlimited": true
         },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
         },
         "commitment": {
-          "type": "fixed-term",
+          "type": "minimum-term",
           "minimumMonths": 12
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": true,
+          "label": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment"
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment $229",
+        "method": "visible-wordpress-class-box-catalog",
+        "adapter": "wordpress-class-box",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://core40.com/get-classes/",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "operator-widget"
+      },
+      {
+        "sourceProductId": "172",
+        "name": "VIP UNLIMITED MONTHLY",
+        "amount": 269.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "minimum-term",
+          "minimumMonths": 3
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "VIP UNLIMITED MONTHLY 3-Mo Minimum Commitment $269",
+        "method": "visible-wordpress-class-box-catalog",
+        "adapter": "wordpress-class-box",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-catalog",
+        "sourceUrl": "https://core40.com/get-classes/",
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "operator-widget"
       }
     ],
     "linkedStorefronts": [
+      "https://core40.com/faq/",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
       "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41"
@@ -39228,9 +39297,11 @@
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -42130,55 +42201,27 @@
   },
   "https://www.haumstudios.com/buy-classes": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"293209803\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "2495d47e1c68ecb63549ba4567a656a5cea73bf92b990d3407a5da6427db2366",
     "candidates": [
       {
-        "amount": 69.0,
-        "currency": "USD",
-        "rawLabel": "ep into your practice with intention and enjoy 2 WEEKS of Unlimited Yoga classes + a FREE Buddy Pass for only $69. \\n \\n Sign up → \\n \\n \\n \\n \\n \\n \\n \\n Memberships \\n \\n \\n Monthly",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": {
-          "count": null,
-          "period": "month",
-          "unlimited": true
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
-      },
-      {
+        "sourceProductId": "monthly-membership-unlimited",
+        "name": "Monthly Membership Unlimited",
         "amount": 219.0,
         "currency": "USD",
-        "rawLabel": "Commitment + Freeze Information \\n here \\n \\n \\n \\n \\n BUY \\n \\n \\n Monthly Membership \\n Unlimited \\n \\n \\n $219 /mo",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
         "classAllowance": {
           "count": null,
           "period": "month",
           "unlimited": true
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
         },
         "eligibility": {
           "type": "standard-adult",
@@ -42188,234 +42231,368 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Monthly Membership Unlimited $219 /mo No commitments! Unlimited classes! Includes livestream! BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
+        "sourceProductId": "monthly-membership-unlimited-3-month",
+        "name": "Monthly Membership Unlimited",
         "amount": 189.0,
         "currency": "USD",
-        "rawLabel": "Includes livestream! \\n \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n Monthly Membership \\n Unlimited (3 Months) \\n \\n \\n $189 /mo",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
         "classAllowance": {
           "count": null,
           "period": "month",
           "unlimited": true
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
         },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
         },
         "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
+          "type": "minimum-term",
+          "minimumMonths": 3
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Monthly Membership Unlimited (3 Months) $189 /mo 3 month commitment! Unlimited classes! Includes livestream! BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
+        "sourceProductId": "midi-membership-3-month",
+        "name": "Midi Membership",
         "amount": 169.0,
         "currency": "USD",
-        "rawLabel": "ted classes! Includes livestream! \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n Midi Membership \\n 6x (3 months) \\n \\n \\n $169 /mo",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 6,
+          "period": "month",
+          "unlimited": false
         },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
         },
         "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
+          "type": "minimum-term",
+          "minimumMonths": 3
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Midi Membership 6x (3 months) $169 /mo 3 month commitment! 6x classes a month! Includes livestream! $28.16/class BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
+        "sourceProductId": "mini-membership-3-month",
+        "name": "Mini Membership",
         "amount": 119.0,
         "currency": "USD",
-        "rawLabel": "Includes livestream! $28.16/class \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n Mini Membership \\n 4x (3 Months) \\n \\n \\n $119 /mo",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 4,
+          "period": "month",
+          "unlimited": false
         },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
         },
         "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
+          "type": "minimum-term",
+          "minimumMonths": 3
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Mini Membership 4x (3 Months) $119 /mo 3 month commitment! 4x classes a month! Includes livestream! $30/class Class packs BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
+        "sourceProductId": "10-class-pack",
+        "name": "10 class pack",
+        "amount": 325.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 10,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "10 class pack ﻿ $325 10 classes $32.50/class BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-catalog",
+        "sourceUrl": "https://www.haumstudios.com/buy-classes",
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
+      },
+      {
+        "sourceProductId": "5-class-pack",
+        "name": "5 class pack",
+        "amount": 155.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 5,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "5 class pack ﻿ $155 5 classes $31/class BOOK",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-catalog",
+        "sourceUrl": "https://www.haumstudios.com/buy-classes",
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
+      },
+      {
+        "sourceProductId": "drop-in",
+        "name": "Drop-in",
+        "amount": 39.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "productType": "drop-in",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 1,
+          "period": "visit",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Drop-in ﻿ $39 1 class Livestream BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-catalog",
+        "sourceUrl": "https://www.haumstudios.com/buy-classes",
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
+      },
+      {
+        "sourceProductId": "monthly-unlimited-livestream",
+        "name": "MONTHLY UNLIMITED Livestream",
         "amount": 114.0,
         "currency": "USD",
-        "rawLabel": "\\n \\n \\n \\n \\n \\n \\n \\n \\n \\n Livestream \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n MONTHLY UNLIMITED Livestream \\n \\n \\n $114 /mo",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
         "classAllowance": {
           "count": null,
           "period": "month",
           "unlimited": true
         },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
         "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
+          "type": "online-only",
+          "restrictions": [
+            "Livestream-only; no in-person access"
+          ]
         },
         "commitment": {
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "MONTHLY UNLIMITED Livestream $114 /mo Livestream only BUY",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
-        "amount": 39.0,
+        "sourceProductId": "10-class-pack-livestream",
+        "name": "10 CLASS PACK LIVESTREAM",
+        "amount": 180.0,
         "currency": "USD",
-        "rawLabel": "s pack ﻿ \\n \\n \\n $155 \\n \\n \\n \\n 5 classes $31/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in ﻿ \\n \\n \\n $39",
-        "cadence": "visit",
-        "productType": "drop-in",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
         "classAllowance": {
-          "count": 5.0,
-          "period": "month"
+          "count": 10,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "online-only",
+          "restrictions": [
+            "Livestream-only; no in-person access"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
         },
         "promotion": {
           "isPromotion": false,
           "label": ""
         },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "10 CLASS PACK LIVESTREAM $180 10 livestream classes $18/class BOOK",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
+        "sourceProductId": "drop-in-livestream",
+        "name": "Drop-in livestream",
         "amount": 20.0,
         "currency": "USD",
-        "rawLabel": "\\n \\n $180 \\n \\n \\n \\n 10 livestream classes $18/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in livestream \\n \\n \\n $20",
         "cadence": "visit",
+        "billingInterval": "visit",
         "productType": "drop-in",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 31.0,
-        "currency": "USD",
-        "rawLabel": "lass \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n 5 class pack ﻿ \\n \\n \\n $155 \\n \\n \\n \\n 5 classes $31/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in",
-        "cadence": "visit",
-        "productType": "drop-in",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
         "classAllowance": {
-          "count": 5.0,
-          "period": "month"
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
+          "count": 1,
+          "period": "visit",
+          "unlimited": false
         },
         "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
+          "type": "online-only",
+          "restrictions": [
+            "Livestream-only; no in-person access"
+          ]
         },
         "commitment": {
-          "type": "unknown",
+          "type": "none",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 18.0,
-        "currency": "USD",
-        "rawLabel": "\\n BUY \\n \\n \\n 10 CLASS PACK LIVESTREAM \\n \\n \\n $180 \\n \\n \\n \\n 10 livestream classes $18/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in",
-        "cadence": "visit",
-        "productType": "drop-in",
-        "classAllowance": null,
         "promotion": {
-          "isPromotion": false,
-          "label": ""
+          "isPromotion": true,
+          "label": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student, or K–12 teacher? Enjoy 15% off any regular package when purchased with a valid ID in one of our studios (not valid for drop-ins). \",\"ssr_script\":\"\",\"headsection\":\"\\r \\r \\r \\r \\r \\r Buy Yoga Classes & Memberships | HAUM Studios San Francisco \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \",\"current_url\":\"\",\"collections\":\"e30=\",\"sidebarPosition\":\"NA\",\"pageFontSizeStyle\":\"@media (min-width: 1025px) { [data-version] .size-16, [data-version] .font-size-16 {--font-size: 16;}[data-version] .size-36, [data-version] .font-size-36 {--font-size: 36;}[data-version] .size-24, [data-version] .font-size-24 {--font-size: 24;}[data-version] .size-40, [data-version] .font-size-40 {--font-size: 40;} }@media (min-width: 768px) and (max-width: 1024px) { [data-version] .t-size-16, [data-version] .t-font-size-16 {--font-size: 16;}[data-version] .t-size-31, [data-version] .t-font-size-31 {--font-size: 31;}[data-version] .t-size-20, [data-version] .t-font-size-20 {--font-size: 20;}[data-version] .t-size-34, [data-version] .t-font-size-34 {--font-size: 34;} }@media (max-width: 767px) { [data-version] .m-size-16, [data-version] .m-font-size-16 {--font-size: 16;}[data-version] .m-size-29, [data-version] .m-font-size-29 {--font-size: 29;}[data-version] .m-size-19, [data-version] .m-font-size-19 {--font-size: 19;}[data-version] .m-size-32, [data-version] .m-font-size-32 {--font-size: 32;} }\",\"alias\":\"buy-classes\",\"relAlternateLanguageLinksMarkup\":\"\",\"extensionsToRender\":{\"1782334175\":\" Classes Class Schedule Class Types Private Yoga Workshops + Events Education Teacher Training 200-HR Training 300-HR Training Yoga Teacher Mentorship Workshops + Events Retreats \",\"1006814706\":\" Pricing About us Our Story Our Studios Haight-Ashbury Mission District Our Team Journal \",\"14553"
         },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student, or K–12 teacher? Enjoy 15% off any regular package when purchased with a valid ID in one of our studios (not valid for drop-ins). \",\"ssr_script\":\"\",\"headsection\":\"\\r \\r \\r \\r \\r \\r Buy Yoga Classes & Memberships | HAUM Studios San Francisco \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r",
+        "method": "visible-duda-plan-card-catalog",
+        "adapter": "duda-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://www.haumstudios.com/buy-classes",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       }
     ],
     "linkedStorefronts": [],
@@ -52136,13 +52313,16 @@
   },
   "https://theyogashalasf.com/schedule/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"c2852eb36f2b20cc91f19b201fdf9bd5--gzip\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "7d73a9870e619b9c3872d6b1c0a9077a1fa4674f61320092d87d4eca64e306d5",
     "candidates": [],
     "linkedStorefronts": [
-      "https://theyogashalasf.com/pricing"
+      "https://theyogashalasf.com/pricing",
+      "https://theyogashalasf.com/faqs"
     ],
     "locationCandidates": [
       {
@@ -52175,26 +52355,28 @@
   },
   "https://theyogashalasf.com/pricing": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"c8189d76fc7f43a587ddf681465531e2\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "d468126538f57e3d2c47e9aad8e36f50c7affbf791ee2e6e0f74b73816e2e4b6",
     "candidates": [
       {
+        "sourceProductId": "monthly-unlimited-membership",
+        "name": "Monthly Unlimited Membership",
         "amount": 159.0,
         "currency": "USD",
-        "rawLabel": "407734_66895 .sqs-block-alignment-wrapper { align-items: center; } } Monthly Unlimited Membership $159/month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
         "classAllowance": {
           "count": null,
           "period": "month",
           "unlimited": true
         },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
@@ -52203,49 +52385,35 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://theyogashalasf.com/pricing",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 129.0,
-        "currency": "USD",
-        "rawLabel": "edia screen and (max-width: 767px) { } That’s $129 per month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
         "promotion": {
           "isPromotion": false,
           "label": ""
         },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Monthly Unlimited Membership $159/month",
+        "method": "visible-squarespace-plan-card-catalog",
+        "adapter": "squarespace-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://theyogashalasf.com/pricing",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
+        "sourceProductId": "mini-membership",
+        "name": "Mini Membership",
         "amount": 89.0,
         "currency": "USD",
-        "rawLabel": "31d2ac0a71 .sqs-block-alignment-wrapper { align-items: center; } } Mini Membership (4x per month) $89/month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
+        "accessScope": "Access described by the bounded official operator plan card",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 4,
+          "period": "month",
+          "unlimited": false
         },
         "eligibility": {
           "type": "standard-adult",
@@ -52255,72 +52423,64 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Mini Membership (4x per month) $89/month",
+        "method": "visible-squarespace-plan-card-catalog",
+        "adapter": "squarespace-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://theyogashalasf.com/pricing",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "sourceProductIdAuthority": "synthetic-label"
       },
       {
-        "amount": 133.0,
+        "sourceProductId": "six-month-unlimited-pass",
+        "name": "Six Month Unlimited Pass",
+        "amount": 829.0,
         "currency": "USD",
-        "rawLabel": "983fc7618 .sqs-block-alignment-wrapper { align-items: center; } } Six Month Unlimited Pass - $829 $133 per month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Access described by the bounded official prepaid plan card",
+        "scopeType": "single-location",
         "classAllowance": {
           "count": null,
           "period": "month",
           "unlimited": true
         },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
         },
         "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
+          "type": "prepaid",
+          "minimumMonths": 6
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://theyogashalasf.com/pricing",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 35.0,
-        "currency": "USD",
-        "rawLabel": "nd (max-width: 767px) { } DROP IN - $35",
-        "cadence": "visit",
-        "productType": "drop-in",
-        "classAllowance": null,
         "promotion": {
           "isPromotion": false,
           "label": ""
         },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Six Month Unlimited Pass - $829 $133 per month. Come as many times as you’d like for 6 months. (must be paid in full)",
+        "method": "visible-squarespace-plan-card-catalog",
+        "adapter": "squarespace-plan-card",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-catalog",
         "sourceUrl": "https://theyogashalasf.com/pricing",
-        "autoPublishEligible": false
+        "autoPublishEligible": false,
+        "intervalCount": 6,
+        "sourceProductIdAuthority": "synthetic-label"
       }
     ],
     "linkedStorefronts": [
       "https://theyogashalasf.com/pricing#page",
+      "https://theyogashalasf.com/faqs",
       "https://clients.mindbodyonline.com/classic/ws?prodId=100006&sTG=24&studioid=5728426&stype=41",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100045",
@@ -52361,90 +52521,122 @@
     ]
   },
   "https://clients.mindbodyonline.com/classic/ws?prodId=100006&sTG=24&studioid=5728426&stype=41": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "e0c14bf9c2afb16503189ab519df6828197271f47a0876968cce6e76f1c1e7be",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100045": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "8944024563eb93b5c3523e4b9047c2dc1f1c48280b9079670e24e5f007d0acdc",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40&prodId=104": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "d60fd349a94b94b145af86b3de544b1f0184c37f27bd7e726448cab14562583d",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?prodId=100003&sTG=24&studioid=5728426&stype=41": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "d925a3d8c33788086ff85f871d1866104def0fc99565245dc12dc12b8b971230",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?prodId=100004&sTG=24&studioid=5728426&stype=41": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "076059891dce72154e863e05b2545063fde66dbdadc5bff7fd835060acaa7c86",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100039": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "c1f2fb15b99ba35939036967326ca628d09dfa5c0fdeffc9750fe26f8ae59d0c",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100147": {
-    "status": "http-403",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "b9820907e0a51d694bddcf809bf9911189bc91ecd43db3b9ed0b54e327ef1a9e",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100172": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -56996,6 +57188,116 @@
     "lastModified": "",
     "parserVersion": "selected-plan-catalog-v13",
     "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://theyogashalasf.com/faqs": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"1019185534a4cf5bf3d32ab1ec1770bd--gzip\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "ad1f679d674e64e9200b827af5c2307a2f4837a6917f6ee3fda4417ec0b71cb6",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://theyogashalasf.com/faqs#page",
+      "https://theyogashalasf.com/pricing"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "455 Judah street in San Francisco. Right down the road",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://theyogashalasf.com/faqs",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 455 Judah street in San Francisco. Right down the road",
+        "contentHash": "674b3459a6dce207595977e826d2f8a8cbe59c62b9a01f3bb047bdb28bd51d74",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "455 Judah Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://theyogashalasf.com/faqs",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 455 Judah Street",
+        "contentHash": "262e582994cc693cb8712e2fc2b1720332466087bce1df2192237d99e23f826c",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "2010 Balboa Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://theyogashalasf.com/faqs",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 2010 Balboa Street",
+        "contentHash": "a3a3b9c8611c3ceaf261a540f68fac6469cfd907d18cdd7a4c2a36709311c71d",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "330a504a73e467617fb03c76f4fce8e5dbfb80f9e8ac96f3c03e8478579e495b",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://core40.com/faq/": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 27 Mar 2026 14:05:54 GMT",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "49a0bc6a793e7ddb5a8bf309fc40e45a672c945636c68f310edd4ad2f3000268",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
+      "https://core40.com/faq/#1553768830564-60b8b125-ed26",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1390 Larkin Street San Francisco, CA 94109",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://core40.com/faq/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1390 Larkin Street San Francisco, CA 94109",
+        "contentHash": "1e42f0102b18e5bde364c2d5bc3fcc3078dbe237cc16eddb10add9ec4c2cc1bb",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=39007&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v17",
+    "contentHash": "0e25230deb0536f0a09c71332839246fd1e396f3ee942f48c0ca5c702dc8947a",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []

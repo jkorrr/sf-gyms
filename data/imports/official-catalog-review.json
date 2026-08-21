@@ -2,9 +2,9 @@
   "_meta": {
     "generatedAt": "2026-08-21",
     "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
-    "proposalCount": 78,
+    "proposalCount": 84,
     "unchangedApprovedCount": 11,
-    "rejectedUnattachedObservationCount": 881
+    "rejectedUnattachedObservationCount": 859
   },
   "proposals": [
     {
@@ -511,6 +511,205 @@
         "included": false,
         "planOfferCount": 0,
         "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "osm-node-10276089929",
+      "gymName": "CORE40 Nob Hill",
+      "canonicalAddress": "1390 larkin st",
+      "operatorId": "core40.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://core40.com/get-classes/"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "unlimited-three-month",
+          "name": "Unlimited Membership — Three-Month Minimum",
+          "accessScope": "Unlimited CORE40 classes",
+          "scopeType": "multi-location",
+          "classAllowance": "unlimited",
+          "amount": 269,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-twelve-month",
+          "name": "Unlimited Membership — Twelve-Month Minimum",
+          "accessScope": "Unlimited CORE40 classes",
+          "scopeType": "multi-location",
+          "classAllowance": "unlimited",
+          "amount": 229,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "one-month-unlimited",
+          "name": "One-Month Unlimited Pass",
+          "productType": "class-pack",
+          "accessScope": "Non-recurring month of unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 289,
+          "billingInterval": "month",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "first-month-three",
+          "name": "First Month — Three-Month Membership",
+          "accessScope": "Promotional first month of the three-month membership",
+          "classAllowance": "unlimited",
+          "amount": 169,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": true,
+            "label": "First-month offer"
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "186",
+          "name": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment $229",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 12,
+          "promotion": {
+            "isPromotion": true,
+            "label": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment"
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://core40.com/get-classes/",
+            "observedAt": "2026-08-21",
+            "source": "wordpress-class-box",
+            "method": "visible-wordpress-class-box-catalog",
+            "rawLabel": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment $229",
+            "contentHash": "3c2936393e22371388efbea550ffe71f502caac1a8d7e8c4e56cf31e68e18bb7",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "186",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "172",
+          "name": "VIP UNLIMITED MONTHLY 3-Mo Minimum Commitment $269",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 269.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://core40.com/get-classes/",
+            "observedAt": "2026-08-21",
+            "source": "wordpress-class-box",
+            "method": "visible-wordpress-class-box-catalog",
+            "rawLabel": "VIP UNLIMITED MONTHLY 3-Mo Minimum Commitment $269",
+            "contentHash": "b57daf5f54004b1903fcb64b9927b4fb77040ebbb4405a44bcf3771dfaf72d55",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "172",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "first-class",
+          "name": "First Class",
+          "amount": 20,
+          "promotion": {
+            "isPromotion": true,
+            "label": "First-class offer"
+          }
+        },
+        {
+          "sourceProductId": "single-session",
+          "name": "Single Session",
+          "amount": 38
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 269.0,
+        "dayPassPrice": 38.0,
+        "selectedPlanId": "osm-node-10276089929:plan:unlimited-three-month",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 4,
+        "dropInOfferCount": 2,
         "costContextOfferCount": 0,
         "catalogCompleteness": null
       }
@@ -3627,6 +3826,686 @@
         "included": true,
         "planOfferCount": 7,
         "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "osm-node-3658328826",
+      "gymName": "CORE40 Sunset",
+      "canonicalAddress": "827 irving st",
+      "operatorId": "core40",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://core40.com/get-classes/"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "unlimited-three-month",
+          "name": "Unlimited Membership — Three-Month Minimum",
+          "accessScope": "Unlimited CORE40 classes",
+          "scopeType": "multi-location",
+          "classAllowance": "unlimited",
+          "amount": 269,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-twelve-month",
+          "name": "Unlimited Membership — Twelve-Month Minimum",
+          "accessScope": "Unlimited CORE40 classes",
+          "scopeType": "multi-location",
+          "classAllowance": "unlimited",
+          "amount": 229,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "one-month-unlimited",
+          "name": "One-Month Unlimited Pass",
+          "productType": "class-pack",
+          "accessScope": "Non-recurring month of unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 289,
+          "billingInterval": "month",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "first-month-three",
+          "name": "First Month — Three-Month Membership",
+          "accessScope": "Promotional first month of the three-month membership",
+          "classAllowance": "unlimited",
+          "amount": 169,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": true,
+            "label": "First-month offer"
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "186",
+          "name": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment $229",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 12,
+          "promotion": {
+            "isPromotion": true,
+            "label": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment"
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://core40.com/get-classes/",
+            "observedAt": "2026-08-21",
+            "source": "wordpress-class-box",
+            "method": "visible-wordpress-class-box-catalog",
+            "rawLabel": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment $229",
+            "contentHash": "3c2936393e22371388efbea550ffe71f502caac1a8d7e8c4e56cf31e68e18bb7",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "186",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "172",
+          "name": "VIP UNLIMITED MONTHLY 3-Mo Minimum Commitment $269",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 269.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://core40.com/get-classes/",
+            "observedAt": "2026-08-21",
+            "source": "wordpress-class-box",
+            "method": "visible-wordpress-class-box-catalog",
+            "rawLabel": "VIP UNLIMITED MONTHLY 3-Mo Minimum Commitment $269",
+            "contentHash": "b57daf5f54004b1903fcb64b9927b4fb77040ebbb4405a44bcf3771dfaf72d55",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "172",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "first-class",
+          "name": "First Class",
+          "amount": 20,
+          "promotion": {
+            "isPromotion": true,
+            "label": "First-class offer"
+          }
+        },
+        {
+          "sourceProductId": "single-session",
+          "name": "Single Session",
+          "amount": 38
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 269.0,
+        "dayPassPrice": 38.0,
+        "selectedPlanId": "osm-node-3658328826:plan:unlimited-three-month",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 4,
+        "dropInOfferCount": 2,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "osm-node-3801395450",
+      "gymName": "HAUM Studios - Haight-Ashbury",
+      "canonicalAddress": "780 stanyan st",
+      "operatorId": "haumsf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://www.haumstudios.com/buy-classes"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "mini",
+          "name": "Mini Membership",
+          "accessScope": "Small recurring class membership",
+          "amount": 108,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-three-month",
+          "name": "Unlimited with 3-month commitment",
+          "accessScope": "Unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 169,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-flex",
+          "name": "Unlimited No Commitment",
+          "accessScope": "Unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 199,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "MONTHLY UNLIMITED Livestream $114 /mo Livestream only BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 114.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "MONTHLY UNLIMITED Livestream $114 /mo Livestream only BUY",
+            "contentHash": "85b80fe60aa8b55c95c5d5338fbf964669f01f33585ba17381296f807b4c41cd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-unlimited-livestream",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership 4x (3 Months) $119 /mo 3 month commitment! 4x classes a month! Includes livestream! $30/class Class packs BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 119.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Mini Membership 4x (3 Months) $119 /mo 3 month commitment! 4x classes a month! Includes livestream! $30/class Class packs BUY",
+            "contentHash": "e8868b1246cfe595e2807ab29dc611899b3d35cc057bed8d2a4997d4764a8827",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "mini-membership-3-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "5-class-pack",
+          "name": "5 class pack ﻿ $155 5 classes $31/class BOOK",
+          "productType": "class-membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "amount": 155.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "5 class pack ﻿ $155 5 classes $31/class BOOK",
+            "contentHash": "c36832612cc32a7e328b867fd9582a1e0806bd3619ec675bd0a261bb2cbbc0cd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "5-class-pack",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership 6x (3 months) $169 /mo 3 month commitment! 6x classes a month! Includes livestream! $28.16/class BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 169.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 6,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Midi Membership 6x (3 months) $169 /mo 3 month commitment! 6x classes a month! Includes livestream! $28.16/class BUY",
+            "contentHash": "5a49845cfe2dabe556a19cb0c723199ee3ab5d3083061bbe330c5e94417fae85",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "midi-membership-3-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 CLASS PACK LIVESTREAM $180 10 livestream classes $18/class BOOK",
+          "productType": "class-membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "amount": 180.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "10 CLASS PACK LIVESTREAM $180 10 livestream classes $18/class BOOK",
+            "contentHash": "fefc6edd86aa2ffcbd587ef3e8beb93ecaf20a911ee54823a326ec2420f5d2f6",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "10-class-pack-livestream",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited (3 Months) $189 /mo 3 month commitment! Unlimited classes! Includes livestream! BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 189.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Monthly Membership Unlimited (3 Months) $189 /mo 3 month commitment! Unlimited classes! Includes livestream! BUY",
+            "contentHash": "42a846d6cae806691c10948a178d8a2a9a93feae597b2e135e7e8c09bd18e939",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-membership-unlimited-3-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited $219 /mo No commitments! Unlimited classes! Includes livestream! BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 219.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Monthly Membership Unlimited $219 /mo No commitments! Unlimited classes! Includes livestream! BUY",
+            "contentHash": "7996800b0c71335aed8e0e1dce6b1ca87fd34631a1f0084937b0434071f30c70",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-membership-unlimited",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "10-class-pack",
+          "name": "10 class pack ﻿ $325 10 classes $32.50/class BUY",
+          "productType": "class-membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "amount": 325.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "10 class pack ﻿ $325 10 classes $32.50/class BUY",
+            "contentHash": "6a15b0f2b5306d6328d1ba3949104ff5848c7ae12002e2faf098cbf64cdeecb1",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "10-class-pack",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "in-person-drop-in",
+          "name": "In-person drop-in",
+          "amount": 35
+        },
+        {
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or ",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 20.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student, or K–12 teacher? Enjoy 15% off any regular package when purchased with a valid ID in one of our studios (not valid for drop-ins). \",\"ssr_script\":\"\",\"headsection\":\"\\r \\r \\r \\r \\r \\r Buy Yoga Classes & Memberships | HAUM Studios San Francisco \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \",\"current_url\":\"\",\"collections\":\"e30=\",\"sidebarPosition\":\"NA\",\"pageFontSizeStyle\":\"@media (min-width: 1025px) { [data-version] .size-16, [data-version] .font-size-16 {--font-size: 16;}[data-version] .size-36, [data-version] .font-size-36 {--font-size: 36;}[data-version] .size-24, [data-version] .font-size-24 {--font-size: 24;}[data-version] .size-40, [data-version] .font-size-40 {--font-size: 40;} }@media (min-width: 768px) and (max-width: 1024px) { [data-version] .t-size-16, [data-version] .t-font-size-16 {--font-size: 16;}[data-version] .t-size-31, [data-version] .t-font-size-31 {--font-size: 31;}[data-version] .t-size-20, [data-version] .t-font-size-20 {--font-size: 20;}[data-version] .t-size-34, [data-version] .t-font-size-34 {--font-size: 34;} }@media (max-width: 767px) { [data-version] .m-size-16, [data-version] .m-font-size-16 {--font-size: 16;}[data-version] .m-size-29, [data-version] .m-font-size-29 {--font-size: 29;}[data-version] .m-size-19, [data-version] .m-font-size-19 {--font-size: 19;}[data-version] .m-size-32, [data-version] .m-font-size-32 {--font-size: 32;} }\",\"alias\":\"buy-classes\",\"relAlternateLanguageLinksMarkup\":\"\",\"extensionsToRender\":{\"1782334175\":\" Classes Class Schedule Class Types Private Yoga Workshops + Events Education Teacher Training 200-HR Training 300-HR Training Yoga Teacher Mentorship Workshops + Events Retreats \",\"1006814706\":\" Pricing About us Our Story Our Studios Haight-Ashbury Mission District Our Team Journal \",\"14553"
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student,",
+            "contentHash": "5d5ce1267b2345fd6a283f8d3220bff3eb0c6456548d614a8b05359a4a13946b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "drop-in-livestream",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "drop-in",
+          "name": "Drop-in ﻿ $39 1 class Livestream BUY",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 39.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Drop-in ﻿ $39 1 class Livestream BUY",
+            "contentHash": "ddb7081c3de2de41ed8e4ab17da1615b104dcc7e8d0772caf50219c7d6eba911",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "drop-in",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 108.0,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "osm-node-3801395450:plan:mini",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 3,
+        "dropInOfferCount": 1,
         "costContextOfferCount": 0,
         "catalogCompleteness": null
       }
@@ -13885,6 +14764,198 @@
       }
     },
     {
+      "gymId": "web-46a150f089f8a7",
+      "gymName": "The Yoga Shala - Inner Sunset",
+      "canonicalAddress": "455 judah st",
+      "operatorId": "theyogashalasf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://theyogashalasf.com/pricing"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "six-month-prepaid",
+          "name": "Six-Month Unlimited Pass",
+          "accessScope": "Unlimited yoga for six months",
+          "classAllowance": "unlimited",
+          "amount": 829,
+          "billingInterval": "month",
+          "intervalCount": 6,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6,
+          "fees": []
+        },
+        {
+          "sourceProductId": "mini-membership",
+          "name": "Mini Membership (4x per month) $89/month",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 89.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://theyogashalasf.com/pricing",
+            "observedAt": "2026-08-21",
+            "source": "squarespace-plan-card",
+            "method": "visible-squarespace-plan-card-catalog",
+            "rawLabel": "Mini Membership (4x per month) $89/month",
+            "contentHash": "a71b757254c9b2a850d38582e66c7b7e43c72808b2c97fe1846c13f6f1afae5c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "mini-membership",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "monthly-unlimited-membership",
+          "name": "Monthly Unlimited Membership $159/month",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 159.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://theyogashalasf.com/pricing",
+            "observedAt": "2026-08-21",
+            "source": "squarespace-plan-card",
+            "method": "visible-squarespace-plan-card-catalog",
+            "rawLabel": "Monthly Unlimited Membership $159/month",
+            "contentHash": "7133619e3998b70a6a5df7cecbca9dd09714edffa051c99566982e2833fb8778",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-unlimited-membership",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "six-month-unlimited-pass",
+          "name": "Six Month Unlimited Pass - $829 $133 per month. Come as many times as you’d like for 6 months. (must be paid in full)",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official prepaid plan card",
+          "scopeType": "single-location",
+          "amount": 829.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 6,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 6,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://theyogashalasf.com/pricing",
+            "observedAt": "2026-08-21",
+            "source": "squarespace-plan-card",
+            "method": "visible-squarespace-plan-card-catalog",
+            "rawLabel": "Six Month Unlimited Pass - $829 $133 per month. Come as many times as you’d like for 6 months. (must be paid in full)",
+            "contentHash": "a7626ac4264e6bc161329d220220941cb3ccf9a51795b158d335e01337d74c2a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "six-month-unlimited-pass",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "drop-in",
+          "name": "Drop-in",
+          "amount": 35
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 138.17,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "web-46a150f089f8a7:plan:six-month-prepaid",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 1,
+        "dropInOfferCount": 1,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "web-4aaec1680acf72",
       "gymName": "24 Hour Fitness Potrero Sport",
       "canonicalAddress": "1645 bryant st",
@@ -14747,6 +15818,487 @@
         "included": false,
         "planOfferCount": 0,
         "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "web-686330489fbf10",
+      "gymName": "HAUM Studios - Mission District",
+      "canonicalAddress": "2973 16th st",
+      "operatorId": "haumstudios.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://www.haumstudios.com/buy-classes"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "mini",
+          "name": "Mini Membership",
+          "accessScope": "Small recurring class membership",
+          "amount": 108,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-three-month",
+          "name": "Unlimited with 3-month commitment",
+          "accessScope": "Unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 169,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-flex",
+          "name": "Unlimited No Commitment",
+          "accessScope": "Unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 199,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "MONTHLY UNLIMITED Livestream $114 /mo Livestream only BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 114.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "MONTHLY UNLIMITED Livestream $114 /mo Livestream only BUY",
+            "contentHash": "85b80fe60aa8b55c95c5d5338fbf964669f01f33585ba17381296f807b4c41cd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-unlimited-livestream",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership 4x (3 Months) $119 /mo 3 month commitment! 4x classes a month! Includes livestream! $30/class Class packs BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 119.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Mini Membership 4x (3 Months) $119 /mo 3 month commitment! 4x classes a month! Includes livestream! $30/class Class packs BUY",
+            "contentHash": "e8868b1246cfe595e2807ab29dc611899b3d35cc057bed8d2a4997d4764a8827",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "mini-membership-3-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "5-class-pack",
+          "name": "5 class pack ﻿ $155 5 classes $31/class BOOK",
+          "productType": "class-membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "amount": 155.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "5 class pack ﻿ $155 5 classes $31/class BOOK",
+            "contentHash": "c36832612cc32a7e328b867fd9582a1e0806bd3619ec675bd0a261bb2cbbc0cd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "5-class-pack",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership 6x (3 months) $169 /mo 3 month commitment! 6x classes a month! Includes livestream! $28.16/class BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 169.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 6,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Midi Membership 6x (3 months) $169 /mo 3 month commitment! 6x classes a month! Includes livestream! $28.16/class BUY",
+            "contentHash": "5a49845cfe2dabe556a19cb0c723199ee3ab5d3083061bbe330c5e94417fae85",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "midi-membership-3-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 CLASS PACK LIVESTREAM $180 10 livestream classes $18/class BOOK",
+          "productType": "class-membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "amount": 180.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "10 CLASS PACK LIVESTREAM $180 10 livestream classes $18/class BOOK",
+            "contentHash": "fefc6edd86aa2ffcbd587ef3e8beb93ecaf20a911ee54823a326ec2420f5d2f6",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "10-class-pack-livestream",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited (3 Months) $189 /mo 3 month commitment! Unlimited classes! Includes livestream! BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 189.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Monthly Membership Unlimited (3 Months) $189 /mo 3 month commitment! Unlimited classes! Includes livestream! BUY",
+            "contentHash": "42a846d6cae806691c10948a178d8a2a9a93feae597b2e135e7e8c09bd18e939",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-membership-unlimited-3-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited $219 /mo No commitments! Unlimited classes! Includes livestream! BUY",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 219.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Monthly Membership Unlimited $219 /mo No commitments! Unlimited classes! Includes livestream! BUY",
+            "contentHash": "7996800b0c71335aed8e0e1dce6b1ca87fd34631a1f0084937b0434071f30c70",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-membership-unlimited",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "10-class-pack",
+          "name": "10 class pack ﻿ $325 10 classes $32.50/class BUY",
+          "productType": "class-membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "amount": 325.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "10 class pack ﻿ $325 10 classes $32.50/class BUY",
+            "contentHash": "6a15b0f2b5306d6328d1ba3949104ff5848c7ae12002e2faf098cbf64cdeecb1",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "10-class-pack",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "in-person-drop-in",
+          "name": "In-person drop-in",
+          "amount": 35
+        },
+        {
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or ",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 20.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student, or K–12 teacher? Enjoy 15% off any regular package when purchased with a valid ID in one of our studios (not valid for drop-ins). \",\"ssr_script\":\"\",\"headsection\":\"\\r \\r \\r \\r \\r \\r Buy Yoga Classes & Memberships | HAUM Studios San Francisco \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \\r \",\"current_url\":\"\",\"collections\":\"e30=\",\"sidebarPosition\":\"NA\",\"pageFontSizeStyle\":\"@media (min-width: 1025px) { [data-version] .size-16, [data-version] .font-size-16 {--font-size: 16;}[data-version] .size-36, [data-version] .font-size-36 {--font-size: 36;}[data-version] .size-24, [data-version] .font-size-24 {--font-size: 24;}[data-version] .size-40, [data-version] .font-size-40 {--font-size: 40;} }@media (min-width: 768px) and (max-width: 1024px) { [data-version] .t-size-16, [data-version] .t-font-size-16 {--font-size: 16;}[data-version] .t-size-31, [data-version] .t-font-size-31 {--font-size: 31;}[data-version] .t-size-20, [data-version] .t-font-size-20 {--font-size: 20;}[data-version] .t-size-34, [data-version] .t-font-size-34 {--font-size: 34;} }@media (max-width: 767px) { [data-version] .m-size-16, [data-version] .m-font-size-16 {--font-size: 16;}[data-version] .m-size-29, [data-version] .m-font-size-29 {--font-size: 29;}[data-version] .m-size-19, [data-version] .m-font-size-19 {--font-size: 19;}[data-version] .m-size-32, [data-version] .m-font-size-32 {--font-size: 32;} }\",\"alias\":\"buy-classes\",\"relAlternateLanguageLinksMarkup\":\"\",\"extensionsToRender\":{\"1782334175\":\" Classes Class Schedule Class Types Private Yoga Workshops + Events Education Teacher Training 200-HR Training 300-HR Training Yoga Teacher Mentorship Workshops + Events Retreats \",\"1006814706\":\" Pricing About us Our Story Our Studios Haight-Ashbury Mission District Our Team Journal \",\"14553"
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student,",
+            "contentHash": "5d5ce1267b2345fd6a283f8d3220bff3eb0c6456548d614a8b05359a4a13946b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "drop-in-livestream",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "drop-in",
+          "name": "Drop-in ﻿ $39 1 class Livestream BUY",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 39.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "duda-plan-card",
+            "method": "visible-duda-plan-card-catalog",
+            "rawLabel": "Drop-in ﻿ $39 1 class Livestream BUY",
+            "contentHash": "ddb7081c3de2de41ed8e4ab17da1615b104dcc7e8d0772caf50219c7d6eba911",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "drop-in",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 108.0,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "web-686330489fbf10:plan:mini",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 3,
+        "dropInOfferCount": 1,
         "costContextOfferCount": 0,
         "catalogCompleteness": null
       }
@@ -19334,6 +20886,198 @@
       }
     },
     {
+      "gymId": "web-c195ac37294a74",
+      "gymName": "The Yoga Shala - Richmond District",
+      "canonicalAddress": "2010 balboa st",
+      "operatorId": "theyogashalasf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://theyogashalasf.com/pricing"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "six-month-prepaid",
+          "name": "Six-Month Unlimited Pass",
+          "accessScope": "Unlimited yoga for six months",
+          "classAllowance": "unlimited",
+          "amount": 829,
+          "billingInterval": "month",
+          "intervalCount": 6,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6,
+          "fees": []
+        },
+        {
+          "sourceProductId": "mini-membership",
+          "name": "Mini Membership (4x per month) $89/month",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 89.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://theyogashalasf.com/pricing",
+            "observedAt": "2026-08-21",
+            "source": "squarespace-plan-card",
+            "method": "visible-squarespace-plan-card-catalog",
+            "rawLabel": "Mini Membership (4x per month) $89/month",
+            "contentHash": "a71b757254c9b2a850d38582e66c7b7e43c72808b2c97fe1846c13f6f1afae5c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "mini-membership",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "monthly-unlimited-membership",
+          "name": "Monthly Unlimited Membership $159/month",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 159.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://theyogashalasf.com/pricing",
+            "observedAt": "2026-08-21",
+            "source": "squarespace-plan-card",
+            "method": "visible-squarespace-plan-card-catalog",
+            "rawLabel": "Monthly Unlimited Membership $159/month",
+            "contentHash": "7133619e3998b70a6a5df7cecbca9dd09714edffa051c99566982e2833fb8778",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "monthly-unlimited-membership",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "six-month-unlimited-pass",
+          "name": "Six Month Unlimited Pass - $829 $133 per month. Come as many times as you’d like for 6 months. (must be paid in full)",
+          "productType": "class-membership",
+          "accessScope": "Access described by the bounded official prepaid plan card",
+          "scopeType": "single-location",
+          "amount": 829.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 6,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 6,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://theyogashalasf.com/pricing",
+            "observedAt": "2026-08-21",
+            "source": "squarespace-plan-card",
+            "method": "visible-squarespace-plan-card-catalog",
+            "rawLabel": "Six Month Unlimited Pass - $829 $133 per month. Come as many times as you’d like for 6 months. (must be paid in full)",
+            "contentHash": "a7626ac4264e6bc161329d220220941cb3ccf9a51795b158d335e01337d74c2a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "six-month-unlimited-pass",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "drop-in",
+          "name": "Drop-in",
+          "amount": 35
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 138.17,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "web-c195ac37294a74:plan:six-month-prepaid",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 1,
+        "dropInOfferCount": 1,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "web-c3b2830a9bc6f1",
       "gymName": "CrossFit South Park",
       "canonicalAddress": "361 brannan st",
@@ -22191,21 +23935,6 @@
       ]
     },
     {
-      "gymId": "osm-node-10276089929",
-      "observations": [
-        {
-          "amount": 229.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "R MOST POPULAR OPTION! TRANSFORM VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment *$80 savings a month! $229 *Limit 1 visit per day VIP UNLIMITED MONTHLY",
-          "sourceUrl": "https://core40.com/get-classes/",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        }
-      ]
-    },
-    {
       "gymId": "osm-node-10665980914",
       "observations": [
         {
@@ -24550,21 +26279,6 @@
           "kind": null,
           "rawLabel": "n a $15 fee. A 3 month minimum commitment applies to all memberships. PURCHASE Unlimited Classes per Month $485.00 A monthly",
           "sourceUrl": "https://www.roarsf.com/membershipspackages",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        }
-      ]
-    },
-    {
-      "gymId": "osm-node-3658328826",
-      "observations": [
-        {
-          "amount": 229.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "R MOST POPULAR OPTION! TRANSFORM VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment *$80 savings a month! $229 *Limit 1 visit per day VIP UNLIMITED MONTHLY",
-          "sourceUrl": "https://core40.com/get-classes/",
           "method": "visible-text-candidate",
           "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
         }
@@ -28213,56 +29927,6 @@
           "low": null,
           "high": null,
           "kind": null,
-          "rawLabel": "nd (max-width: 767px) { } DROP IN - $35",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 89.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "31d2ac0a71 .sqs-block-alignment-wrapper { align-items: center; } } Mini Membership (4x per month) $89/month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 129.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "edia screen and (max-width: 767px) { } That’s $129 per month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 133.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "983fc7618 .sqs-block-alignment-wrapper { align-items: center; } } Six Month Unlimited Pass - $829 $133 per month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 159.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "407734_66895 .sqs-block-alignment-wrapper { align-items: center; } } Monthly Unlimited Membership $159/month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 35.0,
-          "low": null,
-          "high": null,
-          "kind": null,
           "rawLabel": "t email us at least one week prior to your billing date. Become a mini member Packages & Drop ins DROP IN - $35",
           "sourceUrl": "https://theyogashalasf.com/pricing",
           "method": "visible-text-candidate",
@@ -28348,106 +30012,6 @@
     {
       "gymId": "web-686330489fbf10",
       "observations": [
-        {
-          "amount": 18.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "\\n BUY \\n \\n \\n 10 CLASS PACK LIVESTREAM \\n \\n \\n $180 \\n \\n \\n \\n 10 livestream classes $18/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 20.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "\\n \\n $180 \\n \\n \\n \\n 10 livestream classes $18/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in livestream \\n \\n \\n $20",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 31.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "lass \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n 5 class pack ﻿ \\n \\n \\n $155 \\n \\n \\n \\n 5 classes $31/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 39.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "s pack ﻿ \\n \\n \\n $155 \\n \\n \\n \\n 5 classes $31/class \\n \\n \\n \\n \\n \\n \\n BOOK \\n \\n \\n Drop-in ﻿ \\n \\n \\n $39",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 69.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "ep into your practice with intention and enjoy 2 WEEKS of Unlimited Yoga classes + a FREE Buddy Pass for only $69. \\n \\n Sign up → \\n \\n \\n \\n \\n \\n \\n \\n Memberships \\n \\n \\n Monthly",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 114.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "\\n \\n \\n \\n \\n \\n \\n \\n \\n \\n Livestream \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n MONTHLY UNLIMITED Livestream \\n \\n \\n $114 /mo",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 119.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "Includes livestream! $28.16/class \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n Mini Membership \\n 4x (3 Months) \\n \\n \\n $119 /mo",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 169.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "ted classes! Includes livestream! \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n Midi Membership \\n 6x (3 months) \\n \\n \\n $169 /mo",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 189.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "Includes livestream! \\n \\n \\n \\n \\n \\n \\n \\n BUY \\n \\n \\n Monthly Membership \\n Unlimited (3 Months) \\n \\n \\n $189 /mo",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 219.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "Commitment + Freeze Information \\n here \\n \\n \\n \\n \\n BUY \\n \\n \\n Monthly Membership \\n Unlimited \\n \\n \\n $219 /mo",
-          "sourceUrl": "https://www.haumstudios.com/buy-classes",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
         {
           "amount": 18.0,
           "low": null,
@@ -30073,56 +31637,6 @@
     {
       "gymId": "web-c195ac37294a74",
       "observations": [
-        {
-          "amount": 35.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "nd (max-width: 767px) { } DROP IN - $35",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 89.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "31d2ac0a71 .sqs-block-alignment-wrapper { align-items: center; } } Mini Membership (4x per month) $89/month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 129.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "edia screen and (max-width: 767px) { } That’s $129 per month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 133.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "983fc7618 .sqs-block-alignment-wrapper { align-items: center; } } Six Month Unlimited Pass - $829 $133 per month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 159.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "407734_66895 .sqs-block-alignment-wrapper { align-items: center; } } Monthly Unlimited Membership $159/month",
-          "sourceUrl": "https://theyogashalasf.com/pricing",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
         {
           "amount": 35.0,
           "low": null,

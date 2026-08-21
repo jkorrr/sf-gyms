@@ -124,6 +124,26 @@ class OfficialCrawlerTests(unittest.TestCase):
         )
         self.assertFalse(any("evil.test" in item["url"] for item in routes))
 
+    def test_reviewed_source_alias_allows_reviewed_operator_domain_migration(self) -> None:
+        gym = {
+            "websiteUrl": "https://former-operator.example/location/sf",
+            "officialUrl": "https://former-operator.example/location/sf",
+            "priceSourceUrl": "https://current-operator.example/pricing",
+            "sourceAliases": [{
+                "id": "reviewed-web-record",
+                "sourceUrl": "https://current-operator.example/",
+            }],
+            "plans": [{"evidence": {"url": "https://unreviewed-third-party.example/pricing"}}],
+        }
+
+        routes = crawler.reviewed_seed_routes(gym)
+
+        self.assertIn(
+            {"url": "https://current-operator.example/pricing", "sourceField": "priceSourceUrl"},
+            routes,
+        )
+        self.assertFalse(any("unreviewed-third-party" in item["url"] for item in routes))
+
     def test_ymca_sf_adapter_separates_monthly_dues_and_join_fees(self) -> None:
         visible = """
         Become A Member Membership Types
@@ -537,6 +557,47 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertFalse(attempts[0]["priceChangeOver20Percent"])
         self.assertTrue(attempts[1]["priceChangeOver20Percent"])
         self.assertEqual(attempts[1]["priceChangeEvidence"]["candidateNormalizedMonthly"], 125)
+
+    def test_selected_plan_audit_flags_same_named_synthetic_card_term_change(self) -> None:
+        gym = {
+            "id": "term-change",
+            "monthlyPrice": 108,
+            "selectedPlanId": "term-change:plan:mini",
+            "plans": [{
+                "id": "term-change:plan:mini",
+                "sourceProductId": "mini",
+                "name": "Mini Membership",
+                "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+                "billing": {"amount": 108, "normalizedMonthly": 108},
+                "commitment": {"type": "month-to-month", "minimumMonths": None},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Mini Membership"},
+            }],
+        }
+        observations = [{
+            "gymId": "term-change",
+            "sourceUrl": "https://operator.example/pricing",
+            "sourceProductId": "mini-membership-3-month",
+            "sourceProductIdAuthority": "synthetic-label",
+            "name": "Mini Membership",
+            "amount": 119,
+            "cadence": "month",
+            "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+            "commitment": {"type": "minimum-term", "minimumMonths": 3},
+            "promotion": {"isPromotion": False},
+        }]
+        attempts = [{
+            "gymId": "term-change", "url": "https://operator.example/pricing",
+            "reviewedSeedCount": 1, "requiresReview": False,
+        }]
+
+        audit = crawler.audit_selected_plan_price(gym, observations)
+        crawler.reconcile_selected_plan_price_audits([gym], attempts, observations)
+
+        self.assertEqual(audit["status"], "selected-plan-terms-changed")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 119)
+        self.assertEqual(audit["candidateCommitment"]["minimumMonths"], 3)
+        self.assertTrue(attempts[0]["requiresReview"])
+        self.assertEqual(attempts[0]["priceChangeEvidence"]["status"], "selected-plan-terms-changed")
 
     def test_selected_plan_price_audit_fails_closed_on_current_variant_conflict(self) -> None:
         gym = {
@@ -1564,6 +1625,87 @@ CLUB INFO"""
         self.assertEqual(mighty["amount"], 360)
         self.assertEqual(mighty["classAllowance"]["count"], 10)
 
+    def test_squarespace_text_blocks_preserve_card_boundaries_and_ignore_css(self) -> None:
+        html = """
+          <div data-sqsp-block="text"><div class="sqs-html-content">
+            <h1>Mini Membership</h1><h1>(4x per month)</h1><h1>$89/month</h1>
+            <style>.price { content: '$999/month'; }</style>
+          </div></div>
+          <div data-sqsp-block="text"><div class="sqs-html-content">
+            <h4>Six Month Unlimited Pass - $829</h4>
+            <p>$133 per month. Unlimited for 6 months. Must be paid in full.</p>
+          </div></div>
+        """
+        offers, _stores, _digest = crawler.parse_page({
+            "url": "https://studio.example/pricing",
+            "contentType": "text/html",
+            "html": html,
+        })
+        by_id = {item.get("sourceProductId"): item for item in offers if item.get("sourceProductId")}
+        mini = by_id["mini-membership"]
+        self.assertEqual(mini["amount"], 89)
+        self.assertEqual(mini["classAllowance"], {"count": 4, "period": "month", "unlimited": False})
+        prepaid = by_id["six-month-unlimited-pass"]
+        self.assertEqual(prepaid["amount"], 829)
+        self.assertEqual(prepaid["intervalCount"], 6)
+        self.assertEqual(prepaid["commitment"], {"type": "prepaid", "minimumMonths": 6})
+        self.assertFalse(any(item.get("amount") == 999 for item in offers))
+        self.assertFalse(any(item.get("amount") == 133 for item in offers))
+        self.assertFalse(any(item.get("method") == "visible-text-candidate" for item in offers))
+
+    def test_duda_semantic_plan_groups_reconstruct_allowance_term_and_price(self) -> None:
+        html = """
+          <div data-ai-tag="Plan 1: plan name"><h3>Mini Membership</h3><h3>4x (3 Months)</h3></div>
+          <div data-ai-tag="Plan 1: plan price"><h3>$119<span>/mo</span></h3></div>
+          <div data-ai-tag="Plan 1: first item in feature list"><p>3 month commitment!</p><p>4x classes a month!</p></div>
+          <div data-ai-tag="Plan 1: plan name"><h3>Drop-in</h3></div>
+          <div data-ai-tag="Plan 1: plan price"><h3>$39</h3></div>
+          <div data-ai-tag="Plan 1: first item in feature list"><p>1 class</p></div>
+        """
+        offers, _stores, _digest = crawler.parse_page({
+            "url": "https://studio.example/buy-classes",
+            "contentType": "text/html",
+            "html": html,
+        })
+        by_id = {item.get("sourceProductId"): item for item in offers if item.get("sourceProductId")}
+        mini = by_id["mini-membership-3-month"]
+        self.assertEqual(mini["amount"], 119)
+        self.assertEqual(mini["classAllowance"], {"count": 4, "period": "month", "unlimited": False})
+        self.assertEqual(mini["commitment"], {"type": "minimum-term", "minimumMonths": 3})
+        self.assertEqual(by_id["drop-in"]["productType"], "drop-in")
+        self.assertEqual(by_id["drop-in"]["amount"], 39)
+        self.assertEqual(len(crawler.duda_plan_cards(html.replace('"', r'\"'))), 2)
+
+    def test_wordpress_class_boxes_pair_widget_product_price_and_commitment(self) -> None:
+        html = """
+          <div class="class-box">
+            <div class="class-title">VIP UNLIMITED MONTHLY SPECIAL<br>
+              <span class="class-desc">12-Mo Minimum Commitment</span></div>
+            <div class="class-desc">*$80 savings a month!</div>
+            <div class="class-price">$229</div>
+            <healcode-widget data-service-id="186" />
+          </div>
+          <div class="class-box">
+            <div class="class-title">VIP UNLIMITED MONTHLY<br>
+              <span class="class-desc">3-Mo Minimum Commitment</span></div>
+            <div class="class-desc">*$40 savings a month!</div>
+            <div class="class-price">$269</div>
+            <healcode-widget data-service-id="172" />
+          </div>
+        """
+        offers, _stores, _digest = crawler.parse_page({
+            "url": "https://studio.example/pricing",
+            "contentType": "text/html",
+            "html": html,
+        })
+        by_id = {item.get("sourceProductId"): item for item in offers if item.get("sourceProductId")}
+        self.assertEqual(by_id["172"]["amount"], 269)
+        self.assertEqual(by_id["172"]["commitment"], {"type": "minimum-term", "minimumMonths": 3})
+        self.assertTrue(by_id["172"]["classAllowance"]["unlimited"])
+        self.assertFalse(by_id["172"]["promotion"]["isPromotion"])
+        self.assertTrue(by_id["186"]["promotion"]["isPromotion"])
+        self.assertEqual(by_id["186"]["commitment"]["minimumMonths"], 12)
+
     def test_transient_refresh_preserves_last_parseable_cache_and_observations(self) -> None:
         previous_cache = {
             "status": "fetched",
@@ -1585,6 +1727,15 @@ CLUB INFO"""
         self.assertEqual(merged["candidates"], [{"amount": 125}])
         self.assertEqual(merged["parserVersion"], "selected-plan-catalog-v9")
         self.assertEqual(merged["lastSuccessfulAt"], "2026-08-20T12:00:00+00:00")
+        reused = crawler.reusable_transient_cache(
+            previous_cache,
+            {"status": "http-429"},
+            "https://gym.example/pricing",
+            None,
+        )
+        self.assertIsNotNone(reused)
+        self.assertEqual(reused[0], [{"amount": 125}])
+        self.assertEqual(reused[4], "2026-08-20T12:00:00+00:00")
 
         existing = [{"gymId": "gym-1", "sourceUrl": "https://gym.example", "kind": "plan", "amount": 125}]
         retained = crawler.merge_crawl_observations(

@@ -1,7 +1,7 @@
 {
   "generatedAt": "2026-08-21",
   "policy": "Generated proposals only. Every change must be copied to official-location-approved.json with reviewStatus=approved before publication.",
-  "proposalCount": 914,
+  "proposalCount": 922,
   "strongExactReviewCount": 50,
   "proposals": [
     {
@@ -3122,6 +3122,25 @@
       "gymId": "osm-node-10276089929",
       "gymName": "CORE40 Nob Hill",
       "currentAddress": "1390 Larkin Street, San Francisco, CA 94109",
+      "sourceUrl": "https://core40.com/faq/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "1e42f0102b18e5bde364c2d5bc3fcc3078dbe237cc16eddb10add9ec4c2cc1bb",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "1390 Larkin Street San Francisco, CA 94109",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "osm-node-10276089929",
+      "gymName": "CORE40 Nob Hill",
+      "currentAddress": "1390 Larkin Street, San Francisco, CA 94109",
       "sourceUrl": "https://core40.com/get-classes/",
       "capturedAt": "2026-08-21",
       "contentHash": "1e42f0102b18e5bde364c2d5bc3fcc3078dbe237cc16eddb10add9ec4c2cc1bb",
@@ -3142,6 +3161,25 @@
       "gymName": "CORE40 Nob Hill",
       "currentAddress": "1390 Larkin Street, San Francisco, CA 94109",
       "sourceUrl": "https://core40.com/nob-hill/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "1e42f0102b18e5bde364c2d5bc3fcc3078dbe237cc16eddb10add9ec4c2cc1bb",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "1390 Larkin Street San Francisco, CA 94109",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "osm-node-3658328826",
+      "gymName": "CORE40 Sunset",
+      "currentAddress": "827 Irving Street, San Francisco, CA 94122",
+      "sourceUrl": "https://core40.com/faq/",
       "capturedAt": "2026-08-21",
       "contentHash": "1e42f0102b18e5bde364c2d5bc3fcc3078dbe237cc16eddb10add9ec4c2cc1bb",
       "identityScore": 0,
@@ -15140,12 +15178,12 @@
       "currentAddress": "455 Judah Street, San Francisco, CA 94122",
       "sourceUrl": "https://theyogashalasf.com/",
       "capturedAt": "2026-08-21",
-      "contentHash": "9ca5bdb3c22a2079db7a6fb211409e14a213668b6651b3ff56e4c702d034e895",
+      "contentHash": "841576d1b76246ebce595f39f020e005943efe3151b6f3c07b48f8313dd3b59b",
       "identityScore": 0,
       "identityDisposition": "reject-or-manual-review",
       "observed": {
         "name": "",
-        "address": "455 Judah Street San Francisco, CA",
+        "address": "2026 Schedule 455 Judah Street San Francisco, CA",
         "hours": "",
         "amenities": []
       },
@@ -15158,6 +15196,63 @@
       "gymName": "The Yoga Shala - Inner Sunset",
       "currentAddress": "455 Judah Street, San Francisco, CA 94122",
       "sourceUrl": "https://theyogashalasf.com/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "a3a3b9c8611c3ceaf261a540f68fac6469cfd907d18cdd7a4c2a36709311c71d",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "2010 Balboa Street",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "web-46a150f089f8a7",
+      "gymName": "The Yoga Shala - Inner Sunset",
+      "currentAddress": "455 Judah Street, San Francisco, CA 94122",
+      "sourceUrl": "https://theyogashalasf.com/faqs",
+      "capturedAt": "2026-08-21",
+      "contentHash": "262e582994cc693cb8712e2fc2b1720332466087bce1df2192237d99e23f826c",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "455 Judah Street",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "web-46a150f089f8a7",
+      "gymName": "The Yoga Shala - Inner Sunset",
+      "currentAddress": "455 Judah Street, San Francisco, CA 94122",
+      "sourceUrl": "https://theyogashalasf.com/faqs",
+      "capturedAt": "2026-08-21",
+      "contentHash": "674b3459a6dce207595977e826d2f8a8cbe59c62b9a01f3bb047bdb28bd51d74",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "455 Judah street in San Francisco. Right down the road",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "web-46a150f089f8a7",
+      "gymName": "The Yoga Shala - Inner Sunset",
+      "currentAddress": "455 Judah Street, San Francisco, CA 94122",
+      "sourceUrl": "https://theyogashalasf.com/faqs",
       "capturedAt": "2026-08-21",
       "contentHash": "a3a3b9c8611c3ceaf261a540f68fac6469cfd907d18cdd7a4c2a36709311c71d",
       "identityScore": 0,
@@ -15292,12 +15387,12 @@
       "currentAddress": "2010 Balboa Street, San Francisco, CA 94121",
       "sourceUrl": "https://theyogashalasf.com/",
       "capturedAt": "2026-08-21",
-      "contentHash": "9ca5bdb3c22a2079db7a6fb211409e14a213668b6651b3ff56e4c702d034e895",
+      "contentHash": "841576d1b76246ebce595f39f020e005943efe3151b6f3c07b48f8313dd3b59b",
       "identityScore": 0,
       "identityDisposition": "reject-or-manual-review",
       "observed": {
         "name": "",
-        "address": "455 Judah Street San Francisco, CA",
+        "address": "2026 Schedule 455 Judah Street San Francisco, CA",
         "hours": "",
         "amenities": []
       },
@@ -15310,6 +15405,63 @@
       "gymName": "The Yoga Shala - Richmond District",
       "currentAddress": "2010 Balboa Street, San Francisco, CA 94121",
       "sourceUrl": "https://theyogashalasf.com/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "a3a3b9c8611c3ceaf261a540f68fac6469cfd907d18cdd7a4c2a36709311c71d",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "2010 Balboa Street",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "web-c195ac37294a74",
+      "gymName": "The Yoga Shala - Richmond District",
+      "currentAddress": "2010 Balboa Street, San Francisco, CA 94121",
+      "sourceUrl": "https://theyogashalasf.com/faqs",
+      "capturedAt": "2026-08-21",
+      "contentHash": "262e582994cc693cb8712e2fc2b1720332466087bce1df2192237d99e23f826c",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "455 Judah Street",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "web-c195ac37294a74",
+      "gymName": "The Yoga Shala - Richmond District",
+      "currentAddress": "2010 Balboa Street, San Francisco, CA 94121",
+      "sourceUrl": "https://theyogashalasf.com/faqs",
+      "capturedAt": "2026-08-21",
+      "contentHash": "674b3459a6dce207595977e826d2f8a8cbe59c62b9a01f3bb047bdb28bd51d74",
+      "identityScore": 0,
+      "identityDisposition": "reject-or-manual-review",
+      "observed": {
+        "name": "",
+        "address": "455 Judah street in San Francisco. Right down the road",
+        "hours": "",
+        "amenities": []
+      },
+      "proposedChanges": {},
+      "reviewStatus": "pending",
+      "autoApply": false
+    },
+    {
+      "gymId": "web-c195ac37294a74",
+      "gymName": "The Yoga Shala - Richmond District",
+      "currentAddress": "2010 Balboa Street, San Francisco, CA 94121",
+      "sourceUrl": "https://theyogashalasf.com/faqs",
       "capturedAt": "2026-08-21",
       "contentHash": "a3a3b9c8611c3ceaf261a540f68fac6469cfd907d18cdd7a4c2a36709311c71d",
       "identityScore": 0,

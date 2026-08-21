@@ -3372,8 +3372,13 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=39007&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -3387,9 +3392,14 @@
           "candidateCount": 0
         },
         {
+          "url": "https://core40.com/faq/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://core40.com/get-classes/",
           "status": "fetched",
-          "candidateCount": 1
+          "candidateCount": 2
         },
         {
           "url": "https://core40.com/nob-hill/",
@@ -3444,8 +3454,13 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=39007&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -3459,9 +3474,14 @@
           "candidateCount": 0
         },
         {
+          "url": "https://core40.com/faq/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://core40.com/get-classes/",
           "status": "fetched",
-          "candidateCount": 1
+          "candidateCount": 2
         },
         {
           "url": "https://core40.com/sunset/",
@@ -7507,6 +7527,11 @@
           "url": "https://haumsf.com/haight-ashbury-studio/",
           "status": "http-404",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.haumstudios.com/buy-classes",
+          "status": "fetched",
+          "candidateCount": 10
         },
         {
           "url": "https://haumsf.com/haight-ashbury-studio/",
@@ -15334,18 +15359,23 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100003&sTG=24&studioid=5728426&stype=41",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100004&sTG=24&studioid=5728426&stype=41",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100006&sTG=24&studioid=5728426&stype=41",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -15355,22 +15385,22 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40&prodId=104",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100039",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100045",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100147",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -15384,9 +15414,14 @@
           "candidateCount": 0
         },
         {
+          "url": "https://theyogashalasf.com/faqs",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://theyogashalasf.com/pricing",
           "status": "fetched",
-          "candidateCount": 5
+          "candidateCount": 3
         },
         {
           "url": "https://theyogashalasf.com/schedule/",
@@ -15431,18 +15466,23 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5728426&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100003&sTG=24&studioid=5728426&stype=41",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100004&sTG=24&studioid=5728426&stype=41",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100006&sTG=24&studioid=5728426&stype=41",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -15452,22 +15492,22 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40&prodId=104",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100039",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100045",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100147",
-          "status": "http-403",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -15481,9 +15521,14 @@
           "candidateCount": 0
         },
         {
+          "url": "https://theyogashalasf.com/faqs",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://theyogashalasf.com/pricing",
           "status": "fetched",
-          "candidateCount": 5
+          "candidateCount": 3
         },
         {
           "url": "https://theyogashalasf.com/",

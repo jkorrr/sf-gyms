@@ -3,6 +3,22 @@
   "mode": "full",
   "deals": [
     {
+      "id": "f3c4cb1e60d3d20611c5",
+      "gymId": "osm-node-10276089929",
+      "gymName": "CORE40 Nob Hill",
+      "amount": 229.0,
+      "currency": "USD",
+      "productType": "monthly",
+      "cadence": "month",
+      "label": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment",
+      "expiresAt": null,
+      "sourceUrl": "https://core40.com/get-classes/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "71f8ef22ad0e5e478f6e26e4c118017748728be5bc38ea4829372bea0264649a",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
       "id": "075a3e4b0d6f7e94d2c5",
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
@@ -499,6 +515,22 @@
       "replacesOrdinaryPrice": false
     },
     {
+      "id": "32c59f4c92370b1a42cd",
+      "gymId": "osm-node-3658328826",
+      "gymName": "CORE40 Sunset",
+      "amount": 229.0,
+      "currency": "USD",
+      "productType": "monthly",
+      "cadence": "month",
+      "label": "VIP UNLIMITED MONTHLY SPECIAL 12-Mo Minimum Commitment",
+      "expiresAt": null,
+      "sourceUrl": "https://core40.com/get-classes/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "71f8ef22ad0e5e478f6e26e4c118017748728be5bc38ea4829372bea0264649a",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
       "id": "da378e46065e6d51dec2",
       "gymId": "osm-node-3702219080",
       "gymName": "Glow Yoga & Wellness",
@@ -511,6 +543,22 @@
       "sourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
       "capturedAt": "2026-08-20",
       "contentHash": "823fbfb534add58b2480ba595e232e92fb92735c338284fac31240cb6d97497e",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
+      "id": "0a5aefbcd949e4ed7fa8",
+      "gymId": "osm-node-3801395450",
+      "gymName": "HAUM Studios - Haight-Ashbury",
+      "amount": 20.0,
+      "currency": "USD",
+      "productType": "drop-in",
+      "cadence": "visit",
+      "label": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student,",
+      "expiresAt": null,
+      "sourceUrl": "https://www.haumstudios.com/buy-classes",
+      "capturedAt": "2026-08-21",
+      "contentHash": "45ff61f84cb3b4ff46f8390240da210d93ee9200f8723369154b4eff91fc6a10",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
     },
@@ -1119,6 +1167,22 @@
       "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport",
       "capturedAt": "2026-08-21",
       "contentHash": "8b24f800d24d10530dd239fc75aa63943a9c7d8effa9af95a560bc390194f0f3",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
+      "id": "26776327ea557ec3c9ae",
+      "gymId": "web-686330489fbf10",
+      "gymName": "HAUM Studios - Mission District",
+      "amount": 20.0,
+      "currency": "USD",
+      "productType": "drop-in",
+      "cadence": "visit",
+      "label": "Drop-in livestream $20 1 livestream class ﻿ HERO DISCOUNT: WE BOW TO YOU We care for those who care for our community! Do you work for a community nonprofit or a public safety organization? Are you a nurse, EMT, student,",
+      "expiresAt": null,
+      "sourceUrl": "https://www.haumstudios.com/buy-classes",
+      "capturedAt": "2026-08-21",
+      "contentHash": "45ff61f84cb3b4ff46f8390240da210d93ee9200f8723369154b4eff91fc6a10",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
     },

@@ -43,7 +43,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v13"
+PARSER_VERSION = "selected-plan-catalog-v17"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -146,12 +146,15 @@ class PageParser(HTMLParser):
         self.json_ld: list[str] = []
         self.hydration_json: list[str] = []
         self.visible: list[str] = []
+        self.squarespace_text_blocks: list[str] = []
         self._in_script = False
         self._script_type = ""
         self._script_id = ""
         self._script_parts: list[str] = []
         self._hidden_depth = 0
         self._tag_stack: list[tuple[str, bool]] = []
+        self._squarespace_block_depth: int | None = None
+        self._squarespace_block_parts: list[str] = []
 
     def handle_starttag(self, tag: str, attrs: list[tuple[str, str | None]]) -> None:
         values = {key.casefold(): value or "" for key, value in attrs}
@@ -164,10 +167,21 @@ class PageParser(HTMLParser):
             self._script_type = values.get("type", "").casefold()
             self._script_id = values.get("id", "").casefold()
             self._script_parts = []
-        introduced_hidden = bool(values.get("hidden") or values.get("aria-hidden", "").casefold() == "true" or "display:none" in values.get("style", "").replace(" ", "").casefold())
+        introduced_hidden = bool(
+            tag.casefold() in {"style", "template", "noscript"}
+            or values.get("hidden")
+            or values.get("aria-hidden", "").casefold() == "true"
+            or "display:none" in values.get("style", "").replace(" ", "").casefold()
+        )
         self._tag_stack.append((tag.casefold(), introduced_hidden))
         if introduced_hidden:
             self._hidden_depth += 1
+        if (
+            self._squarespace_block_depth is None
+            and values.get("data-sqsp-block", "").casefold() == "text"
+        ):
+            self._squarespace_block_depth = len(self._tag_stack)
+            self._squarespace_block_parts = []
 
     def handle_endtag(self, tag: str) -> None:
         if tag.casefold() == "script":
@@ -180,18 +194,32 @@ class PageParser(HTMLParser):
             self._script_id = ""
             self._script_parts = []
         closing = tag.casefold()
+        closes_squarespace_block = bool(
+            self._squarespace_block_depth is not None
+            and len(self._tag_stack) == self._squarespace_block_depth
+            and self._tag_stack
+            and self._tag_stack[-1][0] == closing
+        )
         while self._tag_stack:
             opened, introduced_hidden = self._tag_stack.pop()
             if introduced_hidden:
                 self._hidden_depth = max(0, self._hidden_depth - 1)
             if opened == closing:
                 break
+        if closes_squarespace_block:
+            block = re.sub(r"\s+", " ", " ".join(self._squarespace_block_parts)).strip()
+            if block:
+                self.squarespace_text_blocks.append(block[:2000])
+            self._squarespace_block_depth = None
+            self._squarespace_block_parts = []
 
     def handle_data(self, data: str) -> None:
         if self._in_script:
             self._script_parts.append(data)
         elif not self._hidden_depth and data.strip():
             self.visible.append(data.strip())
+            if self._squarespace_block_depth is not None:
+                self._squarespace_block_parts.append(data.strip())
 
 
 def text(value: Any) -> str:
@@ -1421,6 +1449,273 @@ def embedded_operator_candidates(html: str, source_url: str) -> list[dict[str, A
         return []
     embedded_text = normalized_label(unescape(re.sub(r"<[^>]+>", " ", html)))
     return independent_operator_visible_candidates(embedded_text, source_url)
+
+
+CARD_PLAN_SEMANTIC_RE = re.compile(
+    r"\b(?:membership|pass|class pack|drop[ -]?in|unlimited|classes? monthly)\b",
+    re.IGNORECASE,
+)
+CARD_MONTHLY_PRICE_RE = re.compile(
+    r"\$(?P<amount>\d{1,4}(?:\.\d{1,2})?)\s*(?:/\s*(?:mo|month)|per\s+month)\b",
+    re.IGNORECASE,
+)
+CARD_DURATION_RE = re.compile(
+    r"\b(?P<count>one|three|six|twelve|\d{1,2})\s*[- ]?months?\b",
+    re.IGNORECASE,
+)
+DUDA_PLAN_NAME_RE = re.compile(
+    r"data-ai-tag=[\"']Plan\s+\d+:\s*plan\s+name[\"']",
+    re.IGNORECASE,
+)
+
+
+def card_plan_name(prefix: str) -> str:
+    """Return a stable concise product label from the text before its price."""
+
+    value = re.sub(r"\([^)]*(?:per\s+month|months?|commitment)[^)]*\)", " ", prefix, flags=re.IGNORECASE)
+    value = re.sub(r"\b\d{1,3}x(?:\s+classes?)?(?:\s+(?:per|a)\s+month)?\b.*$", " ", value, flags=re.IGNORECASE)
+    value = re.sub(r"\s+", " ", value).strip(" -–—:;|\ufeff")
+    return value[:100]
+
+
+def card_class_allowance(label: str) -> dict[str, Any] | None:
+    if re.search(r"\bunlimited\b", label, re.IGNORECASE):
+        return {"count": None, "period": "month", "unlimited": True}
+    match = re.search(
+        r"\b(?P<count>\d{1,3})x(?:\s+classes?)?\s*(?:\([^)]*\))?"
+        r"(?:\s+classes?)?\s*(?:(?:per|a)\s+month)?\b",
+        label,
+        re.IGNORECASE,
+    )
+    if not match:
+        match = CLASS_ALLOWANCE_RE.search(label)
+    if not match:
+        return None
+    count = int(match.group("count") if "count" in match.groupdict() else match.group(1))
+    return {"count": count, "period": "month", "unlimited": False}
+
+
+def card_commitment_months(label: str) -> int | None:
+    explicit = re.search(
+        r"\b(?P<count>\d{1,2})\s*[- ]?(?:mo(?:nth)?s?)\s+minimum\s+commitment\b"
+        r"|\b(?P<count_short>\d{1,2})\s*[- ]?(?:mo(?:nth)?s?)\s+commitment\b",
+        label,
+        re.IGNORECASE,
+    )
+    if explicit:
+        return int(explicit.group("count") or explicit.group("count_short"))
+    parenthetical = re.search(r"\((?P<count>\d{1,2})\s*months?\)", label, re.IGNORECASE)
+    return int(parenthetical.group("count")) if parenthetical else None
+
+
+def labeled_plan_card_candidates(
+    cards: Iterable[str],
+    source_url: str,
+    adapter: str,
+) -> list[dict[str, Any]]:
+    """Convert semantically bounded public rate cards into complete offers."""
+
+    candidates: list[dict[str, Any]] = []
+    duration_words = {"one": 1, "three": 3, "six": 6, "twelve": 12}
+    for raw_card in cards:
+        card = re.sub(r"\s+", " ", unescape(raw_card)).strip()
+        if not card or not CARD_PLAN_SEMANTIC_RE.search(card):
+            continue
+        duration = CARD_DURATION_RE.search(card)
+        paid_in_full = bool(re.search(r"paid\s+in\s+full|prepaid", card, re.IGNORECASE))
+        if duration and paid_in_full:
+            raw_count = duration.group("count").casefold()
+            months = duration_words.get(raw_count, int(raw_count) if raw_count.isdigit() else 0)
+            price = re.search(r"(?:membership|pass)[^$]{0,45}\$(?P<amount>\d{1,5}(?:\.\d{1,2})?)", card, re.IGNORECASE)
+            if not months or not price:
+                continue
+            name = card_plan_name(card[:price.start("amount") - 1])
+            if not name:
+                continue
+            product_id = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+            candidate = operator_visible_candidate(
+                source_url,
+                adapter,
+                product_id,
+                name,
+                float(price.group("amount")),
+                product_type="monthly",
+                cadence="month",
+                access_scope="Access described by the bounded official prepaid plan card",
+                allowance=card_class_allowance(card),
+                commitment_type="prepaid",
+                minimum_months=months,
+                promotion=bool(PROMOTION_RE.search(card)),
+                promotion_label=card if PROMOTION_RE.search(card) else "",
+                raw_label=card[:500],
+                exact_location_match="operator-market-catalog",
+            )
+            candidate["intervalCount"] = months
+            candidates.append(candidate)
+            continue
+        recurring = CARD_MONTHLY_PRICE_RE.search(card)
+        promotion = bool(PROMOTION_RE.search(card))
+        if recurring:
+            amount = float(recurring.group("amount"))
+            name = card_plan_name(card[:recurring.start()])
+            if not name or len(name.split()) > 12:
+                continue
+            minimum_months = card_commitment_months(card)
+            product_id = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+            if minimum_months:
+                product_id = f"{product_id}-{minimum_months}-month"
+            candidate = operator_visible_candidate(
+                source_url,
+                adapter,
+                product_id,
+                name,
+                amount,
+                product_type="monthly",
+                cadence="month",
+                access_scope="Access described by the bounded official operator plan card",
+                allowance=card_class_allowance(card),
+                commitment_type="minimum-term" if minimum_months else "unknown",
+                minimum_months=minimum_months,
+                eligibility_type="online-only" if re.search(r"livestream\s+only", card, re.IGNORECASE) else "standard-adult",
+                restrictions=["Livestream-only; no in-person access"] if re.search(r"livestream\s+only", card, re.IGNORECASE) else [],
+                promotion=promotion,
+                promotion_label=card if promotion else "",
+                best_value=bool(re.search(r"\bbest (?:deal|value)\b|\bmost popular\b", card, re.IGNORECASE)),
+                raw_label=card[:500],
+                exact_location_match="operator-market-catalog",
+            )
+            candidates.append(candidate)
+            continue
+
+        visit = re.search(r"\b(drop[ -]?in|single class)\b[^$]{0,45}\$(?P<amount>\d{1,4}(?:\.\d{1,2})?)", card, re.IGNORECASE)
+        pack = re.search(r"\b(?P<count>\d{1,3})\s*class\s+pack\b[^$]{0,45}\$(?P<amount>\d{1,5}(?:\.\d{1,2})?)", card, re.IGNORECASE)
+        if visit:
+            name = card_plan_name(card[:visit.start("amount") - 1]) or "Drop-In Class"
+            online_only = bool(re.search(r"livestream", name, re.IGNORECASE))
+            candidates.append(operator_visible_candidate(
+                source_url, adapter, re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-"), name,
+                float(visit.group("amount")), product_type="drop-in", cadence="visit",
+                allowance={"count": 1, "period": "visit", "unlimited": False},
+                eligibility_type="online-only" if online_only else "standard-adult",
+                restrictions=["Livestream-only; no in-person access"] if online_only else [],
+                promotion=promotion, promotion_label=card if promotion else "", raw_label=card[:500],
+                exact_location_match="operator-market-catalog",
+            ))
+        elif pack:
+            count = int(pack.group("count"))
+            name = card_plan_name(card[:pack.start("amount") - 1]) or f"{count}-Class Pack"
+            online_only = bool(re.search(r"livestream", name, re.IGNORECASE))
+            candidates.append(operator_visible_candidate(
+                source_url, adapter, re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-"), name,
+                float(pack.group("amount")), allowance={"count": count, "period": "purchase", "unlimited": False},
+                eligibility_type="online-only" if online_only else "standard-adult",
+                restrictions=["Livestream-only; no in-person access"] if online_only else [],
+                promotion=promotion, promotion_label=card if promotion else "", raw_label=card[:500],
+                exact_location_match="operator-market-catalog",
+            ))
+    for candidate in candidates:
+        candidate["sourceProductIdAuthority"] = "synthetic-label"
+    return candidates
+
+
+def duda_plan_cards(html: str) -> list[str]:
+    """Extract Duda's explicitly labeled plan-name/price feature groups."""
+
+    # Duda may ship the same semantic markup inside an escaped page-state
+    # string.  Decode only the harmless quote/newline escapes needed to recover
+    # HTML structure; never evaluate the surrounding script.
+    source = unescape(html).replace(r'\"', '"').replace(r"\n", " ")
+    markers = list(DUDA_PLAN_NAME_RE.finditer(source))
+    cards: list[str] = []
+    for index, marker in enumerate(markers):
+        start = source.rfind("<", 0, marker.start())
+        end = source.rfind("<", 0, markers[index + 1].start()) if index + 1 < len(markers) else len(source)
+        if start < 0 or end <= start:
+            continue
+        parser = PageParser()
+        try:
+            parser.feed(source[start:end])
+        except Exception:
+            continue
+        card = re.sub(r"\s+", " ", " ".join(parser.visible)).strip()
+        if card:
+            cards.append(card[:2000])
+    return cards
+
+
+WORDPRESS_CLASS_BOX_RE = re.compile(
+    r"<div\b[^>]*class=[\"'][^\"']*\bclass-box\b[^\"']*[\"'][^>]*>",
+    re.IGNORECASE,
+)
+
+
+def html_fragment_text(fragment: str) -> str:
+    parser = PageParser()
+    try:
+        parser.feed(fragment)
+    except Exception:
+        return ""
+    return re.sub(r"\s+", " ", " ".join(parser.visible)).strip()
+
+
+def wordpress_class_box_candidates(html: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct WordPress rate cards with explicit title/price sub-elements."""
+
+    markers = list(WORDPRESS_CLASS_BOX_RE.finditer(html))
+    candidates: list[dict[str, Any]] = []
+    for index, marker in enumerate(markers):
+        end = markers[index + 1].start() if index + 1 < len(markers) else min(len(html), marker.start() + 6000)
+        fragment = html[marker.start():end]
+        title_match = re.search(
+            r"<div\b[^>]*class=[\"'][^\"']*\bclass-title\b[^\"']*[\"'][^>]*>(?P<body>.*?)</div>",
+            fragment,
+            re.IGNORECASE | re.DOTALL,
+        )
+        price_match = re.search(
+            r"<div\b[^>]*class=[\"'][^\"']*\bclass-price\b[^\"']*[\"'][^>]*>(?P<body>.*?)</div>",
+            fragment,
+            re.IGNORECASE | re.DOTALL,
+        )
+        if not title_match or not price_match:
+            continue
+        title = html_fragment_text(title_match.group("body"))
+        price_label = html_fragment_text(price_match.group("body"))
+        amount_match = MONEY_RE.search(price_label)
+        if not title or not amount_match or not re.search(r"\bmonthly\b", title, re.IGNORECASE):
+            continue
+        amount = float(amount_match.group(1))
+        minimum_months = card_commitment_months(title)
+        name = re.sub(
+            r"\b\d{1,2}\s*[- ]?(?:mo(?:nth)?s?)\s+(?:minimum\s+)?commitment\b",
+            " ",
+            title,
+            flags=re.IGNORECASE,
+        )
+        name = re.sub(r"\s+", " ", name).strip(" -–—:;")
+        service = re.search(r"\bdata-service-id=[\"'](?P<id>[A-Za-z0-9_-]{1,64})[\"']", fragment, re.IGNORECASE)
+        product_id = service.group("id") if service else re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+        raw_label = re.sub(r"\s+", " ", f"{title} {price_label}").strip()
+        is_promotion = bool(PROMOTION_RE.search(title) or re.search(r"\bspecial\b", title, re.IGNORECASE))
+        candidate = operator_visible_candidate(
+            source_url,
+            "wordpress-class-box",
+            product_id,
+            name,
+            amount,
+            product_type="monthly",
+            cadence="month",
+            access_scope="Access described by the bounded official operator plan card",
+            allowance=card_class_allowance(title),
+            commitment_type="minimum-term" if minimum_months else "unknown",
+            minimum_months=minimum_months,
+            promotion=is_promotion,
+            promotion_label=title if is_promotion else "",
+            raw_label=raw_label,
+            exact_location_match="operator-market-catalog",
+        )
+        candidate["sourceProductIdAuthority"] = "operator-widget"
+        candidates.append(candidate)
+    return candidates
 
 
 def perform_for_golf_plan_descriptors(visible_text: str, source_url: str) -> list[dict[str, Any]]:
@@ -2749,6 +3044,19 @@ def reviewed_seed_routes(
         for _field, url in canonical
         if platform_name(url) == "operator-site"
     }
+    # A reviewed canonical merge can retain a former domain on the stable OSM
+    # record while recording the replacement operator domain as a source alias.
+    # Trust only those committed alias URLs; a bare cross-domain price source
+    # remains excluded unless it is an approved booking platform.
+    operator_hosts.update({
+        host_key(url)
+        for alias in gym.get("sourceAliases", []) or []
+        if isinstance(alias, dict)
+        and (url := text(alias.get("sourceUrl")))
+        and is_public_http_url(url)
+        and not coverage.is_osm_url(url)
+        and platform_name(url) == "operator-site"
+    })
 
     def matches_operator_host(url: str) -> bool:
         candidate_host = host_key(url)
@@ -3053,7 +3361,31 @@ def parse_page(
     visible = normalized_label(" ".join(parser.visible)) if len(" ".join(parser.visible)) <= 220 else " ".join(parser.visible)
     candidates = structured_candidates(parser.json_ld, text(result.get("url")))
     candidates.extend(structured_candidates(parser.hydration_json, text(result.get("url")), "embedded-hydration-json"))
-    candidates.extend(visible_candidates(visible, text(result.get("url"))))
+    bounded_candidates = labeled_plan_card_candidates(
+        parser.squarespace_text_blocks,
+        source_url,
+        "squarespace-plan-card",
+    )
+    bounded_candidates.extend(labeled_plan_card_candidates(
+        duda_plan_cards(html),
+        source_url,
+        "duda-plan-card",
+    ))
+    bounded_candidates.extend(wordpress_class_box_candidates(html, source_url))
+    visible_page_candidates = visible_candidates(visible, text(result.get("url")))
+    if bounded_candidates:
+        # A page-wide text regex loses card boundaries and can reinterpret
+        # per-month display arithmetic, savings, or a neighboring offer as a
+        # standalone plan.  Prefer the bounded card result while retaining
+        # domain-specific adapters and non-selectable official cost context.
+        visible_page_candidates = [
+            candidate
+            for candidate in visible_page_candidates
+            if text(candidate.get("method"))
+            not in {"visible-text-candidate", "visible-allowance-plan-card"}
+        ]
+    candidates.extend(visible_page_candidates)
+    candidates.extend(bounded_candidates)
     candidates.extend(embedded_operator_candidates(html, source_url))
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
@@ -3274,6 +3606,30 @@ def merge_transient_cache_entry(
     else:
         merged.pop("lastSuccessfulAt", None)
     return merged
+
+
+def reusable_transient_cache(
+    entry: dict[str, Any] | None,
+    result: dict[str, Any],
+    source_url: str,
+    gym: dict[str, Any] | None,
+) -> tuple[list[dict[str, Any]], list[str], list[dict[str, Any]], str, str] | None:
+    """Return last-good parsed evidence when a public refresh fails transiently."""
+
+    cached = entry if isinstance(entry, dict) else {}
+    if text(result.get("status")) not in TRANSIENT_CRAWL_STATUSES or not cached:
+        return None
+    offers = list(cached.get("candidates", []))
+    stores = linked_storefronts(source_url, list(cached.get("linkedStorefronts", [])), gym)
+    locations = list(cached.get("locationCandidates", []))
+    if not offers and not stores and not locations:
+        return None
+    captured_at = text(cached.get("lastSuccessfulAt"))
+    if not captured_at and text(cached.get("status")) in {"fetched", "not-modified"}:
+        captured_at = text(cached.get("lastAttemptAt"))
+    if not captured_at:
+        return None
+    return offers, stores, locations, text(cached.get("contentHash")), captured_at
 
 
 def merge_crawl_observations(
@@ -3549,7 +3905,8 @@ def selected_plan_candidate_match(
         }
         if selected_product_id in candidate_aliases:
             return 95, "source-product-alias"
-        return None
+        if text(candidate.get("sourceProductIdAuthority")) != "synthetic-label":
+            return None
 
     raw_label = plan_identity_label(
         candidate.get("name") or candidate.get("rawLabel"),
@@ -3582,6 +3939,28 @@ def selected_plan_candidate_match(
     if overlap and coverage >= 0.6:
         return 70 + int(coverage * 10), "distinctive-label-tokens"
     return None
+
+
+def selected_plan_commitment_changed(selected: dict[str, Any], candidate: dict[str, Any]) -> bool:
+    """Detect a current minimum term that conflicts with the reviewed plan."""
+
+    selected_commitment = selected.get("commitment") or {}
+    candidate_commitment = candidate.get("commitment") or {}
+    selected_type = text(selected_commitment.get("type")).casefold()
+    candidate_type = text(candidate_commitment.get("type")).casefold()
+    selected_months = numeric(selected_commitment.get("minimumMonths"))
+    candidate_months = numeric(candidate_commitment.get("minimumMonths"))
+    if selected_type in {"", "unknown"} or candidate_type in {"", "unknown"}:
+        return False
+    if selected_months is not None and candidate_months is not None:
+        return selected_months != candidate_months
+    selected_month_to_month = selected_type in {"month-to-month", "none"} and selected_months is None
+    candidate_month_to_month = candidate_type in {"month-to-month", "none"} and candidate_months is None
+    if selected_month_to_month and candidate_months is not None:
+        return True
+    if candidate_month_to_month and selected_months is not None:
+        return True
+    return False
 
 
 def audit_selected_plan_price(
@@ -3691,6 +4070,8 @@ def audit_selected_plan_price(
             "candidateAmount": amount,
             "candidateCadence": text(candidate.get("cadence") or candidate.get("billingInterval")),
             "candidateNormalizedMonthly": normalized_monthly,
+            "commitmentChanged": selected_plan_commitment_changed(selected, candidate),
+            "candidateCommitment": candidate.get("commitment") or {},
         })
     if not matches:
         return {
@@ -3700,6 +4081,9 @@ def audit_selected_plan_price(
         }
     best_score = max(item["score"] for item in matches)
     best = [item for item in matches if item["score"] == best_score]
+    unchanged_terms = [item for item in best if not item["commitmentChanged"]]
+    if unchanged_terms:
+        best = unchanged_terms
     distinct_amounts = sorted({round(item["candidateNormalizedMonthly"], 2) for item in best})
     if len(distinct_amounts) != 1:
         return {
@@ -3712,8 +4096,14 @@ def audit_selected_plan_price(
         }
     current = distinct_amounts[0]
     relative_change = abs(current - published) / published
+    terms_changed = all(item["commitmentChanged"] for item in best)
     evidence = {
-        "status": "changed-over-20-percent" if relative_change > 0.2 else "matched-within-threshold",
+        "status": (
+            "selected-plan-terms-changed"
+            if terms_changed
+            else "changed-over-20-percent" if relative_change > 0.2
+            else "matched-within-threshold"
+        ),
         "selectedPlanId": selected_plan_id,
         "publishedMonthly": published,
         "candidateAmount": best[0]["candidateAmount"],
@@ -3724,6 +4114,9 @@ def audit_selected_plan_price(
         "sourceUrl": best[0]["sourceUrl"],
         "sourceProductId": best[0]["sourceProductId"],
     }
+    if terms_changed:
+        evidence["publishedCommitment"] = selected.get("commitment") or {}
+        evidence["candidateCommitment"] = best[0]["candidateCommitment"]
     return evidence
 
 
@@ -3784,7 +4177,9 @@ def reconcile_selected_plan_price_audits(
             continue
         root = next((item for item in gym_attempts if "reviewedSeedCount" in item), gym_attempts[0])
         root["selectedPlanPriceAuditStatus"] = audit["status"]
-        if audit["status"] in {"invalid-selected-plan", "ambiguous-current-variants"}:
+        if audit["status"] in {
+            "invalid-selected-plan", "ambiguous-current-variants", "selected-plan-terms-changed",
+        }:
             root["requiresReviewBeforePriceAudit"] = bool(root.get("requiresReview"))
             root["requiresReview"] = True
             root["priceChangeEvidence"] = audit
@@ -3849,12 +4244,16 @@ def crawl_gym(
     result = rate_limited_fetch(url)
     offers, storefronts, digest = parse_page(result, gym)
     location_candidates = parse_location_page(result)
+    stale_cache = reusable_transient_cache(cache.get(url), result, url, gym)
     if result.get("status") == "not-modified":
         offers = list(cache.get(url, {}).get("candidates", []))
         storefronts = linked_storefronts(url, list(cache.get(url, {}).get("linkedStorefronts", [])), gym)
         location_candidates = list(cache.get(url, {}).get("locationCandidates", []))
         digest = text(cache.get(url, {}).get("contentHash"))
+    elif stale_cache:
+        offers, storefronts, location_candidates, digest, _captured_at = stale_cache
     attempted_at = today.date().isoformat()
+    evidence_captured_at = stale_cache[4] if stale_cache else attempted_at
     previous_hash = text(cache.get(url, {}).get("contentHash"))
     attempts = [
         {
@@ -3868,6 +4267,7 @@ def crawl_gym(
             "contentHash": digest,
             "contentChanged": bool(previous_hash and digest and previous_hash != digest),
             "candidateCount": len(offers),
+            "staleCacheReused": bool(stale_cache),
             "sharedResponse": bool(result.get("sharedResponse")),
             "linkedStorefronts": storefronts,
             "requiresReview": bool(offers),
@@ -3875,7 +4275,7 @@ def crawl_gym(
         }
     ]
     observations = [
-        {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer, "catalogSourceUrl": url}
+        {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": evidence_captured_at, **offer, "catalogSourceUrl": url}
         for offer in offers
     ]
     location_observations = [{"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate} for candidate in location_candidates]
@@ -3917,6 +4317,9 @@ def crawl_gym(
         store_result = rate_limited_fetch(storefront)
         store_offers, nested, store_digest = parse_page(store_result, gym)
         store_location_candidates = parse_location_page(store_result)
+        store_stale_cache = reusable_transient_cache(
+            cache.get(storefront), store_result, storefront, gym,
+        )
         if store_result.get("status") == "not-modified":
             store_offers = list(cache.get(storefront, {}).get("candidates", []))
             nested = linked_storefronts(
@@ -3926,6 +4329,9 @@ def crawl_gym(
             )
             store_location_candidates = list(cache.get(storefront, {}).get("locationCandidates", []))
             store_digest = text(cache.get(storefront, {}).get("contentHash"))
+        elif store_stale_cache:
+            store_offers, nested, store_location_candidates, store_digest, _store_captured_at = store_stale_cache
+        store_evidence_captured_at = store_stale_cache[4] if store_stale_cache else attempted_at
         attempts.append(
             {
                 "gymId": gym["id"],
@@ -3938,6 +4344,7 @@ def crawl_gym(
                 "contentHash": store_digest,
                 "contentChanged": bool(text(cache.get(storefront, {}).get("contentHash")) and store_digest and text(cache.get(storefront, {}).get("contentHash")) != store_digest),
                 "candidateCount": len(store_offers),
+                "staleCacheReused": bool(store_stale_cache),
                 "sharedResponse": bool(store_result.get("sharedResponse")),
                 "linkedFrom": linked_from,
                 "linkDepth": depth,
@@ -3947,13 +4354,13 @@ def crawl_gym(
         )
         observations.extend(
             {
-                "gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at,
+                "gymId": gym["id"], "gymName": gym["name"], "capturedAt": store_evidence_captured_at,
                 **offer, "catalogSourceUrl": catalog_source_url,
             }
             for offer in store_offers
         )
         location_observations.extend(
-            {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate}
+            {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": store_evidence_captured_at, **candidate}
             for candidate in store_location_candidates
         )
         updates[storefront] = {
