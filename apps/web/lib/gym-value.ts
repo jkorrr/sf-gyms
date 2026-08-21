@@ -47,16 +47,18 @@ export function estimateGymCost(gym: Gym, assumptions: ComparisonAssumptions): G
   const estimatedVisits = assumptions.visitsPerWeek * (52 / 12) * assumptions.months;
   const enrollmentFee = gym.enrollmentFee ?? 0;
   const initiationFee = gym.initiationFee ?? 0;
+  const processingFee = gym.processingFee ?? 0;
+  const activationFee = gym.activationFee ?? 0;
   const annualFee = gym.annualFee ?? 0;
   const annualFeeOccurrences = Math.ceil(assumptions.months / 12);
   const membershipTotal = monthlyRate === null
     ? null
-    : monthlyRate * assumptions.months + enrollmentFee + initiationFee + annualFee * annualFeeOccurrences;
+    : monthlyRate * assumptions.months + enrollmentFee + initiationFee + processingFee + activationFee + annualFee * annualFeeOccurrences;
   const dayPassTotal = gym.dayPassPrice === null ? null : gym.dayPassPrice * estimatedVisits;
   const effectiveMonthly = membershipTotal === null ? null : membershipTotal / assumptions.months;
   const membershipCostPerVisit = membershipTotal === null || estimatedVisits === 0 ? null : membershipTotal / estimatedVisits;
   const dayPassCostPerVisit = gym.dayPassPrice;
-  const annualizedMonthlyFees = annualFee / 12 + (enrollmentFee + initiationFee) / assumptions.months;
+  const annualizedMonthlyFees = annualFee / 12 + (enrollmentFee + initiationFee + processingFee + activationFee) / assumptions.months;
   const breakEvenVisitsPerMonth = monthlyRate === null || gym.dayPassPrice === null || gym.dayPassPrice <= 0
     ? null
     : Math.ceil((monthlyRate + annualizedMonthlyFees) / gym.dayPassPrice);

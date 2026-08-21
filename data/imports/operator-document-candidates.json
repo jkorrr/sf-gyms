@@ -1,0 +1,18 @@
+{
+  "_meta": {
+    "generatedAt": "",
+    "policy": "Official sitemap URL leads only. Every identity and price still requires source review.",
+    "operatorHostCount": 0,
+    "sitemapRequestCount": 0,
+    "candidateUrlCount": 0
+  },
+  "attempts": [
+    {
+      "operatorOrigin": "https://active-pilates.com",
+      "url": "https://active-pilates.com/sitemap.xml",
+      "status": "network-error",
+      "robotsStatus": "robots-unavailable"
+    }
+  ],
+  "candidates": []
+}

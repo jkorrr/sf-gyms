@@ -1,0 +1,37 @@
+{
+  "attempts": [
+    {
+      "gymId": "osm-node-3204993502",
+      "gymName": "Church Fitness",
+      "formId": "cfd41bf5045d3716514c",
+      "domain": "churchfitness-sf.com",
+      "termsHash": "3e92d9ef2ed25aec632bda732b15f2637cd21ec744b075241189a777fabd5451",
+      "submittedAt": "2026-08-20T06:51:22.536233+00:00",
+      "outcome": "submitted-no-confirmation-detected",
+      "candidateCount": 0,
+      "containsContactData": false
+    },
+    {
+      "gymId": "osm-node-4891328528",
+      "gymName": "Pacific Wushu",
+      "formId": "361eb3242183f8fb887b",
+      "domain": "www.pacificwushu.com",
+      "termsHash": "cc2af0d6af064fd615a059588085318227de7956e048b6eece2c5eed3a71fd8b",
+      "submittedAt": "2026-08-20T06:52:27.942220+00:00",
+      "outcome": "submitted-confirmation-visible",
+      "candidateCount": 0,
+      "containsContactData": false
+    },
+    {
+      "gymId": "osm-way-264527987",
+      "gymName": "Sabrofit",
+      "formId": "0a1985466a31337e81aa",
+      "domain": "sabrofit.com",
+      "termsHash": "7c1175ca31c4bdd6846ac2686caf2319be252fcf49769ea2a8f17c04c12f9dc2",
+      "submittedAt": "2026-08-20T06:52:34.546163+00:00",
+      "outcome": "submitted-no-confirmation-detected",
+      "candidateCount": 0,
+      "containsContactData": false
+    }
+  ]
+}

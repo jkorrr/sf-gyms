@@ -1,0 +1,22 @@
+{
+  "generatedAt": "2026-08-20",
+  "policy": "Availability/hash/claim checks only; no review prose is retained.",
+  "reportsChecked": 1,
+  "requiresReview": 1,
+  "audits": [
+    {
+      "reportId": "crossfit-alinea-dropin-2026-04",
+      "gymId": "osm-node-3485460052",
+      "url": "https://note.com/midoriilo/n/n0e58db9035f6",
+      "attemptedAt": "2026-08-20",
+      "status": "fetched",
+      "robotsStatus": "checked",
+      "contentHash": "de0fb4e61af993b66e9d6042fc72bb679d1bc8693565caf1b72c81c805fa3fa2",
+      "contentChanged": true,
+      "amountStillVisible": false,
+      "withinRecencyWindow": true,
+      "ageDays": 127,
+      "requiresReview": true
+    }
+  ]
+}

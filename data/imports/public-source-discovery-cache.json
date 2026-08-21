@@ -1,0 +1,1835 @@
+{
+  "10th planet jiu jitsu san francisco": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0433903-01-001-0433903",
+        "dba_name": "10th Planet Jiu Jitsu SF",
+        "full_business_address": "333 Valencia St Ste 100",
+        "business_zip": "94103",
+        "dba_start_date": "2008-03-04T00:00:00.000",
+        "dba_end_date": "2022-06-29T00:00:00.000",
+        "location_start_date": "2008-03-04T00:00:00.000",
+        "location_end_date": "2014-08-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1213006-02-191-0433903",
+        "dba_name": "10th Planet Jiu Jitsu SF",
+        "full_business_address": "261 S Van Ness Ave",
+        "business_zip": "94103",
+        "dba_start_date": "2008-03-04T00:00:00.000",
+        "dba_end_date": "2022-06-29T00:00:00.000",
+        "location_start_date": "2014-09-12T00:00:00.000",
+        "location_end_date": "2019-02-14T00:00:00.000"
+      }
+    ]
+  },
+  "academy of tae kwon do": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0402674-01-001-0402674",
+        "dba_name": "Academy Of Tae Kwon Do",
+        "full_business_address": "988 Oak St",
+        "business_zip": "94117",
+        "dba_start_date": "2006-10-05T00:00:00.000",
+        "dba_end_date": "2019-06-30T00:00:00.000",
+        "location_start_date": "2006-10-05T00:00:00.000",
+        "location_end_date": "2019-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "achillles stretch": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "active pilates": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0441920-01-001-0441920",
+        "dba_name": "Active-Pilates",
+        "full_business_address": "9 Clement St",
+        "business_zip": "94118",
+        "dba_start_date": "2009-08-25T00:00:00.000",
+        "location_start_date": "2009-08-25T00:00:00.000"
+      }
+    ]
+  },
+  "american gymnastics club": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0393362-01-002-0393362",
+        "dba_name": "American Gymnastics Club Inc",
+        "full_business_address": "390 Bay Shore Blvd",
+        "business_zip": "94124",
+        "dba_start_date": "2012-01-01T00:00:00.000",
+        "location_start_date": "2012-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0393362-01-001-0393362",
+        "dba_name": "American Gymnastics Club Inc",
+        "full_business_address": "2520 Judah St",
+        "business_zip": "94122",
+        "dba_start_date": "2012-01-01T00:00:00.000",
+        "location_start_date": "2012-01-01T00:00:00.000"
+      }
+    ]
+  },
+  "asham yoga": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "asta yoga": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "back to sports": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1402638-10-251-1175780",
+        "dba_name": "Back To Sports Fitness And Therapy",
+        "full_business_address": "693 Monterey Blvd",
+        "business_zip": "94127",
+        "dba_start_date": "2025-10-22T00:00:00.000",
+        "location_start_date": "2025-10-22T00:00:00.000"
+      },
+      {
+        "uniqueid": "0309454-03-001-0309454",
+        "dba_name": "Back To Sports Fitness & Therapy",
+        "full_business_address": "342 West Portal Ave",
+        "business_zip": "94127",
+        "dba_start_date": "2009-12-28T00:00:00.000",
+        "dba_end_date": "2024-06-30T00:00:00.000",
+        "location_start_date": "2009-12-28T00:00:00.000",
+        "location_end_date": "2024-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "bakar fitness center": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "bay jiu jitsu": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1023587-03-151-0453652",
+        "dba_name": "Bay Jiu-Jitsu",
+        "full_business_address": "1628 Post St",
+        "business_zip": "94115",
+        "dba_start_date": "2010-10-26T00:00:00.000",
+        "dba_end_date": "2024-03-20T00:00:00.000",
+        "location_start_date": "2011-07-31T00:00:00.000",
+        "location_end_date": "2024-03-20T00:00:00.000"
+      },
+      {
+        "uniqueid": "0453652-01-001-0453652",
+        "dba_name": "Bay Jiu-Jitsu",
+        "full_business_address": "2001 Van Ness Ave C",
+        "business_zip": "94109",
+        "dba_start_date": "2010-10-26T00:00:00.000",
+        "dba_end_date": "2024-03-20T00:00:00.000",
+        "location_start_date": "2010-10-26T00:00:00.000",
+        "location_end_date": "2011-07-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1023586-03-151-0453652",
+        "dba_name": "Bay Jiu-Jitsu",
+        "full_business_address": "3274 Mission St",
+        "business_zip": "94110",
+        "dba_start_date": "2010-10-26T00:00:00.000",
+        "dba_end_date": "2024-03-20T00:00:00.000",
+        "location_start_date": "2013-06-30T00:00:00.000",
+        "location_end_date": "2020-08-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1356195-03-241-1156508",
+        "dba_name": "Bay Jiu-Jitsu",
+        "full_business_address": "1628 Post St",
+        "business_zip": "94115",
+        "dba_start_date": "2024-03-20T00:00:00.000",
+        "location_start_date": "2024-03-20T00:00:00.000"
+      }
+    ]
+  },
+  "blik yoga shala": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "bodyrok": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0487404-01-001-0487404",
+        "dba_name": "Bodyrok",
+        "full_business_address": "2128 Lombard St",
+        "business_zip": "94123",
+        "dba_start_date": "2014-02-26T00:00:00.000",
+        "location_start_date": "2014-02-26T00:00:00.000"
+      },
+      {
+        "uniqueid": "0487739-01-001-0487739",
+        "dba_name": "Bodyrok",
+        "full_business_address": "2128 Lombard St",
+        "business_zip": "94123",
+        "dba_start_date": "2014-03-07T00:00:00.000",
+        "dba_end_date": "2016-06-01T00:00:00.000",
+        "location_start_date": "2014-03-07T00:00:00.000",
+        "location_end_date": "2016-06-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1074759-06-161-1036327",
+        "dba_name": "Bodyrok",
+        "full_business_address": "3585 20th St",
+        "business_zip": "94110",
+        "dba_start_date": "2016-06-02T00:00:00.000",
+        "dba_end_date": "2016-06-02T00:00:00.000",
+        "location_start_date": "2016-06-02T00:00:00.000",
+        "location_end_date": "2016-06-02T00:00:00.000"
+      },
+      {
+        "uniqueid": "0484211-01-001-0484211",
+        "dba_name": "Bodyrok",
+        "full_business_address": "2128 Lombard St",
+        "business_zip": "94123",
+        "dba_start_date": "2013-09-11T00:00:00.000",
+        "dba_end_date": "2014-02-26T00:00:00.000",
+        "location_start_date": "2013-09-11T00:00:00.000",
+        "location_end_date": "2014-02-26T00:00:00.000"
+      }
+    ]
+  },
+  "bright star pilates": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1331972-05-231-1120765",
+        "dba_name": "Bright Star Pilates",
+        "full_business_address": "493 Sanchez St",
+        "business_zip": "94114",
+        "dba_start_date": "2013-10-15T00:00:00.000",
+        "location_start_date": "2023-05-01T00:00:00.000"
+      }
+    ]
+  },
+  "california martial arts": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "classical pilates studio": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "core mvmt": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1237019-10-191-1107961",
+        "dba_name": "Core Mvmt",
+        "full_business_address": "2349 Market St",
+        "business_zip": "94114",
+        "dba_start_date": "2019-10-24T00:00:00.000",
+        "location_start_date": "2019-10-24T00:00:00.000"
+      }
+    ]
+  },
+  "crossfit golden gate": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1025026-04-151-1012106",
+        "dba_name": "Crossfit Golden Gate",
+        "full_business_address": "1940 Van Ness Ave",
+        "business_zip": "94109",
+        "dba_start_date": "2015-03-15T00:00:00.000",
+        "location_start_date": "2015-03-15T00:00:00.000"
+      }
+    ]
+  },
+  "custom fit": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1055449-02-161-1026920",
+        "dba_name": "Custom Fit",
+        "full_business_address": "1844 Market St Retail #2",
+        "business_zip": "94102",
+        "dba_start_date": "2016-02-22T00:00:00.000",
+        "location_start_date": "2016-02-22T00:00:00.000"
+      },
+      {
+        "uniqueid": "1212171-02-191-1026920",
+        "dba_name": "Custom Fit",
+        "full_business_address": "1844 Market St Retail 1",
+        "business_zip": "94102",
+        "dba_start_date": "2016-02-22T00:00:00.000",
+        "location_start_date": "2018-06-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1409394-01-261-1026920",
+        "dba_name": "Custom Fit",
+        "full_business_address": "570 Battery St",
+        "business_zip": "94111",
+        "dba_start_date": "2016-02-22T00:00:00.000",
+        "location_start_date": "2026-01-20T00:00:00.000"
+      },
+      {
+        "uniqueid": "1223976-06-191-1102679",
+        "dba_name": "Waterman Physical Therapy @ Custom Fit",
+        "full_business_address": "1844 Market St Unit 2",
+        "business_zip": "94102",
+        "dba_start_date": "2019-06-01T00:00:00.000",
+        "dba_end_date": "2019-12-31T00:00:00.000",
+        "location_start_date": "2019-06-01T00:00:00.000",
+        "location_end_date": "2019-12-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1304857-05-221-1026920",
+        "dba_name": "Custom Fit",
+        "full_business_address": "323 Octavia St",
+        "business_zip": "94102",
+        "dba_start_date": "2016-02-22T00:00:00.000",
+        "location_start_date": "2022-05-11T00:00:00.000"
+      }
+    ]
+  },
+  "eden fitness studio": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1382731-03-251-1100242",
+        "dba_name": "Eden Fitness Studio",
+        "full_business_address": "1640 Bush St",
+        "business_zip": "94109",
+        "dba_start_date": "2019-04-01T00:00:00.000",
+        "location_start_date": "2025-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1217573-04-191-1100242",
+        "dba_name": "Eden Fitness Studio",
+        "full_business_address": "1650 Bush St",
+        "business_zip": "94109",
+        "dba_start_date": "2019-04-01T00:00:00.000",
+        "location_start_date": "2019-04-01T00:00:00.000"
+      }
+    ]
+  },
+  "empire jiu jitsu": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1192913-06-181-1089435",
+        "dba_name": "Empire Jiu Jitsu",
+        "full_business_address": "2356 Mission St.",
+        "business_zip": "94110",
+        "dba_start_date": "2018-06-22T00:00:00.000",
+        "location_start_date": "2018-06-22T00:00:00.000"
+      },
+      {
+        "uniqueid": "1357858-04-241-0169780",
+        "dba_name": "Empire Jiu Jitsu",
+        "full_business_address": "2356 Mission St",
+        "business_zip": "94110",
+        "dba_start_date": "1988-01-01T00:00:00.000",
+        "location_start_date": "2024-04-01T00:00:00.000"
+      }
+    ]
+  },
+  "ever strong sf": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "fitlife": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1012653-11-141-1006246",
+        "dba_name": "Lg Fitlife LLC",
+        "full_business_address": "1707 Post St #313",
+        "business_zip": "94115",
+        "dba_start_date": "2014-09-08T00:00:00.000",
+        "dba_end_date": "2018-06-30T00:00:00.000",
+        "location_start_date": "2014-09-08T00:00:00.000",
+        "location_end_date": "2018-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "fitness 19": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1165857-11-171-0398251",
+        "dba_name": "Happy Hounds Massage & Fitness",
+        "full_business_address": "3150 18 St Ste 239",
+        "business_zip": "94110",
+        "dba_start_date": "2006-05-01T00:00:00.000",
+        "location_start_date": "2017-11-02T00:00:00.000",
+        "location_end_date": "2020-05-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0401765-01-001-0401765",
+        "dba_name": "Go Forward Fitness",
+        "full_business_address": "19 Clementina St 307",
+        "business_zip": "94105",
+        "dba_start_date": "2006-09-15T00:00:00.000",
+        "dba_end_date": "2016-03-01T00:00:00.000",
+        "location_start_date": "2009-07-01T00:00:00.000",
+        "location_end_date": "2016-03-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1133291-01-171-1063998",
+        "dba_name": "Hasan Cheema Strength And Fitness",
+        "full_business_address": "19 Tehama",
+        "business_zip": "94105",
+        "dba_start_date": "2017-01-18T00:00:00.000",
+        "dba_end_date": "2019-05-31T00:00:00.000",
+        "location_start_date": "2017-01-18T00:00:00.000",
+        "location_end_date": "2019-05-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1165870-11-171-0398251",
+        "dba_name": "Happy Hounds Massage & Fitness",
+        "full_business_address": "3955 17 St Apt 19",
+        "business_zip": "94114",
+        "dba_start_date": "2006-05-01T00:00:00.000",
+        "location_start_date": "2006-05-01T00:00:00.000"
+      }
+    ]
+  },
+  "five animals choy lay fut kung fu": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "flagship": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1378490-01-251-1165600",
+        "dba_name": "Flagship Training Fidi",
+        "full_business_address": "250 Montgomery St Ste 150",
+        "business_zip": "94104",
+        "dba_start_date": "2025-01-01T00:00:00.000",
+        "location_start_date": "2025-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0086356-03-001-0086356",
+        "dba_name": "The Stevens Flagship",
+        "full_business_address": "434 Shotwell St",
+        "business_zip": "94110",
+        "dba_start_date": "1975-01-01T00:00:00.000",
+        "dba_end_date": "2023-06-29T00:00:00.000",
+        "location_start_date": "1975-01-01T00:00:00.000",
+        "location_end_date": "2014-10-15T00:00:00.000"
+      },
+      {
+        "uniqueid": "1374920-11-241-1164041",
+        "dba_name": "Flagship Training",
+        "full_business_address": "160 Church St",
+        "business_zip": "94114",
+        "dba_start_date": "2024-11-01T00:00:00.000",
+        "location_start_date": "2024-11-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1250613-04-201-1113660",
+        "dba_name": "Planned Parenthood Northern Ca Flagship",
+        "full_business_address": "1777 English Colony Way",
+        "business_zip": "95663",
+        "dba_start_date": "2020-04-16T00:00:00.000",
+        "dba_end_date": "2024-12-31T00:00:00.000",
+        "location_start_date": "2020-04-16T00:00:00.000",
+        "location_end_date": "2021-05-07T00:00:00.000"
+      },
+      {
+        "uniqueid": "0207043-07-001-0207043",
+        "dba_name": "Sf Flagship Store",
+        "full_business_address": "815 Market St",
+        "business_zip": "94103",
+        "dba_start_date": "1991-01-01T00:00:00.000",
+        "location_start_date": "2013-08-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1212862-02-191-1098246",
+        "dba_name": "Flagship Food Group",
+        "full_business_address": "500 Washington St",
+        "business_zip": "94111",
+        "dba_start_date": "2019-02-04T00:00:00.000",
+        "location_start_date": "2019-02-04T00:00:00.000"
+      },
+      {
+        "uniqueid": "1321423-01-231-1058654",
+        "dba_name": "Flagship Properties",
+        "full_business_address": "580 4th St",
+        "business_zip": "94107",
+        "dba_start_date": "2016-09-01T00:00:00.000",
+        "location_start_date": "2023-01-09T00:00:00.000"
+      },
+      {
+        "uniqueid": "1395181-07-251-1172551",
+        "dba_name": "Flagship Concept LLC",
+        "full_business_address": "590 6th St Apt 306",
+        "business_zip": "94103",
+        "dba_start_date": "2024-10-07T00:00:00.000",
+        "location_start_date": "2024-10-07T00:00:00.000"
+      },
+      {
+        "uniqueid": "0467001-01-999-0467001",
+        "dba_name": "Flagship Facility Services Inc",
+        "full_business_address": "1050 N 5th St Ste E",
+        "business_zip": "95112",
+        "dba_start_date": "2012-03-15T00:00:00.000",
+        "dba_end_date": "2023-12-31T00:00:00.000",
+        "location_start_date": "2012-03-15T00:00:00.000",
+        "location_end_date": "2023-12-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1372206-10-241-1162878",
+        "dba_name": "Junk King San Francisco",
+        "full_business_address": "1485 Bay Shore Blvd 179",
+        "business_zip": "94124",
+        "dba_start_date": "2024-10-08T00:00:00.000",
+        "location_start_date": "2024-10-08T00:00:00.000",
+        "location_end_date": "2024-12-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1367840-08-241-1161058",
+        "dba_name": "Flagship Facility Services LLC",
+        "full_business_address": "1050 N 5th St Ste E",
+        "business_zip": "95112",
+        "dba_start_date": "2024-01-01T00:00:00.000",
+        "location_start_date": "2024-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0086356-08-001-0086356",
+        "dba_name": "The Stevens Flagship",
+        "full_business_address": "623 Baker St",
+        "business_zip": "94117",
+        "dba_start_date": "1975-01-01T00:00:00.000",
+        "dba_end_date": "2023-06-29T00:00:00.000",
+        "location_start_date": "2013-05-13T00:00:00.000",
+        "location_end_date": "2023-06-29T00:00:00.000"
+      },
+      {
+        "uniqueid": "1222551-05-191-0487656",
+        "dba_name": "Flagship Athletic Performance",
+        "full_business_address": "160 Church St",
+        "business_zip": "94114",
+        "dba_start_date": "2014-01-20T00:00:00.000",
+        "dba_end_date": "2024-12-31T00:00:00.000",
+        "location_start_date": "2019-01-01T00:00:00.000",
+        "location_end_date": "2024-12-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1374919-11-241-1164041",
+        "dba_name": "Flagship Training",
+        "full_business_address": "1995 Union St",
+        "business_zip": "94123",
+        "dba_start_date": "2024-11-01T00:00:00.000",
+        "location_start_date": "2024-11-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1377077-12-241-1162878",
+        "dba_name": "Junk King San Francisco",
+        "full_business_address": "1615 Polk St Ste 6",
+        "business_zip": "94109",
+        "dba_start_date": "2024-10-08T00:00:00.000",
+        "location_start_date": "2024-12-15T00:00:00.000"
+      },
+      {
+        "uniqueid": "0207043-06-001-0207043",
+        "dba_name": "Sf Flagship Store",
+        "full_business_address": "300 Post St",
+        "business_zip": "94108",
+        "dba_start_date": "1991-01-01T00:00:00.000",
+        "location_start_date": "1999-08-15T00:00:00.000",
+        "location_end_date": "2013-07-28T00:00:00.000"
+      },
+      {
+        "uniqueid": "0487656-02-001-0487656",
+        "dba_name": "Flagship Crossfit",
+        "full_business_address": "250 Montgomery St Ste 150",
+        "business_zip": "94104",
+        "dba_start_date": "2014-01-20T00:00:00.000",
+        "dba_end_date": "2024-12-31T00:00:00.000",
+        "location_start_date": "2014-01-20T00:00:00.000",
+        "location_end_date": "2024-12-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1222550-05-191-0487656",
+        "dba_name": "Flagship Athletic Performance",
+        "full_business_address": "201 King St",
+        "business_zip": "94107",
+        "dba_start_date": "2014-01-20T00:00:00.000",
+        "dba_end_date": "2024-12-31T00:00:00.000",
+        "location_start_date": "2019-01-01T00:00:00.000",
+        "location_end_date": "2024-12-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1051840-02-161-1024499",
+        "dba_name": "Giants Dugout",
+        "full_business_address": "24 Willie Mays Plaza-Flagship Store",
+        "business_zip": "94107",
+        "dba_start_date": "2016-01-01T00:00:00.000",
+        "location_start_date": "2016-01-01T00:00:00.000"
+      }
+    ]
+  },
+  "flagship athletic performance": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1222551-05-191-0487656",
+        "dba_name": "Flagship Athletic Performance",
+        "full_business_address": "160 Church St",
+        "business_zip": "94114",
+        "dba_start_date": "2014-01-20T00:00:00.000",
+        "dba_end_date": "2024-12-31T00:00:00.000",
+        "location_start_date": "2019-01-01T00:00:00.000",
+        "location_end_date": "2024-12-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1222550-05-191-0487656",
+        "dba_name": "Flagship Athletic Performance",
+        "full_business_address": "201 King St",
+        "business_zip": "94107",
+        "dba_start_date": "2014-01-20T00:00:00.000",
+        "dba_end_date": "2024-12-31T00:00:00.000",
+        "location_start_date": "2019-01-01T00:00:00.000",
+        "location_end_date": "2024-12-31T00:00:00.000"
+      }
+    ]
+  },
+  "fluxfit": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "gracie jiu jitsu": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1397097-08-251-1173375",
+        "dba_name": "Ralph Gracie Jiu-Jitsu",
+        "full_business_address": "1166 Howard St",
+        "business_zip": "94103",
+        "dba_start_date": "2025-07-22T00:00:00.000",
+        "location_start_date": "2025-07-22T00:00:00.000"
+      }
+    ]
+  },
+  "h3 fitness": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "hapkido jiu jitsu": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "infinity training center": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1272721-03-211-1122633",
+        "dba_name": "Infinity Training Center",
+        "full_business_address": "2307 Olinda Ct",
+        "business_zip": "94564",
+        "dba_start_date": "2021-03-25T00:00:00.000",
+        "dba_end_date": "2025-08-06T00:00:00.000",
+        "location_start_date": "2021-03-25T00:00:00.000",
+        "location_end_date": "2021-10-15T00:00:00.000"
+      },
+      {
+        "uniqueid": "1289926-10-211-1122633",
+        "dba_name": "Infinity Training Center",
+        "full_business_address": "742 14th St",
+        "business_zip": "94114",
+        "dba_start_date": "2021-03-25T00:00:00.000",
+        "dba_end_date": "2025-08-06T00:00:00.000",
+        "location_start_date": "2021-10-15T00:00:00.000",
+        "location_end_date": "2025-08-06T00:00:00.000"
+      },
+      {
+        "uniqueid": "1396449-08-251-1173094",
+        "dba_name": "Infinity Training Center, LLC",
+        "full_business_address": "742 14th St",
+        "business_zip": "94114",
+        "dba_start_date": "2025-08-06T00:00:00.000",
+        "location_start_date": "2025-08-06T00:00:00.000"
+      }
+    ]
+  },
+  "krav maga institute": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0468843-01-001-0468843",
+        "dba_name": "Krav Maga Institute San Franci",
+        "full_business_address": "539 Gough St",
+        "business_zip": "94102",
+        "dba_start_date": "2012-01-01T00:00:00.000",
+        "dba_end_date": "2023-06-30T00:00:00.000",
+        "location_start_date": "2012-01-01T00:00:00.000",
+        "location_end_date": "2023-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "la petite baleen": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1038839-09-151-1017981",
+        "dba_name": "La Petite Baleen Swim School",
+        "full_business_address": "933 Mason St",
+        "business_zip": "94129",
+        "dba_start_date": "2015-07-01T00:00:00.000",
+        "location_start_date": "2015-07-01T00:00:00.000"
+      }
+    ]
+  },
+  "lalanne fitness": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0430851-02-001-0430851",
+        "dba_name": "Lalanne Fitness",
+        "full_business_address": "960 Howard St",
+        "business_zip": "94103",
+        "dba_start_date": "2008-06-01T00:00:00.000",
+        "dba_end_date": "2018-06-30T00:00:00.000",
+        "location_start_date": "2012-07-01T00:00:00.000",
+        "location_end_date": "2018-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "lily cai chinese dance company": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0356113-03-001-0356113",
+        "dba_name": "Lily Cai Chinese Dance Company",
+        "full_business_address": "Bldg C Fort Mason Center 353",
+        "business_zip": "94123",
+        "dba_start_date": "1992-12-21T00:00:00.000",
+        "location_start_date": "2013-11-22T00:00:00.000"
+      },
+      {
+        "uniqueid": "0356113-02-001-0356113",
+        "dba_name": "Lily Cai Dance Company",
+        "full_business_address": "Bldg C Fort Mason Center 353",
+        "business_zip": "94123",
+        "dba_start_date": "1992-12-21T00:00:00.000",
+        "location_start_date": "2013-11-22T00:00:00.000"
+      }
+    ]
+  },
+  "luxfit": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1333099-05-231-1139297",
+        "dba_name": "Luxfit SF",
+        "full_business_address": "432 Octavia Blvd # C",
+        "business_zip": "94102",
+        "dba_start_date": "2022-10-01T00:00:00.000",
+        "location_start_date": "2022-10-05T00:00:00.000"
+      },
+      {
+        "uniqueid": "1310329-07-221-1120609",
+        "dba_name": "Luxfit",
+        "full_business_address": "200 Folsom St",
+        "business_zip": "94105",
+        "dba_start_date": "2020-12-01T00:00:00.000",
+        "dba_end_date": "2022-10-04T00:00:00.000",
+        "location_start_date": "2022-01-01T00:00:00.000",
+        "location_end_date": "2022-10-04T00:00:00.000"
+      },
+      {
+        "uniqueid": "1365791-07-241-1160233",
+        "dba_name": "Luxfit",
+        "full_business_address": "1090 Dr Maya Angelou Ln Ste E",
+        "business_zip": "94158",
+        "dba_start_date": "2024-07-08T00:00:00.000",
+        "location_start_date": "2024-07-08T00:00:00.000"
+      },
+      {
+        "uniqueid": "1267712-01-211-1120609",
+        "dba_name": "Luxfit SF",
+        "full_business_address": "432 Octavia St C",
+        "business_zip": "94102",
+        "dba_start_date": "2020-12-01T00:00:00.000",
+        "dba_end_date": "2022-10-04T00:00:00.000",
+        "location_start_date": "2020-12-01T00:00:00.000",
+        "location_end_date": "2022-10-04T00:00:00.000"
+      },
+      {
+        "uniqueid": "1327235-03-231-1139297",
+        "dba_name": "Luxfit",
+        "full_business_address": "200 Folsom St",
+        "business_zip": "94105",
+        "dba_start_date": "2022-10-01T00:00:00.000",
+        "location_start_date": "2023-03-09T00:00:00.000",
+        "location_end_date": "2025-01-17T00:00:00.000"
+      },
+      {
+        "uniqueid": "1315418-10-221-1139297",
+        "dba_name": "Luxfit SF",
+        "full_business_address": "100 Van Ness Ave Apt 2804",
+        "business_zip": "94102",
+        "dba_start_date": "2022-10-01T00:00:00.000",
+        "location_start_date": "2022-10-01T00:00:00.000",
+        "location_end_date": "2022-10-06T00:00:00.000"
+      }
+    ]
+  },
+  "memorial gymnasium": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "mighty pilates": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1377124-12-241-1165006",
+        "dba_name": "Mighty Pilates",
+        "full_business_address": "2022 Polk St",
+        "business_zip": "94109",
+        "dba_start_date": "2024-12-27T00:00:00.000",
+        "location_start_date": "2024-12-27T00:00:00.000"
+      },
+      {
+        "uniqueid": "1397898-08-251-1165006",
+        "dba_name": "Mighty Pilates",
+        "full_business_address": "3654 Sacramento St Ste A",
+        "business_zip": "94118",
+        "dba_start_date": "2024-12-27T00:00:00.000",
+        "location_start_date": "2024-12-27T00:00:00.000"
+      },
+      {
+        "uniqueid": "1404766-11-251-1165006",
+        "dba_name": "Mighty Pilates",
+        "full_business_address": "231 -233 W Portal Ave #",
+        "business_zip": "94127",
+        "dba_start_date": "2024-12-27T00:00:00.000",
+        "location_start_date": "2025-10-13T00:00:00.000"
+      },
+      {
+        "uniqueid": "1401930-10-251-1175457",
+        "dba_name": "Mighty Pilates LLC",
+        "full_business_address": "231 -233 West Portal Ave",
+        "business_zip": "94127",
+        "dba_start_date": "2025-10-13T00:00:00.000",
+        "dba_end_date": "2025-10-31T00:00:00.000",
+        "location_start_date": "2025-10-13T00:00:00.000",
+        "location_end_date": "2025-10-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "0445722-01-001-0445722",
+        "dba_name": "Mighty Pilates",
+        "full_business_address": "3654 Sacramento St",
+        "business_zip": "94118",
+        "dba_start_date": "2010-02-15T00:00:00.000",
+        "location_start_date": "2010-02-15T00:00:00.000"
+      }
+    ]
+  },
+  "moon and stars studio": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1341931-09-231-1139189",
+        "dba_name": "Moon And Stars Studio",
+        "full_business_address": "43 Loyola Ter Apt A",
+        "business_zip": "94117",
+        "dba_start_date": "2022-09-28T00:00:00.000",
+        "location_start_date": "2022-10-01T00:00:00.000",
+        "location_end_date": "2024-03-18T00:00:00.000"
+      },
+      {
+        "uniqueid": "1356102-03-241-1139189",
+        "dba_name": "Moon And Stars Studio",
+        "full_business_address": "1262 9th Ave",
+        "business_zip": "94122",
+        "dba_start_date": "2022-09-28T00:00:00.000",
+        "location_start_date": "2024-03-19T00:00:00.000"
+      },
+      {
+        "uniqueid": "1315162-09-221-1139189",
+        "dba_name": "Moon And Stars Studio",
+        "full_business_address": "237 Kearny St # 348",
+        "business_zip": "94108",
+        "dba_start_date": "2022-09-28T00:00:00.000",
+        "location_start_date": "2022-09-28T00:00:00.000",
+        "location_end_date": "2024-03-01T00:00:00.000"
+      }
+    ]
+  },
+  "moxie": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1015555-01-151-0353570",
+        "dba_name": "Moxie Parlour",
+        "full_business_address": "1906 Market St #903",
+        "business_zip": "94102",
+        "dba_start_date": "2002-03-04T00:00:00.000",
+        "location_start_date": "2014-06-01T00:00:00.000",
+        "location_end_date": "2016-02-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0453058-03-001-0453058",
+        "dba_name": "Foxy Moxy",
+        "full_business_address": "1004 Revere Ave B-17",
+        "business_zip": "94124",
+        "dba_start_date": "2010-09-28T00:00:00.000",
+        "dba_end_date": "2018-06-30T00:00:00.000",
+        "location_start_date": "2013-05-31T00:00:00.000",
+        "location_end_date": "2014-06-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1236845-10-191-1107890",
+        "dba_name": "Moxie's Daughter",
+        "full_business_address": "642 Funston Ave Apt",
+        "business_zip": "94118",
+        "dba_start_date": "2019-10-21T00:00:00.000",
+        "dba_end_date": "2025-01-01T00:00:00.000",
+        "location_start_date": "2019-10-21T00:00:00.000",
+        "location_end_date": "2025-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1264465-11-201-1107890",
+        "dba_name": "Moxie's Daughter",
+        "full_business_address": "3356 Sacramento St",
+        "business_zip": "94118",
+        "dba_start_date": "2019-10-21T00:00:00.000",
+        "dba_end_date": "2025-01-01T00:00:00.000",
+        "location_start_date": "2020-11-01T00:00:00.000",
+        "location_end_date": "2025-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1350432-01-241-1042953",
+        "dba_name": "Moxie Mutts",
+        "full_business_address": "2609 30th Ave",
+        "business_zip": "94116",
+        "dba_start_date": "2016-08-15T00:00:00.000",
+        "location_start_date": "2023-06-29T00:00:00.000"
+      },
+      {
+        "uniqueid": "0461042-01-001-0461042",
+        "dba_name": "Moxie Hair Extensions",
+        "full_business_address": "1750 Church St",
+        "business_zip": "94131",
+        "dba_start_date": "2011-08-25T00:00:00.000",
+        "dba_end_date": "2015-01-01T00:00:00.000",
+        "location_start_date": "2011-08-25T00:00:00.000",
+        "location_end_date": "2015-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0488753-01-001-0488753",
+        "dba_name": "Moxie",
+        "full_business_address": "66 Lapham Way",
+        "business_zip": "94112",
+        "dba_start_date": "2014-04-14T00:00:00.000",
+        "dba_end_date": "2014-06-30T00:00:00.000",
+        "location_start_date": "2014-04-14T00:00:00.000",
+        "location_end_date": "2014-06-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1387290-04-251-1169331",
+        "dba_name": "Moxie Money, Inc",
+        "full_business_address": "43 West Shore Rd",
+        "business_zip": "94920",
+        "dba_start_date": "2025-04-21T00:00:00.000",
+        "location_start_date": "2025-04-21T00:00:00.000"
+      },
+      {
+        "uniqueid": "1012522-11-141-0477552",
+        "dba_name": "Moxie Yoga & Fitness",
+        "full_business_address": "3315 20th St",
+        "business_zip": "94110",
+        "dba_start_date": "2013-04-10T00:00:00.000",
+        "dba_end_date": "2022-12-30T00:00:00.000",
+        "location_start_date": "2014-11-20T00:00:00.000",
+        "location_end_date": "2022-12-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1032312-07-151-0356734",
+        "dba_name": "Moxie & Mojo",
+        "full_business_address": "2002 3rd St Apt 216",
+        "business_zip": "94107",
+        "dba_start_date": "2012-07-25T00:00:00.000",
+        "dba_end_date": "2019-06-30T00:00:00.000",
+        "location_start_date": "2015-07-02T00:00:00.000",
+        "location_end_date": "2017-10-24T00:00:00.000"
+      },
+      {
+        "uniqueid": "0930851-01-001-0930851",
+        "dba_name": "Moxie",
+        "full_business_address": "888 Brannan St 1120",
+        "business_zip": "94103",
+        "dba_start_date": "1994-06-01T00:00:00.000",
+        "dba_end_date": "2016-02-29T00:00:00.000",
+        "location_start_date": "1994-06-01T00:00:00.000",
+        "location_end_date": "2016-02-29T00:00:00.000"
+      },
+      {
+        "uniqueid": "1400375-09-251-1174782",
+        "dba_name": "Body Moxie, LLC",
+        "full_business_address": "201 Folsom St Unit 33b",
+        "business_zip": "94105",
+        "dba_start_date": "2025-08-25T00:00:00.000",
+        "location_start_date": "2025-08-25T00:00:00.000"
+      },
+      {
+        "uniqueid": "1122182-10-161-1058804",
+        "dba_name": "Moxie Inc",
+        "full_business_address": "1459 18th St 328",
+        "business_zip": "94107",
+        "dba_start_date": "2017-04-06T00:00:00.000",
+        "dba_end_date": "2023-12-26T00:00:00.000",
+        "location_start_date": "2017-04-06T00:00:00.000",
+        "location_end_date": "2023-12-26T00:00:00.000"
+      },
+      {
+        "uniqueid": "1273772-04-211-0477552",
+        "dba_name": "Moxie Yoga",
+        "full_business_address": "182 6th Ave",
+        "business_zip": "94118",
+        "dba_start_date": "2013-04-10T00:00:00.000",
+        "dba_end_date": "2022-12-30T00:00:00.000",
+        "location_start_date": "2021-04-01T00:00:00.000",
+        "location_end_date": "2022-12-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1423580-05-261-1184742",
+        "dba_name": "Moxie Clinical Corporation",
+        "full_business_address": "345 California St Ste 600",
+        "business_zip": "94104",
+        "dba_start_date": "2026-03-19T00:00:00.000",
+        "location_start_date": "2026-03-19T00:00:00.000"
+      },
+      {
+        "uniqueid": "0398735-04-001-0398735",
+        "dba_name": "Moxie Interactive",
+        "full_business_address": "2001 The Embarcadero",
+        "business_zip": "94133",
+        "dba_start_date": "2005-01-01T00:00:00.000",
+        "dba_end_date": "2019-03-29T00:00:00.000",
+        "location_start_date": "2006-09-01T00:00:00.000",
+        "location_end_date": "2019-03-29T00:00:00.000"
+      },
+      {
+        "uniqueid": "1158596-08-171-1074979",
+        "dba_name": "Moxie House",
+        "full_business_address": "393 Crescent Ave",
+        "business_zip": "94110",
+        "dba_start_date": "2017-08-19T00:00:00.000",
+        "dba_end_date": "2024-05-01T00:00:00.000",
+        "location_start_date": "2017-08-19T00:00:00.000",
+        "location_end_date": "2024-05-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1308690-06-221-1136507",
+        "dba_name": "Moxie Bakehouse",
+        "full_business_address": "298 4th Ave",
+        "business_zip": "94118",
+        "dba_start_date": "2022-06-29T00:00:00.000",
+        "location_start_date": "2022-06-29T00:00:00.000",
+        "location_end_date": "2022-07-26T00:00:00.000"
+      },
+      {
+        "uniqueid": "1361917-05-241-1158723",
+        "dba_name": "Moxi-Kaizen",
+        "full_business_address": "41 Saturn St",
+        "business_zip": "94114",
+        "dba_start_date": "2024-05-14T00:00:00.000",
+        "location_start_date": "2024-05-14T00:00:00.000"
+      },
+      {
+        "uniqueid": "1119982-09-161-0477552",
+        "dba_name": "Moxie Yoga",
+        "full_business_address": "3232 Mission St",
+        "business_zip": "94110",
+        "dba_start_date": "2013-04-10T00:00:00.000",
+        "dba_end_date": "2022-12-30T00:00:00.000",
+        "location_start_date": "2016-09-10T00:00:00.000",
+        "location_end_date": "2022-12-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "0471047-02-001-0471047",
+        "dba_name": "Moxy Creative",
+        "full_business_address": "3150 18th St 111",
+        "business_zip": "94110",
+        "dba_start_date": "2012-07-03T00:00:00.000",
+        "location_start_date": "2012-10-01T00:00:00.000",
+        "location_end_date": "2015-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0400537-01-001-0400537",
+        "dba_name": "Moxi LLC",
+        "full_business_address": "1980 Union St Ste 8",
+        "business_zip": "94123",
+        "dba_start_date": "2006-07-25T00:00:00.000",
+        "dba_end_date": "2020-03-17T00:00:00.000",
+        "location_start_date": "2006-07-25T00:00:00.000",
+        "location_end_date": "2020-03-17T00:00:00.000"
+      },
+      {
+        "uniqueid": "0475521-01-001-0475521",
+        "dba_name": "Moxies",
+        "full_business_address": "2501 Phelps St",
+        "business_zip": "94124",
+        "dba_start_date": "2013-01-08T00:00:00.000",
+        "dba_end_date": "2017-12-31T00:00:00.000",
+        "location_start_date": "2013-01-08T00:00:00.000",
+        "location_end_date": "2015-07-13T00:00:00.000"
+      },
+      {
+        "uniqueid": "0389937-01-001-0389937",
+        "dba_name": "Steel Moxie Studios",
+        "full_business_address": "268 Bush St #3138",
+        "business_zip": "94104",
+        "dba_start_date": "2005-07-18T00:00:00.000",
+        "location_start_date": "2010-12-13T00:00:00.000"
+      },
+      {
+        "uniqueid": "1012523-11-141-0477552",
+        "dba_name": "Moxie Yoga & Fitness",
+        "full_business_address": "1501 Taylor St",
+        "business_zip": "94133",
+        "dba_start_date": "2013-04-10T00:00:00.000",
+        "dba_end_date": "2022-12-30T00:00:00.000",
+        "location_start_date": "2014-11-20T00:00:00.000",
+        "location_end_date": "2022-12-30T00:00:00.000"
+      }
+    ]
+  },
+  "mukunda": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1111349-08-161-1053450",
+        "dba_name": "Uber",
+        "full_business_address": "3600 Sierra Ridge 6204",
+        "business_zip": "94806",
+        "dba_start_date": "2016-07-01T00:00:00.000",
+        "dba_end_date": "2021-06-30T00:00:00.000",
+        "location_start_date": "2016-08-01T00:00:00.000",
+        "location_end_date": "2021-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      },
+      {
+        "uniqueid": "1272316-03-211-1107255",
+        "dba_name": "Mukunda Studio",
+        "full_business_address": "1250 Folsom St",
+        "business_zip": "94103",
+        "dba_start_date": "2019-10-03T00:00:00.000",
+        "location_start_date": "2021-03-22T00:00:00.000"
+      },
+      {
+        "uniqueid": "1017360-01-151-1008332",
+        "dba_name": "Econo Market",
+        "full_business_address": "593 Ofarrell St",
+        "business_zip": "94102",
+        "dba_start_date": "2015-01-28T00:00:00.000",
+        "dba_end_date": "2018-07-06T00:00:00.000",
+        "location_start_date": "2015-01-28T00:00:00.000",
+        "location_end_date": "2018-07-06T00:00:00.000"
+      },
+      {
+        "uniqueid": "1235349-10-191-1107255",
+        "dba_name": "Mukunda Yoga",
+        "full_business_address": "1250 Folsom St",
+        "business_zip": "94103",
+        "dba_start_date": "2019-10-03T00:00:00.000",
+        "location_start_date": "2019-10-03T00:00:00.000"
+      }
+    ]
+  },
+  "mx3 fitness": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1197641-08-181-1037585",
+        "dba_name": "Mx3 Fitness",
+        "full_business_address": "2336 Market St",
+        "business_zip": "94114",
+        "dba_start_date": "2016-06-03T00:00:00.000",
+        "location_start_date": "2018-08-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1346379-11-231-1037585",
+        "dba_name": "Mx3 Fitness",
+        "full_business_address": "4045 24th St Ste A",
+        "business_zip": "94114",
+        "dba_start_date": "2016-06-03T00:00:00.000",
+        "location_start_date": "2023-11-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1077384-06-161-1037585",
+        "dba_name": "Mx3 Fitness",
+        "full_business_address": "428 Corbett Ave",
+        "business_zip": "94114",
+        "dba_start_date": "2016-06-03T00:00:00.000",
+        "location_start_date": "2016-06-03T00:00:00.000"
+      },
+      {
+        "uniqueid": "1108308-08-161-1037585",
+        "dba_name": "Mx3 Fitness",
+        "full_business_address": "520 Waller St",
+        "business_zip": "94117",
+        "dba_start_date": "2016-06-03T00:00:00.000",
+        "location_start_date": "2016-08-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1308562-06-221-1037585",
+        "dba_name": "Mx3 Fitnesss",
+        "full_business_address": "3166 16th St",
+        "business_zip": "94103",
+        "dba_start_date": "2016-06-03T00:00:00.000",
+        "location_start_date": "2022-06-27T00:00:00.000"
+      }
+    ]
+  },
+  "northern tiger kenpo": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0383796-01-001-0383796",
+        "dba_name": "Northern Tiger Kenpo",
+        "full_business_address": "1319 20th Ave",
+        "business_zip": "94122",
+        "dba_start_date": "2005-01-03T00:00:00.000",
+        "dba_end_date": "2022-06-29T00:00:00.000",
+        "location_start_date": "2006-02-07T00:00:00.000",
+        "location_end_date": "2022-06-29T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "one martial arts": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1271404-03-211-1122127",
+        "dba_name": "One With Peace Martial Arts",
+        "full_business_address": "1725 Newcomb Ave St",
+        "business_zip": "94124",
+        "dba_start_date": "2021-03-10T00:00:00.000",
+        "location_start_date": "2021-03-10T00:00:00.000"
+      },
+      {
+        "uniqueid": "0335557-02-001-0335557",
+        "dba_name": "One Martial Arts",
+        "full_business_address": "850 Taraval St",
+        "business_zip": "94116",
+        "dba_start_date": "2000-03-31T00:00:00.000",
+        "location_start_date": "2003-09-11T00:00:00.000"
+      }
+    ]
+  },
+  "orange theory": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1322092-01-231-1142172",
+        "dba_name": "Orange Theory Fitness",
+        "full_business_address": "1633 Fillmore St",
+        "business_zip": "94115",
+        "dba_start_date": "2023-01-18T00:00:00.000",
+        "dba_end_date": "2023-04-22T00:00:00.000",
+        "location_start_date": "2023-01-18T00:00:00.000",
+        "location_end_date": "2023-04-12T00:00:00.000"
+      },
+      {
+        "uniqueid": "1079458-06-161-1038566",
+        "dba_name": "Orange Theory Fitness",
+        "full_business_address": "215 King St",
+        "business_zip": "94107",
+        "dba_start_date": "2016-05-01T00:00:00.000",
+        "dba_end_date": "2017-08-31T00:00:00.000",
+        "location_start_date": "2016-05-01T00:00:00.000",
+        "location_end_date": "2017-08-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1079426-06-161-1038560",
+        "dba_name": "Orange Theory Fitness",
+        "full_business_address": "343 Sansome St Ste 125",
+        "business_zip": "94104",
+        "dba_start_date": "2016-05-01T00:00:00.000",
+        "dba_end_date": "2017-08-31T00:00:00.000",
+        "location_start_date": "2016-05-01T00:00:00.000",
+        "location_end_date": "2017-08-31T00:00:00.000"
+      }
+    ]
+  },
+  "parkside pilates": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0417617-01-001-0417617",
+        "dba_name": "Parkside Pilates",
+        "full_business_address": "545 Taraval St",
+        "business_zip": "94116",
+        "dba_start_date": "2007-01-01T00:00:00.000",
+        "dba_end_date": "2017-12-31T00:00:00.000",
+        "location_start_date": "2007-01-01T00:00:00.000",
+        "location_end_date": "2017-12-31T00:00:00.000"
+      }
+    ]
+  },
+  "perform for golf": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1211303-01-191-1097569",
+        "dba_name": "San Francisco Golf Performance Center",
+        "full_business_address": "456 Montgomery St Ste 250",
+        "business_zip": "94104",
+        "dba_start_date": "2014-06-04T00:00:00.000",
+        "location_start_date": "2014-06-04T00:00:00.000"
+      },
+      {
+        "uniqueid": "1412521-02-261-1180057",
+        "dba_name": "Perform For Golf - Hayes Valley",
+        "full_business_address": "1700 Market St",
+        "business_zip": "94102",
+        "dba_start_date": "2026-01-01T00:00:00.000",
+        "location_start_date": "2026-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1320867-12-221-0487708",
+        "dba_name": "Perform For Golf",
+        "full_business_address": "61 Gough St",
+        "business_zip": "94102",
+        "dba_start_date": "2014-03-15T00:00:00.000",
+        "dba_end_date": "2024-12-01T00:00:00.000",
+        "location_start_date": "2022-05-01T00:00:00.000",
+        "location_end_date": "2024-12-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0401688-02-001-0401688",
+        "dba_name": "S F Golf Performance Center",
+        "full_business_address": "456 Montgomery St 250",
+        "business_zip": "94104",
+        "dba_start_date": "2006-09-01T00:00:00.000",
+        "dba_end_date": "2014-06-04T00:00:00.000",
+        "location_start_date": "2006-09-27T00:00:00.000",
+        "location_end_date": "2014-06-04T00:00:00.000"
+      },
+      {
+        "uniqueid": "1339612-08-231-1149372",
+        "dba_name": "Perform For Golf",
+        "full_business_address": "2598 Lombard St",
+        "business_zip": "94123",
+        "dba_start_date": "2023-08-01T00:00:00.000",
+        "location_start_date": "2023-08-01T00:00:00.000"
+      }
+    ]
+  },
+  "performforlife": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "pilates story": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1159096-08-171-1075220",
+        "dba_name": "Pilates Story",
+        "full_business_address": "183 West Portal Ave",
+        "business_zip": "94127",
+        "dba_start_date": "2017-01-01T00:00:00.000",
+        "location_start_date": "2017-01-01T00:00:00.000"
+      }
+    ]
+  },
+  "polk st gym": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1039659-09-151-1018426",
+        "dba_name": "Live Fit Gym-Polk Inc",
+        "full_business_address": "1630 Polk St",
+        "business_zip": "94109",
+        "dba_start_date": "2015-09-16T00:00:00.000",
+        "location_start_date": "2015-09-16T00:00:00.000"
+      },
+      {
+        "uniqueid": "1299964-03-221-0476325",
+        "dba_name": "Livefit Gym - Polk",
+        "full_business_address": "1630 Polk St",
+        "business_zip": "94109",
+        "dba_start_date": "2013-01-01T00:00:00.000",
+        "location_start_date": "2015-03-09T00:00:00.000"
+      },
+      {
+        "uniqueid": "1193494-06-181-1089586",
+        "dba_name": "Project 13 Gyms",
+        "full_business_address": "1440 Bush St A",
+        "business_zip": "94109",
+        "dba_start_date": "2018-06-28T00:00:00.000",
+        "location_start_date": "2018-06-28T00:00:00.000"
+      },
+      {
+        "uniqueid": "0421212-02-001-0421212",
+        "dba_name": "Polk St Boxing Gym",
+        "full_business_address": "1436 Polk St",
+        "business_zip": "94109",
+        "dba_start_date": "2007-09-17T00:00:00.000",
+        "location_start_date": "2010-01-01T00:00:00.000",
+        "location_end_date": "2015-05-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0476325-01-002-0476325",
+        "dba_name": "Live Fit Gym Wellness Club",
+        "full_business_address": "1630 Polk St",
+        "business_zip": "94109",
+        "dba_start_date": "2013-01-01T00:00:00.000",
+        "location_start_date": "2013-12-02T00:00:00.000",
+        "location_end_date": "2015-09-16T00:00:00.000"
+      }
+    ]
+  },
+  "powerplay": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1081673-07-161-1039127",
+        "dba_name": "Powerplay",
+        "full_business_address": "65 Gladys St",
+        "business_zip": "94110",
+        "dba_start_date": "2016-07-01T00:00:00.000",
+        "dba_end_date": "2024-05-06T00:00:00.000",
+        "location_start_date": "2016-07-01T00:00:00.000",
+        "location_end_date": "2024-05-06T00:00:00.000"
+      },
+      {
+        "uniqueid": "1199209-08-181-1069439",
+        "dba_name": "Powerplay",
+        "full_business_address": "1235 4th St",
+        "business_zip": "94158",
+        "dba_start_date": "2017-04-28T00:00:00.000",
+        "location_start_date": "2017-05-08T00:00:00.000"
+      }
+    ]
+  },
+  "pure barre": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0472944-01-001-0472944",
+        "dba_name": "Pure Barre San Francisco",
+        "full_business_address": "3727 Buchanan St",
+        "business_zip": "94123",
+        "dba_start_date": "2012-10-14T00:00:00.000",
+        "dba_end_date": "2019-06-30T00:00:00.000",
+        "location_start_date": "2012-10-14T00:00:00.000",
+        "location_end_date": "2019-06-30T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      },
+      {
+        "uniqueid": "1082163-07-161-1039304",
+        "dba_name": "Pure Barre San Francisco",
+        "full_business_address": "3727 Buchanan St",
+        "business_zip": "94123",
+        "dba_start_date": "2016-07-11T00:00:00.000",
+        "dba_end_date": "2016-07-11T00:00:00.000",
+        "location_start_date": "2016-07-11T00:00:00.000",
+        "location_end_date": "2016-07-11T00:00:00.000"
+      },
+      {
+        "uniqueid": "1082745-07-161-1039525",
+        "dba_name": "Pure Barre San Francisco Marina",
+        "full_business_address": "3727 Buchanan St",
+        "business_zip": "94123",
+        "dba_start_date": "2016-07-13T00:00:00.000",
+        "dba_end_date": "2022-06-29T00:00:00.000",
+        "location_start_date": "2016-07-13T00:00:00.000",
+        "location_end_date": "2022-06-29T00:00:00.000",
+        "administratively_closed": "***Administratively Closed"
+      }
+    ]
+  },
+  "rise combat sports": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "sessions training center": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1016199-01-151-1007781",
+        "dba_name": "Sessions Training Center",
+        "full_business_address": "1874 Market St",
+        "business_zip": "94102",
+        "dba_start_date": "2014-01-01T00:00:00.000",
+        "location_start_date": "2014-01-01T00:00:00.000"
+      }
+    ]
+  },
+  "sheila kelly s factor": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "sit reach": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "skyefit personal training": {
+    "fetchedAt": "2026-08-18",
+    "rows": []
+  },
+  "synergy fitness": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1418438-04-261-1134175",
+        "dba_name": "Synergy Fitness Studio",
+        "full_business_address": "3556 Sacramento St",
+        "business_zip": "94118",
+        "dba_start_date": "2022-04-14T00:00:00.000",
+        "location_start_date": "2026-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0335724-01-001-0335724",
+        "dba_name": "Synergy Fitness Studio",
+        "full_business_address": "1217 Polk St #B",
+        "business_zip": "94109",
+        "dba_start_date": "2000-04-06T00:00:00.000",
+        "location_start_date": "2000-04-06T00:00:00.000",
+        "location_end_date": "2023-11-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0335724-02-001-0335724",
+        "dba_name": "Synergy Fitness Studio",
+        "full_business_address": "1505 N Point St",
+        "business_zip": "94123",
+        "dba_start_date": "2000-04-06T00:00:00.000",
+        "location_start_date": "2005-01-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0335724-03-001-0335724",
+        "dba_name": "Synergy Fitness Studio",
+        "full_business_address": "3556 Sacramento St",
+        "business_zip": "94118",
+        "dba_start_date": "2000-04-06T00:00:00.000",
+        "location_start_date": "2007-01-01T00:00:00.000"
+      }
+    ]
+  },
+  "tantara": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0457620-01-001-0457620",
+        "dba_name": "Tantara",
+        "full_business_address": "914 Pacific Ave",
+        "business_zip": "94133",
+        "dba_start_date": "2011-05-05T00:00:00.000",
+        "dba_end_date": "2015-08-09T00:00:00.000",
+        "location_start_date": "2011-05-05T00:00:00.000",
+        "location_end_date": "2015-08-09T00:00:00.000"
+      }
+    ]
+  },
+  "telegraph crossfit": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0470552-02-001-0470552",
+        "dba_name": "Telegraph Crossfit",
+        "full_business_address": "3545 Geary Blvd",
+        "business_zip": "94118",
+        "dba_start_date": "2012-07-01T00:00:00.000",
+        "location_start_date": "2012-10-01T00:00:00.000"
+      }
+    ]
+  },
+  "the firm fitness": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1061914-04-161-1030380",
+        "dba_name": "The Firm SF",
+        "full_business_address": "225 Frederick St",
+        "business_zip": "94117",
+        "dba_start_date": "2016-04-11T00:00:00.000",
+        "location_start_date": "2016-04-11T00:00:00.000"
+      }
+    ]
+  },
+  "the lotus method": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0487667-01-001-0487667",
+        "dba_name": "The Lotus Method",
+        "full_business_address": "16 Jessie St C-120",
+        "business_zip": "94105",
+        "dba_start_date": "2014-04-01T00:00:00.000",
+        "location_start_date": "2014-04-01T00:00:00.000",
+        "location_end_date": "2020-11-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "1082068-07-161-0487667",
+        "dba_name": "The Lotus Method",
+        "full_business_address": "3989 24th St",
+        "business_zip": "94114",
+        "dba_start_date": "2014-04-01T00:00:00.000",
+        "location_start_date": "2016-04-11T00:00:00.000"
+      },
+      {
+        "uniqueid": "1036745-08-151-0487667",
+        "dba_name": "The Lotus Method",
+        "full_business_address": "1775 Union St",
+        "business_zip": "94123",
+        "dba_start_date": "2014-04-01T00:00:00.000",
+        "location_start_date": "2015-08-17T00:00:00.000"
+      }
+    ]
+  },
+  "uforia studios": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1208708-01-191-1005679",
+        "dba_name": "Uforia Studios",
+        "full_business_address": "2744 Mission St",
+        "business_zip": "94110",
+        "dba_start_date": "2014-11-06T00:00:00.000",
+        "dba_end_date": "2024-10-25T00:00:00.000",
+        "location_start_date": "2019-01-01T00:00:00.000",
+        "location_end_date": "2021-12-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1011332-11-141-1005679",
+        "dba_name": "Uforia Studios",
+        "full_business_address": "1561 California St",
+        "business_zip": "94109",
+        "dba_start_date": "2014-11-06T00:00:00.000",
+        "dba_end_date": "2024-10-25T00:00:00.000",
+        "location_start_date": "2014-11-06T00:00:00.000",
+        "location_end_date": "2024-10-25T00:00:00.000"
+      }
+    ]
+  },
+  "wheel house": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1041409-10-151-0473213",
+        "dba_name": "Wheel House",
+        "full_business_address": "1 Embarcadero Center Lobby Level",
+        "business_zip": "94111",
+        "dba_start_date": "2012-09-24T00:00:00.000",
+        "dba_end_date": "2023-12-15T00:00:00.000",
+        "location_start_date": "2013-06-01T00:00:00.000",
+        "location_end_date": "2023-12-15T00:00:00.000"
+      },
+      {
+        "uniqueid": "1408509-01-261-1178397",
+        "dba_name": "Isamicas Safe House Shelter Service On Wheels",
+        "full_business_address": "1196 Quesada Ave",
+        "business_zip": "94124",
+        "dba_start_date": "2026-01-19T00:00:00.000",
+        "location_start_date": "2026-01-19T00:00:00.000"
+      },
+      {
+        "uniqueid": "1374102-11-241-1163673",
+        "dba_name": "Wheel House Motors",
+        "full_business_address": "1427 43rd Ave",
+        "business_zip": "94122",
+        "dba_start_date": "2024-11-04T00:00:00.000",
+        "location_start_date": "2024-11-05T00:00:00.000"
+      }
+    ]
+  },
+  "world class boxing": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "0465270-01-001-0465270",
+        "dba_name": "World Class Boxing Gym",
+        "full_business_address": "1943 Mission St",
+        "business_zip": "94103",
+        "dba_start_date": "2012-01-04T00:00:00.000",
+        "dba_end_date": "2014-03-01T00:00:00.000",
+        "location_start_date": "2012-01-04T00:00:00.000",
+        "location_end_date": "2014-03-01T00:00:00.000"
+      }
+    ]
+  },
+  "yoga flow": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1213963-02-191-1098735",
+        "dba_name": "Yoga Flow Sf - Noe",
+        "full_business_address": "4049 24th St",
+        "business_zip": "94114",
+        "dba_start_date": "2019-02-23T00:00:00.000",
+        "location_start_date": "2019-02-23T00:00:00.000"
+      },
+      {
+        "uniqueid": "1167007-11-171-0465126",
+        "dba_name": "Yoga Flow SF",
+        "full_business_address": "1892 Union St",
+        "business_zip": "94133",
+        "dba_start_date": "2011-12-13T00:00:00.000",
+        "location_start_date": "2011-12-13T00:00:00.000"
+      },
+      {
+        "uniqueid": "1040383-09-151-0477703",
+        "dba_name": "Yoga Flow SF",
+        "full_business_address": "1892 Union St",
+        "business_zip": "94123",
+        "dba_start_date": "2013-03-22T00:00:00.000",
+        "location_start_date": "2015-05-31T00:00:00.000",
+        "location_end_date": "2025-10-17T00:00:00.000"
+      },
+      {
+        "uniqueid": "1040385-09-151-0477703",
+        "dba_name": "Yoga Flow SF",
+        "full_business_address": "818 Stone Gate Ct",
+        "business_zip": "95687",
+        "dba_start_date": "2013-03-22T00:00:00.000",
+        "location_start_date": "2015-05-31T00:00:00.000",
+        "location_end_date": "2025-10-17T00:00:00.000"
+      },
+      {
+        "uniqueid": "0477703-01-001-0477703",
+        "dba_name": "Yoga Flow SF",
+        "full_business_address": "385 Ashton Ave",
+        "business_zip": "94112",
+        "dba_start_date": "2013-03-22T00:00:00.000",
+        "location_start_date": "2013-03-22T00:00:00.000"
+      },
+      {
+        "uniqueid": "1411497-02-261-1179651",
+        "dba_name": "Sculpt And Flow Yoga",
+        "full_business_address": "2052 Green St Apt 2",
+        "business_zip": "94123",
+        "dba_start_date": "2026-02-17T00:00:00.000",
+        "location_start_date": "2026-02-17T00:00:00.000"
+      }
+    ]
+  },
+  "yoga mayu": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1025351-04-151-0432087",
+        "dba_name": "Yoga Mayu",
+        "full_business_address": "4159 24th St Ste B",
+        "business_zip": "94114",
+        "dba_start_date": "2008-10-01T00:00:00.000",
+        "dba_end_date": "2017-06-30T00:00:00.000",
+        "location_start_date": "2015-04-05T00:00:00.000",
+        "location_end_date": "2017-06-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1154338-07-171-1073318",
+        "dba_name": "Yoga Mayu",
+        "full_business_address": "4159 B 24th St",
+        "business_zip": "94104",
+        "dba_start_date": "2017-07-01T00:00:00.000",
+        "location_start_date": "2017-07-01T00:00:00.000",
+        "location_end_date": "2020-09-01T00:00:00.000"
+      },
+      {
+        "uniqueid": "0432087-03-001-0432087",
+        "dba_name": "Yoga Mayu",
+        "full_business_address": "2051 Harrison St",
+        "business_zip": "94110",
+        "dba_start_date": "2008-10-01T00:00:00.000",
+        "dba_end_date": "2017-06-30T00:00:00.000",
+        "location_start_date": "2008-10-20T00:00:00.000",
+        "location_end_date": "2017-06-30T00:00:00.000"
+      },
+      {
+        "uniqueid": "1276283-04-211-1073318",
+        "dba_name": "Yoga Mayu",
+        "full_business_address": "1501 B 20th St",
+        "business_zip": "94107",
+        "dba_start_date": "2017-07-01T00:00:00.000",
+        "location_start_date": "2021-04-29T00:00:00.000"
+      }
+    ]
+  },
+  "yubalance": {
+    "fetchedAt": "2026-08-18",
+    "rows": [
+      {
+        "uniqueid": "1251764-05-201-1005466",
+        "dba_name": "Yubalance",
+        "full_business_address": "1461 Church St",
+        "business_zip": "94131",
+        "dba_start_date": "2014-10-30T00:00:00.000",
+        "location_start_date": "2020-05-08T00:00:00.000",
+        "location_end_date": "2025-01-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1179030-02-181-1005466",
+        "dba_name": "Yubalance",
+        "full_business_address": "447 Irving St",
+        "business_zip": "94122",
+        "dba_start_date": "2014-10-30T00:00:00.000",
+        "location_start_date": "2018-02-10T00:00:00.000"
+      },
+      {
+        "uniqueid": "1010736-10-141-1005466",
+        "dba_name": "Yubalance",
+        "full_business_address": "3026 24th St",
+        "business_zip": "94110",
+        "dba_start_date": "2014-10-30T00:00:00.000",
+        "location_start_date": "2014-10-30T00:00:00.000",
+        "location_end_date": "2019-10-31T00:00:00.000"
+      },
+      {
+        "uniqueid": "1242177-01-201-1005466",
+        "dba_name": "Yubalance",
+        "full_business_address": "26 Clement St",
+        "business_zip": "94118",
+        "dba_start_date": "2014-10-30T00:00:00.000",
+        "location_start_date": "2020-01-01T00:00:00.000",
+        "location_end_date": "2024-10-15T00:00:00.000"
+      },
+      {
+        "uniqueid": "1199762-09-181-1005466",
+        "dba_name": "Yubalance",
+        "full_business_address": "2860 24th St",
+        "business_zip": "94110",
+        "dba_start_date": "2014-10-30T00:00:00.000",
+        "location_start_date": "2018-09-01T00:00:00.000",
+        "location_end_date": "2020-05-08T00:00:00.000"
+      },
+      {
+        "uniqueid": "1383143-03-251-1005466",
+        "dba_name": "Yubalance Noe Valley",
+        "full_business_address": "4159 B 24th St",
+        "business_zip": "94114",
+        "dba_start_date": "2014-10-30T00:00:00.000",
+        "location_start_date": "2025-03-01T00:00:00.000"
+      }
+    ]
+  },
+  "anthony silva fitness": {
+    "fetchedAt": "2026-08-20",
+    "rows": [
+      {
+        "uniqueid": "1365867-07-241-1160264",
+        "dba_name": "Anthony Silva Fitness",
+        "full_business_address": "858 Stanyan St",
+        "business_zip": "94117",
+        "dba_start_date": "2024-05-01T00:00:00.000",
+        "location_start_date": "2024-05-01T00:00:00.000"
+      }
+    ]
+  }
+}

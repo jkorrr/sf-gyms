@@ -1,0 +1,5 @@
+{
+  "generatedAt": "2026-08-20",
+  "policy": "Same-operator nearby identities fail closed until a reviewed merge decision is committed.",
+  "records": []
+}

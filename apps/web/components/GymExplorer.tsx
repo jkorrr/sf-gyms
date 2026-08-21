@@ -82,6 +82,8 @@ function fromApiGym(gym: ApiGym): Gym {
 
 function freshnessLabel(gym: Gym): string {
   if (gym.priceSource) return `Official price checked ${gym.priceObservedAt ?? "recently"}`;
+  if (gym.operatorConfirmedMonthly) return `Operator confirmed ${gym.operatorConfirmedMonthly.confirmedAt}; not publicly reproducible`;
+  if (gym.reportedMonthly) return `Recent public reports checked through ${gym.reportedMonthly.newestPublishedAt}`;
   if (gym.freshness === "verified") return "Price verified recently";
   if (gym.freshness === "gym_reported") return "Price reported by gym";
   if (gym.freshness === "stale") return "Price may be out of date";
@@ -91,6 +93,35 @@ function freshnessLabel(gym: Gym): string {
 function priceLabel(value: number | null, suffix: string): string {
   if (value === 0) return `Free${suffix}`;
   return value === null ? "Not listed" : `$${value}${suffix}`;
+}
+
+function monthlyCostLabel(gym: Gym): string {
+  if (gym.monthlyPrice !== null) return priceLabel(gym.monthlyPrice, "/mo");
+  if (gym.operatorConfirmedMonthly?.freshness === "current") return `$${gym.operatorConfirmedMonthly.normalizedMonthly.toFixed(0)}/mo`;
+  if (gym.reportedMonthly) return `~$${gym.reportedMonthly.point.toFixed(0)}/mo`;
+  if (gym.estimatedMonthly) return `~$${gym.estimatedMonthly.point.toFixed(0)}/mo`;
+  const context = gym.costContext?.[0];
+  if (context) return context.low === context.high ? `From $${context.low.toFixed(0)}` : `$${context.low.toFixed(0)}–$${context.high.toFixed(0)}`;
+  if (gym.pricingStatus === "free") return "Free/public";
+  if (gym.pricingStatus === "pay-per-visit") return "Pay per visit";
+  if (gym.pricingStatus === "not-applicable") return "Not applicable";
+  return "Needs confirmation";
+}
+
+function pricingStatusLabel(gym: Gym): string {
+  if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) return "Official range";
+  const labels: Record<string, string> = {
+    verified: "Official price",
+    "operator-confirmed": "Operator confirmed",
+    reported: "Recently reported",
+    estimated: "Estimated",
+    free: "Free/public",
+    "pay-per-visit": "Pay per visit",
+    "not-applicable": "Not applicable",
+    gated: "Price gated",
+    unresolved: "Needs confirmation",
+  };
+  return labels[gym.pricingStatus ?? (gym.monthlyPrice !== null ? "verified" : "unresolved")];
 }
 
 function gymDetailHref(id: string): string {
@@ -433,7 +464,7 @@ export default function GymExplorer() {
           <div className="eyebrow">The independent SF gym guide</div>
           <h2>Find your<br /><span>iron home.</span></h2>
           <p className="hero-copy">Real equipment details, transparent prices when they are available, and a map that helps you find the right place to train.</p>
-          <div className="hero-proof"><span className="proof-dot" aria-hidden="true" />{gyms.length} local listings · free to explore</div>
+          <div className="hero-proof"><span className="proof-dot" aria-hidden="true" />{gyms.length} canonical listings · {gyms.filter((gym) => gym.monthlyPrice !== null).length} official monthly prices · {gyms.filter((gym) => gym.dayPassPrice !== null).length} official visit prices</div>
         </div>
       </section>
 
@@ -505,9 +536,9 @@ export default function GymExplorer() {
         <div className="map-panel">
           <GymMap gyms={filteredBaseGyms} selectedId={selectedGym?.id} highlightedId={highlightedId} rankedIds={rankedRows.slice(0, 10).map((row) => row.gym.id)} origin={origin} onSelect={setSelected} />
           {selectedGym && <aside className="detail" aria-live="polite">
-            <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
+            <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><span className={`cost-status cost-status-${selectedGym.pricingStatus ?? "unresolved"}`}>{pricingStatusLabel(selectedGym)}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
             <p>{selectedGym.description}</p>
-            <p><strong>{priceLabel(selectedGym.monthlyPrice, "/mo")}</strong> - {priceLabel(selectedGym.annualFee, " annual fee")} - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
+            <p><strong>{monthlyCostLabel(selectedGym)}</strong> - {priceLabel(selectedGym.annualFee, " annual fee")} - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
             <div className="price-row">{selectedGym.amenities.slice(0, 4).map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div>
             {selectedGym.priceNote && <p className="price-note">{selectedGym.priceNote}</p>}
             {selectedGym.annualFeeNote && <p className="price-note">Annual fee: {selectedGym.annualFeeNote}</p>}

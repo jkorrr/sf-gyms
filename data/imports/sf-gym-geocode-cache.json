@@ -35,8 +35,11 @@
     "longitude": -122.4118366
   },
   "500 parnassus avenue level b1 san francisco ca 94143": {
-    "status": "not_found",
-    "query": "500 Parnassus Avenue, Level B1, San Francisco, CA 94143"
+    "status": "ok",
+    "query": "500 Parnassus Avenue, Level B1, San Francisco, CA 94143",
+    "displayName": "500 Parnassus Avenue, Parnassus Avenue, Haight-Ashbury, Richmond District, San Francisco, California, 94117, United States",
+    "latitude": 37.7633263,
+    "longitude": -122.4587785
   },
   "3200 california street san francisco ca 94118": {
     "status": "ok",
@@ -152,7 +155,7 @@
   },
   "1090 dr maya angelou lane suite e san francisco ca 94158": {
     "status": "not_found",
-    "query": "1090 Dr Maya Angelou Lane, Suite E, San Francisco, CA 94158"
+    "query": "1090 dr maya angelou ln, San Francisco, CA"
   },
   "1600 jackson street san francisco ca 94109": {
     "status": "ok",
@@ -232,8 +235,12 @@
     "longitude": -122.4232888
   },
   "2275 market street second floor san francisco ca 94114": {
-    "status": "not_found",
-    "query": "2275 Market Street, Second Floor, San Francisco, CA 94114"
+    "status": "ok",
+    "query": "2275 Market Street, Second Floor, San Francisco, CA 94114",
+    "displayName": "2275 Market Street, Castro District, San Francisco, California, 94114, United States",
+    "latitude": 37.7646725,
+    "longitude": -122.432169,
+    "coordinateSource": "raw OSM exact-address record osm-node-586709251"
   },
   "1823 divisadero st san francisco ca 94115": {
     "status": "ok",
@@ -299,8 +306,11 @@
     "longitude": -122.3931134
   },
   "millberry union 500 parnassus avenue level b1 san francisco ca 94143": {
-    "status": "not_found",
-    "query": "Millberry Union, 500 Parnassus Avenue, Level B1, San Francisco, CA 94143"
+    "status": "ok",
+    "query": "Millberry Union, 500 Parnassus Avenue, Level B1, San Francisco, CA 94143",
+    "displayName": "Millberry Union, 500, Parnassus Avenue, Haight-Ashbury, Richmond District, San Francisco, California, 94143, United States",
+    "latitude": 37.7637084,
+    "longitude": -122.4581623
   },
   "2130 fulton st san francisco ca 94117": {
     "status": "ok",
@@ -367,7 +377,7 @@
   },
   "panhandle park at clayton street or ashbury street between fell and oak streets san francisco ca": {
     "status": "not_found",
-    "query": "Panhandle Park at Clayton Street or Ashbury Street between Fell and Oak Streets, San Francisco, CA"
+    "query": "panhandle park at clayton st or ashbury st between fell and oak streets, San Francisco, CA"
   },
   "3915 noriega st san francisco ca 94122": {
     "status": "ok",
@@ -392,7 +402,7 @@
   },
   "4501 irving street at 46th avenue san francisco ca": {
     "status": "not_found",
-    "query": "4501 Irving Street at 46th Avenue, San Francisco, CA"
+    "query": "4501 irving st at 46th ave, San Francisco, CA"
   },
   "455 judah street san francisco ca": {
     "status": "ok",
@@ -424,7 +434,7 @@
   },
   "three embarcadero center lobby level san francisco ca 94111": {
     "status": "not_found",
-    "query": "Three Embarcadero Center, Lobby Level, San Francisco, CA 94111"
+    "query": "three embarcadero center, San Francisco, CA"
   },
   "1201a guerrero st san francisco ca 94110": {
     "status": "ok",
@@ -525,8 +535,11 @@
     "longitude": -122.4529518
   },
   "2973 16th st 5th floor san francisco ca 94103": {
-    "status": "not_found",
-    "query": "2973 16th St, 5th Floor, San Francisco, CA 94103"
+    "status": "ok",
+    "query": "2973 16th St, 5th Floor, San Francisco, CA 94103",
+    "displayName": "2973, 16th Street, Mission, San Francisco, California, 94143, United States",
+    "latitude": 37.7648894,
+    "longitude": -122.419083
   },
   "182 6th avenue san francisco ca 94118": {
     "status": "ok",
@@ -603,12 +616,18 @@
     "longitude": -122.4322021
   },
   "290 division street 200 san francisco ca 94103": {
-    "status": "not_found",
-    "query": "290 Division Street #200, San Francisco, CA 94103"
+    "status": "ok",
+    "query": "290 Division Street #200, San Francisco, CA 94103",
+    "displayName": "290, Division Street, Mission, San Francisco, California, 94103, United States",
+    "latitude": 37.7695366,
+    "longitude": -122.4083108
   },
   "600 california street 11th floor san francisco ca 94108": {
-    "status": "not_found",
-    "query": "600 California Street, 11th Floor, San Francisco, CA 94108"
+    "status": "ok",
+    "query": "600 California Street, 11th Floor, San Francisco, CA 94108",
+    "displayName": "600, California Street, Chinatown, South of Market, San Francisco, California, 94108, United States",
+    "latitude": 37.7929829,
+    "longitude": -122.4047906
   },
   "3800 24th street san francisco ca 94114": {
     "status": "ok",
@@ -618,8 +637,11 @@
     "longitude": -122.4277279
   },
   "234 bush street suite 132 san francisco ca 94104": {
-    "status": "not_found",
-    "query": "234 Bush Street, Suite 132, San Francisco, CA 94104"
+    "status": "ok",
+    "query": "234 Bush Street, Suite 132, San Francisco, CA 94104",
+    "displayName": "234, Bush Street, Transbay, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.7911479,
+    "longitude": -122.4016268
   },
   "473 valencia street san francisco ca 94103": {
     "status": "ok",
@@ -660,93 +682,33 @@
     "latitude": 37.7557611,
     "longitude": -122.4166037
   },
-  "175 de haro street san francisco ca 94103": {
+  "1645 bryant street san francisco ca 94103": {
     "status": "ok",
-    "query": "175 De Haro Street, San Francisco, CA 94103",
-    "displayName": "175, De Haro Street, Mission Bay, South of Market, San Francisco, California, 94103, United States",
-    "latitude": 37.7679669,
-    "longitude": -122.4015965
+    "query": "1645 Bryant Street, San Francisco, CA 94103",
+    "displayName": "1645, Bryant Street, Mission, San Francisco, California, 94103, United States",
+    "latitude": 37.7663141,
+    "longitude": -122.4104501
   },
-  "361 brannan street san francisco ca 94107": {
+  "45 montgomery street san francisco ca 94104": {
     "status": "ok",
-    "query": "361 Brannan Street, San Francisco, CA 94107",
-    "displayName": "361, Brannan Street, South Beach, South of Market, San Francisco, California, 94107, United States",
-    "latitude": 37.780824,
-    "longitude": -122.393225
+    "query": "45 Montgomery Street, San Francisco, CA 94104",
+    "displayName": "45, Montgomery Street, Transbay, Financial District, South of Market, San Francisco, California, 94104, United States",
+    "latitude": 37.7893185,
+    "longitude": -122.4021468
   },
-  "1920 bryant street san francisco ca 94110": {
+  "2 embarcadero center san francisco ca 94111": {
     "status": "ok",
-    "query": "1920 Bryant Street, San Francisco, CA 94110",
-    "displayName": "1920, Bryant Street, Potrero Hill, Mission, San Francisco, California, 94110, United States",
-    "latitude": 37.762691,
-    "longitude": -122.4103144
+    "query": "2 Embarcadero Center, San Francisco, CA 94111",
+    "displayName": "Embarcadero Center 2, Financial District, South of Market, San Francisco, California, United States",
+    "latitude": 37.7947915,
+    "longitude": -122.3984407
   },
-  "1150 sutter street san francisco ca 94109": {
+  "1 10th street san francisco ca 94103": {
     "status": "ok",
-    "query": "1150 Sutter Street, San Francisco, CA 94109",
-    "displayName": "1150;1156, Sutter Street, Polk Gulch, Tenderloin, South of Market, San Francisco, California, 94164, United States",
-    "latitude": 37.788141,
-    "longitude": -122.4194458
-  },
-  "1501 20th street san francisco ca 94107": {
-    "status": "ok",
-    "query": "1501 20th Street, San Francisco, CA 94107",
-    "displayName": "1501, 20th Street, Dogpatch, Potrero Hill, Mission, San Francisco, California, 94107, United States",
-    "latitude": 37.759934,
-    "longitude": -122.396431
-  },
-  "2390 mission street suite 200 san francisco ca 94110": {
-    "status": "not_found",
-    "query": "2390 Mission Street, Suite 200, San Francisco, CA 94110"
-  },
-  "57 langton street san francisco ca 94103": {
-    "status": "ok",
-    "query": "57 Langton Street, San Francisco, CA 94103",
-    "displayName": "57, Langton Street, West SoMa, Civic Center, South of Market, San Francisco, California, 94103, United States",
-    "latitude": 37.7769179,
-    "longitude": -122.4089834
-  },
-  "1201 3rd street san francisco ca 94158": {
-    "status": "ok",
-    "query": "1201 3rd Street, San Francisco, CA 94158",
-    "displayName": "1201, 3rd Street, Mission Bay, San Francisco, California, 94158, United States",
-    "latitude": 37.7737295,
-    "longitude": -122.3898475
-  },
-  "250 main street san francisco ca 94105": {
-    "status": "ok",
-    "query": "250 Main Street, San Francisco, CA 94105",
-    "displayName": "250, Main Street, Rincon Hill, Financial District, South of Market, San Francisco, California, 94105, United States",
-    "latitude": 37.7899221,
-    "longitude": -122.3926929
-  },
-  "1675 owens street san francisco ca 94158": {
-    "status": "ok",
-    "query": "1675 Owens Street, San Francisco, CA 94158",
-    "displayName": "The Pub, 1675, Owens Street, Mission Bay, San Francisco, California, 94143, United States",
-    "latitude": 37.7679911,
-    "longitude": -122.392759
-  },
-  "290 division street san francisco ca 94103": {
-    "status": "ok",
-    "query": "290 Division Street, San Francisco, CA 94103",
-    "displayName": "290, Division Street, Mission, San Francisco, California, 94103, United States",
-    "latitude": 37.7695366,
-    "longitude": -122.4083108
-  },
-  "3769 24th street san francisco ca 94114": {
-    "status": "ok",
-    "query": "3769 24th Street, San Francisco, CA 94114",
-    "displayName": "3769, 24th Street, Noe Valley, Mission, San Francisco, California, 94110, United States",
-    "latitude": 37.7515982,
-    "longitude": -122.4267391
-  },
-  "1001 brannan street san francisco ca 94103": {
-    "status": "ok",
-    "query": "1001 Brannan Street, San Francisco, CA 94103",
-    "displayName": "Fitness SF SOMA, 1001, Brannan Street, South of Market, San Francisco, California, 94103, United States",
-    "latitude": 37.769751,
-    "longitude": -122.4070165
+    "query": "1 10th Street, San Francisco, CA 94103",
+    "displayName": "1, 10th Street, Tenderloin, Mission, San Francisco, California, 94103, United States",
+    "latitude": 37.776518,
+    "longitude": -122.417329
   },
   "425 mission street san francisco ca 94105": {
     "status": "ok",
@@ -755,123 +717,32 @@
     "latitude": 37.7878011,
     "longitude": -122.3984389
   },
-  "908 cortland avenue san francisco": {
+  "1633 fillmore street san francisco ca 94115": {
     "status": "ok",
-    "query": "908 Cortland Avenue, San Francisco",
-    "displayName": "908;910, Cortland Avenue, Bernal Heights, Bayview District, San Francisco, California, 94110, United States",
-    "latitude": 37.7387931,
-    "longitude": -122.4135849
+    "query": "1633 Fillmore Street, San Francisco, CA 94115",
+    "displayName": "1633, Fillmore Street, Fillmore District, Western Addition, San Francisco, California, 95115, United States",
+    "latitude": 37.7846339,
+    "longitude": -122.43344
   },
-  "5644 geary boulevard san francisco": {
+  "2675 geary boulevard suite e101 san francisco ca 94118": {
     "status": "ok",
-    "query": "5644 Geary Boulevard, San Francisco",
-    "displayName": "Bikram Hot Yoga, 5644, Geary Boulevard, Richmond District, San Francisco, California, 94121, United States",
-    "latitude": 37.7804862,
-    "longitude": -122.4801862
+    "query": "2675 Geary Boulevard, Suite E101, San Francisco, CA 94118",
+    "displayName": "Tesla Supercharger, 2675, Geary Boulevard, Anza Vista, Western Addition, San Francisco, California, 94118, United States",
+    "latitude": 37.7820341,
+    "longitude": -122.4471724
   },
-  "286 divisadero street san francisco": {
+  "howard street beale street san francisco ca 94105": {
     "status": "ok",
-    "query": "286 Divisadero Street, San Francisco",
-    "displayName": "Folk, 286, Divisadero Street, Lower Haight, Western Addition, San Francisco, California, 94177, United States",
-    "latitude": 37.7719824,
-    "longitude": -122.4368862
+    "query": "Howard Street & Beale Street, San Francisco, CA 94105",
+    "displayName": "Howard Street & Beale Street, Howard Street, Transbay, Financial District, South of Market, San Francisco, California, 94105, United States",
+    "latitude": 37.7900445,
+    "longitude": -122.3939657
   },
-  "1548 stockton street san francisco 94133": {
+  "2095 union street san francisco ca 94123": {
     "status": "ok",
-    "query": "1548 Stockton Street, San Francisco, 94133",
-    "displayName": "1546;1548, Stockton Street, Telegraph Hill, North Beach, San Francisco, California, 94133, United States",
-    "latitude": 37.8001148,
-    "longitude": -122.4089113
-  },
-  "780 stanyan street san francisco 94117": {
-    "status": "ok",
-    "query": "780 Stanyan Street, San Francisco, 94117",
-    "displayName": "772;776;780, Stanyan Street, Cole Valley, Haight-Ashbury, Richmond District, San Francisco, California, 94117, United States",
-    "latitude": 37.7677711,
-    "longitude": -122.4529518
-  },
-  "406 brannan street san francisco": {
-    "status": "ok",
-    "query": "406 Brannan Street, San Francisco",
-    "displayName": "Divine Yoga Studio, 406, Brannan Street, South Beach, Mission Bay, South of Market, San Francisco, California, 94017, United States",
-    "latitude": 37.7800307,
-    "longitude": -122.3946534
-  },
-  "80 missouri street san francisco": {
-    "status": "ok",
-    "query": "80 Missouri Street, San Francisco",
-    "displayName": "80, Missouri Street, Mission Bay, South of Market, San Francisco, California, 94107, United States",
-    "latitude": 37.7656769,
-    "longitude": -122.3970444
-  },
-  "1643 valencia street san francisco": {
-    "status": "ok",
-    "query": "1643 Valencia Street, San Francisco",
-    "displayName": "1643;1645;1647, Valencia Street, Mission, San Francisco, California, 94110, United States",
-    "latitude": 37.7469352,
-    "longitude": -122.419828
-  },
-  "1150 sutter street san francisco": {
-    "status": "ok",
-    "query": "1150 Sutter Street, San Francisco",
-    "displayName": "1150;1156, Sutter Street, Polk Gulch, Tenderloin, South of Market, San Francisco, California, 94164, United States",
-    "latitude": 37.788141,
-    "longitude": -122.4194458
-  },
-  "924 mason street san francisco 94129": {
-    "status": "ok",
-    "query": "924 Mason Street, San Francisco, 94129",
-    "displayName": "Movement San Francisco, 924, Mason Street, San Francisco, California, 94129, United States",
-    "latitude": 37.8043769,
-    "longitude": -122.4684092
-  },
-  "3729 balboa street san francisco": {
-    "status": "ok",
-    "query": "3729 Balboa Street, San Francisco",
-    "displayName": "3725;3729, Balboa Street, Outer Richmond, San Francisco, California, 94121, United States",
-    "latitude": 37.7754506,
-    "longitude": -122.498881
-  },
-  "10 page street san francisco": {
-    "status": "ok",
-    "query": "10 Page Street, San Francisco",
-    "displayName": "Pilates on Page, 10, Page Street, Hayes Valley, Civic Center, Mission, San Francisco, California, 94143, United States",
-    "latitude": 37.7743877,
-    "longitude": -122.4209975
-  },
-  "1401 clement street san francisco": {
-    "status": "ok",
-    "query": "1401 Clement Street, San Francisco",
-    "displayName": "1401;1405;1411, Clement Street, Inner Richmond, Richmond District, San Francisco, California, 94121, United States",
-    "latitude": 37.7823333,
-    "longitude": -122.4743122
-  },
-  "4000 balboa street san francisco": {
-    "status": "ok",
-    "query": "4000 Balboa Street, San Francisco",
-    "displayName": "4000;4004;4008;4012;4016, Balboa Street, Outer Richmond, San Francisco, California, 94121, United States",
-    "latitude": 37.7756929,
-    "longitude": -122.5018827
-  },
-  "701 chenery street san francisco": {
-    "status": "ok",
-    "query": "701 Chenery Street, San Francisco",
-    "displayName": "701;703, Chenery Street, Glen Park, San Francisco, California, 94112, United States",
-    "latitude": 37.7344079,
-    "longitude": -122.4341025
-  },
-  "211 hugo street san francisco": {
-    "status": "ok",
-    "query": "211 Hugo Street, San Francisco",
-    "displayName": "Tiny Haven Yoga, 211, Hugo Street, Haight-Ashbury, Richmond District, San Francisco, California, 94117, United States",
-    "latitude": 37.7651466,
-    "longitude": -122.4603044
-  },
-  "4159 24th street san francisco": {
-    "status": "ok",
-    "query": "4159 24th Street, San Francisco",
-    "displayName": "4159;4161;4163, 24th Street, Noe Valley, Mission, San Francisco, California, 94114, United States",
-    "latitude": 37.7510329,
-    "longitude": -122.4353763
+    "query": "2095 Union Street, San Francisco, CA 94123",
+    "displayName": "2087;2095, Union Street, Cow Hollow, Pacific Heights, San Francisco, California, 94123, United States",
+    "latitude": 37.7971498,
+    "longitude": -122.4336367
   }
 }

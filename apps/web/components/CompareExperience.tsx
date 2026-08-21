@@ -172,7 +172,7 @@ export default function CompareExperience() {
             <MatrixRow label="Effective monthly" gyms={gyms} values={estimates.map((item) => item.effectiveMonthly)} render={(value) => money(value, "/mo")} />
             <MatrixRow label="Estimated cost / visit" gyms={gyms} values={perVisitValues} render={(value) => <span className={bestClass(value, perVisitValues)}>{money(value)}</span>} />
             <MatrixRow label="Annual fee" gyms={gyms} values={gyms.map((gym) => gym.annualFee)} render={(value) => money(value, "/yr")} />
-            <MatrixRow label="Joining / initiation" gyms={gyms} values={gyms.map((gym) => (gym.enrollmentFee ?? 0) + (gym.initiationFee ?? 0))} render={(value) => money(value)} />
+            <MatrixRow label="One-time joining fees" gyms={gyms} values={gyms.map((gym) => (gym.enrollmentFee ?? 0) + (gym.initiationFee ?? 0) + (gym.processingFee ?? 0) + (gym.activationFee ?? 0))} render={(value) => money(value)} />
             <MatrixRow label="Day pass" gyms={gyms} values={dayPasses} render={(value) => <span className={bestClass(value, dayPasses)}>{money(value)}</span>} />
             <GroupRow label="Access and fit" count={gyms.length} />
             <TextRow label="Distance" values={distances.map((distance) => distance === null ? "Set a starting area" : formatDistanceMiles(distance))} />
