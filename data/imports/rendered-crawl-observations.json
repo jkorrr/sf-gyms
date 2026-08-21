@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
+  "mode": "full",
   "observations": [
     {
       "gymId": "osm-node-10047742013",
@@ -3169,50 +3169,16 @@
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
       "capturedAt": "2026-08-21",
-      "amount": 40.0,
+      "sourceProductId": "core-access",
+      "name": "CORE ACCESS",
+      "amount": 165.0,
       "currency": "USD",
-      "rawLabel": ", or go unlimited for $275/month. Both options include unlimited Core Access. Options: • Single class: $40",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
-    },
-    {
-      "gymId": "osm-node-12152934880",
-      "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-21",
-      "amount": 50.0,
-      "currency": "USD",
-      "rawLabel": "lso offer two-on-one (buddy) training and small group training options. Additional fee: Core Access for just $50/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Access described by the bounded official operator plan card",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
@@ -3221,176 +3187,22 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
-    },
-    {
-      "gymId": "osm-node-12152934880",
-      "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-21",
-      "amount": 225.0,
-      "currency": "USD",
-      "rawLabel": ". Both options include unlimited Core Access. Options: • Single class: $40 • 10 classes: $300 • 3x/week: $225/month",
-      "cadence": "month",
-      "productType": "drop-in",
-      "classAllowance": {
-        "count": 10.0,
-        "period": "month"
-      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "CORE ACCESS $165.00 USD per month Enjoy full access to our facilities for solo workouts at your convenience. All equipment and spaces are available during operating hours. Provides access to all LuxFit locations.",
+      "method": "captured-public-operator-plan-card",
+      "adapter": "captured-operator-plan-card",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "operator-market-catalog",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
       "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
-    },
-    {
-      "gymId": "osm-node-12152934880",
-      "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-21",
-      "amount": 225.0,
-      "currency": "USD",
-      "rawLabel": "S $ 225.00 USDper month Get energized with our dynamic community classes! Choose from 3 classes per week for $225/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": 3.0,
-        "period": "week"
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
-    },
-    {
-      "gymId": "osm-node-12152934880",
-      "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-21",
-      "amount": 275.0,
-      "currency": "USD",
-      "rawLabel": ", or go unlimited for $275/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
-    },
-    {
-      "gymId": "osm-node-12152934880",
-      "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-21",
-      "amount": 275.0,
-      "currency": "USD",
-      "rawLabel": "• Unlimited: $275/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
-    },
-    {
-      "gymId": "osm-node-12152934880",
-      "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-21",
-      "amount": 420.0,
-      "currency": "USD",
-      "rawLabel": "es. Options: • Single 50 min stretch: $115 • 5 pack x 50 min stretch: $550 • 4 x 50 min stretch membership: $420/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false,
+      "sourceProductIdAuthority": "synthetic-label",
+      "contentHash": "7c1478b2f63c9f19121adab2c76863a67274ee46db5d52262074ab4eb38cd4d0",
+      "cardAssociationHash": "7c1478b2f63c9f19121adab2c76863a67274ee46db5d52262074ab4eb38cd4d0",
       "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
@@ -8779,6 +8591,46 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.roarsf.com/membershipspackages",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-3674255652",
+      "gymName": "Sunset Gym",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "standard-monthly-membership-6-month",
+      "name": "Standard Monthly Membership",
+      "amount": 74.99,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access described by the bounded official operator plan card",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 6
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Standard Monthly Membership $74.99/month 6 Month Commitment No enrollment fees. All access, two floors of fitness, and towel service included.",
+      "method": "captured-public-operator-plan-card",
+      "adapter": "captured-operator-plan-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-catalog",
+      "sourceUrl": "https://sunsetgym.com/memberships/",
+      "autoPublishEligible": false,
+      "sourceProductIdAuthority": "synthetic-label",
+      "contentHash": "14ea462b65fb2aee62945e5fdd4ffa59685645d8b3029e23cf889d0e71a2321f",
+      "cardAssociationHash": "14ea462b65fb2aee62945e5fdd4ffa59685645d8b3029e23cf889d0e71a2321f",
+      "catalogSourceUrl": "https://sunsetgym.com/memberships/"
     },
     {
       "gymId": "osm-node-4004802465",
@@ -22516,16 +22368,100 @@
       "gymId": "web-e4d790e4a639c2",
       "gymName": "Castro Fitness",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "day-pass",
+      "name": "One-Day Pass",
       "amount": 34.95,
       "currency": "USD",
-      "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 BUY DAY PASS",
       "cadence": "visit",
+      "billingInterval": "visit",
       "productType": "drop-in",
-      "classAllowance": null,
+      "accessScope": "This pass allows for one-day access to all facility and services of the club Castro.",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "1 Day Pass: Sign-up Fee: None Cost: $34.95 per day Description: This pass allows for one-day access to all facility and services of the club Castro. ",
+      "method": "captured-public-membership-agreement",
+      "adapter": "membership-agreement",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "autoPublishEligible": false,
+      "sourceProductIdAuthority": "synthetic-label",
+      "contentHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+      "cardAssociationHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "1-week-pass",
+      "name": "1 Week Pass",
+      "amount": 69.95,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "class-pack",
+      "accessScope": "This pass allows for one-week access to all facility and services of the club Castro.",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "1 Week Pass: Sign-up Fee: None Cost: $69.95 per week Description: This pass allows for one-week access to all facility and services of the club Castro. ",
+      "method": "captured-public-membership-agreement",
+      "adapter": "membership-agreement",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "autoPublishEligible": false,
+      "sourceProductIdAuthority": "synthetic-label",
+      "contentHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+      "cardAssociationHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "recurring-four-week",
+      "name": "Recurring Four-Week Membership",
+      "amount": 107.95,
+      "currency": "USD",
+      "cadence": "4 weeks",
+      "billingInterval": "4 weeks",
+      "productType": "monthly",
+      "accessScope": "This plan provides access to all facility and services of the club Castro on a recurring 4-week basis.",
+      "scopeType": "single-location",
+      "classAllowance": null,
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
@@ -22534,133 +22470,71 @@
         "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://castro-fitness.com/",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://castro-fitness.com/"
-    },
-    {
-      "gymId": "web-e4d790e4a639c2",
-      "gymName": "Castro Fitness",
-      "capturedAt": "2026-08-21",
-      "amount": 5.0,
-      "currency": "USD",
-      "rawLabel": "ed by the Gym. Membership can be frozen for a maximum of three (3) months. During the freeze period, a fee of $5 will be charged monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 49.99,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Recurring Term Membership (4-Week Plan): Sign-up Fee: $49.99 Cancellation Fee: None Commitment: No long-term commitment Cost: $107.95 per 4-week period Description: This plan provides access to all facility and services of the club Castro on a recurring 4-week basis. ",
+      "method": "captured-public-membership-agreement",
+      "adapter": "membership-agreement",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://castro-fitness.com/membership-agreement/",
       "autoPublishEligible": false,
+      "sourceProductIdAuthority": "synthetic-label",
+      "contentHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+      "cardAssociationHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
       "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
     },
     {
       "gymId": "web-e4d790e4a639c2",
       "gymName": "Castro Fitness",
       "capturedAt": "2026-08-21",
-      "amount": 34.95,
-      "currency": "USD",
-      "rawLabel": "s access to all facility and services of the club “Castro” on a recurring 4-week basis. 1 Day Pass: Sign-up Fee: None Cost: $34.95",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
-    },
-    {
-      "gymId": "web-e4d790e4a639c2",
-      "gymName": "Castro Fitness",
-      "capturedAt": "2026-08-21",
+      "sourceProductId": "single-month-pass",
+      "name": "Single Month Pass",
       "amount": 135.95,
       "currency": "USD",
-      "rawLabel": "one-week access to all facility and services of the club “Castro”. Single Month Pass: Sign-up Fee: None Cost: $135.95 per month",
-      "cadence": "month",
-      "productType": "monthly",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "class-pack",
+      "accessScope": "This pass allows for one-month access to all facility and services of the club Castro.",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "none",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Single Month Pass: Sign-up Fee: None Cost: $135.95 per month Description: This pass allows for one-month access to all facility and services of the club Castro.",
+      "method": "captured-public-membership-agreement",
+      "adapter": "membership-agreement",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://castro-fitness.com/membership-agreement/",
       "autoPublishEligible": false,
+      "sourceProductIdAuthority": "synthetic-label",
+      "contentHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+      "cardAssociationHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
       "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
-    },
-    {
-      "gymId": "web-e4d790e4a639c2",
-      "gymName": "Castro Fitness",
-      "capturedAt": "2026-08-21",
-      "amount": 34.95,
-      "currency": "USD",
-      "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 BUY DAY PASS",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "month-to-month",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://castro-fitness.com/memberships/",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://castro-fitness.com/memberships/"
     },
     {
       "gymId": "web-f23343cfc28b93",

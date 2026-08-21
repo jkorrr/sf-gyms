@@ -510,6 +510,41 @@ def public_browser_capture_observations(
                     candidate["contentHash"] = digest
                     candidate["cardAssociationHash"] = digest
                     observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
+        elif platform == "operator-site":
+            cards = capture.get("cards", [])
+            rate_table_text = text(capture.get("rateTableText"))
+            if not isinstance(cards, list) or len(cards) > 100 or len(rate_table_text) > 12_000:
+                continue
+            if not cards and not rate_table_text:
+                continue
+            for card in cards:
+                if not isinstance(card, dict):
+                    continue
+                compact_card = {
+                    key: text(card.get(key))
+                    for key in ("productName", "displayedPrice", "sectionLabel", "cardText")
+                }
+                if not compact_card["cardText"] or len(compact_card["cardText"]) > 2_500:
+                    continue
+                digest = hashlib.sha256(
+                    json.dumps(compact_card, sort_keys=True, ensure_ascii=False).encode("utf-8")
+                ).hexdigest()
+                candidates = static_crawler.labeled_plan_card_candidates(
+                    [compact_card["cardText"]], source_url, "captured-operator-plan-card",
+                )
+                for candidate in candidates:
+                    candidate["method"] = "captured-public-operator-plan-card"
+                    candidate["contentHash"] = digest
+                    candidate["cardAssociationHash"] = digest
+                    observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
+            if rate_table_text:
+                digest = hashlib.sha256(rate_table_text.encode("utf-8")).hexdigest()
+                candidates = static_crawler.membership_agreement_candidates(rate_table_text, source_url)
+                for candidate in candidates:
+                    candidate["method"] = "captured-public-membership-agreement"
+                    candidate["contentHash"] = digest
+                    candidate["cardAssociationHash"] = digest
+                    observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
     return observations
 
 

@@ -84,6 +84,7 @@ def brand_key(value: str) -> str:
         ("crunch fitness", "crunch"),
         ("fitness sf", "fitness-sf"),
         ("live fit", "live-fit"),
+        ("livefit", "live-fit"),
         ("bay club", "bay-club"),
         ("equinox", "equinox"),
         ("orangetheory", "orangetheory"),
@@ -480,6 +481,25 @@ def apply_location_overrides(
     return output, suppressed, updated
 
 
+def premerge_suppressed_ids(document: dict[str, Any]) -> set[str]:
+    """Return stale raw aliases that must not absorb a researched canonical row.
+
+    Suppression decisions without a canonical target are safe to apply before
+    address matching.  Otherwise a same-operator raw alias can inherit the
+    researched location and then be removed, deleting the canonical business
+    with it.  Targeted alias suppressions stay in the later pass so their
+    provenance can still be attached to the named canonical record.
+    """
+
+    return {
+        text(item.get("id"))
+        for item in document.get("overrides", [])
+        if item.get("action") == "suppress"
+        and not text(item.get("canonicalId"))
+        and text(item.get("id"))
+    }
+
+
 def identity_review_candidates(gyms: list[dict[str, Any]], document: dict[str, Any]) -> list[dict[str, Any]]:
     """Emit close same-operator pairs that require a reviewed merge decision."""
 
@@ -626,7 +646,12 @@ def main() -> int:
     research_documents = [load_json(path) for path in RESEARCH_PATHS]
     imported_at = resolve_imported_at(args.date)
 
-    gyms, collapsed = collapse_known_brand_duplicates(list(base.get("gyms", [])))
+    pre_suppressed_ids = premerge_suppressed_ids(location_overrides)
+    raw_gyms = [
+        gym for gym in base.get("gyms", [])
+        if text(gym.get("id")) not in pre_suppressed_ids
+    ]
+    gyms, collapsed = collapse_known_brand_duplicates(raw_gyms)
     address_index = indexed_gyms(gyms, normalized)
     street_index = indexed_gyms(gyms, canonical_address)
     last_request = [0.0]
@@ -682,6 +707,7 @@ def main() -> int:
             added += 1
 
     gyms, suppressed, status_updated = apply_location_overrides(gyms, location_overrides)
+    suppressed += len(pre_suppressed_ids)
     gyms, post_merge_collapsed = collapse_known_brand_duplicates(gyms)
     collapsed += post_merge_collapsed
     identity_review = identity_review_candidates(gyms, location_overrides)

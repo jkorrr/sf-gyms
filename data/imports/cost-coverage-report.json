@@ -2,7 +2,7 @@
   "generatedAt": "2026-08-21",
   "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
   "selectionRuleVersion": "neutral-basic-v2",
-  "totalListings": 247,
+  "totalListings": 250,
   "pricingStatusCounts": {
     "estimated": 9,
     "free": 22,
@@ -10,10 +10,10 @@
     "not-applicable": 12,
     "official-range": 8,
     "operator-confirmed": 0,
-    "pay-per-visit": 25,
+    "pay-per-visit": 27,
     "reported": 0,
     "unresolved": 2,
-    "verified": 156
+    "verified": 157
   },
   "suppressedAliasCount": 108,
   "suppressedAliases": [
@@ -575,16 +575,16 @@
       }
     ]
   },
-  "auditedListingInputs": 355,
+  "auditedListingInputs": 358,
   "entityKindCounts": {
     "gym": 87,
     "martial-arts": 16,
     "non-consumer": 1,
     "public-recreation": 38,
-    "studio": 105
+    "studio": 108
   },
-  "verifiedMonthlyCount": 156,
-  "verifiedDayPassCount": 123,
+  "verifiedMonthlyCount": 157,
+  "verifiedDayPassCount": 126,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 136,
   "approvedOperatorCatalogLocationsApplied": 85,
@@ -601,76 +601,112 @@
   "officialCostContextListingCount": 20,
   "officialRangeCount": 8,
   "fieldCoverage": {
-    "specificDescriptionCount": 247,
-    "officialUrlCount": 246,
-    "hoursListedCount": 241,
-    "exactHoursCount": 106,
-    "accessScheduleSemanticsCount": 110,
+    "specificDescriptionCount": 250,
+    "officialUrlCount": 249,
+    "hoursListedCount": 244,
+    "exactHoursCount": 107,
+    "accessScheduleSemanticsCount": 112,
     "hoursUnpublishedCount": 6,
     "hoursNotApplicableCount": 0,
-    "amenitiesListedCount": 244,
+    "amenitiesListedCount": 247,
     "operatorLocationIdCount": 123,
     "sourcePlanCatalogCount": 186,
     "sourcePlanFragmentCount": 0,
-    "selectedOnlyPlanCatalogCount": 0,
-    "noPlanCatalogCount": 61,
+    "selectedOnlyPlanCatalogCount": 1,
+    "noPlanCatalogCount": 63,
     "sourceDropInCatalogCount": 131,
     "sourceDropInFragmentCount": 0,
-    "selectedOnlyDropInCatalogCount": 0,
+    "selectedOnlyDropInCatalogCount": 3,
     "noDropInCatalogCount": 116,
     "selectedUnknownCommitmentCount": 45,
-    "selectedUndisclosedClassAllowanceCount": 5,
+    "selectedUndisclosedClassAllowanceCount": 6,
     "typicalPlanSelectedCount": 156,
     "highestAccessPlanSelectedCount": 156,
     "bestValuePlanSelectedCount": 12,
-    "explicitMonthlyPriceStateCount": 247,
-    "explicitDayPassPriceStateCount": 247,
-    "metadataGapStatusCount": 247
+    "explicitMonthlyPriceStateCount": 250,
+    "explicitDayPassPriceStateCount": 250,
+    "metadataGapStatusCount": 250
   },
-  "commercialListings": 183,
-  "commercialAttemptedSourceListings": 183,
+  "commercialListings": 186,
+  "commercialAttemptedSourceListings": 186,
   "commercialAttemptedSourceCoverage": 1.0,
   "commercialUnattemptedSourceListings": [],
-  "commercialExactAddressListings": 183,
+  "commercialExactAddressListings": 186,
   "commercialExactAddressCoverage": 1.0,
-  "actionableCommercialListings": 183,
+  "actionableCommercialListings": 186,
   "actionableCommercialCoverage": 1.0,
-  "meaningfulCostCommercialListings": 183,
+  "meaningfulCostCommercialListings": 186,
   "meaningfulCostCommercialCoverage": 1.0,
   "officialSiteUnresolvedCount": 1,
-  "officialPagePresentCount": 246,
+  "officialPagePresentCount": 249,
   "officialSiteDiscoveryQueue": 0,
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
-    "publiclyPricedCommercialListings": 170,
+    "publiclyPricedCommercialListings": 173,
     "reconstructedRelevantCatalogListings": 170,
-    "reconstructedRelevantCatalogCoverage": 1.0,
+    "reconstructedRelevantCatalogCoverage": 0.9827,
     "targetCoverage": 0.9,
     "targetMet": true,
-    "priorityPlatformCounts": {},
-    "priorityRecords": [],
+    "priorityPlatformCounts": {
+      "generic-official": 3
+    },
+    "priorityRecords": [
+      {
+        "id": "web-5f77b574935a5e",
+        "name": "Love Story Yoga - Valencia",
+        "operatorId": "lovestoryyoga.com",
+        "platforms": [],
+        "monthlyPrice": null,
+        "dayPassPrice": 30.0,
+        "planCatalogStatus": "none",
+        "dropInCatalogStatus": "selected-only",
+        "priceSourceUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt"
+      },
+      {
+        "id": "web-164572c938e7e3",
+        "name": "Pure Barre San Francisco - Noe Valley",
+        "operatorId": "purebarre.com",
+        "platforms": [],
+        "monthlyPrice": null,
+        "dayPassPrice": 38.0,
+        "planCatalogStatus": "none",
+        "dropInCatalogStatus": "selected-only",
+        "priceSourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca"
+      },
+      {
+        "id": "web-aad2d32fab6264",
+        "name": "Purusha Yoga & Pilates",
+        "operatorId": "purushayoga.org",
+        "platforms": [],
+        "monthlyPrice": 149.0,
+        "dayPassPrice": 30.0,
+        "planCatalogStatus": "selected-only",
+        "dropInCatalogStatus": "selected-only",
+        "priceSourceUrl": "https://purushayoga.org/pricing/"
+      }
+    ],
     "sourceFragmentPlanCatalogs": 0,
-    "selectedOnlyPlanCatalogs": 0,
+    "selectedOnlyPlanCatalogs": 1,
     "sourceFragmentDropInCatalogs": 0,
-    "selectedOnlyDropInCatalogs": 0
+    "selectedOnlyDropInCatalogs": 3
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1888,
+    "requestCount": 1904,
     "statusCounts": {
       "access-blocked": 64,
-      "fetched": 1034,
+      "fetched": 955,
       "host-backoff-after-429": 1,
       "http-301": 2,
       "http-403": 90,
       "http-404": 13,
-      "http-429": 25,
-      "http-502": 2,
-      "network-error": 41,
-      "not-modified": 209,
-      "render-error": 28,
-      "rendered": 306,
-      "robots-disallowed": 73
+      "http-429": 21,
+      "http-502": 1,
+      "network-error": 152,
+      "not-modified": 205,
+      "render-error": 39,
+      "rendered": 296,
+      "robots-disallowed": 65
     },
     "staticAccessBlockedRequests": 64,
     "staticAccessBlockerCounts": {
@@ -679,12 +715,12 @@
       "platform-security-check": 46
     },
     "selectedPlanPriceAuditStatusCounts": {
-      "matched-within-threshold": 139,
-      "selected-plan-not-observed": 17
+      "matched-within-threshold": 143,
+      "selected-plan-not-observed": 14
     },
-    "reviewCandidatePages": 487,
-    "linkedStorefrontRequests": 1206,
-    "renderedRequests": 394,
+    "reviewCandidatePages": 499,
+    "linkedStorefrontRequests": 1221,
+    "renderedRequests": 395,
     "renderedAccessBlockedRequests": 48,
     "renderedAccessBlockerCounts": {
       "captcha-required": 2,
@@ -723,9 +759,9 @@
       "rangeCoverage": 0.8889
     },
     "independent-gym": {
-      "sampleSize": 7,
-      "medianAbsolutePercentageError": 0.4583,
-      "rangeCoverage": 0.5714
+      "sampleSize": 12,
+      "medianAbsolutePercentageError": 0.5306,
+      "rangeCoverage": 0.5833
     },
     "pilates-lagree-barre": {
       "sampleSize": 10,
@@ -743,17 +779,23 @@
       "rangeCoverage": 1.0
     },
     "yoga": {
-      "sampleSize": 17,
-      "medianAbsolutePercentageError": 0.0856,
-      "rangeCoverage": 0.7647
+      "sampleSize": 21,
+      "medianAbsolutePercentageError": 0.0791,
+      "rangeCoverage": 0.8095
     },
     "overall": {
-      "sampleSize": 75,
+      "sampleSize": 84,
       "medianAbsolutePercentageError": 0.124,
-      "rangeCoverage": 0.8533
+      "rangeCoverage": 0.8452
     }
   },
-  "withheldEstimateModalities": {},
+  "withheldEstimateModalities": {
+    "independent-gym": {
+      "sampleSize": 12,
+      "medianAbsolutePercentageError": 0.5306,
+      "rangeCoverage": 0.5833
+    }
+  },
   "publicationChecks": {
     "allClassified": true,
     "allHavePricingStatus": true,

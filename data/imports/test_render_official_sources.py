@@ -425,6 +425,40 @@ class RenderedCrawlerTests(unittest.TestCase):
             [],
         )
 
+    def test_operator_site_browser_capture_routes_bounded_cards_and_rate_tables(self) -> None:
+        gym = {
+            "id": "independent-gym", "name": "Independent Gym", "publicationStatus": "publish",
+            "websiteUrl": "https://gym.example/", "officialUrl": "https://gym.example/",
+            "priceSourceUrl": "https://gym.example/membership-agreement/",
+        }
+        captures = {"captures": [{
+            "gymId": gym["id"], "sourceUrl": gym["priceSourceUrl"],
+            "catalogSourceUrl": gym["priceSourceUrl"], "capturedAt": "2026-08-21",
+            "cards": [{
+                "productName": "Core Access", "displayedPrice": "$165/month",
+                "sectionLabel": "Memberships",
+                "cardText": "CORE ACCESS $165/month Full solo facility access at all locations.",
+            }],
+            "rateTableText": (
+                "Membership Types: Recurring Term Membership (4-Week Plan): "
+                "Sign-up Fee: $49.99 Cancellation Fee: None Commitment: No long-term commitment "
+                "Cost: $107.95 per 4-week period Description: Full facility access on a recurring basis. "
+                "1 Day Pass: Sign-up Fee: None Cost: $34.95 per day Description: One facility visit."
+            ),
+        }]}
+
+        observations = rendered.public_browser_capture_observations(
+            {"gyms": [gym]}, captures, {gym["id"]},
+        )
+
+        by_id = {item["sourceProductId"]: item for item in observations}
+        self.assertEqual(by_id["core-access"]["amount"], 165)
+        self.assertEqual(by_id["core-access"]["method"], "captured-public-operator-plan-card")
+        self.assertEqual(by_id["recurring-four-week"]["amount"], 107.95)
+        self.assertEqual(by_id["recurring-four-week"]["fees"][0]["amount"], 49.99)
+        self.assertEqual(by_id["day-pass"]["amount"], 34.95)
+        self.assertTrue(all(item["capturedAt"] == "2026-08-21" for item in observations))
+
 
 if __name__ == "__main__":
     unittest.main()

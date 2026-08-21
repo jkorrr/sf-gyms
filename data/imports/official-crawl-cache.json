@@ -1055,7 +1055,7 @@
     ]
   },
   "https://castro-fitness.com/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -1174,7 +1174,9 @@
         "contentHash": "0af2c537d37b88f274642541119c569d76a5ec5c13be16e024d9a86474bcbc50",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://anthonysilvafitness.com": {
     "status": "fetched",
@@ -1509,7 +1511,7 @@
     "locationCandidates": []
   },
   "https://www.benchmarkclimbing.com/": {
-    "status": "not-modified",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -1585,7 +1587,9 @@
         "contentHash": "7a25a045e3c42eb035169d973d002362aaa29bedf01f1883fb597241b24620fe",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://bernalyoga.com/": {
     "status": "fetched",
@@ -1704,7 +1708,7 @@
     ]
   },
   "https://bodytempyoga.com/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -1740,10 +1744,12 @@
         "contentHash": "c5b6d1a061fce1b5f38db3140e23780c281572f4bceb35d617c5465036587b9a",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://marianatek.com/?ref_noscript=": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -1763,7 +1769,9 @@
       "https://www.marianatek.com/opening-a-new-studio/",
       "https://www.marianatek.com/features/business-management/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://bodytonicsf.com/": {
     "status": "fetched",
@@ -3636,14 +3644,15 @@
     "locationCandidates": []
   },
   "https://www.ehspilates.com/": {
-    "status": "http-429",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://www.equinox.com/clubs/northern-california/bealest": {
     "status": "fetched",
@@ -6150,7 +6159,7 @@
     "locationCandidates": []
   },
   "https://fitlocalfit.com/Locations/Glen-Park/Gym": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -6228,7 +6237,9 @@
         "contentHash": "0b04ea71dd2c77e9a00cb063611c420085e5d460da87a112acfc72ac120a3b58",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.fitnesssf.com/location/castro": {
     "status": "fetched",
@@ -7561,7 +7572,7 @@
     "locationCandidates": []
   },
   "https://www.glowyogasf.com/": {
-    "status": "http-429",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -8405,7 +8416,7 @@
     ]
   },
   "https://www.livefitgym.com": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -8519,10 +8530,11 @@
         "contentHash": "1ba2e9dd01e47084a124e2c8c4e3a63580d956cbd147a07fc58e55ac04dec0c7",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.localsfitness.com/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -8543,7 +8555,9 @@
         "contentHash": "f546092fee3983d9d2ab61549c909705aac4c874938e5d9ded5e8d5fe1584796",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://lotuslandyogasf.com/": {
     "status": "fetched",
@@ -8652,11 +8666,13 @@
     "contentHash": "53458732e2472212b912efa5957213f49c2092811a9252b043aa04ce14c81c2f"
   },
   "https://lovestoryyoga.com/workshops/pride-hotyogasculpt": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-18",
+    "status": "network-error",
+    "lastAttemptAt": "2026-08-21",
     "etag": "W/\"740b48f3a56051d9337dbb438a024078\"",
     "lastModified": "",
-    "contentHash": "0125409fb41274cc5ea12b2cb949c66c3902670a077e1864a41d9181c3005c3b"
+    "contentHash": "0125409fb41274cc5ea12b2cb949c66c3902670a077e1864a41d9181c3005c3b",
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-18"
   },
   "https://www.luxfitsf.com/services/open-gym": {
     "status": "fetched",
@@ -10508,28 +10524,33 @@
     "contentHash": ""
   },
   "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://www.purebarre.com/location/san-francisco-noe-valley-ca": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-18",
+    "status": "network-error",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 19 Aug 2026 04:40:34 GMT",
-    "contentHash": "cb69082f46d627b038fbea77f2c5048b427265c224228d5c9ff18fae90a02031"
+    "contentHash": "cb69082f46d627b038fbea77f2c5048b427265c224228d5c9ff18fae90a02031",
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-18"
   },
   "https://purushayoga.org/": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-18",
+    "status": "network-error",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "4f496fc34ad78f79a0e3afb60bd54167a5ec4e25cb3db06e0843b553bafd80f6"
+    "contentHash": "4f496fc34ad78f79a0e3afb60bd54167a5ec4e25cb3db06e0843b553bafd80f6",
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-18"
   },
   "https://momence.com/Purusha-/membership/Purusha-Drop-in%2C-In-Person/306317": {
     "status": "fetched",
@@ -12994,7 +13015,7 @@
     ]
   },
   "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -13068,7 +13089,9 @@
         "contentHash": "ce20b2e120d3df91f1322b10af6922ce77133026f887693f961c1530e9978664",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://gymworx.fit/how-it-works/": {
     "status": "fetched",
@@ -13176,7 +13199,7 @@
     "locationCandidates": []
   },
   "https://sunsetgym.com/memberships/": {
-    "status": "not-modified",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -13226,7 +13249,9 @@
         "contentHash": "823efb581b2274fb07f93b5bbfe416cb84a9be31ec76a49824494188e27c4e13",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.yogamayu.com/pricing": {
     "status": "not-modified",
@@ -13571,7 +13596,7 @@
     "locationCandidates": []
   },
   "https://www.crossfitgoldengate.com/": {
-    "status": "not-modified",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -13595,27 +13620,31 @@
         "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://crossfitgoldengate.pushpress.com/landing/plans": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://crossfitgoldengate.pushpress.com/landing/calendar": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://www.purebarre.com/location/san-francisco-west-portal-ca": {
     "status": "fetched",
@@ -13697,7 +13726,7 @@
     "locationCandidates": []
   },
   "https://www.advancedwellness.com/whats-included/semi-private-custom-workouts/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -13721,7 +13750,9 @@
         "contentHash": "abeb4e98282b27272b2341a31d8bc2bbd240706a2be32b4579874b236ee64ef3",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://sfrecpark.org/Facilities/Facility/Details/Alice-Marble-Courts-324": {
     "status": "fetched",
@@ -14271,7 +14302,7 @@
     "locationCandidates": []
   },
   "https://www.marianatek.com/?ref_noscript=#content": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -14291,10 +14322,12 @@
       "https://www.marianatek.com/opening-a-new-studio/",
       "https://www.marianatek.com/features/business-management/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/book-a-demo/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -14306,10 +14339,12 @@
       "https://www.marianatek.com/cookie-list/",
       "https://www.marianatek.com/site-map/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -14329,7 +14364,9 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://bodytonicsfonline.com/": {
     "status": "fetched",
@@ -14714,7 +14751,7 @@
     "locationCandidates": []
   },
   "https://citysportsfitness.com/pages/clubhome.aspx?clubid=914": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -14761,7 +14798,9 @@
         "contentHash": "c05731da305a29c2cc525c422db01e6f7846a733a852a1deb5bf517f95b4d98f",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://members.clubpilates.com/refer": {
     "status": "fetched",
@@ -18025,7 +18064,7 @@
     ]
   },
   "https://www.swimlpb.com/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 12:29:23 GMT",
@@ -18085,7 +18124,9 @@
         "contentHash": "7121f31354d9f9fa1422feb284e8829637a3554c3980f8e1884844f548ec9eb2",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.lamaskenpokarate.com/": {
     "status": "fetched",
@@ -18108,7 +18149,7 @@
     "locationCandidates": []
   },
   "https://www.luxfitsf.com/locations/mission-rock": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -18388,37 +18429,45 @@
         "contentHash": "a2de0ed565c8d7979f857fbea950d2e9881628701fa4495b3662c32d9e5166f1",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/LuxFit/appointment-reservation/37719?boardId=12990&serviceId=31322&staffId=35324": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "4efcbef4a25c67ce4dd448c3df378f32a3c5f166c8d62066a9ee2d3b0958be92",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/appointments/37719?boardId=14809": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "b2edca6ee5faa5d61096758d46b4a337899cb58623ea51768f6387ee044f6311",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/appointments/37719?boardId=12868": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "172c8459492e1d1fb6f0680d1fa9ea572b46433cb90be58d8b07bf3a567a6c53",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor": {
     "status": "fetched",
@@ -19993,14 +20042,15 @@
     ]
   },
   "https://www.tcstrengthandfitness.com/": {
-    "status": "http-502",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://www.sfrecpark.org/Facilities/Facility/Details/Tenderloin-Rec-Center-111": {
     "status": "fetched",
@@ -24162,7 +24212,7 @@
     "locationCandidates": []
   },
   "https://www.advancedwellness.com/join/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -24186,10 +24236,12 @@
         "contentHash": "abeb4e98282b27272b2341a31d8bc2bbd240706a2be32b4579874b236ee64ef3",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.advancedwellness.com/memberships-join-us/pricing/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -24213,7 +24265,9 @@
         "contentHash": "abeb4e98282b27272b2341a31d8bc2bbd240706a2be32b4579874b236ee64ef3",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.barrys.com/es/pricing/san-francisco-marina": {
     "status": "fetched",
@@ -27163,7 +27217,7 @@
     ]
   },
   "https://www.bodytempyoga.com/memberships": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27199,10 +27253,12 @@
         "contentHash": "c5b6d1a061fce1b5f38db3140e23780c281572f4bceb35d617c5465036587b9a",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://bodytempyoga.com/memberships": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27238,10 +27294,12 @@
         "contentHash": "c5b6d1a061fce1b5f38db3140e23780c281572f4bceb35d617c5465036587b9a",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://bodytempyoga.com/pricing": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27277,10 +27335,12 @@
         "contentHash": "c5b6d1a061fce1b5f38db3140e23780c281572f4bceb35d617c5465036587b9a",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/pilates-studio-software/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27300,10 +27360,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/yoga-studio-software/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27323,10 +27385,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/indoor-cycling-studio-software/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27346,10 +27410,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/hiit-studio-software/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27369,10 +27435,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/barre-studio-software/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27392,10 +27460,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/group-fitness-studio-software/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27415,10 +27485,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/features/multilocation-studios/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27438,10 +27510,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/opening-a-new-studio/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27461,10 +27535,12 @@
       "https://www.marianatek.com/features/business-management/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/cookie-list/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27484,10 +27560,12 @@
       "https://www.marianatek.com/opening-a-new-studio/",
       "https://www.marianatek.com/features/business-management/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/site-map/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27507,10 +27585,12 @@
       "https://www.marianatek.com/opening-a-new-studio/",
       "https://www.marianatek.com/features/business-management/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.marianatek.com/features/business-management/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27530,7 +27610,9 @@
       "https://www.marianatek.com/opening-a-new-studio/",
       "https://www.marianatek.com/features/customer-experience/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.thecitycrossfit.com/schedule": {
     "status": "not-modified",
@@ -27685,7 +27767,7 @@
     "locationCandidates": []
   },
   "https://www.crossfitgoldengate.com/membership": {
-    "status": "not-modified",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -27710,7 +27792,9 @@
         "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.crunch.com/join": {
     "status": "fetched",
@@ -38208,17 +38292,18 @@
     ]
   },
   "https://benchmark.portal.approach.app/membership-type/3": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://www.benchmarkclimbing.com/new-memberships-1": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"ce6b580691ff08369c1b8e4a1f803fe5--gzip\"",
     "lastModified": "",
@@ -38271,47 +38356,53 @@
         "contentHash": "7a25a045e3c42eb035169d973d002362aaa29bedf01f1883fb597241b24620fe",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://benchmark.portal.approach.app": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://benchmark.portal.approach.app/pass-type/2": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://benchmark.portal.approach.app/pass-type/3": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://benchmark.portal.approach.app/pass-type/1": {
-    "status": "robots-disallowed",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://www.bhaktisf.com/schedule": {
     "status": "fetched",
@@ -38703,7 +38794,7 @@
     "locationCandidates": []
   },
   "https://www.marianatek.com/features/customer-experience/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -38723,7 +38814,9 @@
       "https://www.marianatek.com/opening-a-new-studio/",
       "https://www.marianatek.com/features/business-management/"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://bodytonicsfonline.com/rates": {
     "status": "fetched",
@@ -39414,7 +39507,7 @@
     ]
   },
   "https://castro-fitness.com/membership-agreement/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -39572,10 +39665,12 @@
         "contentHash": "0af2c537d37b88f274642541119c569d76a5ec5c13be16e024d9a86474bcbc50",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://castro-fitness.com/memberships/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -39681,7 +39776,9 @@
         "contentHash": "0af2c537d37b88f274642541119c569d76a5ec5c13be16e024d9a86474bcbc50",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.graciesanfrancisco.com/schedule/": {
     "status": "fetched",
@@ -40512,7 +40609,7 @@
     ]
   },
   "https://citysportsfitness.com/Pages/MembershipSignUpSearch.aspx": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -40650,7 +40747,9 @@
         "contentHash": "5e9c838819328302935c84acb42eb1c57d6b47ec5869b123a858705dc2ebd88c",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://members.clubpilates.com/api/locations/clubpilates-soma-ca/packages": {
     "status": "fetched",
@@ -42199,14 +42298,15 @@
     ]
   },
   "https://www.ehspilates.com/pricing-and-packages": {
-    "status": "http-429",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": ""
   },
   "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm": {
     "status": "fetched",
@@ -43243,7 +43343,7 @@
     "locationCandidates": []
   },
   "https://fitlocalfit.com/Members/Gym-Membership": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -43307,20 +43407,24 @@
         "contentHash": "0b04ea71dd2c77e9a00cb063611c420085e5d460da87a112acfc72ac120a3b58",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitlocalfit.com/Locations/Glen-Park/Gym?mode=preview": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "90e81d4a6dbddfe9c0abffc8025d1fd0bdd1acbfd4dafed1973c24185f2c3443",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitlocalfit.com/Locations/Bernal-Heights/Gym": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -43398,10 +43502,12 @@
         "contentHash": "0b04ea71dd2c77e9a00cb063611c420085e5d460da87a112acfc72ac120a3b58",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitlocalfit.com/Locations/Sunset/Gym": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -43480,30 +43586,36 @@
         "contentHash": "0b04ea71dd2c77e9a00cb063611c420085e5d460da87a112acfc72ac120a3b58",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitlocalfit.com/Locations/Bernal-Heights/Gym?mode=preview": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "f192d2cd871d0e7c7a40ac472979c4b301b60fbc14489340ad7a14e6daf59ab0",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitlocalfit.com/Locations/Sunset/Gym?mode=preview": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "c547b8148a4dfda98beb91386d52fee156e261b683064f5e68b47f8c59480097",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitlocalfit.com/Members/Join": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -43567,7 +43679,9 @@
         "contentHash": "0b04ea71dd2c77e9a00cb063611c420085e5d460da87a112acfc72ac120a3b58",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://fitnessurbano.com/": {
     "status": "fetched",
@@ -44258,7 +44372,7 @@
     "locationCandidates": []
   },
   "https://www.glowyogasf.com/faq": {
-    "status": "http-429",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46173,7 +46287,7 @@
     ]
   },
   "https://www.swimlpb.com/contact-us/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 12:32:05 GMT",
@@ -46246,10 +46360,12 @@
         "contentHash": "7ef1b2989d8d12495afb3dee9df9908856436c1b6ac367f7ab0410cf5ebe0388",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.swimlpb.com/swim-classes/tuition": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 12:32:07 GMT",
@@ -46518,7 +46634,9 @@
         "contentHash": "7121f31354d9f9fa1422feb284e8829637a3554c3980f8e1884844f548ec9eb2",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=41": {
     "status": "http-403",
@@ -46543,7 +46661,7 @@
     "locationCandidates": []
   },
   "https://livefitgym.com/signup/": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46565,10 +46683,11 @@
       "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=78efafa87260496cbc842607918d10ce",
       "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=d1e53f419f094b8e9f211dbe9e95fa04"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46579,10 +46698,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46593,10 +46713,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46607,10 +46728,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46621,10 +46743,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46635,10 +46758,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46649,10 +46773,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32324&planId=78efafa87260496cbc842607918d10ce": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46663,10 +46788,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32324&planId=d1e53f419f094b8e9f211dbe9e95fa04": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46677,10 +46803,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32324&planId=c7e1c8f657c4472185cf2e3c92a1c91e": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46691,10 +46818,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=78efafa87260496cbc842607918d10ce": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46705,10 +46833,11 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=d1e53f419f094b8e9f211dbe9e95fa04": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46719,7 +46848,8 @@
     "linkedStorefronts": [
       "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=c7e1c8f657c4472185cf2e3c92a1c91e": {
     "status": "fetched",
@@ -46736,7 +46866,7 @@
     "locationCandidates": []
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46752,10 +46882,11 @@
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46768,10 +46899,11 @@
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46787,10 +46919,11 @@
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -46806,7 +46939,8 @@
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32323",
       "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32323"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://lfgelitetraining.com/group-class/": {
     "status": "fetched",
@@ -46833,27 +46967,31 @@
     ]
   },
   "https://localsfitness.com/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"16c7a-YFYvOENO6tfHSoc30TH3EhBLn64\"",
     "lastModified": "",
     "contentHash": "4acea93cf8f9bc1d5d8eec395efda069e4853b47baae08a94c3560e1d3f1130e",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/appointments/37719?boardId=12869": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "4b8672190efdd28cb1085d6758eecac285666b35bfbe76da99bce4053d9f0cca",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.luxfitsf.com/category/membership": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -46917,20 +47055,24 @@
       "https://momence.com/LuxFit/appointment-reservation/37719?boardId=12990&serviceId=31322&staffId=35324",
       "https://www.luxfitsf.com/product/membership"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/sign-up/visitor": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "08e372d3ae9d7d7e6280275003ce1f04a7369cd9b8e412d82ace1230b74fcca3",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.luxfitsf.com/product/membership": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
@@ -46967,7 +47109,9 @@
       "https://momence.com/sign-up/visitor",
       "https://momence.com/LuxFit/appointment-reservation/37719?boardId=12990&serviceId=31322&staffId=35324"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://touchstoneclimbing.com/mission-cliffs/membership-and-passes/": {
     "status": "fetched",
@@ -49650,7 +49794,7 @@
     ]
   },
   "https://sunsetgym.com/": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "\"a3524e8ebd133e1e170f6fb14b50962d-ssl\"",
     "lastModified": "",
@@ -49673,27 +49817,33 @@
         "contentHash": "823efb581b2274fb07f93b5bbfe416cb84a9be31ec76a49824494188e27c4e13",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.tcstrengthandfitness.com/schedule": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"-390898879\"",
     "lastModified": "",
     "contentHash": "61cea89a48e20befe7a0555275ce1681dacf17f870329bd1f4ad4892d4def865",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.tcstrengthandfitness.com/pricing": {
-    "status": "fetched",
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"904725663\"",
     "lastModified": "",
     "contentHash": "a485d51a15ab12c257e4c681fb57ec3fbfd6939e9955e9847933935cc5052ce4",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "accessBlocker": "",
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page": {
     "status": "robots-disallowed",
@@ -56235,7 +56385,7 @@
     "locationCandidates": []
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56291,10 +56441,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56358,10 +56509,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56425,10 +56577,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56484,10 +56637,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56551,10 +56705,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56618,10 +56773,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56677,10 +56833,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56744,10 +56901,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56811,10 +56969,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56870,10 +57029,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -56937,10 +57097,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57004,10 +57165,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57063,10 +57225,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57130,10 +57293,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57197,10 +57361,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57256,10 +57421,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57323,10 +57489,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323": {
-    "status": "not-modified",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57390,10 +57557,11 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32323": {
-    "status": "fetched",
+    "status": "network-error",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "\"1316-jFs6O5nyvDJf7uc5WaZ/x7XvXRk\"",
@@ -57449,7 +57617,8 @@
       }
     ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.equinox.com/api/cms/facilities/727/membership/plans": {
     "status": "fetched",
@@ -63512,6 +63681,18 @@
         "autoPublishEligible": false
       }
     ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://purushayoga.org/pricing/": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v28",
+    "contentHash": "",
+    "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   }

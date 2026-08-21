@@ -353,17 +353,17 @@
       "crawlAttempts": [
         {
           "url": "https://www.advancedwellness.com/join/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.advancedwellness.com/memberships-join-us/pricing/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.advancedwellness.com/whats-included/semi-private-custom-workouts/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -1835,37 +1835,37 @@
       "crawlAttempts": [
         {
           "url": "https://benchmark.portal.approach.app",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://benchmark.portal.approach.app/membership-type/3",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://benchmark.portal.approach.app/pass-type/1",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://benchmark.portal.approach.app/pass-type/2",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://benchmark.portal.approach.app/pass-type/3",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.benchmarkclimbing.com/",
-          "status": "not-modified",
+          "status": "network-error",
           "candidateCount": 1
         },
         {
           "url": "https://www.benchmarkclimbing.com/new-memberships-1",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -2185,102 +2185,102 @@
       "crawlAttempts": [
         {
           "url": "https://bodytempyoga.com/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://bodytempyoga.com/memberships",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://bodytempyoga.com/pricing",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://marianatek.com/?ref_noscript=",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.bodytempyoga.com/memberships",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/?ref_noscript=#content",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/barre-studio-software/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/book-a-demo/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/cookie-list/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/features/business-management/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/features/customer-experience/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/features/multilocation-studios/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/group-fitness-studio-software/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/hiit-studio-software/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/indoor-cycling-studio-software/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/opening-a-new-studio/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/pilates-studio-software/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/site-map/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/yoga-studio-software/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -2711,33 +2711,33 @@
       "crawlAttempts": [
         {
           "url": "https://castro-fitness.com/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 1
         },
         {
           "url": "https://castro-fitness.com/membership-agreement/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 3
         },
         {
           "url": "https://castro-fitness.com/memberships/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 1
         },
         {
           "url": "https://castro-fitness.com/",
-          "status": "rendered",
-          "candidateCount": 1
+          "status": "render-error",
+          "candidateCount": 0
         },
         {
           "url": "https://castro-fitness.com/membership-agreement/",
-          "status": "rendered",
-          "candidateCount": 3
+          "status": "render-error",
+          "candidateCount": 0
         },
         {
           "url": "https://castro-fitness.com/memberships/",
-          "status": "rendered",
-          "candidateCount": 1
+          "status": "render-error",
+          "candidateCount": 0
         }
       ]
     },
@@ -3270,12 +3270,12 @@
       "crawlAttempts": [
         {
           "url": "https://citysportsfitness.com/Pages/MembershipSignUpSearch.aspx",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://citysportsfitness.com/pages/clubhome.aspx?clubid=914",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -3989,22 +3989,22 @@
       "crawlAttempts": [
         {
           "url": "https://crossfitgoldengate.pushpress.com/landing/calendar",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://crossfitgoldengate.pushpress.com/landing/plans",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.crossfitgoldengate.com/",
-          "status": "not-modified",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.crossfitgoldengate.com/membership",
-          "status": "not-modified",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -4764,12 +4764,12 @@
       "crawlAttempts": [
         {
           "url": "https://www.ehspilates.com/",
-          "status": "http-429",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.ehspilates.com/pricing-and-packages",
-          "status": "http-429",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -5667,7 +5667,7 @@
       "crawlAttempts": [
         {
           "url": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 2
         },
         {
@@ -5746,42 +5746,42 @@
       "crawlAttempts": [
         {
           "url": "https://fitlocalfit.com/Locations/Bernal-Heights/Gym",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Locations/Bernal-Heights/Gym?mode=preview",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Locations/Glen-Park/Gym",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Locations/Glen-Park/Gym?mode=preview",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Locations/Sunset/Gym",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Locations/Sunset/Gym?mode=preview",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Members/Gym-Membership",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://fitlocalfit.com/Members/Join",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -7263,12 +7263,12 @@
       "crawlAttempts": [
         {
           "url": "https://www.glowyogasf.com/",
-          "status": "http-429",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.glowyogasf.com/faq",
-          "status": "http-429",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -8409,17 +8409,17 @@
       "crawlAttempts": [
         {
           "url": "https://www.swimlpb.com/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.swimlpb.com/contact-us/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.swimlpb.com/swim-classes/tuition",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 8
         },
         {
@@ -10228,92 +10228,182 @@
       "crawlAttempts": [
         {
           "url": "https://livefitgym.com/signup/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32323",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=78efafa87260496cbc842607918d10ce",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32323&planId=d1e53f419f094b8e9f211dbe9e95fa04",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32324&planId=78efafa87260496cbc842607918d10ce",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32324&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32324&planId=d1e53f419f094b8e9f211dbe9e95fa04",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.livefitgym.com",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -10355,12 +10445,12 @@
       "crawlAttempts": [
         {
           "url": "https://localsfitness.com/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.localsfitness.com/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -10518,6 +10608,43 @@
       ]
     },
     {
+      "id": "web-5f77b574935a5e",
+      "name": "Love Story Yoga - Valencia",
+      "address": "473 Valencia Street, San Francisco, CA 94103",
+      "websiteUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "entityKind": "studio",
+      "modality": "yoga",
+      "pricingStatus": "pay-per-visit",
+      "pricingBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "estimatedMonthly": null,
+      "reportedMonthly": null,
+      "priceReports": [],
+      "publicationStatus": "publish",
+      "planValidationErrors": [],
+      "selectedPlanId": null,
+      "catalogStatus": {
+        "plans": {
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
+        },
+        "dropIns": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+        }
+      },
+      "discoveryStatus": "official-page-present",
+      "crawlStatus": "attempted",
+      "sourceAttemptStatus": "crawl-attempted",
+      "sourceAttemptBlocker": "",
+      "crawlAttempts": [
+        {
+          "url": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+          "status": "network-error",
+          "candidateCount": 0
+        }
+      ]
+    },
+    {
       "id": "osm-node-12152934880",
       "name": "LuxFit SF Mission Rock",
       "address": "1090 Dr Maya Angelou Lane, Suite E, San Francisco, CA 94158",
@@ -10549,73 +10676,73 @@
       "crawlAttempts": [
         {
           "url": "https://momence.com/LuxFit/appointment-reservation/37719?boardId=12990&serviceId=31322&staffId=35324",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/appointments/37719?boardId=12868",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/appointments/37719?boardId=12869",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/appointments/37719?boardId=14809",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/sign-up/visitor",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.luxfitsf.com/category/membership",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 2
         },
         {
           "url": "https://www.luxfitsf.com/locations/mission-rock",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 7
         },
         {
           "url": "https://www.luxfitsf.com/product/membership",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 1
         },
         {
           "url": "https://momence.com/LuxFit/appointment-reservation/37719?boardId=12990&serviceId=31322&staffId=35324",
-          "status": "rendered",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/appointments/37719?boardId=12868",
-          "status": "rendered",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/appointments/37719?boardId=12869",
-          "status": "rendered",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/appointments/37719?boardId=14809",
-          "status": "rendered",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/sign-up/visitor",
-          "status": "rendered",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.luxfitsf.com/locations/mission-rock",
-          "status": "rendered",
-          "candidateCount": 7
+          "status": "render-error",
+          "candidateCount": 0
         }
       ]
     },
@@ -11674,9 +11801,7 @@
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -11780,9 +11905,7 @@
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -12888,7 +13011,7 @@
       "crawlAttempts": [
         {
           "url": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
-          "status": "robots-disallowed",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -13065,6 +13188,85 @@
         {
           "url": "https://www.purebarre.com/location/san-francisco-west-portal-ca",
           "status": "rendered",
+          "candidateCount": 0
+        }
+      ]
+    },
+    {
+      "id": "web-164572c938e7e3",
+      "name": "Pure Barre San Francisco - Noe Valley",
+      "address": "3800 24th Street, San Francisco, CA 94114",
+      "websiteUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "entityKind": "studio",
+      "modality": "pilates-lagree-barre",
+      "pricingStatus": "pay-per-visit",
+      "pricingBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "estimatedMonthly": null,
+      "reportedMonthly": null,
+      "priceReports": [],
+      "publicationStatus": "publish",
+      "planValidationErrors": [],
+      "selectedPlanId": null,
+      "catalogStatus": {
+        "plans": {
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
+        },
+        "dropIns": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+        }
+      },
+      "discoveryStatus": "official-page-present",
+      "crawlStatus": "attempted",
+      "sourceAttemptStatus": "crawl-attempted",
+      "sourceAttemptBlocker": "",
+      "crawlAttempts": [
+        {
+          "url": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+          "status": "network-error",
+          "candidateCount": 0
+        }
+      ]
+    },
+    {
+      "id": "web-aad2d32fab6264",
+      "name": "Purusha Yoga & Pilates",
+      "address": "3729 Balboa St, San Francisco, CA 94121",
+      "websiteUrl": "https://purushayoga.org/",
+      "entityKind": "studio",
+      "modality": "yoga",
+      "pricingStatus": "verified",
+      "pricingBlocker": "",
+      "estimatedMonthly": null,
+      "reportedMonthly": null,
+      "priceReports": [],
+      "publicationStatus": "publish",
+      "planValidationErrors": [],
+      "selectedPlanId": "web-aad2d32fab6264:plan:legacy-reviewed-selected",
+      "catalogStatus": {
+        "plans": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+        },
+        "dropIns": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+        }
+      },
+      "discoveryStatus": "official-page-present",
+      "crawlStatus": "attempted",
+      "sourceAttemptStatus": "crawl-attempted",
+      "sourceAttemptBlocker": "",
+      "crawlAttempts": [
+        {
+          "url": "https://purushayoga.org/",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://purushayoga.org/pricing/",
+          "status": "network-error",
           "candidateCount": 0
         }
       ]
@@ -14719,17 +14921,22 @@
       "crawlAttempts": [
         {
           "url": "https://sunsetgym.com/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://sunsetgym.com/memberships/",
-          "status": "not-modified",
+          "status": "network-error",
           "candidateCount": 1
         },
         {
+          "url": "https://sunsetgym.com/",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
           "url": "https://sunsetgym.com/memberships/",
-          "status": "rendered",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -14766,17 +14973,17 @@
       "crawlAttempts": [
         {
           "url": "https://www.tcstrengthandfitness.com/",
-          "status": "http-502",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.tcstrengthandfitness.com/pricing",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://www.tcstrengthandfitness.com/schedule",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {

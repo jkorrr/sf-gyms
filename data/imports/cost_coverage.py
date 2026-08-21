@@ -12,6 +12,7 @@ import copy
 import hashlib
 import json
 import math
+import os
 import re
 import statistics
 from collections import Counter, defaultdict
@@ -215,6 +216,7 @@ def operator_key(gym: dict[str, Any]) -> str:
         ("crunch", "crunch"),
         ("fitness sf", "fitness-sf"),
         ("live fit", "live-fit"),
+        ("livefit", "live-fit"),
         ("bay club", "bay-club"),
         ("equinox", "equinox"),
         ("orangetheory", "orangetheory"),
@@ -428,7 +430,10 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
     evidence.setdefault("exactLocationMatch", text(offer.get("exactLocationMatch")) or "exact-location")
     evidence.setdefault("sourceProductId", source_product_id)
     evidence.setdefault("conflictFlags", offer.get("conflictFlags", []))
-    normalized_allowance = class_allowance(offer.get("classAllowance") or f"{text(offer.get('name'))} {scope}") or (
+    allowance_input = offer.get("classAllowance")
+    if allowance_input is None and access == "class-membership":
+        allowance_input = f"{text(offer.get('name'))} {scope}"
+    normalized_allowance = class_allowance(allowance_input) or (
         {"count": None, "period": "month", "unlimited": False, "disclosed": False}
         if (text(offer.get("productType")) or ("class-membership" if access == "class-membership" else "membership")) == "class-membership"
         else None
@@ -2818,7 +2823,15 @@ def validate_publication(document: dict[str, Any], report: dict[str, Any]) -> No
 
 def save_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
+    temporary_path = path.with_name(f".{path.name}.{os.getpid()}.tmp")
+    try:
+        temporary_path.write_text(
+            json.dumps(value, indent=2, ensure_ascii=False) + "\n",
+            encoding="utf-8",
+        )
+        os.replace(temporary_path, path)
+    finally:
+        temporary_path.unlink(missing_ok=True)
 
 
 def main() -> int:

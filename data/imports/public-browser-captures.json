@@ -346,6 +346,44 @@
         {"categoryLabel":"Classes","productId":"100005","cardText":"20 Class Pack\n$500.00"},
         {"categoryLabel":"Classes","productId":"100006","cardText":"One Month | Union Studio (Does Not Renew)\n$240.00"}
       ]
+    },
+    {
+      "gymId": "osm-node-12152934880",
+      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "cards": [
+        {
+          "productName": "Core Access",
+          "displayedPrice": "$165/month",
+          "sectionLabel": "Memberships & Packages",
+          "cardText": "CORE ACCESS\n$165.00 USD per month\nEnjoy full access to our facilities for solo workouts at your convenience. All equipment and spaces are available during operating hours. Provides access to all LuxFit locations."
+        }
+      ]
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "rateTableText": "Membership Types: Recurring Term Membership (4-Week Plan): Sign-up Fee: $49.99 Cancellation Fee: None Commitment: No long-term commitment Cost: $107.95 per 4-week period Description: This plan provides access to all facility and services of the club Castro on a recurring 4-week basis. 1 Day Pass: Sign-up Fee: None Cost: $34.95 per day Description: This pass allows for one-day access to all facility and services of the club Castro. 1 Week Pass: Sign-up Fee: None Cost: $69.95 per week Description: This pass allows for one-week access to all facility and services of the club Castro. Single Month Pass: Sign-up Fee: None Cost: $135.95 per month Description: This pass allows for one-month access to all facility and services of the club Castro."
+    },
+    {
+      "gymId": "osm-node-3674255652",
+      "sourceUrl": "https://sunsetgym.com/memberships/",
+      "catalogSourceUrl": "https://sunsetgym.com/memberships/",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "cards": [
+        {
+          "productName": "Standard Monthly Membership",
+          "displayedPrice": "$74.99/month",
+          "sectionLabel": "Monthly — 6 Month Commitment",
+          "cardText": "Standard Monthly Membership\n$74.99/month\n6 Month Commitment\nNo enrollment fees. All access, two floors of fitness, and towel service included."
+        }
+      ]
     }
   ]
 }

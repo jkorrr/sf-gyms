@@ -1,6 +1,9 @@
 from __future__ import annotations
 
+import json
+import tempfile
 import unittest
+from pathlib import Path
 
 import cost_coverage as coverage
 
@@ -28,6 +31,16 @@ def gym(identifier: str, name: str, monthly: float | None, **extra: object) -> d
 
 
 class CostCoverageTests(unittest.TestCase):
+    def test_save_json_atomically_replaces_existing_document(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "fixture.json"
+            path.write_text('{"old": true}\n', encoding="utf-8")
+
+            coverage.save_json(path, {"new": [1, 2, 3]})
+
+            self.assertEqual(json.loads(path.read_text(encoding="utf-8")), {"new": [1, 2, 3]})
+            self.assertEqual(list(path.parent.glob(f".{path.name}.*.tmp")), [])
+
     def test_restricted_legacy_scalars_do_not_manufacture_consumer_catalogs(self) -> None:
         value = gym(
             "restricted-legacy",
@@ -555,6 +568,25 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(errors, [])
         self.assertEqual(selected["billing"]["interval"], "4 weeks")
         self.assertEqual(selected["billing"]["normalizedMonthly"], 116.95)
+
+    def test_gym_billing_cadence_is_not_invented_as_class_allowance(self) -> None:
+        value = gym("four-week-access", "Example Gym", 116.95)
+        value["planOffers"] = [{
+            "sourceProductId": "recurring-four-week",
+            "name": "Recurring Four-Week Membership",
+            "accessScope": "Ordinary gym access at the named location",
+            "amount": 107.95,
+            "billingInterval": "4 weeks",
+            "commitmentType": "month-to-month",
+        }]
+        plans, _drop_ins, selected_id, _drop_id, errors = coverage.build_plan_catalog(value, "membership")
+        selected = next(plan for plan in plans if plan["id"] == selected_id)
+        self.assertEqual(errors, [])
+        self.assertIsNone(selected["classAllowance"])
+
+    def test_livefit_compact_brand_name_uses_canonical_operator_key(self) -> None:
+        value = gym("livefit", "LiveFitGym Wellness Club", 137)
+        self.assertEqual(coverage.operator_key(value), "live-fit")
 
     def test_thirty_day_billing_is_normalized_but_original_cadence_is_retained(self) -> None:
         value = gym("thirty-day", "Example Gym", 302.34)

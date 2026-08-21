@@ -2,9 +2,9 @@
   "_meta": {
     "generatedAt": "2026-08-21",
     "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
-    "proposalCount": 99,
-    "unchangedApprovedCount": 20,
-    "rejectedUnattachedObservationCount": 822
+    "proposalCount": 102,
+    "unchangedApprovedCount": 21,
+    "rejectedUnattachedObservationCount": 813
   },
   "proposals": [
     {
@@ -7161,6 +7161,93 @@
       }
     },
     {
+      "gymId": "osm-node-3674255652",
+      "gymName": "Sunset Gym",
+      "canonicalAddress": "1247 9th ave",
+      "operatorId": "sunset gym",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://sunsetgym.com/memberships/"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "standard-monthly-membership-6-month",
+          "name": "Standard Monthly Membership $74.99/month 6 Month Commitment No enrollment fees. All access, two floors of fitness, and towel service included.",
+          "productType": "membership",
+          "accessScope": "Access described by the bounded official operator plan card",
+          "scopeType": "single-location",
+          "amount": 74.99,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 6,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://sunsetgym.com/memberships/",
+            "observedAt": "2026-08-21",
+            "source": "captured-operator-plan-card",
+            "method": "captured-public-operator-plan-card",
+            "rawLabel": "Standard Monthly Membership $74.99/month 6 Month Commitment No enrollment fees. All access, two floors of fitness, and towel service included.",
+            "contentHash": "14ea462b65fb2aee62945e5fdd4ffa59685645d8b3029e23cf889d0e71a2321f",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-catalog",
+            "sourceProductId": "standard-monthly-membership-6-month",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 74.99,
+        "dayPassPrice": 20.0,
+        "selectedPlanId": "osm-node-3674255652:plan:standard-six-month",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 0,
+        "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "osm-node-4001664955",
       "gymName": "SoulCycle Castro",
       "canonicalAddress": "400 castro st",
@@ -14298,6 +14385,387 @@
         "monthlyPrice": 117.0,
         "dayPassPrice": null,
         "selectedPlanId": "osm-node-9659815458:plan:basic",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "none",
+            "reason": "No ordinary public single-visit or single-class catalog was verified."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": false,
+        "planOfferCount": 0,
+        "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "canonicalAddress": "780 valencia st",
+      "operatorId": "live-fit",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+        "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+        "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+        "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+        "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+        "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
+          "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
+          "productType": "membership",
+          "accessScope": "Named home location",
+          "scopeType": "single-location",
+          "amount": 137.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6.0,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [
+            {
+              "type": "enrollment",
+              "name": "Enrollment Fee",
+              "amount": 99.0,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            },
+            {
+              "type": "annual",
+              "name": "Annual Fee",
+              "amount": 49.0,
+              "currency": "USD",
+              "cadence": "year",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+            "observedAt": "2026-08-21",
+            "source": "abc-fitness",
+            "method": "public-abc-fitness-plan-api",
+            "rawLabel": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
+            "contentHash": "0ce3793105e9f0c6327c4dd1eb52707ca70058e28ce6ff626b7abe97e38bcd94",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
+          "name": "Premier 6 Month Term $137/month; Annual Fee $49",
+          "productType": "membership",
+          "accessScope": "Named home location",
+          "scopeType": "single-location",
+          "amount": 137.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6.0,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [
+            {
+              "type": "annual",
+              "name": "Annual Fee",
+              "amount": 49.0,
+              "currency": "USD",
+              "cadence": "year",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+            "observedAt": "2026-08-21",
+            "source": "abc-fitness",
+            "method": "public-abc-fitness-plan-api",
+            "rawLabel": "Premier 6 Month Term $137/month; Annual Fee $49",
+            "contentHash": "eecb7b449c98c507a375f0063733f7758865a95186c4fac3a3dac07fb6c764a0",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
+          "name": "Basic 6 Month Term $117/month; Annual Fee $49",
+          "productType": "membership",
+          "accessScope": "Named home location",
+          "scopeType": "single-location",
+          "amount": 117.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6.0,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [
+            {
+              "type": "annual",
+              "name": "Annual Fee",
+              "amount": 49.0,
+              "currency": "USD",
+              "cadence": "year",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+            "observedAt": "2026-08-21",
+            "source": "abc-fitness",
+            "method": "public-abc-fitness-plan-api",
+            "rawLabel": "Basic 6 Month Term $117/month; Annual Fee $49",
+            "contentHash": "91292a98767144371a14bf62adb61887cdc6539d459a6778c7b3809f2a2704bf",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "78efafa87260496cbc842607918d10ce",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
+          "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
+          "productType": "membership",
+          "accessScope": "Named home location",
+          "scopeType": "single-location",
+          "amount": 117.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6.0,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [
+            {
+              "type": "enrollment",
+              "name": "Enrollment Fee",
+              "amount": 99.0,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            },
+            {
+              "type": "annual",
+              "name": "Annual Fee",
+              "amount": 49.0,
+              "currency": "USD",
+              "cadence": "year",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+            "observedAt": "2026-08-21",
+            "source": "abc-fitness",
+            "method": "public-abc-fitness-plan-api",
+            "rawLabel": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
+            "contentHash": "1d69b64ee15ea4ad7fef6c5db2511a31d304e84ab92b52e5b08c83a3123351ff",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
+          "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
+          "productType": "membership",
+          "accessScope": "Named home location",
+          "scopeType": "single-location",
+          "amount": 117.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6.0,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [
+            {
+              "type": "enrollment",
+              "name": "Enrollment Fee",
+              "amount": 99.0,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            },
+            {
+              "type": "annual",
+              "name": "Annual Fee",
+              "amount": 49.0,
+              "currency": "USD",
+              "cadence": "year",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+            "observedAt": "2026-08-21",
+            "source": "abc-fitness",
+            "method": "public-abc-fitness-plan-api",
+            "rawLabel": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
+            "contentHash": "f53bebe7a2f8e7144576487144a0bd40d7fc88c068525747112a0d7130f1e2eb",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
+          "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
+          "productType": "membership",
+          "accessScope": "Named home location",
+          "scopeType": "single-location",
+          "amount": 137.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6.0,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [
+            {
+              "type": "enrollment",
+              "name": "Enrollment Fee",
+              "amount": 99.0,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            },
+            {
+              "type": "annual",
+              "name": "Annual Fee",
+              "amount": 49.0,
+              "currency": "USD",
+              "cadence": "year",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+            "observedAt": "2026-08-21",
+            "source": "abc-fitness",
+            "method": "public-abc-fitness-plan-api",
+            "rawLabel": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
+            "contentHash": "30eeb3003c09a1f8f6f186ee649b6ce5d595fb5270bfe75da135f3326638262c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 137.0,
+        "dayPassPrice": null,
+        "selectedPlanId": "osm-node-968356991:plan:premier",
         "catalogStatus": {
           "plans": {
             "status": "source-catalog",
@@ -29845,6 +30313,151 @@
       }
     },
     {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "canonicalAddress": "2275 market st",
+      "operatorId": "castro-fitness.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://castro-fitness.com/membership-agreement/"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "recurring-four-week",
+          "name": "Recurring Four-Week Membership",
+          "accessScope": "Ordinary gym access at the named location",
+          "amount": 107.95,
+          "billingInterval": "4 weeks",
+          "commitmentType": "month-to-month",
+          "fees": [
+            {
+              "type": "enrollment",
+              "amount": 49.99,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "1-week-pass",
+          "name": "1 Week Pass: Sign-up Fee: None Cost: $69.95 per week Description: This pass allows for one-week access to all facility and services of the club Castro.",
+          "productType": "membership",
+          "accessScope": "This pass allows for one-week access to all facility and services of the club Castro.",
+          "scopeType": "single-location",
+          "amount": 69.95,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://castro-fitness.com/membership-agreement/",
+            "observedAt": "2026-08-21",
+            "source": "membership-agreement",
+            "method": "captured-public-membership-agreement",
+            "rawLabel": "1 Week Pass: Sign-up Fee: None Cost: $69.95 per week Description: This pass allows for one-week access to all facility and services of the club Castro.",
+            "contentHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "1-week-pass",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "single-month-pass",
+          "name": "Single Month Pass: Sign-up Fee: None Cost: $135.95 per month Description: This pass allows for one-month access to all facility and services of the club Castro.",
+          "productType": "membership",
+          "accessScope": "This pass allows for one-month access to all facility and services of the club Castro.",
+          "scopeType": "single-location",
+          "amount": 135.95,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://castro-fitness.com/membership-agreement/",
+            "observedAt": "2026-08-21",
+            "source": "membership-agreement",
+            "method": "captured-public-membership-agreement",
+            "rawLabel": "Single Month Pass: Sign-up Fee: None Cost: $135.95 per month Description: This pass allows for one-month access to all facility and services of the club Castro.",
+            "contentHash": "efaf7bbf007c4a4082471541e9cb022e3336b8229e24667148280701ff40537a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "single-month-pass",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "day-pass",
+          "name": "One-Day Pass",
+          "amount": 34.95
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 116.95,
+        "dayPassPrice": 34.95,
+        "selectedPlanId": "web-e4d790e4a639c2:plan:recurring-four-week",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 1,
+        "dropInOfferCount": 1,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "web-e71c82ac2eb475",
       "gymName": "Equinox Beale Street",
       "canonicalAddress": "320 mission st",
@@ -30094,6 +30707,21 @@
       "catalogCompleteness": {
         "plans": "complete",
         "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "osm-node-12152934880",
+      "gymName": "LuxFit SF Mission Rock",
+      "sourceUrls": [
+        "https://www.luxfitsf.com/locations/mission-rock"
+      ],
+      "planOfferCount": 4,
+      "dropInOfferCount": 2,
+      "costContextOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
       },
       "status": "unchanged-approved"
     },
@@ -31442,76 +32070,6 @@
           "kind": null,
           "rawLabel": "template our summer promos! • Your first training session complimentary on us! • Open Gym membership sale at $100/month",
           "sourceUrl": "https://www.luxfitsf.com/product/membership",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 40.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": ", or go unlimited for $275/month. Both options include unlimited Core Access. Options: • Single class: $40",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 50.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "lso offer two-on-one (buddy) training and small group training options. Additional fee: Core Access for just $50/month",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 225.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": ". Both options include unlimited Core Access. Options: • Single class: $40 • 10 classes: $300 • 3x/week: $225/month",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 225.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "S $ 225.00 USDper month Get energized with our dynamic community classes! Choose from 3 classes per week for $225/month",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 275.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": ", or go unlimited for $275/month",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 275.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "• Unlimited: $275/month",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 420.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "es. Options: • Single 50 min stretch: $115 • 5 pack x 50 min stretch: $550 • 4 x 50 min stretch membership: $420/month",
-          "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
           "method": "visible-text-candidate",
           "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
         }
@@ -36103,6 +36661,21 @@
       ]
     },
     {
+      "gymId": "web-164572c938e7e3",
+      "observations": [
+        {
+          "amount": 38.0,
+          "low": null,
+          "high": null,
+          "kind": null,
+          "rawLabel": "re class Pure Barre San Francisco | Noe Valley Free Barre Class View Schedule X X Enjoy A Single Class for $38",
+          "sourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+          "method": "visible-text-candidate",
+          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
+        }
+      ]
+    },
+    {
       "gymId": "web-396cf2ddf3bead",
       "observations": [
         {
@@ -36387,6 +36960,21 @@
           "kind": null,
           "rawLabel": "h fitness classes for every goal. CLASS SCHEDULE Reserve with 24GO® App ‹ › ‹ › MEMBERSHIP PRICING Monthly $10 OFF* Platinum as low as 49.99 per month",
           "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport#club-pricing",
+          "method": "visible-text-candidate",
+          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
+        }
+      ]
+    },
+    {
+      "gymId": "web-5f77b574935a5e",
+      "observations": [
+        {
+          "amount": 30.0,
+          "low": null,
+          "high": null,
+          "kind": null,
+          "rawLabel": "block-content-flex: 0; } About this Class 📅 Friday, June 26th | 12:00 - 1:00 PM Regular Drop-In: $30",
+          "sourceUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
           "method": "visible-text-candidate",
           "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
         }
@@ -37808,6 +38396,21 @@
       ]
     },
     {
+      "gymId": "web-aad2d32fab6264",
+      "observations": [
+        {
+          "amount": 30.0,
+          "low": null,
+          "high": null,
+          "kind": null,
+          "rawLabel": "2026 | Drop-in | $30",
+          "sourceUrl": "https://momence.com/Purusha-/membership/Purusha-Drop-in%2C-In-Person/306317",
+          "method": "visible-text-candidate",
+          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
+        }
+      ]
+    },
+    {
       "gymId": "web-abd8e24f4af4d8",
       "observations": [
         {
@@ -38846,56 +39449,6 @@
           "high": null,
           "kind": null,
           "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 Buy Day Pass",
-          "sourceUrl": "https://castro-fitness.com/memberships/",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 34.95,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 BUY DAY PASS",
-          "sourceUrl": "https://castro-fitness.com/",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 5.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "ed by the Gym. Membership can be frozen for a maximum of three (3) months. During the freeze period, a fee of $5 will be charged monthly",
-          "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 34.95,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "s access to all facility and services of the club “Castro” on a recurring 4-week basis. 1 Day Pass: Sign-up Fee: None Cost: $34.95",
-          "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 135.95,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "one-week access to all facility and services of the club “Castro”. Single Month Pass: Sign-up Fee: None Cost: $135.95 per month",
-          "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 34.95,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 BUY DAY PASS",
           "sourceUrl": "https://castro-fitness.com/memberships/",
           "method": "visible-text-candidate",
           "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."

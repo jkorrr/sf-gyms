@@ -44,7 +44,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v27"
+PARSER_VERSION = "selected-plan-catalog-v28"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -1624,11 +1624,13 @@ def embedded_operator_candidates(html: str, source_url: str) -> list[dict[str, A
 
 
 CARD_PLAN_SEMANTIC_RE = re.compile(
-    r"\b(?:membership|pass|class pack|drop[ -]?in|unlimited|classes? monthly)\b",
+    r"\b(?:membership|pass|class pack|drop[ -]?in|unlimited|classes? monthly|"
+    r"core access|facility access|gym access|full access|all access)\b",
     re.IGNORECASE,
 )
 CARD_MONTHLY_PRICE_RE = re.compile(
-    r"\$(?P<amount>\d{1,4}(?:\.\d{1,2})?)\s*(?:/\s*(?:mo|month)|per\s+month)\b",
+    r"\$\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?)\s*(?:USD\s*)?"
+    r"(?:/\s*(?:mo|month)|per\s+month)\b",
     re.IGNORECASE,
 )
 CARD_DURATION_RE = re.compile(
@@ -1743,6 +1745,12 @@ def labeled_plan_card_candidates(
         recurring = CARD_MONTHLY_PRICE_RE.search(card)
         promotion = bool(PROMOTION_RE.search(card))
         if recurring:
+            component_prefix = card[max(0, recurring.start() - 120):recurring.start()]
+            if (
+                re.search(r"\b(?:add[ -]?on|additional fee)\b", component_prefix, re.IGNORECASE)
+                and not re.search(r"\bno additional fee", component_prefix, re.IGNORECASE)
+            ):
+                continue
             amount = float(recurring.group("amount"))
             name = card_plan_name(card[:recurring.start()])
             if not name or len(name.split()) > 12:
@@ -1835,6 +1843,11 @@ WORDPRESS_CLASS_BOX_RE = re.compile(
     re.IGNORECASE,
 )
 
+WEBFLOW_SHOP_BLOCK_RE = re.compile(
+    r"<(?:div|article|section)\b[^>]*class=[\"'][^\"']*\bblock-shop\b[^\"']*[\"'][^>]*>",
+    re.IGNORECASE,
+)
+
 
 def html_fragment_text(fragment: str) -> str:
     parser = PageParser()
@@ -1843,6 +1856,25 @@ def html_fragment_text(fragment: str) -> str:
     except Exception:
         return ""
     return re.sub(r"\s+", " ", " ".join(parser.visible)).strip()
+
+
+def webflow_shop_cards(html: str) -> list[str]:
+    """Return visible text from Webflow commerce/rate cards as bounded units.
+
+    Webflow operator sites commonly render a plan title, price, cadence, and
+    description inside repeated ``block-shop`` containers.  Preserving those
+    boundaries prevents a nearby add-on price from being attached to the
+    selected plan and works without relying on host-specific product names.
+    """
+
+    markers = list(WEBFLOW_SHOP_BLOCK_RE.finditer(html))
+    cards: list[str] = []
+    for index, marker in enumerate(markers):
+        end = markers[index + 1].start() if index + 1 < len(markers) else min(len(html), marker.start() + 8000)
+        card = html_fragment_text(html[marker.start():end])
+        if card:
+            cards.append(card[:2000])
+    return cards
 
 
 def wordpress_class_box_candidates(html: str, source_url: str) -> list[dict[str, Any]]:
@@ -2275,6 +2307,122 @@ def allowance_monthly_card_candidates(visible_text: str, source_url: str) -> lis
     return candidates
 
 
+MEMBERSHIP_AGREEMENT_PLAN_RE = re.compile(
+    r"(?P<name>"
+    r"(?:Recurring|Ongoing|Standard|Monthly)[A-Za-z0-9 ()/&'’\-]{0,70}(?:Membership|Plan)"
+    r"(?:\s*\([^)]{0,50}\))?"
+    r"|(?:1|One|Single)\s+(?:Day|Week|Month)\s+Pass"
+    r")\s*:?\s*Sign-up Fee\s*:",
+    re.IGNORECASE,
+)
+
+
+def membership_agreement_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct labeled plans from a public membership-agreement rate table.
+
+    Some independent gyms publish their only complete catalog inside a legal
+    agreement rather than a pricing page.  This adapter activates only when
+    the table exposes all four structural labels and then bounds every amount
+    to a named plan.  Operational clauses such as freeze or late fees are
+    deliberately outside those plan boundaries and cannot become dues.
+    """
+
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    required = ("membership types", "sign-up fee", "cost", "description")
+    if not all(label in value.casefold() for label in required):
+        return []
+    markers = list(MEMBERSHIP_AGREEMENT_PLAN_RE.finditer(value))
+    candidates: list[dict[str, Any]] = []
+    for index, marker in enumerate(markers):
+        end = markers[index + 1].start() if index + 1 < len(markers) else len(value)
+        segment = value[marker.start():end]
+        cost = re.search(
+            r"\bCost\s*:\s*\$\s*(?P<amount>\d{1,5}(?:\.\d{1,2})?)"
+            r"(?P<tail>.{0,80})",
+            segment,
+            re.IGNORECASE,
+        )
+        if not cost:
+            continue
+        amount = float(cost.group("amount"))
+        if amount <= 0 or amount > 20_000:
+            continue
+        raw_name = re.sub(r"\s+", " ", marker.group("name")).strip(" -–—:;")
+        lowered_name = raw_name.casefold()
+        fee_match = re.search(
+            r"Sign-up Fee\s*:\s*(?P<fee>None|\$\s*\d{1,5}(?:\.\d{1,2})?)",
+            segment,
+            re.IGNORECASE,
+        )
+        fees: list[dict[str, Any]] = []
+        if fee_match and fee_match.group("fee").casefold() != "none":
+            fee_amount = float(fee_match.group("fee").replace("$", "").strip())
+            fees.append({
+                "type": "enrollment",
+                "amount": fee_amount,
+                "currency": "USD",
+                "cadence": "one-time",
+                "mandatory": True,
+            })
+        description_match = re.search(
+            r"\bDescription\s*:\s*(?P<description>.{1,500})",
+            segment,
+            re.IGNORECASE,
+        )
+        description = normalized_label(description_match.group("description")) if description_match else ""
+        is_day_pass = bool(re.search(r"\b(?:1|one)\s+day\s+pass\b", lowered_name))
+        is_pass = "pass" in lowered_name
+        four_week = bool(re.search(r"\b4[ -]?week\b|\bfour[ -]?week\b", segment, re.IGNORECASE))
+        recurring = not is_pass and bool(
+            re.search(r"\b(?:recurring|ongoing|monthly|membership)\b", lowered_name)
+            and re.search(r"\b(?:recurring|no long[ -]?term commitment|per (?:month|4[ -]?week period))\b", segment, re.IGNORECASE)
+        )
+        if is_day_pass:
+            product_id = "day-pass"
+            name = "One-Day Pass"
+            product_type = "drop-in"
+            cadence = "visit"
+            commitment_type = "none"
+            allowance = {"count": 1, "period": "visit", "unlimited": False}
+        elif is_pass:
+            product_id = re.sub(r"[^a-z0-9]+", "-", lowered_name).strip("-")
+            name = raw_name
+            product_type = "class-pack"
+            cadence = "one-time"
+            commitment_type = "none"
+            allowance = None
+        elif recurring:
+            product_id = "recurring-four-week" if four_week else re.sub(r"[^a-z0-9]+", "-", lowered_name).strip("-")
+            name = "Recurring Four-Week Membership" if four_week else raw_name
+            product_type = "monthly"
+            cadence = "4 weeks" if four_week else "month"
+            commitment_type = (
+                "month-to-month"
+                if re.search(r"\bno long[ -]?term commitment\b|\bcancel(?:lation)? fee\s*:\s*none\b", segment, re.IGNORECASE)
+                else "unknown"
+            )
+            allowance = None
+        else:
+            continue
+        candidate = operator_visible_candidate(
+            source_url,
+            "membership-agreement",
+            product_id,
+            name,
+            amount,
+            product_type=product_type,
+            cadence=cadence,
+            access_scope=description or "Access described by the named membership-agreement plan",
+            allowance=allowance,
+            commitment_type=commitment_type,
+            fees=fees,
+            raw_label=segment[:500],
+        )
+        candidate["sourceProductIdAuthority"] = "synthetic-label"
+        candidates.append(candidate)
+    return candidates
+
+
 def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     specialized = (
         crunch_visible_candidates(visible_text, source_url)
@@ -2284,6 +2432,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or ymca_sf_visible_candidates(visible_text, source_url)
         or orangetheory_visible_candidates(visible_text, source_url)
         or approach_visible_candidates(visible_text, source_url)
+        or membership_agreement_candidates(visible_text, source_url)
         or independent_operator_visible_candidates(visible_text, source_url)
         or perform_for_golf_plan_descriptors(visible_text, source_url)
         or solidcore_visible_candidates(visible_text, source_url)
@@ -2292,8 +2441,14 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
     candidates: list[dict[str, Any]] = list(specialized)
     candidates.extend(visible_cost_context_candidates(visible_text, source_url))
     requires_complete_card_adapter = hostname(source_url).endswith("orangetheory.com")
-    patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if specialized or requires_complete_card_adapter else (
-        ("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)
+    complete_visible_catalog = any(
+        text(candidate.get("adapter")) == "membership-agreement"
+        for candidate in specialized
+    )
+    patterns = () if complete_visible_catalog else (
+        (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE))
+        if specialized or requires_complete_card_adapter
+        else (("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE))
     )
     for kind, pattern in patterns:
         for match in pattern.finditer(visible_text):
@@ -4516,6 +4671,11 @@ def parse_page(
         duda_plan_cards(html),
         source_url,
         "duda-plan-card",
+    ))
+    bounded_candidates.extend(labeled_plan_card_candidates(
+        webflow_shop_cards(html),
+        source_url,
+        "webflow-shop-card",
     ))
     bounded_candidates.extend(wordpress_class_box_candidates(html, source_url))
     bounded_candidates.extend(zen_planner_html_candidates(html, source_url))

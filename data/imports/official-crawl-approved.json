@@ -7999,7 +7999,7 @@
           "accessScope": "Ordinary gym access at the named location",
           "amount": 107.95,
           "billingInterval": "4 weeks",
-          "commitmentType": "unknown",
+          "commitmentType": "month-to-month",
           "fees": [
             {
               "type": "enrollment",

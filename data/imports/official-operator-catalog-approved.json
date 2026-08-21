@@ -1475,7 +1475,7 @@
     {
       "id": "live-fit-mission-wellness-club-catalog-2026-08-21",
       "reviewStatus": "approved",
-      "operatorId": "livefitgym.com",
+      "operatorId": "live-fit",
       "gymIds": ["osm-node-968356991"],
       "sharedFields": {
         "monthlyPrice": 137,

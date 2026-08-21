@@ -4752,7 +4752,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/category/membership",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4781,7 +4782,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/category/membership",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4814,7 +4816,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4843,7 +4846,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4875,7 +4879,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4907,7 +4912,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4940,7 +4946,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -4973,7 +4980,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -5002,7 +5010,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -5031,7 +5040,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/product/membership",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12251148868",
@@ -8482,7 +8492,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://sunsetgym.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://sunsetgym.com/memberships/"
     },
     {
       "gymId": "osm-node-368174394",
@@ -10415,7 +10426,8 @@
       "method": "visible-text-candidate",
       "adapter": "operator-site",
       "sourceUrl": "https://www.benchmarkclimbing.com/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.benchmarkclimbing.com/"
     },
     {
       "gymId": "osm-node-4057014702",
@@ -19126,6 +19138,1052 @@
       "catalogSourceUrl": "https://livefitgym.com/signup/"
     },
     {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+      "sourceProductAliases": [
+        "premier-massage-gym"
+      ],
+      "name": "Premier Massage + Gym",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+      "sourceProductAliases": [
+        "premier-massage-gym"
+      ],
+      "name": "Premier Massage + Gym",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+      "sourceProductAliases": [
+        "premier-massage-gym"
+      ],
+      "name": "Premier Massage + Gym",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+      "sourceProductAliases": [
+        "premier"
+      ],
+      "name": "Premier 6 Month Term",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier 6 Month Term $137/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+      "sourceProductAliases": [
+        "premier"
+      ],
+      "name": "Premier 6 Month Term",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier 6 Month Term $137/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+      "sourceProductAliases": [
+        "premier"
+      ],
+      "name": "Premier 6 Month Term",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier 6 Month Term $137/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32323",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+      "sourceProductAliases": [
+        "premier"
+      ],
+      "name": "Premier 6 Month Term",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier 6 Month Term $137/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "78efafa87260496cbc842607918d10ce",
+      "sourceProductAliases": [
+        "basic"
+      ],
+      "name": "Basic 6 Month Term",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic 6 Month Term $117/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "78efafa87260496cbc842607918d10ce",
+      "sourceProductAliases": [
+        "basic"
+      ],
+      "name": "Basic 6 Month Term",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic 6 Month Term $117/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "78efafa87260496cbc842607918d10ce",
+      "sourceProductAliases": [
+        "basic"
+      ],
+      "name": "Basic 6 Month Term",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic 6 Month Term $117/month; Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+      "sourceProductAliases": [
+        "basic-wellness"
+      ],
+      "name": "Basic Wellness",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+      "sourceProductAliases": [
+        "basic-wellness"
+      ],
+      "name": "Basic Wellness",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+      "sourceProductAliases": [
+        "basic-wellness"
+      ],
+      "name": "Basic Wellness",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+      "sourceProductAliases": [
+        "basic-massage-gym"
+      ],
+      "name": "Basic Massage + Gym",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+      "sourceProductAliases": [
+        "basic-massage-gym"
+      ],
+      "name": "Basic Massage + Gym",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+      "sourceProductAliases": [
+        "basic-massage-gym"
+      ],
+      "name": "Basic Massage + Gym",
+      "amount": 117.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+      "sourceProductAliases": [
+        "premier-wellness"
+      ],
+      "name": "Premier Wellness",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+      "sourceProductAliases": [
+        "premier-wellness"
+      ],
+      "name": "Premier Wellness",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-968356991",
+      "gymName": "LiveFitGym Wellness Club",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+      "sourceProductAliases": [
+        "premier-wellness"
+      ],
+      "name": "Premier Wellness",
+      "amount": 137.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6.0,
+        "rawLabel": "Installment"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 99.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "annual",
+          "name": "Annual Fee",
+          "amount": 49.0,
+          "currency": "USD",
+          "cadence": "year",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
       "gymId": "osm-node-9718392241",
       "gymName": "Custom Fit Market Street",
       "capturedAt": "2026-08-21",
@@ -23249,7 +24307,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a"
     },
     {
       "gymId": "osm-way-257161411",
@@ -23278,7 +24337,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a"
     },
     {
       "gymId": "osm-way-263806345",
@@ -24272,7 +25332,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24301,7 +25362,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24330,7 +25392,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24359,7 +25422,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24388,7 +25452,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24417,7 +25482,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24446,7 +25512,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-288325533",
@@ -24475,7 +25542,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://swimlpb.com/tuition/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.swimlpb.com/swim-classes/tuition"
     },
     {
       "gymId": "osm-way-34313547",
@@ -44482,7 +45550,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/"
     },
     {
       "gymId": "web-e4d790e4a639c2",
@@ -44511,7 +45580,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
     },
     {
       "gymId": "web-e4d790e4a639c2",
@@ -44540,7 +45610,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
     },
     {
       "gymId": "web-e4d790e4a639c2",
@@ -44569,7 +45640,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/membership-agreement/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
     },
     {
       "gymId": "web-e4d790e4a639c2",
@@ -44598,7 +45670,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/"
     },
     {
       "gymId": "web-e71c82ac2eb475",

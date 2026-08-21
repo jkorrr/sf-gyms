@@ -476,12 +476,7 @@
           "productType": "membership",
           "accessScope": "National access with premium amenities and a buddy pass",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": 12.0,
-            "period": "month",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 60.99,
             "amountLow": null,
@@ -1202,12 +1197,7 @@
           "productType": "membership",
           "accessScope": "National access with premium amenities and a buddy pass",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": 12.0,
-            "period": "month",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 56.99,
             "amountLow": null,
@@ -1927,12 +1917,7 @@
           "productType": "membership",
           "accessScope": "National access with premium amenities and a buddy pass",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": 12.0,
-            "period": "month",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 56.99,
             "amountLow": null,
@@ -2652,12 +2637,7 @@
           "productType": "membership",
           "accessScope": "National access with premium amenities and a buddy pass",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": 12.0,
-            "period": "month",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 56.99,
             "amountLow": null,
@@ -16900,7 +16880,7 @@
           "accessScope": "Ordinary gym access at the named location",
           "amount": 107.95,
           "billingInterval": "4 weeks",
-          "commitmentType": "unknown",
+          "commitmentType": "month-to-month",
           "fees": [
             {
               "type": "enrollment",
@@ -16936,12 +16916,7 @@
           "productType": "membership",
           "accessScope": "Ordinary gym access at the named location",
           "scopeType": "single-location",
-          "classAllowance": {
-            "count": 17.33,
-            "period": "month",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 107.95,
             "amountLow": null,
@@ -16953,7 +16928,7 @@
             "normalizationFormula": "normalized from 107.95 per 4 weeks"
           },
           "commitment": {
-            "type": "unknown",
+            "type": "month-to-month",
             "minimumMonths": null,
             "minimumDays": null,
             "rawLabel": ""
@@ -16993,7 +16968,7 @@
             "conflictFlags": []
           },
           "selected": true,
-          "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
+          "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use."
         }
       ],
       "dropIns": [
@@ -17055,7 +17030,7 @@
         }
       },
       "costContext": [],
-      "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term.",
+      "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use.",
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
@@ -30093,12 +30068,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym access and group classes across Custom Fit facilities",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 240.0,
             "amountLow": null,
@@ -30159,12 +30129,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym access, group classes, recovery, DEXA, and VO2 Max testing across Custom Fit facilities",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 370.0,
             "amountLow": null,
@@ -30364,12 +30329,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym access and group classes across Custom Fit facilities",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 240.0,
             "amountLow": null,
@@ -30430,12 +30390,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym access, group classes, recovery, DEXA, and VO2 Max testing across Custom Fit facilities",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 370.0,
             "amountLow": null,
@@ -30985,12 +30940,7 @@
           "productType": "membership",
           "accessScope": "Unlimited reciprocal access to all Touchstone gyms plus fitness and yoga",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 112.0,
             "amountLow": null,
@@ -31177,12 +31127,7 @@
           "productType": "membership",
           "accessScope": "Thirty days of Touchstone gym access",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": 1.0,
-            "period": "purchase",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 130.0,
             "amountLow": null,
@@ -36476,12 +36421,7 @@
           "productType": "membership",
           "accessScope": "Unlimited recurring gym access",
           "scopeType": "single-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 290.0,
             "amountLow": null,
@@ -42687,12 +42627,7 @@
           "productType": "class-pack",
           "accessScope": "Six prepaid months of anytime gym access",
           "scopeType": "single-location",
-          "classAllowance": {
-            "count": 6.0,
-            "period": "purchase",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 729.0,
             "amountLow": null,
@@ -56182,9 +56117,9 @@
     {
       "id": "osm-node-9659815458",
       "name": "Live Fit Gym Hayes Valley",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Hayes Valley",
       "address": "301 Fell Street, San Francisco, CA 94102",
-      "gymType": "Fitness centre",
+      "gymType": "Fitness and wellness club",
       "latitude": 37.775777,
       "longitude": -122.422934,
       "monthlyPrice": 117.0,
@@ -56197,35 +56132,27 @@
         "wellness services",
         "group classes"
       ],
-      "description": "Live Fit Gym Hayes Valley is a full-service fitness gym in San Francisco. The selected official recurring plan is $117.00 per month. Listed features include fitness equipment, personal training, wellness services.",
+      "description": "Live Fit Gym Hayes Valley is a full-service fitness gym in Hayes Valley. The selected official recurring plan is $117.00 per month. Listed features include fitness equipment, personal training, wellness services.",
       "hours": "Member scan-in 5:00am-11:00pm daily; team hours vary",
       "websiteUrl": "https://livefitgym.com/",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/9659815458",
       "sourceUrl": "https://www.openstreetmap.org/node/9659815458",
       "importedAt": "2026-08-17T00:39:44Z",
-      "sourceAliases": [
-        {
-          "id": "web-732bcfc12da917",
-          "name": "Live Fit Gym Hayes Valley",
-          "address": "301 Fell Street, San Francisco, CA 94102",
-          "sourceUrl": "https://livefitgym.com/locations/"
-        }
-      ],
-      "annualFee": null,
-      "enrollmentFee": null,
-      "initiationFee": null,
-      "processingFee": null,
-      "billingIntervalPrice": null,
       "priceSource": "Live Fit Gym official location-specific signup cards",
       "priceSourceUrl": "https://livefitgym.com/signup/",
       "priceNote": "Basic is $117/month with access to Cole Valley, Nob Hill, Polk Street, and Hayes Valley plus unlimited classes. Massage + Gym is $207 and Wellness is $357. All public memberships require six months. The operator states that enrollment and annual-dues fees apply but does not disclose their amounts, so no fee amount is inferred.",
       "priceObservedAt": "2026-08-21",
+      "annualFee": null,
+      "enrollmentFee": null,
+      "initiationFee": null,
+      "processingFee": null,
       "officialUrl": "https://livefitgym.com/",
       "operatorLocationId": "",
       "canonicalLocationId": "osm-node-9659815458",
       "operatorId": "live-fit",
       "canonicalAddress": "301 fell st",
+      "sourceAliases": [],
       "publicationStatus": "publish",
       "planOffers": [
         {
@@ -57871,9 +57798,9 @@
     {
       "id": "osm-node-968356991",
       "name": "LiveFitGym Wellness Club",
-      "neighborhood": "San Francisco",
+      "neighborhood": "Mission",
       "address": "780 Valencia Street, San Francisco, CA 94110",
-      "gymType": "Fitness centre",
+      "gymType": "Fitness and wellness club",
       "latitude": 37.7605228,
       "longitude": -122.4216455,
       "monthlyPrice": 137.0,
@@ -57886,35 +57813,27 @@
         "wellness services",
         "group classes"
       ],
-      "description": "LiveFitGym Wellness Club is a independent fitness gym in San Francisco. The selected official recurring plan is $137.00 per month. Listed features include fitness equipment, personal training, wellness services.",
+      "description": "LiveFitGym Wellness Club is a independent fitness gym in Mission. The selected official recurring plan is $137.00 per month. Listed features include fitness equipment, personal training, wellness services.",
       "hours": "Mo-Su,PH 05:00-23:00",
       "websiteUrl": "https://www.livefitgym.com",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/968356991",
       "sourceUrl": "https://www.openstreetmap.org/node/968356991",
       "importedAt": "2026-08-17T00:39:44Z",
-      "sourceAliases": [
-        {
-          "id": "web-d34b520e613785",
-          "name": "Live Fit Gym Mission",
-          "address": "780 Valencia Street, San Francisco, CA 94110",
-          "sourceUrl": "https://livefitgym.com/locations/"
-        }
-      ],
-      "annualFee": null,
-      "enrollmentFee": null,
-      "initiationFee": null,
-      "processingFee": null,
-      "billingIntervalPrice": null,
       "priceSource": "Live Fit Gym official Mission signup cards",
       "priceSourceUrl": "https://livefitgym.com/signup/",
       "priceNote": "The 780 Valencia Mission location uses the Premier catalog: $137/month for all eight Live Fit locations and unlimited classes, $227 for Massage + Gym, or $377 for Wellness. All require six months. Enrollment and annual-dues fees are stated but their amounts are not public, so none is inferred.",
       "priceObservedAt": "2026-08-21",
+      "annualFee": null,
+      "enrollmentFee": null,
+      "initiationFee": null,
+      "processingFee": null,
       "officialUrl": "https://www.livefitgym.com",
       "operatorLocationId": "",
       "canonicalLocationId": "osm-node-968356991",
-      "operatorId": "livefitgym.com",
+      "operatorId": "live-fit",
       "canonicalAddress": "780 valencia st",
+      "sourceAliases": [],
       "publicationStatus": "publish",
       "planOffers": [
         {
@@ -57975,7 +57894,7 @@
       "deals": [],
       "entityKind": "gym",
       "modality": "independent-gym",
-      "operatorKey": "livefitgym.com",
+      "operatorKey": "live-fit",
       "accessModel": "membership",
       "selectionRuleVersion": "neutral-basic-v2",
       "plans": [
@@ -59129,6 +59048,152 @@
       }
     },
     {
+      "id": "web-5f77b574935a5e",
+      "name": "Love Story Yoga - Valencia",
+      "neighborhood": "Mission",
+      "address": "473 Valencia Street, San Francisco, CA 94103",
+      "gymType": "Yoga studio",
+      "latitude": 37.7653845,
+      "longitude": -122.4216342,
+      "monthlyPrice": null,
+      "dayPassPrice": 30.0,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "hot yoga sculpt",
+        "yoga",
+        "member packages"
+      ],
+      "description": "Love Story Yoga - Valencia is a yoga fitness studio in Mission. The selected official ordinary visit or class price is $30.00. Listed features include hot yoga sculpt, yoga, member packages.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "sourceName": "Love Story Yoga",
+      "sourceId": "web-research/web-5f77b574935a5e",
+      "sourceUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "importedAt": "2026-08-21T00:00:00Z",
+      "priceSource": "Love Story Yoga",
+      "priceSourceUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "priceNote": "Official workshop/class page for the Valencia studio lists regular drop-in at $30 and says it is included for members with an active package. A recurring membership amount was not visible on the reviewed public page.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "enrollmentFee": null,
+      "initiationFee": null,
+      "processingFee": null,
+      "billingIntervalPrice": null,
+      "officialUrl": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+      "operatorLocationId": "",
+      "canonicalLocationId": "web-5f77b574935a5e",
+      "operatorId": "lovestoryyoga.com",
+      "canonicalAddress": "473 valencia st",
+      "sourceAliases": [],
+      "publicationStatus": "publish",
+      "priceReports": [],
+      "reportedMonthly": null,
+      "operatorConfirmedMonthly": null,
+      "deals": [],
+      "entityKind": "studio",
+      "modality": "yoga",
+      "operatorKey": "love-story-yoga",
+      "accessModel": "class-membership",
+      "selectionRuleVersion": "neutral-basic-v2",
+      "plans": [],
+      "dropIns": [
+        {
+          "id": "web-5f77b574935a5e:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 30.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://lovestoryyoga.com/workshops/pride-hotyogasculpt",
+            "observedAt": "2026-08-16",
+            "source": "Love Story Yoga",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "1170c0b638ca9454c9039ec280d5446be79520bd329fafaa76c6640c8c691bcb",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the ordinary unrestricted single visit or class."
+        }
+      ],
+      "selectedPlanId": null,
+      "selectedDropInId": "web-5f77b574935a5e:drop-in:0",
+      "typicalPlanId": null,
+      "highestAccessPlanId": null,
+      "bestValuePlanId": null,
+      "planViewStatus": {
+        "typical": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        },
+        "highestAccess": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        },
+        "bestValue": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        }
+      },
+      "costContext": [],
+      "selectionReason": "",
+      "planValidationErrors": [],
+      "catalogStatus": {
+        "plans": {
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
+        },
+        "dropIns": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+        }
+      },
+      "activationFee": null,
+      "estimatedMonthly": null,
+      "pricingBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "pricingStatus": "pay-per-visit",
+      "monthlyPriceBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "dayPassPriceBlocker": "",
+      "metadataStatus": {
+        "officialUrl": {
+          "status": "listed",
+          "reason": ""
+        },
+        "hours": {
+          "status": "access-schedule",
+          "reason": "The operator publishes appointment, reservation, class, or program access rather than fixed walk-in hours."
+        },
+        "amenities": {
+          "status": "listed",
+          "reason": ""
+        },
+        "operatorLocationId": {
+          "status": "not-published",
+          "reason": "The operator did not expose a stable public location identifier."
+        }
+      }
+    },
+    {
       "id": "osm-node-12152934880",
       "name": "LuxFit SF Mission Rock",
       "neighborhood": "San Francisco",
@@ -59265,12 +59330,7 @@
           "productType": "membership",
           "accessScope": "Unlimited open-gym access at all LuxFit locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 165.0,
             "amountLow": null,
@@ -61440,12 +61500,7 @@
           "productType": "membership",
           "accessScope": "Unlimited reciprocal access to all Touchstone gyms plus fitness and yoga",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 112.0,
             "amountLow": null,
@@ -61632,12 +61687,7 @@
           "productType": "membership",
           "accessScope": "Thirty days of Touchstone gym access",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": 1.0,
-            "period": "purchase",
-            "unlimited": false,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 130.0,
             "amountLow": null,
@@ -65450,12 +65500,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 125.0,
             "amountLow": null,
@@ -65508,12 +65553,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits for two people at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 200.0,
             "amountLow": null,
@@ -65568,12 +65608,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 1250.0,
             "amountLow": null,
@@ -65626,12 +65661,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits for two people at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 2000.0,
             "amountLow": null,
@@ -65938,12 +65968,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 125.0,
             "amountLow": null,
@@ -65996,12 +66021,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits for two people at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 200.0,
             "amountLow": null,
@@ -66056,12 +66076,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 1250.0,
             "amountLow": null,
@@ -66114,12 +66129,7 @@
           "productType": "membership",
           "accessScope": "Unlimited gym visits for two people at both Muscle Beach locations",
           "scopeType": "multi-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 2000.0,
             "amountLow": null,
@@ -67448,9 +67458,7 @@
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -68812,9 +68820,7 @@
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -74221,12 +74227,7 @@
           "productType": "membership",
           "accessScope": "Future unlimited access to the Kearny home club; temporary area-club access before opening",
           "scopeType": "single-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 15.0,
             "amountLow": null,
@@ -74528,12 +74529,7 @@
           "productType": "membership",
           "accessScope": "Unlimited access to the Lakeshore home club",
           "scopeType": "single-location",
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true,
-            "disclosed": true
-          },
+          "classAllowance": null,
           "billing": {
             "amount": 15.0,
             "amountLow": null,
@@ -75564,6 +75560,357 @@
         "operatorLocationId": {
           "status": "listed",
           "reason": ""
+        }
+      }
+    },
+    {
+      "id": "web-164572c938e7e3",
+      "name": "Pure Barre San Francisco - Noe Valley",
+      "neighborhood": "Noe Valley",
+      "address": "3800 24th Street, San Francisco, CA 94114",
+      "gymType": "Barre studio",
+      "latitude": 37.751785,
+      "longitude": -122.4277279,
+      "monthlyPrice": null,
+      "dayPassPrice": 38.0,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "barre",
+        "Pure Barre Classic",
+        "Align",
+        "Empower",
+        "Define"
+      ],
+      "description": "Pure Barre San Francisco - Noe Valley is a Pilates, Lagree, or barre fitness studio in Noe Valley. The selected official ordinary visit or class price is $38.00. Listed features include barre, Pure Barre Classic, Align.",
+      "hours": "Class schedule varies by day",
+      "websiteUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "sourceName": "Pure Barre",
+      "sourceId": "web-research/web-164572c938e7e3",
+      "sourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "importedAt": "2026-08-21T00:00:00Z",
+      "priceSource": "Pure Barre",
+      "priceSourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "priceNote": "Official location page displays 'Enjoy A Single Class for $38'. Pure Barre help pages state membership prices vary by locally owned studio, and this reviewed location page did not expose a recurring membership amount.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "enrollmentFee": null,
+      "initiationFee": null,
+      "processingFee": null,
+      "billingIntervalPrice": null,
+      "officialUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+      "operatorLocationId": "",
+      "canonicalLocationId": "web-164572c938e7e3",
+      "operatorId": "purebarre.com",
+      "canonicalAddress": "3800 24th st",
+      "sourceAliases": [],
+      "publicationStatus": "publish",
+      "priceReports": [],
+      "reportedMonthly": null,
+      "operatorConfirmedMonthly": null,
+      "deals": [],
+      "entityKind": "studio",
+      "modality": "pilates-lagree-barre",
+      "operatorKey": "pure-barre",
+      "accessModel": "class-membership",
+      "selectionRuleVersion": "neutral-basic-v2",
+      "plans": [],
+      "dropIns": [
+        {
+          "id": "web-164572c938e7e3:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 38.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.purebarre.com/location/san-francisco-noe-valley-ca",
+            "observedAt": "2026-08-16",
+            "source": "Pure Barre",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "71768a99691f1b3b040481a87c50218b73ed7d4766128ea813e0e754254a3124",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the ordinary unrestricted single visit or class."
+        }
+      ],
+      "selectedPlanId": null,
+      "selectedDropInId": "web-164572c938e7e3:drop-in:0",
+      "typicalPlanId": null,
+      "highestAccessPlanId": null,
+      "bestValuePlanId": null,
+      "planViewStatus": {
+        "typical": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        },
+        "highestAccess": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        },
+        "bestValue": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        }
+      },
+      "costContext": [],
+      "selectionReason": "",
+      "planValidationErrors": [],
+      "catalogStatus": {
+        "plans": {
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
+        },
+        "dropIns": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+        }
+      },
+      "activationFee": null,
+      "estimatedMonthly": null,
+      "pricingBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "pricingStatus": "pay-per-visit",
+      "monthlyPriceBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "dayPassPriceBlocker": "",
+      "metadataStatus": {
+        "officialUrl": {
+          "status": "listed",
+          "reason": ""
+        },
+        "hours": {
+          "status": "access-schedule",
+          "reason": "The operator publishes appointment, reservation, class, or program access rather than fixed walk-in hours."
+        },
+        "amenities": {
+          "status": "listed",
+          "reason": ""
+        },
+        "operatorLocationId": {
+          "status": "not-published",
+          "reason": "The operator did not expose a stable public location identifier."
+        }
+      }
+    },
+    {
+      "id": "web-aad2d32fab6264",
+      "name": "Purusha Yoga & Pilates",
+      "neighborhood": "Outer Richmond",
+      "address": "3729 Balboa St, San Francisco, CA 94121",
+      "gymType": "Yoga and Pilates studio",
+      "latitude": 37.7754506,
+      "longitude": -122.498881,
+      "monthlyPrice": 149.0,
+      "dayPassPrice": 30.0,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "Hatha; Vinyasa; Yin; restorative; meditation; mat Pilates; Pilates springboard; guest passes; financial-access specials"
+      ],
+      "description": "Purusha Yoga & Pilates is a yoga fitness studio in Outer Richmond. The selected official recurring plan is $149.00 per month. Listed features include Hatha; Vinyasa; Yin; restorative; meditation; mat Pilates; Pilates springboard; guest passes; financial-access specials.",
+      "hours": "Monday-Friday 8am-8pm; Saturday-Sunday 8am-6pm",
+      "websiteUrl": "https://purushayoga.org/",
+      "sourceName": "Purusha Yoga & Pilates official pricing page",
+      "sourceId": "web-research/web-aad2d32fab6264",
+      "sourceUrl": "https://purushayoga.org/",
+      "importedAt": "2026-08-21T00:00:00Z",
+      "priceSource": "Purusha Yoga & Pilates official pricing page",
+      "priceSourceUrl": "https://purushayoga.org/pricing/",
+      "priceNote": "Official unlimited monthly membership is $149/month. Regular class drop-in is $30. New-student and promotional passes are lower and should not be treated as the regular membership rate.",
+      "priceObservedAt": "2026-08-16",
+      "annualFee": null,
+      "enrollmentFee": null,
+      "initiationFee": null,
+      "processingFee": null,
+      "billingIntervalPrice": null,
+      "officialUrl": "https://purushayoga.org/",
+      "operatorLocationId": "",
+      "canonicalLocationId": "web-aad2d32fab6264",
+      "operatorId": "purushayoga.org",
+      "canonicalAddress": "3729 balboa st",
+      "sourceAliases": [],
+      "publicationStatus": "publish",
+      "priceReports": [],
+      "reportedMonthly": null,
+      "operatorConfirmedMonthly": null,
+      "deals": [],
+      "entityKind": "studio",
+      "modality": "yoga",
+      "operatorKey": "purushayoga.org",
+      "accessModel": "class-membership",
+      "selectionRuleVersion": "neutral-basic-v2",
+      "plans": [
+        {
+          "id": "web-aad2d32fab6264:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Recurring class membership",
+          "productType": "class-membership",
+          "accessScope": "Named studio",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": false
+          },
+          "billing": {
+            "amount": 149.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 149.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://purushayoga.org/pricing/",
+            "observedAt": "2026-08-16",
+            "source": "Purusha Yoga & Pilates official pricing page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Official unlimited monthly membership is $149/month. Regular class drop-in is $30. New-student and promotional passes are lower and should not be treated as the regular membership rate.",
+            "contentHash": "3ac5bccecda5c32ff7de6cff7f69db9ad2deac6fc1a3a9114c1d8aef2070df61",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "legacy-reviewed-selected",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month. The source did not publish a commitment term."
+        }
+      ],
+      "dropIns": [
+        {
+          "id": "web-aad2d32fab6264:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 30.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://purushayoga.org/pricing/",
+            "observedAt": "2026-08-16",
+            "source": "Purusha Yoga & Pilates official pricing page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "ccb6f4233f7c5e8d90be9172218d44ef9b2a211c01fec84a0e9b179ea8a050a0",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the ordinary unrestricted single visit or class."
+        }
+      ],
+      "selectedPlanId": "web-aad2d32fab6264:plan:legacy-reviewed-selected",
+      "selectedDropInId": "web-aad2d32fab6264:drop-in:0",
+      "typicalPlanId": null,
+      "highestAccessPlanId": null,
+      "bestValuePlanId": null,
+      "planViewStatus": {
+        "typical": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        },
+        "highestAccess": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        },
+        "bestValue": {
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+        }
+      },
+      "costContext": [],
+      "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month. The source did not publish a commitment term.",
+      "planValidationErrors": [],
+      "catalogStatus": {
+        "plans": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+        },
+        "dropIns": {
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+        }
+      },
+      "activationFee": null,
+      "estimatedMonthly": null,
+      "pricingBlocker": "",
+      "pricingStatus": "verified",
+      "monthlyPriceBlocker": "",
+      "dayPassPriceBlocker": "",
+      "metadataStatus": {
+        "officialUrl": {
+          "status": "listed",
+          "reason": ""
+        },
+        "hours": {
+          "status": "exact-hours",
+          "reason": ""
+        },
+        "amenities": {
+          "status": "listed",
+          "reason": ""
+        },
+        "operatorLocationId": {
+          "status": "not-published",
+          "reason": "The operator did not expose a stable public location identifier."
         }
       }
     },

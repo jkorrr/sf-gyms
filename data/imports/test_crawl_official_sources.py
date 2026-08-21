@@ -2019,6 +2019,53 @@ CLUB INFO"""
         self.assertFalse(any(item.get("amount") == 133 for item in offers))
         self.assertFalse(any(item.get("method") == "visible-text-candidate" for item in offers))
 
+    def test_webflow_shop_cards_recover_named_access_plan_without_addon_leakage(self) -> None:
+        html = """
+          <div class="block-shop">
+            <h3>CORE ACCESS</h3><div>$ 165.00 USDper month</div>
+            <p>Full solo facility and equipment access at all locations.</p>
+          </div>
+          <div class="block-shop">
+            <h3>PERSONAL TRAINING</h3><div>$125 per session</div>
+            <p>Additional Fee: Core Access $50/month</p>
+          </div>
+        """
+        offers, _stores, _digest = crawler.parse_page({
+            "url": "https://operator.example/locations/mission-rock",
+            "contentType": "text/html",
+            "html": html,
+        })
+        core = next(item for item in offers if item.get("sourceProductId") == "core-access")
+        self.assertEqual((core["name"], core["amount"], core["cadence"]), ("CORE ACCESS", 165, "month"))
+        self.assertEqual(core["method"], "visible-webflow-shop-card-catalog")
+        self.assertFalse(any(item.get("amount") == 50 for item in offers))
+        self.assertFalse(any(item.get("method") == "visible-text-candidate" for item in offers))
+
+    def test_membership_agreement_links_plan_fee_and_excludes_freeze_clause(self) -> None:
+        visible = """
+          Membership Types: Recurring Term Membership (4-Week Plan):
+          Sign-up Fee: $49.99 Cancellation Fee: None Cost: $107.95 per 4-week period
+          Description: Full access to all facility and services on a recurring 4-week basis.
+          1 Day Pass: Sign-up Fee: None Cost: $34.95
+          Description: One-day access to all facility and services.
+          1 Week Pass: Sign-up Fee: None Cost: $69.95
+          Description: One-week access to all facility and services.
+          Single Month Pass: Sign-up Fee: None Cost: $135.95 per month
+          Description: One month of facility access.
+          Price Changes and Freeze Policy: a fee of $5 will be charged monthly during a freeze.
+        """
+        offers = crawler.visible_candidates(visible, "https://operator.example/membership-agreement/")
+        recurring = next(item for item in offers if item.get("sourceProductId") == "recurring-four-week")
+        self.assertEqual((recurring["amount"], recurring["cadence"]), (107.95, "4 weeks"))
+        self.assertEqual(recurring["commitment"], {"type": "month-to-month", "minimumMonths": None})
+        self.assertEqual(recurring["fees"], [{
+            "type": "enrollment", "amount": 49.99, "currency": "USD",
+            "cadence": "one-time", "mandatory": True,
+        }])
+        self.assertEqual(next(item for item in offers if item.get("sourceProductId") == "day-pass")["amount"], 34.95)
+        self.assertFalse(any(item.get("amount") == 5 for item in offers))
+        self.assertFalse(any(item.get("method") == "visible-text-candidate" for item in offers))
+
     def test_duda_semantic_plan_groups_reconstruct_allowance_term_and_price(self) -> None:
         html = """
           <div data-ai-tag="Plan 1: plan name"><h3>Mini Membership</h3><h3>4x (3 Months)</h3></div>

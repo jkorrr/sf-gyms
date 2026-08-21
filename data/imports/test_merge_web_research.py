@@ -114,6 +114,14 @@ class MergeWebResearchTests(unittest.TestCase):
         self.assertEqual(updated, 2)
         self.assertEqual(output[2]["recordStatus"], "identity-review")
 
+    def test_stale_raw_aliases_are_suppressed_before_research_address_matching(self) -> None:
+        document = {"overrides": [
+            {"id": "stale-osm", "action": "suppress", "reason": "reviewed stale alias"},
+            {"id": "linked-alias", "action": "suppress", "canonicalId": "current"},
+            {"id": "review", "action": "review-hold"},
+        ]}
+        self.assertEqual(merge.premerge_suppressed_ids(document), {"stale-osm"})
+
     def test_suppressed_alias_can_link_to_canonical_without_overwriting_current_fields(self) -> None:
         gyms = [
             {"id": "stale", "name": "Longer Stale Studio Name", "address": "100 Market Street", "sourceUrl": "https://www.openstreetmap.org/node/1", "monthlyPrice": None},
@@ -138,6 +146,13 @@ class MergeWebResearchTests(unittest.TestCase):
         official = {"name": "24 Hour Fitness Ocean", "address": "1850 Ocean Avenue, San Francisco", "websiteUrl": "https://www.24hourfitness.com/gyms/ocean"}
         self.assertTrue(merge.same_operator(raw, official))
         self.assertEqual(merge.operator_identity(raw), merge.operator_identity(official))
+
+    def test_livefit_compact_brand_name_uses_canonical_operator_identity(self) -> None:
+        self.assertEqual(merge.brand_key("LiveFitGym Wellness Club"), "live-fit")
+        self.assertEqual(
+            merge.operator_identity({"name": "LiveFitGym Wellness Club", "address": "780 Valencia St"}),
+            "live-fit",
+        )
 
     def test_different_operators_at_same_address_never_auto_match(self) -> None:
         gyms = [{"name": "Former Fitness", "address": "100 Market Street, San Francisco"}]
