@@ -16800,12 +16800,27 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=176",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=177",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=178",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=179",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=195",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -16832,7 +16847,7 @@
         {
           "url": "https://www.yubalance.com/sunset/",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 13
         }
       ]
     },
@@ -16937,17 +16952,27 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=177",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=178",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=179",
-          "status": "access-blocked",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=180",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=194",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -16958,6 +16983,11 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=2&prodId=10347",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=22&prodId=10102",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -16974,7 +17004,7 @@
         {
           "url": "https://www.yubalance.com/noe-valley/",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 13
         }
       ]
     },

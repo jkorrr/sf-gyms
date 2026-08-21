@@ -335,6 +335,62 @@ class PlatformAdapterTests(unittest.TestCase):
         })
         self.assertIn("semi-private-eight-four-week", candidate["sourceProductAliases"])
 
+    def test_linked_purchase_card_uses_stable_product_and_ignores_attached_savings(self) -> None:
+        fixture = self.rendered_fixtures["linkedMonthlyMembership"]
+
+        candidates = adapters.linked_purchase_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["purchaseHref"],
+            fixture["linkLabel"], fixture["sectionLabel"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["sourceProductId"], candidate["amount"]), ("195", 109))
+        self.assertIn("four-monthly", candidate["sourceProductAliases"])
+        self.assertEqual((candidate["cadence"], candidate["productType"]), ("month", "monthly"))
+        self.assertEqual(candidate["classAllowance"], {
+            "count": 4, "period": "month", "unlimited": False,
+        })
+        self.assertFalse(candidate["promotion"]["isPromotion"])
+        self.assertNotIn("USD 30", candidate["rawLabel"])
+
+    def test_linked_purchase_card_parses_comma_price_without_false_two_dollar_offer(self) -> None:
+        fixture = self.rendered_fixtures["linkedAnnualMembership"]
+
+        candidate = adapters.linked_purchase_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["purchaseHref"],
+            fixture["linkLabel"], fixture["sectionLabel"],
+        )[0]
+
+        self.assertEqual((candidate["sourceProductId"], candidate["amount"]), ("100042", 2399))
+        self.assertEqual((candidate["cadence"], candidate["productType"]), ("year", "monthly"))
+        self.assertEqual(candidate["commitment"]["minimumMonths"], 12)
+        self.assertIn("annual-prepay", candidate["sourceProductAliases"])
+
+    def test_linked_purchase_card_fails_closed_without_stable_product_id(self) -> None:
+        fixture = self.rendered_fixtures["linkedMonthlyMembership"]
+        self.assertEqual(
+            adapters.linked_purchase_card_candidates(
+                fixture["cardText"], fixture["url"], "https://clients.mindbodyonline.com/classic/ws",
+                fixture["linkLabel"], fixture["sectionLabel"],
+            ),
+            [],
+        )
+
+    def test_linked_personal_training_alias_cannot_match_class_membership(self) -> None:
+        candidate = adapters.linked_purchase_card_candidates(
+            "4 Sessions\n$279\n1 workout per week.",
+            "https://www.yubalance.com/noe-valley/",
+            "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=205",
+            "4 Sessions",
+            "Monthly Personal Training Memberships",
+        )[0]
+
+        self.assertIn("four-sessions-monthly", candidate["sourceProductAliases"])
+        self.assertNotIn("four-monthly", candidate["sourceProductAliases"])
+        self.assertEqual(candidate["eligibility"]["type"], "trainer-required")
+        self.assertFalse(candidate["ordinaryUse"])
+
 
 if __name__ == "__main__":
     unittest.main()

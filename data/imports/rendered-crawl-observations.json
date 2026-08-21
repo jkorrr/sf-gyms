@@ -5162,40 +5162,6 @@
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
       "capturedAt": "2026-08-21",
-      "amount": 2.0,
-      "currency": "USD",
-      "rawLabel": "onth. Unlimited $229 3+ workouts per week. Setup autopay and take $50 OFF your first month. Annual Membership $2,399 Unlimited classes for one year. Enjoy over 1 month FREE! Monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": true,
-        "label": "onth. Unlimited $229 3+ workouts per week. Setup autopay and take $50 OFF your first month. Annual Membership $2,399 Unlimited classes for one year. Enjoy over 1 month FREE! Monthly"
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "fixed-term",
-        "minimumMonths": 1
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.yubalance.com/noe-valley/",
-      "autoPublishEligible": false,
-      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
-    },
-    {
-      "gymId": "osm-node-3522837919",
-      "gymName": "YuBalance Noe Valley",
-      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "Drop-In $30",
@@ -5221,6 +5187,57 @@
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
       "autoPublishEligible": false,
       "cardAssociationHash": "a5877467f7a73fd9b9db87635bc02601b3068acdf7822d4117456286c1cab5a9",
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10102",
+      "sourceProductAliases": [
+        "drop-in",
+        "class-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Drop-In",
+      "amount": 30.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Drop-In",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In — USD 30 per visit",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
       "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
     },
     {
@@ -5288,6 +5305,58 @@
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "10347",
+      "sourceProductAliases": [
+        "drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Drop-In",
+      "amount": 75.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Drop-In",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In — USD 75 per visit",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
       "rawLabel": "ited classes for one year. Enjoy over 1 month FREE! Monthly Personal Training Memberships Drop-In $75",
@@ -5310,6 +5379,369 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "194",
+      "sourceProductAliases": [
+        "4-class-pack",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "4 Class Pack",
+      "amount": 109.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "4 Class Pack — USD 109 per month — 4 classes per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "177",
+      "sourceProductAliases": [
+        "8-class-pack",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "8 Class Pack",
+      "amount": 189.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "8 Class Pack — USD 189 per month — 8 classes per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "178",
+      "sourceProductAliases": [
+        "unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Unlimited",
+      "amount": 229.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited access per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Unlimited — USD 229 per month — Unlimited access per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "205",
+      "sourceProductAliases": [
+        "4-sessions",
+        "four-sessions-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "4 Sessions",
+      "amount": 279.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "4 Sessions — USD 279 per month — 4 sessions per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "179",
+      "sourceProductAliases": [
+        "8-sessions",
+        "eight-sessions-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "8 Sessions",
+      "amount": 529.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "8 Sessions — USD 529 per month — 8 sessions per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "180",
+      "sourceProductAliases": [
+        "12-sessions",
+        "twelve-sessions-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "12 Sessions",
+      "amount": 759.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "12 Sessions — USD 759 per month — 12 sessions per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "gymName": "YuBalance Noe Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10467",
+      "sourceProductAliases": [
+        "annual-membership",
+        "annual-prepay"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Annual Membership",
+      "amount": 2399.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited access per year",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "Annual purchase"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Annual Membership — USD 2399 per year — Unlimited access per year — Annual purchase",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
@@ -6985,31 +7417,49 @@
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
       "capturedAt": "2026-08-21",
-      "amount": 2.0,
+      "sourceProductId": "10102",
+      "sourceProductAliases": [
+        "drop-in",
+        "class-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Drop-In",
+      "amount": 30.0,
       "currency": "USD",
-      "rawLabel": "1 workout per week. Setup autopay and take $30 OFF your first month. Drop-In $30 Visit us! Annual Membership $2,399 Unlimited classes for one year. Enjoy over 1 Month FREE! Monthly",
-      "cadence": "month",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
       "productType": "drop-in",
+      "accessScope": "Drop-In",
+      "scopeType": "single-location",
       "classAllowance": {
-        "count": 30.0,
-        "period": "month"
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
       },
       "promotion": {
-        "isPromotion": true,
-        "label": "1 workout per week. Setup autopay and take $30 OFF your first month. Drop-In $30 Visit us! Annual Membership $2,399 Unlimited classes for one year. Enjoy over 1 Month FREE! Monthly"
+        "isPromotion": false,
+        "label": ""
       },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "fixed-term",
-        "minimumMonths": 1
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In — USD 30 per visit",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.yubalance.com/sunset/",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://www.yubalance.com/sunset/"
@@ -7109,6 +7559,58 @@
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "10347",
+      "sourceProductAliases": [
+        "drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Drop-In",
+      "amount": 75.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Drop-In",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In — USD 75 per visit",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
       "rawLabel": "ited classes for one year. Enjoy over 1 Month FREE! Monthly Personal Training Memberships Drop-In $75",
@@ -7131,6 +7633,369 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "195",
+      "sourceProductAliases": [
+        "4-class-pack",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "4 Class Pack",
+      "amount": 109.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "4 Class Pack — USD 109 per month — 4 classes per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "176",
+      "sourceProductAliases": [
+        "8-class-pack",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "8 Class Pack",
+      "amount": 189.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "8 Class Pack — USD 189 per month — 8 classes per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "177",
+      "sourceProductAliases": [
+        "unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Unlimited",
+      "amount": 229.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited access per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Unlimited — USD 229 per month — Unlimited access per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "196",
+      "sourceProductAliases": [
+        "4-sessions",
+        "four-sessions-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "4 Sessions",
+      "amount": 269.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "4 Sessions — USD 269 per month — 4 sessions per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "178",
+      "sourceProductAliases": [
+        "8-sessions",
+        "eight-sessions-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "8 Sessions",
+      "amount": 499.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "8 Sessions — USD 499 per month — 8 sessions per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "179",
+      "sourceProductAliases": [
+        "12-sessions",
+        "twelve-sessions-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "12 Sessions",
+      "amount": 699.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-led product"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "12 Sessions — USD 699 per month — 12 sessions per month",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "gymName": "YuBalance Inner Sunset",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100042",
+      "sourceProductAliases": [
+        "annual-membership",
+        "annual-prepay"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Annual Membership",
+      "amount": 2399.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited access per year",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "Annual purchase"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Annual Membership — USD 2399 per year — Unlimited access per year — Annual purchase",
+      "method": "rendered-linked-purchase-card",
+      "adapter": "linked-product-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.yubalance.com/sunset/",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://www.yubalance.com/sunset/"

@@ -614,6 +614,81 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     )
                 except Exception:
                     continue
+        linked_cards = page.eval_on_selector_all(
+            "a[href*='prod'], a[href*='product'], a[href*='plan'], "
+            "a[href*='service'], a[href*='item'], a[href*='k_id']",
+            r"""elements => {
+                const productKeys = new Set(['prodid', 'productid', 'planid', 'serviceid', 'itemid', 'k_id']);
+                const visible = element => {
+                    const style = getComputedStyle(element);
+                    return style.display !== 'none' && style.visibility !== 'hidden'
+                        && element.getClientRects().length > 0;
+                };
+                const stableProductId = href => {
+                    try {
+                        const parsed = new URL(href, document.baseURI);
+                        for (const [key, value] of parsed.searchParams.entries()) {
+                            if (productKeys.has(key.toLowerCase()) && value.trim()) return value.trim();
+                        }
+                    } catch (_error) {
+                        return '';
+                    }
+                    return '';
+                };
+                const headings = Array.from(document.querySelectorAll('h1, h2, h3')).filter(visible);
+                return elements.slice(0, 500).map(element => {
+                    if (!visible(element)) return null;
+                    const href = element.href || element.getAttribute('href') || '';
+                    if (!stableProductId(href)) return null;
+                    const linkLabel = (element.innerText || '').trim().replace(/\s+/g, ' ');
+                    if (!linkLabel || linkLabel.length > 100
+                        || /^(?:buy|join|purchase|enroll|start|select|book)(?:\s+(?:now|today|plan|membership))?$/i.test(linkLabel)) {
+                        return null;
+                    }
+                    let sectionLabel = '';
+                    for (const heading of headings) {
+                        if (heading.compareDocumentPosition(element) & Node.DOCUMENT_POSITION_FOLLOWING) {
+                            sectionLabel = (heading.innerText || '').trim().replace(/\s+/g, ' ');
+                        } else {
+                            break;
+                        }
+                    }
+                    let best = null;
+                    for (let node = element.parentElement; node && node !== document.body; node = node.parentElement) {
+                        const value = (node.innerText || '').trim();
+                        if (!value || value.length > 4000) break;
+                        const productLinkCount = Array.from(node.querySelectorAll('a[href]')).filter(link =>
+                            visible(link) && stableProductId(link.href || link.getAttribute('href') || '')
+                        ).length;
+                        const standalonePrices = value.split(/\n+/).map(line => line.trim()).filter(line =>
+                            /^\$\s*(?:\d{1,3}(?:,\d{3})+|\d{1,6})(?:\.\d{1,2})?$/.test(line)
+                        );
+                        if (productLinkCount === 1 && standalonePrices.length === 1) {
+                            best = {href, linkLabel, sectionLabel, cardText: value};
+                        } else if (best && productLinkCount > 1) {
+                            break;
+                        }
+                    }
+                    return best;
+                }).filter(Boolean);
+            }""",
+        )
+        if linked_cards:
+            adapter_metrics["linkedProductLinkCount"] = len(linked_cards)
+            adapter_metrics["linkedProductCandidateCount"] = 0
+            for card in linked_cards:
+                try:
+                    candidates = static_crawler.platform_adapters.linked_purchase_card_candidates(
+                        text(card.get("cardText")),
+                        page.url,
+                        text(card.get("href")),
+                        text(card.get("linkLabel")),
+                        text(card.get("sectionLabel")),
+                    )
+                    adapter_metrics["linkedProductCandidateCount"] += len(candidates)
+                    platform_card_candidates.extend(candidates)
+                except Exception:
+                    continue
         if page.locator("[class*='wixui']").count():
             for purchase in page.locator("a, button").all()[:500]:
                 try:

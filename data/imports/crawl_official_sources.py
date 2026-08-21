@@ -102,17 +102,18 @@ BOOKING_DOMAINS = {
     "oms-sales-api.bayclubs.io",
     "classpass.com",
 }
-MONEY_RE = re.compile(r"\$(\d{1,4}(?:\.\d{1,2})?)")
+MONEY_AMOUNT_PATTERN = r"(?:\d{1,3}(?:,\d{3})+|\d{1,5})(?:\.\d{1,2})?"
+MONEY_RE = re.compile(rf"\$({MONEY_AMOUNT_PATTERN})(?!\d|,\d)")
 MONTHLY_RE = re.compile(
-    r"(?P<label>.{0,110}?\$(?P<amount>\d{1,4}(?:\.\d{1,2})?)[^$]{0,70}?(?:/\s*mo(?:nth)?|per\s+month|monthly))",
+    rf"(?P<label>.{{0,110}}?\$(?P<amount>{MONEY_AMOUNT_PATTERN})(?!\d|,\d)[^$]{{0,70}}?(?:/\s*mo(?:nth)?|per\s+month|monthly))",
     re.IGNORECASE | re.DOTALL,
 )
 DROP_IN_AFTER_RE = re.compile(
-    r"(?P<label>.{0,90}?(?:drop[ -]?in|single (?:class|visit)|day pass).{0,70}?\$(?P<amount>\d{1,4}(?:\.\d{1,2})?))",
+    rf"(?P<label>.{{0,90}}?(?:drop[ -]?in|single (?:class|visit)|day pass).{{0,70}}?\$(?P<amount>{MONEY_AMOUNT_PATTERN})(?!\d|,\d))",
     re.IGNORECASE | re.DOTALL,
 )
 DROP_IN_BEFORE_RE = re.compile(
-    r"(?P<label>.{0,90}?\$(?P<amount>\d{1,4}(?:\.\d{1,2})?)[^$]{0,45}?(?:drop[ -]?in|single (?:class|visit)|day pass))",
+    rf"(?P<label>.{{0,90}}?\$(?P<amount>{MONEY_AMOUNT_PATTERN})(?!\d|,\d)[^$]{{0,45}}?(?:drop[ -]?in|single (?:class|visit)|day pass))",
     re.IGNORECASE | re.DOTALL,
 )
 PROMOTION_RE = re.compile(
@@ -444,7 +445,7 @@ def numeric(value: Any) -> float | None:
         return float(value)
     match = MONEY_RE.search(text(value))
     if match:
-        return float(match.group(1))
+        return float(match.group(1).replace(",", ""))
     try:
         return float(text(value))
     except ValueError:
@@ -796,7 +797,7 @@ def crunch_visible_candidates(visible_text: str, source_url: str) -> list[dict[s
         )
         if not segment:
             return {}
-        amounts = [float(item) for item in MONEY_RE.findall(segment.group("body"))]
+        amounts = [float(item.replace(",", "")) for item in MONEY_RE.findall(segment.group("body"))]
         if len(amounts) < 6:
             return {}
         return {name: (amounts[index * 2], amounts[index * 2 + 1]) for index, name in enumerate(plan_order)}
@@ -1869,7 +1870,7 @@ def wordpress_class_box_candidates(html: str, source_url: str) -> list[dict[str,
         amount_match = MONEY_RE.search(price_label)
         if not title or not amount_match or not re.search(r"\bmonthly\b", title, re.IGNORECASE):
             continue
-        amount = float(amount_match.group(1))
+        amount = float(amount_match.group(1).replace(",", ""))
         minimum_months = card_commitment_months(title)
         name = re.sub(
             r"\b\d{1,2}\s*[- ]?(?:mo(?:nth)?s?)\s+(?:minimum\s+)?commitment\b",
@@ -2288,7 +2289,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
     )
     for kind, pattern in patterns:
         for match in pattern.finditer(visible_text):
-            amount = float(match.group("amount"))
+            amount = float(match.group("amount").replace(",", ""))
             if amount <= 0 or amount > 2000:
                 continue
             candidates.append(
@@ -2392,7 +2393,7 @@ def bookee_visible_candidates(visible_text: str, source_url: str) -> list[dict[s
         for line in window:
             match = MONEY_RE.search(line)
             if match:
-                amount = float(match.group(1))
+                amount = float(match.group(1).replace(",", ""))
                 break
         if amount is None or amount <= 0 or amount > 2000:
             continue
@@ -4823,7 +4824,7 @@ def explicit_visible_promotion_candidates(label: str) -> list[dict[str, Any]]:
     for distance, amount_match in scored:
         if distance > best_distance + 12:
             continue
-        amount = float(amount_match.group(1))
+        amount = float(amount_match.group(1).replace(",", ""))
         if amount <= 0 or amount > 2000:
             continue
         start, end = amount_match.span()
@@ -4963,7 +4964,7 @@ def plan_identity_label(value: Any, candidate_amount: Any = None) -> str:
     amount = numeric(candidate_amount)
     if amount is None:
         return label
-    remaining_amounts = [float(item) for item in MONEY_RE.findall(label)]
+    remaining_amounts = [float(item.replace(",", "")) for item in MONEY_RE.findall(label)]
     if remaining_amounts and not any(abs(item - amount) <= 0.01 for item in remaining_amounts):
         return ""
     return label

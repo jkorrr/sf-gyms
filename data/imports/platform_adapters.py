@@ -15,7 +15,7 @@ from dataclasses import dataclass
 from typing import Any
 from urllib.parse import parse_qs, urlparse
 
-MONEY_RE = re.compile(r"\$?\s*(\d{1,6}(?:\.\d{1,2})?)")
+MONEY_RE = re.compile(r"\$?\s*((?:\d{1,3}(?:,\d{3})+|\d{1,6})(?:\.\d{1,2})?)(?!\d|,\d)")
 PROMOTION_RE = re.compile(
     r"\b(?:intro|trial|first month|first class|first visit|first session|first week|founding|presale|"
     r"new client|new member|new student|welcome|limited time|special|summer|seasonal|save|off)\b",
@@ -1203,6 +1203,199 @@ def wix_purchase_card_candidates(
         "adapter": "wix-purchase-card",
         "evidenceTier": "official-public",
         "exactLocationMatch": "operator-market-catalog" if scope_type == "multi-location" else "exact-location",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
+def linked_purchase_card_candidates(
+    card_text: str,
+    source_url: str,
+    purchase_href: str,
+    link_label: str,
+    section_label: str = "",
+) -> list[dict[str, Any]]:
+    """Reconstruct a bounded operator card whose title links to checkout.
+
+    Some operator pages link a plan title directly to a stable product on a
+    public booking host instead of rendering a separate ``Buy`` button.  The
+    rendered crawler supplies only the nearest visible ancestor containing
+    one such product link and one standalone display price.  Promotional
+    savings amounts may remain in the description, but they cannot displace
+    that standalone price or turn the ordinary plan into a promotion.
+    """
+
+    try:
+        source = urlparse(source_url)
+        target = urlparse(purchase_href)
+    except ValueError:
+        return []
+    if source.scheme not in {"http", "https"} or not source.netloc or target.scheme not in {"http", "https"}:
+        return []
+    if target.netloc.casefold() != source.netloc.casefold() and not platform_for_url(purchase_href):
+        return []
+
+    query = {key.casefold(): values for key, values in parse_qs(target.query).items()}
+    product_id = next(
+        (
+            text(values[0])
+            for key in ("prodid", "productid", "planid", "serviceid", "itemid", "k_id")
+            if (values := query.get(key)) and text(values[0])
+        ),
+        "",
+    )
+    if not product_id or len(product_id) > 100:
+        return []
+
+    name = " ".join(text(link_label).split())
+    context = " ".join(text(section_label).split())
+    if not 2 <= len(name) <= 100 or re.fullmatch(
+        r"(?:buy|join|purchase|enroll|start|select|book)(?:\s+(?:now|today|plan|membership))?",
+        name,
+        re.IGNORECASE,
+    ):
+        return []
+    lines = [" ".join(line.split()) for line in text(card_text).splitlines() if " ".join(line.split())]
+    if not 2 <= len(lines) <= 80 or not any(line.casefold() == name.casefold() for line in lines[:4]):
+        return []
+    price_lines: list[tuple[int, re.Match[str]]] = []
+    for index, line in enumerate(lines):
+        if amount_match := MONEY_RE.fullmatch(line):
+            price_lines.append((index, amount_match))
+    if len(price_lines) != 1:
+        return []
+    _price_index, amount_match = price_lines[0]
+    amount = float(amount_match.group(1).replace(",", ""))
+    if not 0 < amount <= 25_000:
+        return []
+
+    combined = " ".join(lines)
+    lowered_name = name.casefold()
+    lowered_context = context.casefold()
+    drop_in = bool(DROP_IN_RE.search(name))
+    annual = bool(re.search(r"\b(?:annual|year(?:ly)?|12[ -]month)\b", name, re.IGNORECASE))
+    recurring = bool(
+        re.search(r"\b(?:monthly|membership)\b", context, re.IGNORECASE)
+        or re.search(r"\b(?:autopay|auto[ -]?renew|per month|every month)\b", combined, re.IGNORECASE)
+    )
+    numbered = re.search(r"\b(\d{1,3})\s+(?:class(?:es)?(?:\s+pack)?|sessions?|visits?)\b", name, re.IGNORECASE)
+    unlimited = bool(re.search(r"\bunlimited\b", combined, re.IGNORECASE))
+    trainer_required = bool(
+        re.search(r"\bpersonal training\b", context, re.IGNORECASE)
+        or re.search(r"\b(?:private|semi-private)\b", name, re.IGNORECASE)
+        or ("sessions" in lowered_name and "class" not in lowered_context)
+    )
+
+    if drop_in:
+        cadence, product_type = "visit", "drop-in"
+    elif annual:
+        cadence, product_type = "year", "monthly"
+    elif recurring:
+        cadence, product_type = "month", "monthly"
+    elif numbered or re.search(r"\b(?:pack|pass)\b", name, re.IGNORECASE):
+        cadence, product_type = "one-time", "class-pack"
+    else:
+        return []
+
+    if drop_in:
+        allowance = {"count": 1, "period": "visit", "unlimited": False}
+    elif unlimited:
+        allowance = {"count": None, "period": cadence, "unlimited": True}
+    elif numbered:
+        allowance = {
+            "count": int(numbered.group(1)),
+            "period": cadence if cadence not in {"one-time", "visit"} else "purchase",
+            "unlimited": False,
+        }
+    else:
+        allowance = None
+
+    if annual:
+        commitment_value = {
+            "type": "fixed-term", "minimumMonths": 12, "minimumDays": None,
+            "rawLabel": "Annual purchase",
+        }
+    elif cadence in {"visit", "one-time"}:
+        commitment_value = {
+            "type": "none", "minimumMonths": None, "minimumDays": None, "rawLabel": "",
+        }
+    elif re.search(r"\b(?:cancel any\s*time|no contract|month[ -]to[ -]month)\b", combined, re.IGNORECASE):
+        commitment_value = {
+            "type": "month-to-month", "minimumMonths": None, "minimumDays": None,
+            "rawLabel": "Cancel any time",
+        }
+    else:
+        commitment_value = {
+            "type": "unknown", "minimumMonths": None, "minimumDays": None, "rawLabel": "",
+        }
+
+    promotion = bool(PROMOTION_RE.search(name))
+    restricted = RESTRICTED_RE.search(name)
+    if promotion:
+        eligibility_type, restrictions = "new-client", ["Promotional or introductory product"]
+    elif restricted:
+        eligibility_type, restrictions = "restricted", [restricted.group(0)]
+    elif trainer_required:
+        eligibility_type, restrictions = "trainer-required", ["Trainer-led product"]
+    else:
+        eligibility_type, restrictions = "standard-adult", []
+
+    slug = re.sub(r"[^a-z0-9]+", "-", lowered_name).strip("-")
+    aliases = [slug] if slug else []
+    number_words = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+    }
+    if cadence == "month" and numbered:
+        count = int(numbered.group(1))
+        semantic = "sessions-monthly" if trainer_required else "monthly"
+        aliases.append(f"{number_words.get(count, count)}-{semantic}")
+    if cadence == "month" and unlimited:
+        aliases.append("unlimited-monthly")
+    if annual:
+        aliases.append("annual-prepay")
+    if drop_in and re.search(r"\b(?:class|workout)\b", f"{name} {context}", re.IGNORECASE):
+        aliases.append("class-drop-in")
+
+    if allowance and allowance.get("unlimited"):
+        access_scope = f"Unlimited access per {cadence}"
+    elif allowance and allowance.get("count") is not None:
+        unit = "sessions" if trainer_required else "classes"
+        access_scope = f"{allowance['count']} {unit} per {cadence}" if cadence not in {"visit", "one-time"} else name
+    else:
+        access_scope = name
+    raw_label = " — ".join(filter(None, (
+        name,
+        f"USD {amount:g} per {cadence}",
+        access_scope if access_scope != name else "",
+        commitment_value.get("rawLabel"),
+    )))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductAliases": list(dict.fromkeys(alias for alias in aliases if alias)),
+        "sourceProductIdAuthority": "operator-widget",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": access_scope,
+        "scopeType": "single-location",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": name if promotion else ""},
+        "eligibility": {"type": eligibility_type, "restrictions": restrictions},
+        "commitment": commitment_value,
+        "fees": [],
+        "ordinaryUse": not promotion and not restricted and not trainer_required and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(name)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-linked-purchase-card",
+        "adapter": "linked-product-card",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]

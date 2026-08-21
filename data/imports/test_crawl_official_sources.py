@@ -1438,6 +1438,23 @@ Credit pack
         offers = crawler.visible_candidates("Fees are 2.89% + $0.30. Core Max is $229/month.", "https://example.com")
         self.assertEqual([offer["amount"] for offer in offers if offer["productType"] == "monthly"], [229])
 
+    def test_comma_prices_are_atomic_and_never_truncated_to_the_leading_digit(self) -> None:
+        self.assertEqual(crawler.numeric("$2,399"), 2399)
+        self.assertIsNone(crawler.numeric("$123456"))
+        annual = crawler.visible_candidates(
+            "Annual Membership $2,399. Unlimited classes for one year.",
+            "https://example.com/pricing",
+        )
+        self.assertNotIn(2, [offer.get("amount") for offer in annual])
+        monthly = crawler.visible_candidates(
+            "Premium coaching membership is $1,250 per month.",
+            "https://example.com/pricing",
+        )
+        self.assertEqual(
+            [offer["amount"] for offer in monthly if offer["productType"] == "monthly"],
+            [1250],
+        )
+
     def test_crunch_cards_separate_regular_rates_promotions_and_plan_fees(self) -> None:
         visible = """Best Value
 All Crunch
