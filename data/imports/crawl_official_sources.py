@@ -8,11 +8,13 @@ from __future__ import annotations
 
 import argparse
 import concurrent.futures
+import gzip
 import hashlib
 import json
 import re
 import threading
 import time
+import zlib
 from collections import defaultdict
 from collections.abc import Iterable
 from datetime import UTC, datetime, timedelta
@@ -26,6 +28,7 @@ from urllib.parse import parse_qs, parse_qsl, urldefrag, urlencode, urljoin, url
 from urllib.request import Request, urlopen
 from urllib.robotparser import RobotFileParser
 
+import brotli
 import cost_coverage as coverage
 import platform_adapters
 
@@ -40,7 +43,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v5"
+PARSER_VERSION = "selected-plan-catalog-v13"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -78,6 +81,7 @@ BOOKING_DOMAINS = {
     "onlinejoin.abcfitness.com",
     "portal.movementgyms.com",
     "portal.approach.app",
+    "oms-sales-api.bayclubs.io",
     "classpass.com",
 }
 MONEY_RE = re.compile(r"\$(\d{1,4}(?:\.\d{1,2})?)")
@@ -127,6 +131,12 @@ RESEARCH_PATH_RE = re.compile(
     re.IGNORECASE,
 )
 RESEARCH_EXCLUDE_RE = re.compile(r"/(?:login|signin|sign-in|account|checkout|cart)(?:/|$|[?#])", re.IGNORECASE)
+MONTH_TO_MONTH_RE = re.compile(r"\bmonth\s*[-–—]?\s*to\s*[-–—]?\s*month\b", re.IGNORECASE)
+BAY_CLUB_API_HOST = "oms-sales-api.bayclubs.io"
+BAY_CLUB_API_BASE = f"https://{BAY_CLUB_API_HOST}/api/1.0"
+BAY_CLUB_CLUBS_URL = f"{BAY_CLUB_API_BASE}/clubs"
+BAY_CLUB_BUILDER_HOST = "join.bayclubs.com"
+BAY_CLUB_BUILDER_PATH = "/shared/membership-builder"
 
 
 class PageParser(HTMLParser):
@@ -197,6 +207,20 @@ def hostname(url: str) -> str:
         return urlparse(url).netloc.casefold()
     except ValueError:
         return ""
+
+
+def same_operator_web_host(left_url: str, right_url: str) -> bool:
+    """Match an operator root and its first-party subdomains, never peers."""
+
+    left = hostname(left_url)
+    right = hostname(right_url)
+    left = left[4:] if left.startswith("www.") else left
+    right = right[4:] if right.startswith("www.") else right
+    return bool(
+        left
+        and right
+        and (left == right or left.endswith(f".{right}") or right.endswith(f".{left}"))
+    )
 
 
 def is_public_http_url(url: str) -> bool:
@@ -1028,7 +1052,10 @@ def orangetheory_visible_candidates(visible_text: str, source_url: str) -> list[
     value = re.sub(r"\s+", " ", visible_text).strip()
     if not all(re.search(rf"\b{name}\b", value, re.IGNORECASE) for name in ("Premier", "Elite", "Basic")):
         return []
-    commitment = "month-to-month" if re.search(r"month[ -]to[ -]month|30[ -]day cancellation", value, re.IGNORECASE) else "unknown"
+    commitment = "month-to-month" if (
+        MONTH_TO_MONTH_RE.search(value)
+        or re.search(r"30[ -]day cancellation", value, re.IGNORECASE)
+    ) else "unknown"
     allowances = {
         "premier": {"count": None, "period": "month", "unlimited": True},
         "elite": {"count": 8, "period": "month", "unlimited": False},
@@ -1297,7 +1324,103 @@ def independent_operator_visible_candidates(visible_text: str, source_url: str) 
             operator_visible_candidate(source_url, adapter, "ten-class-pack", "10 Class Package", 220, allowance={"count": 10, "period": "purchase", "unlimited": False}),
             operator_visible_candidate(source_url, adapter, "new-student-three", "New Student 3-Class Special", 30, allowance={"count": 3, "period": "purchase", "unlimited": False}, promotion=True, promotion_label="New-student offer"),
         ]
+
+    if host.endswith("jccsf.org") and has("Adult Full Access", "Regular Rate: $198/month", "$200 Enrollment Fee"):
+        enrollment = [{
+            "type": "enrollment", "amount": 200, "currency": "USD",
+            "cadence": "one-time", "mandatory": True,
+        }]
+        return [recurring(
+            "jccsf-adult-membership",
+            "adult-full-access",
+            "Adult Full-Access Membership",
+            198,
+            access_scope=(
+                "Full fitness-center access including weekly group fitness, lap pool, "
+                "locker rooms, sauna, and steam room"
+            ),
+            commitment_type="unknown",
+            fees=enrollment,
+            raw_label=(
+                "Adult Full Access; regular rate $198/month; standard enrollment $200; "
+                "current enrollment promotion shown separately"
+            ),
+        )]
+
+    if host.endswith("mightypilates.com") and has("Mighty Monthly Pass", "$360/month", "$36/class"):
+        return [recurring(
+            "mighty-pilates",
+            "mighty-monthly-ten",
+            "Mighty Monthly Pass",
+            360,
+            allowance={"count": 10, "period": "month", "unlimited": False},
+            access_scope="Ten reformer Pilates classes monthly at the Presidio Heights studio",
+            best_value=True,
+            raw_label="Mighty Monthly Pass $360/month by autopay; 10 classes at $36/class",
+        )]
+
+    if host.endswith("musclebeachsf.com") and has(
+        "Day Pass", "$30", "Week Pass", "$70", "Monthly Individual Membership", "$125",
+        "Monthly Couples Membership", "$200",
+    ):
+        adapter = "muscle-beach"
+        return [
+            operator_visible_candidate(
+                source_url, adapter, "day-pass", "Day Pass", 30,
+                product_type="drop-in", cadence="visit",
+                allowance={"count": 1, "period": "visit", "unlimited": False},
+                access_scope="One 24-hour visit",
+            ),
+            operator_visible_candidate(
+                source_url, adapter, "week-pass", "Week Pass", 70,
+                allowance={"count": None, "period": "7 days", "unlimited": True},
+                access_scope="Seven-day visitor pass",
+            ),
+            recurring(
+                adapter, "individual-monthly", "Monthly Individual Membership", 125,
+                allowance={"count": None, "period": "month", "unlimited": True},
+                access_scope="Unlimited gym visits at both Muscle Beach locations",
+                scope_type="multi-location", minimum_months=1,
+                raw_label="Monthly Individual Membership $125; unlimited visits; one-month minimum",
+            ),
+            recurring(
+                adapter, "couples-monthly", "Monthly Couples Membership", 200,
+                allowance={"count": None, "period": "month", "unlimited": True},
+                access_scope="Unlimited gym visits for two people at both locations",
+                scope_type="multi-location", minimum_months=1,
+                eligibility_type="household", restrictions=["Two-person couples membership"],
+            ),
+        ]
+
+    if host.endswith("raisethebarfitness.net") and has(
+        "gym-only memberships", "without the requirement of personal training", "$150 per month",
+    ):
+        candidate = recurring(
+            "raise-the-bar",
+            "community-gym-membership",
+            "Community Gym Membership",
+            150,
+            access_scope="Independent use of the private gym without required personal-training sessions",
+            raw_label="Community gym-only membership $150/month; availability intentionally limited",
+        )
+        candidate["purchaseMethod"] = "contact-required"
+        candidate["availability"] = "limited"
+        return [candidate]
     return []
+
+
+def embedded_operator_candidates(html: str, source_url: str) -> list[dict[str, Any]]:
+    """Recover tightly scoped operator rate cards embedded in page state.
+
+    Script contents remain excluded from generic extraction.  Mighty Pilates is
+    an explicit exception because its official page puts the complete labeled
+    membership card in an inline state payload rather than rendered text.
+    """
+
+    if not hostname(source_url).endswith("mightypilates.com"):
+        return []
+    embedded_text = normalized_label(unescape(re.sub(r"<[^>]+>", " ", html)))
+    return independent_operator_visible_candidates(embedded_text, source_url)
 
 
 def perform_for_golf_plan_descriptors(visible_text: str, source_url: str) -> list[dict[str, Any]]:
@@ -1441,6 +1564,58 @@ def solidcore_visible_candidates(visible_text: str, source_url: str) -> list[dic
     return candidates
 
 
+ALLOWANCE_MONTHLY_CARD_RE = re.compile(
+    r"\b(?P<count>\d{1,3})\s*(?:x|classes?)\s*(?:/|per)\s*month\s*:?\s*"
+    r"\$\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?)\b",
+    re.IGNORECASE,
+)
+
+
+def allowance_monthly_card_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Pair compact recurring allowance labels with their adjacent amounts."""
+
+    compact = " ".join(visible_text.split())
+    candidates: list[dict[str, Any]] = []
+    for match in ALLOWANCE_MONTHLY_CARD_RE.finditer(compact):
+        count = int(match.group("count"))
+        amount = float(match.group("amount"))
+        if count <= 0 or count > 100 or amount <= 0 or amount > 2000:
+            continue
+        # Promotion words must be attached to this compact card, not a later
+        # intro product in the page-wide flattened text.
+        local = compact[max(0, match.start() - 45):min(len(compact), match.end() + 20)]
+        name = f"{count}x Monthly"
+        raw_label = f"{name} ${amount:g}/month"
+        is_promotion = bool(PROMOTION_RE.search(local))
+        candidates.append({
+            "sourceProductId": "",
+            "name": name,
+            "amount": amount,
+            "currency": "USD",
+            "rawLabel": raw_label,
+            "cadence": "month",
+            "billingInterval": "month",
+            "productType": "monthly",
+            "classAllowance": {"count": count, "period": "month", "unlimited": False},
+            "promotion": {"isPromotion": is_promotion, "label": local if is_promotion else ""},
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": {
+                "type": "month-to-month" if MONTH_TO_MONTH_RE.search(compact) else "unknown",
+                "minimumMonths": None,
+            },
+            "fees": [],
+            "bestValueLabel": bool(re.search(r"\bbest value\b", compact[max(0, match.start() - 80):match.start()], re.IGNORECASE)),
+            "method": "visible-allowance-plan-card",
+            "adapter": "allowance-plan-cards",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "candidate",
+            "sourceUrl": source_url,
+            "contentHash": hashlib.sha256(raw_label.encode("utf-8")).hexdigest(),
+            "autoPublishEligible": False,
+        })
+    return candidates
+
+
 def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     specialized = (
         crunch_visible_candidates(visible_text, source_url)
@@ -1453,6 +1628,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or independent_operator_visible_candidates(visible_text, source_url)
         or perform_for_golf_plan_descriptors(visible_text, source_url)
         or solidcore_visible_candidates(visible_text, source_url)
+        or allowance_monthly_card_candidates(visible_text, source_url)
     )
     candidates: list[dict[str, Any]] = list(specialized)
     candidates.extend(visible_cost_context_candidates(visible_text, source_url))
@@ -2066,6 +2242,229 @@ def equinox_membership_catalog_candidates(payload: Any, source_url: str) -> list
     return candidates
 
 
+BAY_CLUB_SHARED_PRODUCTS_RE = re.compile(
+    r"^/api/1\.0/products/shared/(?P<club_code>[A-Z0-9]{2,12})/?$",
+    re.IGNORECASE,
+)
+BAY_CLUB_CALCULATE_PATH = "/api/1.0/pricing/shared/calculate"
+
+
+def is_bay_club_api_url(source_url: str) -> bool:
+    """Allow only the public catalog routes used by Bay Club's join builder."""
+
+    parsed = urlparse(text(source_url))
+    if parsed.scheme.casefold() != "https" or parsed.netloc.casefold() != BAY_CLUB_API_HOST:
+        return False
+    path = parsed.path.rstrip("/") or "/"
+    if path.casefold() == "/api/1.0/clubs":
+        return not parsed.query
+    if BAY_CLUB_SHARED_PRODUCTS_RE.fullmatch(path):
+        return not parsed.query
+    if path.casefold() != BAY_CLUB_CALCULATE_PATH:
+        return False
+    query = parse_qs(parsed.query)
+    return bool(
+        set(query) == {"clubCode"}
+        and len(query["clubCode"]) == 1
+        and re.fullmatch(r"[A-Z0-9]{2,12}", query["clubCode"][0], re.IGNORECASE)
+    )
+
+
+def is_bay_club_pricing_calculation_url(source_url: str) -> bool:
+    parsed = urlparse(text(source_url))
+    return bool(
+        is_bay_club_api_url(source_url)
+        and parsed.path.rstrip("/").casefold() == BAY_CLUB_CALCULATE_PATH
+    )
+
+
+def bay_club_catalog_routes(source_url: str, gym: dict[str, Any] | None) -> list[str]:
+    """Enter the public catalog only from Bay Club's reviewed join builder."""
+
+    if not isinstance(gym, dict) or text(gym.get("operatorId") or gym.get("operatorKey")) != "bay-club":
+        return []
+    parsed = urlparse(text(source_url))
+    if (
+        parsed.scheme.casefold() == "https"
+        and parsed.netloc.casefold() == BAY_CLUB_BUILDER_HOST
+        and parsed.path.rstrip("/").casefold() == BAY_CLUB_BUILDER_PATH
+    ):
+        return [BAY_CLUB_CLUBS_URL]
+    return []
+
+
+def bay_club_club_code_from_url(source_url: str) -> str:
+    parsed = urlparse(text(source_url))
+    shared_match = BAY_CLUB_SHARED_PRODUCTS_RE.fullmatch(parsed.path.rstrip("/"))
+    if shared_match:
+        return shared_match.group("club_code").upper()
+    if parsed.path.rstrip("/").casefold() == BAY_CLUB_CALCULATE_PATH:
+        values = parse_qs(parsed.query).get("clubCode", [])
+        if len(values) == 1 and re.fullmatch(r"[A-Z0-9]{2,12}", values[0], re.IGNORECASE):
+            return values[0].upper()
+    return ""
+
+
+def bay_club_legacy_product_alias(club_code: str, product_name: str) -> str:
+    """Retain compatibility with reviewed pre-API product identifiers."""
+
+    short_names = {
+        "single site": "single-site",
+        "executive club north bay": "executive-north",
+        "executive club south bay": "executive-south",
+        "club west gold": "club-west-gold",
+    }
+    normalized_name = " ".join(text(product_name).casefold().split())
+    slug = short_names.get(normalized_name)
+    if not slug:
+        slug = re.sub(r"[^a-z0-9]+", "-", normalized_name).strip("-")
+    return f"{club_code.casefold()}-{slug}-monthly" if club_code and slug else ""
+
+
+def bay_club_public_api_candidates(
+    payload: Any,
+    source_url: str,
+    gym: dict[str, Any] | None = None,
+) -> tuple[list[dict[str, Any]], list[str]]:
+    """Reconstruct Bay Club's exact public, standard-adult monthly catalog.
+
+    The official builder first loads a public club list, then a shared product
+    catalog, and finally calls a price-only calculator. The calculator request
+    contains no contact or account data and this adapter never creates a cart.
+    """
+
+    if not isinstance(payload, dict) or not is_bay_club_api_url(source_url):
+        return [], []
+    parsed = urlparse(source_url)
+    path = parsed.path.rstrip("/") or "/"
+    club_code = bay_club_club_code_from_url(source_url)
+    if path.casefold() == "/api/1.0/clubs":
+        gym_name = text((gym or {}).get("name")).casefold()
+        operator_location_id = text((gym or {}).get("operatorLocationId")).casefold()
+        matching = [
+            club for club in payload.get("clubs", [])
+            if isinstance(club, dict)
+            and (
+                (gym_name and text(club.get("name")).casefold() == gym_name)
+                or (operator_location_id and text(club.get("code")).casefold() == operator_location_id)
+            )
+        ]
+        if len(matching) != 1:
+            return [], []
+        club_code = text(matching[0].get("code")).upper()
+        if not re.fullmatch(r"[A-Z0-9]{2,12}", club_code):
+            return [], []
+        return [], [
+            f"{BAY_CLUB_API_BASE}/products/shared/{club_code}",
+            f"{BAY_CLUB_API_BASE}/pricing/shared/calculate?clubCode={club_code}",
+        ]
+    if BAY_CLUB_SHARED_PRODUCTS_RE.fullmatch(path):
+        return [], [f"{BAY_CLUB_API_BASE}/pricing/shared/calculate?clubCode={club_code}"]
+    if path.casefold() != BAY_CLUB_CALCULATE_PATH or not club_code:
+        return [], []
+
+    candidates: list[dict[str, Any]] = []
+    for calculation in payload.get("productsCalculations", []):
+        if not isinstance(calculation, dict):
+            continue
+        product = calculation.get("product", {})
+        if not isinstance(product, dict):
+            continue
+        product_id = text(product.get("productId"))
+        name = text(product.get("name"))
+        amount = numeric(product.get("monthlyDues"))
+        if not product_id or not name or amount is None or amount <= 0 or product.get("monthlyAllowed") is False:
+            continue
+        accessible_clubs = [
+            item for item in product.get("accesibleClubs", []) if isinstance(item, dict)
+        ]
+        accessible_codes = list(dict.fromkeys(
+            text(item.get("code")).upper() for item in accessible_clubs if text(item.get("code"))
+        ))
+        accessible_names = list(dict.fromkeys(
+            text(item.get("name")) for item in accessible_clubs if text(item.get("name"))
+        ))
+        # The named home location must actually be available under the plan.
+        if club_code not in accessible_codes:
+            continue
+        regular_initiation = numeric(product.get("initiationFee"))
+        promotion_initiation = numeric(product.get("promotionInitiationFee"))
+        current_initiation = (
+            promotion_initiation if promotion_initiation is not None else regular_initiation
+        )
+        promotion_context = text((calculation.get("productCost") or {}).get("promoDescription"))
+        fees: list[dict[str, Any]] = []
+        if current_initiation is not None and current_initiation >= 0:
+            fee: dict[str, Any] = {
+                "type": "initiation",
+                "name": "Initiation Fee",
+                "amount": current_initiation,
+                "currency": "USD",
+                "cadence": "one-time",
+                "mandatory": current_initiation > 0,
+            }
+            if (
+                regular_initiation is not None
+                and promotion_initiation is not None
+                and promotion_initiation < regular_initiation
+            ):
+                fee.update({
+                    "standardAmount": regular_initiation,
+                    "promotionApplied": True,
+                    "promotionLabel": promotion_context,
+                })
+            fees.append(fee)
+        source_product_aliases = list(dict.fromkeys(filter(None, (
+            text(product.get("code")),
+            bay_club_legacy_product_alias(club_code, name),
+        ))))
+        raw_parts = [f"{name} ${amount:g}/month", f"home club {club_code}"]
+        if current_initiation is not None:
+            raw_parts.append(f"current initiation ${current_initiation:g}")
+        if regular_initiation is not None and promotion_initiation is not None and promotion_initiation < regular_initiation:
+            raw_parts.append(f"standard initiation ${regular_initiation:g}")
+        raw_label = "; ".join(raw_parts)
+        candidates.append({
+            "sourceProductId": product_id,
+            "sourceProductAliases": source_product_aliases,
+            "operatorLocationId": club_code,
+            "name": name,
+            "amount": amount,
+            "currency": "USD",
+            "cadence": "month",
+            "billingInterval": "month",
+            "productType": "monthly",
+            "accessScope": text(product.get("longDescription")) or ", ".join(accessible_names),
+            "scopeType": "single-location" if len(set(accessible_codes)) == 1 else "multi-location",
+            "accessibleLocationIds": accessible_codes,
+            "classAllowance": None,
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": {
+                "type": "month-to-month" if calculation.get("isMonthToMonthEnabled") else "unknown",
+                "minimumMonths": None,
+                "rawLabel": "Monthly billing available" if calculation.get("isMonthToMonthEnabled") else "Not disclosed",
+            },
+            # Monthly dues remain the ordinary price even when a current
+            # initiation-fee promotion is shown separately.
+            "promotion": {
+                "isPromotion": False,
+                "label": "",
+                "context": promotion_context,
+            },
+            "fees": fees,
+            "bestValueLabel": bool(product.get("isMostPopular")),
+            "rawLabel": raw_label,
+            "method": "public-bay-club-membership-calculator",
+            "adapter": "bay-club-public-api",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceUrl": source_url,
+            "contentHash": hashlib.sha256(raw_label.encode("utf-8")).hexdigest(),
+            "autoPublishEligible": False,
+        })
+    return candidates, []
+
+
 def may_follow_nested_catalog(source_url: str, depth: int) -> bool:
     """Permit only documented public catalog-to-detail hops past the base frontier."""
 
@@ -2079,7 +2478,11 @@ def may_follow_nested_catalog(source_url: str, depth: int) -> bool:
     )
 
 
-def public_platform_json_candidates(payload: Any, source_url: str) -> tuple[list[dict[str, Any]], list[str]]:
+def public_platform_json_candidates(
+    payload: Any,
+    source_url: str,
+    gym: dict[str, Any] | None = None,
+) -> tuple[list[dict[str, Any]], list[str]]:
     """Route captured public JSON through the most semantic platform adapter.
 
     The generic graph walker remains a fallback, but must not replace an
@@ -2090,6 +2493,8 @@ def public_platform_json_candidates(payload: Any, source_url: str) -> tuple[list
 
     if is_equinox_membership_api_url(source_url):
         return equinox_membership_catalog_candidates(payload, source_url), []
+    if is_bay_club_api_url(source_url):
+        return bay_club_public_api_candidates(payload, source_url, gym)
     platform = platform_name(source_url)
     if platform == "mariana-tek":
         return mariana_buy_page_candidates(payload if isinstance(payload, dict) else {}, source_url), []
@@ -2410,23 +2815,37 @@ def reviewed_seed_routes(
     return routes
 
 
-def robots_allowed(url: str, timeout: float) -> tuple[bool, str]:
-    parsed = urlparse(url)
-    robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
-    request = Request(robots_url, headers={"User-Agent": USER_AGENT, "Accept": "text/plain"})
+@lru_cache(maxsize=256)
+def load_robots_parser(robots_url: str, timeout: float) -> tuple[RobotFileParser | None, str]:
+    """Fetch one robots policy per origin for the life of a crawl process."""
+
+    request = Request(robots_url, headers={
+        "User-Agent": USER_AGENT,
+        "Accept": "text/plain",
+        "Accept-Encoding": "identity",
+    })
     parser = RobotFileParser()
     parser.set_url(robots_url)
     try:
         with urlopen(request, timeout=timeout) as response:  # noqa: S310 - URLs originate in committed public listing data.
             body = response.read(500_000).decode(response.headers.get_content_charset() or "utf-8", errors="replace")
         parser.parse(body.splitlines())
-        return parser.can_fetch(USER_AGENT, url), "checked"
+        return parser, "checked"
     except HTTPError as error:
         if error.code in {401, 403}:
-            return False, f"robots-http-{error.code}"
-        return True, f"robots-http-{error.code}"
+            return None, f"robots-http-{error.code}"
+        return None, f"robots-http-{error.code}"
     except (URLError, TimeoutError, OSError):
-        return True, "robots-unavailable"
+        return None, "robots-unavailable"
+
+
+def robots_allowed(url: str, timeout: float) -> tuple[bool, str]:
+    parsed = urlparse(url)
+    robots_url = f"{parsed.scheme}://{parsed.netloc}/robots.txt"
+    parser, status = load_robots_parser(robots_url, timeout)
+    if status in {"robots-http-401", "robots-http-403"}:
+        return False, status
+    return (parser.can_fetch(USER_AGENT, url) if parser else True), status
 
 
 def static_access_blocker(url: str, html: str) -> str:
@@ -2457,30 +2876,100 @@ def preferred_accept_header(url: str) -> str:
     return "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.5"
 
 
+def bay_club_pricing_request_body(url: str) -> bytes:
+    """Build the anonymous, non-persistent public calculator request body."""
+
+    if not is_bay_club_pricing_calculation_url(url):
+        return b""
+    club_code = bay_club_club_code_from_url(url)
+    return json.dumps(
+        {
+            "clubCode": club_code,
+            "membersConfigurations": [],
+            "availableInSharedBuilder": True,
+        },
+        sort_keys=True,
+        separators=(",", ":"),
+    ).encode("utf-8")
+
+
+def decode_response_body(body: bytes, content_encoding: str) -> bytes:
+    """Decode standard HTTP content codings in reverse application order."""
+
+    encodings = [value.strip().casefold() for value in content_encoding.split(",") if value.strip()]
+    decoded = body
+    for encoding in reversed(encodings):
+        if encoding == "identity":
+            continue
+        if encoding == "br":
+            decoded = brotli.decompress(decoded)
+        elif encoding in {"gzip", "x-gzip"}:
+            decoded = gzip.decompress(decoded)
+        elif encoding == "deflate":
+            decoded = zlib.decompress(decoded)
+        else:
+            raise ValueError(f"unsupported content encoding: {encoding}")
+        if len(decoded) > MAX_RESPONSE_BYTES:
+            raise OverflowError("decoded response exceeds size limit")
+    return decoded
+
+
 def fetch_page(url: str, timeout: float, conditional: dict[str, Any] | None = None) -> dict[str, Any]:
     allowed, robots_status = robots_allowed(url, timeout)
     if not allowed:
         return {"status": "robots-disallowed", "url": url, "robotsStatus": robots_status}
-    headers = {"User-Agent": USER_AGENT, "Accept": preferred_accept_header(url)}
-    if conditional:
+    headers = {
+        "User-Agent": USER_AGENT,
+        "Accept": preferred_accept_header(url),
+        # urllib does not transparently decode Brotli.  Several official gym
+        # sites send ``Content-Encoding: br`` even when no encoding preference
+        # is supplied, so explicitly request the uncompressed representation.
+        "Accept-Encoding": "identity",
+    }
+    request_body = bay_club_pricing_request_body(url)
+    if request_body:
+        parsed = urlparse(url)
+        request_url = parsed._replace(query="", fragment="").geturl()
+        headers["Content-Type"] = "application/json"
+    else:
+        request_url = url
+    if conditional and not request_body:
         if conditional.get("etag"):
             headers["If-None-Match"] = conditional["etag"]
         if conditional.get("lastModified"):
             headers["If-Modified-Since"] = conditional["lastModified"]
-    request = Request(url, headers=headers)
+    request = Request(
+        request_url,
+        data=request_body or None,
+        headers=headers,
+        method="POST" if request_body else "GET",
+    )
     try:
         with urlopen(request, timeout=timeout) as response:  # noqa: S310 - URLs originate in committed public listing data.
             content_type = response.headers.get_content_type()
             body = response.read(MAX_RESPONSE_BYTES + 1)
+            response_url = url if request_body else response.geturl()
             if len(body) > MAX_RESPONSE_BYTES:
-                return {"status": "response-too-large", "url": response.geturl(), "robotsStatus": robots_status}
+                return {"status": "response-too-large", "url": response_url, "robotsStatus": robots_status}
+            content_encoding = text(response.headers.get("Content-Encoding"))
+            try:
+                body = decode_response_body(body, content_encoding)
+            except (brotli.error, OSError, OverflowError, ValueError, zlib.error) as error:
+                return {
+                    "status": "unsupported-content-encoding",
+                    "url": response_url,
+                    "robotsStatus": robots_status,
+                    "contentEncoding": content_encoding,
+                    "error": text(error)[:200],
+                }
             charset = response.headers.get_content_charset() or "utf-8"
             html = body.decode(charset, errors="replace")
-            access_blocker = static_access_blocker(response.geturl(), html)
+            access_blocker = static_access_blocker(response_url, html)
             return {
                 "status": "access-blocked" if access_blocker else "fetched",
-                "url": response.geturl(),
+                "url": response_url,
                 "contentType": content_type,
+                "contentEncoding": content_encoding,
                 "html": html,
                 "etag": response.headers.get("ETag", ""),
                 "lastModified": response.headers.get("Last-Modified", ""),
@@ -2554,7 +3043,7 @@ def parse_page(
             payload = json.loads(html)
         except json.JSONDecodeError:
             payload = {}
-        candidates, nested = public_platform_json_candidates(payload, source_url)
+        candidates, nested = public_platform_json_candidates(payload, source_url, gym)
         return candidates, nested, hashlib.sha256(html.encode("utf-8")).hexdigest()
     parser = PageParser()
     try:
@@ -2565,10 +3054,12 @@ def parse_page(
     candidates = structured_candidates(parser.json_ld, text(result.get("url")))
     candidates.extend(structured_candidates(parser.hydration_json, text(result.get("url")), "embedded-hydration-json"))
     candidates.extend(visible_candidates(visible, text(result.get("url"))))
+    candidates.extend(embedded_operator_candidates(html, source_url))
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
     stores: list[str] = []
     stores.extend(equinox_membership_catalog_routes(parser.hydration_json, source_url))
+    stores.extend(bay_club_catalog_routes(source_url, gym))
     mindbody_services = mindbody_public_services_route(source_url)
     if mindbody_services and request_identity(mindbody_services) != request_identity(source_url):
         stores.append(mindbody_services)
@@ -2747,6 +3238,79 @@ def save_json(path: Path, value: Any) -> None:
     path.write_text(json.dumps(value, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
 
 
+TRANSIENT_CRAWL_STATUSES = {
+    "network-error",
+    "http-429",
+    "host-backoff-after-429",
+    "response-too-large",
+    "unsupported-content-encoding",
+}
+
+
+def merge_transient_cache_entry(
+    existing: dict[str, Any] | None,
+    update: dict[str, Any],
+) -> dict[str, Any]:
+    """Retain the last parseable response when a refresh fails transiently."""
+
+    previous = existing if isinstance(existing, dict) else {}
+    if text(update.get("status")) not in TRANSIENT_CRAWL_STATUSES or not previous:
+        return update
+    merged = {**previous, **update}
+    for key in (
+        "candidates", "linkedStorefronts", "locationCandidates", "contentHash",
+        "etag", "lastModified", "parserVersion",
+    ):
+        if key in previous:
+            merged[key] = previous[key]
+        else:
+            merged.pop(key, None)
+    previous_success = text(previous.get("status")) in {"fetched", "not-modified"}
+    last_success = text(previous.get("lastSuccessfulAt"))
+    if not last_success and previous_success:
+        last_success = text(previous.get("lastAttemptAt"))
+    if last_success:
+        merged["lastSuccessfulAt"] = last_success
+    else:
+        merged.pop("lastSuccessfulAt", None)
+    return merged
+
+
+def merge_crawl_observations(
+    existing: list[dict[str, Any]],
+    current: list[dict[str, Any]],
+    crawled_gym_ids: set[str],
+    run_attempts: list[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Keep prior evidence only when every current route failed transiently."""
+
+    attempts_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for attempt in run_attempts:
+        attempts_by_gym[text(attempt.get("gymId"))].append(attempt)
+    current_ids = {text(item.get("gymId")) for item in current}
+    retain_ids = {
+        gym_id for gym_id in crawled_gym_ids
+        if gym_id not in current_ids
+        and attempts_by_gym.get(gym_id)
+        and all(
+            text(attempt.get("status")) in TRANSIENT_CRAWL_STATUSES
+            for attempt in attempts_by_gym[gym_id]
+        )
+    }
+    combined = [
+        item for item in existing
+        if text(item.get("gymId")) not in crawled_gym_ids
+        or text(item.get("gymId")) in retain_ids
+    ] + current
+    combined.sort(
+        key=lambda item: (
+            text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("kind")),
+            float(item.get("low", 0) or 0), float(item.get("amount", 0) or 0), text(item.get("rawLabel")),
+        )
+    )
+    return combined
+
+
 def explicit_visible_promotion_candidates(label: str) -> list[dict[str, Any]]:
     """Associate a visible promotion phrase with its nearest dollar amount.
 
@@ -2866,9 +3430,14 @@ NON_STANDARD_COMPONENT_RE = re.compile(
     re.IGNORECASE,
 )
 PLAN_LINKED_FEE_FRAGMENT_RE = re.compile(
-    r"(?:\+\s*)?\$\s*\d{1,4}(?:\.\d{1,2})?\s*(?:annual|activation|cancell?ation|enroll?ment|"
+    r"(?:\+\s*)?\$\s*\d{1,4}(?:\.\d{1,2})?\s*(?:annual|activation|cancell?ation|termination|enroll?ment|"
     r"join|processing|setup)(?:\s+fee)?|(?:annual|activation|cancell?ation|enroll?ment|join|processing|"
-    r"setup)\s+fee\s*[:+-]?\s*\$\s*\d{1,4}(?:\.\d{1,2})?",
+    r"setup|termination)\s+fee\s*[:+-]?\s*\$\s*\d{1,4}(?:\.\d{1,2})?",
+    re.IGNORECASE,
+)
+PLAN_INTRO_COMPONENT_FRAGMENT_RE = re.compile(
+    r"(?:first|intro(?:ductory)?|trial)\s+(?:class|visit|session)[^$.\n]{0,35}\$\s*\d{1,4}(?:\.\d{1,2})?"
+    r"|\$\s*\d{1,4}(?:\.\d{1,2})?[^.\n]{0,35}(?:first|intro(?:ductory)?|trial)\s+(?:class|visit|session)",
     re.IGNORECASE,
 )
 
@@ -2886,7 +3455,8 @@ def plan_label_tokens(value: Any) -> set[str]:
 def plan_identity_label(value: Any, candidate_amount: Any = None) -> str:
     """Remove attached fee arithmetic while preserving the product card label."""
 
-    label = PLAN_LINKED_FEE_FRAGMENT_RE.sub(" ", text(value))
+    label = PLAN_INTRO_COMPONENT_FRAGMENT_RE.sub(" ", text(value))
+    label = PLAN_LINKED_FEE_FRAGMENT_RE.sub(" ", label)
     amount = numeric(candidate_amount)
     if amount is None:
         return label
@@ -2894,6 +3464,16 @@ def plan_identity_label(value: Any, candidate_amount: Any = None) -> str:
     if remaining_amounts and not any(abs(item - amount) <= 0.01 for item in remaining_amounts):
         return ""
     return label
+
+
+def class_allowance_is_disclosed(allowance: dict[str, Any]) -> bool:
+    """Distinguish an explicit zero/limited allowance from a legacy unknown."""
+
+    if not allowance:
+        return False
+    if allowance.get("disclosed") is True:
+        return True
+    return bool(allowance.get("unlimited")) or numeric(allowance.get("count")) is not None
 
 
 def class_allowances_match_exactly(selected: dict[str, Any], candidate: dict[str, Any]) -> bool:
@@ -2951,7 +3531,7 @@ def selected_plan_candidate_match(
 
     selected_allowance = selected.get("classAllowance") or {}
     candidate_allowance = candidate.get("classAllowance") or {}
-    if candidate_allowance:
+    if class_allowance_is_disclosed(selected_allowance) and class_allowance_is_disclosed(candidate_allowance):
         if bool(selected_allowance.get("unlimited")) != bool(candidate_allowance.get("unlimited")):
             return None
         selected_count = numeric(selected_allowance.get("count"))
@@ -2988,8 +3568,8 @@ def selected_plan_candidate_match(
             return 90, "exact-plan-label"
     selected_combined = " ".join(selected_labels).casefold()
     if (
-        re.search(r"\bmonth[ -]?to[ -]?month\b", selected_combined)
-        and re.search(r"\bmonth[ -]?to[ -]?month\b", raw_label, re.IGNORECASE)
+        MONTH_TO_MONTH_RE.search(selected_combined)
+        and MONTH_TO_MONTH_RE.search(raw_label)
         and ("adult" not in selected_combined or re.search(r"\badult\b", raw_label, re.IGNORECASE))
     ):
         return 85, "plan-facets"
@@ -3052,6 +3632,7 @@ def audit_selected_plan_price(
         if text(candidate.get("gymId")) != text(gym.get("id")):
             continue
         source_url = text(candidate.get("sourceUrl"))
+        match = selected_plan_candidate_match(selected, candidate)
         if selected_urls and source_url and request_identity(source_url) not in selected_urls:
             linked_public_catalog = (
                 request_identity(text(candidate.get("catalogSourceUrl"))) in selected_urls
@@ -3065,7 +3646,15 @@ def audit_selected_plan_price(
                 and text(candidate.get("sourceProductId")) == selected_source_product_id
                 and platform_name(source_url) in selected_public_platforms
             )
-            if not (linked_public_catalog or stable_public_platform_product):
+            same_operator_strong_plan = bool(
+                match
+                and match[0] >= 85
+                and not is_equinox_membership_api_url(source_url)
+                and not is_bay_club_api_url(source_url)
+                and any(same_operator_web_host(source_url, selected_url) for selected_url in selected_source_url_values)
+                and operator_page_matches_gym(source_url, gym)
+            )
+            if not (linked_public_catalog or stable_public_platform_product or same_operator_strong_plan):
                 continue
         promotion = candidate.get("promotion") or {}
         eligibility = candidate.get("eligibility") or {}
@@ -3079,7 +3668,6 @@ def audit_selected_plan_price(
             continue
         if NON_STANDARD_COMPONENT_RE.search(text(candidate.get("rawLabel") or candidate.get("name"))):
             continue
-        match = selected_plan_candidate_match(selected, candidate)
         if (
             not match
             and selected_raw_amount is not None
@@ -3496,7 +4084,8 @@ def main() -> int:
             attempts.extend(gym_attempts)
             observations.extend(gym_observations)
             location_observations.extend(gym_locations)
-            cache.update(cache_updates)
+            for url, update in cache_updates.items():
+                cache[url] = merge_transient_cache_entry(cache.get(url), update)
     run_attempts = list(attempts)
     crawled_gym_ids = {text(gym.get("id")) for gym in candidates}
     attempts_by_key = {
@@ -3506,12 +4095,11 @@ def main() -> int:
     }
     attempts_by_key.update({(text(item.get("gymId")), text(item.get("url"))): item for item in attempts})
     attempts = sorted(attempts_by_key.values(), key=lambda item: (text(item.get("gymId")), text(item.get("url"))))
-    observations = [item for item in existing_observations_document.get("observations", []) if text(item.get("gymId")) not in crawled_gym_ids] + observations
-    observations.sort(
-        key=lambda item: (
-            text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("kind")),
-            float(item.get("low", 0) or 0), float(item.get("amount", 0) or 0), text(item.get("rawLabel")),
-        )
+    observations = merge_crawl_observations(
+        existing_observations_document.get("observations", []),
+        observations,
+        crawled_gym_ids,
+        run_attempts,
     )
     price_audit_observations = observations + load_rendered_deal_observations()
     attempts = reconcile_selected_plan_price_audits(
@@ -3541,8 +4129,12 @@ def main() -> int:
             "sourceStatusReviews": 0,
         }))
         return 0
-    location_observations = [item for item in existing_locations_document.get("observations", []) if text(item.get("gymId")) not in crawled_gym_ids] + location_observations
-    location_observations.sort(key=lambda item: (text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("rawLabel"))))
+    location_observations = merge_crawl_observations(
+        existing_locations_document.get("observations", []),
+        location_observations,
+        crawled_gym_ids,
+        run_attempts,
+    )
     save_json(CACHE_PATH, cache)
     save_json(ATTEMPTS_PATH, {"generatedAt": today.date().isoformat(), "mode": args.mode, "attempts": attempts})
     save_json(OBSERVATIONS_PATH, {"generatedAt": today.date().isoformat(), "observations": observations})

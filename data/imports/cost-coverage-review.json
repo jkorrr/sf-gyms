@@ -1335,6 +1335,21 @@
           "candidateCount": 0
         },
         {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/clubs",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+          "status": "fetched",
+          "candidateCount": 4
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCFD",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayclubs.com/memberships",
           "status": "fetched",
           "candidateCount": 0
@@ -1392,6 +1407,21 @@
           "candidateCount": 0
         },
         {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/clubs",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
+          "status": "fetched",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCG",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayclubs.com/clubs/thegateway",
           "status": "fetched",
           "candidateCount": 0
@@ -1445,6 +1475,21 @@
       "crawlAttempts": [
         {
           "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/clubs",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCSF",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -2489,6 +2534,11 @@
       "crawlAttempts": [
         {
           "url": "https://www.cmasf.com/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.cmasf.com/faqs",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -6651,37 +6701,42 @@
       "crawlAttempts": [
         {
           "url": "https://folksf.com",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 1
         },
         {
           "url": "https://folksf.com/memberships/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 5
         },
         {
           "url": "https://folksf.com/memberships/all-access-membership/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 2
         },
         {
           "url": "https://folksf.com/memberships/single-class-pass/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 1
         },
         {
           "url": "https://folksf.com/memberships/ten-class-pack/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 3
         },
         {
+          "url": "https://folksf.com/memberships/twenty-class-pack/",
+          "status": "http-301",
+          "candidateCount": 0
+        },
+        {
           "url": "https://folksf.com/memberships/twentyclasspack/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 3
         },
         {
           "url": "https://folksf.com/memberships/wellness-services/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 2
         },
         {
@@ -6691,6 +6746,36 @@
         },
         {
           "url": "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/Folk/membership/10-Class-Pack/142404",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/appointments/appointment-reservation/35337",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/143951",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/523871",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/u/folk-loPgJZ",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -6753,42 +6838,47 @@
       "crawlAttempts": [
         {
           "url": "https://folksf.com",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 1
         },
         {
           "url": "https://folksf.com/classes/schedule/richmond/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://folksf.com/memberships/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 5
         },
         {
           "url": "https://folksf.com/memberships/all-access-membership/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 2
         },
         {
           "url": "https://folksf.com/memberships/single-class-pass/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 1
         },
         {
           "url": "https://folksf.com/memberships/ten-class-pack/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 3
         },
         {
+          "url": "https://folksf.com/memberships/twenty-class-pack/",
+          "status": "http-301",
+          "candidateCount": 0
+        },
+        {
           "url": "https://folksf.com/memberships/twentyclasspack/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 3
         },
         {
           "url": "https://folksf.com/memberships/wellness-services/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 2
         },
         {
@@ -6798,6 +6888,36 @@
         },
         {
           "url": "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/Folk/membership/10-Class-Pack/142404",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/appointments/appointment-reservation/35337",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/143951",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/523871",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/u/folk-loPgJZ",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -7905,7 +8025,7 @@
         {
           "url": "https://www.jccsf.org/join/",
           "status": "fetched",
-          "candidateCount": 3
+          "candidateCount": 1
         },
         {
           "url": "https://www.jccsf.org/join/community-membership-2/",
@@ -7945,7 +8065,7 @@
         {
           "url": "https://www.jccsf.org/join/referafriend/",
           "status": "fetched",
-          "candidateCount": 3
+          "candidateCount": 1
         },
         {
           "url": "https://www.jccsf.org/join/",
@@ -8226,6 +8346,11 @@
         },
         {
           "url": "https://www.lagreefit415.com/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.lagreefit415.com/faqs",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -10529,9 +10654,104 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
-          "url": "https://www.mightypilates.com/presidio-heights/",
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5727345&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5733789&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5733830&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5741057&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5743201&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5744727&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5747197&stype=41&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5727345",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733789",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5748750",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=289199&stype=-7&sView=week&sLoc=1",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5743201&stype=-7&sView=week&sLoc=1",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5744896&stype=-7&sView=week&sLoc=2",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.mightypilates.com/faq/",
+          "status": "not-modified",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://www.mightypilates.com/presidio-heights/",
+          "status": "not-modified",
+          "candidateCount": 2
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",

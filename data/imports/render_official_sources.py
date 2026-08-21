@@ -289,6 +289,24 @@ def candidate_gyms(
     )
 
 
+def rendered_observation(
+    gym: dict[str, Any],
+    candidate: dict[str, Any],
+    attempted_at: str,
+    catalog_source_url: str,
+) -> dict[str, Any]:
+    """Attach the reviewed render target to redirected public evidence."""
+
+    observation = {
+        "gymId": gym["id"],
+        "gymName": gym["name"],
+        "capturedAt": attempted_at,
+        **candidate,
+    }
+    observation["catalogSourceUrl"] = text(candidate.get("catalogSourceUrl")) or catalog_source_url
+    return observation
+
+
 def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms: int) -> tuple[dict[str, Any], list[dict[str, Any]]]:
     url = text(gym.get("websiteUrl"))
     allowed, robots_status = static_crawler.robots_allowed(url, timeout_ms / 1000)
@@ -328,7 +346,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         except (UnicodeDecodeError, json.JSONDecodeError):
             return
         network_hashes.append(hashlib.sha256(body).hexdigest())
-        platform_candidates, _nested = static_crawler.public_platform_json_candidates(parsed, response_url)
+        platform_candidates, _nested = static_crawler.public_platform_json_candidates(parsed, response_url, gym)
         if platform_candidates:
             network_candidates.extend(platform_candidates)
         else:
@@ -554,7 +572,13 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         )
         if key not in seen:
             seen.add(key)
-            deduplicated.append({"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate})
+            observation = rendered_observation(gym, candidate, attempted_at, url)
+            # Preserve the exact committed/render target that authorized a
+            # redirected frame or approved booking/API response. The selected-
+            # plan audit still requires a semantic product/label match and an
+            # approved public platform, so this cannot turn detached amounts
+            # into plan confirmations.
+            deduplicated.append(observation)
     attempt = {
         "gymId": gym["id"],
         "name": gym["name"],

@@ -6,6 +6,21 @@ import render_official_sources as rendered
 
 
 class RenderedCrawlerTests(unittest.TestCase):
+    def test_rendered_observation_preserves_reviewed_catalog_target(self) -> None:
+        candidate = {
+            "sourceUrl": "https://tenant.momence.com/api/products",
+            "sourceProductId": "plan-4",
+            "amount": 119,
+        }
+        observation = rendered.rendered_observation(
+            {"id": "studio", "name": "Studio"},
+            candidate,
+            "2026-08-21",
+            "https://momence.com/studio/memberships",
+        )
+        self.assertEqual(observation["catalogSourceUrl"], "https://momence.com/studio/memberships")
+        self.assertEqual(observation["sourceUrl"], "https://tenant.momence.com/api/products")
+
     def test_cloudflare_security_check_is_classified_without_bypass(self) -> None:
         blocker = rendered.detect_access_blocker(
             "Security Check",

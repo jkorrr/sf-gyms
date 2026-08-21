@@ -14,6 +14,14 @@ import crawl_official_sources as crawler
 
 
 class OfficialCrawlerTests(unittest.TestCase):
+    def test_decodes_standard_http_content_encodings(self) -> None:
+        payload = b"<html><body>Mighty Monthly Pass $360/month</body></html>"
+        self.assertEqual(crawler.decode_response_body(crawler.brotli.compress(payload), "br"), payload)
+        self.assertEqual(crawler.decode_response_body(crawler.gzip.compress(payload), "gzip"), payload)
+        self.assertEqual(crawler.decode_response_body(crawler.zlib.compress(payload), "deflate"), payload)
+        with self.assertRaises(ValueError):
+            crawler.decode_response_body(payload, "compress")
+
     def test_parser_upgrade_invalidates_only_candidate_cache_metadata(self) -> None:
         stale = {"etag": "old", "lastModified": "yesterday", "candidates": [{"amount": 149}]}
         current = {**stale, "parserVersion": crawler.PARSER_VERSION}
@@ -1300,6 +1308,336 @@ CLUB INFO"""
         self.assertEqual([(fee["type"], fee["amount"]) for fee in classic["fees"]], [("enrollment", 49), ("annual", 49)])
         self.assertTrue(black["bestValueLabel"])
         self.assertEqual(classic["commitment"]["type"], "month-to-month")
+
+    def test_bay_club_public_builder_routes_exact_location_catalog(self) -> None:
+        gym = {
+            "id": "bay-fidi",
+            "name": "Bay Club Financial District",
+            "operatorId": "bay-club",
+            "operatorLocationId": "",
+        }
+        builder = "https://join.bayclubs.com/shared/membership-builder"
+        offers, stores, _digest = crawler.parse_page({
+            "html": "<html><body>Build your membership</body></html>",
+            "url": builder,
+            "contentType": "text/html",
+        }, gym)
+        self.assertEqual(offers, [])
+        self.assertEqual(stores, [crawler.BAY_CLUB_CLUBS_URL])
+
+        clubs = {
+            "clubs": [
+                {"code": "BCFD", "name": "Bay Club Financial District"},
+                {"code": "BCG", "name": "Bay Club Gateway"},
+            ],
+        }
+        candidates, nested = crawler.public_platform_json_candidates(
+            clubs, crawler.BAY_CLUB_CLUBS_URL, gym
+        )
+        self.assertEqual(candidates, [])
+        self.assertEqual(nested, [
+            f"{crawler.BAY_CLUB_API_BASE}/products/shared/BCFD",
+            f"{crawler.BAY_CLUB_API_BASE}/pricing/shared/calculate?clubCode=BCFD",
+        ])
+
+    def test_bay_club_calculator_reconstructs_plan_fee_scope_and_legacy_identity(self) -> None:
+        builder = "https://join.bayclubs.com/shared/membership-builder"
+        api_url = f"{crawler.BAY_CLUB_API_BASE}/pricing/shared/calculate?clubCode=BCFD"
+        payload = {
+            "productsCalculations": [{
+                "product": {
+                    "productId": "88a5f2b2-a3d1-49d9-3ab6-08def76b4fa5",
+                    "code": "single_site_financial_district_shared",
+                    "name": "Single Site",
+                    "monthlyDues": 284,
+                    "initiationFee": 300,
+                    "promotionInitiationFee": 100,
+                    "monthlyAllowed": True,
+                    "isMostPopular": False,
+                    "longDescription": "Full access to Financial District.",
+                    "accesibleClubs": [{
+                        "code": "BCFD", "name": "Bay Club Financial District",
+                    }],
+                },
+                "productCost": {
+                    "promoDescription": "Join by August 31 and receive initiation fee savings!",
+                },
+                "isMonthToMonthEnabled": True,
+            }],
+        }
+        candidates, nested = crawler.public_platform_json_candidates(payload, api_url)
+        self.assertEqual(nested, [])
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["name"], candidate["amount"]), ("Single Site", 284))
+        self.assertEqual(candidate["operatorLocationId"], "BCFD")
+        self.assertEqual(candidate["scopeType"], "single-location")
+        self.assertEqual(candidate["commitment"]["type"], "month-to-month")
+        self.assertIn("bcfd-single-site-monthly", candidate["sourceProductAliases"])
+        self.assertEqual(candidate["fees"][0]["amount"], 100)
+        self.assertEqual(candidate["fees"][0]["standardAmount"], 300)
+        self.assertTrue(candidate["fees"][0]["promotionApplied"])
+        self.assertFalse(candidate["promotion"]["isPromotion"])
+
+        gym = {
+            "id": "bay-fidi",
+            "monthlyPrice": 284,
+            "selectedPlanId": "bay-fidi:plan:bcfd-single-site-monthly",
+            "priceSourceUrl": builder,
+            "plans": [{
+                "id": "bay-fidi:plan:bcfd-single-site-monthly",
+                "sourceProductId": "bcfd-single-site-monthly",
+                "name": "Single Site",
+                "billing": {"amount": 284, "normalizedMonthly": 284},
+                "evidence": {"url": builder, "rawLabel": "Single Site"},
+            }],
+        }
+        observation = {**candidate, "gymId": gym["id"], "catalogSourceUrl": builder}
+        audit = crawler.audit_selected_plan_price(gym, [observation])
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "source-product-alias")
+
+    def test_bay_club_calculator_request_contains_no_identity_or_cart_data(self) -> None:
+        url = f"{crawler.BAY_CLUB_API_BASE}/pricing/shared/calculate?clubCode=BCG"
+        payload = json.loads(crawler.bay_club_pricing_request_body(url))
+        self.assertEqual(payload, {
+            "availableInSharedBuilder": True,
+            "clubCode": "BCG",
+            "membersConfigurations": [],
+        })
+        serialized = json.dumps(payload).casefold()
+        self.assertFalse(any(field in serialized for field in (
+            "email", "phone", "name", "address", "cart", "payment", "captcha",
+        )))
+        self.assertEqual(crawler.bay_club_pricing_request_body(
+            "https://oms-sales-api.bayclubs.io/api/1.0/cart/new"
+        ), b"")
+
+    def test_spaced_month_to_month_label_matches_selected_plan_facets(self) -> None:
+        selected = {
+            "name": "Adult Month-to-Month Membership",
+            "evidence": {"rawLabel": "Adult Month-to-Month Membership"},
+            "classAllowance": None,
+        }
+        candidate = {
+            "rawLabel": "MONTH - TO - MONTH Adult Access $99/month",
+            "amount": 99,
+            "classAllowance": None,
+        }
+        self.assertEqual(
+            crawler.selected_plan_candidate_match(selected, candidate),
+            (85, "plan-facets"),
+        )
+
+    def test_intro_and_termination_amounts_do_not_hide_recurring_plan_identity(self) -> None:
+        monthly = {
+            "name": "Month-to-Month Membership",
+            "evidence": {"rawLabel": "Month-to-Month Membership"},
+            "classAllowance": None,
+        }
+        martial_arts_card = {
+            "rawLabel": (
+                "Try your first class for just $25. MONTH - TO - MONTH "
+                "$214 per month"
+            ),
+            "amount": 214,
+            "classAllowance": None,
+        }
+        self.assertEqual(
+            crawler.selected_plan_candidate_match(monthly, martial_arts_card),
+            (85, "plan-facets"),
+        )
+        eight = {
+            "name": "8 Class Monthly",
+            "evidence": {"rawLabel": "8 Class Monthly"},
+            "classAllowance": {"count": 8, "period": "month", "disclosed": True},
+        }
+        lagree_card = {
+            "rawLabel": "$100 termination fee. $119 Buy 8 Class Monthly",
+            "amount": 119,
+            "classAllowance": None,
+        }
+        self.assertEqual(
+            crawler.selected_plan_candidate_match(eight, lagree_card),
+            (90, "exact-plan-label"),
+        )
+
+    def test_undisclosed_legacy_allowance_accepts_more_complete_live_card(self) -> None:
+        selected = {
+            "name": "Monthly Autopay",
+            "evidence": {"rawLabel": "Monthly Autopay"},
+            "classAllowance": {
+                "count": None, "period": "month", "unlimited": False, "disclosed": False,
+            },
+        }
+        candidate = {
+            "rawLabel": "Unlimited Access Membership Monthly Autopay $149 Monthly",
+            "amount": 149,
+            "classAllowance": {"count": None, "period": "month", "unlimited": True},
+        }
+        self.assertEqual(
+            crawler.selected_plan_candidate_match(selected, candidate),
+            (90, "exact-plan-label"),
+        )
+
+    def test_exact_plan_label_can_follow_same_operator_pricing_route(self) -> None:
+        selected_url = "https://folksf.com"
+        gym = {
+            "id": "folk",
+            "monthlyPrice": 89,
+            "selectedPlanId": "folk:plan:mini",
+            "priceSourceUrl": selected_url,
+            "plans": [{
+                "id": "folk:plan:mini",
+                "sourceProductId": "folk-mini",
+                "name": "Folk Mini Membership",
+                "billing": {"amount": 89, "normalizedMonthly": 89},
+                "classAllowance": None,
+                "evidence": {"url": selected_url, "rawLabel": "Folk Mini Membership"},
+            }],
+        }
+        candidate = {
+            "gymId": "folk",
+            "sourceUrl": "https://folksf.com/memberships/",
+            "rawLabel": "Folk Mini Membership for only $89/month",
+            "amount": 89,
+            "cadence": "month",
+            "productType": "monthly",
+            "classAllowance": None,
+            "promotion": {"isPromotion": False},
+            "eligibility": {"type": "standard-adult"},
+        }
+        audit = crawler.audit_selected_plan_price(gym, [candidate])
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "exact-plan-label")
+
+    def test_compact_allowance_cards_are_split_before_generic_context_parsing(self) -> None:
+        offers = crawler.visible_candidates(
+            "Best Value Memberships 4x/month: $110 8x/month: $190 Unlimited: $240",
+            "https://operator.example/packages/",
+        )
+        recurring = [offer for offer in offers if offer.get("adapter") == "allowance-plan-cards"]
+        self.assertEqual([(offer["name"], offer["amount"]) for offer in recurring], [
+            ("4x Monthly", 110), ("8x Monthly", 190),
+        ])
+        self.assertEqual([offer["classAllowance"]["count"] for offer in recurring], [4, 8])
+        self.assertTrue(recurring[0]["bestValueLabel"])
+        self.assertTrue(all(not offer["promotion"]["isPromotion"] for offer in recurring))
+
+    def test_jccsf_card_keeps_standard_enrollment_with_ordinary_adult_dues(self) -> None:
+        offers = crawler.visible_candidates(
+            "Adult Full Access Regular Rate: $198/month + $200 Enrollment Fee. "
+            "Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31. "
+            "Family Full Access includes group fitness and lap pool.",
+            "https://www.jccsf.org/join/",
+        )
+        adult = next(offer for offer in offers if offer.get("sourceProductId") == "adult-full-access")
+        self.assertEqual(adult["amount"], 198)
+        self.assertEqual(adult["fees"], [{
+            "type": "enrollment", "amount": 200, "currency": "USD",
+            "cadence": "one-time", "mandatory": True,
+        }])
+        self.assertFalse(adult["promotion"]["isPromotion"])
+
+    def test_mighty_monthly_card_retains_implied_ten_class_allowance(self) -> None:
+        offers = crawler.visible_candidates(
+            "Mighty Monthly Pass $360/month by Autopay – Our best deal ever at $36/class! "
+            "$75 Off Your First Month for New Members",
+            "https://www.mightypilates.com/presidio-heights/",
+        )
+        self.assertEqual(len(offers), 1)
+        self.assertEqual(offers[0]["sourceProductId"], "mighty-monthly-ten")
+        self.assertEqual(offers[0]["classAllowance"]["count"], 10)
+        self.assertFalse(offers[0]["promotion"]["isPromotion"])
+
+    def test_mighty_monthly_card_is_recovered_from_inline_page_state(self) -> None:
+        offers, _stores, _digest = crawler.parse_page({
+            "url": "https://www.mightypilates.com/presidio-heights/",
+            "contentType": "text/html",
+            "html": (
+                "<html><body><script>window.__STATE__ = "
+                "'Mighty Monthly Pass $360/month by Autopay – Our best deal ever at $36/class!';"
+                "</script></body></html>"
+            ),
+        })
+        mighty = next(item for item in offers if item.get("sourceProductId") == "mighty-monthly-ten")
+        self.assertEqual(mighty["amount"], 360)
+        self.assertEqual(mighty["classAllowance"]["count"], 10)
+
+    def test_transient_refresh_preserves_last_parseable_cache_and_observations(self) -> None:
+        previous_cache = {
+            "status": "fetched",
+            "lastAttemptAt": "2026-08-20T12:00:00+00:00",
+            "parserVersion": "selected-plan-catalog-v9",
+            "contentHash": "abc",
+            "candidates": [{"amount": 125}],
+            "linkedStorefronts": ["https://store.example/pricing"],
+            "locationCandidates": [{"address": "1 Main St"}],
+        }
+        merged = crawler.merge_transient_cache_entry(previous_cache, {
+            "status": "http-429",
+            "lastAttemptAt": "2026-08-21T12:00:00+00:00",
+            "candidates": [],
+            "linkedStorefronts": [],
+            "locationCandidates": [],
+        })
+        self.assertEqual(merged["status"], "http-429")
+        self.assertEqual(merged["candidates"], [{"amount": 125}])
+        self.assertEqual(merged["parserVersion"], "selected-plan-catalog-v9")
+        self.assertEqual(merged["lastSuccessfulAt"], "2026-08-20T12:00:00+00:00")
+
+        existing = [{"gymId": "gym-1", "sourceUrl": "https://gym.example", "kind": "plan", "amount": 125}]
+        retained = crawler.merge_crawl_observations(
+            existing,
+            [],
+            {"gym-1"},
+            [{"gymId": "gym-1", "url": "https://gym.example", "status": "http-429"}],
+        )
+        self.assertEqual(retained, existing)
+
+        removed = crawler.merge_crawl_observations(
+            existing,
+            [],
+            {"gym-1"},
+            [{"gymId": "gym-1", "url": "https://gym.example", "status": "fetched"}],
+        )
+        self.assertEqual(removed, [])
+
+        replacement = {"gymId": "gym-1", "sourceUrl": "https://gym.example", "kind": "plan", "amount": 135}
+        replaced = crawler.merge_crawl_observations(
+            existing,
+            [replacement],
+            {"gym-1"},
+            [{"gymId": "gym-1", "url": "https://gym.example", "status": "fetched"}],
+        )
+        self.assertEqual(replaced, [replacement])
+
+    def test_muscle_beach_catalog_separates_visits_and_household_plan(self) -> None:
+        offers = crawler.visible_candidates(
+            "Day Pass $30 valid 24 hours. Week Pass $70 valid 7 days. "
+            "Monthly Individual Membership $125 unlimited gym visits for 1 person. "
+            "Monthly Couples Membership $200 unlimited gym visits for 2 people.",
+            "https://www.musclebeachsf.com/plans-pricing-1",
+        )
+        by_id = {
+            offer["sourceProductId"]: offer for offer in offers if offer.get("sourceProductId")
+        }
+        self.assertEqual(set(by_id), {"day-pass", "week-pass", "individual-monthly", "couples-monthly"})
+        self.assertEqual(by_id["day-pass"]["productType"], "drop-in")
+        self.assertEqual(by_id["individual-monthly"]["amount"], 125)
+        self.assertTrue(by_id["individual-monthly"]["classAllowance"]["unlimited"])
+        self.assertEqual(by_id["couples-monthly"]["eligibility"]["type"], "household")
+
+    def test_raise_the_bar_public_amount_retains_contact_purchase_constraint(self) -> None:
+        offers = crawler.visible_candidates(
+            "We offer limited gym-only memberships without the requirement of personal training. "
+            "Memberships are $150 per month. Email us to arrange a tour.",
+            "https://www.raisethebarfitness.net/membership",
+        )
+        self.assertEqual(len(offers), 1)
+        self.assertEqual(offers[0]["sourceProductId"], "community-gym-membership")
+        self.assertEqual(offers[0]["purchaseMethod"], "contact-required")
+        self.assertEqual(offers[0]["availability"], "limited")
 
     def test_planet_fitness_presale_is_not_an_eligible_ordinary_plan(self) -> None:
         visible = """PF BLACK CARD® $24.99 /mo Pre-Grand Opening Sale Extended!

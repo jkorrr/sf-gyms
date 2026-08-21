@@ -56,6 +56,7 @@ PROFILES = (
     PlatformProfile("abc-fitness", ("onlinejoin.abcfitness.com",)),
     PlatformProfile("redpoint", ("portal.movementgyms.com",)),
     PlatformProfile("approach", ("portal.approach.app",)),
+    PlatformProfile("bay-club-public-api", ("oms-sales-api.bayclubs.io",)),
 )
 
 FITNESS_SERVICE_RE = re.compile(

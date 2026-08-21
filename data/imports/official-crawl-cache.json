@@ -1338,7 +1338,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Thu, 20 Aug 2026 21:11:16 GMT",
-    "parserVersion": "selected-plan-catalog-v2",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "8f6edbca2593030c3889a787f6920d3f8cab0552e95b71c85176e780ebfe2dd0",
     "candidates": [],
     "linkedStorefronts": [
@@ -1418,7 +1418,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 08:29:40 GMT",
-    "parserVersion": "selected-plan-catalog-v2",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "d79356b18a1214f54994f53b58698e355ee36bd1dcae77ea386b12c73a105cb2",
     "candidates": [],
     "linkedStorefronts": [
@@ -1523,9 +1523,11 @@
   },
   "https://www.beachglasshyp.com/": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -1906,13 +1908,16 @@
   },
   "https://www.cmasf.com/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"09a475be9b57529e91f12184725b4833\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "64505054a6170c73d7a6192a0effb992d8afc3f5a5a16cf87c5608b2d5d11b16",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.cmasf.com/pricing"
+      "https://www.cmasf.com/pricing",
+      "https://www.cmasf.com/faqs"
     ],
     "locationCandidates": [
       {
@@ -4294,9 +4299,11 @@
   },
   "https://evolvestronger.com/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "\"45-1787312968;;;\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v8",
     "contentHash": "9b36b621efb89bd3ff474bf3bec5d65a39e339b589a464bea275d38fd2cdd673",
     "candidates": [],
     "linkedStorefronts": [
@@ -6569,10 +6576,12 @@
     ]
   },
   "https://folksf.com": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Thu, 20 Aug 2026 15:45:15 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "67698058ead02a9ae20eb85eeddf7f19dc8874b78a6afa0efc2952bed7fb3cb6",
     "candidates": [
       {
@@ -6617,7 +6626,9 @@
       "https://folksf.com/memberships/twentyclasspack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406"
     ],
     "locationCandidates": [
       {
@@ -6887,39 +6898,47 @@
   },
   "https://momence.com/video/plugin/35337": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "912981e545a32aa295cc894b688e2fb546f1b881e4329e4dcf9ab71ea9afa4e1",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "d0267601445828785287f86d0a437bfb64872c245d31c651a40276635a812e1d",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://momence.com/Folk-Yoga/gift-card-checkout/35337": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "ec929239a621ada3d41b3b14e352bf4781589473acfc466e5d5678cfe6d57837",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "912254f0233aab59697d7f32a756827a5e7659aa35c4256f9ddac228dacff197",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "2d57a68431dda74056c3a8034eb4d11c4f1411078ce698487a14ad69b4bd7569",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "f3be0ef0ae770b7f40694572870087797ab8239dbffd5177c2a53b30abb40871",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://folksf.com/classes/schedule/richmond/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Tue, 18 Aug 2026 06:52:40 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "f141bf604358f8e8f45e91d00bd5b03eac6a6ae4434f6fcb057419c9d62cfc9a",
     "candidates": [],
     "linkedStorefronts": [
@@ -6931,7 +6950,8 @@
       "https://folksf.com/memberships/twentyclasspack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ"
     ],
     "locationCandidates": [
       {
@@ -7558,9 +7578,11 @@
   },
   "https://www.glowyogasf.com/": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -7872,22 +7894,24 @@
   },
   "https://www.jccsf.org/join/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "7a255319ed9a10162e8693d91d97d3b3cc64601a1afecbf1d970b0c212cbc7e8",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "0f87b595566921ff0449c8ddfb125cc0e2661e899e53729fd63b245b935d32fa",
     "candidates": [
       {
-        "amount": 198.0,
+        "sourceProductId": "adult-full-access",
+        "name": "Adult Full-Access Membership",
+        "amount": 198,
         "currency": "USD",
-        "rawLabel": "discounts around San Francisco Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31 Regular Rate: $198/month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Full fitness-center access including weekly group fitness, lap pool, locker rooms, sauna, and steam room",
+        "scopeType": "single-location",
         "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
@@ -7896,62 +7920,25 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.jccsf.org/join/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 398.0,
-        "currency": "USD",
-        "rawLabel": "dults plus one or more children Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31 Regular Rate: $398/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
         "promotion": {
           "isPromotion": false,
           "label": ""
         },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 200,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Adult Full Access; regular rate $198/month; standard enrollment $200; current enrollment promotion shown separately",
+        "method": "visible-jccsf-adult-membership-catalog",
+        "adapter": "jccsf-adult-membership",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.jccsf.org/join/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 158.0,
-        "currency": "USD",
-        "rawLabel": "bership is for 65+ years of age Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31 Regular Rate: $158/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "exact-location",
         "sourceUrl": "https://www.jccsf.org/join/",
         "autoPublishEligible": false
       }
@@ -8031,12 +8018,15 @@
   },
   "https://www.lagreefit415.com/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Sun, 16 Aug 2026 16:48:49 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "b80d50b72fd29db51e3c1bdeecf63f0c8b814f3b4bed0db7bda00bd1b25fa93e",
     "candidates": [],
     "linkedStorefronts": [
+      "https://www.lagreefit415.com/faqs",
       "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=42",
       "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=41"
     ],
@@ -8058,9 +8048,11 @@
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=42": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -9765,10 +9757,12 @@
   },
   "https://movementgyms.com/san-francisco/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "55a4b7286d3fd84767252c69c3e602af3b16d7cc6697009766397f389a64e474",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "bd51daefdba7c87a3aba05dc4a37383cd057a92e0abbbc37d898111647f039c2",
     "candidates": [
       {
         "kind": "starting-price",
@@ -10049,13 +10043,16 @@
   },
   "https://www.musclebeachsf.com/": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v10",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.mx3fitness.com/": {
     "status": "fetched",
@@ -16813,43 +16810,161 @@
     ]
   },
   "https://www.mightypilates.com/presidio-heights/": {
-    "status": "fetched",
+    "status": "not-modified",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "Fri, 21 Aug 2026 02:20:52 GMT",
-    "contentHash": "19c99580bf85956f0498ff80d31dbdb61d4b42fceff1d7047aa3176471463c42",
-    "candidates": [],
-    "linkedStorefronts": [],
-    "locationCandidates": []
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "e783393e51bb98cf106e15d25bd795188d130c9d1cb9116b1cf36b991ecc9148",
+    "candidates": [
+      {
+        "sourceProductId": "mighty-monthly-ten",
+        "name": "Mighty Monthly Pass",
+        "amount": 360,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Ten reformer Pilates classes monthly at the Presidio Heights studio",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 10,
+          "period": "month",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": true,
+        "rawLabel": "Mighty Monthly Pass $360/month by autopay; 10 classes at $36/class",
+        "method": "visible-mighty-pilates-catalog",
+        "adapter": "mighty-pilates",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 50.0,
+        "currency": "USD",
+        "rawLabel": "also partnering with the garage at 3490 California Street for 1-hour validation. PRICING SINGLE CLASS $50",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://www.mightypilates.com/faq/",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5727345",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5744896&stype=-7&sView=week&sLoc=2",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5743201&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5748750",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=289199&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733789"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "3654 Sacramento Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 3654 Sacramento Street",
+        "contentHash": "39c8720e24593b845a35898f8feabf9eeefaed85e42c4a68b1acdfddcbd8889b",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "3490 California Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 3490 California Street",
+        "contentHash": "9dbf92907968a22673f8a78a06fff750b8e51be415eda03b2e099cab82b8a328",
+        "autoPublishEligible": false
+      }
+    ]
   },
   "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
     "contentHash": "4ddaf9cce224085d625372eac592e2caac1b06377e88655b45a6d245cf38f38c",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5733830&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "fc7e361f6ef3b0fb1c2fba7be2fd0ce1bab5f904c8ffb4608440f7eada2e3948",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "2b4d827cf5ec5ec43d48ccb58489609ed945b625af93de0288846394f9339796",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5747197&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "2fc5214fed494afe08470f8c750934db1fc96f727d7a4b9c3fd6ae4335e987dc",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "664a6d7436c26a472558ac1ac314512fd1102f4bf62e536ea8bc4703f0b78ba5",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5744727&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://www.sfrecpark.org/Facilities/Facility/Details/Mission-Dolores-Park-188": {
@@ -17515,13 +17630,16 @@
   },
   "https://www.raisethebarfitness.net/": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v10",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://regularexercise.net/": {
     "status": "robots-disallowed",
@@ -28753,10 +28871,12 @@
     "locationCandidates": []
   },
   "https://folksf.com/memberships/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Thu, 30 Jul 2026 04:19:27 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "ccfb1839e176576550482f70d00fe42fccae9bcd345352bb00e70200914a476e",
     "candidates": [
       {
@@ -28908,7 +29028,10 @@
       "https://folksf.com/memberships/twentyclasspack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406",
+      "https://folksf.com/memberships/twenty-class-pack/"
     ],
     "locationCandidates": [
       {
@@ -29124,10 +29247,12 @@
     ]
   },
   "https://folksf.com/memberships/wellness-services/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Thu, 20 Aug 2026 17:44:22 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "a2bdcf001431a93b0e073d550d7b0b15f2c28a6e5a1493af38241d17a5a0ed03",
     "candidates": [
       {
@@ -29195,15 +29320,20 @@
       "https://folksf.com/memberships/twentyclasspack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/appointments/appointment-reservation/35337",
+      "https://momence.com/m/523871"
     ],
     "locationCandidates": []
   },
   "https://folksf.com/memberships/single-class-pass/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 07 Aug 2026 18:50:07 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "d3d544d6bc9541bc806d84de793aea90544df824f20f3715b9d1b368ca8c9802",
     "candidates": [
       {
@@ -29242,15 +29372,19 @@
       "https://folksf.com/memberships/twentyclasspack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406"
     ],
     "locationCandidates": []
   },
   "https://folksf.com/memberships/ten-class-pack/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Sat, 15 Aug 2026 19:36:36 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "3d8a7c56446cd2c482dfa1472f3e7437eda9d36ce5782ab5892850fe678644a4",
     "candidates": [
       {
@@ -29341,15 +29475,19 @@
       "https://folksf.com/memberships/twentyclasspack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/Folk/membership/10-Class-Pack/142404"
     ],
     "locationCandidates": []
   },
   "https://folksf.com/memberships/twentyclasspack/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Thu, 20 Aug 2026 21:43:10 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "3917aa48a51d2238ea9df57e9792275b7cecca2851aac82855cde33d7573ad74",
     "candidates": [
       {
@@ -29440,15 +29578,19 @@
       "https://folksf.com/memberships/ten-class-pack/",
       "https://folksf.com/memberships/all-access-membership/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/m/143951"
     ],
     "locationCandidates": []
   },
   "https://folksf.com/memberships/all-access-membership/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 31 Jul 2026 20:34:40 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "295aed7bf9aae6c6f5ecc3984c4b71601e74dd1b537b4acaacccb41a149c575d",
     "candidates": [
       {
@@ -29517,7 +29659,9 @@
       "https://folksf.com/memberships/ten-class-pack/",
       "https://folksf.com/memberships/twentyclasspack/",
       "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
-      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406"
+      "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
+      "https://momence.com/u/folk-loPgJZ",
+      "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406"
     ],
     "locationCandidates": []
   },
@@ -36088,8 +36232,8 @@
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v2",
+    "lastModified": "Fri, 21 Aug 2026 02:16:36 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "9ad795d0358f5ef5e810b1baac14e67c049e64cbada10f0f15c68aeaa90b44ca",
     "candidates": [],
     "linkedStorefronts": [],
@@ -37223,9 +37367,11 @@
   },
   "https://www.cmasf.com/pricing": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "W/\"875589752b8d905f71b45a6ac231d28f--gzip\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "b7492110b0ce013965f7f0f54fc9d0c36d34c07a5bee681a73482594683a4390",
     "candidates": [
       {
@@ -37334,7 +37480,8 @@
       }
     ],
     "linkedStorefronts": [
-      "https://www.cmasf.com/pricing#page"
+      "https://www.cmasf.com/pricing#page",
+      "https://www.cmasf.com/faqs"
     ],
     "locationCandidates": [
       {
@@ -40526,9 +40673,11 @@
   },
   "https://evolvestronger.com/contact/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "\"39-1787275109;;;\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v8",
     "contentHash": "ceff2505ffc8812eb048abc24a758e164757adcc7e6f0ff61772ecc73b154049",
     "candidates": [],
     "linkedStorefronts": [
@@ -40568,20 +40717,26 @@
   },
   "https://evolvestronger.com/packages/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "\"38-1787271320;;;\"",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v8",
     "contentHash": "149b062e303df67d58e98b4a93fbf138eb143f8552b096e49979bfb2eaad2c63",
     "candidates": [
       {
-        "amount": 100.0,
+        "sourceProductId": "",
+        "name": "4x Monthly",
+        "amount": 110.0,
         "currency": "USD",
-        "rawLabel": "option that works best for you and start evolving today! Private Sessions Private Sessions $150 Semi-Private: $100 session/client (2-3 members) Class Packages Flexible options No Monthly",
+        "rawLabel": "4x Monthly $110/month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
         "classAllowance": {
-          "count": 100.0,
-          "period": "month"
+          "count": 4,
+          "period": "month",
+          "unlimited": false
         },
         "promotion": {
           "isPromotion": false,
@@ -40595,22 +40750,29 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [],
+        "bestValueLabel": true,
+        "method": "visible-allowance-plan-card",
+        "adapter": "allowance-plan-cards",
         "evidenceTier": "official-public",
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://evolvestronger.com/packages/",
+        "contentHash": "0d5ec8e5bb3f73535fe8c5017cb2c73f55ffe7d46ad811c6150d67afe67b73b7",
         "autoPublishEligible": false
       },
       {
-        "amount": 110.0,
+        "sourceProductId": "",
+        "name": "8x Monthly",
+        "amount": 220.0,
         "currency": "USD",
-        "rawLabel": "expire 14 days /5 Classes and unlimited expires 30 days from purchase date) Best Value Memberships 4x/month: $110 8x/month",
+        "rawLabel": "8x Monthly $220/month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
         "classAllowance": {
-          "count": 5.0,
-          "period": "month"
+          "count": 8,
+          "period": "month",
+          "unlimited": false
         },
         "promotion": {
           "isPromotion": false,
@@ -40624,11 +40786,14 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [],
+        "bestValueLabel": true,
+        "method": "visible-allowance-plan-card",
+        "adapter": "allowance-plan-cards",
         "evidenceTier": "official-public",
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://evolvestronger.com/packages/",
+        "contentHash": "21f5baac15ce1d8574d89ad954b50c4ccfaa0eb415fdeb928875d35110f6a320",
         "autoPublishEligible": false
       },
       {
@@ -40698,9 +40863,11 @@
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5742110&stype=41": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v8",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -41859,9 +42026,11 @@
   },
   "https://www.glowyogasf.com/faq": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -43406,10 +43575,12 @@
   },
   "https://www.jccsf.org/join/jccsf-mobile-app/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "1abcbb555bf49fa8b4a52ee1c8692a4f4a983dcc7b201f651859d687e89f9e45",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "a221fb310c5a5949cb958c15aa3e53d0adb61b51b28eee5c6a0c50a021e09c6e",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/"
@@ -43432,22 +43603,24 @@
   },
   "https://www.jccsf.org/join/referafriend/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "9314ab3cd8f3fb89466954cd82ba8c02651ef38e3b00e4bf2fe432dab049e2ee",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "af372c69afad82074ca97a46b2a9207c4690af16dee551888ab65f5c529cd8b4",
     "candidates": [
       {
-        "amount": 198.0,
+        "sourceProductId": "adult-full-access",
+        "name": "Adult Full-Access Membership",
+        "amount": 198,
         "currency": "USD",
-        "rawLabel": "tuition) Earn rewards from our JCCSF Perks loyalty program Local discounts around San Francisco Regular Rate: $198/month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "Full fitness-center access including weekly group fitness, lap pool, locker rooms, sauna, and steam room",
+        "scopeType": "single-location",
         "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
         "eligibility": {
           "type": "standard-adult",
           "restrictions": []
@@ -43456,62 +43629,25 @@
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.jccsf.org/join/referafriend/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 398.0,
-        "currency": "USD",
-        "rawLabel": "ocal discounts around San Francisco Family membership is for 2 adults plus one or more children Regular Rate: $398/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
         "promotion": {
           "isPromotion": false,
           "label": ""
         },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 200,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Adult Full Access; regular rate $198/month; standard enrollment $200; current enrollment promotion shown separately",
+        "method": "visible-jccsf-adult-membership-catalog",
+        "adapter": "jccsf-adult-membership",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.jccsf.org/join/referafriend/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 158.0,
-        "currency": "USD",
-        "rawLabel": "lty program Local discounts around San Francisco Older adult membership is for 65+ years of age Regular Rate: $158/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "exact-location",
         "sourceUrl": "https://www.jccsf.org/join/referafriend/",
         "autoPublishEligible": false
       }
@@ -43526,10 +43662,12 @@
   },
   "https://www.jccsf.org/join/jccsf-perks/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "3495d21ea7950eb34d8ca2793dc21568ba8618a75449b78f9ebe2527ee71613b",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "b786790012a1eda01da145bad46f66ad01c9ae72e6c49173d462f7555b525788",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/",
@@ -43553,10 +43691,12 @@
   },
   "https://www.jccsf.org/join/community-membership/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "e67d40bfb71b188b27c0bdc53f01e12d6459b00ca076730fefd320babbb9d978",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "99e97bc21bbcffca45cbbc37aa6116fb3f002c4ec2fc620e9ec1eb7e6b7fcd05",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/"
@@ -43579,10 +43719,12 @@
   },
   "https://www.jccsf.org/join/fitness-full-access/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "4adca9fb81b4cfa378527a7a955312a196ce831926e194e523f53bb1da8902f2",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "1b19035a9ef47620b9ac29e509490a556aa8fa7310845207db8dcda1d69da0ac",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/",
@@ -43607,10 +43749,12 @@
   },
   "https://www.jccsf.org/join/community-membership-2/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "1710db222046d40e2ce4769d37207d9a6ce4af37686c1740a542739be8c6ed72",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "c41d39a51b9e2378eb4ad2d31127fc0aa703ed2f4a73de5995af3495b2a25be4",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/",
@@ -43634,10 +43778,12 @@
   },
   "https://www.jccsf.org/join/jccsf-perks/jccsf-perks-information-update-form/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "fc6020907c3249c8a11f07d8da5742a1e54822cd9e8f853c2c6b05bd925d8969",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "488e280cc400912162efb1209aac0b282803a81add7658d31c448aee33400f66",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/",
@@ -43661,10 +43807,12 @@
   },
   "https://www.jccsf.org/join/new-fitness-enhancements/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "357d8f9372d558c6bf543b9625348eaec071b32b9a5df5ca4b9e900f7396f9ee",
+    "parserVersion": "selected-plan-catalog-v9",
+    "contentHash": "68fdb3d6e369b880345eff995bd05a8e4cdaaeb50692483176d431ee4f3bc0b1",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.jccsf.org/join/"
@@ -44035,9 +44183,11 @@
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=41": {
     "status": "http-403",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -44780,10 +44930,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "bfb3be99b86ad594201ac78d3fbe7181d6260943acfa900bab885bac5c5afe9e",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "1f0940be7ba11e9f87a5cdbb97ceeb761809922a0db35071ef54a2f0375f32b9",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44803,10 +44955,12 @@
   },
   "http://portal.movementgyms.com/profile": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "395d7b303aea32e1b8e3efdf239d70fc1186990b0c0abf59f4802bc64f786eb9",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "d1a91efdd06e9fa7fc27b1e5253e2f912fab5b6d43937410341f56a85d0dcd51",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/"
@@ -44815,10 +44969,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/memberships-passes": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "ffac8f048d150e14e219ba60d349a24fc3dfd5b4651a4b6ded39ae8c97c5778b",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "818375190dd9effc68a78498ca6e22b36010cb0cf41bdd6821cfebe2c222b631",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44838,10 +44994,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "d7ff7a01752ed687da9bd76c3ca79aa7950fa3049b24002e1c36efd74a4187bd",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "7d82eaf6710d5bb5c8c610b1213e4b78744bd5c83f11d6adb86cd3249021a436",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44861,10 +45019,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/memberships/trial-membership": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "e231d008b57c37d1b940c7d8fa782b379ff067596c59d6a66c9a21761d4e0ea2",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "7ab582f83fc6ddcde2b1ebba762b0c52e07fb28e2f3388c0f2afee1566b00ee9",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44884,10 +45044,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/referral-memberships": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "b12a55d02d437cc861000228a9828f0a2d754421e44d192c2ad4b97d8fcbe659",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "8f52ad6c3df75356775b2996b62d8f55f770bbb9b10a387ae14a0465b8bcae9b",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44907,10 +45069,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/programs/book-a-tour": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "7a2b45176dfdb95ce40c79cb911e784db88a7241fabe39ba0c051cb8672bde32",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "5c3ad0cda4e3e1370d0c524050d0b4a04f9b683e479feac6dd94075e9e1648d7",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44930,10 +45094,12 @@
   },
   "https://portal.movementgyms.com/profile": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "22a123af35827ab5d13c1bd8664718528108ad1d1d3424ba2682ac3b46fcb8d8",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "e44570b66b707079efd3ee07d8262a07ca3dbc8330d1e70648f0359e844e1edc",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/"
@@ -44942,10 +45108,12 @@
   },
   "https://portal.movementgyms.com/san-francisco": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "21bb6ce1f055c2b42fe962855a9b421014aa96b4b42e3856949481a4578a9efd",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "be83b239fb91a1c1102b5cc0f448f1c7623b04b6914555c22244b758aaae16a4",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44965,10 +45133,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/climbing-instruction": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "622ea76e78332eca57ed6e71c745141fe3b69bb41e89536c01ce148801650e30",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "a0bf142ebc5098a8683276f927a677795d4649d7a0527493d7db589a0466e731",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -44988,10 +45158,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/youth-programs": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "c2b3e501c87455d799be224e06c08151fa67841128bfa66316fda81301ec03cc",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "999413ea21379e0781da5cb790bd566c783cc7d81075500891719ca660e52b7a",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -45011,10 +45183,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "9e90bbc13cfd2c947e45820c896febb11d58dc0220222ce7d4ea55562b285e50",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "2026611f9ea8f2a1b1a55580944311c3a8121e5dc39b0d6e68cddbbe502fa10a",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -45034,10 +45208,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/memberships": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "ad3b5f00b26f771e8fb00796b58b256706d67bb18ea9e64c90b934e135a098cb",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "c380c7ba8358f7324c4b3b6c26231738ef97160007a4d117aea2151a383984b6",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -45057,10 +45233,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "d143925508529de02dd65fc1105bd76082c05b0b4a8507c81aeccc5e406aa199",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "7ec42d9db12c4aec365d069b80de03bc9dcef18a53d50c21259b9f2f79ba7933",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -45080,10 +45258,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/n/passes": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "f26a8fdd76b1727e0d32aba3b603dee01722ed8d4739c156765e1557de47f93c",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "a43067bebc10e3c3fe9d6446138dc8b02ba8b8ca9b3df541cac2e6b2a4bdb856",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -45103,10 +45283,12 @@
   },
   "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "59790ab331c58d2e96f9adc804965738b93ca69e6a6d1f640967ed79444bb2b8",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "888994569be743da2b80f3c113ae1f5a41963a4dc2ab4a09632c6f7b34dc00c6",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/san-francisco",
@@ -45126,10 +45308,12 @@
   },
   "https://portal.movementgyms.com/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "5c9cc8faf79191f34c0e79b9bbca320d3a577fda66944c521e69af6cd435ec42",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "3c312090fb7cb36ac3af6644e401f9f472f9d75e90e8458f79bde0954130c404",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/",
@@ -45149,10 +45333,12 @@
   },
   "https://portal.movementgyms.com/belmont": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "21038e91f74b1bd2695609c715e1d1c1a0f5a2831be875152f7aa4778b93b1bd",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "ee169d3c43926128038bcc01beedb131228272c6701cf75db11090bef47cf657",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/belmont",
@@ -45172,10 +45358,12 @@
   },
   "https://portal.movementgyms.com/fountain-valley": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "bd817b69acb836650403be5a4584a737a4176139dae700c614ef7171e8eb8851",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "cc152c8f7cb049112060fd260ed536641918ad7693ffbbf3f4d5c11903d4c3b6",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/fountain-valley",
@@ -45195,10 +45383,12 @@
   },
   "https://portal.movementgyms.com/mountain-view": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "e03dbbf6cab4a539f99cded2442357137d15b857444ebbc058ca127d7599e000",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "1d6e5dba231763e3ee17662aa578d48b5bc8669a9b3052f945d5a05334b9e776",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/mountain-view",
@@ -45218,10 +45408,12 @@
   },
   "https://portal.movementgyms.com/santa-clara": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "6954965f7944a04a0aaabda6217cd5e04feec208875266fd0c413ba7980e761d",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "308ad296f30776120482fd9523267a3603d39be6757a9662e2f85157ef7a537d",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/santa-clara",
@@ -45241,10 +45433,12 @@
   },
   "https://portal.movementgyms.com/sunnyvale": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "6ba6488e554c7422706cd755055a642a52a41c5dc9eb5dbc7513806e7937f67b",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "1ee2dbaa2f53473435dbc73cce0d4efa2431192a322379773a4e312c1360e4d1",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/sunnyvale",
@@ -45264,10 +45458,12 @@
   },
   "https://portal.movementgyms.com/baker": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "af59ad9b9ea8b85865c84b6702ee483166dc7a65305ada389be212618a0421a4",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "24c86b569f7beb04f5c7e11ae43c81f896017f7202acd990fa2906b9bc3ec948",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/baker",
@@ -45287,10 +45483,12 @@
   },
   "https://portal.movementgyms.com/boulder": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "10cf004d34d4851ca361a0183a93efbe7b80316954d23082413c9ed7dae44c0a",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "33894dd0b59ae0cf721b1feb03a3361618bbaf0be82eb0c9a3cc369c40fb2570",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/boulder",
@@ -45310,10 +45508,12 @@
   },
   "https://portal.movementgyms.com/centennial": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "c1be77bd05b5739bb2e04714a2755bd7e027fc735340189f3e5dffbe30a6c6b0",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "6e7eddef37d59d48bf4a7516e59179b46bcaa7548adc83d1d2c196c6426959b4",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/centennial",
@@ -45333,10 +45533,12 @@
   },
   "https://portal.movementgyms.com/englewood": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "de56184b00e41568d7289136fa9b989dfa44c0af71c217acd19980a4c550a7d4",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "c27e12dc9210f9a95bcc5ef563fcf03467b0801c6a55079745d666f71e8ebeb1",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/englewood",
@@ -45356,10 +45558,12 @@
   },
   "https://portal.movementgyms.com/golden": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "f4e7182542d5d33e6e64d24121c6aa2a4593c945ce7cbf8146f0ed702d856077",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "4c8c68fa65446a796ff8e5c30bd30ff8a0ca8cd3cfaa0d7314797b81671af1c7",
     "candidates": [],
     "linkedStorefronts": [
       "https://portal.movementgyms.com/golden",
@@ -45379,13 +45583,16 @@
   },
   "https://www.musclebeachsf.com/plans-pricing-1": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v10",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://mx3fitness.com/monthly-signup": {
     "status": "fetched",
@@ -46344,13 +46551,16 @@
   },
   "https://www.raisethebarfitness.net/membership": {
     "status": "http-429",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v10",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://risecombatsf.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=45C01DA2-4287-40CA-A588-C08857AEE080&personId=5F11FF91-C682-419E-8C6C-44EEB385B137": {
     "status": "robots-disallowed",
@@ -53302,10 +53512,12 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 05 Aug 2026 05:56:52 GMT",
-    "parserVersion": "selected-plan-catalog-v2",
+    "parserVersion": "selected-plan-catalog-v6",
     "contentHash": "f4f5f1f384406b2d9cd8b9a3b8da047e07566ab39f38cbdeae4e5df2c755cdec",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://oms-sales-api.bayclubs.io/api/1.0/clubs"
+    ],
     "locationCandidates": []
   },
   "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available": {
@@ -55624,6 +55836,1167 @@
         "autoPublishEligible": false
       }
     ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/clubs": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "b8ed8ef389da48099d5f4e22ae9f3bf3b13ef7f6e72156cf179421f75399e7d3",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCSF",
+      "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF"
+    ],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCFD": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "b19c40949f3c79cf607d1e3458a269efffd3e2e3b579c9fa0810759332787c2a",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD"
+    ],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "d3f45ecf3c08ccbe9c51766911064359d4c689f3f8a4df5532812c4e58a7c907",
+    "candidates": [
+      {
+        "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
+        "sourceProductAliases": [
+          "club_west_gold_shared",
+          "bcfd-club-west-gold-monthly"
+        ],
+        "operatorLocationId": "BCFD",
+        "name": "Club West Gold",
+        "amount": 465.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCSC",
+          "BCRS",
+          "BCG",
+          "BCCS",
+          "BCCV",
+          "BCM",
+          "BCSSF",
+          "BCRV",
+          "BCST",
+          "BCES",
+          "BCRB",
+          "BCPO",
+          "BCFD",
+          "BRGC",
+          "FRCC",
+          "BCBT",
+          "BCCC",
+          "BCRH",
+          "BCSM",
+          "BCWC",
+          "BCP"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": ""
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 2500.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": true,
+        "rawLabel": "Club West Gold $465/month; home club BCFD; current initiation $2500",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+        "contentHash": "8d7c77b5345323c622c66dbfb88c28ad181c1f57853f58ed7e2df81ed64853ea",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
+        "sourceProductAliases": [
+          "executive_club_north_bay_shared",
+          "bcfd-executive-north-monthly"
+        ],
+        "operatorLocationId": "BCFD",
+        "name": "Executive Club North Bay",
+        "amount": 350.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCFD",
+          "BCG",
+          "BCM",
+          "BCSSF",
+          "BCST",
+          "BCP",
+          "BCF",
+          "BCWC",
+          "BCRH",
+          "BCCC"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": "Join by August 31, 2026 and receive initiation fee savings!"
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 300.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true,
+            "standardAmount": 1000.0,
+            "promotionApplied": true,
+            "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Executive Club North Bay $350/month; home club BCFD; current initiation $300; standard initiation $1000",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+        "contentHash": "ac5b7f47e841272c217594493effaf0e1e5e0c97dc33c36fe24ab3f51b17e37b",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
+        "sourceProductAliases": [
+          "executive_club_south_bay_shared",
+          "bcfd-executive-south-monthly"
+        ],
+        "operatorLocationId": "BCFD",
+        "name": "Executive Club South Bay",
+        "amount": 395.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Executive Club South Bay is our premiere membership for fitness, group exercise, aquatics, pickleball, family - and more! - with full access to Santa Clara, Redwood Shores, and Courtside locations, as well as access to San Francisco campus and East Bay campus. Our entry-level membership for racquet sports offers 3-day advanced booking for pickleball at all South Bay locations and 3-day advanced booking for squash at select clubs; tennis is complimentary at Santa Clara, Pleasanton, and Fremont (court fees apply at South San Francisco; tennis access not included at Redwood Shores and Courtside). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCSC",
+          "BCFD",
+          "BCRS",
+          "BCCS",
+          "BCSSF",
+          "BCP",
+          "BCF",
+          "BCWC",
+          "BCBT",
+          "BCCC"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": "Join by August 31, 2026 and receive initiation fee savings!"
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 400.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true,
+            "standardAmount": 1000.0,
+            "promotionApplied": true,
+            "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Executive Club South Bay $395/month; home club BCFD; current initiation $400; standard initiation $1000",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+        "contentHash": "04ca2edbe3ed2975439d341b0594f2178647ef0ca48c7ddf6155c3579a725147",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "88a5f2b2-a3d1-49d9-3aba-08def76b4fa5",
+        "sourceProductAliases": [
+          "single_site_financial_district_shared",
+          "bcfd-single-site-monthly"
+        ],
+        "operatorLocationId": "BCFD",
+        "name": "Single Site",
+        "amount": 284.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Perfect for those working in the Financial District of San Francisco, our single-site membership offers full access to Bay Club Financial District and off-peak access to Bay Club San Francisco (Monday-Thursday after 7pm, Friday after 2pm and anytime weekends) and includes fitness amenities and group exercise programs designed to enhance your active lifestyle.",
+        "scopeType": "single-location",
+        "accessibleLocationIds": [
+          "BCFD"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": "Join by August 31, 2026 and receive initiation fee savings!"
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true,
+            "standardAmount": 300.0,
+            "promotionApplied": true,
+            "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Single Site $284/month; home club BCFD; current initiation $100; standard initiation $300",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+        "contentHash": "48ef30e3f5d68c115e8757ae75b51cd56c9bf18f59ba7cf9d485d9d91d19c762",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCG": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "8678fa07ffa989263d400391c5e7cf1929a9e84c57b572f710aa81136664c83b",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG"
+    ],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "35465cbf39d5bac9bba89b5dd3d58d88350a6d7f9853642aeaef1553050b755c",
+    "candidates": [
+      {
+        "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
+        "sourceProductAliases": [
+          "club_west_gold_shared",
+          "bcg-club-west-gold-monthly"
+        ],
+        "operatorLocationId": "BCG",
+        "name": "Club West Gold",
+        "amount": 465.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCSC",
+          "BCRS",
+          "BCG",
+          "BCCS",
+          "BCCV",
+          "BCM",
+          "BCSSF",
+          "BCRV",
+          "BCST",
+          "BCES",
+          "BCRB",
+          "BCPO",
+          "BCFD",
+          "BRGC",
+          "FRCC",
+          "BCBT",
+          "BCCC",
+          "BCRH",
+          "BCSM",
+          "BCWC",
+          "BCP"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": ""
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 2500.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": true,
+        "rawLabel": "Club West Gold $465/month; home club BCG; current initiation $2500",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
+        "contentHash": "120d089323f47164e845a7666e45c8d9c4e875ec5ff9e3486fd21638480531a0",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
+        "sourceProductAliases": [
+          "executive_club_north_bay_shared",
+          "bcg-executive-north-monthly"
+        ],
+        "operatorLocationId": "BCG",
+        "name": "Executive Club North Bay",
+        "amount": 350.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCFD",
+          "BCG",
+          "BCM",
+          "BCSSF",
+          "BCST",
+          "BCP",
+          "BCF",
+          "BCWC",
+          "BCRH",
+          "BCCC"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": "Join by August 31, 2026 and receive initiation fee savings!"
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 300.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true,
+            "standardAmount": 1000.0,
+            "promotionApplied": true,
+            "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Executive Club North Bay $350/month; home club BCG; current initiation $300; standard initiation $1000",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
+        "contentHash": "b9360fd0daf3753ab162774c7d4731ee9dbfc8b1b43cf420f463508e23283a83",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/products/shared/BCSF": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "738ce6d498a3efbcbdbcf7a3b5bb90c72f0871fe4703bcf6a1e4d474b217b931",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF"
+    ],
+    "locationCandidates": []
+  },
+  "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "03c1bf2454180d83b8c389f0920d8dd1af199346b45500c4876197bcf57e2915",
+    "candidates": [
+      {
+        "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
+        "sourceProductAliases": [
+          "club_west_gold_shared",
+          "bcsf-club-west-gold-monthly"
+        ],
+        "operatorLocationId": "BCSF",
+        "name": "Club West Gold",
+        "amount": 465.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCSC",
+          "BCRS",
+          "BCG",
+          "BCCS",
+          "BCCV",
+          "BCM",
+          "BCSSF",
+          "BCRV",
+          "BCST",
+          "BCES",
+          "BCRB",
+          "BCPO",
+          "BCFD",
+          "BRGC",
+          "FRCC",
+          "BCBT",
+          "BCCC",
+          "BCRH",
+          "BCSM",
+          "BCWC",
+          "BCP"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": ""
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 2500.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": true,
+        "rawLabel": "Club West Gold $465/month; home club BCSF; current initiation $2500",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+        "contentHash": "8670e592f9439d94992f4a3bbdbbb2981140a1070e670395b94c5fd7869e6d71",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
+        "sourceProductAliases": [
+          "executive_club_north_bay_shared",
+          "bcsf-executive-north-monthly"
+        ],
+        "operatorLocationId": "BCSF",
+        "name": "Executive Club North Bay",
+        "amount": 350.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCFD",
+          "BCG",
+          "BCM",
+          "BCSSF",
+          "BCST",
+          "BCP",
+          "BCF",
+          "BCWC",
+          "BCRH",
+          "BCCC"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": "Join by August 31, 2026 and receive initiation fee savings!"
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 300.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true,
+            "standardAmount": 1000.0,
+            "promotionApplied": true,
+            "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Executive Club North Bay $350/month; home club BCSF; current initiation $300; standard initiation $1000",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+        "contentHash": "3ede02f524532087f51460794c989180b1b7784bf20e38fac41215fe16229141",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
+        "sourceProductAliases": [
+          "executive_club_south_bay_shared",
+          "bcsf-executive-south-monthly"
+        ],
+        "operatorLocationId": "BCSF",
+        "name": "Executive Club South Bay",
+        "amount": 395.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Executive Club South Bay is our premiere membership for fitness, group exercise, aquatics, pickleball, family - and more! - with full access to Santa Clara, Redwood Shores, and Courtside locations, as well as access to San Francisco campus and East Bay campus. Our entry-level membership for racquet sports offers 3-day advanced booking for pickleball at all South Bay locations and 3-day advanced booking for squash at select clubs; tennis is complimentary at Santa Clara, Pleasanton, and Fremont (court fees apply at South San Francisco; tennis access not included at Redwood Shores and Courtside). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+        "scopeType": "multi-location",
+        "accessibleLocationIds": [
+          "BCSF",
+          "BCSC",
+          "BCFD",
+          "BCRS",
+          "BCCS",
+          "BCSSF",
+          "BCP",
+          "BCF",
+          "BCWC",
+          "BCBT",
+          "BCCC"
+        ],
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Monthly billing available"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": "",
+          "context": "Join by August 31, 2026 and receive initiation fee savings!"
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee",
+            "amount": 400.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true,
+            "standardAmount": 1000.0,
+            "promotionApplied": true,
+            "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Executive Club South Bay $395/month; home club BCSF; current initiation $400; standard initiation $1000",
+        "method": "public-bay-club-membership-calculator",
+        "adapter": "bay-club-public-api",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+        "contentHash": "489b34cf83f80d04034c3a1e5063fa43673bac14579cb07bf1ae8533480f47b2",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.cmasf.com/faqs": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"8400ba0643d6d4ae6e0a8d5a12d1d833\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "c3aa5f04b0a800152ee3826b1e293cde871b68a009f4d1d054d5271aa469278d",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.cmasf.com/faqs#page",
+      "https://www.cmasf.com/pricing"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.cmasf.com/faqs",
+        "method": "json-ld-location",
+        "rawLabel": "| | []",
+        "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "1217 Polk St San Francisco, CA 94109",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.cmasf.com/faqs",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1217 Polk St San Francisco, CA 94109",
+        "contentHash": "785b046e1eb8e26a50b6eb102375487d56f66b96fd5a8be302e8e777e44d7bf6",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://momence.com/u/folk-loPgJZ": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "8b40cdcf037edd05db31a8dac6850182ae734a0bfe4f1425a395d8fc09e32c58",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/Folk/membership/New-Student%3A-All-Access-Membership-(%2479-%3E%3E-%24199)/142406": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "dacb2a9535d2bf1ae1fcd9e3879f3b8dab70dadd16fcf96ba5719c5d0d3db7b2",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://folksf.com/memberships/twenty-class-pack/": {
+    "status": "http-301",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/appointments/appointment-reservation/35337": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "8c7c6ee6daf2d95ff16f880e89b189e6ab47bd9f82235e9d70db2993b3cf3ae7",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/523871": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "321c7bedb0ef6586a2e07bfba917397568d286dd36eb7a5757bfcedfba709559",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/Folk/membership/10-Class-Pack/142404": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "ead8fc159cef325301eec57c518648fc207350f95662e8a70f2788f966c0fdf0",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/143951": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "02328c7ff4c4334dd33801e2ef36efcda42c174b243a1e64f379584e92aa4e14",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.lagreefit415.com/faqs": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Tue, 18 Aug 2026 09:34:29 GMT",
+    "parserVersion": "selected-plan-catalog-v6",
+    "contentHash": "b91712090283c60e97a695a2008f8caa7b52873644832f9be9f8405d68bf15d2",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=42",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=41"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "112 Channel St, San Francisco, CA 94158",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.lagreefit415.com/faqs",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 112 Channel St, San Francisco, CA 94158",
+        "contentHash": "26e20969d61284ecf09674f01e15b59a0ae95682ef5d558d8145d92600b88053",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://www.mightypilates.com/faq/": {
+    "status": "not-modified",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "5df20774dff25e6c76a3669cef69e21c570a36e73cdd5c2d40d382b8faa6550e",
+    "candidates": [
+      {
+        "amount": 360.0,
+        "currency": "USD",
+        "rawLabel": "all classes, privates and workshops for yourself. The Mighty Monthly pass is $330 (LA, Berkeley, Lafayette) $360 (SF/Marin) and monthly",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.mightypilates.com/faq/",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 36.0,
+        "currency": "USD",
+        "rawLabel": "billed on Autopay, with a 3 month minimum. This is our best deal ever at $33/$36 class. You are also still eligible for our ongoing Monthly",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "fixed-term",
+          "minimumMonths": 3
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.mightypilates.com/faq/",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5727345",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5744896&stype=-7&sView=week&sLoc=2",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5743201&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5748750",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=289199&stype=-7&sView=week&sLoc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733789",
+      "https://www.mightypilates.com/faq/#top-of-page"
+    ],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/mainclass?studioid=5727345": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "4ddaf9cce224085d625372eac592e2caac1b06377e88655b45a6d245cf38f38c",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5727345&stype=41&pMode=1"
+    ],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5744896&stype=-7&sView=week&sLoc=2": {
+    "status": "http-403",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5743201&stype=-7&sView=week&sLoc=1": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "b9a149c17c32fef60eb2df9813ba824fb6d3f0f9887fdc9f26e35b83969afaa2",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5743201&stype=41&pMode=1"
+    ],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank": {
+    "status": "http-403",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "0e32fd6dc345771ce26bf63dba484a73b48f5154c40ebf08f4a1c98c0a3990ed",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5741057&stype=41&pMode=1"
+    ],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/mainclass?studioid=5748750": {
+    "status": "http-403",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=289199&stype=-7&sView=week&sLoc=1": {
+    "status": "http-403",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733789": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "4ddaf9cce224085d625372eac592e2caac1b06377e88655b45a6d245cf38f38c",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5733789&stype=41&pMode=1"
+    ],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5733830&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "a65965b14582d2ad96e7212d310732cc401bc713209e8666d0b33cc6b0efcfe0",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5744727&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5727345&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5743201&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "6a5a389dd115dff0bdf6a3cbb6b40248bcb7d30bb88784c7052d736252c904d4",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=9185&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "330a504a73e467617fb03c76f4fce8e5dbfb80f9e8ac96f3c03e8478579e495b",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5741057&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "4960186a0078daa69893e0b309d32f08de8444185f7a011528639254dbe37529",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5748750&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "4960186a0078daa69893e0b309d32f08de8444185f7a011528639254dbe37529",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=289199&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "330a504a73e467617fb03c76f4fce8e5dbfb80f9e8ac96f3c03e8478579e495b",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5733789&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "6a5a389dd115dff0bdf6a3cbb6b40248bcb7d30bb88784c7052d736252c904d4",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5747197&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v13",
+    "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
+    "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   }

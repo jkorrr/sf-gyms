@@ -5520,52 +5520,25 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://evolvestronger.com/packages/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://evolvestronger.com/packages/"
     },
     {
       "gymId": "osm-node-2652517824",
       "gymName": "Evolve Pilates Studio",
       "capturedAt": "2026-08-21",
-      "amount": 100.0,
-      "currency": "USD",
-      "rawLabel": "option that works best for you and start evolving today! Private Sessions Private Sessions $150 Semi-Private: $100 session/client (2-3 members) Class Packages Flexible options No Monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": 100.0,
-        "period": "month"
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://evolvestronger.com/packages/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2652517824",
-      "gymName": "Evolve Pilates Studio",
-      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "4x Monthly",
       "amount": 110.0,
       "currency": "USD",
-      "rawLabel": "expire 14 days /5 Classes and unlimited expires 30 days from purchase date) Best Value Memberships 4x/month: $110 8x/month",
+      "rawLabel": "4x Monthly $110/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
       "classAllowance": {
-        "count": 5.0,
-        "period": "month"
+        "count": 4,
+        "period": "month",
+        "unlimited": false
       },
       "promotion": {
         "isPromotion": false,
@@ -5579,12 +5552,56 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "bestValueLabel": true,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://evolvestronger.com/packages/",
-      "autoPublishEligible": false
+      "contentHash": "0d5ec8e5bb3f73535fe8c5017cb2c73f55ffe7d46ad811c6150d67afe67b73b7",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://evolvestronger.com/packages/"
+    },
+    {
+      "gymId": "osm-node-2652517824",
+      "gymName": "Evolve Pilates Studio",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "8x Monthly",
+      "amount": 220.0,
+      "currency": "USD",
+      "rawLabel": "8x Monthly $220/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": true,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://evolvestronger.com/packages/",
+      "contentHash": "21f5baac15ce1d8574d89ad954b50c4ccfaa0eb415fdeb928875d35110f6a320",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://evolvestronger.com/packages/"
     },
     {
       "gymId": "osm-node-2666409791",
@@ -10555,6 +10572,137 @@
       "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://livefitgym.com/signup/"
+    },
+    {
+      "gymId": "osm-node-5810883731",
+      "gymName": "Mighty Pilates Presidio Heights",
+      "capturedAt": "2026-08-21",
+      "amount": 36.0,
+      "currency": "USD",
+      "rawLabel": "billed on Autopay, with a 3 month minimum. This is our best deal ever at $33/$36 class. You are also still eligible for our ongoing Monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.mightypilates.com/faq/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.mightypilates.com/presidio-heights/"
+    },
+    {
+      "gymId": "osm-node-5810883731",
+      "gymName": "Mighty Pilates Presidio Heights",
+      "capturedAt": "2026-08-21",
+      "amount": 360.0,
+      "currency": "USD",
+      "rawLabel": "all classes, privates and workshops for yourself. The Mighty Monthly pass is $330 (LA, Berkeley, Lafayette) $360 (SF/Marin) and monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.mightypilates.com/faq/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.mightypilates.com/presidio-heights/"
+    },
+    {
+      "gymId": "osm-node-5810883731",
+      "gymName": "Mighty Pilates Presidio Heights",
+      "capturedAt": "2026-08-21",
+      "amount": 50.0,
+      "currency": "USD",
+      "rawLabel": "also partnering with the garage at 3490 California Street for 1-hour validation. PRICING SINGLE CLASS $50",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.mightypilates.com/presidio-heights/"
+    },
+    {
+      "gymId": "osm-node-5810883731",
+      "gymName": "Mighty Pilates Presidio Heights",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "mighty-monthly-ten",
+      "name": "Mighty Monthly Pass",
+      "amount": 360,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Ten reformer Pilates classes monthly at the Presidio Heights studio",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10,
+        "period": "month",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": true,
+      "rawLabel": "Mighty Monthly Pass $360/month by autopay; 10 classes at $36/class",
+      "method": "visible-mighty-pilates-catalog",
+      "adapter": "mighty-pilates",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.mightypilates.com/presidio-heights/"
     },
     {
       "gymId": "osm-node-6471124706",
@@ -18090,7 +18238,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18119,7 +18268,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18152,7 +18302,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18181,7 +18332,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18212,7 +18364,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18241,7 +18394,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18270,7 +18424,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18299,7 +18454,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
       "gymId": "osm-way-24334661",
@@ -18323,7 +18479,156 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false,
-      "selectable": false
+      "selectable": false,
+      "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
+    },
+    {
+      "gymId": "osm-way-24460896",
+      "gymName": "Bay Club Gateway",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
+      "sourceProductAliases": [
+        "executive_club_north_bay_shared",
+        "bcg-executive-north-monthly"
+      ],
+      "operatorLocationId": "BCG",
+      "name": "Executive Club North Bay",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCFD",
+        "BCG",
+        "BCM",
+        "BCSSF",
+        "BCST",
+        "BCP",
+        "BCF",
+        "BCWC",
+        "BCRH",
+        "BCCC"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join by August 31, 2026 and receive initiation fee savings!"
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true,
+          "standardAmount": 1000.0,
+          "promotionApplied": true,
+          "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Executive Club North Bay $350/month; home club BCG; current initiation $300; standard initiation $1000",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
+      "contentHash": "b9360fd0daf3753ab162774c7d4731ee9dbfc8b1b43cf420f463508e23283a83",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
+    },
+    {
+      "gymId": "osm-way-24460896",
+      "gymName": "Bay Club Gateway",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
+      "sourceProductAliases": [
+        "club_west_gold_shared",
+        "bcg-club-west-gold-monthly"
+      ],
+      "operatorLocationId": "BCG",
+      "name": "Club West Gold",
+      "amount": 465.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCSC",
+        "BCRS",
+        "BCG",
+        "BCCS",
+        "BCCV",
+        "BCM",
+        "BCSSF",
+        "BCRV",
+        "BCST",
+        "BCES",
+        "BCRB",
+        "BCPO",
+        "BCFD",
+        "BRGC",
+        "FRCC",
+        "BCBT",
+        "BCCC",
+        "BCRH",
+        "BCSM",
+        "BCWC",
+        "BCP"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": ""
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 2500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true,
+      "rawLabel": "Club West Gold $465/month; home club BCG; current initiation $2500",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
+      "contentHash": "120d089323f47164e845a7666e45c8d9c4e875ec5ff9e3486fd21638480531a0",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
     },
     {
       "gymId": "osm-way-25371830",
@@ -18943,7 +19248,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -18972,7 +19278,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19001,7 +19308,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19036,7 +19344,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19068,7 +19377,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19097,7 +19407,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19130,7 +19441,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/all-access-membership/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19159,7 +19471,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/all-access-membership/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19188,7 +19501,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/single-class-pass/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19217,7 +19531,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/ten-class-pack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19246,7 +19561,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/ten-class-pack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19275,7 +19591,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/ten-class-pack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19304,7 +19621,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/twentyclasspack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19333,7 +19651,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/twentyclasspack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19362,7 +19681,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/twentyclasspack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19391,7 +19711,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/wellness-services/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-263806345",
@@ -19423,7 +19744,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/wellness-services/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "osm-way-264527987",
@@ -21917,6 +22239,224 @@
       "sourceUrl": "https://www.luxfitsf.com/services/open-gym",
       "autoPublishEligible": false,
       "selectable": false
+    },
+    {
+      "gymId": "web-1018f0171ffa8e",
+      "gymName": "Bay Club San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
+      "sourceProductAliases": [
+        "executive_club_north_bay_shared",
+        "bcsf-executive-north-monthly"
+      ],
+      "operatorLocationId": "BCSF",
+      "name": "Executive Club North Bay",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCFD",
+        "BCG",
+        "BCM",
+        "BCSSF",
+        "BCST",
+        "BCP",
+        "BCF",
+        "BCWC",
+        "BCRH",
+        "BCCC"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join by August 31, 2026 and receive initiation fee savings!"
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true,
+          "standardAmount": 1000.0,
+          "promotionApplied": true,
+          "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Executive Club North Bay $350/month; home club BCSF; current initiation $300; standard initiation $1000",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+      "contentHash": "3ede02f524532087f51460794c989180b1b7784bf20e38fac41215fe16229141",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
+    },
+    {
+      "gymId": "web-1018f0171ffa8e",
+      "gymName": "Bay Club San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
+      "sourceProductAliases": [
+        "executive_club_south_bay_shared",
+        "bcsf-executive-south-monthly"
+      ],
+      "operatorLocationId": "BCSF",
+      "name": "Executive Club South Bay",
+      "amount": 395.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Executive Club South Bay is our premiere membership for fitness, group exercise, aquatics, pickleball, family - and more! - with full access to Santa Clara, Redwood Shores, and Courtside locations, as well as access to San Francisco campus and East Bay campus. Our entry-level membership for racquet sports offers 3-day advanced booking for pickleball at all South Bay locations and 3-day advanced booking for squash at select clubs; tennis is complimentary at Santa Clara, Pleasanton, and Fremont (court fees apply at South San Francisco; tennis access not included at Redwood Shores and Courtside). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCSC",
+        "BCFD",
+        "BCRS",
+        "BCCS",
+        "BCSSF",
+        "BCP",
+        "BCF",
+        "BCWC",
+        "BCBT",
+        "BCCC"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join by August 31, 2026 and receive initiation fee savings!"
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 400.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true,
+          "standardAmount": 1000.0,
+          "promotionApplied": true,
+          "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Executive Club South Bay $395/month; home club BCSF; current initiation $400; standard initiation $1000",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+      "contentHash": "489b34cf83f80d04034c3a1e5063fa43673bac14579cb07bf1ae8533480f47b2",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
+    },
+    {
+      "gymId": "web-1018f0171ffa8e",
+      "gymName": "Bay Club San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
+      "sourceProductAliases": [
+        "club_west_gold_shared",
+        "bcsf-club-west-gold-monthly"
+      ],
+      "operatorLocationId": "BCSF",
+      "name": "Club West Gold",
+      "amount": 465.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCSC",
+        "BCRS",
+        "BCG",
+        "BCCS",
+        "BCCV",
+        "BCM",
+        "BCSSF",
+        "BCRV",
+        "BCST",
+        "BCES",
+        "BCRB",
+        "BCPO",
+        "BCFD",
+        "BRGC",
+        "FRCC",
+        "BCBT",
+        "BCCC",
+        "BCRH",
+        "BCSM",
+        "BCWC",
+        "BCP"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": ""
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 2500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true,
+      "rawLabel": "Club West Gold $465/month; home club BCSF; current initiation $2500",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
+      "contentHash": "8670e592f9439d94992f4a3bbdbbb2981140a1070e670395b94c5fd7869e6d71",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
     },
     {
       "gymId": "web-164572c938e7e3",
@@ -33629,7 +34169,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.cmasf.com/pricing",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.cmasf.com/pricing"
     },
     {
       "gymId": "web-9cb9e987c99d39",
@@ -33658,7 +34199,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.cmasf.com/pricing",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.cmasf.com/pricing"
     },
     {
       "gymId": "web-9cb9e987c99d39",
@@ -33687,7 +34229,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.cmasf.com/pricing",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.cmasf.com/pricing"
     },
     {
       "gymId": "web-9cb9e987c99d39",
@@ -33716,7 +34259,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.cmasf.com/pricing",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.cmasf.com/pricing"
     },
     {
       "gymId": "web-a298d8310b9dc9",
@@ -35107,6 +35651,284 @@
       "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-a8dd7473a48e9c",
+      "gymName": "Bay Club Financial District",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "88a5f2b2-a3d1-49d9-3aba-08def76b4fa5",
+      "sourceProductAliases": [
+        "single_site_financial_district_shared",
+        "bcfd-single-site-monthly"
+      ],
+      "operatorLocationId": "BCFD",
+      "name": "Single Site",
+      "amount": 284.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Perfect for those working in the Financial District of San Francisco, our single-site membership offers full access to Bay Club Financial District and off-peak access to Bay Club San Francisco (Monday-Thursday after 7pm, Friday after 2pm and anytime weekends) and includes fitness amenities and group exercise programs designed to enhance your active lifestyle.",
+      "scopeType": "single-location",
+      "accessibleLocationIds": [
+        "BCFD"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join by August 31, 2026 and receive initiation fee savings!"
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true,
+          "standardAmount": 300.0,
+          "promotionApplied": true,
+          "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Single Site $284/month; home club BCFD; current initiation $100; standard initiation $300",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+      "contentHash": "48ef30e3f5d68c115e8757ae75b51cd56c9bf18f59ba7cf9d485d9d91d19c762",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
+    },
+    {
+      "gymId": "web-a8dd7473a48e9c",
+      "gymName": "Bay Club Financial District",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
+      "sourceProductAliases": [
+        "executive_club_north_bay_shared",
+        "bcfd-executive-north-monthly"
+      ],
+      "operatorLocationId": "BCFD",
+      "name": "Executive Club North Bay",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCFD",
+        "BCG",
+        "BCM",
+        "BCSSF",
+        "BCST",
+        "BCP",
+        "BCF",
+        "BCWC",
+        "BCRH",
+        "BCCC"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join by August 31, 2026 and receive initiation fee savings!"
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true,
+          "standardAmount": 1000.0,
+          "promotionApplied": true,
+          "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Executive Club North Bay $350/month; home club BCFD; current initiation $300; standard initiation $1000",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+      "contentHash": "ac5b7f47e841272c217594493effaf0e1e5e0c97dc33c36fe24ab3f51b17e37b",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
+    },
+    {
+      "gymId": "web-a8dd7473a48e9c",
+      "gymName": "Bay Club Financial District",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
+      "sourceProductAliases": [
+        "executive_club_south_bay_shared",
+        "bcfd-executive-south-monthly"
+      ],
+      "operatorLocationId": "BCFD",
+      "name": "Executive Club South Bay",
+      "amount": 395.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Executive Club South Bay is our premiere membership for fitness, group exercise, aquatics, pickleball, family - and more! - with full access to Santa Clara, Redwood Shores, and Courtside locations, as well as access to San Francisco campus and East Bay campus. Our entry-level membership for racquet sports offers 3-day advanced booking for pickleball at all South Bay locations and 3-day advanced booking for squash at select clubs; tennis is complimentary at Santa Clara, Pleasanton, and Fremont (court fees apply at South San Francisco; tennis access not included at Redwood Shores and Courtside). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCSC",
+        "BCFD",
+        "BCRS",
+        "BCCS",
+        "BCSSF",
+        "BCP",
+        "BCF",
+        "BCWC",
+        "BCBT",
+        "BCCC"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join by August 31, 2026 and receive initiation fee savings!"
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 400.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true,
+          "standardAmount": 1000.0,
+          "promotionApplied": true,
+          "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Executive Club South Bay $395/month; home club BCFD; current initiation $400; standard initiation $1000",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+      "contentHash": "04ca2edbe3ed2975439d341b0594f2178647ef0ca48c7ddf6155c3579a725147",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
+    },
+    {
+      "gymId": "web-a8dd7473a48e9c",
+      "gymName": "Bay Club Financial District",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
+      "sourceProductAliases": [
+        "club_west_gold_shared",
+        "bcfd-club-west-gold-monthly"
+      ],
+      "operatorLocationId": "BCFD",
+      "name": "Club West Gold",
+      "amount": 465.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
+      "scopeType": "multi-location",
+      "accessibleLocationIds": [
+        "BCSF",
+        "BCSC",
+        "BCRS",
+        "BCG",
+        "BCCS",
+        "BCCV",
+        "BCM",
+        "BCSSF",
+        "BCRV",
+        "BCST",
+        "BCES",
+        "BCRB",
+        "BCPO",
+        "BCFD",
+        "BRGC",
+        "FRCC",
+        "BCBT",
+        "BCCC",
+        "BCRH",
+        "BCSM",
+        "BCWC",
+        "BCP"
+      ],
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Monthly billing available"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": ""
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 2500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true,
+      "rawLabel": "Club West Gold $465/month; home club BCFD; current initiation $2500",
+      "method": "public-bay-club-membership-calculator",
+      "adapter": "bay-club-public-api",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
+      "contentHash": "8d7c77b5345323c622c66dbfb88c28ad181c1f57853f58ed7e2df81ed64853ea",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://join.bayclubs.com/shared/membership-builder"
     },
     {
       "gymId": "web-aad2d32fab6264",
@@ -37261,7 +38083,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37290,7 +38113,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37319,7 +38143,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37354,7 +38179,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37386,7 +38212,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37415,7 +38242,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/memberships/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37448,7 +38276,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/all-access-membership/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37477,7 +38306,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/all-access-membership/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37506,7 +38336,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/single-class-pass/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37535,7 +38366,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/ten-class-pack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37564,7 +38396,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/ten-class-pack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37593,7 +38426,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/ten-class-pack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37622,7 +38456,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/twentyclasspack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37651,7 +38486,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/twentyclasspack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37680,7 +38516,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/twentyclasspack/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37709,7 +38546,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/wellness-services/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -37741,22 +38579,23 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://folksf.com/memberships/wellness-services/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://folksf.com/classes/schedule/richmond/"
     },
     {
       "gymId": "web-d2fecdc44e5d1c",
       "gymName": "JCCSF Fitness Center",
       "capturedAt": "2026-08-21",
-      "amount": 158.0,
+      "sourceProductId": "adult-full-access",
+      "name": "Adult Full-Access Membership",
+      "amount": 198,
       "currency": "USD",
-      "rawLabel": "bership is for 65+ years of age Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31 Regular Rate: $158/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Full fitness-center access including weekly group fitness, lap pool, locker rooms, sauna, and steam room",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
@@ -37765,27 +38604,43 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 200,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Adult Full Access; regular rate $198/month; standard enrollment $200; current enrollment promotion shown separately",
+      "method": "visible-jccsf-adult-membership-catalog",
+      "adapter": "jccsf-adult-membership",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.jccsf.org/join/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.jccsf.org/join/"
     },
     {
       "gymId": "web-d2fecdc44e5d1c",
       "gymName": "JCCSF Fitness Center",
       "capturedAt": "2026-08-21",
-      "amount": 198.0,
+      "sourceProductId": "adult-full-access",
+      "name": "Adult Full-Access Membership",
+      "amount": 198,
       "currency": "USD",
-      "rawLabel": "discounts around San Francisco Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31 Regular Rate: $198/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Full fitness-center access including weekly group fitness, lap pool, locker rooms, sauna, and steam room",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
@@ -37794,128 +38649,28 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.jccsf.org/join/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-d2fecdc44e5d1c",
-      "gymName": "JCCSF Fitness Center",
-      "capturedAt": "2026-08-21",
-      "amount": 398.0,
-      "currency": "USD",
-      "rawLabel": "dults plus one or more children Promotional Rate: Get $0 Enrollment Fee when you join by Aug 31 Regular Rate: $398/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 200,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Adult Full Access; regular rate $198/month; standard enrollment $200; current enrollment promotion shown separately",
+      "method": "visible-jccsf-adult-membership-catalog",
+      "adapter": "jccsf-adult-membership",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.jccsf.org/join/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-d2fecdc44e5d1c",
-      "gymName": "JCCSF Fitness Center",
-      "capturedAt": "2026-08-21",
-      "amount": 158.0,
-      "currency": "USD",
-      "rawLabel": "lty program Local discounts around San Francisco Older adult membership is for 65+ years of age Regular Rate: $158/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.jccsf.org/join/referafriend/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-d2fecdc44e5d1c",
-      "gymName": "JCCSF Fitness Center",
-      "capturedAt": "2026-08-21",
-      "amount": 198.0,
-      "currency": "USD",
-      "rawLabel": "tuition) Earn rewards from our JCCSF Perks loyalty program Local discounts around San Francisco Regular Rate: $198/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.jccsf.org/join/referafriend/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-d2fecdc44e5d1c",
-      "gymName": "JCCSF Fitness Center",
-      "capturedAt": "2026-08-21",
-      "amount": 398.0,
-      "currency": "USD",
-      "rawLabel": "ocal discounts around San Francisco Family membership is for 2 adults plus one or more children Regular Rate: $398/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.jccsf.org/join/referafriend/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.jccsf.org/join/"
     },
     {
       "gymId": "web-d335e6ba867d00",
