@@ -1,22 +1,32 @@
 {
-  "generatedAt": "2026-08-20",
-  "candidateGymsScanned": 25,
+  "generatedAt": "2026-08-21",
+  "currentCandidateGymCount": 26,
+  "candidateGymsScanned": 26,
+  "candidateGymsPendingScan": 0,
+  "pendingScanGymIds": [],
+  "staleManifestRecordCount": 0,
+  "candidatePricingStatusCounts": {
+    "estimated": 10,
+    "gated": 12,
+    "unresolved": 4
+  },
+  "estimatedReplacementCandidates": 10,
   "recordStatusCounts": {
     "no-form-found": 10,
     "render-error": 1,
     "robots-disallowed": 1,
-    "scanned": 13
+    "scanned": 14
   },
-  "formsFound": 39,
+  "formsFound": 41,
   "eligibleFormCount": 12,
   "eligibleGymCount": 7,
-  "blockedFormCount": 27,
+  "blockedFormCount": 29,
   "blockerCounts": {
     "account-or-authentication-form": 3,
-    "captcha-or-human-challenge": 1,
+    "captcha-or-human-challenge": 2,
     "external-action-requires-separate-approval": 1,
     "no-email-field": 15,
-    "not-a-pricing-inquiry-form": 21,
+    "not-a-pricing-inquiry-form": 22,
     "prohibited-sensitive-field": 3,
     "unknown-required-field": 8
   },
@@ -118,5 +128,6 @@
       "termsHash": "819459c7016fbd1e39c7d65480311c2eac57a468edd0c2fdb6b3a672a29acd40"
     }
   ],
-  "submissionPolicy": "No submission without an exact local domain/action-domain and terms-hash approval."
+  "submissionPolicy": "No submission without an exact local domain/action-domain and terms-hash approval.",
+  "outreachGoal": "Replace estimates and unresolved/gated states with reviewed operator-confirmed facts where operators voluntarily reply."
 }

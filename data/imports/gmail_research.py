@@ -23,7 +23,6 @@ from urllib.request import Request, urlopen
 
 import import_operator_replies as replies
 
-
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_PATH = ROOT / "data" / "imports" / "sf-gyms-osm.json"
 OUTPUT_PATH = ROOT / "data" / "imports" / "operator-confirmed-observations.json"
@@ -31,13 +30,28 @@ ATTEMPTS_PATH = ROOT / "data" / "imports" / "contact-submission-attempts.json"
 TOKEN_URL = "https://oauth2.googleapis.com/token"
 API_ROOT = "https://gmail.googleapis.com/gmail/v1/users/me"
 LABEL_QUERY = "label:sf-gym-pricing newer_than:60d"
-INQUIRY = (
+INQUIRY_V1 = (
     "Hello, I maintain an independent San Francisco gym cost guide. Could you confirm the current standard-adult "
     "pricing for this exact location: the least expensive ordinary recurring membership, its class or visit "
     "allowance, billing cadence, minimum commitment, mandatory enrollment/annual/initiation/processing fees, "
     "and the ordinary single visit or class price? Please also include the date the rates took effect. "
     "We do not need a trial, promotional, student, employer, resident, or prepaid-annual price. Thank you."
 )
+INQUIRY_V2 = (
+    "Hello, I maintain an independent San Francisco gym cost guide. I am researching the exact location below.\n\n"
+    "Gym: {gym_name}\n"
+    "Address: {address}\n\n"
+    "Could you confirm the current standard-adult pricing for this location? Please reply with:\n"
+    "- the least expensive ordinary recurring membership and its class or visit allowance;\n"
+    "- its billing cadence and minimum commitment;\n"
+    "- each mandatory enrollment, annual, initiation, processing, setup, or activation fee;\n"
+    "- the ordinary unrestricted single visit or class price; and\n"
+    "- the date these rates took effect.\n\n"
+    "We do not need a trial, promotional, student, employer, resident, personalized-training quote, or prepaid-annual "
+    "price. If no standard public plan or ordinary drop-in is offered, that confirmation is useful too. Thank you."
+)
+TEMPLATES = {"v1": INQUIRY_V1, "v2": INQUIRY_V2}
+DEFAULT_TEMPLATE_VERSION = "v2"
 FOLLOW_UP = "Hello, I am following up once on the standard-adult pricing request below. If no public standard plan is available, that confirmation is also useful. Thank you."
 
 
@@ -134,12 +148,35 @@ def approval_records() -> list[dict[str, Any]]:
     try:
         document = json.loads(base64.b64decode(encoded).decode("utf-8"))
     except (ValueError, json.JSONDecodeError, UnicodeDecodeError):
-        raise RuntimeError("GYM_RESEARCH_EMAIL_APPROVALS_B64 is not valid base64-encoded JSON.")
+        raise RuntimeError("GYM_RESEARCH_EMAIL_APPROVALS_B64 is not valid base64-encoded JSON.") from None
     return [item for item in document.get("approvals", []) if item.get("reviewStatus") == "approved"]
 
 
-def template_hash() -> str:
-    return hashlib.sha256(INQUIRY.encode("utf-8")).hexdigest()
+def template_hash(version: str = DEFAULT_TEMPLATE_VERSION) -> str:
+    template = TEMPLATES.get(version)
+    if template is None:
+        raise ValueError(f"Unsupported inquiry template version: {version}")
+    return hashlib.sha256(template.encode("utf-8")).hexdigest()
+
+
+def approval_template_version(approval: dict[str, Any]) -> str:
+    """Keep existing reviewed v1 approvals valid while defaulting new approvals to v2."""
+
+    version = text(approval.get("templateVersion"))
+    return version if version in TEMPLATES else "v1"
+
+
+def inquiry_body(gym: dict[str, Any], version: str = DEFAULT_TEMPLATE_VERSION) -> str:
+    template = TEMPLATES.get(version)
+    if template is None:
+        raise ValueError(f"Unsupported inquiry template version: {version}")
+    if version == "v1":
+        return template
+    gym_name = text(gym.get("name"))
+    address = text(gym.get("canonicalAddress")) or text(gym.get("address"))
+    if not gym_name or not address:
+        raise ValueError("The exact gym name and address are required for v2 outreach.")
+    return template.format(gym_name=gym_name, address=address)
 
 
 def approval_is_valid(approval: dict[str, Any]) -> bool:
@@ -156,12 +193,13 @@ def approval_is_valid(approval: dict[str, Any]) -> bool:
         source_domain = urlparse(source_url).netloc.casefold()
     except ValueError:
         return False
+    version = approval_template_version(approval)
     return bool(
         recipient_domain
         and source_domain
         and recipient_domain == text(approval.get("recipientDomain")).casefold()
         and source_domain == text(approval.get("sourceDomain")).casefold()
-        and text(approval.get("templateHash")) == template_hash()
+        and text(approval.get("templateHash")) == template_hash(version)
         and approval.get("exactLocationConfirmed") is True
         and approval.get("publicOperatorEmailConfirmed") is True
     )
@@ -212,10 +250,12 @@ def send_approved(token: str, today: date) -> dict[str, Any]:
         action = outreach_action(sent_dates_for(token, gym_id), today)
         if action == "none":
             continue
+        version = approval_template_version(approval)
         subject = f"[SFGYM:{gym_id}] San Francisco standard-adult pricing request"
-        send_email(token, recipient, subject, INQUIRY if action == "initial" else FOLLOW_UP)
+        send_email(token, recipient, subject, inquiry_body(gym, version) if action == "initial" else FOLLOW_UP)
         sent.append({
             "gymId": gym_id, "gymName": text(gym.get("name")), "channel": "email", "action": action,
+            "templateVersion": version,
             "contactHash": hashlib.sha256(recipient.casefold().encode("utf-8")).hexdigest(),
             "sourceUrl": source_url, "submittedAt": today.isoformat(), "containsContactData": False,
         })
@@ -230,10 +270,11 @@ def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("command", choices=("poll", "send-approved", "template-hash"))
     parser.add_argument("--date")
+    parser.add_argument("--template-version", choices=tuple(TEMPLATES), default=DEFAULT_TEMPLATE_VERSION)
     args = parser.parse_args()
     today = date.fromisoformat(args.date) if args.date else datetime.now(UTC).date()
     if args.command == "template-hash":
-        print(template_hash())
+        print(template_hash(args.template_version))
         return 0
     if not configured():
         print(json.dumps({"configured": False, "command": args.command, "reason": "Gmail OAuth secrets are not configured."}))

@@ -30,13 +30,42 @@ class GmailResearchTests(unittest.TestCase):
             "recipientDomain": "gym.example",
             "sourceUrl": "https://www.gym.example/location",
             "sourceDomain": "www.gym.example",
-            "templateHash": gmail.template_hash(),
+            "templateVersion": "v2",
+            "templateHash": gmail.template_hash("v2"),
             "exactLocationConfirmed": True,
             "publicOperatorEmailConfirmed": True,
         }
         self.assertTrue(gmail.approval_is_valid(approval))
         approval["sourceDomain"] = "other.example"
         self.assertFalse(gmail.approval_is_valid(approval))
+
+    def test_v2_inquiry_names_the_exact_location(self) -> None:
+        body = gmail.inquiry_body({
+            "name": "Example Strength",
+            "canonicalAddress": "123 Main Street, San Francisco, CA 94107",
+        }, "v2")
+        self.assertIn("Gym: Example Strength", body)
+        self.assertIn("Address: 123 Main Street, San Francisco, CA 94107", body)
+        self.assertIn("mandatory enrollment, annual, initiation, processing, setup, or activation fee", body)
+        self.assertNotIn("{gym_name}", body)
+
+    def test_legacy_v1_approval_remains_valid_and_uses_old_template(self) -> None:
+        approval = {
+            "recipient": "pricing@gym.example",
+            "recipientDomain": "gym.example",
+            "sourceUrl": "https://www.gym.example/location",
+            "sourceDomain": "www.gym.example",
+            "templateHash": gmail.template_hash("v1"),
+            "exactLocationConfirmed": True,
+            "publicOperatorEmailConfirmed": True,
+        }
+        self.assertTrue(gmail.approval_is_valid(approval))
+        self.assertEqual(gmail.approval_template_version(approval), "v1")
+        self.assertEqual(gmail.inquiry_body({"name": "Ignored"}, "v1"), gmail.INQUIRY_V1)
+
+    def test_v2_requires_name_and_address(self) -> None:
+        with self.assertRaises(ValueError):
+            gmail.inquiry_body({"name": "Example Strength"}, "v2")
 
 
 if __name__ == "__main__":
