@@ -141,6 +141,65 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertFalse(any("evil.example" in item["url"] or item["url"].endswith("pricing-old") for item in routes))
         self.assertFalse(any(item["url"].endswith("other-city") for item in routes))
 
+    def test_request_identity_removes_only_presentation_and_tracking_variants(self) -> None:
+        variants = [
+            "https://operator.example/pricing/?locale=en&utm_source=map&location=1421#plans",
+            "https://OPERATOR.example/pricing?location=1421&locale=es",
+        ]
+
+        identities = {crawler.request_identity(value) for value in variants}
+
+        self.assertEqual(identities, {"https://operator.example/pricing?location=1421"})
+        self.assertNotEqual(
+            crawler.request_identity("https://operator.example/pricing?location=1421"),
+            crawler.request_identity("https://operator.example/pricing?location=1422"),
+        )
+
+    def test_operator_location_links_are_bound_to_the_current_listing(self) -> None:
+        gym = {
+            "officialUrl": "https://www.ymcasf.org/location/bayview-hunters-point-ymca/",
+            "websiteUrl": "https://www.ymcasf.org/location/bayview-hunters-point-ymca/",
+        }
+
+        self.assertTrue(crawler.operator_page_matches_gym(
+            "https://www.ymcasf.org/location/bayview-hunters-point-ymca/#hours", gym,
+        ))
+        self.assertTrue(crawler.operator_page_matches_gym("https://www.ymcasf.org/membership/", gym))
+        self.assertFalse(crawler.operator_page_matches_gym("https://www.ymcasf.org/locations/", gym))
+        self.assertFalse(crawler.operator_page_matches_gym(
+            "https://www.ymcasf.org/location/bayview-hunters-point-ymca/hope-sf/", gym,
+        ))
+        self.assertFalse(crawler.operator_page_matches_gym(
+            "https://www.ymcasf.org/location/buchanan-ymca/", gym,
+        ))
+
+    def test_location_filter_supports_nested_operator_directory_shapes(self) -> None:
+        gym = {
+            "officialUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+            "operatorLocationId": "duboce",
+        }
+
+        self.assertTrue(crawler.operator_page_matches_gym(
+            "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce/pricing", gym,
+        ))
+        self.assertFalse(crawler.operator_page_matches_gym(
+            "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa", gym,
+        ))
+
+    def test_linked_storefronts_deduplicate_locale_variants_and_keep_catalog_identity(self) -> None:
+        links = [
+            "/pricing?locale=en",
+            "/pricing/?locale=es&utm_source=footer",
+            "/pricing?location=1421&locale=en",
+        ]
+
+        routes = crawler.linked_storefronts("https://operator.example/", links)
+
+        self.assertEqual(
+            [crawler.request_identity(value) for value in routes],
+            ["https://operator.example/pricing", "https://operator.example/pricing?location=1421"],
+        )
+
     def test_operator_wide_pricing_document_rejects_other_location_slugs(self) -> None:
         self.assertTrue(crawler.is_operator_wide_pricing_document("https://operator.example/pricing"))
         self.assertTrue(crawler.is_operator_wide_pricing_document("https://operator.example/es/pricing"))
@@ -259,6 +318,35 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertTrue(attempts[0]["requiresReview"])
         self.assertIn("KeyError", attempts[0]["error"])
         self.assertEqual((observations, locations, updates), ([], [], {}))
+
+    def test_operator_frontier_has_a_separate_bounded_request_budget(self) -> None:
+        gym = {
+            "id": "bounded",
+            "name": "Bounded Gym",
+            "websiteUrl": "https://bounded.example/",
+            "officialUrl": "https://bounded.example/",
+            "monthlyPrice": None,
+        }
+        links = "".join(f'<a href="/pricing/{index}">Plan {index}</a>' for index in range(20))
+
+        def fake_fetch(url: str, _timeout: float, _cached: object) -> dict[str, object]:
+            return {
+                "status": "fetched",
+                "url": url,
+                "robotsStatus": "checked",
+                "contentType": "text/html",
+                "html": links if url == "https://bounded.example/" else "<p>No public amount.</p>",
+            }
+
+        with patch.object(crawler, "fetch_page", side_effect=fake_fetch), patch.object(crawler, "DOMAIN_DELAY_SECONDS", 0):
+            attempts, _observations, _locations, _updates = crawler.crawl_gym(
+                gym, {}, datetime(2026, 8, 21), 1, defaultdict(threading.Lock), {}, {}, {}, {}, threading.Lock(),
+            )
+
+        self.assertEqual(len(attempts), crawler.MAX_OPERATOR_REQUESTS_PER_GYM)
+        self.assertEqual(attempts[0]["operatorRequestCount"], crawler.MAX_OPERATOR_REQUESTS_PER_GYM)
+        self.assertEqual(attempts[0]["bookingRequestCount"], 0)
+        self.assertEqual(attempts[0]["frontierSkipReasons"], {"operator-request-budget": 1})
 
     def test_concurrent_locations_share_one_physical_request(self) -> None:
         requests: dict[str, concurrent.futures.Future[dict[str, object]]] = {}

@@ -672,29 +672,31 @@
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 801,
+    "requestCount": 1582,
     "statusCounts": {
       "access-blocked": 33,
-      "fetched": 373,
-      "http-403": 21,
-      "http-404": 9,
-      "http-429": 15,
-      "network-error": 5,
-      "not-modified": 31,
+      "fetched": 916,
+      "host-backoff-after-429": 1,
+      "http-403": 102,
+      "http-404": 13,
+      "http-429": 25,
+      "http-502": 2,
+      "network-error": 7,
+      "not-modified": 116,
       "render-error": 4,
       "rendered": 269,
-      "robots-disallowed": 41
+      "robots-disallowed": 94
     },
-    "reviewCandidatePages": 172,
-    "linkedStorefrontRequests": 194,
+    "reviewCandidatePages": 297,
+    "linkedStorefrontRequests": 974,
     "renderedRequests": 320,
     "renderedAccessBlockedRequests": 33,
     "renderedAccessBlockerCounts": {
       "captcha-required": 3,
       "platform-security-check": 30
     },
-    "priceChangeFlags": 29,
-    "allReviewedSeedsGoneFlags": 1
+    "priceChangeFlags": 30,
+    "allReviewedSeedsGoneFlags": 2
   },
   "publicSourceDiscoverySummary": {
     "attemptedListings": 3,
