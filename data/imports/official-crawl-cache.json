@@ -12643,7 +12643,7 @@
   },
   "https://www.divineyogastudiosf.com/": {
     "status": "http-404",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
@@ -18119,6 +18119,16 @@
     "etag": "W/\"fb37148aa68ec636729c431a3365f578\"",
     "lastModified": "",
     "contentHash": "6e8a849f4589b0b27e9a42276c7a959b57c6561899f70d091a0bf688c2076cf6",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.divineyogastudiosf.com/book-now": {
+    "status": "http-404",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []

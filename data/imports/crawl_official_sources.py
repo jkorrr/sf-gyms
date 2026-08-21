@@ -11,13 +11,14 @@ import concurrent.futures
 import hashlib
 import json
 import re
-import time
 import threading
+import time
 from collections import defaultdict
+from collections.abc import Iterable
 from datetime import UTC, datetime, timedelta
 from html.parser import HTMLParser
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 from urllib.error import HTTPError, URLError
 from urllib.parse import parse_qs, urldefrag, urljoin, urlparse
 from urllib.request import Request, urlopen
@@ -41,6 +42,7 @@ MAX_DOMAIN_429S = 2
 STALE_AFTER_DAYS = 35
 MAX_LINKED_REQUESTS_PER_GYM = 36
 MAX_LINK_DEPTH = 3
+MAX_REVIEWED_SEED_URLS = 8
 
 BOOKING_DOMAINS = {
     "clients.mindbodyonline.com",
@@ -1428,7 +1430,7 @@ def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
         host = hostname(candidate)
         if not is_public_http_url(candidate):
             continue
-        approved_booking = any(host == domain or host.endswith(f".{domain}") for domain in BOOKING_DOMAINS)
+        approved_booking = approved_booking_url(candidate)
         approved_operator_page = (
             host == base_host
             and candidate != base_url
@@ -1436,13 +1438,92 @@ def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
             and not RESEARCH_EXCLUDE_RE.search(urlparse(candidate).path)
         )
         if approved_booking or approved_operator_page:
-            if "classpass.com" in host:
-                continue  # Marketplace links may inform discovery but never exact evidence.
-            if host in {"pushpress.com", "www.pushpress.com"}:
-                continue  # Vendor marketing pages are not operator storefronts; operator checkout uses a dedicated subdomain.
             if candidate not in results:
                 results.append(candidate)
     return results[:12]
+
+
+def approved_booking_url(url: str) -> bool:
+    """Return whether a reviewed URL is an allowed public booking surface."""
+
+    host = hostname(url)
+    if not is_public_http_url(url) or RESEARCH_EXCLUDE_RE.search(urlparse(url).path):
+        return False
+    if not any(host == domain or host.endswith(f".{domain}") for domain in BOOKING_DOMAINS):
+        return False
+    if "classpass.com" in host:
+        return False  # Marketplaces may create discovery leads but never exact evidence.
+    if host in {"pushpress.com", "www.pushpress.com"}:
+        return False  # Operator checkout uses a dedicated subdomain, not vendor marketing pages.
+    return True
+
+
+def reviewed_seed_routes(gym: dict[str, Any]) -> list[dict[str, str]]:
+    """Build bounded crawl seeds from committed, reviewed evidence routes.
+
+    Operator URLs are trusted only from the canonical website/official fields.
+    Other evidence must share one of those exact hosts (allowing a ``www``
+    variant) or use an approved public booking domain. Source/directory URLs are
+    intentionally excluded.
+    """
+
+    def host_key(value: str) -> str:
+        host = hostname(value)
+        return host[4:] if host.startswith("www.") else host
+
+    def candidate(field: str, value: Any) -> tuple[str, str] | None:
+        url = urldefrag(text(value))[0]
+        if not is_public_http_url(url) or coverage.is_osm_url(url):
+            return None
+        if RESEARCH_EXCLUDE_RE.search(urlparse(url).path):
+            return None
+        return field, url
+
+    canonical = [
+        item for item in (
+            candidate("websiteUrl", gym.get("websiteUrl")),
+            candidate("officialUrl", gym.get("officialUrl")),
+        ) if item
+    ]
+    operator_hosts = {
+        host_key(url)
+        for _field, url in canonical
+        if platform_name(url) == "operator-site"
+    }
+
+    values: list[tuple[str, Any]] = [
+        ("websiteUrl", gym.get("websiteUrl")),
+        ("officialUrl", gym.get("officialUrl")),
+        ("priceSourceUrl", gym.get("priceSourceUrl")),
+    ]
+    for collection_name in ("plans", "dropIns"):
+        for item in gym.get(collection_name, []) or []:
+            if not isinstance(item, dict):
+                continue
+            for evidence_key in ("evidence", "sourceEvidence"):
+                evidence = item.get(evidence_key)
+                if isinstance(evidence, dict):
+                    values.append((f"{collection_name}.{evidence_key}.url", evidence.get("url") or evidence.get("sourceUrl")))
+    for item in gym.get("costContext", []) or []:
+        if isinstance(item, dict):
+            values.append(("costContext.sourceUrl", item.get("sourceUrl") or item.get("url")))
+
+    routes: list[dict[str, str]] = []
+    seen: set[str] = set()
+    for field, value in values:
+        normalized = candidate(field, value)
+        if not normalized:
+            continue
+        source_field, url = normalized
+        allowed = source_field in {"websiteUrl", "officialUrl"}
+        allowed = allowed or host_key(url) in operator_hosts or approved_booking_url(url)
+        if not allowed or url in seen:
+            continue
+        seen.add(url)
+        routes.append({"url": url, "sourceField": source_field})
+        if len(routes) >= MAX_REVIEWED_SEED_URLS:
+            break
+    return routes
 
 
 def robots_allowed(url: str, timeout: float) -> tuple[bool, str]:
@@ -1692,9 +1773,10 @@ def deal_eligible_gym(gym: dict[str, Any]) -> bool:
 
 
 def should_crawl(gym: dict[str, Any], cache: dict[str, Any], mode: str, today: datetime) -> bool:
-    url = text(gym.get("websiteUrl"))
-    if not is_public_http_url(url) or coverage.is_osm_url(url):
+    routes = reviewed_seed_routes(gym)
+    if not routes:
         return False
+    url = routes[0]["url"]
     if mode == "full":
         return True
     if deal_eligible_gym(gym):
@@ -1866,7 +1948,10 @@ def crawl_gym(
 
         return fetch_once_for_run(url, run_requests, run_requests_lock, perform_fetch)
 
-    url = text(gym.get("websiteUrl"))
+    seed_routes = reviewed_seed_routes(gym)
+    if not seed_routes:
+        return [], [], [], {}
+    url = seed_routes[0]["url"]
     result = rate_limited_fetch(url)
     offers, storefronts, digest = parse_page(result)
     location_candidates = parse_location_page(result)
@@ -1914,8 +1999,12 @@ def crawl_gym(
             "locationCandidates": location_candidates,
         }
     }
-    pending: list[tuple[str, str, int]] = [(storefront, url, 1) for storefront in storefronts]
-    visited: set[str] = set()
+    pending: list[tuple[str, str, int]] = [
+        (route["url"], f"reviewed-record:{route['sourceField']}", 1)
+        for route in seed_routes[1:]
+    ]
+    pending.extend((storefront, url, 1) for storefront in storefronts)
+    visited: set[str] = {urldefrag(url)[0]}
     while pending and len(visited) < MAX_LINKED_REQUESTS_PER_GYM:
         storefront, linked_from, depth = pending.pop(0)
         request_identity = urldefrag(storefront)[0]
@@ -1924,9 +2013,11 @@ def crawl_gym(
         visited.add(request_identity)
         store_result = rate_limited_fetch(storefront)
         store_offers, nested, store_digest = parse_page(store_result)
+        store_location_candidates = parse_location_page(store_result)
         if store_result.get("status") == "not-modified":
             store_offers = list(cache.get(storefront, {}).get("candidates", []))
             nested = linked_storefronts(storefront, list(cache.get(storefront, {}).get("linkedStorefronts", [])))
+            store_location_candidates = list(cache.get(storefront, {}).get("locationCandidates", []))
             store_digest = text(cache.get(storefront, {}).get("contentHash"))
         attempts.append(
             {
@@ -1947,6 +2038,10 @@ def crawl_gym(
             }
         )
         observations.extend({"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer} for offer in store_offers)
+        location_observations.extend(
+            {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate}
+            for candidate in store_location_candidates
+        )
         updates[storefront] = {
             "status": store_result["status"],
             "lastAttemptAt": attempted_at,
@@ -1955,7 +2050,7 @@ def crawl_gym(
             "contentHash": store_digest,
             "candidates": store_offers,
             "linkedStorefronts": nested,
-            "locationCandidates": [],
+            "locationCandidates": store_location_candidates,
         }
         if depth < MAX_LINK_DEPTH:
             queued = {urldefrag(item[0])[0] for item in pending}
@@ -1964,6 +2059,22 @@ def crawl_gym(
                 if detail_identity not in visited and detail_identity not in queued:
                     pending.append((detail_url, storefront, depth + 1))
                     queued.add(detail_identity)
+    attempts_by_identity = {urldefrag(text(item.get("url")))[0]: item for item in attempts}
+    reviewed_attempts = [
+        attempts_by_identity[urldefrag(route["url"])[0]]
+        for route in seed_routes
+        if urldefrag(route["url"])[0] in attempts_by_identity
+    ]
+    terminal_gone_statuses = {"http-404", "http-410"}
+    all_reviewed_seeds_gone = bool(reviewed_attempts) and len(reviewed_attempts) == len(seed_routes) and all(
+        text(item.get("status")) in terminal_gone_statuses for item in reviewed_attempts
+    )
+    attempts[0]["reviewedSeedCount"] = len(seed_routes)
+    attempts[0]["reviewedSeedAttemptCount"] = len(reviewed_attempts)
+    attempts[0]["allReviewedSeedsGone"] = all_reviewed_seeds_gone
+    if all_reviewed_seeds_gone:
+        attempts[0]["requiresReview"] = True
+        attempts[0]["sourceStatusReviewReason"] = "all-reviewed-operator-and-evidence-routes-return-404-or-410"
     return attempts, observations, location_observations, updates
 
 
@@ -2047,6 +2158,7 @@ def main() -> int:
         "observations": len(observations),
         "dealCandidates": len(deals),
         "reviewRequired": sum(item["requiresReview"] for item in run_attempts),
+        "sourceStatusReviews": sum(bool(item.get("allReviewedSeedsGone")) for item in run_attempts),
     }))
     return 0
 
