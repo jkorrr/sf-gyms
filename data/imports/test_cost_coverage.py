@@ -62,6 +62,27 @@ class CostCoverageTests(unittest.TestCase):
         }, 0, "class-pack")
         self.assertEqual(plan["classAllowance"]["period"], "purchase")
 
+    def test_reviewed_offer_preserves_operator_market_evidence_scope(self) -> None:
+        value = gym(
+            "market-scope", "Market Scope Gym", None,
+            priceSourceUrl="https://operator.example/pricing",
+            priceObservedAt="2026-08-21",
+        )
+        plan = coverage.normalize_plan_offer(value, {
+            "sourceProductId": "market-plan",
+            "name": "All Locations Membership",
+            "amount": 300,
+            "billingInterval": "month",
+            "sourceUrl": "https://booking.example/contracts",
+            "observedAt": "2026-08-21",
+            "captureMethod": "rendered-contract",
+            "exactLocationMatch": "operator-market-multi-location",
+            "conflictFlags": ["catalog-fragment"],
+        }, 0, "membership")
+        self.assertEqual(plan["evidence"]["url"], "https://booking.example/contracts")
+        self.assertEqual(plan["evidence"]["exactLocationMatch"], "operator-market-multi-location")
+        self.assertEqual(plan["evidence"]["conflictFlags"], ["catalog-fragment"])
+
     def test_operator_catalog_approval_applies_only_to_explicit_matching_targets(self) -> None:
         first = gym("first", "First Branch", 80, operatorId="example-chain")
         second = gym("second", "Second Branch", 80, operatorId="example-chain")
@@ -755,6 +776,39 @@ class CostCoverageTests(unittest.TestCase):
         self.assertFalse(result["costContext"][0]["selectable"])
         self.assertTrue(report["publicationChecks"]["costContextNeverLeaksIntoVerifiedFields"])
         self.assertTrue(report["publicationChecks"]["officialRangesRemainOutOfVerifiedFields"])
+
+    def test_official_range_accepts_from_to_language_without_exact_price_leak(self) -> None:
+        value = gym(
+            "natural-range", "Natural Language Training", None,
+            pricingAccess="contact-required",
+            priceSourceUrl="https://example.com/rates",
+            priceObservedAt="2026-08-21",
+            priceNote=(
+                "The official site states professional fees range from $110 to $150 "
+                "depending on practitioner education and experience."
+            ),
+        )
+        document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-21")
+        result = document["gyms"][0]
+        self.assertEqual(result["pricingStatus"], "official-range")
+        self.assertIsNone(result["monthlyPrice"])
+        self.assertIsNone(result["dayPassPrice"])
+        self.assertEqual(result["costContext"][0]["low"], 110)
+        self.assertEqual(result["costContext"][0]["high"], 150)
+        self.assertEqual(result["costContext"][0]["cadence"], "unknown")
+        self.assertFalse(result["costContext"][0]["selectable"])
+        self.assertTrue(report["publicationChecks"]["officialRangesRemainOutOfVerifiedFields"])
+
+    def test_official_range_accepts_through_language(self) -> None:
+        value = gym(
+            "through-range", "Through Range Studio", None,
+            priceSourceUrl="https://example.com/rates",
+            priceObservedAt="2026-08-21",
+            priceNote="Private training costs $175 through $225 per session depending on coach.",
+        )
+        document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-21")
+        context = document["gyms"][0]["costContext"][0]
+        self.assertEqual((context["low"], context["high"], context["cadence"]), (175, 225, "session"))
 
     def test_exact_selected_price_takes_priority_over_extra_official_range(self) -> None:
         value = gym(

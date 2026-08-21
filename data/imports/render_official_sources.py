@@ -17,7 +17,7 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-from urllib.parse import urldefrag, urljoin, urlparse
+from urllib.parse import parse_qs, urldefrag, urljoin, urlparse
 
 import crawl_official_sources as static_crawler
 
@@ -73,6 +73,22 @@ def is_safe_mindbody_category_label(label: str) -> bool:
     if not value or value == "select item" or any(term in value for term in ("gift", "account", "login", "sign in")):
         return False
     return bool(re.search(r"\b(?:memberships?|packages?|classes?|passes|series|workshops?|open pole|training|access|privates?)\b", value))
+
+
+def safe_mindbody_contract_href(current_url: str, href: str) -> bool:
+    """Allow only Mindbody's public Contracts tab, never account/cart routes."""
+
+    try:
+        current = urlparse(current_url)
+        target = urlparse(urljoin(current_url, href))
+    except ValueError:
+        return False
+    query = {key.casefold(): values for key, values in parse_qs(target.query).items()}
+    return bool(
+        current.netloc.casefold() == target.netloc.casefold()
+        and target.path.casefold().endswith("/asp/main_shop.asp")
+        and query.get("pmode") == ["0"]
+    )
 
 
 def safe_public_tab_href(current_url: str, href: str) -> bool:
@@ -396,6 +412,40 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                         )
                 except Exception:
                     continue
+            contract_href = ""
+            for link in page.locator("a").all()[:100]:
+                try:
+                    if " ".join(link.inner_text(timeout=300).split()).casefold() != "contracts":
+                        continue
+                    href = text(link.get_attribute("href"))
+                    if safe_mindbody_contract_href(page.url, href):
+                        contract_href = urljoin(page.url, href)
+                        break
+                except Exception:
+                    continue
+            if contract_href:
+                try:
+                    page.goto(contract_href, wait_until="commit", timeout=timeout_ms)
+                    page.wait_for_timeout(900)
+                    clicked_tabs.append("Contracts")
+                    contract_select = page.locator("select").first
+                    contract_options: list[tuple[str, str]] = []
+                    for option in contract_select.locator("option").all()[:80]:
+                        label = " ".join(option.inner_text(timeout=300).split())
+                        value = text(option.get_attribute("value"))
+                        if value and value != "0" and is_safe_mindbody_category_label(label):
+                            contract_options.append((label, value))
+                    for contract_label, value in contract_options[:20]:
+                        contract_select.select_option(value=value, timeout=1500)
+                        page.wait_for_timeout(800)
+                        contract_text = page.locator("body").inner_text(timeout=1500)
+                        platform_card_candidates.extend(
+                            static_crawler.platform_adapters.mindbody_contract_candidates(
+                                contract_label, contract_text, page.url, value
+                            )
+                        )
+                except Exception:
+                    pass
         if platform == "jane":
             for service in page.locator("a[href*='/treatment/']").all()[:200]:
                 try:

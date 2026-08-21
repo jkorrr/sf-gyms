@@ -4261,6 +4261,126 @@
       ]
     },
     {
+      "gymId": "osm-node-12132354827",
+      "monthlyPrice": 300,
+      "dayPassPrice": null,
+      "priceSource": "Perform for Golf official site and operator-linked public Mindbody storefront",
+      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The public Mindbody Contracts tab publishes a Gym/Sim Access Membership at $300 every month with month-to-month auto-renewal. The official operator page says designated open-gym and simulator access applies at all locations, so this is selected as the cheapest disclosed direct recurring plan permitting normal facility use. Auto-monthly coached memberships with 4, 6, 8, 10, or 12 sessions are named publicly but their amounts still require consultation. Exact $200 one-to-one training and swing-coaching services are retained as trainer-led appointments and do not become an ordinary day pass.",
+      "catalogCompleteness": {
+        "plans": "fragment",
+        "dropIns": "none-observed"
+      },
+      "planOffers": [
+        {
+          "sourceProductId": "179",
+          "name": "Gym/Sim Access Membership",
+          "productType": "membership",
+          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
+          "scopeType": "multi-location",
+          "amount": 300,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Contracts tab",
+          "captureMethod": "rendered-mindbody-contract",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100002",
+          "name": "Golf Performance Training (1:1)",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led golf performance session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100132",
+          "name": "Swing Coaching",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led swing-coaching session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Coach appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100164",
+          "name": "Golf Fitting — Los Altos Only",
+          "productType": "class-pack",
+          "accessScope": "One golf-fitting appointment at Los Altos only",
+          "scopeType": "single-location",
+          "classAllowance": 1,
+          "amount": 375,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "not-this-location",
+            "restrictions": [
+              "Public product is explicitly limited to Los Altos"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "different-location"
+        }
+      ]
+    },
+    {
       "gymId": "osm-node-6424602096",
       "monthlyPrice": null,
       "dayPassPrice": null,

@@ -48,6 +48,12 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertFalse(rendered.is_safe_mindbody_category_label("Select item"))
         self.assertFalse(rendered.is_safe_mindbody_category_label("Gift Cards"))
 
+    def test_mindbody_contract_navigation_is_same_host_and_contract_only(self) -> None:
+        current = "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&pMode=1"
+        self.assertTrue(rendered.safe_mindbody_contract_href(current, "/asp/main_shop.asp?pMode=0&tabID=3"))
+        self.assertFalse(rendered.safe_mindbody_contract_href(current, "/asp/main_shop.asp?pMode=4&tabID=3"))
+        self.assertFalse(rendered.safe_mindbody_contract_href(current, "https://example.com/asp/main_shop.asp?pMode=0"))
+
     def test_public_tab_links_cannot_navigate_off_the_exact_location_page(self) -> None:
         current = "https://operator.example/locations/sf#pricing"
         self.assertTrue(rendered.safe_public_tab_href(current, "#memberships"))

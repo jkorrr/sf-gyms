@@ -1103,13 +1103,13 @@
       "name": "Perform for Golf — Hayes Valley",
       "address": "1700 Market Street, San Francisco, CA 94102",
       "recordStatus": "open",
-      "pricingAccess": "contact-required",
+      "pricingAccess": "public-booking-widget",
       "entityKindOverride": "studio",
-      "accessModelOverride": "restricted",
+      "accessModelOverride": "membership",
       "modalityOverride": "personal-training",
       "amenities": ["golf performance training", "golf simulator", "open gym", "personal training"],
-      "observedAt": "2026-08-19",
-      "note": "The official locator confirms the Hayes Valley facility and appointment-only hours. The operator describes auto-monthly 4-, 6-, 8-, 10-, and 12-session memberships but discloses amounts only after a consultation."
+      "observedAt": "2026-08-21",
+      "note": "The official locator confirms Hayes Valley and the operator's plan page says designated open-gym and simulator access applies at all locations. An account-link HealCode embed exposes Mindbody Site ID 5734215; its unauthenticated public Contracts tab publishes a $300 every-month Gym/Sim Access Membership with month-to-month terms. Coached 4-, 6-, 8-, 10-, and 12-session membership amounts remain consultation-gated."
     },
     {
       "gymId": "osm-node-10859142546",
