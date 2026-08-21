@@ -952,6 +952,78 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(candidates[0]["commitment"]["type"], "month-to-month")
         self.assertEqual([(fee["type"], fee["amount"]) for fee in candidates[0]["fees"]], [("enrollment", 100)])
 
+    def test_abc_text_plain_json_reconstructs_term_fee_and_reviewed_catalog_provenance(self) -> None:
+        catalog_url = "https://livefitgym.com/signup/"
+        plan_list_url = "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319"
+        plan_id = "7301d4e290184005b71868d99fbf9707"
+        plan_list = [{"planId": plan_id, "planName": "Premier 6 Month Term"}]
+
+        offers, nested, digest = crawler.parse_page({
+            "html": json.dumps(plan_list), "url": plan_list_url, "contentType": "text/plain;charset=UTF-8",
+        })
+
+        self.assertEqual(offers, [])
+        self.assertEqual(nested, [
+            f"https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId={plan_id}&clubNumber=32319",
+        ])
+        self.assertTrue(digest)
+
+        detail = {
+            "planId": plan_id,
+            "planName": "Premier 6 Month Term",
+            "agreementTerm": "Installment",
+            "termInMonths": 6,
+            "renewalAmount": "$137.00",
+            "renewalFrequency": "Monthly",
+            "downPayments": [
+                {"name": "Enrollment Fee", "total": "$0.00"},
+                {"name": "First Month Dues", "total": "$137.00"},
+                {"name": "Last Month Dues", "total": "$137.00"},
+            ],
+            "clubFees": [{
+                "feeName": "Annual Fee", "feeAmount": "$49.00", "feeApply": True, "feeRecurring": True,
+            }],
+        }
+        candidates, deeper = crawler.abc_fitness_catalog_candidates(detail, nested[0])
+        candidate = candidates[0]
+
+        self.assertEqual(deeper, [])
+        self.assertEqual(candidate["sourceProductAliases"], ["premier"])
+        self.assertEqual(candidate["commitment"], {
+            "type": "fixed-term", "minimumMonths": 6, "rawLabel": "Installment",
+        })
+        self.assertEqual(
+            [(fee["type"], fee["amount"], fee["cadence"]) for fee in candidate["fees"]],
+            [("annual", 49, "year")],
+        )
+
+        gym = {
+            "id": "live-fit", "monthlyPrice": 137, "selectedPlanId": "live-fit:plan:premier",
+            "priceSourceUrl": catalog_url,
+            "plans": [{
+                "id": "live-fit:plan:premier", "sourceProductId": "premier", "name": "Premier",
+                "billing": {"amount": 137, "normalizedMonthly": 137},
+                "evidence": {"url": catalog_url, "rawLabel": "Premier"},
+            }],
+        }
+        observation = {**candidate, "gymId": "live-fit", "catalogSourceUrl": catalog_url}
+        audit = crawler.audit_selected_plan_price(gym, [observation])
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "source-product-alias")
+
+        observation["catalogSourceUrl"] = "https://different.example/pricing"
+        self.assertEqual(
+            crawler.audit_selected_plan_price(gym, [observation])["status"],
+            "selected-plan-not-observed",
+        )
+
+        self.assertTrue(crawler.may_follow_nested_catalog(plan_list_url, crawler.MAX_LINK_DEPTH))
+        self.assertFalse(crawler.may_follow_nested_catalog(plan_list_url, crawler.MAX_LINK_DEPTH + 1))
+        self.assertFalse(crawler.may_follow_nested_catalog(catalog_url, crawler.MAX_LINK_DEPTH))
+        self.assertTrue(crawler.preferred_accept_header(plan_list_url).startswith("application/json"))
+        self.assertTrue(crawler.preferred_accept_header(catalog_url).startswith("text/html"))
+
     def test_discovers_operator_owned_bookee_iframe(self) -> None:
         html = '<iframe src="https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211"></iframe>'
         _offers, stores, _digest = crawler.parse_page({"html": html, "url": "https://www.vrv3studios.com/schedule"})

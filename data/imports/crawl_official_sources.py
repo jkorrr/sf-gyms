@@ -40,7 +40,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v3"
+PARSER_VERSION = "selected-plan-catalog-v4"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -1849,9 +1849,37 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
             "cadence": "one-time",
             "mandatory": True,
         })
+    for charge in payload.get("clubFees", []):
+        if not isinstance(charge, dict) or charge.get("feeApply") is False:
+            continue
+        label = text(charge.get("feeName"))
+        charge_amount = numeric(charge.get("feeAmount"))
+        if charge_amount is None or charge_amount <= 0 or not re.search(r"\bfee\b", label, re.IGNORECASE):
+            continue
+        label_lower = label.casefold()
+        fee_type = next(
+            (value for token, value in (
+                ("annual", "annual"), ("enrollment", "enrollment"),
+                ("initiation", "initiation"), ("processing", "processing"),
+            ) if token in label_lower),
+            "other",
+        )
+        fees.append({
+            "type": fee_type,
+            "name": label,
+            "amount": charge_amount,
+            "currency": "USD",
+            "cadence": "year" if charge.get("feeRecurring") is True and fee_type == "annual" else "one-time",
+            "mandatory": True,
+        })
     cadence = "month" if "month" in text(payload.get("renewalFrequency")).casefold() else "unknown"
+    term_months = numeric(payload.get("termInMonths"))
+    agreement_term = text(payload.get("agreementTerm"))
+    alias_label = re.sub(r"\b\d+\s+months?\s+term\b", "", name, flags=re.IGNORECASE)
+    source_product_alias = re.sub(r"[^a-z0-9]+", "-", alias_label.casefold()).strip("-")
     candidate = {
         "sourceProductId": plan_id,
+        "sourceProductAliases": [source_product_alias] if source_product_alias else [],
         "name": name.removesuffix("_MP"),
         "amount": amount,
         "currency": "USD",
@@ -1866,9 +1894,9 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
             "restrictions": ["Age 65+"] if senior else [],
         },
         "commitment": {
-            "type": "month-to-month" if text(payload.get("agreementTerm")).casefold() == "open" else "unknown",
-            "minimumMonths": None,
-            "rawLabel": text(payload.get("agreementTerm")),
+            "type": "fixed-term" if term_months and term_months > 0 else ("month-to-month" if agreement_term.casefold() == "open" else "unknown"),
+            "minimumMonths": term_months if term_months and term_months > 0 else None,
+            "rawLabel": agreement_term,
         },
         "promotion": {"isPromotion": bool(payload.get("activePresale")), "label": "Presale" if payload.get("activePresale") else ""},
         "fees": fees,
@@ -1882,6 +1910,19 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
         "autoPublishEligible": False,
     }
     return [candidate], []
+
+
+def may_follow_nested_catalog(source_url: str, depth: int) -> bool:
+    """Permit only documented public catalog-to-detail hops past the base frontier."""
+
+    if depth < MAX_LINK_DEPTH:
+        return True
+    parsed = urlparse(source_url)
+    return bool(
+        depth == MAX_LINK_DEPTH
+        and platform_name(source_url) == "abc-fitness"
+        and parsed.path.casefold().endswith("/api/online-join/signup/planlist")
+    )
 
 
 def public_platform_json_candidates(payload: Any, source_url: str) -> tuple[list[dict[str, Any]], list[str]]:
@@ -2251,11 +2292,20 @@ def static_access_blocker(url: str, html: str) -> str:
     return ""
 
 
+def preferred_accept_header(url: str) -> str:
+    """Prefer structured responses only for explicit public API routes."""
+
+    path = urlparse(url).path.casefold()
+    if re.search(r"(?:^|/)_?api(?:/|$)", path) or path.endswith(".json"):
+        return "application/json,text/plain;q=0.9,*/*;q=0.5"
+    return "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.5"
+
+
 def fetch_page(url: str, timeout: float, conditional: dict[str, Any] | None = None) -> dict[str, Any]:
     allowed, robots_status = robots_allowed(url, timeout)
     if not allowed:
         return {"status": "robots-disallowed", "url": url, "robotsStatus": robots_status}
-    headers = {"User-Agent": USER_AGENT, "Accept": "text/html,application/xhtml+xml,application/json;q=0.9,*/*;q=0.5"}
+    headers = {"User-Agent": USER_AGENT, "Accept": preferred_accept_header(url)}
     if conditional:
         if conditional.get("etag"):
             headers["If-None-Match"] = conditional["etag"]
@@ -2340,7 +2390,9 @@ def parse_page(
         return [], [], ""
     source_url = text(result.get("url"))
     is_json = "json" in text(result.get("contentType")).casefold()
-    if is_json and platform_adapters.platform_for_url(source_url):
+    public_platform = platform_adapters.platform_for_url(source_url)
+    json_shaped = html.lstrip().startswith(("{", "["))
+    if public_platform and (is_json or json_shaped):
         try:
             payload = json.loads(html)
         except json.JSONDecodeError:
@@ -2754,6 +2806,11 @@ def selected_plan_candidate_match(
     if selected_product_id and candidate_product_id:
         if selected_product_id == candidate_product_id:
             return 100, "source-product-id"
+        candidate_aliases = {
+            text(value) for value in candidate.get("sourceProductAliases", []) if text(value)
+        }
+        if selected_product_id in candidate_aliases:
+            return 95, "source-product-alias"
         return None
 
     raw_label = plan_identity_label(
@@ -2838,12 +2895,16 @@ def audit_selected_plan_price(
             continue
         source_url = text(candidate.get("sourceUrl"))
         if selected_urls and source_url and request_identity(source_url) not in selected_urls:
+            linked_public_catalog = (
+                request_identity(text(candidate.get("catalogSourceUrl"))) in selected_urls
+                and platform_name(source_url) != "operator-site"
+            )
             stable_public_platform_product = (
                 bool(selected_source_product_id)
                 and text(candidate.get("sourceProductId")) == selected_source_product_id
                 and platform_name(source_url) in selected_public_platforms
             )
-            if not stable_public_platform_product:
+            if not (linked_public_catalog or stable_public_platform_product):
                 continue
         promotion = candidate.get("promotion") or {}
         eligibility = candidate.get("eligibility") or {}
@@ -3064,7 +3125,10 @@ def crawl_gym(
             "priceChangeOver20Percent": False,
         }
     ]
-    observations = [{"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer} for offer in offers]
+    observations = [
+        {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer, "catalogSourceUrl": url}
+        for offer in offers
+    ]
     location_observations = [{"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate} for candidate in location_candidates]
     updates = {
         url: {
@@ -3080,17 +3144,17 @@ def crawl_gym(
             "locationCandidates": location_candidates,
         }
     }
-    pending: list[tuple[str, str, int]] = [
-        (route["url"], f"reviewed-record:{route['sourceField']}", 1)
+    pending: list[tuple[str, str, int, str]] = [
+        (route["url"], f"reviewed-record:{route['sourceField']}", 1, route["url"])
         for route in seed_routes[1:]
     ]
-    pending.extend((storefront, url, 1) for storefront in storefronts)
+    pending.extend((storefront, url, 1, url) for storefront in storefronts)
     visited: set[str] = {request_identity(url)}
     operator_request_count = int(platform_name(url) == "operator-site")
     booking_request_count = int(platform_name(url) != "operator-site")
     frontier_skip_reasons: dict[str, int] = defaultdict(int)
     while pending and len(visited) < MAX_LINKED_REQUESTS_PER_GYM:
-        storefront, linked_from, depth = pending.pop(0)
+        storefront, linked_from, depth, catalog_source_url = pending.pop(0)
         storefront_identity = request_identity(storefront)
         if storefront_identity in visited:
             continue
@@ -3132,7 +3196,13 @@ def crawl_gym(
                 "priceChangeOver20Percent": False,
             }
         )
-        observations.extend({"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer} for offer in store_offers)
+        observations.extend(
+            {
+                "gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at,
+                **offer, "catalogSourceUrl": catalog_source_url,
+            }
+            for offer in store_offers
+        )
         location_observations.extend(
             {"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate}
             for candidate in store_location_candidates
@@ -3149,7 +3219,7 @@ def crawl_gym(
             "linkedStorefronts": nested,
             "locationCandidates": store_location_candidates,
         }
-        if depth < MAX_LINK_DEPTH:
+        if may_follow_nested_catalog(storefront, depth):
             queued = {request_identity(item[0]) for item in pending}
             for detail_url in nested[:12]:
                 child_is_operator = platform_name(detail_url) == "operator-site"
@@ -3161,7 +3231,7 @@ def crawl_gym(
                     continue
                 detail_identity = request_identity(detail_url)
                 if detail_identity not in visited and detail_identity not in queued:
-                    pending.append((detail_url, storefront, depth + 1))
+                    pending.append((detail_url, storefront, depth + 1, catalog_source_url))
                     queued.add(detail_identity)
     attempts_by_identity = {request_identity(text(item.get("url"))): item for item in attempts}
     reviewed_attempts = [
