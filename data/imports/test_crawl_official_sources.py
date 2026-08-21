@@ -90,6 +90,65 @@ class OfficialCrawlerTests(unittest.TestCase):
         gym = {"officialUrl": "https://operator.example/location/sf", "monthlyPrice": None}
         self.assertTrue(crawler.should_crawl(gym, {}, "full", datetime(2026, 8, 21)))
 
+    def test_sitemap_pricing_leads_become_review_only_crawl_seeds(self) -> None:
+        gym = {
+            "id": "sf-location",
+            "websiteUrl": "https://operator.example/locations/sf",
+            "officialUrl": "https://operator.example/locations/sf",
+        }
+        candidates = [
+            {
+                "url": "https://operator.example/locations/sf/pricing",
+                "candidateType": "exact-location-document",
+                "matchingGymIds": ["sf-location"],
+                "identityScore": 2,
+                "reviewStatus": "pending",
+            },
+            {
+                "url": "https://operator.example/memberships",
+                "candidateType": "operator-document",
+                "matchingGymIds": [],
+                "identityScore": 1,
+                "reviewStatus": "pending",
+            },
+            {
+                "url": "https://operator.example/locations/other-city",
+                "candidateType": "operator-document",
+                "matchingGymIds": [],
+                "identityScore": 1,
+                "reviewStatus": "pending",
+            },
+            {
+                "url": "https://evil.example/locations/sf/pricing",
+                "candidateType": "exact-location-document",
+                "matchingGymIds": ["sf-location"],
+                "identityScore": 2,
+                "reviewStatus": "pending",
+            },
+            {
+                "url": "https://operator.example/pricing-old",
+                "candidateType": "operator-document",
+                "matchingGymIds": [],
+                "identityScore": 1,
+                "reviewStatus": "rejected",
+            },
+        ]
+
+        routes = crawler.reviewed_seed_routes(gym, candidates)
+
+        self.assertIn({"url": "https://operator.example/locations/sf/pricing", "sourceField": "operatorDocumentCandidate"}, routes)
+        self.assertIn({"url": "https://operator.example/memberships", "sourceField": "operatorDocumentCandidate"}, routes)
+        self.assertFalse(any("evil.example" in item["url"] or item["url"].endswith("pricing-old") for item in routes))
+        self.assertFalse(any(item["url"].endswith("other-city") for item in routes))
+
+    def test_operator_wide_pricing_document_rejects_other_location_slugs(self) -> None:
+        self.assertTrue(crawler.is_operator_wide_pricing_document("https://operator.example/pricing"))
+        self.assertTrue(crawler.is_operator_wide_pricing_document("https://operator.example/es/pricing"))
+        self.assertTrue(crawler.is_operator_wide_pricing_document("https://operator.example/content/buy"))
+        self.assertTrue(crawler.is_operator_wide_pricing_document("https://operator.example/membership/membership-options"))
+        self.assertFalse(crawler.is_operator_wide_pricing_document("https://operator.example/es/pricing/arlington"))
+        self.assertFalse(crawler.is_operator_wide_pricing_document("https://operator.example/locations/sf/pricing"))
+
     def test_reviewed_price_route_is_crawled_even_when_homepage_is_404(self) -> None:
         gym = {
             "id": "example-gym",
@@ -163,6 +222,43 @@ class OfficialCrawlerTests(unittest.TestCase):
             attempts[0]["sourceStatusReviewReason"],
             "all-reviewed-operator-and-evidence-routes-return-404-or-410",
         )
+
+    def test_official_range_does_not_crash_exact_price_change_detection(self) -> None:
+        gym = {
+            "id": "range-gym",
+            "name": "Range Gym",
+            "websiteUrl": "https://range.example/",
+            "monthlyPrice": 100,
+        }
+
+        def fake_fetch(url: str, _timeout: float, _cached: object) -> dict[str, object]:
+            return {
+                "status": "fetched", "url": url, "robotsStatus": "checked",
+                "html": "<p>Personal training sessions range $150-$250 per session.</p>",
+            }
+
+        with patch.object(crawler, "fetch_page", side_effect=fake_fetch), patch.object(crawler, "DOMAIN_DELAY_SECONDS", 0):
+            attempts, observations, _locations, _updates = crawler.crawl_gym(
+                gym, {}, datetime(2026, 8, 21), 1, defaultdict(threading.Lock), {}, {}, {}, {}, threading.Lock(),
+            )
+
+        self.assertEqual(observations[0]["kind"], "range")
+        self.assertFalse(attempts[0]["priceChangeOver20Percent"])
+
+    def test_worker_error_isolated_as_review_attempt(self) -> None:
+        gym = {"id": "broken", "name": "Broken Gym", "officialUrl": "https://broken.example/"}
+
+        def broken_runner():
+            raise KeyError("unexpected source shape")
+
+        attempts, observations, locations, updates = crawler.fail_closed_crawl(
+            gym, datetime(2026, 8, 21), broken_runner,
+        )
+
+        self.assertEqual(attempts[0]["status"], "worker-error")
+        self.assertTrue(attempts[0]["requiresReview"])
+        self.assertIn("KeyError", attempts[0]["error"])
+        self.assertEqual((observations, locations, updates), ([], [], {}))
 
     def test_concurrent_locations_share_one_physical_request(self) -> None:
         requests: dict[str, concurrent.futures.Future[dict[str, object]]] = {}

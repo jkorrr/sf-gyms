@@ -16,6 +16,7 @@ import time
 from collections import defaultdict
 from collections.abc import Iterable
 from datetime import UTC, datetime, timedelta
+from functools import lru_cache
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -36,6 +37,7 @@ LOCATION_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "official-location-obse
 DEAL_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "deal-observations.json"
 DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
+OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
@@ -431,16 +433,16 @@ def crunch_visible_candidates(visible_text: str, source_url: str) -> list[dict[s
             re.search(r"(?:Best Value.{0,100}All Crunch|All Crunch.{0,100}Best Value)", value, re.IGNORECASE)
         )
 
-        def fees(variant: int) -> list[dict[str, Any]]:
+        def fees(variant: int, plan_key: str = key) -> list[dict[str, Any]]:
             result: list[dict[str, Any]] = []
-            if key in enrollment:
+            if plan_key in enrollment:
                 result.append({
-                    "type": "enrollment", "amount": enrollment[key][variant], "currency": "USD",
+                    "type": "enrollment", "amount": enrollment[plan_key][variant], "currency": "USD",
                     "cadence": "one-time", "mandatory": True,
                 })
-            if key in processing:
+            if plan_key in processing:
                 result.append({
-                    "type": "processing", "amount": processing[key][variant], "currency": "USD",
+                    "type": "processing", "amount": processing[plan_key][variant], "currency": "USD",
                     "cadence": "one-time", "mandatory": True,
                 })
             return result
@@ -1592,7 +1594,48 @@ def approved_booking_url(url: str) -> bool:
     return True
 
 
-def reviewed_seed_routes(gym: dict[str, Any]) -> list[dict[str, str]]:
+def is_operator_wide_pricing_document(url: str) -> bool:
+    """Reject location-scoped pricing pages unless identity matched upstream."""
+
+    segments = [segment.casefold() for segment in urlparse(url).path.split("/") if segment]
+    categories = {
+        "pricing", "prices", "pricespolicies", "rate", "rates", "membership", "memberships",
+        "plan", "plans", "package", "packages", "pass", "passes", "drop-in", "dropins", "buy", "join",
+    }
+    allowed_prefixes = {"content", "membership", "memberships", "memberships-join-us", "shop", "online"}
+    allowed_tails = {
+        "options", "membership-options", "membership-options-2", "benefits", "faqs", "faq", "policies", "policy",
+        "types", "types-of-membership", "pricing", "prices", "rates", "plans", "packages", "passes", "buy", "join",
+    }
+    for index, segment in enumerate(segments):
+        if segment not in categories:
+            continue
+        prefixes = segments[:index]
+        tails = segments[index + 1:]
+        prefixes_are_generic = all(value in allowed_prefixes or re.fullmatch(r"[a-z]{2}", value) for value in prefixes)
+        tails_are_generic = all(value in allowed_tails for value in tails)
+        if prefixes_are_generic and tails_are_generic:
+            return True
+    return False
+
+
+@lru_cache(maxsize=1)
+def load_operator_document_candidates(path: Path = OPERATOR_DOCUMENT_CANDIDATES_PATH) -> tuple[dict[str, Any], ...]:
+    """Load review-only official sitemap leads once per crawler process."""
+
+    if not path.exists():
+        return ()
+    try:
+        document = json.loads(path.read_text(encoding="utf-8"))
+    except (OSError, json.JSONDecodeError):
+        return ()
+    return tuple(item for item in document.get("candidates", []) if isinstance(item, dict))
+
+
+def reviewed_seed_routes(
+    gym: dict[str, Any],
+    document_candidates: Iterable[dict[str, Any]] | None = None,
+) -> list[dict[str, str]]:
     """Build bounded crawl seeds from committed, reviewed evidence routes.
 
     Operator URLs are trusted only from the canonical website/official fields.
@@ -1630,6 +1673,26 @@ def reviewed_seed_routes(gym: dict[str, Any]) -> list[dict[str, str]]:
         ("officialUrl", gym.get("officialUrl")),
         ("priceSourceUrl", gym.get("priceSourceUrl")),
     ]
+    gym_id = text(gym.get("id"))
+    sitemap_leads = document_candidates if document_candidates is not None else load_operator_document_candidates()
+    for item in sitemap_leads:
+        if text(item.get("reviewStatus")) not in {"pending", "approved"}:
+            continue
+        url = urldefrag(text(item.get("url")))[0]
+        matching_ids = {text(value) for value in item.get("matchingGymIds", [])}
+        exact_match = gym_id in matching_ids and float(item.get("identityScore") or 0) >= 2
+        operator_wide = (
+            text(item.get("candidateType")) == "operator-document"
+            and not matching_ids
+            and is_operator_wide_pricing_document(url)
+        )
+        if (
+            (exact_match or operator_wide)
+            and host_key(url) in operator_hosts
+            and RESEARCH_PATH_RE.search(urlparse(url).path)
+            and not RESEARCH_EXCLUDE_RE.search(urlparse(url).path)
+        ):
+            values.append(("operatorDocumentCandidate", url))
     for collection_name in ("plans", "dropIns"):
         for item in gym.get(collection_name, []) or []:
             if not isinstance(item, dict):
@@ -1835,7 +1898,7 @@ def structured_location_candidates(json_ld_blocks: list[str], source_url: str) -
             hours = node.get("openingHours") or node.get("openingHoursSpecification") or []
             amenities = []
             for feature in node.get("amenityFeature", []) if isinstance(node.get("amenityFeature"), list) else []:
-                if isinstance(feature, dict) and feature.get("value") not in {False, "false", 0} and text(feature.get("name")):
+                if isinstance(feature, dict) and feature.get("value") not in {False, "false"} and text(feature.get("name")):
                     amenities.append(text(feature.get("name")))
             raw_label = normalized_label(f"{text(node.get('name'))} | {address} | {text(hours)}")
             candidates.append(
@@ -2112,7 +2175,12 @@ def crawl_gym(
     attempted_at = today.date().isoformat()
     previous_hash = text(cache.get(url, {}).get("contentHash"))
     published = gym.get("monthlyPrice")
-    candidate_monthly = [offer["amount"] for offer in offers if offer.get("productType") == "monthly" or offer.get("cadence") == "month"]
+    candidate_monthly = [
+        amount
+        for offer in offers
+        if (offer.get("productType") == "monthly" or offer.get("cadence") == "month")
+        and (amount := numeric(offer.get("amount"))) is not None
+    ]
     price_change = bool(
         published is not None
         and any(abs(float(candidate) - float(published)) / float(published) > 0.2 for candidate in candidate_monthly)
@@ -2227,6 +2295,34 @@ def crawl_gym(
     return attempts, observations, location_observations, updates
 
 
+def fail_closed_crawl(
+    gym: dict[str, Any],
+    today: datetime,
+    runner: Any,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], dict[str, dict[str, Any]]]:
+    """Isolate one source/parser failure instead of aborting a city-wide run."""
+
+    try:
+        return runner()
+    except Exception as error:
+        return ([{
+            "gymId": text(gym.get("id")),
+            "name": text(gym.get("name")),
+            "url": text(gym.get("officialUrl")) or text(gym.get("websiteUrl")),
+            "attemptedAt": today.date().isoformat(),
+            "status": "worker-error",
+            "robotsStatus": "unknown",
+            "contentHash": "",
+            "contentChanged": False,
+            "candidateCount": 0,
+            "sharedResponse": False,
+            "linkedStorefronts": [],
+            "requiresReview": True,
+            "priceChangeOver20Percent": False,
+            "error": f"{type(error).__name__}: {text(error)}"[:240],
+        }], [], [], {})
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=("deals", "weekly", "full"), default="weekly")
@@ -2258,9 +2354,13 @@ def main() -> int:
     run_requests_lock = threading.Lock()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         results = executor.map(
-            lambda gym: crawl_gym(
-                gym, cache, today, args.timeout, domain_locks, last_domain_request,
-                domain_429_counts, domain_next_request, run_requests, run_requests_lock,
+            lambda gym: fail_closed_crawl(
+                gym,
+                today,
+                lambda: crawl_gym(
+                    gym, cache, today, args.timeout, domain_locks, last_domain_request,
+                    domain_429_counts, domain_next_request, run_requests, run_requests_lock,
+                ),
             ),
             candidates,
         )
