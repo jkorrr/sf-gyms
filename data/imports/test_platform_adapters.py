@@ -104,6 +104,19 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertTrue(candidates[0]["promotion"]["isPromotion"])
         self.assertEqual(candidates[0]["method"], "rendered-mindbody-purchase-item")
 
+    def test_mindbody_contract_uses_recurring_charge_not_total_or_zero_pass(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyRecurringContract"]
+        candidates = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"], fixture["sourceProductId"],
+        )
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual(candidates[0]["sourceProductId"], "179")
+        self.assertEqual(candidates[0]["amount"], 300)
+        self.assertEqual(candidates[0]["cadence"], "month")
+        self.assertEqual(candidates[0]["commitment"]["type"], "month-to-month")
+        self.assertEqual(candidates[0]["fees"], [])
+        self.assertFalse(candidates[0]["autoPublishEligible"])
+
 
 if __name__ == "__main__":
     unittest.main()

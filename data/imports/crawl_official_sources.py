@@ -1552,6 +1552,31 @@ def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
     return results[:12]
 
 
+MINDBODY_EMBED_SITE_RE = re.compile(
+    r"\bdata-mb-site-id\s*=\s*['\"](?P<site_id>\d{1,12})['\"]",
+    re.IGNORECASE,
+)
+
+
+def mindbody_embedded_storefronts(html: str) -> list[str]:
+    """Recover public Mindbody stores from account-only HealCode embeds.
+
+    Some operators expose only a ``Login | Register`` widget on their own
+    site.  The widget still carries the operator's public Mindbody Site ID,
+    which is sufficient to open the standard unauthenticated services store.
+    ``data-site-id`` is deliberately ignored because that is a HealCode widget
+    identity rather than the Mindbody business Site ID.
+    """
+
+    results: list[str] = []
+    for match in MINDBODY_EMBED_SITE_RE.finditer(html):
+        site_id = match.group("site_id")
+        candidate = f"https://clients.mindbodyonline.com/classic/ws?studioid={site_id}&stype=41"
+        if candidate not in results:
+            results.append(candidate)
+    return results[:4]
+
+
 def approved_booking_url(url: str) -> bool:
     """Return whether a reviewed URL is an allowed public booking surface."""
 
@@ -1756,6 +1781,9 @@ def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str],
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
     stores = linked_storefronts(source_url, parser.links)
+    for candidate in mindbody_embedded_storefronts(html):
+        if candidate not in stores:
+            stores.append(candidate)
     for candidate in mariana_storefronts(html):
         if candidate not in stores:
             stores.append(candidate)

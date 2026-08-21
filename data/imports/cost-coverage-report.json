@@ -6,14 +6,14 @@
   "pricingStatusCounts": {
     "estimated": 9,
     "free": 22,
-    "gated": 13,
+    "gated": 11,
     "not-applicable": 14,
-    "official-range": 7,
+    "official-range": 8,
     "operator-confirmed": 0,
     "pay-per-visit": 25,
     "reported": 0,
     "unresolved": 2,
-    "verified": 155
+    "verified": 156
   },
   "suppressedAliasCount": 108,
   "suppressedAliases": [
@@ -583,10 +583,10 @@
     "public-recreation": 38,
     "studio": 105
   },
-  "verifiedMonthlyCount": 155,
+  "verifiedMonthlyCount": 156,
   "verifiedDayPassCount": 122,
   "staleVerifiedCount": 0,
-  "approvedCrawlObservationsApplied": 135,
+  "approvedCrawlObservationsApplied": 136,
   "approvedOperatorCatalogLocationsApplied": 83,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
@@ -598,8 +598,8 @@
   "reportedMonthlyCount": 0,
   "estimatedMonthlyCount": 9,
   "approvedExternalComparableCount": 1,
-  "officialCostContextListingCount": 14,
-  "officialRangeCount": 7,
+  "officialCostContextListingCount": 18,
+  "officialRangeCount": 8,
   "fieldCoverage": {
     "specificDescriptionCount": 247,
     "officialUrlCount": 246,
@@ -611,9 +611,9 @@
     "amenitiesListedCount": 244,
     "operatorLocationIdCount": 123,
     "sourcePlanCatalogCount": 182,
-    "sourcePlanFragmentCount": 1,
+    "sourcePlanFragmentCount": 2,
     "selectedOnlyPlanCatalogCount": 0,
-    "noPlanCatalogCount": 64,
+    "noPlanCatalogCount": 63,
     "sourceDropInCatalogCount": 129,
     "sourceDropInFragmentCount": 0,
     "selectedOnlyDropInCatalogCount": 0,
@@ -627,29 +627,45 @@
     "explicitDayPassPriceStateCount": 247,
     "metadataGapStatusCount": 247
   },
-  "commercialListings": 182,
-  "commercialAttemptedSourceListings": 182,
+  "commercialListings": 183,
+  "commercialAttemptedSourceListings": 183,
   "commercialAttemptedSourceCoverage": 1.0,
   "commercialUnattemptedSourceListings": [],
-  "commercialExactAddressListings": 182,
+  "commercialExactAddressListings": 183,
   "commercialExactAddressCoverage": 1.0,
-  "actionableCommercialListings": 182,
+  "actionableCommercialListings": 183,
   "actionableCommercialCoverage": 1.0,
-  "meaningfulCostCommercialListings": 182,
+  "meaningfulCostCommercialListings": 183,
   "meaningfulCostCommercialCoverage": 1.0,
   "officialSiteUnresolvedCount": 1,
   "officialPagePresentCount": 246,
   "officialSiteDiscoveryQueue": 0,
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
-    "publiclyPricedCommercialListings": 169,
+    "publiclyPricedCommercialListings": 170,
     "reconstructedRelevantCatalogListings": 169,
-    "reconstructedRelevantCatalogCoverage": 1.0,
+    "reconstructedRelevantCatalogCoverage": 0.9941,
     "targetCoverage": 0.9,
     "targetMet": true,
-    "priorityPlatformCounts": {},
-    "priorityRecords": [],
-    "sourceFragmentPlanCatalogs": 1,
+    "priorityPlatformCounts": {
+      "mindbody": 1
+    },
+    "priorityRecords": [
+      {
+        "id": "osm-node-12132354827",
+        "name": "Perform for Golf — Hayes Valley",
+        "operatorId": "perform for golf",
+        "platforms": [
+          "mindbody"
+        ],
+        "monthlyPrice": 300.0,
+        "dayPassPrice": null,
+        "planCatalogStatus": "source-fragment",
+        "dropInCatalogStatus": "none",
+        "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
+      }
+    ],
+    "sourceFragmentPlanCatalogs": 2,
     "selectedOnlyPlanCatalogs": 0,
     "sourceFragmentDropInCatalogs": 0,
     "selectedOnlyDropInCatalogs": 0

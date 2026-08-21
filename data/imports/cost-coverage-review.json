@@ -8432,18 +8432,18 @@
       "websiteUrl": "https://www.performforgolf.com/locations",
       "entityKind": "studio",
       "modality": "personal-training",
-      "pricingStatus": "gated",
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
+      "pricingStatus": "verified",
+      "pricingBlocker": "",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": null,
+      "selectedPlanId": "osm-node-12132354827:plan:179",
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -8879,8 +8879,8 @@
       "websiteUrl": "https://regularexercise.net/",
       "entityKind": "studio",
       "modality": "personal-training",
-      "pricingStatus": "gated",
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],

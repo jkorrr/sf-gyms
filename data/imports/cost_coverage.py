@@ -380,12 +380,18 @@ def evidence_for_offer(gym: dict[str, Any], offer: dict[str, Any], raw_label: st
     observed_at = text(offer.get("observedAt")) or evidence["observedAt"]
     source = text(offer.get("source")) or evidence["source"]
     method = text(offer.get("captureMethod")) or evidence["method"]
+    evidence_tier = text(offer.get("evidenceTier")) or evidence["evidenceTier"]
+    exact_location_match = text(offer.get("exactLocationMatch")) or evidence["exactLocationMatch"]
+    conflict_flags = list(offer.get("conflictFlags") or evidence["conflictFlags"])
     evidence.update(
         {
             "url": url,
             "observedAt": observed_at,
             "source": source,
             "method": method,
+            "evidenceTier": evidence_tier,
+            "exactLocationMatch": exact_location_match,
+            "conflictFlags": conflict_flags,
             "sourceProductId": text(offer.get("sourceProductId")),
             "contentHash": hashlib.sha256(f"{url}|{observed_at}|{raw_label}".encode("utf-8")).hexdigest(),
         }
@@ -784,7 +790,8 @@ def select_best_value_plan(plans: list[dict[str, Any]], has_source_catalog: bool
 
 
 COST_RANGE_RE = re.compile(
-    r"(?P<label>[^.;\n]{0,100}?)\$(?P<low>\d{1,4}(?:\.\d{1,2})?)\s*[–—-]\s*\$?(?P<high>\d{1,4}(?:\.\d{1,2})?)"
+    r"(?P<label>[^.;\n]{0,100}?)\$(?P<low>\d{1,4}(?:\.\d{1,2})?)"
+    r"\s*(?:[–—-]|\bto\b|\bthrough\b)\s*\$?(?P<high>\d{1,4}(?:\.\d{1,2})?)"
     r"\s*(?:/|per\s+)?(?P<cadence>session|class|visit|hour|month)?",
     re.IGNORECASE,
 )

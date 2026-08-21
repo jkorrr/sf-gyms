@@ -407,3 +407,83 @@ def mindbody_purchase_item_candidates(
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]
+
+
+def mindbody_contract_candidates(
+    contract_label: str,
+    contract_text: str,
+    source_url: str,
+    source_product_id: str = "",
+) -> list[dict[str, Any]]:
+    """Extract a recurring plan from one publicly visible Mindbody contract.
+
+    Contract pages repeat totals and component rows.  The recurring charge is
+    accepted only when Mindbody explicitly renders ``$X every <cadence>``;
+    totals, zero-dollar companion passes, and checkout arithmetic are ignored.
+    """
+
+    if platform_for_url(source_url) != "mindbody":
+        return []
+    label = " ".join(text(contract_label).split())
+    recurring_match = re.search(
+        r"\$\s*(?P<amount>\d{1,5}(?:\.\d{1,2})?)\s+every\s+"
+        r"(?P<cadence>month|four weeks|4 weeks|week|year)\b",
+        contract_text,
+        re.IGNORECASE,
+    )
+    if not label or not recurring_match:
+        return []
+    amount = float(recurring_match.group("amount"))
+    if amount <= 0 or amount > 10_000:
+        return []
+    cadence = recurring_match.group("cadence").casefold()
+    cadence = "4 weeks" if cadence in {"four weeks", "4 weeks"} else cadence
+    combined = " ".join(f"{label} {contract_text}".split())
+    promotion = bool(PROMOTION_RE.search(combined))
+    fees: list[dict[str, Any]] = []
+    fee_re = re.compile(
+        r"(?P<label>(?:annual|enroll?ment|initiation|activation|processing|setup)\s+fee)"
+        r"\s*[:\-]?\s*\$\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?)",
+        re.IGNORECASE,
+    )
+    for match in fee_re.finditer(contract_text):
+        fee_amount = float(match.group("amount"))
+        if fee_amount < 0 or fee_amount > 2_000:
+            continue
+        fees.append({
+            "type": fee_type(match.group("label")),
+            "name": " ".join(match.group("label").split()),
+            "amount": fee_amount,
+            "currency": "USD",
+            "cadence": "year" if "annual" in match.group("label").casefold() else "one-time",
+            "mandatory": True,
+        })
+    eligibility_type = "new-client" if promotion else "standard-adult"
+    return [{
+        "sourceProductId": text(source_product_id),
+        "amount": amount,
+        "currency": "USD",
+        "rawLabel": label[:220],
+        "categoryLabel": "Contracts",
+        "cadence": cadence,
+        "intervalCount": 1,
+        "productType": "monthly" if cadence in {"month", "4 weeks", "week"} else "offer",
+        "classAllowance": class_allowance({}, label, cadence),
+        "accessScope": label,
+        "promotion": {"isPromotion": promotion, "label": label if promotion else ""},
+        "eligibility": {
+            "type": eligibility_type,
+            "restrictions": ["Promotional contract"] if promotion else [],
+        },
+        "commitment": commitment({}, combined, True),
+        "fees": fees,
+        "locations": [],
+        "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
+        "purchaseMethod": "direct-public",
+        "method": "rendered-mindbody-contract",
+        "adapter": "mindbody",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]

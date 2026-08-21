@@ -671,9 +671,9 @@
     {
       "gymId": "osm-node-12132354827",
       "reviewStatus": "approved",
-      "sourceType": "official-location-page",
-      "sourceUrl": "https://www.performforgolf.com/locations",
-      "observedAt": "2026-08-19",
+      "sourceType": "official-location-page-and-public-booking-widget",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "observedAt": "2026-08-21",
       "name": "Perform for Golf — Hayes Valley",
       "address": "1700 Market Street, San Francisco, CA 94102",
       "websiteUrl": "https://www.performforgolf.com/locations",
@@ -681,12 +681,12 @@
       "operatorLocationId": "hayes-valley-san-francisco",
       "hours": "Mon-Fri 6:00am-8:00pm; Sat-Sun 8:00am-4:00pm, by appointment. Open-gym access is limited to eligible coaching members.",
       "recordStatus": "open",
-      "pricingAccess": "contact-required",
+      "pricingAccess": "public-booking-widget",
       "entityKindOverride": "studio",
-      "accessModelOverride": "restricted",
+      "accessModelOverride": "membership",
       "modalityOverride": "personal-training",
       "amenities": ["golf performance training", "golf simulator", "open gym", "personal training"],
-      "note": "The official location page confirms appointment-only operation; exact membership amounts are consultation-gated."
+      "note": "The official location page confirms appointment-based coaching, while the plan page says designated open-gym and simulator access applies at all locations. The site's public HealCode configuration exposes Mindbody Site ID 5734215, whose unauthenticated Contracts tab publishes a $300 every-month Gym/Sim Access Membership with month-to-month terms. Coached membership amounts remain consultation-gated."
     },
     {
       "gymId": "osm-node-6177260821",

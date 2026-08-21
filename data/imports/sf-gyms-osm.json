@@ -42993,7 +42993,22 @@
           "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "range",
+          "label": "ongoing options range from",
+          "low": 108.0,
+          "high": 329.0,
+          "currency": "USD",
+          "cadence": "unknown",
+          "productType": "service",
+          "sourceUrl": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "observedAt": "2026-08-19",
+          "evidenceTier": "official-public",
+          "selectable": false,
+          "id": "osm-way-261268792:cost-context:e73bea1ace73"
+        }
+      ],
       "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term.",
       "planValidationErrors": [],
       "catalogStatus": {
@@ -43233,7 +43248,22 @@
           "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "range",
+          "label": "ongoing options range from",
+          "low": 108.0,
+          "high": 329.0,
+          "currency": "USD",
+          "cadence": "unknown",
+          "productType": "service",
+          "sourceUrl": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "observedAt": "2026-08-19",
+          "evidenceTier": "official-public",
+          "selectable": false,
+          "id": "web-a16276afbf72d9:cost-context:e73bea1ace73"
+        }
+      ],
       "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term.",
       "planValidationErrors": [],
       "catalogStatus": {
@@ -43473,7 +43503,22 @@
           "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "range",
+          "label": "ongoing options range from",
+          "low": 108.0,
+          "high": 329.0,
+          "currency": "USD",
+          "cadence": "unknown",
+          "productType": "service",
+          "sourceUrl": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "observedAt": "2026-08-19",
+          "evidenceTier": "official-public",
+          "selectable": false,
+          "id": "web-d8fd393e3b5ef7:cost-context:e73bea1ace73"
+        }
+      ],
       "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term.",
       "planValidationErrors": [],
       "catalogStatus": {
@@ -69140,9 +69185,9 @@
       "gymType": "Fitness centre",
       "latitude": 37.7729922,
       "longitude": -122.4223791,
-      "monthlyPrice": null,
+      "monthlyPrice": 300.0,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "golf",
@@ -69151,7 +69196,7 @@
         "open gym",
         "personal training"
       ],
-      "description": "Perform for Golf — Hayes Valley is a personal training fitness studio in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include golf, golf performance training, golf simulator.",
+      "description": "Perform for Golf — Hayes Valley is a personal training fitness studio in San Francisco. The selected official recurring plan is $300.00 per month. Listed features include golf, golf performance training, golf simulator.",
       "hours": "Mon-Fri 6:00am-8:00pm; Sat-Sun 8:00am-4:00pm, by appointment. Open-gym access is limited to eligible coaching members.",
       "websiteUrl": "https://www.performforgolf.com/locations",
       "sourceName": "OpenStreetMap",
@@ -69166,15 +69211,15 @@
       "sourceAliases": [],
       "publicationStatus": "publish",
       "recordStatus": "open",
-      "pricingAccess": "contact-required",
+      "pricingAccess": "public-booking-widget",
       "entityKindOverride": "studio",
-      "accessModelOverride": "restricted",
+      "accessModelOverride": "membership",
       "modalityOverride": "personal-training",
       "discoveryEvidence": {
-        "sourceUrl": "https://www.performforgolf.com/locations",
-        "sourceType": "official-location-page",
-        "observedAt": "2026-08-19",
-        "note": "The official location page confirms appointment-only operation; exact membership amounts are consultation-gated."
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "sourceType": "official-location-page-and-public-booking-widget",
+        "observedAt": "2026-08-21",
+        "note": "The official location page confirms appointment-based coaching, while the plan page says designated open-gym and simulator access applies at all locations. The site's public HealCode configuration exposes Mindbody Site ID 5734215, whose unauthenticated Contracts tab publishes a $300 every-month Gym/Sim Access Membership with month-to-month terms. Coached membership amounts remain consultation-gated."
       },
       "priceReports": [],
       "reportedMonthly": null,
@@ -69183,11 +69228,245 @@
       "entityKind": "studio",
       "modality": "personal-training",
       "operatorKey": "performforgolf.com",
-      "accessModel": "restricted",
+      "accessModel": "membership",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "osm-node-12132354827:plan:179",
+          "sourceProductId": "179",
+          "name": "Gym/Sim Access Membership",
+          "productType": "membership",
+          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
+          "scopeType": "multi-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 300.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 300.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+            "observedAt": "2026-08-21",
+            "source": "Perform for Golf public Mindbody Contracts tab",
+            "method": "rendered-mindbody-contract",
+            "rawLabel": "Gym/Sim Access Membership",
+            "contentHash": "e7b3342e4ad16db1021bf2a70cbf42329d9eb0b2b856761d474d17bf0eadf72b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "179",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use."
+        },
+        {
+          "id": "osm-node-12132354827:plan:100002",
+          "sourceProductId": "100002",
+          "name": "Golf Performance Training (1:1)",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led golf performance session",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 1.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 200.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Perform for Golf public Mindbody Services tab",
+            "method": "rendered-mindbody-purchase-item",
+            "rawLabel": "Golf Performance Training (1:1)",
+            "contentHash": "9cd77c2c93b37e2b41c6ee8b00406d34371b3aa2d40d46f01b9b210503aa610e",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "100002",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:100132",
+          "sourceProductId": "100132",
+          "name": "Swing Coaching",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led swing-coaching session",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 1.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 200.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Coach appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Perform for Golf public Mindbody Services tab",
+            "method": "rendered-mindbody-purchase-item",
+            "rawLabel": "Swing Coaching",
+            "contentHash": "d61df0355bccfdff670606da4bb9e930eb9b49e35640c2e420252fc3d6cc525f",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "100132",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:100164",
+          "sourceProductId": "100164",
+          "name": "Golf Fitting — Los Altos Only",
+          "productType": "class-pack",
+          "accessScope": "One golf-fitting appointment at Los Altos only",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 375.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "not-this-location",
+            "restrictions": [
+              "Public product is explicitly limited to Los Altos"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Perform for Golf public Mindbody Services tab",
+            "method": "rendered-mindbody-purchase-item",
+            "rawLabel": "Golf Fitting — Los Altos Only",
+            "contentHash": "21ee8545405c8bdc8abfa8901b75a1ff6f767409276aefafa95fed306b390a8f",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "different-location",
+            "sourceProductId": "100164",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
-      "selectedPlanId": null,
+      "selectedPlanId": "osm-node-12132354827:plan:179",
       "selectedDropInId": null,
       "typicalPlanId": null,
       "highestAccessPlanId": null,
@@ -69207,12 +69486,12 @@
         }
       },
       "costContext": [],
-      "selectionReason": "",
+      "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use.",
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -69225,10 +69504,10 @@
       "processingFee": null,
       "activationFee": null,
       "estimatedMonthly": null,
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "pricingBlocker": "",
+      "pricingStatus": "verified",
+      "monthlyPriceBlocker": "",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -69246,6 +69525,121 @@
           "status": "listed",
           "reason": ""
         }
+      },
+      "priceSource": "Perform for Golf official site and operator-linked public Mindbody storefront",
+      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The public Mindbody Contracts tab publishes a Gym/Sim Access Membership at $300 every month with month-to-month auto-renewal. The official operator page says designated open-gym and simulator access applies at all locations, so this is selected as the cheapest disclosed direct recurring plan permitting normal facility use. Auto-monthly coached memberships with 4, 6, 8, 10, or 12 sessions are named publicly but their amounts still require consultation. Exact $200 one-to-one training and swing-coaching services are retained as trainer-led appointments and do not become an ordinary day pass.",
+      "planOffers": [
+        {
+          "sourceProductId": "179",
+          "name": "Gym/Sim Access Membership",
+          "productType": "membership",
+          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
+          "scopeType": "multi-location",
+          "amount": 300,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Contracts tab",
+          "captureMethod": "rendered-mindbody-contract",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100002",
+          "name": "Golf Performance Training (1:1)",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led golf performance session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100132",
+          "name": "Swing Coaching",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led swing-coaching session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Coach appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100164",
+          "name": "Golf Fitting — Los Altos Only",
+          "productType": "class-pack",
+          "accessScope": "One golf-fitting appointment at Los Altos only",
+          "scopeType": "single-location",
+          "classAllowance": 1,
+          "amount": 375,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "not-this-location",
+            "restrictions": [
+              "Public product is explicitly limited to Los Altos"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "different-location"
+        }
+      ],
+      "catalogCompleteness": {
+        "plans": "fragment",
+        "dropIns": "none-observed"
       }
     },
     {
@@ -71826,7 +72220,7 @@
         "pre/postnatal training",
         "senior training"
       ],
-      "description": "Regular Exercise is a personal training fitness studio in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include private one-on-one personal training, Muscle Activation Techniques, physical therapy.",
+      "description": "Regular Exercise is a personal training fitness studio in San Francisco. Current consumer pricing still needs confirmation from public evidence. Listed features include private one-on-one personal training, Muscle Activation Techniques, physical therapy.",
       "hours": "By appointment only",
       "websiteUrl": "https://regularexercise.net/",
       "sourceName": "OpenStreetMap",
@@ -71885,7 +72279,22 @@
           "reason": "Alternative public plans have not been reconstructed from the source catalog."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "range",
+          "label": "The official site states professional fees range from",
+          "low": 110.0,
+          "high": 150.0,
+          "currency": "USD",
+          "cadence": "unknown",
+          "productType": "service",
+          "sourceUrl": "https://regularexercise.net/",
+          "observedAt": "2026-08-19",
+          "evidenceTier": "official-public",
+          "selectable": false,
+          "id": "osm-node-6424602096:cost-context:531596e81ccf"
+        }
+      ],
       "selectionReason": "",
       "planValidationErrors": [],
       "catalogStatus": {
@@ -71904,10 +72313,10 @@
       "processingFee": null,
       "activationFee": null,
       "estimatedMonthly": null,
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
+      "pricingStatus": "official-range",
+      "monthlyPriceBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",

@@ -14,5 +14,11 @@
     "categoryLabel": "In Studio Memberships",
     "sourceProductId": "11259",
     "cardText": "3 Month In Studio Special\n$699.00"
+  },
+  "mindbodyRecurringContract": {
+    "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&pMode=0",
+    "sourceProductId": "179",
+    "contractLabel": "Gym/Sim Access Membership",
+    "contractText": "Gym/Sim Access Membership $300.00\nSimulator Pass $0.00\nTotal $300.00\nGym/Sim Access Membership\n$300.00 every month\nContract Starts: 8/21/2026\nAuto renews on: (Month-to-month commitment)\nBy clicking below, you agree to pay $300.00 (plus any tax) each monthly renewal term."
   }
 }

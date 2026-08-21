@@ -589,6 +589,19 @@ Month-to-month with 30-day cancellation. Recommended casual visit is $35 and var
         stores = crawler.linked_storefronts("https://example.com/pricing", links)
         self.assertEqual(stores, ["https://clients.mindbodyonline.com/classic/ws?studioid=1"])
 
+    def test_recovers_mindbody_store_from_account_only_healcode_embed(self) -> None:
+        html = (
+            '<healcode-widget data-type="account-link" data-site-id="116080" '
+            'data-mb-site-id="5734215">Login | Register</healcode-widget>'
+        )
+        self.assertEqual(crawler.mindbody_embedded_storefronts(html), [
+            "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
+        ])
+
+    def test_mindbody_embed_ignores_healcode_site_id_and_invalid_values(self) -> None:
+        html = '<healcode-widget data-site-id="116080" data-mb-site-id="not-a-business-id"></healcode-widget>'
+        self.assertEqual(crawler.mindbody_embedded_storefronts(html), [])
+
     def test_vendor_marketing_homepage_is_not_treated_as_storefront(self) -> None:
         self.assertEqual(crawler.linked_storefronts("https://example.com", ["https://www.pushpress.com/"]), [])
 
