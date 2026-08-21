@@ -35,13 +35,14 @@
         "https://momence.com/AstaYoga/membership/Unlimited-Membership-(No-Auto-Renewal)/72936"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 2,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10047742013",
@@ -144,7 +145,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10054566861",
@@ -184,7 +186,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-10069564222",
@@ -255,7 +258,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10198521798",
@@ -376,7 +380,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-10538306970",
@@ -446,7 +451,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 2,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-10542243253",
@@ -593,7 +599,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 15,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-10665980914",
@@ -774,7 +781,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10689773926",
@@ -894,7 +902,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10859142467",
@@ -944,13 +953,14 @@
         "https://www.crunch.com/join/yerba-buena"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10859142546",
@@ -1102,7 +1112,7 @@
       "candidateCount": 0,
       "sharedResponse": false,
       "linkedStorefronts": [],
-      "requiresReview": true,
+      "requiresReview": false,
       "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
@@ -1195,7 +1205,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-10874914159",
@@ -1281,7 +1292,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 2,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-10917024236",
@@ -1436,7 +1448,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 8,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-11017139804",
@@ -1482,14 +1495,15 @@
       "candidateCount": 2,
       "sharedResponse": false,
       "linkedStorefronts": [],
-      "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "requiresReview": false,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-11021164500",
@@ -1510,7 +1524,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-11021164500",
@@ -1561,7 +1576,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 2,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-11103972677",
@@ -1648,7 +1664,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-11198894699",
@@ -1823,7 +1840,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 5,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-11558519647",
@@ -1884,7 +1902,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-11701513373",
@@ -2078,7 +2097,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 4,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-12132354827",
@@ -2183,7 +2203,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-12132354827",
@@ -2316,13 +2337,14 @@
         "https://www.luxfitsf.com/category/membership"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 3,
       "bookingRequestCount": 5,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-12152934880",
@@ -2355,13 +2377,14 @@
         "https://clients.mindbodyonline.com/classic/ws?studioid=23335&stype=41"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-12251148868",
@@ -2484,7 +2507,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 5,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-12300049959",
@@ -2831,7 +2855,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-12559170747",
@@ -2903,7 +2928,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-12727181306",
@@ -2975,7 +3001,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-12727181306",
@@ -3097,7 +3124,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-13507740638",
@@ -3173,7 +3201,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-1364959516",
@@ -3276,7 +3305,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 4,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-13712240860",
@@ -3366,7 +3396,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-13743991602",
@@ -3454,7 +3485,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-13905876759",
@@ -3599,7 +3631,8 @@
       "frontierSkipReasons": {
         "operator-depth": 3
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-13910388898",
@@ -3750,13 +3783,14 @@
         "https://www.crunch.com/join/polk-st"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-2337759318",
@@ -3793,7 +3827,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-2337759318",
@@ -3830,7 +3865,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-2340010642",
@@ -4018,7 +4054,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-2652517824",
@@ -4058,7 +4095,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-2652517824",
@@ -4524,7 +4562,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-2975978386",
@@ -4593,7 +4632,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3204993502",
@@ -4637,7 +4677,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3379321522",
@@ -4667,14 +4708,15 @@
       "candidateCount": 0,
       "sharedResponse": false,
       "linkedStorefronts": [],
-      "requiresReview": false,
+      "requiresReview": true,
       "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-3485460052",
@@ -4910,13 +4952,14 @@
         "https://clients.mindbodyonline.com/classic/ws?studioid=556770&sessionChecked=true"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 12,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3540256794",
@@ -5184,7 +5227,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 24,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-3542720509",
@@ -5511,13 +5555,14 @@
         "https://momence.com/Roar/membership/Twenty-Class-Package/281456"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 2,
       "bookingRequestCount": 7,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-360958312",
@@ -5556,7 +5601,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3658328826",
@@ -5645,7 +5691,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3674255652",
@@ -5684,7 +5731,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3674255661",
@@ -5797,7 +5845,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3702219080",
@@ -5835,7 +5884,8 @@
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": true,
-      "sourceStatusReviewReason": "all-reviewed-operator-and-evidence-routes-return-404-or-410"
+      "sourceStatusReviewReason": "all-reviewed-operator-and-evidence-routes-return-404-or-410",
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3881440385",
@@ -5856,7 +5906,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-3986912499",
@@ -5987,7 +6038,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-4001664955",
@@ -6104,7 +6156,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 5,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-4004802465",
@@ -6135,13 +6188,14 @@
       "sharedResponse": false,
       "linkedStorefronts": [],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-4057014702",
@@ -6252,7 +6306,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-4098815839",
@@ -6326,7 +6381,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-412109978",
@@ -6636,7 +6692,7 @@
         "https://www.24hourfitness.com/membership/inclub_privacy_policy.html"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 5,
@@ -6644,7 +6700,8 @@
       "frontierSkipReasons": {
         "operator-depth": 1
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-417957202",
@@ -6729,7 +6786,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-4199680597",
@@ -6785,7 +6843,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-4395534973",
@@ -6870,7 +6929,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-4558023336",
@@ -6891,7 +6951,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-4558023336",
@@ -6930,7 +6991,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 15,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-4631674513",
@@ -7335,7 +7397,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-5840675556",
@@ -7497,7 +7560,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6373000373",
@@ -7640,7 +7704,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6471124711",
@@ -7915,13 +7980,14 @@
         "https://clients.mindbodyonline.com/classic/ws?studioid=556770&sessionChecked=true"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 12,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6493825931",
@@ -8022,13 +8088,14 @@
         "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=41&sTG=22"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 5,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-6496135009",
@@ -8218,7 +8285,8 @@
       "frontierSkipReasons": {
         "operator-depth": 60
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6496142801",
@@ -8561,7 +8629,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 19,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6591743880",
@@ -8598,7 +8667,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6604031903",
@@ -8651,7 +8721,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-6615153559",
@@ -8693,7 +8764,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6615153559",
@@ -8810,7 +8882,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-663533939",
@@ -8847,7 +8920,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-6693646146",
@@ -8902,7 +8976,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6815206679",
@@ -8925,7 +9000,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6815206679",
@@ -8994,7 +9070,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 2,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6829148264",
@@ -9050,7 +9127,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-6848648284",
@@ -9109,7 +9187,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 24,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-7044717960",
@@ -9526,7 +9605,7 @@
         "https://www.24hourfitness.com/membership/inclub_privacy_policy.html"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 5,
@@ -9534,7 +9613,8 @@
       "frontierSkipReasons": {
         "operator-depth": 1
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-8641835222",
@@ -9623,7 +9703,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-8660742534",
@@ -9711,7 +9792,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 25,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-8660768875",
@@ -10445,7 +10527,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 19,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-8867020483",
@@ -10628,7 +10711,8 @@
       "frontierSkipReasons": {
         "operator-depth": 60
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-9411404744",
@@ -10697,7 +10781,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-9659815458",
@@ -10718,7 +10803,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-9659815458",
@@ -11283,7 +11369,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-9718392241",
@@ -11300,13 +11387,14 @@
         "https://customfitsf.com/memberships"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-9718392241",
@@ -11437,7 +11525,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-9953947674",
@@ -11532,13 +11621,14 @@
       "sharedResponse": false,
       "linkedStorefronts": [],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-996696401",
@@ -11561,7 +11651,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-node-996696401",
@@ -11676,13 +11767,14 @@
       "sharedResponse": false,
       "linkedStorefronts": [],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-way-113283290",
@@ -11742,7 +11834,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 15,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-137602240",
@@ -12107,7 +12200,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-193054131",
@@ -12248,13 +12342,14 @@
         "https://portal.movementgyms.com/profile"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 1,
       "bookingRequestCount": 27,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-24334661",
@@ -12693,7 +12788,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-24460896",
@@ -13300,7 +13396,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-256495543",
@@ -13437,13 +13534,14 @@
       "sharedResponse": false,
       "linkedStorefronts": [],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-261268792",
@@ -13515,7 +13613,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-261268792",
@@ -13599,7 +13698,8 @@
       "operatorRequestCount": 7,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-263806345",
@@ -13890,13 +13990,14 @@
         "https://www.crunch.com/join/chestnut"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-way-27393835",
@@ -14109,7 +14210,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-286276068",
@@ -14247,7 +14349,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-288325533",
@@ -14509,7 +14612,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "osm-way-69020085",
@@ -14755,7 +14859,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-0509e54f1e3c89",
@@ -14940,7 +15045,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 5,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-06bc58a9a5ca84",
@@ -14998,14 +15104,15 @@
       "candidateCount": 0,
       "sharedResponse": false,
       "linkedStorefronts": [],
-      "requiresReview": false,
+      "requiresReview": true,
       "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-0b96f513d9f804",
@@ -15090,7 +15197,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-0c3933dd5d019f",
@@ -15143,7 +15251,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-0f9db70c7df82e",
@@ -15310,13 +15419,14 @@
         "https://www.luxfitsf.com/category/membership"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 3,
       "bookingRequestCount": 7,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-1018f0171ffa8e",
@@ -15355,7 +15465,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-118d20c83f7f36",
@@ -15594,7 +15705,8 @@
       "frontierSkipReasons": {
         "operator-depth": 61
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-18e908eb2543ab",
@@ -15693,7 +15805,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-1b2f42bb1e4bcb",
@@ -16101,7 +16214,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 2,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-2d8ab33422a507",
@@ -16122,7 +16236,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-2d8ab33422a507",
@@ -16409,13 +16524,14 @@
       "sharedResponse": false,
       "linkedStorefronts": [],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-38b781fe26e1b4",
@@ -16481,7 +16597,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-39dd263c4c9d1c",
@@ -16518,7 +16635,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-4289bb94baeda1",
@@ -16573,7 +16691,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-44c39e1d4144c1",
@@ -16772,7 +16891,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 9,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-46a150f089f8a7",
@@ -16821,7 +16941,7 @@
         "https://www.24hourfitness.com/membership/inclub_privacy_policy.html"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 5,
@@ -16829,7 +16949,8 @@
       "frontierSkipReasons": {
         "operator-depth": 1
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-4aaec1680acf72",
@@ -16986,7 +17107,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-6123d4a1928a35",
@@ -17317,7 +17439,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-678cd02ed5fd30",
@@ -17370,7 +17493,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-686330489fbf10",
@@ -17544,7 +17668,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-8209841346c6d0",
@@ -18170,7 +18295,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-865e385061a6e4",
@@ -18201,7 +18327,7 @@
         "https://www.24hourfitness.com/membership/inclub_privacy_policy.html"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 3,
       "reviewedSeedAttemptCount": 3,
       "operatorRequestCount": 5,
@@ -18209,7 +18335,8 @@
       "frontierSkipReasons": {
         "operator-depth": 1
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-8891970863af87",
@@ -18297,7 +18424,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-8a074bb0e133c0",
@@ -18366,7 +18494,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-8e0d13fb9738f9",
@@ -18384,13 +18513,14 @@
         "https://www.wellnessliving.com/schedule/pilatesschoolsf"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 2,
       "bookingRequestCount": 34,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-8e0d13fb9738f9",
@@ -18976,7 +19106,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-94d9302c37678b",
@@ -19093,7 +19224,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-99a718d670cb34",
@@ -19143,13 +19275,14 @@
         "https://www.crunch.com/join/union-street"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-9bcdd50c2d4426",
@@ -19353,7 +19486,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-9cb9e987c99d39",
@@ -19469,7 +19603,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-a16276afbf72d9",
@@ -19575,7 +19710,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-a3d8ded3014a16",
@@ -19625,13 +19761,14 @@
         "https://www.funkydoor.com/pricing"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-a8dd7473a48e9c",
@@ -19670,7 +19807,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-aad2d32fab6264",
@@ -19753,7 +19891,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-abd8e24f4af4d8",
@@ -19902,7 +20041,8 @@
       "frontierSkipReasons": {
         "operator-depth": 4
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-af9d34b6146771",
@@ -19971,7 +20111,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 16,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-b1dcfdcb7b4d2a",
@@ -20431,7 +20572,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 9,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-c195ac37294a74",
@@ -20487,7 +20629,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-c3b2830a9bc6f1",
@@ -20540,7 +20683,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-c745e6dbdcadb6",
@@ -20649,7 +20793,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-c918742306b9ec",
@@ -20710,7 +20855,8 @@
       "operatorRequestCount": 8,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-ca39a334f29594",
@@ -20890,7 +21036,7 @@
         "https://www.jccsf.org/join/community-membership-2/"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 9,
@@ -20898,7 +21044,8 @@
       "frontierSkipReasons": {
         "operator-depth": 3
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-d2fecdc44e5d1c",
@@ -21158,13 +21305,14 @@
       "sharedResponse": false,
       "linkedStorefronts": [],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-d4b58ff151c226",
@@ -21289,7 +21437,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-dbb15601f0e4c6",
@@ -21334,7 +21483,8 @@
       "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-dcbf7708bf2f77",
@@ -21371,13 +21521,14 @@
         "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 2,
       "reviewedSeedAttemptCount": 2,
       "operatorRequestCount": 4,
       "bookingRequestCount": 2,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-e20a10174e60fa",
@@ -21483,7 +21634,8 @@
       "frontierSkipReasons": {
         "operator-depth": 7
       },
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-e220d3accf950e",
@@ -21586,7 +21738,8 @@
       "operatorRequestCount": 3,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-e4d790e4a639c2",
@@ -21643,7 +21796,8 @@
       "operatorRequestCount": 4,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     },
     {
       "gymId": "web-e71c82ac2eb475",
@@ -21828,13 +21982,14 @@
         "https://momence.com/m/45536"
       ],
       "requiresReview": true,
-      "priceChangeOver20Percent": true,
+      "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
       "operatorRequestCount": 1,
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-f54e94809da91c",
@@ -21855,7 +22010,8 @@
       "operatorRequestCount": 1,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
-      "allReviewedSeedsGone": false
+      "allReviewedSeedsGone": false,
+      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
     }
   ]
 }

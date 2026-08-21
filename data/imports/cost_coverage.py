@@ -2586,6 +2586,11 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 for item in crawl_attempts
                 if text(item.get("accessBlocker"))
             ).items())),
+            "selectedPlanPriceAuditStatusCounts": dict(sorted(Counter(
+                text(item.get("selectedPlanPriceAuditStatus"))
+                for item in crawl_attempts
+                if text(item.get("selectedPlanPriceAuditStatus"))
+            ).items())),
             "reviewCandidatePages": sum(bool(item.get("requiresReview")) for item in crawl_attempts),
             "linkedStorefrontRequests": sum("linkedFrom" in item for item in crawl_attempts),
             "renderedRequests": len(rendered_crawl_document.get("attempts", [])),

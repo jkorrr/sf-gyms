@@ -2418,6 +2418,311 @@ def load_rendered_deal_observations(path: Path = RENDERED_OBSERVATIONS_PATH) -> 
     return [item for item in document.get("observations", []) if isinstance(item, dict)]
 
 
+PLAN_LABEL_STOPWORDS = {
+    "a", "access", "adult", "and", "auto", "autopay", "billing", "class", "classes",
+    "contract", "for", "membership", "monthly", "month", "plan", "rate", "regular", "renewal",
+    "the", "to",
+}
+NON_STANDARD_COMPONENT_RE = re.compile(
+    r"\b(?:add[ -]?on|additional (?:child|children|fee|person)|child(?:ren)?|employee|family add|"
+    r"kid(?:s)?|optional (?:access|fee|upgrade)|per additional|senior|student|supplement|upgrade|youth)\b",
+    re.IGNORECASE,
+)
+PLAN_LINKED_FEE_FRAGMENT_RE = re.compile(
+    r"(?:\+\s*)?\$\s*\d{1,4}(?:\.\d{1,2})?\s*(?:annual|activation|cancell?ation|enroll?ment|"
+    r"join|processing|setup)(?:\s+fee)?|(?:annual|activation|cancell?ation|enroll?ment|join|processing|"
+    r"setup)\s+fee\s*[:+-]?\s*\$\s*\d{1,4}(?:\.\d{1,2})?",
+    re.IGNORECASE,
+)
+
+
+def plan_label_tokens(value: Any) -> set[str]:
+    """Return distinctive tokens for matching one reviewed plan to one live card."""
+
+    return {
+        token
+        for token in re.findall(r"[a-z0-9]+", text(value).casefold())
+        if token not in PLAN_LABEL_STOPWORDS and len(token) > 1
+    }
+
+
+def plan_identity_label(value: Any, candidate_amount: Any = None) -> str:
+    """Remove attached fee arithmetic while preserving the product card label."""
+
+    label = PLAN_LINKED_FEE_FRAGMENT_RE.sub(" ", text(value))
+    amount = numeric(candidate_amount)
+    if amount is None:
+        return label
+    remaining_amounts = [float(item) for item in MONEY_RE.findall(label)]
+    if remaining_amounts and not any(abs(item - amount) <= 0.01 for item in remaining_amounts):
+        return ""
+    return label
+
+
+def class_allowances_match_exactly(selected: dict[str, Any], candidate: dict[str, Any]) -> bool:
+    selected_allowance = selected.get("classAllowance") or {}
+    candidate_allowance = candidate.get("classAllowance") or {}
+    if not selected_allowance or not candidate_allowance:
+        return False
+    if bool(selected_allowance.get("unlimited")) != bool(candidate_allowance.get("unlimited")):
+        return False
+    selected_count = numeric(selected_allowance.get("count"))
+    candidate_count = numeric(candidate_allowance.get("count"))
+    if selected_count is None or candidate_count is None:
+        return bool(selected_allowance.get("unlimited")) and bool(candidate_allowance.get("unlimited"))
+    if selected_count != candidate_count:
+        return False
+    selected_period = text(selected_allowance.get("period")).casefold()
+    candidate_period = text(candidate_allowance.get("period")).casefold()
+    return not selected_period or not candidate_period or selected_period == candidate_period
+
+
+def candidate_normalized_monthly(candidate: dict[str, Any]) -> float | None:
+    """Normalize an explicitly recurring candidate while retaining its raw cadence."""
+
+    amount = numeric(candidate.get("amount"))
+    if amount is None or amount <= 0:
+        return None
+    cadence = text(candidate.get("cadence") or candidate.get("billingInterval")).casefold().replace("_", " ")
+    interval_count = numeric(candidate.get("intervalCount") or candidate.get("billingIntervalCount")) or 1
+    if interval_count <= 0:
+        return None
+    if cadence in {"month", "monthly", "p1m"}:
+        return round(amount / interval_count, 2)
+    if cadence in {"4 weeks", "four weeks", "28 days", "28 day"}:
+        return round(amount * 13 / 12 / interval_count, 2)
+    if cadence in {"2 weeks", "two weeks", "biweekly", "bi-weekly"}:
+        return round(amount * 26 / 12 / interval_count, 2)
+    if cadence in {"week", "weekly", "p1w"}:
+        return round(amount * 52 / 12 / interval_count, 2)
+    if cadence in {"year", "yearly", "annual", "p1y"}:
+        return round(amount / 12 / interval_count, 2)
+    return None
+
+
+def selected_plan_candidate_match(
+    selected: dict[str, Any],
+    candidate: dict[str, Any],
+) -> tuple[int, str] | None:
+    """Return a conservative selected-plan match score and its evidence method.
+
+    Stable public product IDs are authoritative. Label matching is a fallback
+    only for cards containing one dollar amount; a broad visible-text snippet
+    spanning several plans cannot identify which amount belongs to the
+    selected plan.
+    """
+
+    selected_allowance = selected.get("classAllowance") or {}
+    candidate_allowance = candidate.get("classAllowance") or {}
+    if candidate_allowance:
+        if bool(selected_allowance.get("unlimited")) != bool(candidate_allowance.get("unlimited")):
+            return None
+        selected_count = numeric(selected_allowance.get("count"))
+        candidate_count = numeric(candidate_allowance.get("count"))
+        if selected_count is not None and candidate_count is not None and selected_count != candidate_count:
+            return None
+
+    selected_product_id = text(selected.get("sourceProductId"))
+    candidate_product_id = text(candidate.get("sourceProductId"))
+    if selected_product_id and candidate_product_id:
+        if selected_product_id == candidate_product_id:
+            return 100, "source-product-id"
+        return None
+
+    raw_label = plan_identity_label(
+        candidate.get("name") or candidate.get("rawLabel"),
+        candidate.get("amount"),
+    )
+    if not raw_label or len(MONEY_RE.findall(raw_label)) > 1:
+        return None
+    selected_labels = [
+        text(selected.get("name")),
+        text((selected.get("evidence") or {}).get("rawLabel")),
+    ]
+    candidate_normalized = normalized_label(raw_label).casefold()
+    for label in selected_labels:
+        normalized = normalized_label(label).casefold()
+        if normalized and (normalized == candidate_normalized or normalized in candidate_normalized):
+            return 90, "exact-plan-label"
+    selected_combined = " ".join(selected_labels).casefold()
+    if (
+        re.search(r"\bmonth[ -]?to[ -]?month\b", selected_combined)
+        and re.search(r"\bmonth[ -]?to[ -]?month\b", raw_label, re.IGNORECASE)
+        and ("adult" not in selected_combined or re.search(r"\badult\b", raw_label, re.IGNORECASE))
+    ):
+        return 85, "plan-facets"
+    selected_tokens = set().union(*(plan_label_tokens(label) for label in selected_labels))
+    candidate_tokens = plan_label_tokens(raw_label)
+    if not selected_tokens or not candidate_tokens:
+        return None
+    overlap = selected_tokens & candidate_tokens
+    coverage = len(overlap) / len(selected_tokens)
+    if overlap and coverage >= 0.6:
+        return 70 + int(coverage * 10), "distinctive-label-tokens"
+    return None
+
+
+def audit_selected_plan_price(
+    gym: dict[str, Any],
+    observations: Iterable[dict[str, Any]],
+) -> dict[str, Any] | None:
+    """Audit the published selected plan against current matched candidates.
+
+    Alternative plans never trigger the alert. A change is emitted only when
+    the current candidate can be tied to the selected public product or a
+    distinctive single-card label. Conflicting current variants fail closed as
+    an ambiguity rather than asserting a price change.
+    """
+
+    published = numeric(gym.get("monthlyPrice"))
+    selected_plan_id = text(gym.get("selectedPlanId"))
+    if published is None or published <= 0 or not selected_plan_id:
+        return None
+    selected = next(
+        (item for item in gym.get("plans", []) or [] if text(item.get("id")) == selected_plan_id),
+        None,
+    )
+    if not isinstance(selected, dict):
+        return {
+            "status": "invalid-selected-plan",
+            "selectedPlanId": selected_plan_id,
+            "publishedMonthly": published,
+        }
+    selected_billing = selected.get("billing") or {}
+    selected_raw_amount = numeric(selected_billing.get("amount"))
+    selected_urls = {
+        request_identity(url)
+        for url in (
+            text((selected.get("evidence") or {}).get("url")),
+            text(gym.get("priceSourceUrl")),
+        )
+        if url
+    }
+    matches: list[dict[str, Any]] = []
+    for candidate in observations:
+        if text(candidate.get("gymId")) != text(gym.get("id")):
+            continue
+        source_url = text(candidate.get("sourceUrl"))
+        if selected_urls and source_url and request_identity(source_url) not in selected_urls:
+            continue
+        promotion = candidate.get("promotion") or {}
+        eligibility = candidate.get("eligibility") or {}
+        if promotion.get("isPromotion") or text(eligibility.get("type")) in {
+            "employee", "household", "military", "new-client", "online-only", "restricted",
+            "senior", "student", "youth",
+        }:
+            continue
+        amount = numeric(candidate.get("amount"))
+        if amount is None or amount <= 0:
+            continue
+        if NON_STANDARD_COMPONENT_RE.search(text(candidate.get("rawLabel") or candidate.get("name"))):
+            continue
+        match = selected_plan_candidate_match(selected, candidate)
+        if (
+            not match
+            and selected_raw_amount is not None
+            and abs(amount - selected_raw_amount) <= 0.01
+            and class_allowances_match_exactly(selected, candidate)
+        ):
+            match = (60, "amount-and-class-allowance")
+        if not match:
+            continue
+        score, method = match
+        normalized_monthly = candidate_normalized_monthly(candidate)
+        if selected_raw_amount is not None and abs(amount - selected_raw_amount) <= 0.01:
+            normalized_monthly = published
+        if normalized_monthly is None:
+            continue
+        matches.append({
+            "score": score,
+            "matchMethod": method,
+            "sourceUrl": source_url,
+            "sourceProductId": text(candidate.get("sourceProductId")),
+            "candidateAmount": amount,
+            "candidateCadence": text(candidate.get("cadence") or candidate.get("billingInterval")),
+            "candidateNormalizedMonthly": normalized_monthly,
+        })
+    if not matches:
+        return {
+            "status": "selected-plan-not-observed",
+            "selectedPlanId": selected_plan_id,
+            "publishedMonthly": published,
+        }
+    best_score = max(item["score"] for item in matches)
+    best = [item for item in matches if item["score"] == best_score]
+    distinct_amounts = sorted({round(item["candidateNormalizedMonthly"], 2) for item in best})
+    if len(distinct_amounts) != 1:
+        return {
+            "status": "ambiguous-current-variants",
+            "selectedPlanId": selected_plan_id,
+            "publishedMonthly": published,
+            "candidateNormalizedMonthlyValues": distinct_amounts,
+            "matchMethod": best[0]["matchMethod"],
+            "sourceUrl": best[0]["sourceUrl"],
+        }
+    current = distinct_amounts[0]
+    relative_change = abs(current - published) / published
+    evidence = {
+        "status": "changed-over-20-percent" if relative_change > 0.2 else "matched-within-threshold",
+        "selectedPlanId": selected_plan_id,
+        "publishedMonthly": published,
+        "candidateAmount": best[0]["candidateAmount"],
+        "candidateCadence": best[0]["candidateCadence"],
+        "candidateNormalizedMonthly": current,
+        "relativeChange": round(relative_change, 4),
+        "matchMethod": best[0]["matchMethod"],
+        "sourceUrl": best[0]["sourceUrl"],
+        "sourceProductId": best[0]["sourceProductId"],
+    }
+    return evidence
+
+
+def reconcile_selected_plan_price_audits(
+    gyms: Iterable[dict[str, Any]],
+    attempts: list[dict[str, Any]],
+    observations: Iterable[dict[str, Any]],
+) -> list[dict[str, Any]]:
+    """Replace page-wide price flags with selected-plan-aware audit evidence."""
+
+    observations_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for observation in observations:
+        observations_by_gym[text(observation.get("gymId"))].append(observation)
+    attempts_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    for attempt in attempts:
+        if "requiresReviewBeforePriceAudit" in attempt:
+            attempt["requiresReview"] = bool(attempt.pop("requiresReviewBeforePriceAudit"))
+        attempt.pop("priceChangeEvidence", None)
+        attempt.pop("selectedPlanPriceAuditStatus", None)
+        attempt["priceChangeOver20Percent"] = False
+        attempts_by_gym[text(attempt.get("gymId"))].append(attempt)
+    for gym in gyms:
+        gym_attempts = attempts_by_gym.get(text(gym.get("id")), [])
+        if not gym_attempts:
+            continue
+        audit = audit_selected_plan_price(gym, observations_by_gym.get(text(gym.get("id")), []))
+        if not audit:
+            continue
+        root = next((item for item in gym_attempts if "reviewedSeedCount" in item), gym_attempts[0])
+        root["selectedPlanPriceAuditStatus"] = audit["status"]
+        if audit["status"] in {"invalid-selected-plan", "ambiguous-current-variants"}:
+            root["requiresReviewBeforePriceAudit"] = bool(root.get("requiresReview"))
+            root["requiresReview"] = True
+            root["priceChangeEvidence"] = audit
+            continue
+        if audit["status"] != "changed-over-20-percent":
+            continue
+        target_identity = request_identity(text(audit.get("sourceUrl")))
+        target = next(
+            (item for item in gym_attempts if request_identity(text(item.get("url"))) == target_identity),
+            root,
+        )
+        target["requiresReviewBeforePriceAudit"] = bool(target.get("requiresReview"))
+        target["priceChangeOver20Percent"] = True
+        target["requiresReview"] = True
+        target["priceChangeEvidence"] = audit
+    return attempts
+
+
 def crawl_gym(
     gym: dict[str, Any],
     cache: dict[str, Any],
@@ -2471,17 +2776,6 @@ def crawl_gym(
         digest = text(cache.get(url, {}).get("contentHash"))
     attempted_at = today.date().isoformat()
     previous_hash = text(cache.get(url, {}).get("contentHash"))
-    published = gym.get("monthlyPrice")
-    candidate_monthly = [
-        amount
-        for offer in offers
-        if (offer.get("productType") == "monthly" or offer.get("cadence") == "month")
-        and (amount := numeric(offer.get("amount"))) is not None
-    ]
-    price_change = bool(
-        published is not None
-        and any(abs(float(candidate) - float(published)) / float(published) > 0.2 for candidate in candidate_monthly)
-    )
     attempts = [
         {
             "gymId": gym["id"],
@@ -2497,7 +2791,7 @@ def crawl_gym(
             "sharedResponse": bool(result.get("sharedResponse")),
             "linkedStorefronts": storefronts,
             "requiresReview": bool(offers),
-            "priceChangeOver20Percent": price_change,
+            "priceChangeOver20Percent": False,
         }
     ]
     observations = [{"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer} for offer in offers]
@@ -2654,11 +2948,18 @@ def main() -> int:
     parser.add_argument("--gym-id", action="append", default=[], help="Crawl only the specified stable gym ID; may be repeated")
     parser.add_argument("--timeout", type=float, default=15)
     parser.add_argument("--date", help="Override attempt date")
+    parser.add_argument(
+        "--reconcile-only",
+        action="store_true",
+        help="Recompute selected-plan price alerts from retained evidence without network requests",
+    )
     args = parser.parse_args()
     today = datetime.fromisoformat(args.date) if args.date else datetime.now(UTC).replace(tzinfo=None)
     document = json.loads(SOURCE_PATH.read_text(encoding="utf-8"))
     cache = json.loads(CACHE_PATH.read_text(encoding="utf-8")) if CACHE_PATH.exists() else {}
     candidates = [gym for gym in document.get("gyms", []) if should_crawl(gym, cache, args.mode, today)]
+    if args.reconcile_only:
+        candidates = []
     if args.gym_id:
         requested_ids = set(args.gym_id)
         candidates = [gym for gym in candidates if text(gym.get("id")) in requested_ids]
@@ -2709,6 +3010,34 @@ def main() -> int:
             float(item.get("low", 0) or 0), float(item.get("amount", 0) or 0), text(item.get("rawLabel")),
         )
     )
+    price_audit_observations = observations + load_rendered_deal_observations()
+    attempts = reconcile_selected_plan_price_audits(
+        document.get("gyms", []),
+        attempts,
+        price_audit_observations,
+    )
+    if args.reconcile_only:
+        existing_deals_document = (
+            json.loads(DEAL_OBSERVATIONS_PATH.read_text(encoding="utf-8"))
+            if DEAL_OBSERVATIONS_PATH.exists()
+            else {"deals": []}
+        )
+        save_json(ATTEMPTS_PATH, {
+            "generatedAt": text(existing_attempts_document.get("generatedAt")) or today.date().isoformat(),
+            "mode": text(existing_attempts_document.get("mode")) or args.mode,
+            "attempts": attempts,
+        })
+        print(json.dumps({
+            "candidateGyms": 0,
+            "logicalRequests": 0,
+            "physicalRequests": 0,
+            "sharedResponseReuses": 0,
+            "observations": len(observations),
+            "dealCandidates": len(existing_deals_document.get("deals", [])),
+            "reviewRequired": 0,
+            "sourceStatusReviews": 0,
+        }))
+        return 0
     location_observations = [item for item in existing_locations_document.get("observations", []) if text(item.get("gymId")) not in crawled_gym_ids] + location_observations
     location_observations.sort(key=lambda item: (text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("rawLabel"))))
     save_json(CACHE_PATH, cache)
