@@ -65401,9 +65401,7 @@
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -66765,9 +66763,7 @@
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -70130,10 +70126,10 @@
         "observedAt": "2026-08-21",
         "note": "The official location page confirms appointment-based coaching, while the plan page says designated open-gym and simulator access applies at all locations. The site's public HealCode configuration exposes Mindbody Site ID 5734215, whose unauthenticated Contracts tab publishes a $300 every-month Gym/Sim Access Membership with month-to-month terms. Coached membership amounts remain consultation-gated."
       },
-      "priceSource": "Perform for Golf official site and operator-linked public Mindbody storefront",
-      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+      "priceSource": "Reviewed official public offers",
+      "priceSourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
       "priceObservedAt": "2026-08-21",
-      "priceNote": "The public Mindbody Contracts tab publishes a Gym/Sim Access Membership at $300 every month with month-to-month auto-renewal. The official operator page says designated open-gym and simulator access applies at all locations, so this is selected as the cheapest disclosed direct recurring plan permitting normal facility use. Auto-monthly coached memberships with 4, 6, 8, 10, or 12 sessions are named publicly but their amounts still require consultation. Exact $200 one-to-one training and swing-coaching services are retained as trainer-led appointments and do not become an ordinary day pass.",
+      "priceNote": "The complete public recurring/package catalog was reviewed.",
       "planOffers": [
         {
           "sourceProductId": "179",
@@ -70157,7 +70153,7 @@
           "observedAt": "2026-08-21",
           "source": "Perform for Golf public Mindbody Contracts tab",
           "captureMethod": "rendered-mindbody-contract",
-          "exactLocationMatch": "operator-market-multi-location"
+          "exactLocationMatch": "exact-location-reviewed"
         },
         {
           "sourceProductId": "100002",
@@ -70184,7 +70180,7 @@
           "observedAt": "2026-08-21",
           "source": "Perform for Golf public Mindbody Services tab",
           "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "operator-market-multi-location"
+          "exactLocationMatch": "exact-location-reviewed"
         },
         {
           "sourceProductId": "100132",
@@ -70211,7 +70207,7 @@
           "observedAt": "2026-08-21",
           "source": "Perform for Golf public Mindbody Services tab",
           "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "operator-market-multi-location"
+          "exactLocationMatch": "exact-location-reviewed"
         },
         {
           "sourceProductId": "100164",
@@ -70239,12 +70235,260 @@
           "source": "Perform for Golf public Mindbody Services tab",
           "captureMethod": "rendered-mindbody-purchase-item",
           "exactLocationMatch": "different-location"
+        },
+        {
+          "sourceProductId": "unnamed-2-sessions",
+          "name": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+          "productType": "class-membership",
+          "accessScope": "2 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 2,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/faq",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+            "contentHash": "be0449bfab9319f3f37eb07953318b2c029cd526d617d6ec523f0089b0777ac9",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "unnamed-2-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "ace-12-sessions",
+          "name": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "12 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 12,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+            "contentHash": "c4bf42172d10915ae316290824412822e908f26cc0591921b37842fa771259cc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "ace-12-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "albatross-10-sessions",
+          "name": "ALBATROSS (10 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "10 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 10,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "ALBATROSS (10 SESSIONS/MONTH)",
+            "contentHash": "0170eb3d891cfefa53c9857a6cff5615405d1ab578018ca0aabe8095fa838adc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "albatross-10-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "birdie-6-sessions",
+          "name": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "6 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 6,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+            "contentHash": "a204eeba89df12ef55df0fb6842a76a1dc0b0e3d55a9ecd4fe383d31acb8acf8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "birdie-6-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "eagle-8-sessions",
+          "name": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "8 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 8,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+            "contentHash": "da689d89b39c7c82d848755d882bc573482f0f147c5a8384e2c1062362ae927b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "eagle-8-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "par-4-sessions",
+          "name": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "4 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+            "contentHash": "d0e109125b39dc0c6567f35222ff2ebbfb056598177f90aa5015913ad146624c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "par-4-sessions",
+            "conflictFlags": []
+          }
         }
       ],
+      "dropInOffers": [],
       "catalogCompleteness": {
-        "plans": "fragment",
+        "plans": "complete",
         "dropIns": "none-observed"
       },
+      "costContextOffers": [],
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -70301,7 +70545,7 @@
             "rawLabel": "Gym/Sim Access Membership",
             "contentHash": "e7b3342e4ad16db1021bf2a70cbf42329d9eb0b2b856761d474d17bf0eadf72b",
             "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-multi-location",
+            "exactLocationMatch": "exact-location-reviewed",
             "sourceProductId": "179",
             "conflictFlags": []
           },
@@ -70361,7 +70605,7 @@
             "rawLabel": "Golf Performance Training (1:1)",
             "contentHash": "9cd77c2c93b37e2b41c6ee8b00406d34371b3aa2d40d46f01b9b210503aa610e",
             "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-multi-location",
+            "exactLocationMatch": "exact-location-reviewed",
             "sourceProductId": "100002",
             "conflictFlags": []
           },
@@ -70421,7 +70665,7 @@
             "rawLabel": "Swing Coaching",
             "contentHash": "d61df0355bccfdff670606da4bb9e930eb9b49e35640c2e420252fc3d6cc525f",
             "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-multi-location",
+            "exactLocationMatch": "exact-location-reviewed",
             "sourceProductId": "100132",
             "conflictFlags": []
           },
@@ -70487,26 +70731,374 @@
           },
           "selected": false,
           "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:unnamed-2-sessions",
+          "sourceProductId": "unnamed-2-sessions",
+          "name": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+          "productType": "class-membership",
+          "accessScope": "2 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 2,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": null,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "undisclosed"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.performforgolf.com/faq",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+            "contentHash": "be0449bfab9319f3f37eb07953318b2c029cd526d617d6ec523f0089b0777ac9",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "unnamed-2-sessions",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:ace-12-sessions",
+          "sourceProductId": "ace-12-sessions",
+          "name": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "12 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 12,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": null,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "undisclosed"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+            "contentHash": "c4bf42172d10915ae316290824412822e908f26cc0591921b37842fa771259cc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "ace-12-sessions",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:albatross-10-sessions",
+          "sourceProductId": "albatross-10-sessions",
+          "name": "ALBATROSS (10 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "10 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 10,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": null,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "undisclosed"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "ALBATROSS (10 SESSIONS/MONTH)",
+            "contentHash": "0170eb3d891cfefa53c9857a6cff5615405d1ab578018ca0aabe8095fa838adc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "albatross-10-sessions",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:birdie-6-sessions",
+          "sourceProductId": "birdie-6-sessions",
+          "name": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "6 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 6,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": null,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "undisclosed"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+            "contentHash": "a204eeba89df12ef55df0fb6842a76a1dc0b0e3d55a9ecd4fe383d31acb8acf8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "birdie-6-sessions",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:eagle-8-sessions",
+          "sourceProductId": "eagle-8-sessions",
+          "name": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "8 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 8,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": null,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "undisclosed"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+            "contentHash": "da689d89b39c7c82d848755d882bc573482f0f147c5a8384e2c1062362ae927b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "eagle-8-sessions",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12132354827:plan:par-4-sessions",
+          "sourceProductId": "par-4-sessions",
+          "name": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "4 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": null,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "undisclosed"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+            "contentHash": "d0e109125b39dc0c6567f35222ff2ebbfb056598177f90aa5015913ad146624c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "par-4-sessions",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
         }
       ],
       "dropIns": [],
       "selectedPlanId": "osm-node-12132354827:plan:179",
       "selectedDropInId": null,
-      "typicalPlanId": null,
-      "highestAccessPlanId": null,
+      "typicalPlanId": "osm-node-12132354827:plan:179",
+      "highestAccessPlanId": "osm-node-12132354827:plan:179",
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "selected",
+          "reason": "Median normalized monthly price among eligible recurring plans; even-sized catalogs resolve toward the lower price."
         },
         "highestAccess": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "selected",
+          "reason": "Cheapest eligible plan with the largest disclosed allowance and scope."
         },
         "bestValue": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-labeled-by-operator",
+          "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
       "costContext": [],
@@ -70514,8 +71106,8 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",

@@ -10,6 +10,7 @@ approves it with ``review_catalogs.py``.
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import re
@@ -249,6 +250,102 @@ def catalog_signatures(value: dict[str, Any]) -> tuple[tuple[Any, ...], ...]:
     return tuple(sorted(signatures))
 
 
+def merge_with_approved_offers(
+    observed: list[dict[str, Any]],
+    approved: list[dict[str, Any]],
+    group: str,
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    """Retain a reviewed catalog baseline while adding new crawl products.
+
+    Catalog review is incremental: a crawler may discover one new route without
+    re-observing an already approved booking widget.  A replacement proposal
+    must therefore include the reviewed baseline or approval would silently
+    erase products.  Reviewed values win when the same product is re-observed;
+    a changed non-null amount becomes an explicit fail-closed conflict.
+    """
+
+    merged = [copy.deepcopy(item) for item in approved if isinstance(item, dict)]
+    index_by_key: dict[str, int] = {}
+    for index, offer in enumerate(merged):
+        key = text(offer.get("sourceProductId")) or text(offer.get("name")).casefold()
+        if key:
+            index_by_key[key] = index
+    conflicts: list[dict[str, Any]] = []
+    for offer in observed:
+        key = text(offer.get("sourceProductId")) or text(offer.get("name")).casefold()
+        if not key or key not in index_by_key:
+            index_by_key[key] = len(merged)
+            merged.append(offer)
+            continue
+        incumbent = merged[index_by_key[key]]
+        incumbent_amount = incumbent.get("amount")
+        observed_amount = offer.get("amount")
+        if incumbent_amount is not None and observed_amount is not None:
+            if round(float(incumbent_amount), 2) != round(float(observed_amount), 2):
+                conflicts.append({
+                    "type": "approved-source-product-price-conflict",
+                    "productType": group,
+                    "sourceProductKey": key,
+                    "approvedAmount": float(incumbent_amount),
+                    "observedAmount": float(observed_amount),
+                    "publicationEffect": "fail-closed",
+                })
+            continue
+        if incumbent_amount is None and observed_amount is not None:
+            merged[index_by_key[key]] = offer
+    return merged, conflicts
+
+
+def merge_with_approved_contexts(
+    observed: list[dict[str, Any]],
+    approved: list[dict[str, Any]],
+) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    merged = [copy.deepcopy(item) for item in approved if isinstance(item, dict)]
+    signatures = {
+        catalog_signatures({"costContextOffers": [item]})[0]
+        for item in merged
+    }
+    values_by_key: dict[tuple[str, str, str], set[tuple[float, float]]] = defaultdict(set)
+    for item in merged + observed:
+        key = (
+            text(item.get("kind")),
+            text(item.get("sourceProductId")) or text(item.get("label")).casefold(),
+            text(item.get("cadence")),
+        )
+        values_by_key[key].add((float(item.get("low") or 0), float(item.get("high") or 0)))
+    for item in observed:
+        signature = catalog_signatures({"costContextOffers": [item]})[0]
+        if signature not in signatures:
+            signatures.add(signature)
+            merged.append(item)
+    conflicts = [
+        {
+            "type": "approved-source-product-range-conflict",
+            "kind": kind,
+            "sourceProductKey": product_key,
+            "ranges": [{"low": low, "high": high} for low, high in sorted(values)],
+            "publicationEffect": "fail-closed",
+        }
+        for (kind, product_key, _cadence), values in sorted(values_by_key.items())
+        if len(values) > 1
+    ]
+    return merged, conflicts
+
+
+def approved_source_urls(approval: dict[str, Any]) -> set[str]:
+    urls = {text(approval.get("priceSourceUrl"))}
+    for offer in list(approval.get("planOffers") or []) + list(approval.get("dropInOffers") or []):
+        if not isinstance(offer, dict):
+            continue
+        urls.add(text(offer.get("sourceUrl")))
+        evidence_value = offer.get("evidence") if isinstance(offer.get("evidence"), dict) else {}
+        urls.add(text(evidence_value.get("url")))
+    for context in approval.get("costContextOffers") or []:
+        if isinstance(context, dict):
+            urls.add(text(context.get("sourceUrl")))
+    return {url for url in urls if url}
+
+
 def deduplicate_cost_contexts(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
     selected: dict[tuple[Any, ...], dict[str, Any]] = {}
     values_by_product: dict[tuple[str, str, str], set[tuple[float, float]]] = defaultdict(set)
@@ -436,6 +533,20 @@ def build_review(
             cost_context_offer(candidate, text(candidate.pop("_observedAt", generated_at)))
             for candidate in unique_contexts
         ]
+        prior_approval = approved_by_id.get(gym_id)
+        if prior_approval:
+            plans, baseline_conflicts = merge_with_approved_offers(
+                plans, list(prior_approval.get("planOffers") or []), "plan",
+            )
+            conflicts.extend(baseline_conflicts)
+            drop_ins, baseline_conflicts = merge_with_approved_offers(
+                drop_ins, list(prior_approval.get("dropInOffers") or []), "drop-in",
+            )
+            conflicts.extend(baseline_conflicts)
+            contexts, baseline_conflicts = merge_with_approved_contexts(
+                contexts, list(prior_approval.get("costContextOffers") or []),
+            )
+            conflicts.extend(baseline_conflicts)
         if not plans and not drop_ins and not contexts:
             continue
         gym = gyms[gym_id]
@@ -447,6 +558,8 @@ def build_review(
         source_urls = sorted(set(source_urls).union(
             text(item.get("sourceUrl")) for item in contexts if text(item.get("sourceUrl"))
         ))
+        if prior_approval:
+            source_urls = sorted(set(source_urls).union(approved_source_urls(prior_approval)))
         proposal = {
             "gymId": gym_id,
             "gymName": text(gym.get("name")),
@@ -463,7 +576,7 @@ def build_review(
                 "dropIns": "partial" if drop_ins else "none-observed",
             },
             "catalogCompletenessReason": (
-                "Automated extraction proves only the attached offers that were observed. "
+                "The proposal retains the previously reviewed baseline and adds newly observed attached offers. "
                 "A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete."
             ),
             "conflicts": conflicts,
@@ -480,9 +593,15 @@ def build_review(
                 "selectedPlanId": gym.get("selectedPlanId"),
                 "catalogStatus": gym.get("catalogStatus"),
             },
+            "approvedCatalogBaseline": {
+                "included": bool(prior_approval),
+                "planOfferCount": len((prior_approval or {}).get("planOffers") or []),
+                "dropInOfferCount": len((prior_approval or {}).get("dropInOffers") or []),
+                "costContextOfferCount": len((prior_approval or {}).get("costContextOffers") or []),
+                "catalogCompleteness": (prior_approval or {}).get("catalogCompleteness"),
+            },
         }
-        prior_approval = approved_by_id.get(gym_id)
-        if prior_approval and catalog_signatures(prior_approval) == catalog_signatures(proposal):
+        if prior_approval and not conflicts and catalog_signatures(prior_approval) == catalog_signatures(proposal):
             unchanged_approved.append({
                 "gymId": gym_id,
                 "gymName": text(gym.get("name")),

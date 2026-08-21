@@ -610,8 +610,8 @@
     "hoursNotApplicableCount": 0,
     "amenitiesListedCount": 244,
     "operatorLocationIdCount": 123,
-    "sourcePlanCatalogCount": 184,
-    "sourcePlanFragmentCount": 2,
+    "sourcePlanCatalogCount": 185,
+    "sourcePlanFragmentCount": 1,
     "selectedOnlyPlanCatalogCount": 0,
     "noPlanCatalogCount": 61,
     "sourceDropInCatalogCount": 129,
@@ -620,8 +620,8 @@
     "noDropInCatalogCount": 118,
     "selectedUnknownCommitmentCount": 47,
     "selectedUndisclosedClassAllowanceCount": 6,
-    "typicalPlanSelectedCount": 155,
-    "highestAccessPlanSelectedCount": 155,
+    "typicalPlanSelectedCount": 156,
+    "highestAccessPlanSelectedCount": 156,
     "bestValuePlanSelectedCount": 12,
     "explicitMonthlyPriceStateCount": 247,
     "explicitDayPassPriceStateCount": 247,
@@ -643,52 +643,36 @@
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
     "publiclyPricedCommercialListings": 170,
-    "reconstructedRelevantCatalogListings": 169,
-    "reconstructedRelevantCatalogCoverage": 0.9941,
+    "reconstructedRelevantCatalogListings": 170,
+    "reconstructedRelevantCatalogCoverage": 1.0,
     "targetCoverage": 0.9,
     "targetMet": true,
-    "priorityPlatformCounts": {
-      "mindbody": 1
-    },
-    "priorityRecords": [
-      {
-        "id": "osm-node-12132354827",
-        "name": "Perform for Golf — Hayes Valley",
-        "operatorId": "perform for golf",
-        "platforms": [
-          "mindbody"
-        ],
-        "monthlyPrice": 300.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
-      }
-    ],
-    "sourceFragmentPlanCatalogs": 2,
+    "priorityPlatformCounts": {},
+    "priorityRecords": [],
+    "sourceFragmentPlanCatalogs": 1,
     "selectedOnlyPlanCatalogs": 0,
     "sourceFragmentDropInCatalogs": 0,
     "selectedOnlyDropInCatalogs": 0
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1582,
+    "requestCount": 1584,
     "statusCounts": {
       "access-blocked": 33,
-      "fetched": 916,
+      "fetched": 917,
       "host-backoff-after-429": 1,
       "http-403": 102,
       "http-404": 13,
       "http-429": 25,
       "http-502": 2,
       "network-error": 7,
-      "not-modified": 116,
+      "not-modified": 117,
       "render-error": 4,
       "rendered": 269,
       "robots-disallowed": 94
     },
-    "reviewCandidatePages": 297,
-    "linkedStorefrontRequests": 974,
+    "reviewCandidatePages": 299,
+    "linkedStorefrontRequests": 976,
     "renderedRequests": 320,
     "renderedAccessBlockedRequests": 33,
     "renderedAccessBlockerCounts": {

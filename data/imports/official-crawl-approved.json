@@ -451,7 +451,9 @@
           "observedAt": "2026-08-21",
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
-          "conflictFlags": ["official-operating-status-conflict"],
+          "conflictFlags": [
+            "official-operating-status-conflict"
+          ],
           "note": "The amount is public, but the facility's current operating status is disputed; do not treat it as a selectable current drop-in."
         }
       ]
@@ -1436,6 +1438,372 @@
       ]
     },
     {
+      "gymId": "osm-node-12132354827",
+      "priceSource": "Reviewed official public offers",
+      "priceSourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The complete public recurring/package catalog was reviewed.",
+      "planOffers": [
+        {
+          "sourceProductId": "179",
+          "name": "Gym/Sim Access Membership",
+          "productType": "membership",
+          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
+          "scopeType": "multi-location",
+          "amount": 300,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Contracts tab",
+          "captureMethod": "rendered-mindbody-contract",
+          "exactLocationMatch": "exact-location-reviewed"
+        },
+        {
+          "sourceProductId": "100002",
+          "name": "Golf Performance Training (1:1)",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led golf performance session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "exact-location-reviewed"
+        },
+        {
+          "sourceProductId": "100132",
+          "name": "Swing Coaching",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led swing-coaching session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Coach appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "exact-location-reviewed"
+        },
+        {
+          "sourceProductId": "100164",
+          "name": "Golf Fitting — Los Altos Only",
+          "productType": "class-pack",
+          "accessScope": "One golf-fitting appointment at Los Altos only",
+          "scopeType": "single-location",
+          "classAllowance": 1,
+          "amount": 375,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "not-this-location",
+            "restrictions": [
+              "Public product is explicitly limited to Los Altos"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "different-location"
+        },
+        {
+          "sourceProductId": "unnamed-2-sessions",
+          "name": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+          "productType": "class-membership",
+          "accessScope": "2 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 2,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/faq",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+            "contentHash": "be0449bfab9319f3f37eb07953318b2c029cd526d617d6ec523f0089b0777ac9",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "unnamed-2-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "ace-12-sessions",
+          "name": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "12 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 12,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+            "contentHash": "c4bf42172d10915ae316290824412822e908f26cc0591921b37842fa771259cc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "ace-12-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "albatross-10-sessions",
+          "name": "ALBATROSS (10 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "10 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 10,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "ALBATROSS (10 SESSIONS/MONTH)",
+            "contentHash": "0170eb3d891cfefa53c9857a6cff5615405d1ab578018ca0aabe8095fa838adc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "albatross-10-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "birdie-6-sessions",
+          "name": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "6 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 6,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+            "contentHash": "a204eeba89df12ef55df0fb6842a76a1dc0b0e3d55a9ecd4fe383d31acb8acf8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "birdie-6-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "eagle-8-sessions",
+          "name": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "8 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 8,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+            "contentHash": "da689d89b39c7c82d848755d882bc573482f0f147c5a8384e2c1062362ae927b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "eagle-8-sessions",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "par-4-sessions",
+          "name": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+          "productType": "class-membership",
+          "accessScope": "4 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+          "scopeType": "multi-location",
+          "amount": null,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "contact-required",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.performforgolf.com/how-it-works",
+            "observedAt": "2026-08-21",
+            "source": "perform-for-golf-plan-descriptors",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "rawLabel": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+            "contentHash": "d0e109125b39dc0c6567f35222ff2ebbfb056598177f90aa5015913ad146624c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "par-4-sessions",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "none-observed"
+      }
+    },
+    {
       "gymId": "osm-node-12152934880",
       "monthlyPrice": 165,
       "dayPassPrice": 25,
@@ -1689,6 +2057,86 @@
           "amount": 28
         }
       ]
+    },
+    {
+      "gymId": "osm-node-12337873692",
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "priceSource": "Peak Physio official site and linked public Jane appointment catalog",
+      "priceSourceUrl": "https://peakphysiosf.janeapp.com/",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The exact-address current operator publishes 60-minute one-to-one personal-training evaluations and follow-ups at $250. These are exact trainer-led appointment prices, not an ordinary unrestricted gym membership or class drop-in, so compatibility prices remain null.",
+      "planOffers": [
+        {
+          "sourceProductId": "discipline-2-treatment-3",
+          "name": "Personal Training: Initial Evaluation",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training evaluation",
+          "classAllowance": 1,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/3",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Initial Evaluation — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-3",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "discipline-2-treatment-4",
+          "name": "Personal Training: Follow Up",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training follow-up",
+          "classAllowance": 1,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/4",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Follow Up — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-4",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "none-observed"
+      }
     },
     {
       "gymId": "osm-node-12559170747",
@@ -3475,7 +3923,10 @@
       "officialPriceConflict": false,
       "officialTermsConflict": {
         "status": "unresolved",
-        "fields": ["early-cancellation fee", "post-minimum-term amount"],
+        "fields": [
+          "early-cancellation fee",
+          "post-minimum-term amount"
+        ],
         "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
         "note": "Two live policy blocks state different early-cancellation fees; only one block states a $220 every-four-weeks post-term amount. Neither disputed value is selected."
       },
@@ -3554,7 +4005,9 @@
           },
           "eligibility": {
             "type": "new-client",
-            "restrictions": ["Promotional product; ordinary ongoing terms are not established by this card"]
+            "restrictions": [
+              "Promotional product; ordinary ongoing terms are not established by this card"
+            ]
           },
           "purchaseMethod": "direct-public",
           "fees": []
@@ -3573,7 +4026,9 @@
           },
           "eligibility": {
             "type": "new-client",
-            "restrictions": ["Seasonal product; ordinary ongoing terms are not established by this card"]
+            "restrictions": [
+              "Seasonal product; ordinary ongoing terms are not established by this card"
+            ]
           },
           "purchaseMethod": "direct-public",
           "fees": []
@@ -3582,76 +4037,6 @@
       "dropInOffers": [],
       "catalogCompleteness": {
         "plans": "partial",
-        "dropIns": "none-observed"
-      }
-    },
-    {
-      "gymId": "osm-node-12337873692",
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "priceSource": "Peak Physio official site and linked public Jane appointment catalog",
-      "priceSourceUrl": "https://peakphysiosf.janeapp.com/",
-      "priceObservedAt": "2026-08-21",
-      "priceNote": "The exact-address current operator publishes 60-minute one-to-one personal-training evaluations and follow-ups at $250. These are exact trainer-led appointment prices, not an ordinary unrestricted gym membership or class drop-in, so compatibility prices remain null.",
-      "planOffers": [
-        {
-          "sourceProductId": "discipline-2-treatment-3",
-          "name": "Personal Training: Initial Evaluation",
-          "productType": "class-pack",
-          "accessScope": "One trainer-led 60-minute personal-training evaluation",
-          "classAllowance": 1,
-          "amount": 250,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "purchaseMethod": "direct-public",
-          "eligibility": {
-            "type": "trainer-required",
-            "restrictions": ["One-to-one appointment; not an ordinary unrestricted gym or class drop-in"]
-          },
-          "promotion": {"isPromotion": false, "label": ""},
-          "fees": [],
-          "evidence": {
-            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/3",
-            "observedAt": "2026-08-21",
-            "method": "rendered-jane-service-card",
-            "rawLabel": "Personal Training: Initial Evaluation — 60 minutes — $250.00",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "discipline-2-treatment-3",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "discipline-2-treatment-4",
-          "name": "Personal Training: Follow Up",
-          "productType": "class-pack",
-          "accessScope": "One trainer-led 60-minute personal-training follow-up",
-          "classAllowance": 1,
-          "amount": 250,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "purchaseMethod": "direct-public",
-          "eligibility": {
-            "type": "trainer-required",
-            "restrictions": ["One-to-one appointment; not an ordinary unrestricted gym or class drop-in"]
-          },
-          "promotion": {"isPromotion": false, "label": ""},
-          "fees": [],
-          "evidence": {
-            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/4",
-            "observedAt": "2026-08-21",
-            "method": "rendered-jane-service-card",
-            "rawLabel": "Personal Training: Follow Up — 60 minutes — $250.00",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "discipline-2-treatment-4",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "catalogCompleteness": {
-        "plans": "complete",
         "dropIns": "none-observed"
       }
     },
@@ -4257,126 +4642,6 @@
               "Intended for visiting or experienced athletes"
             ]
           }
-        }
-      ]
-    },
-    {
-      "gymId": "osm-node-12132354827",
-      "monthlyPrice": 300,
-      "dayPassPrice": null,
-      "priceSource": "Perform for Golf official site and operator-linked public Mindbody storefront",
-      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
-      "priceObservedAt": "2026-08-21",
-      "priceNote": "The public Mindbody Contracts tab publishes a Gym/Sim Access Membership at $300 every month with month-to-month auto-renewal. The official operator page says designated open-gym and simulator access applies at all locations, so this is selected as the cheapest disclosed direct recurring plan permitting normal facility use. Auto-monthly coached memberships with 4, 6, 8, 10, or 12 sessions are named publicly but their amounts still require consultation. Exact $200 one-to-one training and swing-coaching services are retained as trainer-led appointments and do not become an ordinary day pass.",
-      "catalogCompleteness": {
-        "plans": "fragment",
-        "dropIns": "none-observed"
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "179",
-          "name": "Gym/Sim Access Membership",
-          "productType": "membership",
-          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
-          "scopeType": "multi-location",
-          "amount": 300,
-          "billingInterval": "month",
-          "commitmentType": "month-to-month",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Contracts tab",
-          "captureMethod": "rendered-mindbody-contract",
-          "exactLocationMatch": "operator-market-multi-location"
-        },
-        {
-          "sourceProductId": "100002",
-          "name": "Golf Performance Training (1:1)",
-          "productType": "class-pack",
-          "accessScope": "One trainer-led golf performance session",
-          "scopeType": "multi-location",
-          "classAllowance": 1,
-          "amount": 200,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "eligibility": {
-            "type": "trainer-required",
-            "restrictions": [
-              "One-to-one appointment; not an ordinary unrestricted gym visit"
-            ]
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Services tab",
-          "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "operator-market-multi-location"
-        },
-        {
-          "sourceProductId": "100132",
-          "name": "Swing Coaching",
-          "productType": "class-pack",
-          "accessScope": "One trainer-led swing-coaching session",
-          "scopeType": "multi-location",
-          "classAllowance": 1,
-          "amount": 200,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "eligibility": {
-            "type": "trainer-required",
-            "restrictions": [
-              "Coach appointment; not an ordinary unrestricted gym visit"
-            ]
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Services tab",
-          "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "operator-market-multi-location"
-        },
-        {
-          "sourceProductId": "100164",
-          "name": "Golf Fitting — Los Altos Only",
-          "productType": "class-pack",
-          "accessScope": "One golf-fitting appointment at Los Altos only",
-          "scopeType": "single-location",
-          "classAllowance": 1,
-          "amount": 375,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "eligibility": {
-            "type": "not-this-location",
-            "restrictions": [
-              "Public product is explicitly limited to Los Altos"
-            ]
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Services tab",
-          "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "different-location"
         }
       ]
     },

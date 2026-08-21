@@ -79,6 +79,96 @@ class CatalogReviewTests(unittest.TestCase):
         self.assertEqual(len(offers), 1)
         self.assertEqual(offers[0]["amount"], 119)
 
+    def test_new_descriptor_is_merged_with_reviewed_catalog_baseline(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One", "address": "1 Main St"}]}
+        approved = {"approvals": [{
+            "gymId": "gym-1",
+            "priceSourceUrl": "https://booking.example/contracts",
+            "planOffers": [{
+                "sourceProductId": "gym-access", "name": "Gym Access", "amount": 300,
+                "billingInterval": "month", "sourceUrl": "https://booking.example/contracts",
+            }],
+            "dropInOffers": [],
+            "catalogCompleteness": {"plans": "fragment", "dropIns": "none-observed"},
+        }]}
+        descriptor = {
+            "gymId": "gym-1", "kind": "plan-descriptor", "amount": None,
+            "rawLabel": "PAR Membership (4 sessions/month)", "sourceProductId": "par",
+            "productType": "monthly", "cadence": "month",
+            "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+            "purchaseMethod": "contact-required", "method": "visible-perform-for-golf-plan-descriptor",
+            "sourceUrl": "https://operator.example/how-it-works",
+        }
+
+        result = build_review(
+            fixture, [{"generatedAt": "2026-08-21", "observations": [descriptor]}],
+            "2026-08-21", approved,
+        )
+
+        proposal = result["proposals"][0]
+        self.assertEqual(
+            {offer["sourceProductId"] for offer in proposal["planOffers"]},
+            {"gym-access", "par"},
+        )
+        self.assertEqual(proposal["approvedCatalogBaseline"]["planOfferCount"], 1)
+        self.assertEqual(
+            set(proposal["sourceUrls"]),
+            {"https://booking.example/contracts", "https://operator.example/how-it-works"},
+        )
+
+    def test_reviewed_priced_offer_wins_over_new_same_product_descriptor(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One"}]}
+        approved = {"approvals": [{
+            "gymId": "gym-1",
+            "planOffers": [{
+                "sourceProductId": "basic", "name": "Basic", "amount": 119,
+                "billingInterval": "month",
+            }],
+            "dropInOffers": [],
+        }]}
+        descriptor = {
+            "gymId": "gym-1", "kind": "plan-descriptor", "amount": None,
+            "rawLabel": "Basic Membership (4 sessions/month)", "sourceProductId": "basic",
+            "productType": "monthly", "cadence": "month",
+            "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+            "purchaseMethod": "contact-required", "method": "visible-perform-for-golf-plan-descriptor",
+            "sourceUrl": "https://operator.example/pricing",
+        }
+
+        result = build_review(
+            fixture, [{"generatedAt": "2026-08-21", "observations": [descriptor]}],
+            "2026-08-21", approved,
+        )
+
+        self.assertEqual(result["_meta"]["proposalCount"], 0)
+        self.assertEqual(result["_meta"]["unchangedApprovedCount"], 1)
+
+    def test_new_amount_conflicting_with_reviewed_product_fails_closed(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One"}]}
+        approved = {"approvals": [{
+            "gymId": "gym-1",
+            "planOffers": [{
+                "sourceProductId": "basic", "name": "Basic", "amount": 99,
+                "billingInterval": "month",
+            }],
+            "dropInOffers": [],
+        }]}
+        observation = {
+            "gymId": "gym-1", "amount": 119, "rawLabel": "Basic Membership",
+            "sourceProductId": "basic", "productType": "monthly", "cadence": "month",
+            "method": "public-operator-json", "sourceUrl": "https://operator.example/pricing",
+        }
+
+        result = build_review(
+            fixture, [{"generatedAt": "2026-08-21", "observations": [observation]}],
+            "2026-08-21", approved,
+        )
+
+        proposal = result["proposals"][0]
+        self.assertEqual(proposal["conflicts"][0]["type"], "approved-source-product-price-conflict")
+        with self.assertRaises(ValueError):
+            approval_from_proposal(proposal, "2026-08-21")
+
     def test_official_range_becomes_context_only_proposal(self):
         fixture = {"gyms": [{"id": "gym-1", "name": "Gym One", "address": "1 Main St"}]}
         document = {"generatedAt": "2026-08-20", "observations": [{
@@ -175,6 +265,42 @@ class CatalogReviewTests(unittest.TestCase):
         approval = approval_from_proposal(proposal, "2026-08-20", "complete", "none-observed")
         self.assertEqual(approval["catalogCompleteness"]["plans"], "complete")
         self.assertIn("complete public recurring/package catalog", approval["priceNote"])
+
+    def test_approval_does_not_create_sparse_evidence_over_top_level_source(self):
+        proposal = {
+            "gymId": "gym-1",
+            "sourceUrls": ["https://booking.example/contracts"],
+            "planOffers": [{
+                "sourceProductId": "basic", "name": "Basic", "amount": 99,
+                "sourceUrl": "https://booking.example/contracts", "observedAt": "2026-08-21",
+            }],
+            "dropInOffers": [], "costContextOffers": [], "conflicts": [],
+        }
+
+        approval = approval_from_proposal(proposal, "2026-08-21")
+        offer = approval["planOffers"][0]
+
+        self.assertNotIn("evidence", offer)
+        self.assertEqual(offer["exactLocationMatch"], "exact-location-reviewed")
+        self.assertEqual(offer["sourceUrl"], "https://booking.example/contracts")
+        self.assertEqual(offer["observedAt"], "2026-08-21")
+
+    def test_approval_preserves_explicit_different_location_scope(self):
+        proposal = {
+            "gymId": "gym-1",
+            "sourceUrls": ["https://booking.example/services"],
+            "planOffers": [{
+                "sourceProductId": "other-location", "name": "Other Location Service", "amount": 199,
+                "sourceUrl": "https://booking.example/services", "observedAt": "2026-08-21",
+                "exactLocationMatch": "different-location",
+                "eligibility": {"type": "not-this-location", "restrictions": ["Other branch only"]},
+            }],
+            "dropInOffers": [], "costContextOffers": [], "conflicts": [],
+        }
+
+        approval = approval_from_proposal(proposal, "2026-08-21")
+
+        self.assertEqual(approval["planOffers"][0]["exactLocationMatch"], "different-location")
 
     def test_same_rendered_card_candidates_are_deduplicated(self):
         fixture = {"gyms": [{"id": "gym-1", "name": "Gym One"}]}
