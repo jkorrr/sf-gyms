@@ -1,0 +1,46 @@
+{
+  "generatedAt": "2026-08-20",
+  "policy": "Human search packet only. Search-result pages are never scraped and leads never become verified facts without official evidence.",
+  "recordCount": 3,
+  "records": [
+    {
+      "gymId": "osm-node-12337873692",
+      "name": "Anthony Silva Fitness",
+      "address": "858 Stanyan Street, San Francisco, CA",
+      "likelyOperator": "anthony-silva",
+      "queries": [
+        "\"Anthony Silva Fitness\" \"858 Stanyan Street\" official",
+        "\"Anthony Silva Fitness\" San Francisco membership pricing",
+        "\"Anthony Silva Fitness\" San Francisco classes rates"
+      ],
+      "sameOperatorOfficialUrls": [],
+      "reviewInstructions": "Locate the operator-owned location or pricing page. Aggregators may be leads only; approve no fact without an official page or linked operator-owned public storefront."
+    },
+    {
+      "gymId": "osm-node-4238377195",
+      "name": "Classical Pilates Studio",
+      "address": "2636 Ocean Avenue, San Francisco, CA 94132",
+      "likelyOperator": "classical-pilates",
+      "queries": [
+        "\"Classical Pilates Studio\" \"2636 Ocean Avenue\" official",
+        "\"Classical Pilates Studio\" San Francisco membership pricing",
+        "\"Classical Pilates Studio\" San Francisco classes rates"
+      ],
+      "sameOperatorOfficialUrls": [],
+      "reviewInstructions": "Locate the operator-owned location or pricing page. Aggregators may be leads only; approve no fact without an official page or linked operator-owned public storefront."
+    },
+    {
+      "gymId": "osm-node-11777326257",
+      "name": "Skyefit Personal Training",
+      "address": "864 Folsom Street, San Francisco, CA",
+      "likelyOperator": "skyefit-personal-training",
+      "queries": [
+        "\"Skyefit Personal Training\" \"864 Folsom Street\" official",
+        "\"Skyefit Personal Training\" San Francisco membership pricing",
+        "\"Skyefit Personal Training\" San Francisco classes rates"
+      ],
+      "sameOperatorOfficialUrls": [],
+      "reviewInstructions": "Locate the operator-owned location or pricing page. Aggregators may be leads only; approve no fact without an official page or linked operator-owned public storefront."
+    }
+  ]
+}

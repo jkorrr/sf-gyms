@@ -33,11 +33,11 @@ function gym(overrides: Partial<Gym> = {}): Gym {
 
 describe("estimateGymCost", () => {
   it("includes recurring and mandatory first-year fees", () => {
-    const result = estimateGymCost(gym({ enrollmentFee: 25, initiationFee: 15 }), DEFAULT_COMPARISON_ASSUMPTIONS);
-    expect(result.membershipTotal).toBe(1300);
-    expect(result.effectiveMonthly).toBeCloseTo(108.333, 2);
+    const result = estimateGymCost(gym({ enrollmentFee: 25, initiationFee: 15, processingFee: 5, activationFee: 10 }), DEFAULT_COMPARISON_ASSUMPTIONS);
+    expect(result.membershipTotal).toBe(1315);
+    expect(result.effectiveMonthly).toBeCloseTo(109.583, 2);
     expect(result.estimatedVisits).toBe(156);
-    expect(result.membershipCostPerVisit).toBeCloseTo(8.333, 2);
+    expect(result.membershipCostPerVisit).toBeCloseTo(8.429, 2);
     expect(result.dayPassTotal).toBe(3900);
     expect(result.recommendation).toBe("membership");
   });
@@ -59,9 +59,9 @@ describe("estimateGymCost", () => {
   });
 
   it("keeps disclosed catalog fees in structured comparison totals", () => {
-    const planetFitness = demoGyms.find((item) => item.id === "osm-node-1206893699");
+    const planetFitness = demoGyms.find((item) => item.id === "web-bbf32ec975a42d");
     expect(planetFitness?.annualFee).toBe(49);
-    expect(estimateGymCost(planetFitness as Gym, DEFAULT_COMPARISON_ASSUMPTIONS).membershipTotal).toBe(229);
+    expect(estimateGymCost(planetFitness as Gym, DEFAULT_COMPARISON_ASSUMPTIONS).membershipTotal).toBe(230);
   });
 });
 

@@ -24,6 +24,7 @@ out/
 !.env.local.example
 *.pem
 *.key
+data/private/
 
 # IDE / OS
 .DS_Store

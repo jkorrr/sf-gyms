@@ -2,7 +2,7 @@ import GymDetailActions from "../../../components/GymDetailActions";
 import GymExperienceReports from "../../../components/GymExperienceReports";
 import { basePath } from "../../../lib/config";
 import { demoGyms, venueTypeLabels } from "../../../lib/demo-data";
-import { getGymById, priceFreshnessText, priceText, safeExternalUrl } from "../../../lib/gym-detail";
+import { getGymById, monthlyCostText, priceFreshnessText, priceText, pricingStatusText, safeExternalUrl } from "../../../lib/gym-detail";
 import { reviewLocationId } from "../../../lib/experience-reports";
 import { notFound } from "next/navigation";
 
@@ -24,6 +24,25 @@ export default async function GymPage({ params }: GymPageProps) {
   const websiteUrl = safeExternalUrl(gym.websiteUrl);
   const listingUrl = safeExternalUrl(gym.sourceUrl);
   const priceSourceUrl = safeExternalUrl(gym.priceSourceUrl);
+  const selectedPlan = (gym.plans ?? []).find((plan) => plan.id === gym.selectedPlanId);
+  const typicalPlan = (gym.plans ?? []).find((plan) => plan.id === gym.typicalPlanId);
+  const highestAccessPlan = (gym.plans ?? []).find((plan) => plan.id === gym.highestAccessPlanId);
+  const bestValuePlan = (gym.plans ?? []).find((plan) => plan.id === gym.bestValuePlanId);
+  const selectedDropIn = (gym.dropIns ?? []).find((offer) => offer.id === gym.selectedDropInId);
+  const reportedSources = (gym.priceReports ?? [])
+    .filter((report) => report.eligibleForSummary && report.productType === "monthly")
+    .map((report) => ({ ...report, safeUrl: safeExternalUrl(report.sourceUrl) }))
+    .filter((report) => report.safeUrl);
+  const currentDeals = (gym.deals ?? [])
+    .map((deal) => ({ ...deal, safeUrl: safeExternalUrl(deal.sourceUrl) }))
+    .filter((deal) => deal.safeUrl);
+  const mandatoryFees = [
+    ["Annual fee", gym.annualFee],
+    ["Enrollment fee", gym.enrollmentFee],
+    ["Initiation fee", gym.initiationFee],
+    ["Processing fee", gym.processingFee],
+    ["Activation fee", gym.activationFee],
+  ].filter((entry): entry is [string, number] => typeof entry[1] === "number");
 
   return (
     <main className="shell detail-page">
@@ -40,7 +59,7 @@ export default async function GymPage({ params }: GymPageProps) {
 
         <section className="detail-page-hero">
           <div>
-            <div className="eyebrow">{gym.neighborhood} / {venueTypeLabels[gym.venueType]}</div>
+            <div className="eyebrow">{gym.neighborhood} / {venueTypeLabels[gym.venueType]}{gym.recordStatus === "coming_soon" ? " / Coming soon" : ""}</div>
             <h1>{gym.name}</h1>
             <p className="detail-page-address">{gym.address}</p>
             <p className="detail-page-intro">{gym.description}</p>
@@ -50,36 +69,76 @@ export default async function GymPage({ params }: GymPageProps) {
 
         <div className="detail-page-grid">
           <section className="detail-page-card detail-page-prices">
-            <div className="detail-card-heading"><div><div className="eyebrow">Cost snapshot</div><h2>Prices</h2></div><span className={`freshness ${gym.priceSource ? "" : "stale"}`}>{gym.priceSource ? "Source checked" : "Verify first"}</span></div>
+            <div className="detail-card-heading"><div><div className="eyebrow">Cost snapshot</div><h2>Prices</h2></div><span className={`cost-status cost-status-${gym.pricingStatus ?? "unresolved"}`}>{pricingStatusText(gym)}</span></div>
             <div className="detail-price-grid">
-              <div><span>Monthly membership</span><strong>{priceText(gym.monthlyPrice, "/mo")}</strong></div>
-              <div><span>Annual fee</span><strong>{priceText(gym.annualFee, "/yr")}</strong></div>
-              <div><span>Day pass</span><strong>{priceText(gym.dayPassPrice, "")}</strong></div>
+              <div>
+                <span>{gym.operatorConfirmedMonthly ? "Operator-confirmed monthly" : gym.reportedMonthly ? "Recently reported monthly" : gym.estimatedMonthly ? "Typical monthly estimate" : "Monthly membership"}</span>
+                <strong>{monthlyCostText(gym)}</strong>
+                {gym.monthlyPrice === null && gym.monthlyPriceBlocker && <small>{gym.monthlyPriceBlocker}</small>}
+              </div>
+              <div>
+                <span>{selectedDropIn?.name ?? "Day pass"}</span>
+                <strong>{priceText(gym.dayPassPrice, "")}</strong>
+                {selectedDropIn && gym.dayPassPrice !== null && <small>{selectedDropIn.accessScope}</small>}
+                {gym.dayPassPrice === null && gym.dayPassPriceBlocker && <small>{gym.dayPassPriceBlocker}</small>}
+              </div>
             </div>
-            {(gym.monthlyUnlimitedPrice !== undefined || gym.annualPrepayPrice !== undefined || gym.enrollmentFee !== undefined || gym.initiationFee !== undefined || gym.personalTrainingSessionPrice !== undefined) && <div className="detail-price-extras">
-              {gym.monthlyUnlimitedPrice !== undefined && <div><span>Unlimited monthly</span><strong>{priceText(gym.monthlyUnlimitedPrice, "/mo")}</strong></div>}
-              {gym.annualPrepayPrice !== undefined && <div><span>Prepaid annual</span><strong>{priceText(gym.annualPrepayPrice, "/yr")}</strong></div>}
-              {gym.enrollmentFee !== undefined && <div><span>Joining fee</span><strong>{priceText(gym.enrollmentFee, "")}</strong></div>}
-              {gym.enrollmentFee === undefined && gym.initiationFee !== undefined && <div><span>Initiation fee</span><strong>{priceText(gym.initiationFee, "")}</strong></div>}
-              {gym.personalTrainingSessionPrice !== undefined && <div><span>Personal training</span><strong>{priceText(gym.personalTrainingSessionPrice, "/session")}</strong></div>}
+            {gym.estimatedMonthly && <div className="estimate-explainer">
+              <strong>Likely range: ${gym.estimatedMonthly.low.toFixed(0)}–${gym.estimatedMonthly.high.toFixed(0)}/month</strong>
+              <span>{gym.estimatedMonthly.confidence} confidence · {gym.estimatedMonthly.basis} · {gym.estimatedMonthly.sampleSize} comparable prices</span>
+              <span>Calculated {gym.estimatedMonthly.generatedAt}. This is not a quoted price from the gym.</span>
             </div>}
+            {gym.operatorConfirmedMonthly && <div className="estimate-explainer reported-explainer">
+              <strong>{gym.operatorConfirmedMonthly.planName || "Standard recurring plan"}: ${gym.operatorConfirmedMonthly.normalizedMonthly.toFixed(2)}/month</strong>
+              <span>Confirmed privately by the operator on {gym.operatorConfirmedMonthly.confirmedAt} via {gym.operatorConfirmedMonthly.contactMethod}.</span>
+              <span>This exact amount is not publicly reproducible and is excluded from official-price sorting.</span>
+            </div>}
+            {gym.reportedMonthly && <div className="estimate-explainer reported-explainer">
+              <strong>Reported range: ${gym.reportedMonthly.low.toFixed(0)}–${gym.reportedMonthly.high.toFixed(0)}/month</strong>
+              <span>{gym.reportedMonthly.confidence} confidence · {gym.reportedMonthly.sourceCount} independent recent sources · newest {gym.reportedMonthly.newestPublishedAt}</span>
+              <span>{gym.reportedMonthly.conflict ? "Recent reports disagree materially; confirm the current plan with the gym." : "The reports are within 20% of one another."} These are not operator-verified prices.</span>
+              {reportedSources.length > 0 && <span>{reportedSources.map((report, index) => <span key={report.id}>{index > 0 ? " · " : ""}<a href={report.safeUrl} target="_blank" rel="noreferrer">Source {index + 1}</a></span>)}</span>}
+            </div>}
+            {(gym.costContext ?? []).length > 0 && <div className="estimate-explainer reported-explainer">
+              <strong>Officially published cost context</strong>
+              {(gym.costContext ?? []).map((context) => <span key={context.id}>{context.label || context.productType}: {context.low === context.high ? `from $${context.low.toFixed(2)}` : `$${context.low.toFixed(2)}–$${context.high.toFixed(2)}`}{context.cadence !== "unknown" ? ` per ${context.cadence}` : ""}</span>)}
+              <span>Ranges and starting prices are informative only and are not treated as exact selectable plans.</span>
+            </div>}
+            {selectedPlan && <p className="detail-muted">
+              <strong>{selectedPlan.name}</strong>{selectedPlan.accessScope ? ` — ${selectedPlan.accessScope}` : ""}
+              {selectedPlan.classAllowance?.disclosed && <>{" · "}{selectedPlan.classAllowance.unlimited ? "Unlimited classes" : `${selectedPlan.classAllowance.count} classes per ${selectedPlan.classAllowance.period}`}</>}
+              {selectedPlan.billing.amount !== null && selectedPlan.billing.interval !== "month" && <>{" · "}${selectedPlan.billing.amount.toFixed(2)} every {selectedPlan.billing.interval}</>}
+            </p>}
+            {(typicalPlan || highestAccessPlan) && <div className="detail-price-grid">
+              {typicalPlan && <div><span>Typical eligible plan</span><strong>{typicalPlan.billing.normalizedMonthly === null ? "Not listed" : `$${typicalPlan.billing.normalizedMonthly.toFixed(2)}/mo`}</strong><small>{typicalPlan.name}</small></div>}
+              {highestAccessPlan && <div><span>Highest-access eligible plan</span><strong>{highestAccessPlan.billing.normalizedMonthly === null ? "Not listed" : `$${highestAccessPlan.billing.normalizedMonthly.toFixed(2)}/mo`}</strong><small>{highestAccessPlan.name}</small></div>}
+            </div>}
+            {bestValuePlan && <div className="estimate-explainer"><strong>Operator-labeled best value</strong><span>{bestValuePlan.name}{bestValuePlan.billing.normalizedMonthly === null ? "" : ` · $${bestValuePlan.billing.normalizedMonthly.toFixed(2)}/month`}</span></div>}
+            {currentDeals.length > 0 && <div className="estimate-explainer">
+              <strong>Current official deals</strong>
+              {currentDeals.map((deal) => <span key={deal.id}><a href={deal.safeUrl} target="_blank" rel="noreferrer">{deal.label || `${deal.productType} offer`}</a>{` · $${deal.amount.toFixed(2)}${deal.cadence ? ` ${deal.cadence}` : ""}`}{deal.expiresAt ? ` · expires ${deal.expiresAt}` : ` · checked ${deal.capturedAt}`}</span>)}
+              <span>Promotions are shown separately and never replace the ordinary plan price.</span>
+            </div>}
+            {gym.catalogStatus?.plans.status === "selected-only" && <p className="detail-muted">The selected official plan is verified; alternative membership products have not yet been fully reconstructed.</p>}
+            {mandatoryFees.length > 0 && <div className="detail-price-grid">{mandatoryFees.map(([label, amount]) => <div key={label}><span>{label}</span><strong>{priceText(amount, "")}</strong></div>)}</div>}
             <p className="detail-muted">{priceFreshnessText(gym)}</p>
             {gym.priceNote && <p className="price-note">{gym.priceNote}</p>}
             {gym.annualFeeNote && <p className="price-note">Annual fee details: {gym.annualFeeNote}</p>}
+            {gym.pricingBlocker && <p className="price-note">{gym.pricingBlocker}</p>}
             {priceSourceUrl && <a className="detail-source-link" href={priceSourceUrl} target="_blank" rel="noreferrer">Read the official price source</a>}
           </section>
 
           <section className="detail-page-card">
             <div className="eyebrow">What is here</div>
             <h2>Amenities</h2>
-            {gym.amenities.length > 0 ? <div className="detail-amenities">{gym.amenities.map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div> : <p className="detail-muted">Amenities have not been listed yet.</p>}
+            {gym.amenities.length > 0 ? <div className="detail-amenities">{gym.amenities.map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div> : <p className="detail-muted">{gym.metadataStatus?.amenities.reason || "Amenities have not been listed yet."}</p>}
           </section>
 
           <section className="detail-page-card">
             <div className="eyebrow">Plan your visit</div>
             <h2>Hours & location</h2>
             <dl className="detail-facts">
-              <div><dt>Hours</dt><dd>{gym.hours}</dd></div>
+              <div><dt>Hours</dt><dd>{gym.hours === "Hours not listed" ? (gym.metadataStatus?.hours.reason || "Not published") : gym.hours}</dd></div>
               <div><dt>Address</dt><dd>{gym.address}</dd></div>
               <div><dt>Open 24/7</dt><dd>{gym.isOpen247 ? "Yes" : "Not listed"}</dd></div>
             </dl>

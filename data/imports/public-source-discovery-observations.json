@@ -1,0 +1,61 @@
+{
+  "generatedAt": "2026-08-20",
+  "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
+  "policy": "Evidence candidates only; no automatic status, suppression, identity, or price changes.",
+  "attemptedListings": 3,
+  "requests": 1,
+  "dispositionCounts": {
+    "strong-match-review": 1,
+    "ambiguous-match-review": 0,
+    "no-match": 2
+  },
+  "observations": [
+    {
+      "gymId": "osm-node-12337873692",
+      "name": "Anthony Silva Fitness",
+      "address": "858 Stanyan Street, San Francisco, CA",
+      "query": "Anthony Silva Fitness",
+      "disposition": "strong-match-review",
+      "matches": [
+        {
+          "score": 1.0,
+          "dbaName": "Anthony Silva Fitness",
+          "address": "858 Stanyan St",
+          "postalCode": "94117",
+          "businessStartDate": "2024-05-01T00:00:00.000",
+          "businessEndDate": "",
+          "locationStartDate": "2024-05-01T00:00:00.000",
+          "locationEndDate": "",
+          "administrativelyClosed": "",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "1365867-07-241-1160264"
+        }
+      ],
+      "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
+      "autoApply": false,
+      "fetchStatus": "fetched"
+    },
+    {
+      "gymId": "osm-node-4238377195",
+      "name": "Classical Pilates Studio",
+      "address": "2636 Ocean Avenue, San Francisco, CA 94132",
+      "query": "Classical Pilates Studio",
+      "disposition": "no-match",
+      "matches": [],
+      "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
+      "autoApply": false,
+      "fetchStatus": "cached"
+    },
+    {
+      "gymId": "osm-node-11777326257",
+      "name": "Skyefit Personal Training",
+      "address": "864 Folsom Street, San Francisco, CA",
+      "query": "Skyefit Personal Training",
+      "disposition": "no-match",
+      "matches": [],
+      "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
+      "autoApply": false,
+      "fetchStatus": "cached"
+    }
+  ]
+}
