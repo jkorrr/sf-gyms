@@ -4,7 +4,7 @@
     "sourceUrl": "https://www.openstreetmap.org/",
     "queryUrl": "https://overpass-api.de/api/interpreter",
     "boundingBox": "37.70,-122.53,37.84,-122.35",
-    "importedAt": "2026-08-20T00:00:00Z",
+    "importedAt": "2026-08-21T00:00:00Z",
     "license": "ODbL 1.0",
     "notes": "Named OSM-tagged fitness facilities in the San Francisco bounding box; coverage is not exhaustive.",
     "immutableSourceRevision": "9dee34c:data/imports/sf-gyms-osm.json",
@@ -227,7 +227,7 @@
       "sourceName": "24 Hour Fitness",
       "sourceId": "web-research/web-4aaec1680acf72",
       "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "24 Hour Fitness",
       "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport",
       "priceNote": "Gold is displayed as low as $34.99/month. The page discloses a $49.99 annual fee for select monthly memberships. A promotional $1 initiation fee applies only to select offers and was not mapped to the lowest Gold plan. Free-trial dollar value is not treated as a day pass.",
@@ -420,7 +420,7 @@
       "sourceName": "24 Hour Fitness",
       "sourceId": "web-research/web-8891970863af87",
       "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/sutter-montgomery-sport",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "24 Hour Fitness",
       "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/sutter-montgomery-sport",
       "priceNote": "Gold is displayed as low as $34.99/month. The page discloses a $49.99 annual fee for select monthly memberships. A promotional $1 initiation fee applies only to select offers and was not mapped to the lowest Gold plan.",
@@ -4381,7 +4381,7 @@
       "sourceName": "Barry's",
       "sourceId": "web-research/web-18e908eb2543ab",
       "sourceUrl": "https://www.barrys.com/studio/san-francisco-marina",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Barry's",
       "priceSourceUrl": "https://app.barrys.com/pricing?location=10298",
       "priceNote": "Northern California recurring membership starts at $260/month for 8 classes; higher plans are $365/12, $445/16, and $530/30. Standard single class is $38. Introductory 3-pack at $75 was excluded. No mandatory fee was publicly disclosed.",
@@ -4599,7 +4599,7 @@
       "sourceName": "The Bay Club",
       "sourceId": "web-research/web-a8dd7473a48e9c",
       "sourceUrl": "https://www.bayclubs.com/sf-campus",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Bay Club public membership builder",
       "priceSourceUrl": "https://join.bayclubs.com/shared/membership-builder",
       "priceNote": "The operator-owned public builder exposes memberships before requesting personal details. Pay Monthly Single Site is the cheapest plan providing normal Financial District access. The $100 initiation fee belongs to that plan; higher-access memberships and their different initiation fees remain separate.",
@@ -5284,7 +5284,7 @@
       "sourceName": "The Bay Club",
       "sourceId": "web-research/web-1018f0171ffa8e",
       "sourceUrl": "https://www.bayclubs.com/sf-campus",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Bay Club public membership builder",
       "priceSourceUrl": "https://join.bayclubs.com/shared/membership-builder",
       "priceNote": "The operator-owned public builder exposes memberships before requesting personal details. Executive Club North Bay is the cheapest Pay Monthly plan providing normal Bay Club San Francisco access. The plan-linked $300 initiation fee remains separate.",
@@ -5948,7 +5948,7 @@
       "sourceName": "YMCA of Greater San Francisco",
       "sourceId": "web-research/web-94d9302c37678b",
       "sourceUrl": "https://www.ymcasf.org/location/bayview-hunters-point-ymca/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
@@ -6027,7 +6027,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "web-94d9302c37678b:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "web-94d9302c37678b:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -6056,8 +6092,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "activationFee": null,
@@ -7884,7 +7920,7 @@
       "sourceName": "Body Temp Yoga",
       "sourceId": "web-research/web-1b2f42bb1e4bcb",
       "sourceUrl": "https://bodytempyoga.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Body Temp Yoga",
       "priceSourceUrl": "https://www.bodytempyoga.com/memberships",
       "priceNote": "Official memberships page lists Standard Membership at $139/month and Premium Membership at $169/month. Official product and rules pages list single live classes at $35; older limited-capacity pages also show $29-$35 in-studio class references, so $35 is the current safer drop-in figure.",
@@ -10798,7 +10834,7 @@
       "sourceName": "California Martial Athletics official pricing page",
       "sourceId": "web-research/web-9cb9e987c99d39",
       "sourceUrl": "https://www.cmasf.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "California Martial Athletics official pricing page",
       "priceSourceUrl": "https://www.cmasf.com/pricing",
       "priceNote": "Official month-to-month membership is $214/month plus a $50 enrollment fee. First class is $25. Six-month and 12-month plans reduce the monthly equivalent to $196 and $183 respectively.",
@@ -11188,7 +11224,7 @@
       "sourceName": "Castro Fitness official membership agreement",
       "sourceId": "web-research/web-e4d790e4a639c2",
       "sourceUrl": "https://castro-fitness.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Castro Fitness official membership agreement",
       "priceSourceUrl": "https://castro-fitness.com/membership-agreement/",
       "priceNote": "Official agreement lists a recurring 4-week plan at $107.95 plus a $49.99 sign-up fee, a one-day pass at $34.95, and a one-month pass at $135.95. No group classes, pool, sauna, or steam room are provided.",
@@ -12216,7 +12252,7 @@
       "sourceName": "City College of San Francisco",
       "sourceId": "web-research/web-671ce25da68f7d",
       "sourceUrl": "https://www.ccsf.edu/academics/contract-education-and-extension-programs/fitness-center-and-pool-semester-memberships",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "CCSF official extension catalog",
       "priceSourceUrl": "https://ccsf-extension.pdx.catalog.canvaslms.com/browse/extension",
       "priceNote": "The current official Fall 2026 catalog publishes a $200 semester Fitness Center and Pool membership for adults. It is a non-recurring academic-term product and therefore does not populate monthlyPrice.",
@@ -13016,116 +13052,6 @@
         "operatorLocationId": {
           "status": "listed",
           "reason": ""
-        }
-      }
-    },
-    {
-      "id": "osm-node-4238377195",
-      "name": "Classical Pilates Studio",
-      "neighborhood": "San Francisco",
-      "address": "2636 Ocean Avenue, San Francisco, CA 94132",
-      "gymType": "Fitness centre",
-      "latitude": 37.7320741,
-      "longitude": -122.473774,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
-      "isOpen247": false,
-      "amenities": [],
-      "description": "Classical Pilates Studio is a Pilates, Lagree, or barre fitness studio in San Francisco. Current consumer pricing still needs confirmation from public evidence. No reliable amenity list has been published yet.",
-      "hours": "Hours not listed",
-      "websiteUrl": "",
-      "sourceName": "OpenStreetMap",
-      "sourceId": "node/4238377195",
-      "sourceUrl": "https://www.openstreetmap.org/node/4238377195",
-      "importedAt": "2026-08-17T00:39:44Z",
-      "recordStatus": "conflict",
-      "pricingAccess": "no-official-site",
-      "entityKindOverride": "studio",
-      "accessModelOverride": "class-pack",
-      "modalityOverride": "pilates-lagree-barre",
-      "officialUrl": "",
-      "operatorLocationId": "",
-      "canonicalLocationId": "osm-node-4238377195",
-      "operatorId": "classical pilates studio",
-      "canonicalAddress": "2636 ocean ave",
-      "sourceAliases": [],
-      "publicationStatus": "publish",
-      "discoveryEvidence": {
-        "sourceUrl": "https://fitness2function.com/",
-        "sourceType": "official-web",
-        "observedAt": "2026-08-19",
-        "note": "The current official operator at the exact address is Fitness2Function, not Classical Pilates Studio. Do not auto-merge or overwrite this record. If a reviewed replacement decision is approved, Fitness2Function publishes Mon 8am-1:30pm; Wed 8am-5pm; Fri 8am-1:30pm; Sat 8am-1:30pm; Tue/Thu/Sun not listed, with Pilates, Yamuna Body Rolling, Yamuna Foot Fitness, private sessions, group sessions, and 50-minute sessions."
-      },
-      "priceReports": [],
-      "reportedMonthly": null,
-      "operatorConfirmedMonthly": null,
-      "deals": [],
-      "entityKind": "studio",
-      "modality": "pilates-lagree-barre",
-      "operatorKey": "classical-pilates",
-      "accessModel": "class-pack",
-      "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
-      "dropIns": [],
-      "selectedPlanId": null,
-      "selectedDropInId": null,
-      "typicalPlanId": null,
-      "highestAccessPlanId": null,
-      "bestValuePlanId": null,
-      "planViewStatus": {
-        "typical": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
-        },
-        "highestAccess": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
-        },
-        "bestValue": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
-        }
-      },
-      "costContext": [],
-      "selectionReason": "",
-      "planValidationErrors": [],
-      "catalogStatus": {
-        "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
-        },
-        "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
-        }
-      },
-      "annualFee": null,
-      "enrollmentFee": null,
-      "initiationFee": null,
-      "processingFee": null,
-      "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "No current official operator website or public booking storefront was verified for this location.",
-      "pricingStatus": "unresolved",
-      "monthlyPriceBlocker": "No current official operator website or public booking storefront was verified for this location.",
-      "dayPassPriceBlocker": "No current ordinary unrestricted single-visit price could be verified from the available public evidence.",
-      "metadataStatus": {
-        "officialUrl": {
-          "status": "not-found",
-          "reason": "No authoritative current operator or facility page was verified."
-        },
-        "hours": {
-          "status": "not-published",
-          "reason": "No current visit hours were published in the reviewed sources."
-        },
-        "amenities": {
-          "status": "not-published",
-          "reason": "No reliable amenity list was published in the reviewed sources."
-        },
-        "operatorLocationId": {
-          "status": "not-published",
-          "reason": "The operator did not expose a stable public location identifier."
         }
       }
     },
@@ -15740,12 +15666,56 @@
         "observedAt": "2026-08-19",
         "note": "The fixture currently points to the Cow Hollow page; the official exact-address location is Duboce."
       },
-      "planName": "All Access Membership",
-      "planScope": "Unlimited studio, live, and on-demand access",
       "priceSource": "Reviewed official public offers",
       "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
       "priceObservedAt": "2026-08-20",
       "priceNote": "The observed recurring/package offers were reviewed, but the source catalog may contain additional products.",
+      "planOffers": [
+        {
+          "sourceProductId": "card-5781677c566289f8",
+          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+          "productType": "class-membership",
+          "accessScope": "Scope must be confirmed from the linked official product card.",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+            "contentHash": "bd53783ab220793ba7ad22848829f4c5a3668c083036de0901b6b37b5eb54ae8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-5781677c566289f8",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -15873,52 +15843,6 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "card-5781677c566289f8",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "bd53783ab220793ba7ad22848829f4c5a3668c083036de0901b6b37b5eb54ae8",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-5781677c566289f8",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
       }
     },
     {
@@ -15961,12 +15885,56 @@
         "observedAt": "2026-08-19",
         "note": "Corrects a Cow Hollow URL incorrectly attached to the 1200 4th Street Mission Bay location."
       },
-      "planName": "All Access Membership",
-      "planScope": "Unlimited studio, live, and on-demand access",
       "priceSource": "Reviewed official public offers",
       "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay",
       "priceObservedAt": "2026-08-20",
       "priceNote": "The observed recurring/package offers were reviewed, but the source catalog may contain additional products.",
+      "planOffers": [
+        {
+          "sourceProductId": "card-5781677c566289f8",
+          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+          "productType": "class-membership",
+          "accessScope": "Scope must be confirmed from the linked official product card.",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+            "contentHash": "18e7c04cbbc98e973e1848099835261d4df214f089a5571b556b06f8103f972f",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-5781677c566289f8",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -16094,52 +16062,6 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "card-5781677c566289f8",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "18e7c04cbbc98e973e1848099835261d4df214f089a5571b556b06f8103f972f",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-5781677c566289f8",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
       }
     },
     {
@@ -16346,12 +16268,56 @@
         "observedAt": "2026-08-19",
         "note": "Corrects a Cow Hollow URL incorrectly attached to the 1900 Van Ness Avenue Nob Hill location."
       },
-      "planName": "All Access Membership",
-      "planScope": "Unlimited studio, live, and on-demand access",
       "priceSource": "Reviewed official public offers",
       "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill",
       "priceObservedAt": "2026-08-20",
       "priceNote": "The observed recurring/package offers were reviewed, but the source catalog may contain additional products.",
+      "planOffers": [
+        {
+          "sourceProductId": "card-5781677c566289f8",
+          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+          "productType": "class-membership",
+          "accessScope": "Scope must be confirmed from the linked official product card.",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+            "contentHash": "eb66c5a78c5eaa617b207019efd667d90385cbe1c24e2b43c71eee81d14b7e52",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-5781677c566289f8",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -16479,52 +16445,6 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "card-5781677c566289f8",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "eb66c5a78c5eaa617b207019efd667d90385cbe1c24e2b43c71eee81d14b7e52",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-5781677c566289f8",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
       }
     },
     {
@@ -16564,12 +16484,56 @@
           "method": "reviewed-json-ld-location"
         }
       ],
-      "planName": "All Access Membership",
-      "planScope": "Unlimited studio, live, and on-demand access",
       "priceSource": "Reviewed official public offers",
       "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow",
       "priceObservedAt": "2026-08-20",
       "priceNote": "The observed recurring/package offers were reviewed, but the source catalog may contain additional products.",
+      "planOffers": [
+        {
+          "sourceProductId": "card-5781677c566289f8",
+          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+          "productType": "class-membership",
+          "accessScope": "Scope must be confirmed from the linked official product card.",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+            "contentHash": "a2efbd6192d3a7fdaf4eb16e6128304eb4c9367c101466d7ccdc2f4d5b6fdeae",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-5781677c566289f8",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -16697,52 +16661,6 @@
           "status": "not-published",
           "reason": "The operator did not expose a stable public location identifier."
         }
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "card-5781677c566289f8",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "a2efbd6192d3a7fdaf4eb16e6128304eb4c9367c101466d7ccdc2f4d5b6fdeae",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-5781677c566289f8",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
       }
     },
     {
@@ -16790,12 +16708,56 @@
         "observedAt": "2026-08-19",
         "note": "The fixture currently points to the Cow Hollow page; the official exact-address location is NoPa."
       },
-      "planName": "All Access Membership",
-      "planScope": "Unlimited studio, live, and on-demand access",
       "priceSource": "Reviewed official public offers",
       "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa",
       "priceObservedAt": "2026-08-20",
       "priceNote": "The observed recurring/package offers were reviewed, but the source catalog may contain additional products.",
+      "planOffers": [
+        {
+          "sourceProductId": "card-5781677c566289f8",
+          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+          "productType": "class-membership",
+          "accessScope": "Scope must be confirmed from the linked official product card.",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
+            "contentHash": "ca6577c95a4ac221ce74eed2bfe19bb33d23bbcf8e0def619292d66560f5c916",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-5781677c566289f8",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -16923,52 +16885,6 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "card-5781677c566289f8",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "ca6577c95a4ac221ce74eed2bfe19bb33d23bbcf8e0def619292d66560f5c916",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-5781677c566289f8",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
       }
     },
     {
@@ -18073,7 +17989,7 @@
       "sourceName": "CrossFit South Park official membership page",
       "sourceId": "web-research/web-c3b2830a9bc6f1",
       "sourceUrl": "https://www.crossfitsouthpark.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "CrossFit South Park official membership page",
       "priceSourceUrl": "https://www.crossfitsouthpark.com/membership",
       "priceNote": "Official recurring unlimited membership is $299/month with access to South Park and Potrero Hill. 2x weekly is $219/month and 3x weekly is $259/month. The page does not publish a visitor day-pass amount.",
@@ -18846,7 +18762,7 @@
       "sourceName": "Crunch Fitness",
       "sourceId": "web-research/web-99a718d670cb34",
       "sourceUrl": "https://www.crunch.com/locations/union-street",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Crunch Fitness",
       "priceSourceUrl": "https://www.crunch.com/locations/union-street",
       "priceNote": "Regular One Crunch single-club rate is $95/month; the page separately showed a temporary $80.75 rate. Regular enrollment is $150 and processing is $49.95; current promotional equivalents were $15 and $39.95. The page says an annual fee may apply but does not disclose its amount. Crunch's official FAQ lists a $35 unhosted Signature guest pass.",
@@ -19955,7 +19871,7 @@
       "sourceName": "DIAKADI Fitness Performance Life",
       "sourceId": "web-research/web-d4b58ff151c226",
       "sourceUrl": "https://www.diakadi.life/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "DIAKADI Fitness Performance Life",
       "priceSourceUrl": "https://www.diakadi.life/general-info-details",
       "priceNote": "Official facility details page lists Training Access Pass at $49, Performance Pass at $110, and VIP Service at $165. Open gym access is restricted to current clients working with a trainer at least 1x/week. Trainer rates average $170-$225/session. No public day pass is listed.",
@@ -19997,7 +19913,59 @@
       "operatorKey": "diakadi.life",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "web-d4b58ff151c226:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Recurring membership",
+          "productType": "membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 110.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 110.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.diakadi.life/general-info-details",
+            "observedAt": "2026-08-16",
+            "source": "DIAKADI Fitness Performance Life",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Official facility details page lists Training Access Pass at $49, Performance Pass at $110, and VIP Service at $165. Open gym access is restricted to current clients working with a trainer at least 1x/week. Trainer rates",
+            "contentHash": "3e3b17580eddf8a0fb919dd89e30ebe211811996bc93aab1c71b80fb954c7ea2",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
       "selectedPlanId": null,
       "selectedDropInId": null,
@@ -20038,8 +20006,8 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -20117,6 +20085,27 @@
         "observedAt": "2026-08-19",
         "note": ""
       },
+      "priceSource": "Divine Yoga Studio official booking page",
+      "priceSourceUrl": "https://www.divineyogastudiosf.com/book-now",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current official booking page at 406 Brannan publishes a three-class pass for $40, while the official pricing-plan page says no plans are available and the municipal business record reports an end date. The package is retained only as official cost context until the operating-status conflict is resolved.",
+      "costContextOffers": [
+        {
+          "kind": "package-price",
+          "label": "Three Class Pass",
+          "amount": 40,
+          "cadence": "3-class pass",
+          "productType": "class-pack",
+          "sourceUrl": "https://www.divineyogastudiosf.com/book-now",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": [
+            "official-operating-status-conflict"
+          ],
+          "note": "The amount is public, but the facility's current operating status is disputed; do not treat it as a selectable current drop-in."
+        }
+      ],
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -20209,28 +20198,7 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "priceSource": "Divine Yoga Studio official booking page",
-      "priceSourceUrl": "https://www.divineyogastudiosf.com/book-now",
-      "priceObservedAt": "2026-08-21",
-      "priceNote": "The current official booking page at 406 Brannan publishes a three-class pass for $40, while the official pricing-plan page says no plans are available and the municipal business record reports an end date. The package is retained only as official cost context until the operating-status conflict is resolved.",
-      "costContextOffers": [
-        {
-          "kind": "package-price",
-          "label": "Three Class Pass",
-          "amount": 40,
-          "cadence": "3-class pass",
-          "productType": "class-pack",
-          "sourceUrl": "https://www.divineyogastudiosf.com/book-now",
-          "observedAt": "2026-08-21",
-          "evidenceTier": "official-public",
-          "exactLocationMatch": "exact-location",
-          "conflictFlags": [
-            "official-operating-status-conflict"
-          ],
-          "note": "The amount is public, but the facility's current operating status is disputed; do not treat it as a selectable current drop-in."
-        }
-      ]
+      }
     },
     {
       "id": "osm-node-4057014702",
@@ -20449,7 +20417,7 @@
       "sourceName": "YMCA of Greater San Francisco",
       "sourceId": "web-research/web-abd8e24f4af4d8",
       "sourceUrl": "https://www.ymcasf.org/location/dogpatch-ymca-at-crane-cove/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
@@ -20528,7 +20496,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "web-abd8e24f4af4d8:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "web-abd8e24f4af4d8:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -20557,8 +20561,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "activationFee": null,
@@ -21929,7 +21933,7 @@
       "sourceName": "Equinox",
       "sourceId": "web-research/web-e71c82ac2eb475",
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Equinox",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
       "priceNote": "Select single-club access is $242/month. Public location and plan pages did not disclose a mandatory fee or day-pass amount.",
@@ -22094,7 +22098,7 @@
       "sourceName": "Equinox",
       "sourceId": "web-research/web-678cd02ed5fd30",
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Equinox",
       "priceSourceUrl": "https://www.equinox.com/join/step2/720",
       "priceNote": "Official public plan selector lists Select Access to Pine Street at $297/month. No mandatory fee or day-pass amount was publicly disclosed.",
@@ -22421,7 +22425,7 @@
       "sourceName": "Equinox",
       "sourceId": "web-research/web-8a074bb0e133c0",
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Equinox",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
       "priceNote": "Select single-club access is $310/month. Public location and plan pages did not disclose a mandatory enrollment/initiation fee or a day-pass price.",
@@ -23552,7 +23556,7 @@
       "sourceName": "Fíor Fitness official pricing and home pages",
       "sourceId": "web-research/web-af9d34b6146771",
       "sourceUrl": "https://www.fiorfitness.org/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Fíor Fitness official pricing and home pages",
       "priceSourceUrl": "https://www.fiorfitness.org/pricing",
       "priceNote": "Official unlimited membership is $290/month. Limited membership is $250/month. Single-class drop-in is $30; 21-day trial is $199 and should not be treated as the regular monthly rate.",
@@ -23832,7 +23836,7 @@
       "sourceName": "F45 Training",
       "sourceId": "web-research/web-d366aaf6dd2658",
       "sourceUrl": "https://f45training.com/studio/citycentersf/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "F45 Training",
       "priceSourceUrl": "https://f45training.com/studio/citycentersf/",
       "priceNote": "Official structured product data lists Unlimited Month-to-Month at $155 every 2 weeks with a 6-week minimum; normalized monthlyPrice is $155 x 26 / 12 = $335.83. Standard Drop In is $38. A 3-day local-resident trial is $25 and PEAK500 drop-in is $35, neither used as the standard drop-in. No mandatory fee was disclosed.",
@@ -24282,7 +24286,7 @@
       "sourceName": "F45 Training",
       "sourceId": "web-research/web-388dac8833bafb",
       "sourceUrl": "https://f45training.com/studio/transbay/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "F45 Training",
       "priceSourceUrl": "https://f45training.com/studio/transbay/",
       "priceNote": "Official structured product data lists Unlimited Month-to-Month at $155 every 2 weeks with a 6-week minimum; normalized monthlyPrice is $155 x 26 / 12 = $335.83. Standard Drop In is $38. The operator publishes the exact location as the Howard Street and Beale Street intersection rather than a street number. No mandatory fee was disclosed.",
@@ -24495,7 +24499,7 @@
       "sourceName": "Federal Fitness Center official facility page",
       "sourceId": "web-research/web-27e606755f1ba8",
       "sourceUrl": "https://www.federalfitnesscenters.com/federal-fitness-center",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Federal Fitness Center official facility page",
       "priceSourceUrl": "https://www.federalfitnesscenters.com/federal-fitness-center",
       "priceNote": "Official page lists General Public membership at $47/month, Federal Contractor at $40/month, and Federal Employee at $40 or $43/month depending on access. A day pass was not published.",
@@ -25496,7 +25500,7 @@
       "sourceName": "FITNESS SF",
       "sourceId": "web-research/web-a298d8310b9dc9",
       "sourceUrl": "https://www.fitnesssf.com/location/sf-embarcadero",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "FITNESS SF",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access is $129.95/month. Upfront cost is prorated first month plus a full last month; last-month dues are not a fee. Public SF day pass is $35 or $30 with a member.",
@@ -25891,7 +25895,7 @@
       "sourceName": "FITNESS SF",
       "sourceId": "web-research/web-f54e94809da91c",
       "sourceUrl": "https://www.fitnesssf.com/location/mid-market",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "FITNESS SF",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access is $129.95/month. Upfront cost is prorated first month plus a full last month; last-month dues are not a fee. Public SF day pass is $35 or $30 with a member.",
@@ -26092,7 +26096,7 @@
       "sourceName": "FITNESS SF",
       "sourceId": "web-research/web-e802f50ad959fa",
       "sourceUrl": "https://www.fitnesssf.com/location/sf-polk",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "FITNESS SF official Polk page and membership help",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "The unopened Polk location has conflicting official September/October 2026 opening dates. The standard all-gym plan is $134.95 monthly with no enrollment, signup, or annual fee, but it cannot yet provide normal use of Polk. First and final month dues are upfront dues, not fees. The current all-gym day pass omits Polk.",
@@ -26542,7 +26546,7 @@
       "sourceName": "FITNESS SF",
       "sourceId": "web-research/web-396cf2ddf3bead",
       "sourceUrl": "https://www.fitnesssf.com/location/sf-transbay",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "FITNESS SF",
       "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
       "priceNote": "All-Gym Access is $129.95/month. Upfront cost is prorated first month plus a full last month; last-month dues are not a fee. Public SF day pass is $35 or $30 with a member.",
@@ -27096,7 +27100,7 @@
       "sourceName": "Fitness2Function",
       "sourceId": "web-research/web-23d7cf590fcf77",
       "sourceUrl": "https://fitness2function.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Fitness2Function official rate card",
       "priceSourceUrl": "https://fitness2function.com/",
       "priceNote": "The official rate card lists a $70 single 50-minute group session, ten group sessions for $650, a $130 private session, and ten private sessions for $1,200. No recurring membership, package expiry, or mandatory fee is published.",
@@ -27106,12 +27110,21 @@
       "initiationFee": null,
       "processingFee": null,
       "billingIntervalPrice": null,
+      "sourceAliases": [
+        {
+          "id": "osm-node-4238377195",
+          "name": "Classical Pilates Studio",
+          "address": "2636 Ocean Avenue, San Francisco, 94127",
+          "sourceUrl": "https://www.openstreetmap.org/node/4238377195",
+          "reason": "Reviewed stale-alias decision: the OSM identity was created in 2016 and received no later name verification; the current 2026 SF business registry contains no Classical Pilates Studio DBA at 2636 Ocean, while Fitness2Function has been continuously registered there since 2013 and now publishes the exact-address official studio and rate card. Retain Fitness2Function as the canonical consumer listing and preserve Classical Pilates Studio only as a source alias.",
+          "decisionSourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data"
+        }
+      ],
       "officialUrl": "https://fitness2function.com/",
       "operatorLocationId": "",
       "canonicalLocationId": "web-23d7cf590fcf77",
       "operatorId": "fitness2function.com",
       "canonicalAddress": "2636 ocean ave",
-      "sourceAliases": [],
       "publicationStatus": "publish",
       "planOffers": [
         {
@@ -28370,7 +28383,7 @@
       "sourceName": "Flagship Training official home and new-member pages",
       "sourceId": "web-research/web-a16276afbf72d9",
       "sourceUrl": "https://www.trainflagship.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Flagship official Momence membership product",
       "priceSourceUrl": "https://momence.com/Flagship/membership/1x-per-Week/237774",
       "priceNote": "Official all-location unlimited plan auto-renews at $329 after the $189 first-4-week trial; ongoing options range from $108 to $329. Branch-specific day pass not published.",
@@ -28606,7 +28619,7 @@
       "sourceName": "Flagship Training official home and new-member pages",
       "sourceId": "web-research/web-d8fd393e3b5ef7",
       "sourceUrl": "https://www.trainflagship.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Flagship official Momence membership product",
       "priceSourceUrl": "https://momence.com/Flagship/membership/1x-per-Week/237774",
       "priceNote": "Official all-location unlimited plan auto-renews at $329 after the $189 first-4-week trial; ongoing options range from $108 to $329. Branch-specific day pass not published.",
@@ -29672,7 +29685,7 @@
       "sourceName": "Folk Yoga",
       "sourceId": "web-research/web-ca39a334f29594",
       "sourceUrl": "https://folksf.com/classes/schedule/richmond/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Folk Yoga + Fitness official membership page",
       "priceSourceUrl": "https://folksf.com",
       "priceNote": "Operator-wide rendered membership page lists the Folk Mini Membership at $89/month for up to four classes monthly; the Richmond location page confirms this participating studio.",
@@ -29987,7 +30000,7 @@
       "sourceName": "Forge Krav Maga official pricing and home pages",
       "sourceId": "web-research/web-06bc58a9a5ca84",
       "sourceUrl": "https://www.forgekravmaga.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Forge Krav Maga official pricing and home pages",
       "priceSourceUrl": "https://www.forgekravmaga.com/pricing",
       "priceNote": "Official pricing page lists $200/month, $40 drop-in day pass, $375 ten-class pack, and $2,160/year. Two trial classes cost $30 total. No enrollment fee is listed.",
@@ -30190,7 +30203,7 @@
       "sourceName": "Funky Door Yoga",
       "sourceId": "web-research/web-a3d8ded3014a16",
       "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Funky Door Yoga",
       "priceSourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
       "priceNote": "Official SF pricing page lists drop-in classes at $36, auto monthly unlimited at $129 with a one-time $49 sign-up fee, all-access month at $219, and annual membership at $1,199.",
@@ -30852,7 +30865,7 @@
       "sourceName": "San Francisco Recreation and Parks",
       "sourceId": "web-research/web-15f187f347fb55",
       "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceNote": "Free public park fitness course. Individual exercise stations are retained as source evidence rather than published as separate gyms.",
       "annualFee": null,
       "enrollmentFee": null,
@@ -32245,7 +32258,7 @@
       "sourceName": "HAUM Studios",
       "sourceId": "web-research/web-686330489fbf10",
       "sourceUrl": "https://www.haumstudios.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "HAUM Studios",
       "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
       "priceNote": "Official buy-classes page lists cash pricing: $199/month no-commitment unlimited, $169/month with 3-month commitment, $108/month mini membership, and $35 in-person drop-in. Card and ACH fees are extra.",
@@ -34625,7 +34638,7 @@
       "sourceName": "Jewish Community Center of San Francisco",
       "sourceId": "web-research/web-d2fecdc44e5d1c",
       "sourceUrl": "https://www.jccsf.org/join/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "JCCSF official membership page",
       "priceSourceUrl": "https://www.jccsf.org/join/",
       "priceNote": "Official adult full-access membership is $198/month plus a $200 enrollment fee. The page advertises a temporary $0 enrollment-fee offer for new members through August 31, 2026. No public day-pass price was listed.",
@@ -36925,7 +36938,7 @@
       "sourceName": "LDAC Fitness Center / NCFIT",
       "sourceId": "web-research/web-852a9696d7af62",
       "sourceUrl": "https://ldac.fit/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "LDAC Fitness Center official site",
       "priceSourceUrl": "https://ldac.fit/",
       "priceNote": "Official page lists $65/month open-gym membership and a $20 one-day pass, but states access is reserved exclusively for One Letterman campus employees and the facility is not open to the public.",
@@ -36959,10 +36972,98 @@
       "operatorKey": "ldac.fit",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
-      "dropIns": [],
+      "plans": [
+        {
+          "id": "web-852a9696d7af62:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Recurring membership",
+          "productType": "membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 65.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 65.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://ldac.fit/",
+            "observedAt": "2026-08-16",
+            "source": "LDAC Fitness Center official site",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Official page lists $65/month open-gym membership and a $20 one-day pass, but states access is reserved exclusively for One Letterman campus employees and the facility is not open to the public.",
+            "contentHash": "4269a831aeb76c0d6192ca7a6cadb088e465b9e250d5fc0f08230e2b22973e6c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
+      "dropIns": [
+        {
+          "id": "web-852a9696d7af62:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 20.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://ldac.fit/",
+            "observedAt": "2026-08-16",
+            "source": "LDAC Fitness Center official site",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "522f682acaef656b7c2883c2ca9bb4d8dfa60bce799acf52029d63204011eae9",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the ordinary unrestricted single visit or class."
+        }
+      ],
       "selectedPlanId": null,
-      "selectedDropInId": null,
+      "selectedDropInId": "web-852a9696d7af62:drop-in:0",
       "typicalPlanId": null,
       "highestAccessPlanId": null,
       "bestValuePlanId": null,
@@ -36985,12 +37086,12 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "activationFee": null,
@@ -37349,7 +37450,7 @@
       "sourceName": "Live Fit Gym",
       "sourceId": "web-research/web-6123d4a1928a35",
       "sourceUrl": "https://livefitgym.com/locations/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Live Fit Gym",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Basic is $117/month and the public access descriptions include Cole Valley. Premier all-location access is $137/month. Free pass is advertised without a dollar drop-in price.",
@@ -37774,7 +37875,7 @@
       "sourceName": "Live Fit Gym",
       "sourceId": "web-research/web-b1dcfdcb7b4d2a",
       "sourceUrl": "https://livefitgym.com/locations/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Live Fit Gym",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Premier is $137/month and includes all 8 gym locations. Fairmont is excluded from the $117 Basic access lists. Free pass is advertised without a dollar drop-in price.",
@@ -38103,7 +38204,7 @@
       "sourceName": "Live Fit Gym",
       "sourceId": "web-research/web-2d8ab33422a507",
       "sourceUrl": "https://livefitgym.com/locations/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Live Fit Gym",
       "priceSourceUrl": "https://livefitgym.com/signup-old/",
       "priceNote": "Premier is $137/month and includes all 8 gym locations. Inner Richmond is excluded from the $117 Basic access lists. Free pass is advertised without a dollar drop-in price.",
@@ -39055,7 +39156,43 @@
           "selectionReason": ""
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "osm-node-6591743880:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://localsfitness.com/",
+            "observedAt": "2026-08-16",
+            "source": "Local's Fitness official site",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "963689c1439ce60929f456b73c597eadd77ff16db646b95f942fd1f0fc1514d4",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "osm-node-6591743880:plan:month-to-month",
       "selectedDropInId": null,
       "typicalPlanId": "osm-node-6591743880:plan:annual-commitment",
@@ -39084,8 +39221,8 @@
           "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "annualFee": null,
@@ -39856,7 +39993,7 @@
       "sourceName": "LuxFit SF",
       "sourceId": "web-research/web-0f9db70c7df82e",
       "sourceUrl": "https://www.luxfitsf.com/services/open-gym",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "LuxFit SF official open-gym page",
       "priceSourceUrl": "https://www.luxfitsf.com/services/open-gym",
       "priceNote": "The current official product card lists operator-wide Core Access at $165/month and the ordinary open-gym day pass at $25. Older 'starting at $150' summary copy remains on the page, so the explicit named product card controls selection. The official FAQ says memberships are month-to-month with no initiation or cancellation fee.",
@@ -40344,7 +40481,7 @@
       "sourceName": "San Francisco Recreation and Parks",
       "sourceId": "web-research/web-dbb15601f0e4c6",
       "sourceUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceNote": "Free public parcourse workout stations around Marina Green. Exact station hours are not separately published.",
       "annualFee": null,
       "enrollmentFee": null,
@@ -40843,7 +40980,7 @@
       "sourceName": "UCSF Fitness & Recreation",
       "sourceId": "web-research/web-4289bb94baeda1",
       "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "UCSF Fitness & Recreation membership, day-pass, and Millberry pages",
       "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
       "priceNote": "Official Millberry single-site membership is $129/month; dual-site is $170/month. UCSF adult single-day pass is $30, or $15 when hosted by a member.",
@@ -41477,7 +41614,7 @@
       "sourceName": "YMCA of Greater San Francisco",
       "sourceId": "web-research/web-0509e54f1e3c89",
       "sourceUrl": "https://www.ymcasf.org/location/mission-ymca/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer; availability and eligibility may vary.",
@@ -41556,7 +41693,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "web-0509e54f1e3c89:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "web-0509e54f1e3c89:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -41585,8 +41758,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "activationFee": null,
@@ -41640,7 +41813,7 @@
       "sourceName": "Mission Yoga",
       "sourceId": "web-research/web-f23343cfc28b93",
       "sourceUrl": "https://newmissionyoga.com/mission-yoga-classes/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Mission Yoga",
       "priceSourceUrl": "https://newmissionyoga.com/mission-yoga-classes/",
       "priceNote": "Official classes page says memberships start from $99/month. Drop-ins range from $10 community classes up to $42 Hot Box Yoga, so dayPassPrice uses the lowest public drop-in and the range is preserved here.",
@@ -42544,7 +42717,7 @@
       "sourceName": "San Francisco Recreation and Parks",
       "sourceId": "web-research/web-e7910e360685a9",
       "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceNote": "Free public built-in fitness circuit. Individual exercise stations are retained as source evidence rather than published as separate gyms.",
       "annualFee": null,
       "enrollmentFee": null,
@@ -44666,7 +44839,59 @@
       "operatorKey": "mx3-fitness",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "osm-node-2484293076:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Recurring membership",
+          "productType": "membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 129.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 129.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-16",
+            "source": "MX3 Fitness",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Official monthly signup page lists reservation tiers from $129/month plus $75 setup. Official day-pass page says Lower Haight is limited to monthly members only, so no day-pass price is recorded.",
+            "contentHash": "11cfc14442a25e32bfaad2e34b1a4385cc1dcb3e024517538d56351dc36e8124",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
       "selectedPlanId": null,
       "selectedDropInId": null,
@@ -44692,8 +44917,8 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -45001,7 +45226,59 @@
       "operatorKey": "mx3-fitness",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "osm-node-6471124711:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Open Gym Only",
+          "productType": "membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 109.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 109.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-16",
+            "source": "MX3 Fitness",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Official monthly signup page lists Open Gym Only at $109/month plus $75 setup and higher reservation tiers. Official day-pass page says Noe Valley is limited to monthly members only, so no day-pass price is recorded.",
+            "contentHash": "d1f6211bd72ea23cf1a07b2914f30f3ed18be34c898c407fa14bc504800cab88",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
       "selectedPlanId": null,
       "selectedDropInId": null,
@@ -45027,8 +45304,8 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -46675,7 +46952,7 @@
       "sourceName": "Orangetheory Fitness",
       "sourceId": "web-research/web-dcbf7708bf2f77",
       "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Orangetheory Fitness",
       "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
       "priceNote": "Basic is $119/month for 4 classes; Elite is $199/month for 8 and Premier is regularly $269/month unlimited. A temporary $209 first-month Premier offer was excluded. Official footnote gives $35 as the recommended retail casual visit, while noting locally operated studios can vary. No mandatory fee was publicly disclosed.",
@@ -48039,7 +48316,7 @@
       "sourceName": "Pilates Addiction",
       "sourceId": "web-research/web-70ca27f287a58c",
       "sourceUrl": "https://pilatesaddiction.com/location/sf-king-street",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Pilates Addiction King Street official presale page",
       "priceSourceUrl": "https://pilatesaddiction.com/location/sf-king-street",
       "priceNote": "The unopened King Street studio publishes only founding promotional rates: $220 monthly unlimited Gold and $161 monthly eight-class Silver. Both auto-renew monthly but are limited founding offers. Standard ongoing pricing and an ordinary single class remain unpublished.",
@@ -48806,7 +49083,7 @@
       "sourceName": "Planet Fitness",
       "sourceId": "web-research/web-bbf32ec975a42d",
       "sourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Planet Fitness",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
       "priceNote": "Coming-soon relocation. Classic is $15/month with a $1 one-time startup fee and $49 annual fee, plus applicable taxes. The current pre-opening offer requires a 12-month commitment; hours are not yet published.",
@@ -48986,7 +49263,7 @@
       "sourceName": "Planet Fitness",
       "sourceId": "web-research/web-859ef7f95053f4",
       "sourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Planet Fitness",
       "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
       "priceNote": "Classic is $15/month with a $49 one-time startup fee and $49 annual fee, plus applicable taxes. The page labels the plan no commitment. Dollar day-pass pricing is not published.",
@@ -52378,7 +52655,7 @@
       "sourceName": "YMCA of Greater San Francisco",
       "sourceId": "web-research/web-d335e6ba867d00",
       "sourceUrl": "https://www.ymcasf.org/hours/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "YMCA of Greater San Francisco",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer. The official hours page says this branch is temporarily closed for indoor wellness and senior programming.",
@@ -52416,8 +52693,96 @@
       "operatorKey": "ymcasf.org",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
-      "dropIns": [],
+      "plans": [
+        {
+          "id": "web-d335e6ba867d00:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Adult Membership",
+          "productType": "membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 91.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 91.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Adult YMCA membership is $91/month plus a $149 join fee. YMCA publishes a free day-pass offer. The official hours page says this branch is temporarily closed for indoor wellness and senior programming.",
+            "contentHash": "fd55925093293cd308f40634b3f2532194b36322ebd89da005372426b7d522aa",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
+      "dropIns": [
+        {
+          "id": "web-d335e6ba867d00:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": null,
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -52442,12 +52807,12 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "activationFee": null,
@@ -52562,6 +52927,26 @@
             ]
           },
           "fees": []
+        }
+      ],
+      "costContextOffers": [
+        {
+          "kind": "conflicting-price",
+          "label": "One current terms block: month-to-month membership after the minimum term",
+          "amount": 220,
+          "cadence": "4 weeks",
+          "normalizedMonthlyLow": 238.33,
+          "normalizedMonthlyHigh": 238.33,
+          "productType": "class-membership",
+          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": [
+            "duplicate-contradictory-live-terms",
+            "early-cancellation-fee-conflict"
+          ],
+          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms."
         }
       ],
       "officialPriceConflict": true,
@@ -52772,27 +53157,7 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "costContextOffers": [
-        {
-          "kind": "conflicting-price",
-          "label": "One current terms block: month-to-month membership after the minimum term",
-          "amount": 220,
-          "cadence": "4 weeks",
-          "normalizedMonthlyLow": 238.33,
-          "normalizedMonthlyHigh": 238.33,
-          "productType": "class-membership",
-          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
-          "observedAt": "2026-08-21",
-          "evidenceTier": "official-public",
-          "exactLocationMatch": "exact-location",
-          "conflictFlags": [
-            "duplicate-contradictory-live-terms",
-            "early-cancellation-fee-conflict"
-          ],
-          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms."
-        }
-      ]
+      }
     },
     {
       "id": "web-0b96f513d9f804",
@@ -52826,7 +53191,7 @@
       "sourceName": "Skrap Pack Marina official join page",
       "sourceId": "web-research/web-0b96f513d9f804",
       "sourceUrl": "https://skrappackmarina.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Skrap Pack Marina official join page",
       "priceSourceUrl": "https://skrappackmarina.com/join",
       "priceNote": "Official adult membership is $220/month on a yearly contract or $250/month month-to-month; day pass is $40. The $225 value is not a standard plan; records should choose the plan matching user commitment.",
@@ -53348,7 +53713,7 @@
       "sourceName": "Sol Hot Yoga & Movement official membership page",
       "sourceId": "web-research/web-44c39e1d4144c1",
       "sourceUrl": "https://www.solyogasf.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Reviewed official public offers",
       "priceSourceUrl": "https://www.solyogasf.com/membership",
       "priceNote": "The observed recurring/package offers were reviewed, but the source catalog may contain additional products. The observed single-visit offers were reviewed, but the source catalog may contain additional products.",
@@ -53371,6 +53736,77 @@
         "sourceType": "official-schedule",
         "observedAt": "2026-08-19",
         "note": "The operator's live schedule supports current class-based access."
+      },
+      "planOffers": [
+        {
+          "sourceProductId": "card-ac2400f664593a01",
+          "name": "oga Membership Take any of our yoga offerings, no limit, no restrictions! Click the link below to purchase! $100 Monthly",
+          "productType": "membership",
+          "accessScope": "Scope must be confirmed from the linked official product card.",
+          "amount": 100.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://www.solyogasf.com/membership",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "oga Membership Take any of our yoga offerings, no limit, no restrictions! Click the link below to purchase! $100 Monthly",
+            "contentHash": "0e35770ca4a028317c72e06c9216bcc20ff81e1d67fbaa88bf026c81ddf1a18d",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-ac2400f664593a01",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "card-ac2400f664593a01",
+          "name": "sing Options Try one class or sign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 25.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://www.solyogasf.com/membership",
+            "observedAt": "2026-08-20",
+            "source": "operator-site",
+            "method": "rendered-visible-plan-card",
+            "rawLabel": "sing Options Try one class or sign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25",
+            "contentHash": "4f2904e00222d7d67615a5b23c95a573d3f7a8daa94e6227673d880fe8de0e4c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location-reviewed",
+            "sourceProductId": "card-ac2400f664593a01",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
       },
       "priceReports": [],
       "reportedMonthly": null,
@@ -53530,77 +53966,6 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "planOffers": [
-        {
-          "sourceProductId": "card-ac2400f664593a01",
-          "name": "oga Membership Take any of our yoga offerings, no limit, no restrictions! Click the link below to purchase! $100 Monthly",
-          "productType": "membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 100.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.solyogasf.com/membership",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "oga Membership Take any of our yoga offerings, no limit, no restrictions! Click the link below to purchase! $100 Monthly",
-            "contentHash": "0e35770ca4a028317c72e06c9216bcc20ff81e1d67fbaa88bf026c81ddf1a18d",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-ac2400f664593a01",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [
-        {
-          "sourceProductId": "card-ac2400f664593a01",
-          "name": "sing Options Try one class or sign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 25.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.solyogasf.com/membership",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "sing Options Try one class or sign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25",
-            "contentHash": "4f2904e00222d7d67615a5b23c95a573d3f7a8daa94e6227673d880fe8de0e4c",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location-reviewed",
-            "sourceProductId": "card-ac2400f664593a01",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "partial"
       }
     },
     {
@@ -53826,7 +54191,7 @@
       "sourceName": "[solidcore]",
       "sourceId": "web-research/web-0ed19b0a7a3073",
       "sourceUrl": "https://solidcore.co/studios/laurel-village",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "[solidcore]",
       "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=20",
       "priceNote": "SF pricing tier: month-to-month 4-class membership is $145/month and Single Class is $43. Long-term commitment and new-client offers were excluded. Prices are subject to tax; no mandatory fee was disclosed.",
@@ -54027,7 +54392,7 @@
       "sourceName": "[solidcore]",
       "sourceId": "web-research/web-c585a394b269ab",
       "sourceUrl": "https://solidcore.co/studios/marina",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "[solidcore]",
       "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=13",
       "priceNote": "SF pricing tier: month-to-month 4-class membership is $145/month and Single Class is $43. Long-term commitment and new-client offers were excluded. Prices are subject to tax; no mandatory fee was disclosed.",
@@ -54228,7 +54593,7 @@
       "sourceName": "[solidcore]",
       "sourceId": "web-research/web-8a0d4e16015d6d",
       "sourceUrl": "https://solidcore.co/studios/mission-bay",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "[solidcore]",
       "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=12",
       "priceNote": "Month-to-month 4-class membership is $145/month; 8 classes are $255 and unlimited is $385. Single Class is $43. Long-term commitment and new-client offers were excluded. Prices are subject to tax; no mandatory fee was disclosed.",
@@ -54872,7 +55237,7 @@
       "sourceName": "SoulCycle",
       "sourceId": "web-research/web-7935d5eb8b6a85",
       "sourceUrl": "https://www.soul-cycle.com/studios/ca-sanfrancisco-unionstreet/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "SoulCycle",
       "priceSourceUrl": "https://www.soul-cycle.com/series/",
       "priceNote": "With the official region selector set to San Francisco, Soul Renew starts at $127 recurring every 30 days for 4 classes. Standard single class is $38. New-rider offers were excluded. No mandatory fee was disclosed.",
@@ -55779,7 +56144,7 @@
       "sourceName": "Strong Friends official location and drop-in pages",
       "sourceId": "web-research/web-c745e6dbdcadb6",
       "sourceUrl": "https://www.strongfriendsgym.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Strong Friends official location and drop-in pages",
       "priceSourceUrl": "https://www.strongfriendsgym.com/programs/drop-in",
       "priceNote": "Official drop-in price is $60 and the credit can be used for a class. The page says semi-private classes start at $43 per class with membership; no standard monthly total was published.",
@@ -55936,7 +56301,7 @@
       "sourceName": "Studio By Live Better official pricing page",
       "sourceId": "web-research/web-0c3933dd5d019f",
       "sourceUrl": "https://www.studiobylivebetter.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Studio By Live Better official pricing page",
       "priceSourceUrl": "https://www.studiobylivebetter.com/pricing",
       "priceNote": "Official yoga or Pilates membership is $150/month. All-access membership is $210/month. Yoga drop-in is $30; mat Pilates is $35. A $99 four-week intro pass is separate.",
@@ -56144,7 +56509,7 @@
       "sourceName": "San Francisco Recreation and Parks",
       "sourceId": "web-research/web-1714717344e6d6",
       "sourceUrl": "https://sfrecpark.org/1555/Sunset-Dunes",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceNote": "Free public outdoor fitness area. The exact hours of the park equipment are not separately published.",
       "annualFee": null,
       "enrollmentFee": null,
@@ -57082,7 +57447,7 @@
       "sourceName": "The Bar Method",
       "sourceId": "web-research/web-e20a10174e60fa",
       "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "The Bar Method",
       "priceSourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
       "priceNote": "Official location page lists Club Bar 5 at $115/month, Club Bar Unlimited at $185/month, and 10 Pack at $240. A new-client 30-day unlimited offer is $79 and first month unlimited is advertised at $99, but those are not used as the primary monthly price. Drop-in dollar price was not visible.",
@@ -57266,7 +57631,7 @@
       "sourceName": "The Castro Room official purchase page",
       "sourceId": "web-research/web-9bcdd50c2d4426",
       "sourceUrl": "https://www.castroroom.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "The Castro Room official purchase page",
       "priceSourceUrl": "https://www.castroroom.com/purchase",
       "priceNote": "Official purchase page lists $180 for one month, $165 for a promotional one-month option, and a $30 drop-in; drop-in plus mat is $35.",
@@ -58437,7 +58802,7 @@
       "sourceName": "The Pilates School SF official programs and pricing page",
       "sourceId": "web-research/web-8e0d13fb9738f9",
       "sourceUrl": "https://www.pilatesschoolsf.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "The Pilates School SF official programs and pricing page",
       "priceSourceUrl": "https://www.pilatesschoolsf.com/programs-pricing/",
       "priceNote": "Official site says drop-in memberships start at $189/month and class packs start at $50; it offers a free introductory class. The reviewed public page did not expose a standard single-class dollar price.",
@@ -58640,7 +59005,7 @@
       "sourceName": "The Pilates School SF official programs and pricing page",
       "sourceId": "web-research/web-8209841346c6d0",
       "sourceUrl": "https://www.pilatesschoolsf.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "The Pilates School SF official programs and pricing page",
       "priceSourceUrl": "https://www.pilatesschoolsf.com/programs-pricing/",
       "priceNote": "Official site says drop-in memberships start at $189/month and class packs start at $50; it offers a free introductory class. The reviewed public page did not expose a standard single-class dollar price.",
@@ -58678,7 +59043,59 @@
       "operatorKey": "pilatesschoolsf.com",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "web-8209841346c6d0:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Drop-In Membership",
+          "productType": "membership",
+          "accessScope": "Named location",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 189.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 189.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.pilatesschoolsf.com/programs-pricing/",
+            "observedAt": "2026-08-16",
+            "source": "The Pilates School SF official programs and pricing page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Official site says drop-in memberships start at $189/month and class packs start at $50; it offers a free introductory class. The reviewed public page did not expose a standard single-class dollar price.",
+            "contentHash": "54164e644fd59321eca1a5ae0e8aa6c696e1a33b02e7baff8f9e7b58512a12a8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
       "selectedPlanId": null,
       "selectedDropInId": null,
@@ -58733,8 +59150,8 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -58790,7 +59207,7 @@
       "sourceName": "The Yoga Shala SF official pricing page",
       "sourceId": "web-research/web-46a150f089f8a7",
       "sourceUrl": "https://theyogashalasf.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "The Yoga Shala SF official pricing page",
       "priceSourceUrl": "https://theyogashalasf.com/pricing",
       "priceNote": "Official page lists a six-month unlimited pass for $829, described as $133/month, and a $35 drop-in. The $133 value is a prepaid six-month equivalent rather than a month-to-month price.",
@@ -59019,7 +59436,7 @@
       "sourceName": "The Yoga Shala SF official pricing page",
       "sourceId": "web-research/web-c195ac37294a74",
       "sourceUrl": "https://theyogashalasf.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "The Yoga Shala SF official pricing page",
       "priceSourceUrl": "https://theyogashalasf.com/pricing",
       "priceNote": "Official page lists a six-month unlimited pass for $829, described as $133/month, and a $35 drop-in. The $133 value is a prepaid six-month equivalent rather than a month-to-month price.",
@@ -60775,7 +61192,7 @@
       "sourceName": "World Team USA official services page",
       "sourceId": "web-research/web-76a8863d9951eb",
       "sourceUrl": "https://www.worldteamusa.net/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "World Team USA official services page",
       "priceSourceUrl": "https://www.worldteamusa.net/services",
       "priceNote": "Official page lists a $49 single-class day pass, $79 introduction lesson, and $285 30-day trial with unlimited classes and coaching. The $285 option is a trial product, not confirmed as a recurring monthly membership.",
@@ -61144,8 +61561,96 @@
       "operatorKey": "ymcasf.org",
       "accessModel": "restricted",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
-      "dropIns": [],
+      "plans": [
+        {
+          "id": "osm-way-256495543:plan:legacy-reviewed-selected",
+          "sourceProductId": "legacy-reviewed-selected",
+          "name": "Adult Membership",
+          "productType": "membership",
+          "accessScope": "All operator locations",
+          "scopeType": "multi-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 91.0,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 91.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "restricted",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership and location materials",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
+            "contentHash": "d63a7557678bcff0c707b230a7281777073e94c441bd45f712c5ffd2c3286538",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
+      "dropIns": [
+        {
+          "id": "osm-way-256495543:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership and location materials",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": null,
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -61170,12 +61675,12 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "annualFee": null,
@@ -61231,7 +61736,7 @@
       "sourceName": "YMCA of Greater San Francisco",
       "sourceId": "web-research/web-e220d3accf950e",
       "sourceUrl": "https://www.ymcasf.org/location/chinatown-ymca/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "YMCA of Greater San Francisco membership and Chinatown location materials",
       "priceSourceUrl": "https://www.ymcasf.org/membership/",
       "priceNote": "Organization-wide adult membership rate is $91/month plus a $149 join fee. Official YMCA free-day-pass offer is listed separately; branch-level access and eligibility should be verified.",
@@ -61310,7 +61815,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "web-e220d3accf950e:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership and Chinatown location materials",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "web-e220d3accf950e:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -61339,8 +61880,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "activationFee": null,
@@ -61464,7 +62005,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "osm-way-193054131:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership, branch, and free-pass pages",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "osm-way-193054131:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -61493,8 +62070,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "annualFee": null,
@@ -61635,7 +62212,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "osm-way-69020085:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership and location materials",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "osm-way-69020085:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -61664,8 +62277,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "annualFee": null,
@@ -61792,7 +62405,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "osm-way-286276068:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership and location materials",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "osm-way-286276068:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -61821,8 +62470,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "annualFee": null,
@@ -61964,7 +62613,43 @@
           "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use. The source did not publish a commitment term."
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "osm-node-6615153559:drop-in:0",
+          "sourceProductId": "",
+          "name": "Standard drop-in",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 0.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.ymcasf.org/membership/",
+            "observedAt": "2026-08-16",
+            "source": "YMCA of Greater San Francisco membership and location materials",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Standard drop-in",
+            "contentHash": "7fe6ac7665575d192e98e1d09bf76dd3fac96d2533bb8496333dc7198ef20d5a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": "osm-node-6615153559:plan:legacy-reviewed-selected",
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -61993,8 +62678,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "annualFee": null,
@@ -62255,7 +62940,7 @@
       "sourceName": "Yoga Flow SF",
       "sourceId": "web-research/web-c8031adb1f022c",
       "sourceUrl": "https://yogaflowsf.com/membership/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Yoga Flow SF",
       "priceSourceUrl": "https://yogaflowsf.com/membership/",
       "priceNote": "Official membership page lists 4 classes per month at $100, 8 classes per month at $175, and unlimited at $210/month across all locations. FAQ states 5-class packs and $35 single-class drop-ins are available. New student offers are not used as primary rates.",
@@ -62458,7 +63143,7 @@
       "sourceName": "Yoga Flow SF",
       "sourceId": "web-research/web-982849bdb030ca",
       "sourceUrl": "https://yogaflowsf.com/membership/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Yoga Flow SF",
       "priceSourceUrl": "https://yogaflowsf.com/membership/",
       "priceNote": "Official membership page lists 4 classes per month at $100, 8 classes per month at $175, and unlimited at $210/month across all locations. FAQ states $35 single-class drop-ins are available.",
@@ -63752,7 +64437,7 @@
       "sourceName": "Zanshin Dojo official site",
       "sourceId": "web-research/web-a1af705ba3b80c",
       "sourceUrl": "https://sfgoju.com/",
-      "importedAt": "2026-08-20T00:00:00Z",
+      "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Zanshin Dojo official adult program",
       "priceSourceUrl": "https://sfgoju.com/adult-karate/",
       "priceNote": "The public $99 product covers the first month plus a uniform and is introductory. A one-week free coupon is also promotional. Ongoing standard dues and ordinary paid drop-in remain contact-gated.",

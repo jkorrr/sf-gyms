@@ -19,6 +19,8 @@ from pathlib import Path
 from typing import Any, Iterable
 from urllib.parse import urlparse
 
+import platform_adapters
+
 ROOT = Path(__file__).resolve().parents[2]
 SOURCE_PATH = ROOT / "data" / "imports" / "sf-gyms-osm.json"
 WEB_PATH = ROOT / "apps" / "web" / "lib" / "sf-gyms-osm.json"
@@ -2132,6 +2134,47 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
         if gym["pricingStatus"] in {"verified", "operator-confirmed", "reported", "estimated", "pay-per-visit", "free", "not-applicable"}
         or bool(gym.get("costContext"))
     ]
+    publicly_priced_commercial = [
+        gym for gym in commercial
+        if gym.get("monthlyPrice") is not None or gym.get("dayPassPrice") is not None
+    ]
+
+    def has_reconstructed_relevant_catalogs(gym: dict[str, Any]) -> bool:
+        catalog = gym.get("catalogStatus", {})
+        plans_complete = gym.get("monthlyPrice") is None or (catalog.get("plans") or {}).get("status") == "source-catalog"
+        drops_complete = gym.get("dayPassPrice") is None or (catalog.get("dropIns") or {}).get("status") == "source-catalog"
+        return plans_complete and drops_complete
+
+    reconstructed_catalog_commercial = [
+        gym for gym in publicly_priced_commercial if has_reconstructed_relevant_catalogs(gym)
+    ]
+    catalog_priority_records: list[dict[str, Any]] = []
+    catalog_platform_counts: Counter[str] = Counter()
+    for gym in publicly_priced_commercial:
+        if has_reconstructed_relevant_catalogs(gym):
+            continue
+        urls = [
+            text(gym.get("priceSourceUrl")),
+            text(gym.get("websiteUrl")),
+            text(gym.get("officialUrl")),
+            *[text(item.get("url")) for item in attempts_by_gym.get(text(gym.get("id")), [])],
+        ]
+        platforms = list(dict.fromkeys(platform_adapters.platform_for_url(url) for url in urls if platform_adapters.platform_for_url(url)))
+        group = platforms[0] if platforms else "generic-official"
+        catalog_platform_counts[group] += 1
+        catalog_priority_records.append(
+            {
+                "id": gym.get("id"),
+                "name": gym.get("name"),
+                "operatorId": gym.get("operatorId"),
+                "platforms": platforms,
+                "monthlyPrice": gym.get("monthlyPrice"),
+                "dayPassPrice": gym.get("dayPassPrice"),
+                "planCatalogStatus": (gym.get("catalogStatus", {}).get("plans") or {}).get("status"),
+                "dropInCatalogStatus": (gym.get("catalogStatus", {}).get("dropIns") or {}).get("status"),
+                "priceSourceUrl": gym.get("priceSourceUrl", ""),
+            }
+        )
     commercial_exact_address = [
         gym for gym in commercial
         if re.search(r"\d", text(gym.get("address"))) or re.search(r"\d", text(gym.get("canonicalAddress")))
@@ -2264,6 +2307,17 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             for item in review
         ),
         "catalogReconstructionQueue": {
+            "publiclyPricedCommercialListings": len(publicly_priced_commercial),
+            "reconstructedRelevantCatalogListings": len(reconstructed_catalog_commercial),
+            "reconstructedRelevantCatalogCoverage": round(
+                len(reconstructed_catalog_commercial) / len(publicly_priced_commercial), 4
+            ) if publicly_priced_commercial else 1,
+            "targetCoverage": 0.9,
+            "targetMet": (
+                len(reconstructed_catalog_commercial) / len(publicly_priced_commercial) >= 0.9
+            ) if publicly_priced_commercial else True,
+            "priorityPlatformCounts": dict(sorted(catalog_platform_counts.items(), key=lambda item: (-item[1], item[0]))),
+            "priorityRecords": catalog_priority_records,
             "sourceFragmentPlanCatalogs": sum(
                 (gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "source-fragment" for gym in gyms
             ),
@@ -2424,6 +2478,9 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             "commercialActionableCoverageAtLeast90Percent": (len(actionable) / len(commercial) >= 0.9) if commercial else True,
             "commercialMeaningfulCostCoverageAtLeast97Percent": (len(meaningful_cost) / len(commercial) >= 0.97) if commercial else True,
             "commercialExactAddressCoverageAtLeast95Percent": (len(commercial_exact_address) / len(commercial) >= 0.95) if commercial else True,
+            "commercialCatalogCoverageAtLeast90Percent": (
+                len(reconstructed_catalog_commercial) / len(publicly_priced_commercial) >= 0.9
+            ) if publicly_priced_commercial else True,
             "zeroUnreviewedSameOperatorExactAddressDuplicates": not identity_audit["duplicates"],
             "overallEstimatorMedianErrorAtMost15Percent": (
                 estimator_validation.get("overall", {}).get("medianAbsolutePercentageError") is not None

@@ -350,8 +350,8 @@ def indexed_gyms(gyms: list[dict[str, Any]], key_fn: Any) -> dict[str, list[dict
     return index
 
 
-def merge_location_data(target: dict[str, Any], alias: dict[str, Any]) -> None:
-    """Merge a reviewed alias into a stable canonical location without losing evidence."""
+def append_source_alias(target: dict[str, Any], alias: dict[str, Any], decision: dict[str, Any] | None = None) -> None:
+    """Retain a suppressed source identity without copying its stale display fields."""
 
     target.setdefault("sourceAliases", [])
     alias_summary = {
@@ -360,8 +360,17 @@ def merge_location_data(target: dict[str, Any], alias: dict[str, Any]) -> None:
         "address": text(alias.get("address")),
         "sourceUrl": text(alias.get("sourceUrl")),
     }
+    if decision:
+        alias_summary["reason"] = text(decision.get("reason"))
+        alias_summary["decisionSourceUrl"] = text(decision.get("sourceUrl"))
     if alias_summary["id"] and alias_summary["id"] != target.get("id") and alias_summary not in target["sourceAliases"]:
         target["sourceAliases"].append(alias_summary)
+
+
+def merge_location_data(target: dict[str, Any], alias: dict[str, Any]) -> None:
+    """Merge a reviewed alias into a stable canonical location without losing evidence."""
+
+    append_source_alias(target, alias)
 
     if len(text(alias.get("name"))) > len(text(target.get("name"))):
         target["name"] = alias["name"]
@@ -441,6 +450,13 @@ def apply_location_overrides(
             continue
         merge_location_data(target, alias)
         merged_ids.add(alias_id)
+    for alias_id, override in overrides.items():
+        if override.get("action") != "suppress" or not text(override.get("canonicalId")):
+            continue
+        alias = by_id.get(alias_id)
+        target = by_id.get(text(override.get("canonicalId")))
+        if alias is not None and target is not None and alias is not target:
+            append_source_alias(target, alias, override)
     output: list[dict[str, Any]] = []
     suppressed = 0
     updated = 0
@@ -501,6 +517,59 @@ def identity_review_candidates(gyms: list[dict[str, Any]], document: dict[str, A
                     "operatorIdentity": operator_identity(left),
                     "reason": "same-operator-exact-address" if exact_street else "same-operator-nearby",
                     "publicationStatus": "review-hold",
+                }
+            )
+    return candidates
+
+
+def replacement_identity_candidates(gyms: list[dict[str, Any]], document: dict[str, Any]) -> list[dict[str, Any]]:
+    """Fail closed on an unverified source identity sharing an address with a current operator.
+
+    This never merges different operators. It only generates a review hold for
+    the weaker source identity; the current official operator remains publishable.
+    Reviewed `suppress`/`merge` overrides and explicit distinct pairs remove the
+    candidate on the next immutable rebuild.
+    """
+
+    distinct_pairs = {
+        frozenset((text(item.get("leftId")), text(item.get("rightId"))))
+        for item in document.get("distinctPairs", [])
+    }
+    decided_ids = {
+        text(item.get("id"))
+        for item in document.get("overrides", [])
+        if item.get("action") in {"suppress", "merge"}
+    }
+    candidates: list[dict[str, Any]] = []
+    for index, left in enumerate(gyms):
+        for right in gyms[index + 1 :]:
+            pair = frozenset((text(left.get("id")), text(right.get("id"))))
+            if pair in distinct_pairs or pair & decided_ids:
+                continue
+            street = canonical_address(left.get("address", ""))
+            if not re.search(r"\d", street) or street != canonical_address(right.get("address", "")):
+                continue
+            if same_operator(left, right):
+                continue
+            left_official = bool(official_domain(text(left.get("websiteUrl"))) or official_domain(text(left.get("priceSourceUrl"))))
+            right_official = bool(official_domain(text(right.get("websiteUrl"))) or official_domain(text(right.get("priceSourceUrl"))))
+            if left_official == right_official:
+                continue
+            weak, current = (right, left) if left_official else (left, right)
+            if not text(weak.get("id")).startswith("osm-") and "openstreetmap.org" not in text(weak.get("sourceUrl")):
+                continue
+            candidates.append(
+                {
+                    "leftId": weak["id"],
+                    "leftName": weak.get("name", ""),
+                    "leftAddress": weak.get("address", ""),
+                    "rightId": current["id"],
+                    "rightName": current.get("name", ""),
+                    "rightAddress": current.get("address", ""),
+                    "operatorIdentity": "possible-replacement",
+                    "reason": "different-operator-exact-address-with-unverified-source-identity",
+                    "publicationStatus": "review-hold",
+                    "holdIds": [weak["id"]],
                 }
             )
     return candidates
@@ -616,6 +685,7 @@ def main() -> int:
     gyms, post_merge_collapsed = collapse_known_brand_duplicates(gyms)
     collapsed += post_merge_collapsed
     identity_review = identity_review_candidates(gyms, location_overrides)
+    identity_review.extend(replacement_identity_candidates(gyms, location_overrides))
     identity_review.extend(
         {
             "leftId": text(item.get("id")),
@@ -632,7 +702,11 @@ def main() -> int:
         for item in location_overrides.get("overrides", [])
         if item.get("action") == "review-hold"
     )
-    held_ids = {item[side] for item in identity_review for side in ("leftId", "rightId")}
+    held_ids: set[str] = set()
+    for item in identity_review:
+        explicit = [text(value) for value in item.get("holdIds", []) if text(value)]
+        held_ids.update(explicit or [text(item.get("leftId")), text(item.get("rightId"))])
+    held_ids.discard("")
     held_ids.update(
         text(item.get("id"))
         for item in location_overrides.get("overrides", [])

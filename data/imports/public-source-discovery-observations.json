@@ -1,13 +1,14 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "source": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
   "policy": "Evidence candidates only; no automatic status, suppression, identity, or price changes.",
   "attemptedListings": 3,
-  "requests": 1,
+  "requests": 6,
   "dispositionCounts": {
     "strong-match-review": 1,
+    "possible-replacement-review": 2,
     "ambiguous-match-review": 0,
-    "no-match": 2
+    "no-match": 0
   },
   "observations": [
     {
@@ -31,31 +32,124 @@
           "sourceRecordId": "1365867-07-241-1160264"
         }
       ],
+      "replacementCandidates": [
+        {
+          "dbaName": "Peak Physio",
+          "ownershipName": "Peak Physical Therapy And Wellness Pc",
+          "address": "858 Stanyan St",
+          "postalCode": "94117",
+          "naicsCode": "621340",
+          "businessStartDate": "2024-03-03T00:00:00.000",
+          "locationStartDate": "2024-03-03T00:00:00.000",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "1355886-03-241-1156376",
+          "certificateNumber": "1156376",
+          "dataAsOf": "2026-08-20T00:00:00.000",
+          "autoApply": false
+        },
+        {
+          "dbaName": "L.A.P Training",
+          "ownershipName": "L.A.P Training",
+          "address": "858 Stanyan St",
+          "postalCode": "94117",
+          "naicsCode": "",
+          "businessStartDate": "2026-03-05T00:00:00.000",
+          "locationStartDate": "2026-03-05T00:00:00.000",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "1414364-03-261-1180825",
+          "certificateNumber": "1180825",
+          "dataAsOf": "2026-08-20T00:00:00.000",
+          "autoApply": false
+        }
+      ],
       "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
       "autoApply": false,
-      "fetchStatus": "fetched"
+      "fetchStatus": "fetched",
+      "addressFetchStatus": "fetched"
     },
     {
       "gymId": "osm-node-4238377195",
       "name": "Classical Pilates Studio",
       "address": "2636 Ocean Avenue, San Francisco, CA 94132",
       "query": "Classical Pilates Studio",
-      "disposition": "no-match",
+      "disposition": "possible-replacement-review",
       "matches": [],
+      "replacementCandidates": [
+        {
+          "dbaName": "Fitness2function",
+          "ownershipName": "Fitness2function",
+          "address": "2636 Ocean Ave",
+          "postalCode": "94132",
+          "naicsCode": "713940",
+          "businessStartDate": "2020-06-18T00:00:00.000",
+          "locationStartDate": "2020-06-18T00:00:00.000",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "1254092-06-201-1115105",
+          "certificateNumber": "1115105",
+          "dataAsOf": "2026-08-20T00:00:00.000",
+          "autoApply": false
+        }
+      ],
       "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
       "autoApply": false,
-      "fetchStatus": "cached"
+      "fetchStatus": "fetched",
+      "addressFetchStatus": "fetched"
     },
     {
       "gymId": "osm-node-11777326257",
       "name": "Skyefit Personal Training",
       "address": "864 Folsom Street, San Francisco, CA",
       "query": "Skyefit Personal Training",
-      "disposition": "no-match",
+      "disposition": "possible-replacement-review",
       "matches": [],
+      "replacementCandidates": [
+        {
+          "dbaName": "On The Run Training",
+          "ownershipName": "Waters Joshua A",
+          "address": "864 Folsom St",
+          "postalCode": "94107",
+          "naicsCode": "",
+          "businessStartDate": "2006-09-01T00:00:00.000",
+          "locationStartDate": "2011-08-07T00:00:00.000",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "0401443-04-001-0401443",
+          "certificateNumber": "0401443",
+          "dataAsOf": "2026-08-20T00:00:00.000",
+          "autoApply": false
+        },
+        {
+          "dbaName": "Bt Fitness",
+          "ownershipName": "Ben Tuia",
+          "address": "864 Folsom St",
+          "postalCode": "94107",
+          "naicsCode": "812990",
+          "businessStartDate": "2022-05-16T00:00:00.000",
+          "locationStartDate": "2022-05-16T00:00:00.000",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "1305875-05-221-1135441",
+          "certificateNumber": "1135441",
+          "dataAsOf": "2026-08-20T00:00:00.000",
+          "autoApply": false
+        },
+        {
+          "dbaName": "Beng Fitness LLC",
+          "ownershipName": "Beng Fitness LLC",
+          "address": "864 Folsom St",
+          "postalCode": "94107",
+          "naicsCode": "",
+          "businessStartDate": "2024-02-15T00:00:00.000",
+          "locationStartDate": "2024-02-15T00:00:00.000",
+          "statusSignal": "registered-signal",
+          "sourceRecordId": "1353125-02-241-1155264",
+          "certificateNumber": "1155264",
+          "dataAsOf": "2026-08-20T00:00:00.000",
+          "autoApply": false
+        }
+      ],
       "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
       "autoApply": false,
-      "fetchStatus": "cached"
+      "fetchStatus": "fetched",
+      "addressFetchStatus": "fetched"
     }
   ]
 }
