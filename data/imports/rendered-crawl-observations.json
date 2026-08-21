@@ -5376,6 +5376,555 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "11012-default",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 1 Class",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "11506-default",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 1 Class Email Gift Card",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "86316-default",
+      "amount": 75.0,
+      "currency": "USD",
+      "rawLabel": "$75 First Timer 3 Pack + FREE Fuel Bar Shake",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10962-default",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 5 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12767-default",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 5 Classes Email Gift Card",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "39775-default",
+      "amount": 260.0,
+      "currency": "USD",
+      "rawLabel": "Northern California 8 Classes/Month Recurring Membership",
+      "cadence": "",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10964-default",
+      "amount": 365.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 10 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12771-default",
+      "amount": 365.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 10 Classes Email Gift Card",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "39777-default",
+      "amount": 365.0,
+      "currency": "USD",
+      "rawLabel": "Northern California 12 Classes/Month Recurring Membership",
+      "cadence": "",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 12.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "21108-default",
+      "amount": 445.0,
+      "currency": "USD",
+      "rawLabel": "Northern California 16 Classes/Month Recurring Membership",
+      "cadence": "",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 16.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "39779-default",
+      "amount": 530.0,
+      "currency": "USD",
+      "rawLabel": "Northern California 30 Classes/Month Recurring Membership",
+      "cadence": "",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 30.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "59035-default",
+      "amount": 710.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 20 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10966-default",
+      "amount": 1680.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 50 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 50.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12775-default",
+      "amount": 1680.0,
+      "currency": "USD",
+      "rawLabel": "Northern California - 50 Classes Email Gift Card",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 50.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "rendered-public-json",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/api/mt/buy-pages?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 260.0,
+      "currency": "USD",
+      "rawLabel": "classes valid for 21 days. PACKAGES MEMBERSHIPS Northern California 8 Classes/Month Recurring Membership $260.00 USD Northern California 12 Classes/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/pricing?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 365.0,
+      "currency": "USD",
+      "rawLabel": "Recurring Membership $365.00 USD Northern California 16 Classes/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 16.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/pricing?location=10298",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6496142801",
+      "gymName": "Barry's San Francisco - Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 445.0,
+      "currency": "USD",
+      "rawLabel": "Recurring Membership $445.00 USD Northern California 30 Classes/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 30.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://app.barrys.com/pricing?location=10298",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "osm-node-663533939",
       "gymName": "CorePower Yoga Duboce",
       "capturedAt": "2026-08-20",

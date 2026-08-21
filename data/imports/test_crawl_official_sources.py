@@ -14,6 +14,13 @@ import crawl_official_sources as crawler
 
 
 class OfficialCrawlerTests(unittest.TestCase):
+    def test_parser_upgrade_invalidates_only_candidate_cache_metadata(self) -> None:
+        stale = {"etag": "old", "lastModified": "yesterday", "candidates": [{"amount": 149}]}
+        current = {**stale, "parserVersion": crawler.PARSER_VERSION}
+
+        self.assertIsNone(crawler.conditional_cache_metadata(stale))
+        self.assertIs(crawler.conditional_cache_metadata(current), current)
+
     def test_static_deal_refresh_can_retain_rendered_observations(self) -> None:
         with tempfile.TemporaryDirectory() as folder:
             path = Path(folder) / "rendered.json"
@@ -85,6 +92,53 @@ class OfficialCrawlerTests(unittest.TestCase):
                 {"url": "https://momence.com/operator/memberships", "sourceField": "plans.evidence.url"},
             ],
         )
+
+    def test_reviewed_seed_routes_allow_reviewed_operator_subdomains_only(self) -> None:
+        gym = {
+            "websiteUrl": "https://www.operator.example/location/sf",
+            "officialUrl": "https://www.operator.example/location/sf",
+            "priceSourceUrl": "https://app.operator.example/pricing?location=sf",
+            "plans": [
+                {"evidence": {"url": "https://help.operator.example/memberships"}},
+                {"evidence": {"url": "https://operator.example.evil.test/pricing"}},
+            ],
+        }
+
+        routes = crawler.reviewed_seed_routes(gym)
+
+        self.assertIn(
+            {"url": "https://app.operator.example/pricing?location=sf", "sourceField": "priceSourceUrl"},
+            routes,
+        )
+        self.assertIn(
+            {"url": "https://help.operator.example/memberships", "sourceField": "plans.evidence.url"},
+            routes,
+        )
+        self.assertFalse(any("evil.test" in item["url"] for item in routes))
+
+    def test_ymca_sf_adapter_separates_monthly_dues_and_join_fees(self) -> None:
+        visible = """
+        Become A Member Membership Types
+        Teen Individuals ages 13-18 Monthly Fee $55 join fee $149 VISIT a branch
+        Young Adult Individuals ages 19-25 Monthly Fee $75 join fee $149 JOIN
+        Adult Individuals ages 26-66 Monthly Fee $91 join fee $149 JOIN
+        Active Older Adult Individuals ages 67+ Monthly Fee $85 join fee $149 JOIN
+        Single Adult Household with Children One adult plus dependents Monthly Fee $112 join fee $199 JOIN
+        Dual Adult Household with no Children Two adults Monthly Fee $152 join fee $199 JOIN
+        Dual Adult Household with Children Two adults plus dependents Monthly Fee $182 join fee $199 JOIN
+        Household members save up to $340 per month.
+        """
+
+        candidates = crawler.visible_candidates(visible, "https://www.ymcasf.org/membership/")
+
+        self.assertEqual(len(candidates), 7)
+        adult = next(item for item in candidates if item["sourceProductId"] == "adult")
+        self.assertEqual((adult["amount"], adult["cadence"], adult["eligibility"]["type"]), (91, "month", "standard-adult"))
+        self.assertEqual(adult["fees"], [{
+            "type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": True,
+        }])
+        self.assertEqual(adult["exactLocationMatch"], "operator-market-multi-location")
+        self.assertFalse(any(item["amount"] == 340 for item in candidates))
 
     def test_official_url_without_website_is_still_a_crawl_seed(self) -> None:
         gym = {"officialUrl": "https://operator.example/location/sf", "monthlyPrice": None}
@@ -422,6 +476,67 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "matched-within-threshold")
         self.assertFalse(attempts[0]["requiresReview"])
         self.assertNotIn("requiresReviewBeforePriceAudit", attempts[0])
+
+    def test_reconcile_reuses_same_operator_reviewed_market_source(self) -> None:
+        source_url = "https://operator.example/pricing?market=northern-california"
+        gyms = [
+            {
+                "id": gym_id, "operatorId": "shared-operator", "priceSourceUrl": source_url,
+                "monthlyPrice": 260, "selectedPlanId": f"{gym_id}:plan:eight",
+                "plans": [{
+                    "id": f"{gym_id}:plan:eight", "sourceProductId": "eight", "name": "8 Classes/Month",
+                    "classAllowance": {"count": 8, "period": "month", "unlimited": False},
+                    "billing": {"amount": 260, "normalizedMonthly": 260},
+                    "evidence": {"url": source_url, "rawLabel": "8 Classes/Month"},
+                }],
+            }
+            for gym_id in ("castro", "fidi")
+        ]
+        attempts = [
+            {"gymId": gym["id"], "url": source_url, "reviewedSeedCount": 1, "requiresReview": False}
+            for gym in gyms
+        ]
+        observations = [{
+            "gymId": "castro", "sourceUrl": source_url, "sourceProductId": "eight",
+            "rawLabel": "Northern California 8 Classes/Month Recurring Membership",
+            "amount": 260, "cadence": "month", "classAllowance": {"count": 8, "period": "month"},
+            "promotion": {"isPromotion": False},
+        }]
+
+        crawler.reconcile_selected_plan_price_audits(gyms, attempts, observations)
+
+        self.assertEqual(
+            [attempt["selectedPlanPriceAuditStatus"] for attempt in attempts],
+            ["matched-within-threshold", "matched-within-threshold"],
+        )
+
+    def test_reconcile_does_not_reuse_reviewed_source_across_operators(self) -> None:
+        source_url = "https://booking.example/shared-pricing"
+        gyms = [
+            {
+                "id": gym_id, "operatorId": operator_id, "priceSourceUrl": source_url,
+                "monthlyPrice": 100, "selectedPlanId": f"{gym_id}:plan:basic",
+                "plans": [{
+                    "id": f"{gym_id}:plan:basic", "sourceProductId": "basic", "name": "Basic",
+                    "billing": {"amount": 100, "normalizedMonthly": 100},
+                    "evidence": {"url": source_url, "rawLabel": "Basic"},
+                }],
+            }
+            for gym_id, operator_id in (("one", "operator-one"), ("two", "operator-two"))
+        ]
+        attempts = [
+            {"gymId": gym["id"], "url": source_url, "reviewedSeedCount": 1, "requiresReview": False}
+            for gym in gyms
+        ]
+        observations = [{
+            "gymId": "one", "sourceUrl": source_url, "sourceProductId": "basic",
+            "rawLabel": "Basic", "amount": 100, "cadence": "month", "promotion": {"isPromotion": False},
+        }]
+
+        crawler.reconcile_selected_plan_price_audits(gyms, attempts, observations)
+
+        self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "matched-within-threshold")
+        self.assertEqual(attempts[1]["selectedPlanPriceAuditStatus"], "selected-plan-not-observed")
 
     def test_selected_plan_label_match_rejects_multi_price_visible_snippet(self) -> None:
         selected = {"name": "Unlimited Month-to-Month", "sourceProductId": ""}

@@ -1237,13 +1237,16 @@
   },
   "https://www.barrys.com/studio/castro/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 06:15:42 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "1739313fc5be3f4b539c280271ba008e3d50d9ec5a6c66f5ed521d53e4fa03fc",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.barrys.com/pricing/castro"
+      "https://www.barrys.com/pricing/castro",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": [
       {
@@ -1263,13 +1266,16 @@
   },
   "https://www.barrys.com/studio/fidi/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 07:19:46 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "89f8af7e077ee80226f380aeb797104ab0154945021e63a288e65c008e397761",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.barrys.com/pricing/fidi"
+      "https://www.barrys.com/pricing/fidi",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": [
       {
@@ -1288,14 +1294,17 @@
     ]
   },
   "https://www.barrys.com/studio/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 06:08:51 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "354c9de190b6f5da463213aad31435be5df118bc86c1866f6cee989e8ff42bbd",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.barrys.com/pricing/san-francisco-marina"
+      "https://www.barrys.com/pricing/san-francisco-marina",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": [
       {
@@ -1325,9 +1334,11 @@
   },
   "https://www.bayclubs.com/sf-campus": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Thu, 20 Aug 2026 21:11:16 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "8f6edbca2593030c3889a787f6920d3f8cab0552e95b71c85176e780ebfe2dd0",
     "candidates": [],
     "linkedStorefronts": [
@@ -1403,9 +1414,11 @@
   },
   "https://www.bayclubs.com/clubs/thegateway": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 08:29:40 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "d79356b18a1214f54994f53b58698e355ee36bd1dcae77ea386b12c73a105cb2",
     "candidates": [],
     "linkedStorefronts": [
@@ -1442,10 +1455,12 @@
   },
   "https://www.ymcasf.org/location/bayview-hunters-point-ymca/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 24 Jun 2026 03:05:41 GMT",
-    "contentHash": "d7f19cbe6f266dca4847b86f09c3f43a22b342b31c8a01d5e7bfb68c2476da46",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "0e1e5c4fd3d14f5fd6b328e7e4a759c69885c75420337b121cd08ac0b38a69b4",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -1929,11 +1944,13 @@
     ]
   },
   "https://www.ymcasf.org/location/chinatown-ymca/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "fb7a7133299792d83cb268c1fafb930205aa59c638b2064ae06658755a1525ba",
+    "lastModified": "Thu, 30 Jul 2026 16:23:40 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "0d2770d3fabb84ae841b31666939db0c31c801e97c804cdef797049a1ea32289",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -3619,9 +3636,11 @@
   },
   "https://www.ymcasf.org/location/dogpatch-ymca-at-crane-cove/": {
     "status": "http-404",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -5476,10 +5495,12 @@
     ]
   },
   "https://www.fitnesssf.com/location/castro": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Wed, 19 Aug 2026 16:22:33 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "50399e52a537a61d9cfbf202bb214c0c4b42b4a7f4cb852d1a3f5ef643e2e6a4",
     "candidates": [],
     "linkedStorefronts": [],
@@ -5500,30 +5521,38 @@
     ]
   },
   "https://www.fitnesssf.com/location/sf-embarcadero": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Wed, 19 Aug 2026 16:18:11 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "9b44721f302b3f0f2f2c86c2950056fd6093765873ae3689800feb10fdb83755",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://fitnesssf.com/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Wed, 19 Aug 2026 16:02:19 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "25cd45db000619d447479e4e6d1ab186471e130878ea03b07a2373c39d0fd9cd",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://fitnesssf.com/join"
+    ],
     "locationCandidates": []
   },
   "https://www.fitnesssf.com/location/mid-market": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 02:25:33 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "5b819d543cc3542e61011000954653eca68ab33212d9de419b247726eb708408",
     "candidates": [],
     "linkedStorefronts": [],
@@ -5568,10 +5597,12 @@
     ]
   },
   "https://fitnesssf.com/location/soma/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Wed, 19 Aug 2026 17:38:48 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "7446141fd4d2c4730f7be9278c89494a4b01444a1c87dd3344bfc268efa662c1",
     "candidates": [],
     "linkedStorefronts": [],
@@ -5592,10 +5623,12 @@
     ]
   },
   "https://www.fitnesssf.com/location/sf-transbay": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Wed, 19 Aug 2026 16:53:34 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "aac7c99467339bb34e4bef88ddfc3980ce62f19a5beacf09ac487c1ca345f57a",
     "candidates": [],
     "linkedStorefronts": [],
@@ -8716,15 +8749,18 @@
     ]
   },
   "https://www.ymcasf.org/location/mission-ymca/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "8518e8c9609b7f2193367046312a2fafe8ca72a896e22a92bc42f7f841d6a53a",
+    "lastModified": "Thu, 05 Mar 2026 19:41:17 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "c7ffffd2a9235938a1d0d664957e42d3293465bbf6c11043ae36780833fc6a3b",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
-      "https://www.ymcasf.org/location/mission-ymca/#hours"
+      "https://www.ymcasf.org/location/mission-ymca/#hours",
+      "https://www.ymcasf.org/membership/membership-faqs/"
     ],
     "locationCandidates": [
       {
@@ -9837,11 +9873,13 @@
     "locationCandidates": []
   },
   "https://www.ymcasf.org/locations/richmond-district-ymca": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "19cb5ba4db49e0987b4b03dab54a814988cc4e5cac778c806fb4c2abab008f44",
+    "lastModified": "Wed, 29 Jul 2026 17:39:24 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "df2949c17b6881f013af9b6633adf155f9df25b2c67b7cb009ba37e1147811a4",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -11734,14 +11772,17 @@
     "locationCandidates": []
   },
   "https://www.ymcasf.org/Embarcadero/": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "ceeb8ab5756c5ae4267ec675fb4bbf02de4465d64d76eaa04a047606c4330062",
+    "lastModified": "Wed, 12 Aug 2026 19:18:09 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "62a3b7cb230468fef697801d0ec5c1d952093a95dee4a52efc8da986c0b25630",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.ymcasf.org/membership/"
+      "https://www.ymcasf.org/membership/",
+      "https://www.ymcasf.org/membership/safety-at-the-y/"
     ],
     "locationCandidates": [
       {
@@ -11839,10 +11880,12 @@
   },
   "https://www.ymcasf.org/locations/stonestown-family-ymca": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 12 Aug 2026 19:15:18 GMT",
-    "contentHash": "6f649adedc7475167949570d809633a57fa6576fca6142d8c09d4d7c82e55f9e",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "43e0e2001eefdb2eb9118a74991ee4022f7e284d0144e611c2ef968bea49b01b",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -17886,9 +17929,11 @@
   },
   "https://www.ymcasf.org/location/presidio-community-ymca/letterman-pool-gym/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Mon, 25 May 2026 17:00:30 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "73bdc8e31006917ee7e91129df52e2b0fb31cdbdbac9dbde4fbdb9d0000b721b",
     "candidates": [],
     "linkedStorefronts": [
@@ -18019,10 +18064,12 @@
   },
   "https://www.ymcasf.org/location/presidio-community-ymca/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 24 Jun 2026 03:20:15 GMT",
-    "contentHash": "10f400ec2042defd12e8dd27080b96e282c49fd915e625320b1bd944aee3dc04",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "f41fa79b1138829044a24fa8d3803795b2cb13a42fc9af8f96b4d859ebe5e0a4",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -21699,10 +21746,12 @@
     ]
   },
   "https://www.barrys.com/es/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:52:34 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "169884ca48cb89d3a79ffaf01e0430ef6b1c861ff194403a5279efed8bf4ac11",
     "candidates": [],
     "linkedStorefronts": [
@@ -21712,15 +21761,18 @@
       "https://www.barrys.com/sv/pricing/san-francisco-marina",
       "https://www.barrys.com/da/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
-      "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=2"
+      "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/es/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 10:31:00 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "4cfeea591d4a030f5fde88a3b60d26c16f8a33efe9a0c6cc23bb7c2cbf2b51a5",
     "candidates": [],
     "linkedStorefronts": [
@@ -21731,15 +21783,18 @@
       "https://www.barrys.com/da/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
       "https://www.barrys.com/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/san-francisco-marina?40dddf7b_page=2"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/it/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:53:03 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "7cc5ad483a207d9679b2c80aaed414414099dcd6fdb5acf95b1fdbff06643597",
     "candidates": [],
     "linkedStorefronts": [
@@ -21749,15 +21804,18 @@
       "https://www.barrys.com/sv/pricing/san-francisco-marina",
       "https://www.barrys.com/da/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
-      "https://www.barrys.com/it/pricing/san-francisco-marina?0a1118d2_page=2"
+      "https://www.barrys.com/it/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/fr/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:53:25 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "22455b84f02e072251c2341231db42c008a6a77aa272912b7db4f19eb8f4af93",
     "candidates": [],
     "linkedStorefronts": [
@@ -21767,15 +21825,18 @@
       "https://www.barrys.com/sv/pricing/san-francisco-marina",
       "https://www.barrys.com/da/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
-      "https://www.barrys.com/fr/pricing/san-francisco-marina?0a1118d2_page=2"
+      "https://www.barrys.com/fr/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/sv/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:53:58 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "c55e0fc89f9cf832b9dfbdd491dfee12b3ba7a2c768df7b75debe99f9864bd81",
     "candidates": [],
     "linkedStorefronts": [
@@ -21785,15 +21846,18 @@
       "https://www.barrys.com/fr/pricing/san-francisco-marina",
       "https://www.barrys.com/da/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
-      "https://www.barrys.com/sv/pricing/san-francisco-marina?0a1118d2_page=2"
+      "https://www.barrys.com/sv/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/da/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:54:23 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "29da3af02f7d5419c3c3c05e19561a306f2fd9350abff872968e959fb74cb1b7",
     "candidates": [],
     "linkedStorefronts": [
@@ -21803,15 +21867,18 @@
       "https://www.barrys.com/fr/pricing/san-francisco-marina",
       "https://www.barrys.com/sv/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
-      "https://www.barrys.com/da/pricing/san-francisco-marina?0a1118d2_page=2"
+      "https://www.barrys.com/da/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/ar/pricing/san-francisco-marina": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:54:39 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "f4c3d64445a63a93f6e3ac8527cf86d4492daec3f531386b56725f28ffc05ee0",
     "candidates": [],
     "linkedStorefronts": [
@@ -21821,15 +21888,18 @@
       "https://www.barrys.com/fr/pricing/san-francisco-marina",
       "https://www.barrys.com/sv/pricing/san-francisco-marina",
       "https://www.barrys.com/da/pricing/san-francisco-marina",
-      "https://www.barrys.com/ar/pricing/san-francisco-marina?0a1118d2_page=2"
+      "https://www.barrys.com/ar/pricing/san-francisco-marina?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=2": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 11:54:54 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "733aa5049e84a805caf92078d65fd22ed1bd85909a7bd94393e299440eeddd75",
     "candidates": [],
     "linkedStorefronts": [
@@ -21840,7 +21910,8 @@
       "https://www.barrys.com/sv/pricing/san-francisco-marina",
       "https://www.barrys.com/da/pricing/san-francisco-marina",
       "https://www.barrys.com/ar/pricing/san-francisco-marina",
-      "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=1"
+      "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=1",
+      "https://www.barrys.com/es/faq"
     ],
     "locationCandidates": []
   },
@@ -22060,169 +22131,311 @@
   },
   "https://www.ymcasf.org/membership/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 10 Jun 2026 16:51:16 GMT",
-    "contentHash": "18b2295b7dfa33af7f46d6b6656d65aa126d0002dcce397cd29b03827b59e670",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "e3de0ed9e7530c9d70c306b8cdf13e876e78f26b7994e1cdbbb014acfb137b1e",
     "candidates": [
       {
-        "amount": 149.0,
+        "sourceProductId": "teen",
+        "name": "Teen Membership",
+        "amount": 55.0,
         "currency": "USD",
-        "rawLabel": "need. Teen Individuals ages 13-18 Sign up for Teen Membership in-person at a branch. Monthly Fee $55 join fee $149 VISIT a branch Young Adult Individuals ages 19-25 Monthly",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
-        "classAllowance": {
-          "count": 149.0,
-          "period": "month"
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.ymcasf.org/membership/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 149.0,
-        "currency": "USD",
-        "rawLabel": "Fee $ 75 join fee $149 JOIN Adult Individuals ages 26-66 Monthly",
-        "cadence": "month",
-        "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
         "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
         "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.ymcasf.org/membership/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 149.0,
-        "currency": "USD",
-        "rawLabel": "Fee $91 join fee $149 JOIN Active Older Adult Individuals ages 67+ Monthly",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.ymcasf.org/membership/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 156.0,
-        "currency": "USD",
-        "rawLabel": "Our programs are safe spaces for students to learn and grow when not in school. Household members save up to $156 per month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": true,
-          "label": "Our programs are safe spaces for students to learn and grow when not in school. Household members save up to $156 per month"
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://www.ymcasf.org/membership/",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 340.0,
-        "currency": "USD",
-        "rawLabel": "! Camps When youth experience Y Camp, they experience something new every day. Household members save up to $340 per month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": true,
-          "label": "! Camps When youth experience Y Camp, they experience something new every day. Household members save up to $340 per month"
-        },
-        "eligibility": {
-          "type": "restricted",
+          "type": "youth",
           "restrictions": [
-            "youth"
+            "Ages 13–18"
           ]
         },
         "commitment": {
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 149.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Teen Membership $55/month; $149 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-multi-location",
         "sourceUrl": "https://www.ymcasf.org/membership/",
         "autoPublishEligible": false
       },
       {
-        "amount": 50.0,
+        "sourceProductId": "young-adult",
+        "name": "Young Adult Membership",
+        "amount": 75.0,
         "currency": "USD",
-        "rawLabel": "ater walking, family rec swim, and all the benefits of low-impact pool workouts. Household members save up to $50 per month",
         "cadence": "month",
+        "billingInterval": "month",
         "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
         "classAllowance": null,
-        "promotion": {
-          "isPromotion": true,
-          "label": "ater walking, family rec swim, and all the benefits of low-impact pool workouts. Household members save up to $50 per month"
-        },
         "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
+          "type": "age-restricted",
+          "restrictions": [
+            "Ages 19–25"
+          ]
         },
         "commitment": {
           "type": "unknown",
           "minimumMonths": null
         },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 149.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Young Adult Membership $75/month; $149 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.ymcasf.org/membership/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "adult",
+        "name": "Adult Membership",
+        "amount": 91.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": [
+            "Published adult band is ages 26–66"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 149.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Adult Membership $91/month; $149 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.ymcasf.org/membership/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "active-older-adult",
+        "name": "Active Older Adult Membership",
+        "amount": 85.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "senior",
+          "restrictions": [
+            "Ages 67+"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 149.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Active Older Adult Membership $85/month; $149 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.ymcasf.org/membership/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "single-adult-household",
+        "name": "Single Adult Household with Children",
+        "amount": 112.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "household",
+          "restrictions": [
+            "One adult plus dependent children"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 199.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Single Adult Household with Children $112/month; $199 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.ymcasf.org/membership/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "dual-adult-household",
+        "name": "Dual Adult Household with No Children",
+        "amount": 152.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "household",
+          "restrictions": [
+            "Two adults in one household"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 199.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Dual Adult Household with No Children $152/month; $199 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.ymcasf.org/membership/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "dual-adult-household-children",
+        "name": "Dual Adult Household with Children",
+        "amount": 182.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "YMCA of Greater San Francisco facilities",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "household",
+          "restrictions": [
+            "Two adults plus dependent children"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "amount": 199.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Dual Adult Household with Children $182/month; $199 join fee",
+        "method": "visible-ymca-sf-membership-table-catalog",
+        "adapter": "ymca-sf-membership-table",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
         "sourceUrl": "https://www.ymcasf.org/membership/",
         "autoPublishEligible": false
       }
@@ -22251,9 +22464,11 @@
   },
   "https://www.ymcasf.org/membership/types-of-membership/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Tue, 17 Sep 2024 15:37:48 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "380fa3aa5b32b6059f0bb156a7cd51cbf77bfa54ef5f845ff311ba88552b19e0",
     "candidates": [],
     "linkedStorefronts": [
@@ -22784,9 +22999,11 @@
   },
   "https://www.ymcasf.org/membership/membership-benefits/financial-assistance/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Thu, 27 Feb 2025 14:48:51 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "87858d88cde3f03565630d75c1638c668152a0e8dc3835bcc09798f0f11fdc7b",
     "candidates": [],
     "linkedStorefronts": [
@@ -22811,9 +23028,11 @@
   },
   "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Mon, 22 Sep 2025 14:08:50 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "102d1d952d7a8c9b3f3f711054710f64e1549170eb6e2321545b1ac93cd638dc",
     "candidates": [],
     "linkedStorefronts": [
@@ -32981,11 +33200,13 @@
     ]
   },
   "https://www.ymcasf.org/location/richmond-district-ymca/#hours": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "b18f8227cd94a71b398fb9800fc07c78a884bc012d7f250bdd588dcfced460f8",
+    "lastModified": "Wed, 29 Jul 2026 17:39:24 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "265ac51b51f8ec21fc1150b6753519874d32ae130fe25ddf2af8b5fc8be4b286",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -33694,10 +33915,12 @@
   },
   "https://www.ymcasf.org/location/stonestown-family-ymca/#hours": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 12 Aug 2026 19:15:18 GMT",
-    "contentHash": "66c31214c495ff681b31c5aeca2c12a4ebcce01de79f8229d1af8989620d0774",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "0b45da2ff4cf95578b00df26ffd747ca01d2d6d3766e017d2ef7502e2ebcd8e9",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -34719,9 +34942,11 @@
   },
   "https://www.barrys.com/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 06:16:33 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "a59496e7333fd7c0811fb8595834fe9f46ffca7de10c2cc8fe8c399d921780ea",
     "candidates": [],
     "linkedStorefronts": [
@@ -34732,15 +34957,18 @@
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
       "https://www.barrys.com/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/castro?40dddf7b_page=2"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/es/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 12:27:34 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "d2ba96a91937dcc4384ab6ebe1224a213a087273c3915e0d9c8ca61606c0e10d",
     "candidates": [],
     "linkedStorefronts": [
@@ -34750,15 +34978,18 @@
       "https://www.barrys.com/sv/pricing/castro",
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
-      "https://www.barrys.com/es/pricing/castro?0a1118d2_page=2"
+      "https://www.barrys.com/es/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/es/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/it/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:52:41 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "a0d7d377fbe3f190a4a783e68fa049e859e6c5ab555b538b719b567f5dede6e6",
     "candidates": [],
     "linkedStorefronts": [
@@ -34768,15 +34999,18 @@
       "https://www.barrys.com/sv/pricing/castro",
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
-      "https://www.barrys.com/it/pricing/castro?0a1118d2_page=2"
+      "https://www.barrys.com/it/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/fr/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:52:53 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "30800b0784ee778b80aecc68cba4af0cb69f6ed4a3a2271280bf71d4dc5e0f7c",
     "candidates": [],
     "linkedStorefronts": [
@@ -34786,15 +35020,18 @@
       "https://www.barrys.com/sv/pricing/castro",
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
-      "https://www.barrys.com/fr/pricing/castro?0a1118d2_page=2"
+      "https://www.barrys.com/fr/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/sv/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:53:21 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "ad741042116f7b23185569b776ded8a926ac521f6f574c626e825e71c359ebca",
     "candidates": [],
     "linkedStorefronts": [
@@ -34804,15 +35041,18 @@
       "https://www.barrys.com/fr/pricing/castro",
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
-      "https://www.barrys.com/sv/pricing/castro?0a1118d2_page=2"
+      "https://www.barrys.com/sv/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/da/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:53:42 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "f012e97cbc32f302d675815906d0987729ba8e5bc964b6024b88cd888d7e7403",
     "candidates": [],
     "linkedStorefronts": [
@@ -34822,15 +35062,18 @@
       "https://www.barrys.com/fr/pricing/castro",
       "https://www.barrys.com/sv/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
-      "https://www.barrys.com/da/pricing/castro?0a1118d2_page=2"
+      "https://www.barrys.com/da/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/ar/pricing/castro": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:54:17 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "f8cd6bbfe81e9f7b76dfb8f3ca65c18139c735c812188a7e93cc964ca308723c",
     "candidates": [],
     "linkedStorefronts": [
@@ -34840,15 +35083,18 @@
       "https://www.barrys.com/fr/pricing/castro",
       "https://www.barrys.com/sv/pricing/castro",
       "https://www.barrys.com/da/pricing/castro",
-      "https://www.barrys.com/ar/pricing/castro?0a1118d2_page=2"
+      "https://www.barrys.com/ar/pricing/castro?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/pricing/castro?0a1118d2_page=2": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 06:16:34 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "44ca073f99d708926406c41afe9431e1957dbca9bd1a93ab5fc0ba84b5bc1891",
     "candidates": [],
     "linkedStorefronts": [
@@ -34860,15 +35106,18 @@
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
       "https://www.barrys.com/pricing/castro?0a1118d2_page=1",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/castro?0a1118d2_page=2&40dddf7b_page=2"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/pricing/castro?40dddf7b_page=2": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 06:16:34 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "2742f0961bc15c9b6877e693d2a06106a86447cd9ed8a031ae01e47e40446e24",
     "candidates": [],
     "linkedStorefronts": [
@@ -34880,15 +35129,18 @@
       "https://www.barrys.com/da/pricing/castro",
       "https://www.barrys.com/ar/pricing/castro",
       "https://www.barrys.com/pricing/castro?0a1118d2_page=2&40dddf7b_page=2",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/castro?40dddf7b_page=1"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:52:28 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "5828d83ff4733924c48d3ec2e6cb947bc70cbe0bff4dad1040b91c36fb999a7a",
     "candidates": [],
     "linkedStorefronts": [
@@ -34899,15 +35151,18 @@
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
       "https://www.barrys.com/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/fidi?40dddf7b_page=2"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/es/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:52:38 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "638ed6002dcf56cd0610d624edf77fba8e14afe15632b06ff2615c4b151010ee",
     "candidates": [],
     "linkedStorefronts": [
@@ -34917,15 +35172,18 @@
       "https://www.barrys.com/sv/pricing/fidi",
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
-      "https://www.barrys.com/es/pricing/fidi?0a1118d2_page=2"
+      "https://www.barrys.com/es/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/es/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/it/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:52:48 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "832f9ac2f47d8f4c75849f24ec8407c40d459e5c440472141d2e111056e53aa9",
     "candidates": [],
     "linkedStorefronts": [
@@ -34935,15 +35193,18 @@
       "https://www.barrys.com/sv/pricing/fidi",
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
-      "https://www.barrys.com/it/pricing/fidi?0a1118d2_page=2"
+      "https://www.barrys.com/it/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/fr/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:53:17 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "348fc4c4d39fe1c7fda598ca75166c5fb64ad040d934102eb059d6f8e15b82d7",
     "candidates": [],
     "linkedStorefronts": [
@@ -34953,15 +35214,18 @@
       "https://www.barrys.com/sv/pricing/fidi",
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
-      "https://www.barrys.com/fr/pricing/fidi?0a1118d2_page=2"
+      "https://www.barrys.com/fr/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/sv/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:53:31 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "f82f5bb42c6985259b275d5f7b1bac7089b6971532f647e513ace0de417d52c5",
     "candidates": [],
     "linkedStorefronts": [
@@ -34971,15 +35235,18 @@
       "https://www.barrys.com/fr/pricing/fidi",
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
-      "https://www.barrys.com/sv/pricing/fidi?0a1118d2_page=2"
+      "https://www.barrys.com/sv/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/da/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:54:07 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "c5ee9e554c3f576714cca09791e7e6191bc05531288189af5ffc1b75fb63769d",
     "candidates": [],
     "linkedStorefronts": [
@@ -34989,15 +35256,18 @@
       "https://www.barrys.com/fr/pricing/fidi",
       "https://www.barrys.com/sv/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
-      "https://www.barrys.com/da/pricing/fidi?0a1118d2_page=2"
+      "https://www.barrys.com/da/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/ar/pricing/fidi": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:54:30 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "32d9c34cb79c69998e711a5f3d217f374ce45cc9b488281ff486d32b8527fa3b",
     "candidates": [],
     "linkedStorefronts": [
@@ -35007,15 +35277,18 @@
       "https://www.barrys.com/fr/pricing/fidi",
       "https://www.barrys.com/sv/pricing/fidi",
       "https://www.barrys.com/da/pricing/fidi",
-      "https://www.barrys.com/ar/pricing/fidi?0a1118d2_page=2"
+      "https://www.barrys.com/ar/pricing/fidi?0a1118d2_page=2",
+      "https://www.barrys.com/faq"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/pricing/fidi?0a1118d2_page=2": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:54:44 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "c3b7efd8cdd3dffd66b97de2d03e3d88908ac3c6b04c6e6417f222b07d60ecbc",
     "candidates": [],
     "linkedStorefronts": [
@@ -35027,15 +35300,18 @@
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
       "https://www.barrys.com/pricing/fidi?0a1118d2_page=1",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/fidi?0a1118d2_page=2&40dddf7b_page=2"
     ],
     "locationCandidates": []
   },
   "https://www.barrys.com/pricing/fidi?40dddf7b_page=2": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Fri, 21 Aug 2026 11:54:58 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "98ea0bc7e2aacd414e0160b684b16c6837cc6d16d79dd45071660a82ce98b10e",
     "candidates": [],
     "linkedStorefronts": [
@@ -35047,15 +35323,18 @@
       "https://www.barrys.com/da/pricing/fidi",
       "https://www.barrys.com/ar/pricing/fidi",
       "https://www.barrys.com/pricing/fidi?0a1118d2_page=2&40dddf7b_page=2",
+      "https://www.barrys.com/faq",
       "https://www.barrys.com/pricing/fidi?40dddf7b_page=1"
     ],
     "locationCandidates": []
   },
   "https://www.bayclubs.com/memberships": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "Fri, 21 Aug 2026 02:16:36 GMT",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "9ad795d0358f5ef5e810b1baac14e67c049e64cbada10f0f15c68aeaa90b44ca",
     "candidates": [],
     "linkedStorefronts": [],
@@ -35087,10 +35366,12 @@
   },
   "https://www.ymcasf.org/membership/membership-faqs/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Wed, 10 Jun 2026 16:50:33 GMT",
-    "contentHash": "b6d2f00fda5fb472b7d2ff81ca666ac2bd0d014a4fa6a02c86583a1a08accaea",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "4f51d28fd727780776d7c2f5ba63abd80cc509c2fb1635baaa01b44131d67dfd",
     "candidates": [],
     "linkedStorefronts": [
       "https://www.ymcasf.org/membership/",
@@ -51357,9 +51638,11 @@
   },
   "https://www.ymcasf.org/location/letterman-pool-gym/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "Mon, 25 May 2026 17:00:30 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
     "contentHash": "73bdc8e31006917ee7e91129df52e2b0fb31cdbdbac9dbde4fbdb9d0000b721b",
     "candidates": [],
     "linkedStorefronts": [
@@ -52140,5 +52423,448 @@
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
+  },
+  "https://app.barrys.com/pricing?location=10298": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"n0ymvuaxbb6wa\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "9fcade64905e6510d0a2b133ece93068716b7550874c650fc6d2771d8f519d5c",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.barrys.com/faq": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 21 Aug 2026 06:17:21 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "b1eb844ffee77020bac90a4aa1ec12fb9c1181a2bdf15396c075c95fa31d6f4b",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.barrys.com/es/faq",
+      "https://www.barrys.com/it/faq",
+      "https://www.barrys.com/fr/faq",
+      "https://www.barrys.com/sv/faq",
+      "https://www.barrys.com/da/faq",
+      "https://www.barrys.com/ar/faq",
+      "https://www.barrys.com/faq?a4e00864_page=2"
+    ],
+    "locationCandidates": []
+  },
+  "https://www.barrys.com/es/faq": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 21 Aug 2026 13:53:56 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "878cb4c4d8f26d15d7b63a1db27ce4c95ec0d7d1b535b60fd0e1e40d1b385f05",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.barrys.com/faq",
+      "https://www.barrys.com/it/faq",
+      "https://www.barrys.com/fr/faq",
+      "https://www.barrys.com/sv/faq",
+      "https://www.barrys.com/da/faq",
+      "https://www.barrys.com/ar/faq",
+      "https://www.barrys.com/es/faq?a4e00864_page=2"
+    ],
+    "locationCandidates": []
+  },
+  "https://join.bayclubs.com/shared/membership-builder": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Wed, 05 Aug 2026 05:56:52 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "f4f5f1f384406b2d9cd8b9a3b8da047e07566ab39f38cbdeae4e5df2c755cdec",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Tue, 18 Aug 2026 18:14:52 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "143826eae988f41520620bb6fdcf53ce14b775745799ad5001d6811b1035c777",
+    "candidates": [
+      {
+        "amount": 134.95,
+        "currency": "USD",
+        "rawLabel": "based on access. We currently have these membership options that we offer online: All-Gym Access Membership: $134.95 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 79.95,
+        "currency": "USD",
+        "rawLabel": ", SOMA, Transbay, and Polk (set to open in October 2026). See current pricing HERE . Marin Access Membership: $79.95 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 49.95,
+        "currency": "USD",
+        "rawLabel": ". Grants access to Marin only. See current pricing HERE . Oakland Access Membership: $49.95 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Sun, 16 Aug 2026 22:09:04 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "2a44a06a487c03c6026574ecbe8af10094fec501e5218585eedd5fa2ba912885",
+    "candidates": [
+      {
+        "amount": 35.0,
+        "currency": "USD",
+        "rawLabel": "kland, SF Castro, SF Embarcadero, SF Fillmore, SF Mid Market, SF SOMA, and SF Transbay. 1-Day Pass = $35",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 129.0,
+        "currency": "USD",
+        "rawLabel": "or $30 with a member 7-Day Pass = $129",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 25.0,
+        "currency": "USD",
+        "rawLabel": "Marin Gym Access Only 1-Day Pass = $25",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 69.0,
+        "currency": "USD",
+        "rawLabel": "(or $20 with a member) 7-Day Pass = $69",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 25.0,
+        "currency": "USD",
+        "rawLabel": "Oakland Gym Only Access 1-Day Pass = $25",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 30.0,
+        "currency": "USD",
+        "rawLabel": "SF Embarcadero, SF Fillmore, SF Mid Market, SF SOMA, and SF Transbay. 1-Day Pass = $35 or $30 with a member 7-Day Pass",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 129.0,
+        "currency": "USD",
+        "rawLabel": "= $129 Marin Gym Access Only 1-Day Pass",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 20.0,
+        "currency": "USD",
+        "rawLabel": "= $25 (or $20 with a member) 7-Day Pass",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 69.0,
+        "currency": "USD",
+        "rawLabel": "= $69 Oakland Gym Only Access 1-Day Pass",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://fitnesssf.com/join": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"a0b85fbcb328ca4236efbb7ed5342f00\"",
+    "lastModified": "Wed, 15 Jul 2026 20:22:01 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "08b4e458c1b80bf8d2ffacdff36b5747f329e3321a7bca8b8f9eb71c75ec5e16",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.ymcasf.org/membership/safety-at-the-y/": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Tue, 17 Sep 2024 10:46:12 GMT",
+    "parserVersion": "selected-plan-catalog-v2",
+    "contentHash": "745d9b4eba3b05e4812f4b5b8bd58758780a74b25aef9e98eb45595d09c5eece",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.ymcasf.org/membership/",
+      "https://www.ymcasf.org/membership/safety-at-the-y/#what-y-is-doing"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "169 Steuart Street San Francisco , CA 94105",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.ymcasf.org/membership/safety-at-the-y/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 169 Steuart Street San Francisco , CA 94105",
+        "contentHash": "c1b85685b74b457e6f1bbb72be7e39a34366218d07cb9379098471c9e8e168fa",
+        "autoPublishEligible": false
+      }
+    ]
   }
 }
