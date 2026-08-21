@@ -52,6 +52,8 @@ PROFILES = (
     PlatformProfile("bookee", ("onbookee.com",)),
     PlatformProfile("mariana-tek", ("marianatek.com", "marianaiframes.com")),
     PlatformProfile("eventbrite", ("eventbrite.com",)),
+    PlatformProfile("abc-fitness", ("onlinejoin.abcfitness.com",)),
+    PlatformProfile("redpoint", ("portal.movementgyms.com",)),
 )
 
 NAME_KEYS = ("name", "title", "label", "productName", "packageName", "membershipName", "serviceName")

@@ -737,15 +737,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-996696401:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-996696401:plan:8b2886ae23a3495aa48b44e11dd6ac52",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -755,8 +755,23 @@
       "crawlAttempts": [
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/locations",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership#f45",
+          "status": "fetched",
+          "candidateCount": 3
         },
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
@@ -2117,15 +2132,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-13905876759:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-13905876759:plan:twelve-per-month",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2134,9 +2149,44 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
-          "url": "https://www.thecitycrossfit.com/",
-          "status": "not-modified",
+          "url": "http://citycrossfit.wodify.com/OnlineSalesPortal/PurchaseByKeyEntry.aspx?Key=AM8DAhrr31ZcV1uXH8e7gXhev",
+          "status": "robots-disallowed",
           "candidateCount": 0
+        },
+        {
+          "url": "http://citycrossfit.wodify.com/OnlineSalesPortal/PurchaseByKeyEntry.aspx?Key=M57WbBqJUjLZFds9b4jcaKOVJ",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://citycrossfit.wodify.com/OnlineSalesPortal/Sessions.aspx?LocationId=6314",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/drop-in",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/drop-in#page",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/memberships",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/memberships#page",
+          "status": "fetched",
+          "candidateCount": 3
         },
         {
           "url": "https://www.thecitycrossfit.com/",
@@ -3176,8 +3226,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -5096,15 +5146,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-06bc58a9a5ca84:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-06bc58a9a5ca84:plan:monthly-membership",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -5114,18 +5164,43 @@
       "crawlAttempts": [
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info",
-          "status": "fetched",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=40",
+          "status": "http-403",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100002",
-          "status": "fetched",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100003",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100010",
+          "status": "http-403",
           "candidateCount": 0
         },
         {
           "url": "https://www.forgekravmaga.com/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.forgekravmaga.com/pricing",
+          "status": "fetched",
+          "candidateCount": 5
+        },
+        {
+          "url": "https://www.forgekravmaga.com/pricing#page",
+          "status": "fetched",
+          "candidateCount": 5
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info",
@@ -5158,15 +5233,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-a3d8ded3014a16:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-a3d8ded3014a16:plan:studio-auto-monthly",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -5176,7 +5251,7 @@
       "crawlAttempts": [
         {
           "url": "https://www.funkydoor.com/san-francisco-pricing",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 4
         },
         {
@@ -6312,12 +6387,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6773,8 +6848,8 @@
           "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6801,22 +6876,24 @@
       "websiteUrl": "https://lotuslandyogasf.com/",
       "entityKind": "studio",
       "modality": "yoga",
-      "pricingStatus": "verified",
-      "pricingBlocker": "",
+      "pricingStatus": "unresolved",
+      "pricingBlocker": "A source price exists but no eligible recurring plan can be selected.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [],
-      "selectedPlanId": "osm-node-2666409791:plan:legacy-reviewed-selected",
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
+      "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6826,6 +6903,11 @@
       "crawlAttempts": [
         {
           "url": "https://lotuslandyogasf.com/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/l/79heGllJ",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -7133,15 +7215,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-4289bb94baeda1:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-4289bb94baeda1:plan:ba5aaedde74d48bda22e0de78ab24bc6",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7151,8 +7233,18 @@
       "crawlAttempts": [
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/locations",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
+          "status": "fetched",
+          "candidateCount": 3
         },
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
@@ -7484,15 +7576,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-24334661:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-24334661:plan:monthly-primary",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7697,8 +7789,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -7776,8 +7868,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -8112,7 +8204,37 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.orangetheory.com/en-us/locations",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.orangetheory.com/en-us/locations#main-content",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150#main-content",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150#memberships",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.orangetheory.com/en-us/memberships",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.orangetheory.com/en-us/memberships#main-content",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -9160,12 +9282,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9363,15 +9485,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-44c39e1d4144c1:plan:card-ac2400f664593a01",
+      "selectedPlanId": "web-44c39e1d4144c1:plan:unlimited-yoga-monthly",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "source-fragment",
-          "reason": "Reviewed visit or class offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9381,7 +9503,7 @@
       "crawlAttempts": [
         {
           "url": "https://www.solyogasf.com/",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -9573,15 +9695,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6493825931:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-6493825931:plan:basic-five",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9880,15 +10002,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-0c3933dd5d019f:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-0c3933dd5d019f:plan:yoga-membership",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9897,9 +10019,24 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5746509&stype=42&sLoc=0&giftCardID=70",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.studiobylivebetter.com/",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.studiobylivebetter.com/pricing",
+          "status": "fetched",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://www.studiobylivebetter.com/pricing#page",
+          "status": "fetched",
+          "candidateCount": 2
         },
         {
           "url": "https://www.studiobylivebetter.com/",
@@ -9959,15 +10096,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-3674255652:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-3674255652:plan:standard-six-month",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9976,8 +10113,13 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://sunsetgym.com/memberships",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
           "url": "https://sunsetgym.com/memberships/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 1
         },
         {
@@ -10134,9 +10276,59 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://barmethod.com/locations/san-francisco-downtown/buy/?_mt=%2Fbuy%2F48787%3FactiveProduct%3Dcredits-25682",
+          "status": "http-404",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-downtown/buy/?_mt=%2Fbuy%2F48787%3FactiveProduct%3Dmemberships-25348",
+          "status": "http-404",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-downtown/buy/?_mt=%2Fbuy%2F48787%3FactiveProduct%3Dmemberships-25354",
+          "status": "http-404",
+          "candidateCount": 0
+        },
+        {
           "url": "https://barmethod.com/locations/san-francisco-fidi/",
           "status": "fetched",
           "candidateCount": 3
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/#cs-content",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/buy/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/buy/#cs-content",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154#cs-content",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/schedule/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/schedule/#cs-content",
+          "status": "fetched",
+          "candidateCount": 0
         },
         {
           "url": "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True",
@@ -10375,8 +10567,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -10768,12 +10960,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -11133,15 +11325,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-4395534973:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-4395534973:plan:monthly-auto-renewal",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -11150,14 +11342,79 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=120&studioid=5134&stype=40",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=172&sTG=1&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=53&sTG=1&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41",
-          "status": "fetched",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodid=127&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodid=128&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodid=129&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodid=170&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodid=1893&studioid=5134&stype=41",
+          "status": "http-403",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5134&stype=42",
+          "status": "http-403",
           "candidateCount": 0
         },
         {
           "url": "https://www.yogamayu.com/",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.yogamayu.com/location",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.yogamayu.com/location#page",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.yogamayu.com/pricing",
+          "status": "fetched",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://www.yogamayu.com/pricing#page",
+          "status": "fetched",
+          "candidateCount": 2
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41",

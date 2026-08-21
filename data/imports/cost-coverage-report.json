@@ -11,8 +11,8 @@
     "operator-confirmed": 0,
     "pay-per-visit": 25,
     "reported": 0,
-    "unresolved": 5,
-    "verified": 155
+    "unresolved": 6,
+    "verified": 154
   },
   "suppressedAliasCount": 107,
   "suppressedAliases": [
@@ -577,11 +577,11 @@
     "public-recreation": 38,
     "studio": 106
   },
-  "verifiedMonthlyCount": 155,
-  "verifiedDayPassCount": 122,
+  "verifiedMonthlyCount": 154,
+  "verifiedDayPassCount": 121,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 135,
-  "approvedOperatorCatalogLocationsApplied": 55,
+  "approvedOperatorCatalogLocationsApplied": 67,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
   "approvedDealsApplied": 11,
@@ -592,7 +592,7 @@
   "reportedMonthlyCount": 0,
   "estimatedMonthlyCount": 10,
   "approvedExternalComparableCount": 1,
-  "officialCostContextListingCount": 17,
+  "officialCostContextListingCount": 16,
   "fieldCoverage": {
     "specificDescriptionCount": 248,
     "officialUrlCount": 246,
@@ -603,19 +603,19 @@
     "hoursNotApplicableCount": 0,
     "amenitiesListedCount": 245,
     "operatorLocationIdCount": 124,
-    "sourcePlanCatalogCount": 155,
-    "sourcePlanFragmentCount": 1,
-    "selectedOnlyPlanCatalogCount": 31,
-    "noPlanCatalogCount": 61,
-    "sourceDropInCatalogCount": 112,
-    "sourceDropInFragmentCount": 1,
-    "selectedOnlyDropInCatalogCount": 19,
-    "noDropInCatalogCount": 116,
-    "selectedUnknownCommitmentCount": 64,
-    "selectedUndisclosedClassAllowanceCount": 9,
-    "typicalPlanSelectedCount": 130,
-    "highestAccessPlanSelectedCount": 130,
-    "bestValuePlanSelectedCount": 11,
+    "sourcePlanCatalogCount": 167,
+    "sourcePlanFragmentCount": 0,
+    "selectedOnlyPlanCatalogCount": 13,
+    "noPlanCatalogCount": 68,
+    "sourceDropInCatalogCount": 124,
+    "sourceDropInFragmentCount": 0,
+    "selectedOnlyDropInCatalogCount": 4,
+    "noDropInCatalogCount": 120,
+    "selectedUnknownCommitmentCount": 56,
+    "selectedUndisclosedClassAllowanceCount": 7,
+    "typicalPlanSelectedCount": 141,
+    "highestAccessPlanSelectedCount": 141,
+    "bestValuePlanSelectedCount": 12,
     "explicitMonthlyPriceStateCount": 248,
     "explicitDayPassPriceStateCount": 248,
     "metadataGapStatusCount": 248
@@ -626,8 +626,8 @@
   "commercialUnattemptedSourceListings": [],
   "commercialExactAddressListings": 183,
   "commercialExactAddressCoverage": 1.0,
-  "actionableCommercialListings": 181,
-  "actionableCommercialCoverage": 0.9891,
+  "actionableCommercialListings": 180,
+  "actionableCommercialCoverage": 0.9836,
   "meaningfulCostCommercialListings": 183,
   "meaningfulCostCommercialCoverage": 1.0,
   "officialSiteUnresolvedCount": 2,
@@ -635,30 +635,18 @@
   "officialSiteDiscoveryQueue": 0,
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
-    "publiclyPricedCommercialListings": 170,
-    "reconstructedRelevantCatalogListings": 142,
-    "reconstructedRelevantCatalogCoverage": 0.8353,
+    "publiclyPricedCommercialListings": 169,
+    "reconstructedRelevantCatalogListings": 153,
+    "reconstructedRelevantCatalogCoverage": 0.9053,
     "targetCoverage": 0.9,
-    "targetMet": false,
+    "targetMet": true,
     "priorityPlatformCounts": {
-      "generic-official": 21,
-      "mindbody": 4,
+      "generic-official": 13,
       "mariana-tek": 1,
-      "momence": 1,
+      "mindbody": 1,
       "wellnessliving": 1
     },
     "priorityRecords": [
-      {
-        "id": "osm-node-996696401",
-        "name": "Bakar Fitness Center at UCSF Mission Bay",
-        "operatorId": "campuslifeserviceshome.ucsf.edu",
-        "platforms": [],
-        "monthlyPrice": 144.0,
-        "dayPassPrice": 30.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership"
-      },
       {
         "id": "osm-node-4004802465",
         "name": "Benchmark Climbing",
@@ -669,17 +657,6 @@
         "planCatalogStatus": "none",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://www.benchmarkclimbing.com/new-memberships-1"
-      },
-      {
-        "id": "osm-node-13905876759",
-        "name": "City CrossFit",
-        "operatorId": "thecitycrossfit.com",
-        "platforms": [],
-        "monthlyPrice": 250.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.thecitycrossfit.com/memberships"
       },
       {
         "id": "web-27e606755f1ba8",
@@ -704,30 +681,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "none",
         "priceSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a"
-      },
-      {
-        "id": "web-06bc58a9a5ca84",
-        "name": "Forge Krav Maga",
-        "operatorId": "forgekravmaga.com",
-        "platforms": [
-          "mindbody"
-        ],
-        "monthlyPrice": 200.0,
-        "dayPassPrice": 40.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.forgekravmaga.com/pricing"
-      },
-      {
-        "id": "web-a3d8ded3014a16",
-        "name": "Funky Door Yoga San Francisco",
-        "operatorId": "funkydoor.com",
-        "platforms": [],
-        "monthlyPrice": 129.0,
-        "dayPassPrice": 36.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.funkydoor.com/san-francisco-pricing"
       },
       {
         "id": "web-6123d4a1928a35",
@@ -818,41 +771,6 @@
         "priceSourceUrl": "https://livefitgym.com/signup-old/"
       },
       {
-        "id": "osm-node-2666409791",
-        "name": "Lotusland Yoga",
-        "operatorId": "lotusland-yoga",
-        "platforms": [
-          "momence"
-        ],
-        "monthlyPrice": 135.0,
-        "dayPassPrice": 18.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://lotuslandyogasf.com/schedule/"
-      },
-      {
-        "id": "web-4289bb94baeda1",
-        "name": "Millberry Fitness Center at UCSF Parnassus",
-        "operatorId": "campuslifeserviceshome.ucsf.edu",
-        "platforms": [],
-        "monthlyPrice": 129.0,
-        "dayPassPrice": 30.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership"
-      },
-      {
-        "id": "osm-way-24334661",
-        "name": "Movement San Francisco",
-        "operatorId": "movementgyms.com",
-        "platforms": [],
-        "monthlyPrice": 115.0,
-        "dayPassPrice": 33.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://movementgyms.com/san-francisco/"
-      },
-      {
         "id": "web-dcbf7708bf2f77",
         "name": "Orangetheory Fitness San Francisco Pacific Heights",
         "operatorId": "orangetheory",
@@ -864,30 +782,6 @@
         "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150"
       },
       {
-        "id": "web-44c39e1d4144c1",
-        "name": "Sol Hot Yoga & Movement",
-        "operatorId": "solyogasf.com",
-        "platforms": [],
-        "monthlyPrice": 100.0,
-        "dayPassPrice": 25.0,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "source-fragment",
-        "priceSourceUrl": "https://www.solyogasf.com/membership"
-      },
-      {
-        "id": "osm-node-6493825931",
-        "name": "Soluna Yoga and Wellness",
-        "operatorId": "solunayogaandwellness.com",
-        "platforms": [
-          "mindbody"
-        ],
-        "monthlyPrice": 100.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.solunayogaandwellness.com/"
-      },
-      {
         "id": "web-c745e6dbdcadb6",
         "name": "Strong Friends",
         "operatorId": "strongfriendsgym.com",
@@ -897,28 +791,6 @@
         "planCatalogStatus": "none",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://www.strongfriendsgym.com/programs/drop-in"
-      },
-      {
-        "id": "web-0c3933dd5d019f",
-        "name": "Studio By Live Better",
-        "operatorId": "studiobylivebetter.com",
-        "platforms": [],
-        "monthlyPrice": 150.0,
-        "dayPassPrice": 30.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.studiobylivebetter.com/pricing"
-      },
-      {
-        "id": "osm-node-3674255652",
-        "name": "Sunset Gym",
-        "operatorId": "sunset gym",
-        "platforms": [],
-        "monthlyPrice": 74.99,
-        "dayPassPrice": 20.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://sunsetgym.com/memberships/"
       },
       {
         "id": "web-e20a10174e60fa",
@@ -956,50 +828,37 @@
         "planCatalogStatus": "none",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://www.worldteamusa.net/services"
-      },
-      {
-        "id": "osm-node-4395534973",
-        "name": "Yoga Mayu",
-        "operatorId": "yoga mayu",
-        "platforms": [
-          "mindbody"
-        ],
-        "monthlyPrice": 195.0,
-        "dayPassPrice": 28.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.yogamayu.com/pricing"
       }
     ],
-    "sourceFragmentPlanCatalogs": 1,
-    "selectedOnlyPlanCatalogs": 31,
-    "sourceFragmentDropInCatalogs": 1,
-    "selectedOnlyDropInCatalogs": 19
+    "sourceFragmentPlanCatalogs": 0,
+    "selectedOnlyPlanCatalogs": 13,
+    "sourceFragmentDropInCatalogs": 0,
+    "selectedOnlyDropInCatalogs": 4
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 722,
+    "requestCount": 773,
     "statusCounts": {
       "access-blocked": 33,
-      "fetched": 323,
-      "http-403": 5,
-      "http-404": 5,
+      "fetched": 355,
+      "http-403": 21,
+      "http-404": 8,
       "http-429": 15,
       "network-error": 4,
-      "not-modified": 32,
+      "not-modified": 29,
       "render-error": 4,
       "rendered": 265,
-      "robots-disallowed": 36
+      "robots-disallowed": 39
     },
-    "reviewCandidatePages": 150,
-    "linkedStorefrontRequests": 120,
+    "reviewCandidatePages": 163,
+    "linkedStorefrontRequests": 172,
     "renderedRequests": 314,
     "renderedAccessBlockedRequests": 33,
     "renderedAccessBlockerCounts": {
       "captcha-required": 3,
       "platform-security-check": 30
     },
-    "priceChangeFlags": 30
+    "priceChangeFlags": 29
   },
   "publicSourceDiscoverySummary": {
     "attemptedListings": 3,
@@ -1047,17 +906,23 @@
       "rangeCoverage": 1.0
     },
     "yoga": {
-      "sampleSize": 20,
-      "medianAbsolutePercentageError": 0.0487,
-      "rangeCoverage": 0.8
+      "sampleSize": 13,
+      "medianAbsolutePercentageError": 0.2222,
+      "rangeCoverage": 0.7692
     },
     "overall": {
-      "sampleSize": 77,
-      "medianAbsolutePercentageError": 0.0853,
+      "sampleSize": 70,
+      "medianAbsolutePercentageError": 0.124,
       "rangeCoverage": 0.8571
     }
   },
-  "withheldEstimateModalities": {},
+  "withheldEstimateModalities": {
+    "yoga": {
+      "sampleSize": 13,
+      "medianAbsolutePercentageError": 0.2222,
+      "rangeCoverage": 0.7692
+    }
+  },
   "publicationChecks": {
     "allClassified": true,
     "allHavePricingStatus": true,
@@ -1087,7 +952,7 @@
     "commercialActionableCoverageAtLeast90Percent": true,
     "commercialMeaningfulCostCoverageAtLeast97Percent": true,
     "commercialExactAddressCoverageAtLeast95Percent": true,
-    "commercialCatalogCoverageAtLeast90Percent": false,
+    "commercialCatalogCoverageAtLeast90Percent": true,
     "zeroUnreviewedSameOperatorExactAddressDuplicates": true,
     "overallEstimatorMedianErrorAtMost15Percent": true,
     "overallEstimatorRangeCoverageAtLeast75Percent": true

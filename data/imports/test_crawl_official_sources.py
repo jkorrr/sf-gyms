@@ -1,7 +1,9 @@
 from __future__ import annotations
 
 import unittest
+import concurrent.futures
 import json
+import threading
 from datetime import datetime
 from pathlib import Path
 
@@ -9,6 +11,40 @@ import crawl_official_sources as crawler
 
 
 class OfficialCrawlerTests(unittest.TestCase):
+    def test_concurrent_locations_share_one_physical_request(self) -> None:
+        requests: dict[str, concurrent.futures.Future[dict[str, object]]] = {}
+        lock = threading.Lock()
+        calls = 0
+        release = threading.Event()
+
+        def fetcher() -> dict[str, object]:
+            nonlocal calls
+            calls += 1
+            release.wait(timeout=1)
+            return {"status": "fetched", "url": "https://operator.example/pricing"}
+
+        with concurrent.futures.ThreadPoolExecutor(max_workers=2) as executor:
+            first = executor.submit(
+                crawler.fetch_once_for_run,
+                "https://operator.example/pricing#plans",
+                requests,
+                lock,
+                fetcher,
+            )
+            second = executor.submit(
+                crawler.fetch_once_for_run,
+                "https://operator.example/pricing#memberships",
+                requests,
+                lock,
+                fetcher,
+            )
+            release.set()
+            results = [first.result(), second.result()]
+
+        self.assertEqual(calls, 1)
+        self.assertEqual(len(requests), 1)
+        self.assertEqual(sum(bool(result.get("sharedResponse")) for result in results), 1)
+
     def test_same_operator_pricing_documents_are_followed_but_accounts_are_not(self) -> None:
         links = crawler.linked_storefronts(
             "https://operator.example/location/sf",
@@ -44,7 +80,42 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(crawler.platform_name("https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm"), "zen-planner")
         self.assertEqual(crawler.platform_name("https://joltathleticsappts.as.me/"), "acuity")
         self.assertEqual(crawler.platform_name("https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing"), "gymdesk")
+        self.assertEqual(crawler.platform_name("https://onlinejoin.abcfitness.com/signup/plan?club=1"), "abc-fitness")
+        self.assertEqual(crawler.platform_name("https://portal.movementgyms.com/san-francisco/memberships/monthly-membership"), "redpoint")
         self.assertEqual(crawler.platform_name("https://example.com/pricing"), "operator-site")
+
+    def test_abc_fitness_catalog_expands_plan_list_and_plan_linked_fee(self) -> None:
+        join_url = "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=general"
+        self.assertEqual(
+            crawler.abc_fitness_storefronts(join_url),
+            ["https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627"],
+        )
+        plan_list = [
+            {"planId": "general-plan-123", "planName": "General Public Membership"},
+            {"planId": "senior-plan-123", "planName": "Senior Membership"},
+        ]
+        offers, nested = crawler.abc_fitness_catalog_candidates(
+            plan_list,
+            "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627",
+        )
+        self.assertEqual(offers, [])
+        self.assertEqual(len(nested), 2)
+        summary = {
+            "planId": "general-plan-123",
+            "planName": "General Public Membership",
+            "agreementTerm": "Open",
+            "renewalAmount": "$144.00",
+            "renewalFrequency": "Monthly",
+            "downPayments": [
+                {"name": "Enrollment Fee", "total": "$100.00"},
+                {"name": "Prorated First Month Dues", "total": "$42.00"},
+            ],
+        }
+        candidates, deeper = crawler.abc_fitness_catalog_candidates(summary, nested[0])
+        self.assertEqual(deeper, [])
+        self.assertEqual(candidates[0]["amount"], 144)
+        self.assertEqual(candidates[0]["commitment"]["type"], "month-to-month")
+        self.assertEqual([(fee["type"], fee["amount"]) for fee in candidates[0]["fees"]], [("enrollment", 100)])
 
     def test_discovers_operator_owned_bookee_iframe(self) -> None:
         html = '<iframe src="https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211"></iframe>'
@@ -233,6 +304,46 @@ CLUB INFO"""
         classic = next(item for item in offers if item["sourceProductId"] == "classic")
         self.assertEqual(classic["commitment"], {"type": "fixed-term", "minimumMonths": 12})
         self.assertEqual(classic["fees"][0]["amount"], 1)
+
+    def test_independent_operator_cards_reconstruct_city_and_forge_catalogs(self) -> None:
+        city = crawler.independent_operator_visible_candidates(
+            "Month To Month $275 Unlimited $250 12x Per Month $35 Drop In 10 Class Pack",
+            "https://www.thecitycrossfit.com/memberships",
+        )
+        self.assertEqual({item["sourceProductId"] for item in city}, {
+            "twelve-per-month", "unlimited-monthly", "drop-in", "ten-class-pack", "intro-series",
+        })
+        self.assertEqual(next(item for item in city if item["sourceProductId"] == "twelve-per-month")["classAllowance"]["count"], 12)
+        self.assertEqual(next(item for item in city if item["sourceProductId"] == "drop-in")["amount"], 35)
+
+        forge = crawler.independent_operator_visible_candidates(
+            "Monthly Membership $200/month Annual Membership $2,160/year 10 Class Pack $375 Drop-In Day Pass $40",
+            "https://www.forgekravmaga.com/pricing",
+        )
+        annual = next(item for item in forge if item["sourceProductId"] == "annual-membership")
+        trial = next(item for item in forge if item["sourceProductId"] == "two-trial-classes")
+        self.assertEqual((annual["amount"], annual["cadence"], annual["commitment"]["minimumMonths"]), (2160, "year", 12))
+        self.assertTrue(trial["promotion"]["isPromotion"])
+
+    def test_independent_operator_cards_preserve_fees_and_sliding_scale(self) -> None:
+        funky = crawler.independent_operator_visible_candidates(
+            "Auto Monthly - $129 one time $49 sign up fee 10 Class Pack - $260 24 Class Pack - $495 Drop-In Classes: $36",
+            "https://funkydoor.com/prices",
+        )
+        selected = next(item for item in funky if item["sourceProductId"] == "studio-auto-monthly")
+        self.assertEqual(selected["fees"][0], {
+            "type": "enrollment", "amount": 49, "currency": "USD", "cadence": "one-time", "mandatory": True,
+        })
+        self.assertTrue(selected["bestValueLabel"])
+
+        lotus = crawler.independent_operator_visible_candidates(
+            "Unlimited Monthly Sliding-Scale Membership $135 - $175 $175 One Month $450 3 Month $122 5 Class $220 10 Class",
+            "https://www.lotuslandyogasf.com/pricespolicies/",
+        )
+        sliding = next(item for item in lotus if item["sourceProductId"] == "sliding-scale-monthly")
+        self.assertEqual(sliding["amount"], 135)
+        self.assertEqual(sliding["eligibility"]["type"], "sliding-scale")
+        self.assertTrue(crawler.RESEARCH_PATH_RE.search("/pricespolicies/"))
 
     def test_follows_owned_storefront_but_not_marketplace(self) -> None:
         links = [

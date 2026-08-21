@@ -824,13 +824,16 @@
     "locationCandidates": []
   },
   "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay": {
-    "status": "not-modified",
-    "lastAttemptAt": "2026-08-20",
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "7bfb66e0b94f93c5a0e4f3476947758c2ae10218ff50acabfd6c024e6f929474",
+    "lastModified": "Fri, 21 Aug 2026 00:14:32 GMT",
+    "contentHash": "325c3ad48c1003174ccf3f87e7f3e18689de0fc71bcc72c2cdcb9f0be4aeed20",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership#f45",
+      "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -1625,13 +1628,16 @@
     "locationCandidates": []
   },
   "https://www.thecitycrossfit.com/": {
-    "status": "not-modified",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "",
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"1bb2228b7723db7f9bed7896a5d34803\"",
     "lastModified": "",
-    "contentHash": "5b948877993f14be0049d8bc96696d87a358bd3631d3cf8ac0467625e36da0a0",
+    "contentHash": "22cc5044d62584b4be3d5a86fab151461bc931c99c6546d16183d3c7bbf4feca",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://www.thecitycrossfit.com/memberships",
+      "https://www.thecitycrossfit.com/drop-in"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -5417,14 +5423,15 @@
     ]
   },
   "https://www.forgekravmaga.com/": {
-    "status": "not-modified",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "",
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"d6d7d29b46b850476e552f52de6e0486--gzip\"",
     "lastModified": "",
-    "contentHash": "12c39aa6bd147db109627754157b800298b81829e78c5e72ce51e7aa26f95617",
+    "contentHash": "f1641086feba3e11d07a3279374c94366a7ac659b85f23a6d7061d56f16003ea",
     "candidates": [],
     "linkedStorefronts": [
       "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info",
+      "https://www.forgekravmaga.com/pricing",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100002"
     ],
     "locationCandidates": [
@@ -5444,29 +5451,29 @@
     ]
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "3d2c85a811efbf3e76c0787d6a4cbe360c1d43a01451d8acbf7d22a5f77886fc",
+    "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100002": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "a87cc4ed78ff26d2733382f6cebbbf8de8194c5288847ad0c3fedabafd18a6e3",
+    "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://www.funkydoor.com/san-francisco-pricing": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "W/\"b73a586ddd1d6e96f4ed9f28b96ee7e3--gzip\"",
+    "status": "not-modified",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
     "lastModified": "",
     "contentHash": "629fa5e515ee8496b9704b5b82c08043695099a2a11ca78b5f8d1c26704e2c46",
     "candidates": [
@@ -6607,15 +6614,16 @@
   },
   "https://lotuslandyogasf.com/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "84f9dae0510b556b79aba4c66f9ea0c10320c5a2921e1d4f85ce41e0a93d446a",
+    "contentHash": "00c0e993732912e81a30c7b3ccfdaf140de13ece1ac3f1b061ff21ab0a651797",
     "candidates": [],
     "linkedStorefronts": [
       "https://momence.com/u/lotusland-yoga-sf",
       "https://momence.com/l/k8ha016b",
-      "https://momence.com/l/b8hy9BOQ"
+      "https://momence.com/l/b8hy9BOQ",
+      "https://momence.com/l/79heGllJ"
     ],
     "locationCandidates": [
       {
@@ -6674,7 +6682,7 @@
   },
   "https://momence.com/u/lotusland-yoga-sf": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "8b40cdcf037edd05db31a8dac6850182ae734a0bfe4f1425a395d8fc09e32c58",
@@ -6684,20 +6692,20 @@
   },
   "https://momence.com/l/k8ha016b": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "549eb475ee48a36a6c9aa8eac980fbd38c8b025c4501695fb2003d3b6d266ca3",
+    "contentHash": "eae0b8430000f2600068348c7538d4af342a54a46330014bdadc0494990e48bf",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://momence.com/l/b8hy9BOQ": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "dd152fc4d7fc63d87e0b6e90c4eb50b1bbe67449302642e121ea6524eb393595",
+    "contentHash": "9bec57c3c9e697c9e33e320895c58e58c70357f8e8a9bf2bd10dda271070eb65",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -7192,13 +7200,15 @@
     ]
   },
   "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus": {
-    "status": "not-modified",
-    "lastAttemptAt": "2026-08-20",
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
-    "contentHash": "e81c5de1fff1456abcdc01b028aea050219b5da2252dba95d3d9b5d04c251df0",
+    "lastModified": "Fri, 21 Aug 2026 00:15:25 GMT",
+    "contentHash": "b63e0be15232c22ac94ce973b0a71ba7c7eef57faf5b1c631c21ad7314998844",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -7697,10 +7707,10 @@
   },
   "https://movementgyms.com/san-francisco/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "0439034a99a60ce5515cb12359f056534cef0e0cc8a78b665f05511cea978bac",
+    "contentHash": "65049ac1d170f3d8561104df5a857dd007400921df2732d8a3f6a25d7b5e6d5d",
     "candidates": [
       {
         "amount": 25.0,
@@ -7723,6 +7733,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7747,6 +7759,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7771,6 +7785,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7795,6 +7811,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7821,6 +7839,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7849,6 +7869,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7873,6 +7895,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       },
@@ -7899,6 +7923,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://movementgyms.com/san-francisco/",
         "autoPublishEligible": false
       }
@@ -8249,12 +8275,17 @@
   },
   "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "95305c33a33802b5dfa6dea19e161afd3b72852c5e8dfa41f19c5d60852517c1",
+    "contentHash": "bcefdc78d47c9b4fef577d08706a32c288723a3c6ee2ca000265abbeae402e16",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150#main-content",
+      "https://www.orangetheory.com/en-us/locations",
+      "https://www.orangetheory.com/en-us/memberships",
+      "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150#memberships"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -8758,9 +8789,9 @@
     "locationCandidates": []
   },
   "https://www.solyogasf.com/": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "W/\"e1b32f36d7ec79fa63f98ad8336bb1ec\"",
+    "status": "not-modified",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
     "lastModified": "",
     "contentHash": "910acae14b3275807fd061af21e6e0d7181c2e3ae748988a03cba1f40bf1abd5",
     "candidates": [],
@@ -9427,12 +9458,14 @@
   },
   "https://www.studiobylivebetter.com/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "W/\"dced7a0e19391b4ac36c8b77090602ca--gzip\"",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"ca2ff3151adde31baaab74ef3443a89a--gzip\"",
     "lastModified": "",
-    "contentHash": "666fb3b758dc4d8a95ba80e03a8dc1a790289e9c7abcba307c7324a3f90c5bb0",
+    "contentHash": "d9e9bff9d706d20d1450f30ad955d87346bdb126e0a37d62aa91d6a32f137bfc",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://www.studiobylivebetter.com/pricing"
+    ],
     "locationCandidates": [
       {
         "name": "3915 Noriega Street",
@@ -9486,7 +9519,7 @@
   },
   "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True": {
     "status": "robots-disallowed",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
@@ -9496,10 +9529,10 @@
   },
   "https://barmethod.com/locations/san-francisco-fidi/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "2227c368ee69bf5b5b5267087b7c554d25b4cdd158581542231fafd999cbeb90",
+    "contentHash": "7b2260e19e06a1085a6fee6742d6b2e7def7ecd4b3fb35320ef9e05ce0d25e67",
     "candidates": [
       {
         "amount": 6.0,
@@ -9526,6 +9559,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
         "autoPublishEligible": false
       },
@@ -9550,6 +9585,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
         "autoPublishEligible": false
       },
@@ -9574,28 +9611,14 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
         "autoPublishEligible": false
       }
     ],
-    "linkedStorefronts": [
-      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
-    ],
-    "locationCandidates": [
-      {
-        "name": "",
-        "address": "234 Bush Street, Suite 132 San Francisco, CA 94104",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 234 Bush Street, Suite 132 San Francisco, CA 94104",
-        "contentHash": "7e4a1bc09b05e8c026af0ecbfedd7608910d81377489496b6053978572b491e0",
-        "autoPublishEligible": false
-      }
-    ]
+    "linkedStorefronts": [],
+    "locationCandidates": []
   },
   "https://www.castroroom.com/": {
     "status": "not-modified",
@@ -10638,9 +10661,9 @@
     "locationCandidates": []
   },
   "https://sunsetgym.com/memberships/": {
-    "status": "not-modified",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "",
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"ff1258807866339fdf7db947fe3f742b-ssl\"",
     "lastModified": "",
     "contentHash": "07b9be6b84859cd5e7e2585bc632538dabacb2f2e98854a0ed1bd02f196b893d",
     "candidates": [
@@ -10665,11 +10688,15 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://sunsetgym.com/memberships/",
         "autoPublishEligible": false
       }
     ],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://sunsetgym.com/memberships"
+    ],
     "locationCandidates": [
       {
         "name": "",
@@ -10688,10 +10715,10 @@
   },
   "https://www.yogamayu.com/pricing": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-18",
-    "etag": "W/\"ce97c54fcd8758c183a8c0786a85d2cc--gzip\"",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"a6cd692d35f201b5a1e5ad86ab267808\"",
     "lastModified": "",
-    "contentHash": "50b850627a96973e5241af57b00c1c04837d7b5588e472ead784f48af28a788a",
+    "contentHash": "1fede8df1991c61d8e30cbc97b077cdf7f413214613d279c24f9e1a5307829cb",
     "candidates": [
       {
         "amount": 195.0,
@@ -10718,6 +10745,8 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://www.yogamayu.com/pricing",
         "autoPublishEligible": false
       },
@@ -10747,43 +10776,14 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://www.yogamayu.com/pricing",
         "autoPublishEligible": false
       }
     ],
-    "linkedStorefronts": [
-      "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41",
-      "https://clients.mindbodyonline.com/classic/ws?prodid=129&studioid=5134&stype=41",
-      "https://clients.mindbodyonline.com/classic/ws?prodid=128&studioid=5134&stype=41"
-    ],
-    "locationCandidates": [
-      {
-        "name": "Yoga Mayu",
-        "address": "1501 20th Street\nSan Francisco, CA, 94107\nUnited States",
-        "latitude": null,
-        "longitude": null,
-        "hours": "Mo 00:00-00:00, Tu 00:00-00:00, We 00:00-00:00, Th 00:00-00:00, Fr 00:00-00:00, Sa 00:00-00:00, Su 00:00-00:00",
-        "amenities": [],
-        "sourceUrl": "https://www.yogamayu.com/pricing",
-        "method": "json-ld-location",
-        "rawLabel": "Yoga Mayu | 1501 20th Street San Francisco, CA, 94107 United States | Mo 00:00-00:00, Tu 00:00-00:00, We 00:00-00:00, Th 00:00-00:00, Fr 00:00-00:00, Sa 00:00-00:00, Su 00:00-00:00",
-        "contentHash": "9ac6cd822a7f976bb44287eb9be1dcfa1eafca6f07313daf4acc7b6500624145",
-        "autoPublishEligible": false
-      },
-      {
-        "name": "",
-        "address": "1501 b 20th Street San Francisco, CA 94107",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://www.yogamayu.com/pricing",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 1501 b 20th Street San Francisco, CA 94107",
-        "contentHash": "287ab3b2255f5531633820e9842f89736a934a8c52789492d0f60b7b11ba623d",
-        "autoPublishEligible": false
-      }
-    ]
+    "linkedStorefronts": [],
+    "locationCandidates": []
   },
   "https://momence.com/sign-in": {
     "status": "fetched",
@@ -10816,18 +10816,18 @@
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "5b80702f212ae560d131f1f7e03aa60109a2f7cb864e44f42a7d7ac8c5c86b4d",
+    "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?prodid=129&studioid=5134&stype=41": {
     "status": "http-403",
-    "lastAttemptAt": "2026-08-18",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
@@ -10836,11 +10836,11 @@
     "locationCandidates": []
   },
   "https://clients.mindbodyonline.com/classic/ws?prodid=128&studioid=5134&stype=41": {
-    "status": "fetched",
-    "lastAttemptAt": "2026-08-18",
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "b2e70534db1bd98f401a5106fcd7cf025de76d62ac64b133d6ab2339aa90a040",
+    "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -16240,12 +16240,14 @@
   },
   "https://www.yogamayu.com/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "W/\"743531899d6b61807fdecd3c7310e351--gzip\"",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"a2f1f0d91a1edd7dfea0351538f4bf40\"",
     "lastModified": "",
-    "contentHash": "fb5044ec906203cf9b62c4c3b665c604c373e8501884c1e97d3e748aa600b500",
+    "contentHash": "023faab8a25d96b362f7e8cd1522d64d6f746504f3321db2c98fb8acf8a1a1da",
     "candidates": [],
     "linkedStorefronts": [
+      "https://www.yogamayu.com/pricing",
+      "https://www.yogamayu.com/location",
       "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41"
     ],
     "locationCandidates": [
@@ -16760,6 +16762,1363 @@
     "etag": "",
     "lastModified": "",
     "contentHash": "2faa24ef9209a28c80e969f3d89c1d6ad6166e4601dd6d91adfa822e43c0f689",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership#f45": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 21 Aug 2026 00:06:12 GMT",
+    "contentHash": "3cc0dd596793aefb44d7ac72e5cf5d23ff136888405fccf58b9d2b05f6faf5ca",
+    "candidates": [
+      {
+        "amount": 75.0,
+        "currency": "USD",
+        "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 47.0,
+        "currency": "USD",
+        "rawLabel": "for members, $47/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 19.0,
+        "currency": "USD",
+        "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/locations"
+    ],
+    "locationCandidates": []
+  },
+  "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/locations": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 21 Aug 2026 00:16:41 GMT",
+    "contentHash": "efe6add663c9cf47e7781a889d83fbcce31736fe6e59f71f7c00e233908aa230",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 21 Aug 2026 00:06:12 GMT",
+    "contentHash": "3cc0dd596793aefb44d7ac72e5cf5d23ff136888405fccf58b9d2b05f6faf5ca",
+    "candidates": [
+      {
+        "amount": 75.0,
+        "currency": "USD",
+        "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 47.0,
+        "currency": "USD",
+        "rawLabel": "for members, $47/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 19.0,
+        "currency": "USD",
+        "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/locations"
+    ],
+    "locationCandidates": []
+  },
+  "https://www.thecitycrossfit.com/memberships": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"2b19254ad605c867f9153af84c68c95a\"",
+    "lastModified": "",
+    "contentHash": "c313e200192ea2d09f1c0ddc6f6624186e3454ce544969ec6c0f5eb27182aab2",
+    "candidates": [
+      {
+        "amount": 250.0,
+        "currency": "USD",
+        "rawLabel": "h: 767px) { } Month To Month $275 – Unlimited $250 – 12x Per Month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 275.0,
+        "currency": "USD",
+        "rawLabel": "{ } Class Packages $35 – Drop In $275",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 35.0,
+        "currency": "USD",
+        "rawLabel": "767px) { } Class Packages $35 – Drop In",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.thecitycrossfit.com/memberships#page": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"2b19254ad605c867f9153af84c68c95a\"",
+    "lastModified": "",
+    "contentHash": "c313e200192ea2d09f1c0ddc6f6624186e3454ce544969ec6c0f5eb27182aab2",
+    "candidates": [
+      {
+        "amount": 250.0,
+        "currency": "USD",
+        "rawLabel": "h: 767px) { } Month To Month $275 – Unlimited $250 – 12x Per Month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 275.0,
+        "currency": "USD",
+        "rawLabel": "{ } Class Packages $35 – Drop In $275",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 35.0,
+        "currency": "USD",
+        "rawLabel": "767px) { } Class Packages $35 – Drop In",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.thecitycrossfit.com/drop-in": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"d36170ede84dfd6e6f843b8c765da78b--gzip\"",
+    "lastModified": "",
+    "contentHash": "ac3c376a6dc46bdcedccc95dbfa5358c0c1b15d8861ed2973be4eb6f9345f20d",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.thecitycrossfit.com/drop-in#page",
+      "https://www.thecitycrossfit.com/memberships",
+      "https://citycrossfit.wodify.com/OnlineSalesPortal/Sessions.aspx?LocationId=6314"
+    ],
+    "locationCandidates": []
+  },
+  "http://citycrossfit.wodify.com/OnlineSalesPortal/PurchaseByKeyEntry.aspx?Key=AM8DAhrr31ZcV1uXH8e7gXhev": {
+    "status": "robots-disallowed",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "http://citycrossfit.wodify.com/OnlineSalesPortal/PurchaseByKeyEntry.aspx?Key=M57WbBqJUjLZFds9b4jcaKOVJ": {
+    "status": "robots-disallowed",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.thecitycrossfit.com/drop-in#page": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"d36170ede84dfd6e6f843b8c765da78b--gzip\"",
+    "lastModified": "",
+    "contentHash": "ac3c376a6dc46bdcedccc95dbfa5358c0c1b15d8861ed2973be4eb6f9345f20d",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://citycrossfit.wodify.com/OnlineSalesPortal/Sessions.aspx?LocationId=6314": {
+    "status": "robots-disallowed",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.forgekravmaga.com/pricing": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"1ba427b1784c92957a1e5d16a7eaeb53--gzip\"",
+    "lastModified": "",
+    "contentHash": "013852c823d4562b38e58c374ccb11fd4e6a82525fb76aa105293bd5835d7c3e",
+    "candidates": [
+      {
+        "amount": 375.0,
+        "currency": "USD",
+        "rawLabel": "Class Packs (flexible training) Drop-In Day Pass — $40 Train for a day without a membership. 10 Class Pack — $375 Best if you want to train consistently but don’t want a monthly",
+        "cadence": "month",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 200.0,
+        "currency": "USD",
+        "rawLabel": "} Memberships (best value) Monthly Membership — $200/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 375.0,
+        "currency": "USD",
+        "rawLabel": "Drop In Day Pass for $40 #block-e92ad72a6aeda424bd24 { --sqs-block-content-flex: 1; } 10 Class Pack for $375 #block-63acac05cee43b628a98 { --sqs-block-content-flex: 1; } Monthly",
+        "cadence": "month",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 40.0,
+        "currency": "USD",
+        "rawLabel": "} Class Packs (flexible training) Drop-In Day Pass — $40",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 40.0,
+        "currency": "USD",
+        "rawLabel": "r $30 Total #block-yui_3_17_2_1_1739157723596_2369 { --sqs-block-content-flex: 1; } Drop In Day Pass for $40",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://www.forgekravmaga.com/pricing#page",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100002",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100003",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100010",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=40"
+    ],
+    "locationCandidates": []
+  },
+  "https://www.forgekravmaga.com/pricing#page": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"1ba427b1784c92957a1e5d16a7eaeb53--gzip\"",
+    "lastModified": "",
+    "contentHash": "013852c823d4562b38e58c374ccb11fd4e6a82525fb76aa105293bd5835d7c3e",
+    "candidates": [
+      {
+        "amount": 375.0,
+        "currency": "USD",
+        "rawLabel": "Class Packs (flexible training) Drop-In Day Pass — $40 Train for a day without a membership. 10 Class Pack — $375 Best if you want to train consistently but don’t want a monthly",
+        "cadence": "month",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 200.0,
+        "currency": "USD",
+        "rawLabel": "} Memberships (best value) Monthly Membership — $200/month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 375.0,
+        "currency": "USD",
+        "rawLabel": "Drop In Day Pass for $40 #block-e92ad72a6aeda424bd24 { --sqs-block-content-flex: 1; } 10 Class Pack for $375 #block-63acac05cee43b628a98 { --sqs-block-content-flex: 1; } Monthly",
+        "cadence": "month",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 40.0,
+        "currency": "USD",
+        "rawLabel": "} Class Packs (flexible training) Drop-In Day Pass — $40",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 40.0,
+        "currency": "USD",
+        "rawLabel": "r $30 Total #block-yui_3_17_2_1_1739157723596_2369 { --sqs-block-content-flex: 1; } Drop In Day Pass for $40",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.forgekravmaga.com/pricing",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100003": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100010": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=40": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/l/79heGllJ": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "e89e39df5cc88bcaccd552cdcf5641bea3e1d797fd2650a1eb3a65f5ed2772d3",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150#main-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "bcefdc78d47c9b4fef577d08706a32c288723a3c6ee2ca000265abbeae402e16",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.orangetheory.com/en-us/locations": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "3867053450cf306c9bb1216d2c993bb4cfecee0f1986312de11d0d92ce3a9e66",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.orangetheory.com/en-us/memberships": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "81b85bd7515f794f2df30340a01c5b5a5193be08485b90db40ca6d905bd741da",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150#memberships": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "bcefdc78d47c9b4fef577d08706a32c288723a3c6ee2ca000265abbeae402e16",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.orangetheory.com/en-us/locations#main-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "3867053450cf306c9bb1216d2c993bb4cfecee0f1986312de11d0d92ce3a9e66",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.orangetheory.com/en-us/memberships#main-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "81b85bd7515f794f2df30340a01c5b5a5193be08485b90db40ca6d905bd741da",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.studiobylivebetter.com/pricing": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"b09d1c3958ad389062ba08fa47e84609\"",
+    "lastModified": "",
+    "contentHash": "c39a5cf0e25a8d9776fc076e3e99a391ab79868114dc6612c50a2f0fa6e8c08a",
+    "candidates": [
+      {
+        "amount": 150.0,
+        "currency": "USD",
+        "rawLabel": "@media screen and (max-width: 767px) { } $150 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 210.0,
+        "currency": "USD",
+        "rawLabel": "@media screen and (max-width: 767px) { } $210 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://www.studiobylivebetter.com/pricing#page",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5746509&stype=42&sLoc=0&giftCardID=70"
+    ],
+    "locationCandidates": []
+  },
+  "https://www.studiobylivebetter.com/pricing#page": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"b09d1c3958ad389062ba08fa47e84609\"",
+    "lastModified": "",
+    "contentHash": "c39a5cf0e25a8d9776fc076e3e99a391ab79868114dc6612c50a2f0fa6e8c08a",
+    "candidates": [
+      {
+        "amount": 150.0,
+        "currency": "USD",
+        "rawLabel": "@media screen and (max-width: 767px) { } $150 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 210.0,
+        "currency": "USD",
+        "rawLabel": "@media screen and (max-width: 767px) { } $210 per month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5746509&stype=42&sLoc=0&giftCardID=70": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://sunsetgym.com/memberships": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"ff1258807866339fdf7db947fe3f742b-ssl\"",
+    "lastModified": "",
+    "contentHash": "07b9be6b84859cd5e7e2585bc632538dabacb2f2e98854a0ed1bd02f196b893d",
+    "candidates": [
+      {
+        "amount": 20.0,
+        "currency": "USD",
+        "rawLabel": "ds Membership No Enrollment Fees, All Access, 2 Floors of Fitness, Towel Service Included Day Pass $20.00",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://sunsetgym.com/memberships/",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/#cs-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "7b2260e19e06a1085a6fee6742d6b2e7def7ecd4b3fb35320ef9e05ce0d25e67",
+    "candidates": [
+      {
+        "amount": 6.0,
+        "currency": "USD",
+        "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 185.0,
+        "currency": "USD",
+        "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month"
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 115.0,
+        "currency": "USD",
+        "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/buy/": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "19639d3ab099855b36cdac57051319c9757e541558bb6405005e6bc9b87a062a",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://barmethod.com/locations/san-francisco-fidi/buy/#cs-content",
+      "https://barmethod.com/locations/san-francisco-fidi/",
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+    ],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/schedule/": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "af54a64bacff489ec75199d1975da93fca579868348f9b233a1b2b7d33b53f26",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://barmethod.com/locations/san-francisco-fidi/schedule/#cs-content",
+      "https://barmethod.com/locations/san-francisco-fidi/",
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+    ],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "26b5753fa1553ae707df60da71dd608c84bda004593b03535146f5aaa268887e",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154#cs-content",
+      "https://barmethod.com/locations/san-francisco-fidi/",
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+    ],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-downtown/buy/?_mt=%2Fbuy%2F48787%3FactiveProduct%3Dmemberships-25354": {
+    "status": "http-404",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-downtown/buy/?_mt=%2Fbuy%2F48787%3FactiveProduct%3Dmemberships-25348": {
+    "status": "http-404",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-downtown/buy/?_mt=%2Fbuy%2F48787%3FactiveProduct%3Dcredits-25682": {
+    "status": "http-404",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/buy/#cs-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "19639d3ab099855b36cdac57051319c9757e541558bb6405005e6bc9b87a062a",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/schedule/#cs-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "af54a64bacff489ec75199d1975da93fca579868348f9b233a1b2b7d33b53f26",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154#cs-content": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "26b5753fa1553ae707df60da71dd608c84bda004593b03535146f5aaa268887e",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.yogamayu.com/pricing#page": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"a6cd692d35f201b5a1e5ad86ab267808\"",
+    "lastModified": "",
+    "contentHash": "1fede8df1991c61d8e30cbc97b077cdf7f413214613d279c24f9e1a5307829cb",
+    "candidates": [
+      {
+        "amount": 195.0,
+        "currency": "USD",
+        "rawLabel": "--button-font-size-value: 1; } } $205 Unlimited classes EXPIRES 30 DAYS (one class / day) BUY IT $195 Unlimited classes MONTHLY",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.yogamayu.com/pricing",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 28.0,
+        "currency": "USD",
+        "rawLabel": "; } } $60 New Student Special 3 Classes • 2 Weeks FIRST TIME STUDENTS ONLY BUY IT $28 Drop-in",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": {
+          "count": 3.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "restricted",
+          "restrictions": [
+            "Student"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.yogamayu.com/pricing",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.yogamayu.com/location": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"fb37148aa68ec636729c431a3365f578\"",
+    "lastModified": "",
+    "contentHash": "6e8a849f4589b0b27e9a42276c7a959b57c6561899f70d091a0bf688c2076cf6",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.yogamayu.com/location#page",
+      "https://www.yogamayu.com/pricing"
+    ],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?prodid=127&studioid=5134&stype=41": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?prodid=1893&studioid=5134&stype=41": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?prodid=170&studioid=5134&stype=41": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?prodId=120&studioid=5134&stype=40": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?prodId=53&sTG=1&studioid=5134&stype=41": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?prodId=172&sTG=1&studioid=5134&stype=41": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5134&stype=42": {
+    "status": "http-403",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.yogamayu.com/location#page": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"fb37148aa68ec636729c431a3365f578\"",
+    "lastModified": "",
+    "contentHash": "6e8a849f4589b0b27e9a42276c7a959b57c6561899f70d091a0bf688c2076cf6",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []

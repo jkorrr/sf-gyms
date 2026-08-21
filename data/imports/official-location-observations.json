@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "observations": [
     {
       "gymId": "osm-node-10069564222",
@@ -1364,7 +1364,7 @@
     {
       "gymId": "osm-node-13905876759",
       "gymName": "City CrossFit",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "2 Brook St San Francisco, CA 94110",
       "latitude": null,
@@ -1735,7 +1735,7 @@
     {
       "gymId": "osm-node-2666409791",
       "gymName": "Lotusland Yoga",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1360 Valencia Street",
       "latitude": null,
@@ -1751,7 +1751,7 @@
     {
       "gymId": "osm-node-2666409791",
       "gymName": "Lotusland Yoga",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1360 Valencia Street San Francisco, CA 94110",
       "latitude": null,
@@ -1767,7 +1767,7 @@
     {
       "gymId": "osm-node-2666409791",
       "gymName": "Lotusland Yoga",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1360 Valencia at 24 st",
       "latitude": null,
@@ -1783,7 +1783,7 @@
     {
       "gymId": "osm-node-2666409791",
       "gymName": "Lotusland Yoga",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "8 limbs and the many paths and practices of Yoga as as a way",
       "latitude": null,
@@ -2151,7 +2151,7 @@
     {
       "gymId": "osm-node-3674255652",
       "gymName": "Sunset Gym",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1212 1247 9th Avenue San Francisco, CA 94122",
       "latitude": null,
@@ -2580,7 +2580,7 @@
     {
       "gymId": "osm-node-4395534973",
       "gymName": "Yoga Mayu",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1501 b 20th Street San Francisco, CA 94107",
       "latitude": null,
@@ -2596,7 +2596,7 @@
     {
       "gymId": "osm-node-4395534973",
       "gymName": "Yoga Mayu",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "Yoga Mayu",
       "address": "1501 20th Street\nSan Francisco, CA, 94107\nUnited States",
       "latitude": null,
@@ -4014,7 +4014,7 @@
     {
       "gymId": "osm-node-996696401",
       "gymName": "Bakar Fitness Center at UCSF Mission Bay",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "00 pm William J. Rutter Center 1675 Owens Street, San Francisco, CA 94158",
       "latitude": null,
@@ -4030,7 +4030,7 @@
     {
       "gymId": "osm-node-996696401",
       "gymName": "Bakar Fitness Center at UCSF Mission Bay",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "5646 If you're interested in canceling a class or booking a court",
       "latitude": null,
@@ -4574,7 +4574,7 @@
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "8 am-8 pm Sun 8 am-6 pm All Holiday Hours 924 Mason St San Francisco, CA 94129",
       "latitude": null,
@@ -4590,7 +4590,7 @@
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "924 Old Mason St",
       "latitude": null,
@@ -6539,7 +6539,7 @@
     {
       "gymId": "web-06bc58a9a5ca84",
       "gymName": "Forge Krav Maga",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "",
       "latitude": null,
@@ -6555,7 +6555,7 @@
     {
       "gymId": "web-0c3933dd5d019f",
       "gymName": "Studio By Live Better",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "3915 Noriega Street",
       "address": "San Francisco, CA 94122\nUnited States",
       "latitude": null,
@@ -6571,7 +6571,7 @@
     {
       "gymId": "web-0c3933dd5d019f",
       "gymName": "Studio By Live Better",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "3915 Noriega St San Francisco, CA 94122",
       "latitude": null,
@@ -7000,7 +7000,7 @@
     {
       "gymId": "web-4289bb94baeda1",
       "gymName": "Millberry Fitness Center at UCSF Parnassus",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "00 pm Millberry Union 500 Parnassus Avenue",
       "latitude": null,
@@ -7016,7 +7016,7 @@
     {
       "gymId": "web-4289bb94baeda1",
       "gymName": "Millberry Fitness Center at UCSF Parnassus",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "0348 If you're interested in canceling a class or booking a court",
       "latitude": null,
@@ -7032,7 +7032,7 @@
     {
       "gymId": "web-4289bb94baeda1",
       "gymName": "Millberry Fitness Center at UCSF Parnassus",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "500 Parnassus Ave",
       "latitude": null,
@@ -7048,7 +7048,7 @@
     {
       "gymId": "web-44c39e1d4144c1",
       "gymName": "Sol Hot Yoga & Movement",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "910 Columbus Ave. San Francisco, CA",
       "latitude": null,
@@ -8258,7 +8258,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "Funky Door",
       "address": "2567 Shattuck Avenue\nBerkeley, CA, 94704\nUnited States",
       "latitude": null,
@@ -8274,7 +8274,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1336 Polk St San Francisco, CA 94109",
       "latitude": null,
@@ -8290,7 +8290,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "2567 Shattuck Avenue",
       "latitude": null,
@@ -8887,7 +8887,7 @@
     {
       "gymId": "web-dcbf7708bf2f77",
       "gymName": "Orangetheory Fitness San Francisco Pacific Heights",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "1633 Fillmore St San Francisco , CA 94115",
       "latitude": null,
@@ -8903,7 +8903,7 @@
     {
       "gymId": "web-e20a10174e60fa",
       "gymName": "The Bar Method San Francisco - FiDi",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "name": "",
       "address": "234 Bush Street, Suite 132 San Francisco, CA 94104",
       "latitude": null,

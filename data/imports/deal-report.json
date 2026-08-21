@@ -1,9 +1,8 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
-  "dealCandidateCount": 59,
-  "locationCount": 30,
-  "reviewRequiredCount": 59,
-  "ordinaryPricesRemainAuthoritative": true,
-  "includesRenderedEvidence": true
+  "mode": "full",
+  "dealCandidateCount": 15,
+  "locationCount": 9,
+  "reviewRequiredCount": 15,
+  "ordinaryPricesRemainAuthoritative": true
 }
