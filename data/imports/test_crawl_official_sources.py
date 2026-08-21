@@ -1261,6 +1261,7 @@ class OfficialCrawlerTests(unittest.TestCase):
             "planId": "general-plan-123",
             "planName": "General Public Membership",
             "agreementTerm": "Open",
+            "termInMonths": 12,
             "renewalAmount": "$144.00",
             "renewalFrequency": "Monthly",
             "downPayments": [
@@ -1911,6 +1912,9 @@ CLUB INFO"""
           <div data-ai-tag="Plan 1: plan name"><h3>Mini Membership</h3><h3>4x (3 Months)</h3></div>
           <div data-ai-tag="Plan 1: plan price"><h3>$119<span>/mo</span></h3></div>
           <div data-ai-tag="Plan 1: first item in feature list"><p>3 month commitment!</p><p>4x classes a month!</p></div>
+          <div data-ai-tag="Plan 1: plan name"><h3>Unlimited Membership</h3></div>
+          <div data-ai-tag="Plan 1: plan price"><h3>$219<span>/mo</span></h3></div>
+          <div data-ai-tag="Plan 1: first item in feature list"><p>No commitments!</p><p>Unlimited classes!</p></div>
           <div data-ai-tag="Plan 1: plan name"><h3>Drop-in</h3></div>
           <div data-ai-tag="Plan 1: plan price"><h3>$39</h3></div>
           <div data-ai-tag="Plan 1: first item in feature list"><p>1 class</p></div>
@@ -1925,9 +1929,13 @@ CLUB INFO"""
         self.assertEqual(mini["amount"], 119)
         self.assertEqual(mini["classAllowance"], {"count": 4, "period": "month", "unlimited": False})
         self.assertEqual(mini["commitment"], {"type": "minimum-term", "minimumMonths": 3})
+        unlimited = by_id["unlimited-membership"]
+        self.assertEqual(unlimited["amount"], 219)
+        self.assertEqual(unlimited["classAllowance"], {"count": None, "period": "month", "unlimited": True})
+        self.assertEqual(unlimited["commitment"], {"type": "month-to-month", "minimumMonths": None})
         self.assertEqual(by_id["drop-in"]["productType"], "drop-in")
         self.assertEqual(by_id["drop-in"]["amount"], 39)
-        self.assertEqual(len(crawler.duda_plan_cards(html.replace('"', r'\"'))), 2)
+        self.assertEqual(len(crawler.duda_plan_cards(html.replace('"', r'\"'))), 3)
 
     def test_wordpress_class_boxes_pair_widget_product_price_and_commitment(self) -> None:
         html = """

@@ -619,7 +619,7 @@
     "selectedOnlyDropInCatalogCount": 0,
     "noDropInCatalogCount": 117,
     "selectedUnknownCommitmentCount": 46,
-    "selectedUndisclosedClassAllowanceCount": 6,
+    "selectedUndisclosedClassAllowanceCount": 5,
     "typicalPlanSelectedCount": 156,
     "highestAccessPlanSelectedCount": 156,
     "bestValuePlanSelectedCount": 12,
@@ -656,10 +656,10 @@
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1809,
+    "requestCount": 1843,
     "statusCounts": {
       "access-blocked": 55,
-      "fetched": 998,
+      "fetched": 1034,
       "host-backoff-after-429": 1,
       "http-301": 2,
       "http-403": 90,
@@ -667,10 +667,10 @@
       "http-429": 25,
       "http-502": 2,
       "network-error": 41,
-      "not-modified": 213,
+      "not-modified": 209,
       "render-error": 4,
-      "rendered": 291,
-      "robots-disallowed": 74
+      "rendered": 292,
+      "robots-disallowed": 75
     },
     "staticAccessBlockedRequests": 55,
     "staticAccessBlockerCounts": {
@@ -679,13 +679,12 @@
       "platform-security-check": 36
     },
     "selectedPlanPriceAuditStatusCounts": {
-      "matched-within-threshold": 117,
-      "selected-plan-not-observed": 37,
-      "selected-plan-terms-changed": 2
+      "matched-within-threshold": 121,
+      "selected-plan-not-observed": 35
     },
-    "reviewCandidatePages": 471,
-    "linkedStorefrontRequests": 1174,
-    "renderedRequests": 347,
+    "reviewCandidatePages": 483,
+    "linkedStorefrontRequests": 1206,
+    "renderedRequests": 349,
     "renderedAccessBlockedRequests": 39,
     "renderedAccessBlockerCounts": {
       "captcha-required": 3,
@@ -740,23 +739,17 @@
       "rangeCoverage": 1.0
     },
     "yoga": {
-      "sampleSize": 13,
-      "medianAbsolutePercentageError": 0.2222,
-      "rangeCoverage": 0.7692
+      "sampleSize": 17,
+      "medianAbsolutePercentageError": 0.0856,
+      "rangeCoverage": 0.7647
     },
     "overall": {
-      "sampleSize": 71,
+      "sampleSize": 75,
       "medianAbsolutePercentageError": 0.124,
-      "rangeCoverage": 0.8592
+      "rangeCoverage": 0.8533
     }
   },
-  "withheldEstimateModalities": {
-    "yoga": {
-      "sampleSize": 13,
-      "medianAbsolutePercentageError": 0.2222,
-      "rangeCoverage": 0.7692
-    }
-  },
+  "withheldEstimateModalities": {},
   "publicationChecks": {
     "allClassified": true,
     "allHavePricingStatus": true,

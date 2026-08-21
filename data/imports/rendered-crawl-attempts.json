@@ -194,17 +194,46 @@
     {
       "gymId": "osm-node-10542243253",
       "name": "CrossFit Golden Gate",
+      "url": "https://crossfitgoldengate.pushpress.com/landing/plans",
+      "attemptedAt": "2026-08-21",
+      "status": "robots-disallowed",
+      "robotsStatus": "checked",
+      "candidateCount": 0,
+      "requiresReview": false
+    },
+    {
+      "gymId": "osm-node-10542243253",
+      "name": "CrossFit Golden Gate",
       "url": "https://www.crossfitgoldengate.com/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "c02d793e0ef2206590a8799a056d2137ced9828db93fb7fa4253fbace13045c8",
+      "contentHash": "fa27cba55fc5ebf711267ca1d1db31b2ec628e09e64b7da6ddb281764e869168",
       "networkEvidenceHashes": [
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
       ],
       "clickedPublicTabs": [],
       "candidateCount": 0,
       "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-10542243253",
+      "name": "CrossFit Golden Gate",
+      "url": "https://www.crossfitgoldengate.com/membership",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "ccf7eab866a5f85aaf86e82bb54e10d769171161a06ee3847dab2c299d1e93a6",
+      "networkEvidenceHashes": [
+        "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },

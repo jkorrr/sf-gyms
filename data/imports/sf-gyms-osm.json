@@ -47854,8 +47854,8 @@
       "gymType": "Fitness centre",
       "latitude": 37.7677295,
       "longitude": -122.4530621,
-      "monthlyPrice": 108.0,
-      "dayPassPrice": 35.0,
+      "monthlyPrice": 219.0,
+      "dayPassPrice": 39.0,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
@@ -47866,7 +47866,7 @@
         "workshops",
         "LGBTQ-owned studio"
       ],
-      "description": "HAUM Studios - Haight-Ashbury is a yoga gym in San Francisco. The selected official recurring plan is $108.00 per month. Listed features include yoga, Wheelchair access, livestream classes.",
+      "description": "HAUM Studios - Haight-Ashbury is a yoga gym in San Francisco. The selected official recurring plan is $219.00 per month. Listed features include yoga, Wheelchair access, livestream classes.",
       "hours": "Class schedule varies by day",
       "websiteUrl": "https://haumsf.com/haight-ashbury-studio/",
       "sourceName": "OpenStreetMap",
@@ -47888,8 +47888,8 @@
       "billingIntervalPrice": null,
       "priceSource": "HAUM Studios",
       "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
-      "priceNote": "Official buy-classes page lists cash pricing: $199/month no-commitment unlimited, $169/month with 3-month commitment, $108/month mini membership, and $35 in-person drop-in. Card and ACH fees are extra.",
-      "priceObservedAt": "2026-08-16",
+      "priceNote": "The complete official catalog now lists a $219 monthly unlimited plan with no commitment, $119 four-class and $169 six-class plans with three-month commitments, a $189 unlimited three-month plan, $114 livestream-only monthly access, class packs, and a $39 ordinary in-person drop-in. The deterministic basic-plan rule selects the current no-commitment $219 plan; no mandatory fee is disclosed.",
+      "priceObservedAt": "2026-08-21",
       "officialUrl": "https://haumsf.com/haight-ashbury-studio/",
       "operatorLocationId": "",
       "canonicalLocationId": "osm-node-3801395450",
@@ -47898,19 +47898,60 @@
       "publicationStatus": "publish",
       "planOffers": [
         {
-          "sourceProductId": "mini",
-          "name": "Mini Membership",
-          "accessScope": "Small recurring class membership",
-          "amount": 108,
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "Monthly Unlimited Livestream",
+          "productType": "class-membership",
+          "accessScope": "Unlimited livestream classes only",
+          "classAllowance": "unlimited",
+          "amount": 114,
           "billingInterval": "month",
-          "commitmentType": "month-to-month",
+          "commitmentType": "unknown",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-three-month",
-          "name": "Unlimited with 3-month commitment",
-          "accessScope": "Unlimited classes",
-          "classAllowance": "unlimited",
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership",
+          "productType": "class-membership",
+          "accessScope": "Four in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 4,
+            "period": "month"
+          },
+          "amount": 119,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "5-class-pack",
+          "name": "5 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five in-person classes",
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase"
+          },
+          "amount": 155,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership",
+          "productType": "class-membership",
+          "accessScope": "Six in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 6,
+            "period": "month"
+          },
           "amount": 169,
           "billingInterval": "month",
           "commitmentType": "minimum-term",
@@ -47918,21 +47959,79 @@
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-flex",
-          "name": "Unlimited No Commitment",
-          "accessScope": "Unlimited classes",
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 Class Pack Livestream",
+          "productType": "class-pack",
+          "accessScope": "Ten livestream classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 180,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited — 3 Month",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
           "classAllowance": "unlimited",
-          "amount": 199,
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
+          "classAllowance": "unlimited",
+          "amount": 219,
           "billingInterval": "month",
           "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10-class-pack",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten in-person classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 325,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
           "fees": []
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "in-person-drop-in",
-          "name": "In-person drop-in",
-          "amount": 35
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-In Livestream",
+          "amount": 20,
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          }
+        },
+        {
+          "sourceProductId": "drop-in",
+          "name": "In-Person Drop-In",
+          "amount": 39
         }
       ],
       "priceReports": [],
@@ -47946,25 +48045,148 @@
       "selectionRuleVersion": "neutral-basic-v2",
       "plans": [
         {
-          "id": "osm-node-3801395450:plan:mini",
-          "sourceProductId": "mini",
-          "name": "Mini Membership",
-          "productType": "membership",
-          "accessScope": "Small recurring class membership",
+          "id": "osm-node-3801395450:plan:monthly-unlimited-livestream",
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "Monthly Unlimited Livestream",
+          "productType": "class-membership",
+          "accessScope": "Unlimited livestream classes only",
           "scopeType": "single-location",
-          "classAllowance": null,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true,
+            "disclosed": true
+          },
           "billing": {
-            "amount": 108.0,
+            "amount": 114.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
             "interval": "month",
             "intervalCount": 1,
-            "normalizedMonthly": 108.0,
+            "normalizedMonthly": 114.0,
             "normalizationFormula": "amount"
           },
           "commitment": {
-            "type": "month-to-month",
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Monthly Unlimited Livestream",
+            "contentHash": "0e0fc5555c839eef465b46c09d17066aaff05c7d20aeb337d52c9abd6e641ffe",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "monthly-unlimited-livestream",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3801395450:plan:mini-membership-3-month",
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership",
+          "productType": "class-membership",
+          "accessScope": "Four in-person classes per month plus livestream access",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 119.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 119.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "minimum-term",
+            "minimumMonths": 3,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Mini Membership",
+            "contentHash": "c02fd9efd2ac5cc139431ad7b0643544f76a949e58c3c284b8a7b231147d08dc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "mini-membership-3-month",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3801395450:plan:5-class-pack",
+          "sourceProductId": "5-class-pack",
+          "name": "5 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five in-person classes",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 155.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
             "minimumMonths": null,
             "minimumDays": null,
             "rawLabel": ""
@@ -47985,30 +48207,30 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "Mini Membership",
-            "contentHash": "ef2a004e4e7b2c2a109a7d07ee23fc24368d5c128bd0d49a4e48f27bbc2c2d92",
+            "rawLabel": "5 Class Pack",
+            "contentHash": "fe89790be2db47964553e17525d3e8ac56539bf57abcda2d30f299279827ac7c",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "mini",
+            "sourceProductId": "5-class-pack",
             "conflictFlags": []
           },
-          "selected": true,
-          "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use."
+          "selected": false,
+          "selectionReason": ""
         },
         {
-          "id": "osm-node-3801395450:plan:unlimited-three-month",
-          "sourceProductId": "unlimited-three-month",
-          "name": "Unlimited with 3-month commitment",
-          "productType": "membership",
-          "accessScope": "Unlimited classes",
+          "id": "osm-node-3801395450:plan:midi-membership-3-month",
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership",
+          "productType": "class-membership",
+          "accessScope": "Six in-person classes per month plus livestream access",
           "scopeType": "single-location",
           "classAllowance": {
-            "count": null,
+            "count": 6,
             "period": "month",
-            "unlimited": true,
+            "unlimited": false,
             "disclosed": true
           },
           "billing": {
@@ -48043,25 +48265,85 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "Unlimited with 3-month commitment",
-            "contentHash": "27042a34382d0ca693cbe566d235608975ff944d1cda5f7e3d79dabae36d493e",
+            "rawLabel": "Midi Membership",
+            "contentHash": "030446167e0c29370e56a3226140f584f317043ff22a916692c009ec4f3d9684",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "unlimited-three-month",
+            "sourceProductId": "midi-membership-3-month",
             "conflictFlags": []
           },
           "selected": false,
           "selectionReason": ""
         },
         {
-          "id": "osm-node-3801395450:plan:unlimited-flex",
-          "sourceProductId": "unlimited-flex",
-          "name": "Unlimited No Commitment",
-          "productType": "membership",
-          "accessScope": "Unlimited classes",
+          "id": "osm-node-3801395450:plan:10-class-pack-livestream",
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 Class Pack Livestream",
+          "productType": "class-pack",
+          "accessScope": "Ten livestream classes",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 180.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "10 Class Pack Livestream",
+            "contentHash": "5d7d545d9076944c2b3ea52e24e5cfa621b2ebd7ec4dbc06d5722edac858c68b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10-class-pack-livestream",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3801395450:plan:monthly-membership-unlimited-3-month",
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited — 3 Month",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
@@ -48070,13 +48352,71 @@
             "disclosed": true
           },
           "billing": {
-            "amount": 199.0,
+            "amount": 189.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
             "interval": "month",
             "intervalCount": 1,
-            "normalizedMonthly": 199.0,
+            "normalizedMonthly": 189.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "minimum-term",
+            "minimumMonths": 3,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Monthly Membership Unlimited — 3 Month",
+            "contentHash": "c10db7db14a1bd3b0c227bae387387bcb3c859dad5fa99096edfd45bf1aa2ee4",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "monthly-membership-unlimited-3-month",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3801395450:plan:monthly-membership-unlimited",
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 219.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 219.0,
             "normalizationFormula": "amount"
           },
           "commitment": {
@@ -48101,14 +48441,72 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "Unlimited No Commitment",
-            "contentHash": "8e79c589f7a8a1883682ee9cfb35cc56373aeeb0a69711303162e8183b073e58",
+            "rawLabel": "Monthly Membership Unlimited",
+            "contentHash": "00b1263ca53bc96c77ca6013a07c99fd04079f78d8dac5784d8ca15e7e591b37",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "unlimited-flex",
+            "sourceProductId": "monthly-membership-unlimited",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the cheapest eligible recurring plan permitting ordinary location use."
+        },
+        {
+          "id": "osm-node-3801395450:plan:10-class-pack",
+          "sourceProductId": "10-class-pack",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten in-person classes",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 325.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "10 Class Pack",
+            "contentHash": "06775c085f3dbeb6f932097480c0798abba6b33bb781de4661aeafabdbe89764",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10-class-pack",
             "conflictFlags": []
           },
           "selected": false,
@@ -48117,12 +48515,51 @@
       ],
       "dropIns": [
         {
-          "id": "osm-node-3801395450:drop-in:in-person-drop-in",
-          "sourceProductId": "in-person-drop-in",
-          "name": "In-person drop-in",
+          "id": "osm-node-3801395450:drop-in:drop-in-livestream",
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-In Livestream",
           "productType": "drop-in",
           "accessScope": "Single unrestricted visit or class",
-          "amount": 35.0,
+          "amount": 20.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Drop-In Livestream",
+            "contentHash": "ddecea7b2752416c1fa44d370ef604db16103a66cca9a53b78f8103667d6ce8a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "drop-in-livestream",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3801395450:drop-in:drop-in",
+          "sourceProductId": "drop-in",
+          "name": "In-Person Drop-In",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 39.0,
           "amountLow": null,
           "amountHigh": null,
           "currency": "USD",
@@ -48140,24 +48577,24 @@
           "ordinaryUse": true,
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "In-person drop-in",
-            "contentHash": "edfd91bc63935d7f0ea8714ac0e16453229d603d388f583b0570b5a89f70d9b2",
+            "rawLabel": "In-Person Drop-In",
+            "contentHash": "ff54bdf46f06dcbf4c0aad47e7fbf21751a116f3c7ac43b8eae9041245422e9e",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "in-person-drop-in",
+            "sourceProductId": "drop-in",
             "conflictFlags": []
           },
           "selected": true,
           "selectionReason": "Selected the ordinary unrestricted single visit or class."
         }
       ],
-      "selectedPlanId": "osm-node-3801395450:plan:mini",
-      "selectedDropInId": "osm-node-3801395450:drop-in:in-person-drop-in",
-      "typicalPlanId": "osm-node-3801395450:plan:unlimited-three-month",
-      "highestAccessPlanId": "osm-node-3801395450:plan:mini",
+      "selectedPlanId": "osm-node-3801395450:plan:monthly-membership-unlimited",
+      "selectedDropInId": "osm-node-3801395450:drop-in:drop-in",
+      "typicalPlanId": "osm-node-3801395450:plan:midi-membership-3-month",
+      "highestAccessPlanId": "osm-node-3801395450:plan:mini-membership-3-month",
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
@@ -48209,6 +48646,13 @@
           "status": "not-published",
           "reason": "The operator did not expose a stable public location identifier."
         }
+      },
+      "planName": "Monthly Membership Unlimited",
+      "planScope": "Unlimited in-person classes plus livestream access",
+      "commitmentType": "month-to-month",
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
       }
     },
     {
@@ -48219,8 +48663,8 @@
       "gymType": "Yoga studio",
       "latitude": 37.7648894,
       "longitude": -122.419083,
-      "monthlyPrice": 108.0,
-      "dayPassPrice": 35.0,
+      "monthlyPrice": 219.0,
+      "dayPassPrice": 39.0,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
@@ -48230,7 +48674,7 @@
         "workshops",
         "LGBTQ-owned studio"
       ],
-      "description": "HAUM Studios - Mission District is a yoga fitness studio in Mission. The selected official recurring plan is $108.00 per month. Listed features include yoga, livestream classes, class packs.",
+      "description": "HAUM Studios - Mission District is a yoga fitness studio in Mission. The selected official recurring plan is $219.00 per month. Listed features include yoga, livestream classes, class packs.",
       "hours": "Class schedule varies by day",
       "websiteUrl": "https://www.haumstudios.com/",
       "sourceName": "HAUM Studios",
@@ -48239,8 +48683,8 @@
       "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "HAUM Studios",
       "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
-      "priceNote": "Official buy-classes page lists cash pricing: $199/month no-commitment unlimited, $169/month with 3-month commitment, $108/month mini membership, and $35 in-person drop-in. Card and ACH fees are extra.",
-      "priceObservedAt": "2026-08-16",
+      "priceNote": "The complete official catalog now lists a $219 monthly unlimited plan with no commitment, $119 four-class and $169 six-class plans with three-month commitments, a $189 unlimited three-month plan, $114 livestream-only monthly access, class packs, and a $39 ordinary in-person drop-in. The deterministic basic-plan rule selects the current no-commitment $219 plan; no mandatory fee is disclosed.",
+      "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
       "initiationFee": null,
@@ -48255,19 +48699,60 @@
       "publicationStatus": "publish",
       "planOffers": [
         {
-          "sourceProductId": "mini",
-          "name": "Mini Membership",
-          "accessScope": "Small recurring class membership",
-          "amount": 108,
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "Monthly Unlimited Livestream",
+          "productType": "class-membership",
+          "accessScope": "Unlimited livestream classes only",
+          "classAllowance": "unlimited",
+          "amount": 114,
           "billingInterval": "month",
-          "commitmentType": "month-to-month",
+          "commitmentType": "unknown",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-three-month",
-          "name": "Unlimited with 3-month commitment",
-          "accessScope": "Unlimited classes",
-          "classAllowance": "unlimited",
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership",
+          "productType": "class-membership",
+          "accessScope": "Four in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 4,
+            "period": "month"
+          },
+          "amount": 119,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "5-class-pack",
+          "name": "5 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five in-person classes",
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase"
+          },
+          "amount": 155,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership",
+          "productType": "class-membership",
+          "accessScope": "Six in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 6,
+            "period": "month"
+          },
           "amount": 169,
           "billingInterval": "month",
           "commitmentType": "minimum-term",
@@ -48275,21 +48760,79 @@
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-flex",
-          "name": "Unlimited No Commitment",
-          "accessScope": "Unlimited classes",
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 Class Pack Livestream",
+          "productType": "class-pack",
+          "accessScope": "Ten livestream classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 180,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited — 3 Month",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
           "classAllowance": "unlimited",
-          "amount": 199,
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
+          "classAllowance": "unlimited",
+          "amount": 219,
           "billingInterval": "month",
           "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10-class-pack",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten in-person classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 325,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
           "fees": []
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "in-person-drop-in",
-          "name": "In-person drop-in",
-          "amount": 35
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-In Livestream",
+          "amount": 20,
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          }
+        },
+        {
+          "sourceProductId": "drop-in",
+          "name": "In-Person Drop-In",
+          "amount": 39
         }
       ],
       "priceReports": [],
@@ -48303,30 +48846,148 @@
       "selectionRuleVersion": "neutral-basic-v2",
       "plans": [
         {
-          "id": "web-686330489fbf10:plan:mini",
-          "sourceProductId": "mini",
-          "name": "Mini Membership",
+          "id": "web-686330489fbf10:plan:monthly-unlimited-livestream",
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "Monthly Unlimited Livestream",
           "productType": "class-membership",
-          "accessScope": "Small recurring class membership",
+          "accessScope": "Unlimited livestream classes only",
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
             "period": "month",
-            "unlimited": false,
-            "disclosed": false
+            "unlimited": true,
+            "disclosed": true
           },
           "billing": {
-            "amount": 108.0,
+            "amount": 114.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
             "interval": "month",
             "intervalCount": 1,
-            "normalizedMonthly": 108.0,
+            "normalizedMonthly": 114.0,
             "normalizationFormula": "amount"
           },
           "commitment": {
-            "type": "month-to-month",
+            "type": "unknown",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Monthly Unlimited Livestream",
+            "contentHash": "0e0fc5555c839eef465b46c09d17066aaff05c7d20aeb337d52c9abd6e641ffe",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "monthly-unlimited-livestream",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "web-686330489fbf10:plan:mini-membership-3-month",
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership",
+          "productType": "class-membership",
+          "accessScope": "Four in-person classes per month plus livestream access",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 4,
+            "period": "month",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 119.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 119.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "minimum-term",
+            "minimumMonths": 3,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Mini Membership",
+            "contentHash": "c02fd9efd2ac5cc139431ad7b0643544f76a949e58c3c284b8a7b231147d08dc",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "mini-membership-3-month",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "web-686330489fbf10:plan:5-class-pack",
+          "sourceProductId": "5-class-pack",
+          "name": "5 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five in-person classes",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 155.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
             "minimumMonths": null,
             "minimumDays": null,
             "rawLabel": ""
@@ -48347,30 +49008,30 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "Mini Membership",
-            "contentHash": "ef2a004e4e7b2c2a109a7d07ee23fc24368d5c128bd0d49a4e48f27bbc2c2d92",
+            "rawLabel": "5 Class Pack",
+            "contentHash": "fe89790be2db47964553e17525d3e8ac56539bf57abcda2d30f299279827ac7c",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "mini",
+            "sourceProductId": "5-class-pack",
             "conflictFlags": []
           },
-          "selected": true,
-          "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month."
+          "selected": false,
+          "selectionReason": ""
         },
         {
-          "id": "web-686330489fbf10:plan:unlimited-three-month",
-          "sourceProductId": "unlimited-three-month",
-          "name": "Unlimited with 3-month commitment",
+          "id": "web-686330489fbf10:plan:midi-membership-3-month",
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership",
           "productType": "class-membership",
-          "accessScope": "Unlimited classes",
+          "accessScope": "Six in-person classes per month plus livestream access",
           "scopeType": "single-location",
           "classAllowance": {
-            "count": null,
+            "count": 6,
             "period": "month",
-            "unlimited": true,
+            "unlimited": false,
             "disclosed": true
           },
           "billing": {
@@ -48405,25 +49066,85 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "Unlimited with 3-month commitment",
-            "contentHash": "27042a34382d0ca693cbe566d235608975ff944d1cda5f7e3d79dabae36d493e",
+            "rawLabel": "Midi Membership",
+            "contentHash": "030446167e0c29370e56a3226140f584f317043ff22a916692c009ec4f3d9684",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "unlimited-three-month",
+            "sourceProductId": "midi-membership-3-month",
             "conflictFlags": []
           },
           "selected": false,
           "selectionReason": ""
         },
         {
-          "id": "web-686330489fbf10:plan:unlimited-flex",
-          "sourceProductId": "unlimited-flex",
-          "name": "Unlimited No Commitment",
+          "id": "web-686330489fbf10:plan:10-class-pack-livestream",
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 Class Pack Livestream",
+          "productType": "class-pack",
+          "accessScope": "Ten livestream classes",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 180.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "10 Class Pack Livestream",
+            "contentHash": "5d7d545d9076944c2b3ea52e24e5cfa621b2ebd7ec4dbc06d5722edac858c68b",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10-class-pack-livestream",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "web-686330489fbf10:plan:monthly-membership-unlimited-3-month",
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited — 3 Month",
           "productType": "class-membership",
-          "accessScope": "Unlimited classes",
+          "accessScope": "Unlimited in-person classes plus livestream access",
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
@@ -48432,13 +49153,71 @@
             "disclosed": true
           },
           "billing": {
-            "amount": 199.0,
+            "amount": 189.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
             "interval": "month",
             "intervalCount": 1,
-            "normalizedMonthly": 199.0,
+            "normalizedMonthly": 189.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "minimum-term",
+            "minimumMonths": 3,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Monthly Membership Unlimited — 3 Month",
+            "contentHash": "c10db7db14a1bd3b0c227bae387387bcb3c859dad5fa99096edfd45bf1aa2ee4",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "monthly-membership-unlimited-3-month",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "web-686330489fbf10:plan:monthly-membership-unlimited",
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 219.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 219.0,
             "normalizationFormula": "amount"
           },
           "commitment": {
@@ -48463,14 +49242,72 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "Unlimited No Commitment",
-            "contentHash": "8e79c589f7a8a1883682ee9cfb35cc56373aeeb0a69711303162e8183b073e58",
+            "rawLabel": "Monthly Membership Unlimited",
+            "contentHash": "00b1263ca53bc96c77ca6013a07c99fd04079f78d8dac5784d8ca15e7e591b37",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "unlimited-flex",
+            "sourceProductId": "monthly-membership-unlimited",
+            "conflictFlags": []
+          },
+          "selected": true,
+          "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month."
+        },
+        {
+          "id": "web-686330489fbf10:plan:10-class-pack",
+          "sourceProductId": "10-class-pack",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten in-person classes",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 325.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "10 Class Pack",
+            "contentHash": "06775c085f3dbeb6f932097480c0798abba6b33bb781de4661aeafabdbe89764",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10-class-pack",
             "conflictFlags": []
           },
           "selected": false,
@@ -48479,12 +49316,51 @@
       ],
       "dropIns": [
         {
-          "id": "web-686330489fbf10:drop-in:in-person-drop-in",
-          "sourceProductId": "in-person-drop-in",
-          "name": "In-person drop-in",
+          "id": "web-686330489fbf10:drop-in:drop-in-livestream",
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-In Livestream",
           "productType": "drop-in",
           "accessScope": "Single unrestricted visit or class",
-          "amount": 35.0,
+          "amount": 20.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": true,
+          "evidence": {
+            "url": "https://www.haumstudios.com/buy-classes",
+            "observedAt": "2026-08-21",
+            "source": "HAUM Studios",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Drop-In Livestream",
+            "contentHash": "ddecea7b2752416c1fa44d370ef604db16103a66cca9a53b78f8103667d6ce8a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "drop-in-livestream",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "web-686330489fbf10:drop-in:drop-in",
+          "sourceProductId": "drop-in",
+          "name": "In-Person Drop-In",
+          "productType": "drop-in",
+          "accessScope": "Single unrestricted visit or class",
+          "amount": 39.0,
           "amountLow": null,
           "amountHigh": null,
           "currency": "USD",
@@ -48502,24 +49378,24 @@
           "ordinaryUse": true,
           "evidence": {
             "url": "https://www.haumstudios.com/buy-classes",
-            "observedAt": "2026-08-16",
+            "observedAt": "2026-08-21",
             "source": "HAUM Studios",
             "method": "reviewed-official-observation",
-            "rawLabel": "In-person drop-in",
-            "contentHash": "edfd91bc63935d7f0ea8714ac0e16453229d603d388f583b0570b5a89f70d9b2",
+            "rawLabel": "In-Person Drop-In",
+            "contentHash": "ff54bdf46f06dcbf4c0aad47e7fbf21751a116f3c7ac43b8eae9041245422e9e",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "in-person-drop-in",
+            "sourceProductId": "drop-in",
             "conflictFlags": []
           },
           "selected": true,
           "selectionReason": "Selected the ordinary unrestricted single visit or class."
         }
       ],
-      "selectedPlanId": "web-686330489fbf10:plan:mini",
-      "selectedDropInId": "web-686330489fbf10:drop-in:in-person-drop-in",
-      "typicalPlanId": "web-686330489fbf10:plan:unlimited-three-month",
-      "highestAccessPlanId": "web-686330489fbf10:plan:unlimited-three-month",
+      "selectedPlanId": "web-686330489fbf10:plan:monthly-membership-unlimited",
+      "selectedDropInId": "web-686330489fbf10:drop-in:drop-in",
+      "typicalPlanId": "web-686330489fbf10:plan:midi-membership-3-month",
+      "highestAccessPlanId": "web-686330489fbf10:plan:monthly-membership-unlimited-3-month",
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
@@ -48571,6 +49447,13 @@
           "status": "not-published",
           "reason": "The operator did not expose a stable public location identifier."
         }
+      },
+      "planName": "Monthly Membership Unlimited",
+      "planScope": "Unlimited in-person classes plus livestream access",
+      "commitmentType": "month-to-month",
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
       }
     },
     {

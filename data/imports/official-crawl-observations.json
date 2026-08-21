@@ -9139,7 +9139,7 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
       "promotion": {
@@ -19973,88 +19973,409 @@
       "gymId": "osm-node-996696401",
       "gymName": "Bakar Fitness Center at UCSF Mission Bay",
       "capturedAt": "2026-08-21",
-      "amount": 19.0,
+      "sourceProductId": "0fecaf2095da45079bdabe75f51f3f61",
+      "sourceProductAliases": [
+        "millberry-senior-membership"
+      ],
+      "name": "Millberry Senior Membership",
+      "amount": 101.0,
       "currency": "USD",
-      "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
       "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Millberry Senior Membership $101/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     },
     {
       "gymId": "osm-node-996696401",
       "gymName": "Bakar Fitness Center at UCSF Mission Bay",
       "capturedAt": "2026-08-21",
-      "amount": 47.0,
+      "sourceProductId": "57803960596f4276b62fbcaacf141349",
+      "sourceProductAliases": [
+        "dual-site-senior-membership"
+      ],
+      "name": "Dual Site Senior Membership",
+      "amount": 130.0,
       "currency": "USD",
-      "rawLabel": "for members, $47/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
       "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     },
     {
       "gymId": "osm-node-996696401",
       "gymName": "Bakar Fitness Center at UCSF Mission Bay",
       "capturedAt": "2026-08-21",
-      "amount": 75.0,
+      "sourceProductId": "57803960596f4276b62fbcaacf141349",
+      "sourceProductAliases": [
+        "dual-site-senior-membership"
+      ],
+      "name": "Dual Site Senior Membership",
+      "amount": 130.0,
       "currency": "USD",
-      "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
       "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "8b2886ae23a3495aa48b44e11dd6ac52",
+      "sourceProductAliases": [
+        "bakar-general-public-membership"
+      ],
+      "name": "Bakar General Public Membership",
+      "amount": 144.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Bakar General Public Membership $144/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ba5aaedde74d48bda22e0de78ab24bc6",
+      "sourceProductAliases": [
+        "millberry-general-public-membership"
+      ],
+      "name": "Millberry General Public Membership",
+      "amount": 129.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Millberry General Public Membership $129/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "d2ba1f48cf1443ad8bf74cee2e613d98",
+      "sourceProductAliases": [
+        "bakar-senior-membership"
+      ],
+      "name": "Bakar Senior Membership",
+      "amount": 110.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Bakar Senior Membership $110/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+      "sourceProductAliases": [
+        "dual-site-general-public-membership-mp"
+      ],
+      "name": "Dual Site General Public Membership",
+      "amount": 170.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+      "sourceProductAliases": [
+        "dual-site-general-public-membership-mp"
+      ],
+      "name": "Dual Site General Public Membership",
+      "amount": 170.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     },
     {
       "gymId": "osm-way-113283290",
@@ -28314,88 +28635,409 @@
       "gymId": "web-4289bb94baeda1",
       "gymName": "Millberry Fitness Center at UCSF Parnassus",
       "capturedAt": "2026-08-21",
-      "amount": 19.0,
+      "sourceProductId": "0fecaf2095da45079bdabe75f51f3f61",
+      "sourceProductAliases": [
+        "millberry-senior-membership"
+      ],
+      "name": "Millberry Senior Membership",
+      "amount": 101.0,
       "currency": "USD",
-      "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
       "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Millberry Senior Membership $101/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     },
     {
       "gymId": "web-4289bb94baeda1",
       "gymName": "Millberry Fitness Center at UCSF Parnassus",
       "capturedAt": "2026-08-21",
-      "amount": 47.0,
+      "sourceProductId": "57803960596f4276b62fbcaacf141349",
+      "sourceProductAliases": [
+        "dual-site-senior-membership"
+      ],
+      "name": "Dual Site Senior Membership",
+      "amount": 130.0,
       "currency": "USD",
-      "rawLabel": "for members, $47/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
       "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     },
     {
       "gymId": "web-4289bb94baeda1",
       "gymName": "Millberry Fitness Center at UCSF Parnassus",
       "capturedAt": "2026-08-21",
-      "amount": 75.0,
+      "sourceProductId": "57803960596f4276b62fbcaacf141349",
+      "sourceProductAliases": [
+        "dual-site-senior-membership"
+      ],
+      "name": "Dual Site Senior Membership",
+      "amount": 130.0,
       "currency": "USD",
-      "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
       "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
       },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "8b2886ae23a3495aa48b44e11dd6ac52",
+      "sourceProductAliases": [
+        "bakar-general-public-membership"
+      ],
+      "name": "Bakar General Public Membership",
+      "amount": 144.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Bakar General Public Membership $144/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ba5aaedde74d48bda22e0de78ab24bc6",
+      "sourceProductAliases": [
+        "millberry-general-public-membership"
+      ],
+      "name": "Millberry General Public Membership",
+      "amount": 129.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Millberry General Public Membership $129/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "d2ba1f48cf1443ad8bf74cee2e613d98",
+      "sourceProductAliases": [
+        "bakar-senior-membership"
+      ],
+      "name": "Bakar Senior Membership",
+      "amount": 110.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Named home location",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "age-restricted",
+        "restrictions": [
+          "Age 65+"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Bakar Senior Membership $110/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+      "sourceProductAliases": [
+        "dual-site-general-public-membership-mp"
+      ],
+      "name": "Dual Site General Public Membership",
+      "amount": 170.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+      "sourceProductAliases": [
+        "dual-site-general-public-membership-mp"
+      ],
+      "name": "Dual Site General Public Membership",
+      "amount": 170.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Both operator locations",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "rawLabel": "Open"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "name": "Enrollment Fee",
+          "amount": 100.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
+      "method": "public-abc-fitness-plan-api",
+      "adapter": "abc-fitness",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     },
     {
       "gymId": "web-44c39e1d4144c1",
@@ -30359,7 +31001,7 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
       "promotion": {

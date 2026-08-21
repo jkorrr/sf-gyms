@@ -199,6 +199,45 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertEqual(candidate["method"], "public-momence-membership-api")
         self.assertFalse(candidate["autoPublishEligible"])
 
+    def test_pushpress_modal_recovers_product_cadence_allowance_and_minimum_cycles(self) -> None:
+        fixture = self.rendered_fixtures["pushpressRecurring"]
+
+        candidates = adapters.pushpress_plan_detail_candidates(
+            fixture["cardText"], fixture["detailText"], fixture["url"], fixture["detailHref"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual(candidate["sourceProductId"], "plan_50247613f3f44f")
+        self.assertEqual((candidate["amount"], candidate["cadence"]), (289, "4 weeks"))
+        self.assertEqual(candidate["classAllowance"], {
+            "count": None, "period": "4 weeks", "unlimited": True,
+        })
+        self.assertEqual(candidate["commitment"], {
+            "type": "minimum-term",
+            "minimumMonths": None,
+            "minimumDays": 56,
+            "rawLabel": "minimum 2 cycle",
+        })
+        self.assertEqual(candidate["fees"], [])
+        self.assertNotIn("2.9", candidate["rawLabel"])
+        self.assertFalse(candidate["autoPublishEligible"])
+
+    def test_pushpress_drop_in_remains_one_visit_not_monthly(self) -> None:
+        fixture = self.rendered_fixtures["pushpressDropIn"]
+
+        candidates = adapters.pushpress_plan_detail_candidates(
+            fixture["cardText"], fixture["detailText"], fixture["url"], fixture["detailHref"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["amount"], candidate["cadence"], candidate["productType"]), (32.5, "visit", "drop-in"))
+        self.assertEqual(candidate["classAllowance"], {
+            "count": 1.0, "period": "visit", "unlimited": False,
+        })
+        self.assertEqual(candidate["commitment"]["type"], "none")
+
 
 if __name__ == "__main__":
     unittest.main()

@@ -1197,43 +1197,18 @@
     "locationCandidates": []
   },
   "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 00:14:32 GMT",
+    "parserVersion": "selected-plan-catalog-v25",
     "contentHash": "325c3ad48c1003174ccf3f87e7f3e18689de0fc71bcc72c2cdcb9f0be4aeed20",
     "candidates": [],
     "linkedStorefronts": [
       "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership#f45"
     ],
-    "locationCandidates": [
-      {
-        "name": "",
-        "address": "00 pm William J. Rutter Center 1675 Owens Street, San Francisco, CA 94158",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 00 pm William J. Rutter Center 1675 Owens Street, San Francisco, CA 94158",
-        "contentHash": "e418c080f8aa310fe9e74ca4fd006a4365791523d55f3f4b3d600f8538932fc4",
-        "autoPublishEligible": false
-      },
-      {
-        "name": "",
-        "address": "5646 If you're interested in canceling a class or booking a court",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 5646 If you're interested in canceling a class or booking a court",
-        "contentHash": "29ad57bb178b8311cad8b536fe92128680e713a7a0ca8dde29a72301cccc3c45",
-        "autoPublishEligible": false
-      }
-    ]
+    "locationCandidates": []
   },
   "https://www.barrys.com/studio/castro/": {
     "status": "fetched",
@@ -7623,7 +7598,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v17",
+    "parserVersion": "selected-plan-catalog-v26",
     "contentHash": "",
     "candidates": [],
     "linkedStorefronts": [],
@@ -7633,10 +7608,10 @@
     "status": "fetched",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
-    "etag": "W/\"-70724470\"",
+    "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v17",
-    "contentHash": "8f70283c964236820b727ae8210816c7fa413face164b86908111069737e5ce1",
+    "parserVersion": "selected-plan-catalog-v26",
+    "contentHash": "2011677c637f5b2b00bedd2aea1774cef763757a8a3efd182af9731b9ce409a6",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": [
@@ -9235,56 +9210,18 @@
     ]
   },
   "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 00:15:25 GMT",
+    "parserVersion": "selected-plan-catalog-v25",
     "contentHash": "b63e0be15232c22ac94ce973b0a71ba7c7eef57faf5b1c631c21ad7314998844",
     "candidates": [],
     "linkedStorefronts": [
       "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership"
     ],
-    "locationCandidates": [
-      {
-        "name": "",
-        "address": "00 pm Millberry Union 500 Parnassus Avenue",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 00 pm Millberry Union 500 Parnassus Avenue",
-        "contentHash": "c663a50f99d0b2dc94787b0cdad39ec83dca0029cd4f017da402db90cbe95ab8",
-        "autoPublishEligible": false
-      },
-      {
-        "name": "",
-        "address": "500 Parnassus Ave",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 500 Parnassus Ave",
-        "contentHash": "7316058a1f447c4f2940727d2d48f243c29ac45a9db13723248d1114a2522a9e",
-        "autoPublishEligible": false
-      },
-      {
-        "name": "",
-        "address": "0348 If you're interested in canceling a class or booking a court",
-        "latitude": null,
-        "longitude": null,
-        "hours": [],
-        "amenities": [],
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
-        "method": "visible-address-candidate",
-        "rawLabel": "Visible address: 0348 If you're interested in canceling a class or booking a court",
-        "contentHash": "90af461bfa8dc45ec16fed1b784da57b359880ab6fcc3464a44dec06826297dc",
-        "autoPublishEligible": false
-      }
-    ]
+    "locationCandidates": []
   },
   "https://touchstoneclimbing.com/mission-cliffs/": {
     "status": "fetched",
@@ -21486,92 +21423,22 @@
     "locationCandidates": []
   },
   "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership": {
-    "status": "not-modified",
+    "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "",
+    "lastModified": "Fri, 21 Aug 2026 00:06:12 GMT",
+    "parserVersion": "selected-plan-catalog-v25",
     "contentHash": "3cc0dd596793aefb44d7ac72e5cf5d23ff136888405fccf58b9d2b05f6faf5ca",
-    "candidates": [
-      {
-        "amount": 75.0,
-        "currency": "USD",
-        "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 47.0,
-        "currency": "USD",
-        "rawLabel": "for members, $47/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-        "autoPublishEligible": false
-      },
-      {
-        "amount": 19.0,
-        "currency": "USD",
-        "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
-        "cadence": "month",
-        "productType": "monthly",
-        "classAllowance": null,
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "method": "visible-text-candidate",
-        "adapter": "operator-site",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
-        "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
-        "autoPublishEligible": false
-      }
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/signup/plan?club=31627&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2",
+      "https://onlinejoin.abcfitness.com/signup/plan?club=31628&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2",
+      "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=d2ba1f48cf1443ad8bf74cee2e613d98",
+      "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=57803960596f4276b62fbcaacf141349",
+      "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=0fecaf2095da45079bdabe75f51f3f61",
+      "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=57803960596f4276b62fbcaacf141349"
     ],
-    "linkedStorefronts": [],
     "locationCandidates": []
   },
   "https://www.thecitycrossfit.com/memberships": {
@@ -44498,10 +44365,10 @@
     "status": "fetched",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
-    "etag": "W/\"293209803\"",
+    "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v17",
-    "contentHash": "2495d47e1c68ecb63549ba4567a656a5cea73bf92b990d3407a5da6427db2366",
+    "parserVersion": "selected-plan-catalog-v26",
+    "contentHash": "ef151ddb5b596c39bcdcbb292e64c4533ca584ab3956235fde4202dc78568851",
     "candidates": [
       {
         "sourceProductId": "monthly-membership-unlimited",
@@ -44523,7 +44390,7 @@
           "restrictions": []
         },
         "commitment": {
-          "type": "unknown",
+          "type": "month-to-month",
           "minimumMonths": null
         },
         "promotion": {
@@ -63047,6 +62914,604 @@
     "parserVersion": "selected-plan-catalog-v24",
     "contentHash": "",
     "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/signup/plan?club=31627&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "9af8953948e75bdd1b1fbeb732fb10cf5df7838f230b5c722dff2437fd880127",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/signup/plan?club=31628&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "f7b5187489b7dcbaf93dde370237e4c28a6ac3542fd4ca2e3fb9555a3f8ccdce",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31628"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=d2ba1f48cf1443ad8bf74cee2e613d98": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "0498ac0bc2ac19365c87271abb0b13f0a9afecd5a0211f005474c62af773e50a",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=57803960596f4276b62fbcaacf141349": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "33a5441912b4055df9a6ea0b049d1104140f2637a5ea144456de8f2623edfe43",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=0fecaf2095da45079bdabe75f51f3f61": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "8bd6c3500ced3dab59ad0bfe9d110e26efbb648ea75874e406b1bf15c928569a",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31628"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=57803960596f4276b62fbcaacf141349": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "ac63e6c20f3015dee3650b65d1e7c6c3dc732a5f029f7fb592e8f0bf6d5abead",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31628"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"878-7kvi9/sMOZ/FWVSsJXvca4cWWh8\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "f9803110a86f07dc1fe9822b98a2699f3c15ff610075232daa0f8b0d6d655aef",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627",
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627",
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627",
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31628": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"874-yA0ORAjnujsCZvxCOE3I5Fslgco\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "be44963a9c6d327c9e56688f16f52f14135965b5234d34e60eaeb09fe2923444",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628",
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628",
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628",
+      "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628"
+    ],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"1275-TJBOfrLfrPEX4qo/U2/rBEsHoVg\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "e5ab4786f38453f27de209144713a14f14ea1cedc27b472db90ac369bca944e6",
+    "candidates": [
+      {
+        "sourceProductId": "8b2886ae23a3495aa48b44e11dd6ac52",
+        "sourceProductAliases": [
+          "bakar-general-public-membership"
+        ],
+        "name": "Bakar General Public Membership",
+        "amount": 144.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Named home location",
+        "scopeType": "single-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Bakar General Public Membership $144/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"129d-RTHbBIP8gafoPL7lg/JOIZoik4o\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "fcc880d20258b821209f313b3e339944de5a3acf565f12412116fd276d150860",
+    "candidates": [
+      {
+        "sourceProductId": "d2ba1f48cf1443ad8bf74cee2e613d98",
+        "sourceProductAliases": [
+          "bakar-senior-membership"
+        ],
+        "name": "Bakar Senior Membership",
+        "amount": 110.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Named home location",
+        "scopeType": "single-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "age-restricted",
+          "restrictions": [
+            "Age 65+"
+          ]
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Bakar Senior Membership $110/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"12d0-2hBnux+oz6S0Bc3qJAK6Tz9o7Lo\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "7809847af21cddd1989439cfffa6d0aa41d4fdb38a09f00b99c2abdac92c74f1",
+    "candidates": [
+      {
+        "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+        "sourceProductAliases": [
+          "dual-site-general-public-membership-mp"
+        ],
+        "name": "Dual Site General Public Membership",
+        "amount": 170.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Both operator locations",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"1287-K+uHFAPlpupLom8WxAmkVhVqpU0\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "fd16de87ee2e33f139cfc4543d68f83cae667b10650da7f20019f55815c05c4a",
+    "candidates": [
+      {
+        "sourceProductId": "57803960596f4276b62fbcaacf141349",
+        "sourceProductAliases": [
+          "dual-site-senior-membership"
+        ],
+        "name": "Dual Site Senior Membership",
+        "amount": 130.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Both operator locations",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "age-restricted",
+          "restrictions": [
+            "Age 65+"
+          ]
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"12d0-2hBnux+oz6S0Bc3qJAK6Tz9o7Lo\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "7809847af21cddd1989439cfffa6d0aa41d4fdb38a09f00b99c2abdac92c74f1",
+    "candidates": [
+      {
+        "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+        "sourceProductAliases": [
+          "dual-site-general-public-membership-mp"
+        ],
+        "name": "Dual Site General Public Membership",
+        "amount": 170.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Both operator locations",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"1287-K+uHFAPlpupLom8WxAmkVhVqpU0\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "fd16de87ee2e33f139cfc4543d68f83cae667b10650da7f20019f55815c05c4a",
+    "candidates": [
+      {
+        "sourceProductId": "57803960596f4276b62fbcaacf141349",
+        "sourceProductAliases": [
+          "dual-site-senior-membership"
+        ],
+        "name": "Dual Site Senior Membership",
+        "amount": 130.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Both operator locations",
+        "scopeType": "multi-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "age-restricted",
+          "restrictions": [
+            "Age 65+"
+          ]
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"1221-kBWx3OR1RzHIkslSZFlsoj7AgJg\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "a1d6241e37c66738f80291e9ab3770937e49fef40b0256ab57cb30cfa8b74b97",
+    "candidates": [
+      {
+        "sourceProductId": "ba5aaedde74d48bda22e0de78ab24bc6",
+        "sourceProductAliases": [
+          "millberry-general-public-membership"
+        ],
+        "name": "Millberry General Public Membership",
+        "amount": 129.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Named home location",
+        "scopeType": "single-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Millberry General Public Membership $129/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "\"1246-hyZSi7i3JC8bThMzmWVOTYu9mtU\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v25",
+    "contentHash": "4da1e7e1ea012cc8daf6e1f55b1ff2bdfbce16c9c52e28539e35c2adf5c42759",
+    "candidates": [
+      {
+        "sourceProductId": "0fecaf2095da45079bdabe75f51f3f61",
+        "sourceProductAliases": [
+          "millberry-senior-membership"
+        ],
+        "name": "Millberry Senior Membership",
+        "amount": 101.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "accessScope": "Named home location",
+        "scopeType": "single-location",
+        "classAllowance": null,
+        "eligibility": {
+          "type": "age-restricted",
+          "restrictions": [
+            "Age 65+"
+          ]
+        },
+        "commitment": {
+          "type": "month-to-month",
+          "minimumMonths": null,
+          "rawLabel": "Open"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "enrollment",
+            "name": "Enrollment Fee",
+            "amount": 100.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Millberry Senior Membership $101/month; Enrollment Fee $100",
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628",
+        "autoPublishEligible": false
+      }
+    ],
     "linkedStorefronts": [],
     "locationCandidates": []
   }

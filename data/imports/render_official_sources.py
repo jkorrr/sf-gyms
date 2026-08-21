@@ -387,7 +387,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         # summary prices. Waiting for that operator-owned DOM prevents the
         # early summary amounts from being mistaken for complete plan cards.
         platform = static_crawler.platform_name(url)
-        dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "momence", "jane"}
+        dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "momence", "pushpress", "jane"}
         page.wait_for_timeout(
             4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com", "solidcore.co")) else 1500
         )
@@ -524,6 +524,46 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                 )
             except Exception:
                 pass
+        if platform == "pushpress":
+            for card in page.locator("[class*='PlanCard_plan-card']").all()[:100]:
+                try:
+                    if not card.is_visible():
+                        continue
+                    card_text = card.inner_text(timeout=500)
+                    card.click(timeout=1_000)
+                    page.wait_for_timeout(200)
+                    detail_link = page.locator(
+                        "a[href*='/landing/plans/'][href*='/participant']"
+                    ).last
+                    if not detail_link.is_visible():
+                        continue
+                    detail_href = text(detail_link.get_attribute("href"))
+                    detail_panel = detail_link.locator(
+                        "xpath=ancestor::*[@role='dialog' or contains(@class, 'Modal-module__')][last()]"
+                    )
+                    if not detail_panel.is_visible():
+                        continue
+                    detail_text = detail_panel.inner_text(timeout=timeout_ms)
+                    platform_card_candidates.extend(
+                        static_crawler.platform_adapters.pushpress_plan_detail_candidates(
+                            card_text,
+                            detail_text,
+                            page.url,
+                            detail_href,
+                        )
+                    )
+                except Exception:
+                    pass
+                finally:
+                    try:
+                        close = page.locator(
+                            "button[class*='Modal-module__headerCloseButton']"
+                        ).last
+                        if close.is_visible():
+                            close.click(timeout=1_000)
+                            page.wait_for_timeout(100)
+                    except Exception:
+                        pass
         if platform == "jane":
             for service in page.locator("a[href*='/treatment/']").all()[:200]:
                 try:

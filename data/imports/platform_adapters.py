@@ -907,3 +907,169 @@ def mindbody_contract_candidates(
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]
+
+
+def pushpress_plan_detail_candidates(
+    card_text: str,
+    detail_text: str,
+    source_url: str,
+    detail_href: str,
+) -> list[dict[str, Any]]:
+    """Reconstruct one public PushPress plan after opening its detail modal.
+
+    The list card attaches the product name to one amount and allowance. The
+    public modal adds the original billing cadence plus a stable plan ID in
+    its non-checkout ``Select`` link. Optional card-processing arithmetic is
+    intentionally excluded; the displayed base price is the ACH amount.
+    """
+
+    if platform_for_url(source_url) != "pushpress":
+        return []
+    try:
+        source = urlparse(source_url)
+        detail = urlparse(detail_href)
+    except ValueError:
+        return []
+    if detail.netloc and detail.netloc.casefold() != source.netloc.casefold():
+        return []
+    product_match = re.search(
+        r"/landing/plans/(?P<id>plan_[A-Za-z0-9_-]{6,80})/participant(?:/|$)",
+        detail.path,
+        re.IGNORECASE,
+    )
+    if not product_match:
+        return []
+    card_lines = [line.strip() for line in text(card_text).splitlines() if line.strip() and line.strip() != "•"]
+    if len(card_lines) < 2:
+        return []
+    name = card_lines[0]
+    card_amount = next(
+        (
+            float(match.group(1).replace(",", ""))
+            for line in card_lines[1:]
+            if (match := re.fullmatch(r"\$\s*([\d,]+(?:\.\d{1,2})?)", line))
+        ),
+        None,
+    )
+    detail_body = text(detail_text).replace("\r", "")
+    price_match = re.search(
+        r"(?:^|\n)Price\s*(?:\n|\s)+\$\s*([\d,]+(?:\.\d{1,2})?)\b",
+        detail_body,
+        re.IGNORECASE,
+    )
+    billing_match = re.search(
+        r"(?:^|\n)Billing frequency\s*(?:\n|\s)+([^\n]+)",
+        detail_body,
+        re.IGNORECASE,
+    )
+    sessions_match = re.search(
+        r"(?:^|\n)Sessions\s*(?:\n|\s)+(Unlimited|\d{1,4})\b",
+        detail_body,
+        re.IGNORECASE,
+    )
+    if not price_match or not billing_match:
+        return []
+    amount = float(price_match.group(1).replace(",", ""))
+    if card_amount is None or abs(card_amount - amount) > 0.01 or not 0 < amount <= 10_000:
+        return []
+    billing_label = " ".join(billing_match.group(1).split())
+    billing_lower = billing_label.casefold()
+    if re.search(r"\b(?:every\s+)?4\s+weeks?\b|\b28\s+days?\b", billing_lower):
+        cadence = "4 weeks"
+    elif re.search(r"\b(?:every\s+)?2\s+weeks?\b|\bbiweekly\b", billing_lower):
+        cadence = "2 weeks"
+    elif re.search(r"\b(?:every\s+)?month(?:ly)?\b", billing_lower):
+        cadence = "month"
+    elif re.search(r"\b(?:every\s+)?week(?:ly)?\b", billing_lower):
+        cadence = "week"
+    elif re.search(r"\b(?:one[ -]?time|once|non-recurring)\b", billing_lower):
+        cadence = "one-time"
+    else:
+        return []
+    session_label = sessions_match.group(1) if sessions_match else ""
+    unlimited = session_label.casefold() == "unlimited"
+    session_count = None if unlimited or not session_label else float(session_label)
+    allowance = (
+        {"count": session_count, "period": "visit" if cadence == "one-time" else cadence, "unlimited": unlimited}
+        if sessions_match
+        else None
+    )
+    promotion = bool(PROMOTION_RE.search(name))
+    restriction = RESTRICTED_RE.search(name)
+    name_lower = name.casefold()
+    if cadence != "one-time":
+        product_type = "monthly"
+    elif DROP_IN_RE.search(name):
+        product_type = "drop-in"
+        cadence = "visit"
+    elif re.search(r"\b(?:punch card|class pass|pack)\b", name, re.IGNORECASE):
+        product_type = "class-pack"
+    else:
+        product_type = "offer"
+    cycle_match = re.search(r"minimum\s+(\d{1,3})\s+cycles?", name, re.IGNORECASE)
+    prepaid_months = re.search(r"\b(\d{1,2})\s+months?\s+prepaid\b", name, re.IGNORECASE)
+    if cycle_match:
+        cycles = int(cycle_match.group(1))
+        commitment_value: dict[str, Any] = {
+            "type": "minimum-term",
+            "minimumMonths": cycles if cadence == "month" else None,
+            "minimumDays": cycles * 28 if cadence == "4 weeks" else None,
+            "rawLabel": cycle_match.group(0),
+        }
+    elif prepaid_months:
+        commitment_value = {
+            "type": "fixed-term",
+            "minimumMonths": int(prepaid_months.group(1)),
+            "minimumDays": None,
+            "rawLabel": prepaid_months.group(0),
+        }
+    else:
+        commitment_value = {
+            "type": "none" if cadence in {"one-time", "visit"} else "unknown",
+            "minimumMonths": None,
+            "minimumDays": None,
+            "rawLabel": "",
+        }
+    if restriction:
+        eligibility_type, restrictions = "restricted", [restriction.group(0)]
+    elif promotion:
+        eligibility_type, restrictions = "new-client", ["Promotional or introductory product"]
+    else:
+        eligibility_type, restrictions = "standard-adult", []
+    product_id = product_match.group("id")
+    alias = re.sub(r"[^a-z0-9]+", "-", re.sub(r"\([^)]*\)", "", name_lower)).strip("-")
+    raw_label = " — ".join(filter(None, (
+        name,
+        f"USD {amount:g}",
+        billing_label,
+        f"{session_label} sessions" if session_label else "",
+    )))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductAliases": [alias] if alias else [],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": f"{session_label} sessions" if session_label else name,
+        "scopeType": "operator-storefront",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": name if promotion else ""},
+        "eligibility": {"type": eligibility_type, "restrictions": restrictions},
+        "commitment": commitment_value,
+        "fees": [],
+        "ordinaryUse": not promotion and not restriction and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(name)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-pushpress-plan-detail",
+        "adapter": "pushpress",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]

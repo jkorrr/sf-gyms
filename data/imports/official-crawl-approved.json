@@ -3877,21 +3877,71 @@
     },
     {
       "gymId": "osm-node-3801395450",
+      "monthlyPrice": 219,
+      "dayPassPrice": 39,
+      "planName": "Monthly Membership Unlimited",
+      "planScope": "Unlimited in-person classes plus livestream access",
+      "commitmentType": "month-to-month",
+      "priceSource": "HAUM Studios",
+      "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The complete official catalog now lists a $219 monthly unlimited plan with no commitment, $119 four-class and $169 six-class plans with three-month commitments, a $189 unlimited three-month plan, $114 livestream-only monthly access, class packs, and a $39 ordinary in-person drop-in. The deterministic basic-plan rule selects the current no-commitment $219 plan; no mandatory fee is disclosed.",
       "planOffers": [
         {
-          "sourceProductId": "mini",
-          "name": "Mini Membership",
-          "accessScope": "Small recurring class membership",
-          "amount": 108,
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "Monthly Unlimited Livestream",
+          "productType": "class-membership",
+          "accessScope": "Unlimited livestream classes only",
+          "classAllowance": "unlimited",
+          "amount": 114,
           "billingInterval": "month",
-          "commitmentType": "month-to-month",
+          "commitmentType": "unknown",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-three-month",
-          "name": "Unlimited with 3-month commitment",
-          "accessScope": "Unlimited classes",
-          "classAllowance": "unlimited",
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership",
+          "productType": "class-membership",
+          "accessScope": "Four in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 4,
+            "period": "month"
+          },
+          "amount": 119,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "5-class-pack",
+          "name": "5 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five in-person classes",
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase"
+          },
+          "amount": 155,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership",
+          "productType": "class-membership",
+          "accessScope": "Six in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 6,
+            "period": "month"
+          },
           "amount": 169,
           "billingInterval": "month",
           "commitmentType": "minimum-term",
@@ -3899,23 +3949,85 @@
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-flex",
-          "name": "Unlimited No Commitment",
-          "accessScope": "Unlimited classes",
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 Class Pack Livestream",
+          "productType": "class-pack",
+          "accessScope": "Ten livestream classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 180,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited — 3 Month",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
           "classAllowance": "unlimited",
-          "amount": 199,
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
+          "classAllowance": "unlimited",
+          "amount": 219,
           "billingInterval": "month",
           "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10-class-pack",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten in-person classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 325,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
           "fees": []
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "in-person-drop-in",
-          "name": "In-person drop-in",
-          "amount": 35
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-In Livestream",
+          "amount": 20,
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          }
+        },
+        {
+          "sourceProductId": "drop-in",
+          "name": "In-Person Drop-In",
+          "amount": 39
         }
-      ]
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      }
     },
     {
       "gymId": "osm-node-3986912499",
@@ -6985,21 +7097,71 @@
     },
     {
       "gymId": "web-686330489fbf10",
+      "monthlyPrice": 219,
+      "dayPassPrice": 39,
+      "planName": "Monthly Membership Unlimited",
+      "planScope": "Unlimited in-person classes plus livestream access",
+      "commitmentType": "month-to-month",
+      "priceSource": "HAUM Studios",
+      "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The complete official catalog now lists a $219 monthly unlimited plan with no commitment, $119 four-class and $169 six-class plans with three-month commitments, a $189 unlimited three-month plan, $114 livestream-only monthly access, class packs, and a $39 ordinary in-person drop-in. The deterministic basic-plan rule selects the current no-commitment $219 plan; no mandatory fee is disclosed.",
       "planOffers": [
         {
-          "sourceProductId": "mini",
-          "name": "Mini Membership",
-          "accessScope": "Small recurring class membership",
-          "amount": 108,
+          "sourceProductId": "monthly-unlimited-livestream",
+          "name": "Monthly Unlimited Livestream",
+          "productType": "class-membership",
+          "accessScope": "Unlimited livestream classes only",
+          "classAllowance": "unlimited",
+          "amount": 114,
           "billingInterval": "month",
-          "commitmentType": "month-to-month",
+          "commitmentType": "unknown",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-three-month",
-          "name": "Unlimited with 3-month commitment",
-          "accessScope": "Unlimited classes",
-          "classAllowance": "unlimited",
+          "sourceProductId": "mini-membership-3-month",
+          "name": "Mini Membership",
+          "productType": "class-membership",
+          "accessScope": "Four in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 4,
+            "period": "month"
+          },
+          "amount": 119,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "5-class-pack",
+          "name": "5 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five in-person classes",
+          "classAllowance": {
+            "count": 5,
+            "period": "purchase"
+          },
+          "amount": 155,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "midi-membership-3-month",
+          "name": "Midi Membership",
+          "productType": "class-membership",
+          "accessScope": "Six in-person classes per month plus livestream access",
+          "classAllowance": {
+            "count": 6,
+            "period": "month"
+          },
           "amount": 169,
           "billingInterval": "month",
           "commitmentType": "minimum-term",
@@ -7007,23 +7169,85 @@
           "fees": []
         },
         {
-          "sourceProductId": "unlimited-flex",
-          "name": "Unlimited No Commitment",
-          "accessScope": "Unlimited classes",
+          "sourceProductId": "10-class-pack-livestream",
+          "name": "10 Class Pack Livestream",
+          "productType": "class-pack",
+          "accessScope": "Ten livestream classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 180,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited-3-month",
+          "name": "Monthly Membership Unlimited — 3 Month",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
           "classAllowance": "unlimited",
-          "amount": 199,
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "monthly-membership-unlimited",
+          "name": "Monthly Membership Unlimited",
+          "productType": "class-membership",
+          "accessScope": "Unlimited in-person classes plus livestream access",
+          "classAllowance": "unlimited",
+          "amount": 219,
           "billingInterval": "month",
           "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10-class-pack",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten in-person classes",
+          "classAllowance": {
+            "count": 10,
+            "period": "purchase"
+          },
+          "amount": 325,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
           "fees": []
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "in-person-drop-in",
-          "name": "In-person drop-in",
-          "amount": 35
+          "sourceProductId": "drop-in-livestream",
+          "name": "Drop-In Livestream",
+          "amount": 20,
+          "eligibility": {
+            "type": "online-only",
+            "restrictions": [
+              "Livestream-only; no in-person access"
+            ]
+          }
+        },
+        {
+          "sourceProductId": "drop-in",
+          "name": "In-Person Drop-In",
+          "amount": 39
         }
-      ]
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      }
     },
     {
       "gymId": "web-70ca27f287a58c",

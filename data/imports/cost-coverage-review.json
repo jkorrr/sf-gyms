@@ -938,13 +938,93 @@
       "crawlAttempts": [
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
-          "status": "not-modified",
-          "candidateCount": 3
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=57803960596f4276b62fbcaacf141349",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=d2ba1f48cf1443ad8bf74cee2e613d98",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31627&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=0fecaf2095da45079bdabe75f51f3f61",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=57803960596f4276b62fbcaacf141349",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31628&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2",
+          "status": "fetched",
+          "candidateCount": 0
         },
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
@@ -3873,7 +3953,17 @@
           "candidateCount": 0
         },
         {
+          "url": "https://crossfitgoldengate.pushpress.com/landing/plans",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.crossfitgoldengate.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.crossfitgoldengate.com/membership",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -4670,22 +4760,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=FF21F6C4-F366-4F07-9ED8-3E94A18FB7D1",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
           "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-07-21&view=MONTH",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-09-21&view=MONTH",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -4716,6 +4791,21 @@
         },
         {
           "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=FREETRIAL",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-09-21&view=MONTH",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=FF21F6C4-F366-4F07-9ED8-3E94A18FB7D1",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -7407,7 +7497,7 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-3801395450:plan:mini",
+      "selectedPlanId": "osm-node-3801395450:plan:monthly-membership-unlimited",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -7454,7 +7544,7 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-686330489fbf10:plan:mini",
+      "selectedPlanId": "web-686330489fbf10:plan:monthly-membership-unlimited",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -10742,13 +10832,93 @@
       "crawlAttempts": [
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
-          "status": "not-modified",
-          "candidateCount": 3
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=0fecaf2095da45079bdabe75f51f3f61&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=57803960596f4276b62fbcaacf141349&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=8b2886ae23a3495aa48b44e11dd6ac52&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ba5aaedde74d48bda22e0de78ab24bc6&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d2ba1f48cf1443ad8bf74cee2e613d98&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=ed141d9d2ab64783b10d1fd5cedf690f&clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31627",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=31628",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=57803960596f4276b62fbcaacf141349",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=d2ba1f48cf1443ad8bf74cee2e613d98",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31627&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=0fecaf2095da45079bdabe75f51f3f61",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31628&planId=57803960596f4276b62fbcaacf141349",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=31628&promo=UCSF+Affiliate&planId=3dea714b92554e319579eda0fb9453a2",
+          "status": "fetched",
+          "candidateCount": 0
         },
         {
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",

@@ -25,5 +25,17 @@
     "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
     "pageTitle": "The Work - NICE Pilates",
     "visibleText": "Hosted by\nNICE Pilates\nThe Work\nRenews every month\nPrice\n$375.00\nUnder a contract\n3 renewals required\nDescription\nA monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.\nPurchase Now\nContact Details\nPrice $390.37\nCard Fee: $15.37\nProcessing fee cost: $0.00"
+  },
+  "pushpressRecurring": {
+    "url": "https://crossfitgoldengate.pushpress.com/landing/plans",
+    "detailHref": "/landing/plans/plan_50247613f3f44f/participant",
+    "cardText": "Unlimited - Recurring (minimum 2 cycle commitment)\n$289.00\n•\nUnlimited sessions",
+    "detailText": "Unlimited - Recurring (minimum 2 cycle commitment)\nPrice\n$289.00\nBilling frequency\nEvery 4 weeks\nSessions\nUnlimited\nListed Prices are for ACH payment, ~2.9% credit card processing fees are added for credit card payments.\nSelect"
+  },
+  "pushpressDropIn": {
+    "url": "https://crossfitgoldengate.pushpress.com/landing/plans",
+    "detailHref": "/landing/plans/plan_dropin123456/participant",
+    "cardText": "drop in\n$32.50\n•\n1 session",
+    "detailText": "drop in\nPrice\n$32.50\nBilling frequency\nOne time\nSessions\n1\nSelect"
   }
 }

@@ -44,7 +44,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v24"
+PARSER_VERSION = "selected-plan-catalog-v26"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -1679,6 +1679,21 @@ def card_commitment_months(label: str) -> int | None:
     return int(parenthetical.group("count")) if parenthetical else None
 
 
+def card_commitment(label: str) -> tuple[str, int | None]:
+    """Return explicit recurring commitment semantics from a bounded card."""
+
+    minimum_months = card_commitment_months(label)
+    if minimum_months:
+        return "minimum-term", minimum_months
+    if re.search(
+        r"\b(?:no\s+commitments?|month[ -]to[ -]month|cancel\s+any\s*time)\b",
+        label,
+        re.IGNORECASE,
+    ):
+        return "month-to-month", None
+    return "unknown", None
+
+
 def labeled_plan_card_candidates(
     cards: Iterable[str],
     source_url: str,
@@ -1731,7 +1746,7 @@ def labeled_plan_card_candidates(
             name = card_plan_name(card[:recurring.start()])
             if not name or len(name.split()) > 12:
                 continue
-            minimum_months = card_commitment_months(card)
+            commitment_type, minimum_months = card_commitment(card)
             product_id = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
             if minimum_months:
                 product_id = f"{product_id}-{minimum_months}-month"
@@ -1745,7 +1760,7 @@ def labeled_plan_card_candidates(
                 cadence="month",
                 access_scope="Access described by the bounded official operator plan card",
                 allowance=card_class_allowance(card),
-                commitment_type="minimum-term" if minimum_months else "unknown",
+                commitment_type=commitment_type,
                 minimum_months=minimum_months,
                 eligibility_type="online-only" if re.search(r"livestream\s+only", card, re.IGNORECASE) else "standard-adult",
                 restrictions=["Livestream-only; no in-person access"] if re.search(r"livestream\s+only", card, re.IGNORECASE) else [],
@@ -2690,8 +2705,9 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
             "mandatory": True,
         })
     cadence = "month" if "month" in text(payload.get("renewalFrequency")).casefold() else "unknown"
-    term_months = numeric(payload.get("termInMonths"))
     agreement_term = text(payload.get("agreementTerm"))
+    open_agreement = agreement_term.casefold() in {"open", "month-to-month", "month to month"}
+    term_months = None if open_agreement else numeric(payload.get("termInMonths"))
     alias_label = re.sub(r"\b\d+\s+months?\s+term\b", "", name, flags=re.IGNORECASE)
     source_product_alias = re.sub(r"[^a-z0-9]+", "-", alias_label.casefold()).strip("-")
     candidate = {
@@ -2711,7 +2727,7 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
             "restrictions": ["Age 65+"] if senior else [],
         },
         "commitment": {
-            "type": "fixed-term" if term_months and term_months > 0 else ("month-to-month" if agreement_term.casefold() == "open" else "unknown"),
+            "type": "month-to-month" if open_agreement else ("fixed-term" if term_months and term_months > 0 else "unknown"),
             "minimumMonths": term_months if term_months and term_months > 0 else None,
             "rawLabel": agreement_term,
         },
