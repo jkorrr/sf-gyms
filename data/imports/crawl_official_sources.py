@@ -299,9 +299,140 @@ def structured_candidates(json_blocks: list[str], source_url: str, method: str =
     return candidates
 
 
-def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+def crunch_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct regular and promotional Crunch plan cards for review.
+
+    Crunch renders the current discounted dues beside an explicit ``reg:``
+    amount.  The generic monthly regex sees only the first number and can make
+    a temporary discount look like an ordinary price.  This adapter activates
+    only on Crunch-owned pages and only when both amounts and the public
+    month-to-month language are present.  Payment-table fees are associated
+    with their matching plan/variant rather than copied across cards.
+    """
+
+    host = hostname(source_url)
+    if not (host == "crunch.com" or host.endswith(".crunch.com")):
+        return []
+    # The live cards render cents as a separate typographic node (for example
+    # ``$`` / ``127`` / ``20`` / ``/mo``). Rejoin only that explicit dues
+    # shape before collapsing whitespace; ordinary whole-dollar cards remain
+    # untouched.
+    line_value = re.sub(
+        r"\$\s*(\d{1,4})\s+(\d{2})\s*(?=/\s*mo(?:nth)?\b)",
+        r"$\1.\2",
+        visible_text,
+        flags=re.IGNORECASE,
+    )
+    line_value = line_value.replace("\r\n", "\n").replace("\r", "\n")
+    value = re.sub(r"\s+", " ", line_value).strip()
+    if not re.search(r"\b(?:month-to-month|no commitment)\b", value, re.IGNORECASE):
+        return []
+
+    card_re = re.compile(
+        r"^(?P<name>All Crunch|City Crunch|One Crunch)\s*$\n.{0,180}?"
+        r"\$\s*(?P<current>\d{1,4}(?:\.\d{1,2})?)\s*(?:/\s*mo(?:nth)?|monthly)"
+        r".{0,180}?\breg(?:ular)?\s*:?\s*\$\s*(?P<regular>\d{1,4}(?:\.\d{1,2})?)",
+        re.IGNORECASE | re.MULTILINE | re.DOTALL,
+    )
+    cards = list(card_re.finditer(line_value))
+    if not cards:
+        return []
+
+    plan_order = ("all crunch", "city crunch", "one crunch")
+
+    def fee_pairs(label: str, stop_labels: tuple[str, ...]) -> dict[str, tuple[float, float]]:
+        stop = "|".join(re.escape(item) for item in stop_labels)
+        segment = re.search(
+            rf"\b{re.escape(label)}\b(?P<body>.{{0,500}}?)(?=\b(?:{stop})\b|$)",
+            value,
+            re.IGNORECASE,
+        )
+        if not segment:
+            return {}
+        amounts = [float(item) for item in MONEY_RE.findall(segment.group("body"))]
+        if len(amounts) < 6:
+            return {}
+        return {name: (amounts[index * 2], amounts[index * 2 + 1]) for index, name in enumerate(plan_order)}
+
+    enrollment = fee_pairs("Enrollment Fee", ("First Month Dues", "Processing Fee", "Subtotal"))
+    processing = fee_pairs("Processing Fee", ("Subtotal", "Last Month Dues", "Annual Fee"))
+    scopes = {
+        "all crunch": ("Worldwide Crunch club access", "multi-location"),
+        "city crunch": ("California Signature Crunch club access", "multi-location"),
+        "one crunch": ("Ordinary access at the named Crunch club", "single-location"),
+    }
     candidates: list[dict[str, Any]] = []
-    for kind, pattern in (("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)):
+    for card in cards:
+        display_name = " ".join(word.capitalize() for word in card.group("name").split())
+        key = card.group("name").casefold()
+        current = float(card.group("current"))
+        regular = float(card.group("regular"))
+        if current <= 0 or regular <= 0 or current >= regular or regular > 2000:
+            continue
+        access_scope, scope_type = scopes[key]
+        best_value = key == "all crunch" and bool(
+            re.search(r"(?:Best Value.{0,100}All Crunch|All Crunch.{0,100}Best Value)", value, re.IGNORECASE)
+        )
+
+        def fees(variant: int) -> list[dict[str, Any]]:
+            result: list[dict[str, Any]] = []
+            if key in enrollment:
+                result.append({
+                    "type": "enrollment", "amount": enrollment[key][variant], "currency": "USD",
+                    "cadence": "one-time", "mandatory": True,
+                })
+            if key in processing:
+                result.append({
+                    "type": "processing", "amount": processing[key][variant], "currency": "USD",
+                    "cadence": "one-time", "mandatory": True,
+                })
+            return result
+
+        common = {
+            "currency": "USD",
+            "cadence": "month",
+            "productType": "monthly",
+            "accessScope": access_scope,
+            "scopeType": scope_type,
+            "classAllowance": None,
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": {"type": "month-to-month", "minimumMonths": None},
+            "method": "visible-crunch-plan-card",
+            "adapter": "crunch-plan-cards",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        }
+        slug = key.replace(" ", "-")
+        candidates.append({
+            **common,
+            "sourceProductId": f"{slug}-regular",
+            "amount": regular,
+            "rawLabel": f"{display_name} regular rate ${regular:g}/month",
+            "promotion": {"isPromotion": False, "label": ""},
+            "fees": fees(0),
+            "bestValueLabel": best_value,
+        })
+        candidates.append({
+            **common,
+            "sourceProductId": f"{slug}-current-offer",
+            "amount": current,
+            "rawLabel": f"{display_name} current discounted rate ${current:g}/month; regular ${regular:g}/month",
+            "promotion": {"isPromotion": True, "label": "Current discounted offer"},
+            "fees": fees(1),
+            "bestValueLabel": False,
+        })
+    return candidates
+
+
+def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    crunch_candidates = crunch_visible_candidates(visible_text, source_url)
+    candidates: list[dict[str, Any]] = list(crunch_candidates)
+    patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if crunch_candidates else (
+        ("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)
+    )
+    for kind, pattern in patterns:
         for match in pattern.finditer(visible_text):
             amount = float(match.group("amount"))
             if amount <= 0 or amount > 2000:

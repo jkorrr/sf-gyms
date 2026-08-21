@@ -581,7 +581,7 @@
   "verifiedDayPassCount": 122,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 135,
-  "approvedOperatorCatalogLocationsApplied": 30,
+  "approvedOperatorCatalogLocationsApplied": 44,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
   "approvedDealsApplied": 11,
@@ -603,19 +603,19 @@
     "hoursNotApplicableCount": 0,
     "amenitiesListedCount": 245,
     "operatorLocationIdCount": 124,
-    "sourcePlanCatalogCount": 133,
+    "sourcePlanCatalogCount": 144,
     "sourcePlanFragmentCount": 1,
-    "selectedOnlyPlanCatalogCount": 53,
-    "noPlanCatalogCount": 61,
-    "sourceDropInCatalogCount": 98,
+    "selectedOnlyPlanCatalogCount": 35,
+    "noPlanCatalogCount": 68,
+    "sourceDropInCatalogCount": 112,
     "sourceDropInFragmentCount": 1,
-    "selectedOnlyDropInCatalogCount": 33,
-    "noDropInCatalogCount": 116,
-    "selectedUnknownCommitmentCount": 80,
+    "selectedOnlyDropInCatalogCount": 15,
+    "noDropInCatalogCount": 120,
+    "selectedUnknownCommitmentCount": 69,
     "selectedUndisclosedClassAllowanceCount": 9,
-    "typicalPlanSelectedCount": 109,
-    "highestAccessPlanSelectedCount": 109,
-    "bestValuePlanSelectedCount": 0,
+    "typicalPlanSelectedCount": 120,
+    "highestAccessPlanSelectedCount": 120,
+    "bestValuePlanSelectedCount": 6,
     "explicitMonthlyPriceStateCount": 248,
     "explicitDayPassPriceStateCount": 248,
     "metadataGapStatusCount": 248
@@ -636,12 +636,12 @@
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
     "publiclyPricedCommercialListings": 171,
-    "reconstructedRelevantCatalogListings": 118,
-    "reconstructedRelevantCatalogCoverage": 0.6901,
+    "reconstructedRelevantCatalogListings": 132,
+    "reconstructedRelevantCatalogCoverage": 0.7719,
     "targetCoverage": 0.9,
     "targetMet": false,
     "priorityPlatformCounts": {
-      "generic-official": 46,
+      "generic-official": 32,
       "mindbody": 4,
       "mariana-tek": 1,
       "momence": 1,
@@ -726,61 +726,6 @@
         "priceSourceUrl": "https://www.thecitycrossfit.com/memberships"
       },
       {
-        "id": "osm-way-272700932",
-        "name": "Crunch Fitness Chestnut",
-        "operatorId": "crunch",
-        "platforms": [],
-        "monthlyPrice": 95.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.crunch.com/locations/chestnut"
-      },
-      {
-        "id": "osm-node-2167144976",
-        "name": "Crunch Fitness Polk Street",
-        "operatorId": "crunch",
-        "platforms": [],
-        "monthlyPrice": 99.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.crunch.com/locations/polk-st"
-      },
-      {
-        "id": "web-99a718d670cb34",
-        "name": "Crunch Fitness Union Street",
-        "operatorId": "crunch",
-        "platforms": [],
-        "monthlyPrice": 95.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.crunch.com/locations/union-street"
-      },
-      {
-        "id": "osm-node-10859142467",
-        "name": "Crunch Fitness Yerba Buena",
-        "operatorId": "crunch",
-        "platforms": [],
-        "monthlyPrice": 90.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.crunch.com/locations/yerba-buena"
-      },
-      {
-        "id": "osm-node-4057014702",
-        "name": "Dogpatch Boulders",
-        "operatorId": "touchstoneclimbing.com",
-        "platforms": [],
-        "monthlyPrice": 112.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://touchstoneclimbing.com/dogpatch-boulders/faq/"
-      },
-      {
         "id": "web-e71c82ac2eb475",
         "name": "Equinox Beale Street",
         "operatorId": "equinox",
@@ -834,39 +779,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "none",
         "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission"
-      },
-      {
-        "id": "web-d366aaf6dd2658",
-        "name": "F45 Training City Center SF",
-        "operatorId": "f45",
-        "platforms": [],
-        "monthlyPrice": 335.83,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "source-catalog",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://f45training.com/studio/citycentersf/"
-      },
-      {
-        "id": "osm-node-9966877631",
-        "name": "F45 Training North Beach",
-        "operatorId": "f45",
-        "platforms": [],
-        "monthlyPrice": 335.83,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "source-catalog",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://f45training.com/studio/northbeach/"
-      },
-      {
-        "id": "web-388dac8833bafb",
-        "name": "F45 Training Transbay",
-        "operatorId": "f45",
-        "platforms": [],
-        "monthlyPrice": 335.83,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "source-catalog",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://f45training.com/studio/transbay/"
       },
       {
         "id": "web-27e606755f1ba8",
@@ -1029,17 +941,6 @@
         "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership"
       },
       {
-        "id": "osm-way-113283290",
-        "name": "Mission Cliffs",
-        "operatorId": "touchstoneclimbing.com",
-        "platforms": [],
-        "monthlyPrice": 112.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://touchstoneclimbing.com/mission-cliffs/faq/"
-      },
-      {
         "id": "osm-way-24334661",
         "name": "Movement San Francisco",
         "operatorId": "movementgyms.com",
@@ -1049,28 +950,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://movementgyms.com/san-francisco/"
-      },
-      {
-        "id": "osm-node-10198521798",
-        "name": "MX3 Fitness - Castro",
-        "operatorId": "mx3-fitness",
-        "platforms": [],
-        "monthlyPrice": 129.0,
-        "dayPassPrice": 30.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://mx3fitness.com/monthly-signup"
-      },
-      {
-        "id": "osm-node-10054566861",
-        "name": "MX3 Fitness - Mission",
-        "operatorId": "mx3-fitness",
-        "platforms": [],
-        "monthlyPrice": 109.0,
-        "dayPassPrice": 30.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://mx3fitness.com/monthly-signup"
       },
       {
         "id": "web-dcbf7708bf2f77",
@@ -1200,39 +1079,6 @@
         "priceSourceUrl": "https://www.worldteamusa.net/services"
       },
       {
-        "id": "osm-node-6471124709",
-        "name": "Yoga Flow",
-        "operatorId": "yogaflowsf.com",
-        "platforms": [],
-        "monthlyPrice": 100.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://yogaflowsf.com/membership/"
-      },
-      {
-        "id": "web-c8031adb1f022c",
-        "name": "Yoga Flow SF Ocean Ave",
-        "operatorId": "yogaflowsf.com",
-        "platforms": [],
-        "monthlyPrice": 100.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://yogaflowsf.com/membership/"
-      },
-      {
-        "id": "web-982849bdb030ca",
-        "name": "Yoga Flow SF Union St",
-        "operatorId": "yogaflowsf.com",
-        "platforms": [],
-        "monthlyPrice": 100.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://yogaflowsf.com/membership/"
-      },
-      {
         "id": "osm-node-4395534973",
         "name": "Yoga Mayu",
         "operatorId": "yoga mayu",
@@ -1247,9 +1093,9 @@
       }
     ],
     "sourceFragmentPlanCatalogs": 1,
-    "selectedOnlyPlanCatalogs": 53,
+    "selectedOnlyPlanCatalogs": 35,
     "sourceFragmentDropInCatalogs": 1,
-    "selectedOnlyDropInCatalogs": 33
+    "selectedOnlyDropInCatalogs": 15
   },
   "crawlSummary": {
     "attemptedGyms": 288,

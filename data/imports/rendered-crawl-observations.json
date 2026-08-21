@@ -1028,89 +1028,296 @@
     {
       "gymId": "osm-node-10859142467",
       "gymName": "Crunch Fitness Yerba Buena",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-current-offer",
       "amount": 76.5,
+      "rawLabel": "One Crunch current discounted rate $76.5/month; regular $90/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 15.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-10859142467",
+      "gymName": "Crunch Fitness Yerba Buena",
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "One Crunch: $76.50 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10859142467",
-      "gymName": "Crunch Fitness Yerba Buena",
-      "capturedAt": "2026-08-20",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-current-offer",
       "amount": 88.0,
-      "currency": "USD",
-      "rawLabel": "$161.06 SELECT | ALL CRUNCH SELECT | CITY CRUNCH SELECT | ONE CRUNCH Flexible Membership Options City Crunch: $88.00 monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
+      "rawLabel": "City Crunch current discounted rate $88/month; regular $110/month",
       "promotion": {
-        "isPromotion": false,
-        "label": ""
+        "isPromotion": true,
+        "label": "Current discounted offer"
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
-      "autoPublishEligible": false
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
     },
     {
       "gymId": "osm-node-10859142467",
       "gymName": "Crunch Fitness Yerba Buena",
-      "capturedAt": "2026-08-20",
-      "amount": 127.2,
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "All Crunch: $127.20 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-regular",
+      "amount": 90.0,
+      "rawLabel": "One Crunch regular rate $90/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-10859142467",
+      "gymName": "Crunch Fitness Yerba Buena",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-regular",
+      "amount": 110.0,
+      "rawLabel": "City Crunch regular rate $110/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-10859142467",
+      "gymName": "Crunch Fitness Yerba Buena",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-current-offer",
+      "amount": 127.2,
+      "rawLabel": "All Crunch current discounted rate $127.2/month; regular $159/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-10859142467",
+      "gymName": "Crunch Fitness Yerba Buena",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/yerba-buena",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-regular",
+      "amount": 159.0,
+      "rawLabel": "All Crunch regular rate $159/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true
     },
     {
       "gymId": "osm-node-10874914159",
@@ -2539,89 +2746,296 @@
     {
       "gymId": "osm-node-2167144976",
       "gymName": "Crunch Fitness Polk Street",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/polk-st",
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-current-offer",
       "amount": 84.15,
+      "rawLabel": "One Crunch current discounted rate $84.15/month; regular $99/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 15.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-2167144976",
+      "gymName": "Crunch Fitness Polk Street",
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "One Crunch: $84.15 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/polk-st",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2167144976",
-      "gymName": "Crunch Fitness Polk Street",
-      "capturedAt": "2026-08-20",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-current-offer",
       "amount": 88.0,
-      "currency": "USD",
-      "rawLabel": "$168.96 SELECT | ALL CRUNCH SELECT | CITY CRUNCH SELECT | ONE CRUNCH Flexible Membership Options City Crunch: $88.00 monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
+      "rawLabel": "City Crunch current discounted rate $88/month; regular $110/month",
       "promotion": {
-        "isPromotion": false,
-        "label": ""
+        "isPromotion": true,
+        "label": "Current discounted offer"
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.crunch.com/locations/polk-st",
-      "autoPublishEligible": false
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
     },
     {
       "gymId": "osm-node-2167144976",
       "gymName": "Crunch Fitness Polk Street",
-      "capturedAt": "2026-08-20",
-      "amount": 127.2,
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "All Crunch: $127.20 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/polk-st",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-regular",
+      "amount": 99.0,
+      "rawLabel": "One Crunch regular rate $99/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-2167144976",
+      "gymName": "Crunch Fitness Polk Street",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/polk-st",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-regular",
+      "amount": 110.0,
+      "rawLabel": "City Crunch regular rate $110/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-2167144976",
+      "gymName": "Crunch Fitness Polk Street",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/polk-st",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-current-offer",
+      "amount": 127.2,
+      "rawLabel": "All Crunch current discounted rate $127.2/month; regular $159/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-node-2167144976",
+      "gymName": "Crunch Fitness Polk Street",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/polk-st",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-regular",
+      "amount": 159.0,
+      "rawLabel": "All Crunch regular rate $159/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true
     },
     {
       "gymId": "osm-node-2337759318",
@@ -7311,89 +7725,296 @@
     {
       "gymId": "osm-way-272700932",
       "gymName": "Crunch Fitness Chestnut",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/chestnut",
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-current-offer",
       "amount": 80.75,
+      "rawLabel": "One Crunch current discounted rate $80.75/month; regular $95/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 15.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-way-272700932",
+      "gymName": "Crunch Fitness Chestnut",
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "$164.35 SELECT | ALL CRUNCH SELECT | CITY CRUNCH SELECT | ONE CRUNCH Flexible Membership Options One Crunch: $80.75 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/chestnut",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-way-272700932",
-      "gymName": "Crunch Fitness Chestnut",
-      "capturedAt": "2026-08-20",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-current-offer",
       "amount": 88.0,
-      "currency": "USD",
-      "rawLabel": "City Crunch: $88.00 monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
+      "rawLabel": "City Crunch current discounted rate $88/month; regular $110/month",
       "promotion": {
-        "isPromotion": false,
-        "label": ""
+        "isPromotion": true,
+        "label": "Current discounted offer"
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.crunch.com/locations/chestnut",
-      "autoPublishEligible": false
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
     },
     {
       "gymId": "osm-way-272700932",
       "gymName": "Crunch Fitness Chestnut",
-      "capturedAt": "2026-08-20",
-      "amount": 127.2,
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "All Crunch: $127.20 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/chestnut",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-regular",
+      "amount": 95.0,
+      "rawLabel": "One Crunch regular rate $95/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-way-272700932",
+      "gymName": "Crunch Fitness Chestnut",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/chestnut",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-regular",
+      "amount": 110.0,
+      "rawLabel": "City Crunch regular rate $110/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-way-272700932",
+      "gymName": "Crunch Fitness Chestnut",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/chestnut",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-current-offer",
+      "amount": 127.2,
+      "rawLabel": "All Crunch current discounted rate $127.2/month; regular $159/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "osm-way-272700932",
+      "gymName": "Crunch Fitness Chestnut",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/chestnut",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-regular",
+      "amount": 159.0,
+      "rawLabel": "All Crunch regular rate $159/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true
     },
     {
       "gymId": "web-0c3933dd5d019f",
@@ -9372,89 +9993,296 @@
     {
       "gymId": "web-99a718d670cb34",
       "gymName": "Crunch Fitness Union Street",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/union-street",
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-current-offer",
       "amount": 80.75,
+      "rawLabel": "One Crunch current discounted rate $80.75/month; regular $95/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 15.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "web-99a718d670cb34",
+      "gymName": "Crunch Fitness Union Street",
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "One Crunch: $80.75 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/union-street",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-99a718d670cb34",
-      "gymName": "Crunch Fitness Union Street",
-      "capturedAt": "2026-08-20",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-current-offer",
       "amount": 88.0,
-      "currency": "USD",
-      "rawLabel": "on S YIN YOGA 6:00 pm | 60min | Paige S SEE FULL SCHEDULE CLOSE Flexible Membership Options City Crunch: $88.00 monthly",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
+      "rawLabel": "City Crunch current discounted rate $88/month; regular $110/month",
       "promotion": {
-        "isPromotion": false,
-        "label": ""
+        "isPromotion": true,
+        "label": "Current discounted offer"
       },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.crunch.com/locations/union-street",
-      "autoPublishEligible": false
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
     },
     {
       "gymId": "web-99a718d670cb34",
       "gymName": "Crunch Fitness Union Street",
-      "capturedAt": "2026-08-20",
-      "amount": 127.2,
+      "capturedAt": "2026-08-21",
       "currency": "USD",
-      "rawLabel": "All Crunch: $127.20 monthly",
       "cadence": "month",
       "productType": "monthly",
+      "accessScope": "Ordinary access at the named Crunch club",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.crunch.com/locations/union-street",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "sourceProductId": "one-crunch-regular",
+      "amount": 95.0,
+      "rawLabel": "One Crunch regular rate $95/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "web-99a718d670cb34",
+      "gymName": "Crunch Fitness Union Street",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "California Signature Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/union-street",
+      "autoPublishEligible": false,
+      "sourceProductId": "city-crunch-regular",
+      "amount": 110.0,
+      "rawLabel": "City Crunch regular rate $110/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "web-99a718d670cb34",
+      "gymName": "Crunch Fitness Union Street",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/union-street",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-current-offer",
+      "amount": 127.2,
+      "rawLabel": "All Crunch current discounted rate $127.2/month; regular $159/month",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Current discounted offer"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 20.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 39.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false
+    },
+    {
+      "gymId": "web-99a718d670cb34",
+      "gymName": "Crunch Fitness Union Street",
+      "capturedAt": "2026-08-21",
+      "currency": "USD",
+      "cadence": "month",
+      "productType": "monthly",
+      "accessScope": "Worldwide Crunch club access",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-crunch-plan-card",
+      "adapter": "crunch-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.crunch.com/locations/union-street",
+      "autoPublishEligible": false,
+      "sourceProductId": "all-crunch-regular",
+      "amount": 159.0,
+      "rawLabel": "All Crunch regular rate $159/month",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 150.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        },
+        {
+          "type": "processing",
+          "amount": 49.95,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": true
     },
     {
       "gymId": "web-9cb9e987c99d39",

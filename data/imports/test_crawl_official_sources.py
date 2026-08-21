@@ -137,6 +137,36 @@ Credit pack
         offers = crawler.visible_candidates("Fees are 2.89% + $0.30. Core Max is $229/month.", "https://example.com")
         self.assertEqual([offer["amount"] for offer in offers if offer["productType"] == "monthly"], [229])
 
+    def test_crunch_cards_separate_regular_rates_promotions_and_plan_fees(self) -> None:
+        visible = """Best Value
+All Crunch
+Multi-Club Access
+$ 127 20 /mo reg: $ 159
+Month-to-Month No Commitment
+City Crunch
+Multi-Club Access
+$88/mo reg: $ 110
+Month-to-Month No Commitment
+One Crunch
+Single Club Access
+$ 80 75 /mo reg: $ 95
+Month-to-Month No Commitment
+Enrollment Fee $150 $20 $150 $20 $150 $15 First Month Dues
+Processing Fee $49.95 $39.95 $49.95 $39.95 $49.95 $39.95 Subtotal"""
+        offers = crawler.visible_candidates(visible, "https://www.crunch.com/locations/chestnut")
+        regular = [offer for offer in offers if not offer["promotion"]["isPromotion"]]
+        promotional = [offer for offer in offers if offer["promotion"]["isPromotion"]]
+        self.assertEqual([offer["amount"] for offer in regular], [159, 110, 95])
+        self.assertEqual([offer["amount"] for offer in promotional], [127.2, 88, 80.75])
+        self.assertEqual(
+            [(fee["type"], fee["amount"]) for fee in regular[0]["fees"]],
+            [("enrollment", 150), ("processing", 49.95)],
+        )
+        self.assertEqual(promotional[2]["fees"][0]["amount"], 15)
+        self.assertTrue(regular[0]["bestValueLabel"])
+        self.assertTrue(all(offer["method"] == "visible-crunch-plan-card" for offer in offers))
+        self.assertTrue(all(not offer["autoPublishEligible"] for offer in offers))
+
     def test_follows_owned_storefront_but_not_marketplace(self) -> None:
         links = [
             "https://clients.mindbodyonline.com/classic/ws?studioid=1",
