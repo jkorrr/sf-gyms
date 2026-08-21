@@ -4489,11 +4489,40 @@
   },
   "https://f45training.com/studio/citycentersf/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "Fri, 21 Aug 2026 06:33:12 GMT",
-    "contentHash": "6b4d4b9034bba95b214ff4bc72d34df176a821da0c4c566250a1b6f2c8a1a0ac",
+    "lastModified": "Fri, 21 Aug 2026 14:07:50 GMT",
+    "parserVersion": "selected-plan-catalog-v3",
+    "contentHash": "9eb85ff0cf027c1868ab02bef330a06df32e4f252e609f813377c85bad88c6f6",
     "candidates": [
+      {
+        "sourceProductId": "",
+        "amount": 38.0,
+        "currency": "USD",
+        "rawLabel": "Drop In",
+        "cadence": "",
+        "productType": "drop-in",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/citycentersf/",
+        "autoPublishEligible": false
+      },
       {
         "sourceProductId": "",
         "amount": 38.0,
@@ -4502,6 +4531,36 @@
         "cadence": "",
         "productType": "offer",
         "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/citycentersf/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 340.0,
+        "currency": "USD",
+        "rawLabel": "10 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 10.0,
+          "period": "month"
+        },
         "promotion": {
           "isPromotion": false,
           "label": ""
@@ -4552,6 +4611,36 @@
         "sourceProductId": "",
         "amount": 640.0,
         "currency": "USD",
+        "rawLabel": "20 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 20.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/citycentersf/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 640.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
@@ -4574,6 +4663,39 @@
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://f45training.com/studio/citycentersf/",
         "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 155.0,
+        "currency": "USD",
+        "rawLabel": "F45 Unlimited | Month to Month | Biweekly Autopay",
+        "cadence": "WEEK",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "minimum-term",
+          "minimumMonths": null,
+          "minimumDays": 42.0
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/citycentersf/",
+        "autoPublishEligible": false,
+        "intervalCount": 2.0
       },
       {
         "sourceProductId": "",
@@ -4633,9 +4755,63 @@
         "sourceProductId": "",
         "amount": 25.0,
         "currency": "USD",
+        "rawLabel": "3 Day Trial (Local Residents Only)",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "3 Day Trial (Local Residents Only)"
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/citycentersf/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 25.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/citycentersf/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 35.0,
+        "currency": "USD",
+        "rawLabel": "PEAK500 Drop In",
+        "cadence": "",
+        "productType": "drop-in",
         "classAllowance": null,
         "promotion": {
           "isPromotion": false,
@@ -4684,7 +4860,9 @@
         "autoPublishEligible": false
       }
     ],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://f45training.com/faqs/"
+    ],
     "locationCandidates": [
       {
         "name": "F45 Training City Center Sf",
@@ -4716,11 +4894,43 @@
   },
   "https://f45training.com/studio/northbeach/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "Fri, 21 Aug 2026 05:35:14 GMT",
-    "contentHash": "38ab1ec2637988e3acff029b94974a446097eaea3d921f9bc5ed6b421db173a5",
+    "lastModified": "Fri, 21 Aug 2026 14:05:28 GMT",
+    "parserVersion": "selected-plan-catalog-v3",
+    "contentHash": "cdf5cfd91d948aad7f59b3bb094579f237b02eeec7249218fca1bcd811dad989",
     "candidates": [
+      {
+        "sourceProductId": "",
+        "amount": 340.0,
+        "currency": "USD",
+        "rawLabel": "10 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 10.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/northbeach/",
+        "autoPublishEligible": false
+      },
       {
         "sourceProductId": "",
         "amount": 340.0,
@@ -4728,6 +4938,33 @@
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/northbeach/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 38.0,
+        "currency": "USD",
+        "rawLabel": "Drop In",
+        "cadence": "",
+        "productType": "drop-in",
         "classAllowance": null,
         "promotion": {
           "isPromotion": false,
@@ -4779,6 +5016,36 @@
         "sourceProductId": "",
         "amount": 640.0,
         "currency": "USD",
+        "rawLabel": "20 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 20.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/northbeach/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 640.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
@@ -4801,6 +5068,39 @@
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://f45training.com/studio/northbeach/",
         "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 155.0,
+        "currency": "USD",
+        "rawLabel": "F45 Unlimited | Month to Month | Biweekly Autopay",
+        "cadence": "WEEK",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "minimum-term",
+          "minimumMonths": null,
+          "minimumDays": 42.0
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/northbeach/",
+        "autoPublishEligible": false,
+        "intervalCount": 2.0
       },
       {
         "sourceProductId": "",
@@ -4860,9 +5160,63 @@
         "sourceProductId": "",
         "amount": 25.0,
         "currency": "USD",
+        "rawLabel": "3 Day Trial (Local Residents Only)",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "3 Day Trial (Local Residents Only)"
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/northbeach/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 25.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/northbeach/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 35.0,
+        "currency": "USD",
+        "rawLabel": "PEAK500 Drop In",
+        "cadence": "",
+        "productType": "drop-in",
         "classAllowance": null,
         "promotion": {
           "isPromotion": false,
@@ -4911,7 +5265,9 @@
         "autoPublishEligible": false
       }
     ],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://f45training.com/faqs/"
+    ],
     "locationCandidates": [
       {
         "name": "F45 Training North Beach",
@@ -4956,11 +5312,43 @@
   },
   "https://f45training.com/studio/transbay/": {
     "status": "fetched",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
-    "lastModified": "Fri, 21 Aug 2026 05:37:47 GMT",
-    "contentHash": "a37d267265083cf82817f52f3946b8d1b1734c02be4991d92a763bf9bd6db1ce",
+    "lastModified": "Fri, 21 Aug 2026 14:05:26 GMT",
+    "parserVersion": "selected-plan-catalog-v3",
+    "contentHash": "8668a3a314a4471563dcf0cf044f61f568203917d6b00c5dc9175bda941d7d01",
     "candidates": [
+      {
+        "sourceProductId": "",
+        "amount": 340.0,
+        "currency": "USD",
+        "rawLabel": "10 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 10.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
       {
         "sourceProductId": "",
         "amount": 340.0,
@@ -4992,9 +5380,66 @@
         "sourceProductId": "",
         "amount": 640.0,
         "currency": "USD",
+        "rawLabel": "20 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 20.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 640.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 38.0,
+        "currency": "USD",
+        "rawLabel": "Drop In",
+        "cadence": "",
+        "productType": "drop-in",
         "classAllowance": null,
         "promotion": {
           "isPromotion": false,
@@ -5046,6 +5491,33 @@
         "sourceProductId": "",
         "amount": 185.0,
         "currency": "USD",
+        "rawLabel": "GNC 5 Class Pack",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 185.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
@@ -5068,6 +5540,69 @@
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://f45training.com/studio/transbay/",
         "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 185.0,
+        "currency": "USD",
+        "rawLabel": "5 Classes",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": {
+          "count": 5.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 155.0,
+        "currency": "USD",
+        "rawLabel": "F45 Unlimited | Month to Month | Biweekly Autopay",
+        "cadence": "WEEK",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "minimum-term",
+          "minimumMonths": null,
+          "minimumDays": 42.0
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false,
+        "intervalCount": 2.0
       },
       {
         "sourceProductId": "",
@@ -5127,6 +5662,33 @@
         "sourceProductId": "",
         "amount": 25.0,
         "currency": "USD",
+        "rawLabel": "3 Day Trial (Local Residents Only)",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "3 Day Trial (Local Residents Only)"
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 25.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
@@ -5142,6 +5704,33 @@
         "commitment": {
           "type": "unknown",
           "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 929.0,
+        "currency": "USD",
+        "rawLabel": "F45 Training | 3 Month Pass",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "fixed-term",
+          "minimumMonths": 3
         },
         "method": "json-ld",
         "adapter": "operator-site",
@@ -5181,9 +5770,63 @@
         "sourceProductId": "",
         "amount": 1858.0,
         "currency": "USD",
+        "rawLabel": "F45 Training | 6 Month Pass",
+        "cadence": "",
+        "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "fixed-term",
+          "minimumMonths": 6
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 1858.0,
+        "currency": "USD",
         "rawLabel": "offer",
         "cadence": "",
         "productType": "offer",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "json-ld",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://f45training.com/studio/transbay/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "",
+        "amount": 35.0,
+        "currency": "USD",
+        "rawLabel": "PEAK500 Drop In",
+        "cadence": "",
+        "productType": "drop-in",
         "classAllowance": null,
         "promotion": {
           "isPromotion": false,
@@ -5232,7 +5875,9 @@
         "autoPublishEligible": false
       }
     ],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://f45training.com/faqs/"
+    ],
     "locationCandidates": [
       {
         "name": "F45 Training Transbay",
@@ -52866,5 +53511,17 @@
         "autoPublishEligible": false
       }
     ]
+  },
+  "https://f45training.com/faqs/": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "Fri, 21 Aug 2026 05:29:28 GMT",
+    "parserVersion": "selected-plan-catalog-v3",
+    "contentHash": "e5924eb5e0a6e1b2ab10dcfd6d5863bed1ab7e2dfd8bbbf01465eb30f4c54cfe",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
   }
 }

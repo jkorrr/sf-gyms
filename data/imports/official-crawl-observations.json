@@ -12461,9 +12461,69 @@
       "sourceProductId": "",
       "amount": 25.0,
       "currency": "USD",
+      "rawLabel": "3 Day Trial (Local Residents Only)",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "3 Day Trial (Local Residents Only)"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/northbeach/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "gymName": "F45 Training North Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 25.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/northbeach/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "gymName": "F45 Training North Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "PEAK500 Drop In",
+      "cadence": "",
+      "productType": "drop-in",
       "classAllowance": null,
       "promotion": {
         "isPromotion": false,
@@ -12521,6 +12581,36 @@
       "sourceProductId": "",
       "amount": 38.0,
       "currency": "USD",
+      "rawLabel": "Drop In",
+      "cadence": "",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/northbeach/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "gymName": "F45 Training North Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 38.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
@@ -12543,6 +12633,42 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://f45training.com/studio/northbeach/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "gymName": "F45 Training North Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 155.0,
+      "currency": "USD",
+      "rawLabel": "F45 Unlimited | Month to Month | Biweekly Autopay",
+      "cadence": "WEEK",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": null,
+        "minimumDays": 42.0
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/northbeach/",
+      "autoPublishEligible": false,
+      "intervalCount": 2.0
     },
     {
       "gymId": "osm-node-9966877631",
@@ -12611,10 +12737,76 @@
       "sourceProductId": "",
       "amount": 340.0,
       "currency": "USD",
+      "rawLabel": "10 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/northbeach/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "gymName": "F45 Training North Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 340.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
       "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/northbeach/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "gymName": "F45 Training North Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 640.0,
+      "currency": "USD",
+      "rawLabel": "20 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "month"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -17558,9 +17750,69 @@
       "sourceProductId": "",
       "amount": 25.0,
       "currency": "USD",
+      "rawLabel": "3 Day Trial (Local Residents Only)",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "3 Day Trial (Local Residents Only)"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 25.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "PEAK500 Drop In",
+      "cadence": "",
+      "productType": "drop-in",
       "classAllowance": null,
       "promotion": {
         "isPromotion": false,
@@ -17618,6 +17870,36 @@
       "sourceProductId": "",
       "amount": 38.0,
       "currency": "USD",
+      "rawLabel": "Drop In",
+      "cadence": "",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 38.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
@@ -17640,6 +17922,42 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://f45training.com/studio/transbay/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 155.0,
+      "currency": "USD",
+      "rawLabel": "F45 Unlimited | Month to Month | Biweekly Autopay",
+      "cadence": "WEEK",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": null,
+        "minimumDays": 42.0
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false,
+      "intervalCount": 2.0
     },
     {
       "gymId": "web-388dac8833bafb",
@@ -17708,10 +18026,106 @@
       "sourceProductId": "",
       "amount": 185.0,
       "currency": "USD",
+      "rawLabel": "5 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "GNC 5 Class Pack",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 185.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
       "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 340.0,
+      "currency": "USD",
+      "rawLabel": "10 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "month"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -17768,6 +18182,39 @@
       "sourceProductId": "",
       "amount": 640.0,
       "currency": "USD",
+      "rawLabel": "20 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 640.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
@@ -17798,6 +18245,36 @@
       "sourceProductId": "",
       "amount": 929.0,
       "currency": "USD",
+      "rawLabel": "F45 Training | 3 Month Pass",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 929.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
@@ -17813,6 +18290,36 @@
       "commitment": {
         "type": "unknown",
         "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/transbay/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "gymName": "F45 Training Transbay",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 1858.0,
+      "currency": "USD",
+      "rawLabel": "F45 Training | 6 Month Pass",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6
       },
       "method": "json-ld",
       "adapter": "operator-site",
@@ -29996,9 +30503,69 @@
       "sourceProductId": "",
       "amount": 25.0,
       "currency": "USD",
+      "rawLabel": "3 Day Trial (Local Residents Only)",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "3 Day Trial (Local Residents Only)"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "gymName": "F45 Training City Center SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 25.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "gymName": "F45 Training City Center SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "PEAK500 Drop In",
+      "cadence": "",
+      "productType": "drop-in",
       "classAllowance": null,
       "promotion": {
         "isPromotion": false,
@@ -30056,6 +30623,36 @@
       "sourceProductId": "",
       "amount": 38.0,
       "currency": "USD",
+      "rawLabel": "Drop In",
+      "cadence": "",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "gymName": "F45 Training City Center SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 38.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
@@ -30078,6 +30675,42 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://f45training.com/studio/citycentersf/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "gymName": "F45 Training City Center SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 155.0,
+      "currency": "USD",
+      "rawLabel": "F45 Unlimited | Month to Month | Biweekly Autopay",
+      "cadence": "WEEK",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": null,
+        "minimumDays": 42.0
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/",
+      "autoPublishEligible": false,
+      "intervalCount": 2.0
     },
     {
       "gymId": "web-d366aaf6dd2658",
@@ -30146,10 +30779,76 @@
       "sourceProductId": "",
       "amount": 340.0,
       "currency": "USD",
+      "rawLabel": "10 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "gymName": "F45 Training City Center SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 340.0,
+      "currency": "USD",
       "rawLabel": "offer",
       "cadence": "",
       "productType": "offer",
       "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "json-ld",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "gymName": "F45 Training City Center SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 640.0,
+      "currency": "USD",
+      "rawLabel": "20 Classes",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "month"
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""

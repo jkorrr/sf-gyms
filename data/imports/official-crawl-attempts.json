@@ -1206,7 +1206,7 @@
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-10874914159",
@@ -3125,7 +3125,7 @@
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-13507740638",
@@ -11806,24 +11806,44 @@
     {
       "gymId": "osm-node-9966877631",
       "name": "F45 Training North Beach",
+      "url": "https://f45training.com/faqs/",
+      "attemptedAt": "2026-08-21",
+      "status": "fetched",
+      "accessBlocker": "",
+      "robotsStatus": "checked",
+      "contentHash": "e5924eb5e0a6e1b2ab10dcfd6d5863bed1ab7e2dfd8bbbf01465eb30f4c54cfe",
+      "contentChanged": false,
+      "candidateCount": 0,
+      "sharedResponse": true,
+      "linkedFrom": "https://f45training.com/studio/northbeach/",
+      "linkDepth": 1,
+      "requiresReview": false,
+      "priceChangeOver20Percent": false
+    },
+    {
+      "gymId": "osm-node-9966877631",
+      "name": "F45 Training North Beach",
       "url": "https://f45training.com/studio/northbeach/",
       "attemptedAt": "2026-08-21",
       "status": "fetched",
+      "accessBlocker": "",
       "robotsStatus": "checked",
-      "contentHash": "38ab1ec2637988e3acff029b94974a446097eaea3d921f9bc5ed6b421db173a5",
+      "contentHash": "cdf5cfd91d948aad7f59b3bb094579f237b02eeec7249218fca1bcd811dad989",
       "contentChanged": true,
-      "candidateCount": 7,
+      "candidateCount": 13,
       "sharedResponse": false,
-      "linkedStorefronts": [],
+      "linkedStorefronts": [
+        "https://f45training.com/faqs/"
+      ],
       "requiresReview": true,
       "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
-      "operatorRequestCount": 1,
+      "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-996696401",
@@ -13887,7 +13907,7 @@
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-way-261268792",
@@ -15562,7 +15582,7 @@
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-0f9db70c7df82e",
@@ -16873,24 +16893,44 @@
     {
       "gymId": "web-388dac8833bafb",
       "name": "F45 Training Transbay",
+      "url": "https://f45training.com/faqs/",
+      "attemptedAt": "2026-08-21",
+      "status": "fetched",
+      "accessBlocker": "",
+      "robotsStatus": "checked",
+      "contentHash": "e5924eb5e0a6e1b2ab10dcfd6d5863bed1ab7e2dfd8bbbf01465eb30f4c54cfe",
+      "contentChanged": false,
+      "candidateCount": 0,
+      "sharedResponse": true,
+      "linkedFrom": "https://f45training.com/studio/transbay/",
+      "linkDepth": 1,
+      "requiresReview": false,
+      "priceChangeOver20Percent": false
+    },
+    {
+      "gymId": "web-388dac8833bafb",
+      "name": "F45 Training Transbay",
       "url": "https://f45training.com/studio/transbay/",
       "attemptedAt": "2026-08-21",
       "status": "fetched",
+      "accessBlocker": "",
       "robotsStatus": "checked",
-      "contentHash": "a37d267265083cf82817f52f3946b8d1b1734c02be4991d92a763bf9bd6db1ce",
+      "contentHash": "8668a3a314a4471563dcf0cf044f61f568203917d6b00c5dc9175bda941d7d01",
       "contentChanged": true,
-      "candidateCount": 10,
+      "candidateCount": 20,
       "sharedResponse": false,
-      "linkedStorefronts": [],
+      "linkedStorefronts": [
+        "https://f45training.com/faqs/"
+      ],
       "requiresReview": true,
       "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
-      "operatorRequestCount": 1,
+      "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-38b781fe26e1b4",
@@ -18889,7 +18929,7 @@
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-8e0d13fb9738f9",
@@ -20004,7 +20044,7 @@
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-a16276afbf72d9",
@@ -21144,7 +21184,7 @@
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-c745e6dbdcadb6",
@@ -21755,24 +21795,44 @@
     {
       "gymId": "web-d366aaf6dd2658",
       "name": "F45 Training City Center SF",
+      "url": "https://f45training.com/faqs/",
+      "attemptedAt": "2026-08-21",
+      "status": "fetched",
+      "accessBlocker": "",
+      "robotsStatus": "checked",
+      "contentHash": "e5924eb5e0a6e1b2ab10dcfd6d5863bed1ab7e2dfd8bbbf01465eb30f4c54cfe",
+      "contentChanged": false,
+      "candidateCount": 0,
+      "sharedResponse": false,
+      "linkedFrom": "https://f45training.com/studio/citycentersf/",
+      "linkDepth": 1,
+      "requiresReview": false,
+      "priceChangeOver20Percent": false
+    },
+    {
+      "gymId": "web-d366aaf6dd2658",
+      "name": "F45 Training City Center SF",
       "url": "https://f45training.com/studio/citycentersf/",
       "attemptedAt": "2026-08-21",
       "status": "fetched",
+      "accessBlocker": "",
       "robotsStatus": "checked",
-      "contentHash": "6b4d4b9034bba95b214ff4bc72d34df176a821da0c4c566250a1b6f2c8a1a0ac",
+      "contentHash": "9eb85ff0cf027c1868ab02bef330a06df32e4f252e609f813377c85bad88c6f6",
       "contentChanged": true,
-      "candidateCount": 7,
+      "candidateCount": 13,
       "sharedResponse": false,
-      "linkedStorefronts": [],
+      "linkedStorefronts": [
+        "https://f45training.com/faqs/"
+      ],
       "requiresReview": true,
       "priceChangeOver20Percent": false,
       "reviewedSeedCount": 1,
       "reviewedSeedAttemptCount": 1,
-      "operatorRequestCount": 1,
+      "operatorRequestCount": 2,
       "bookingRequestCount": 0,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-d4b58ff151c226",
@@ -21898,7 +21958,7 @@
       "bookingRequestCount": 3,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "web-dbb15601f0e4c6",
