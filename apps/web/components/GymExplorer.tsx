@@ -4,6 +4,7 @@ import { useEffect, useMemo, useRef, useState } from "react";
 
 import CompareTray from "./CompareTray";
 import GymMap from "./GymMap";
+import GymMapPreview from "./GymMapPreview";
 import RankedResultsDrawer from "./RankedResultsDrawer";
 import { readCompareIds, writeCompareIds } from "../lib/compare-state";
 import { basePath, oauthRedirectUrl } from "../lib/config";
@@ -306,6 +307,16 @@ export default function GymExplorer() {
   const filteredGyms = useMemo(() => rankedRows.map(({ gym }) => gym), [rankedRows]);
   const selectedGym = selected && filteredGyms.some((gym) => gym.id === selected.id) ? selected : null;
   const selectedDistance = selectedGym && origin ? distanceMiles(origin, selectedGym) : null;
+
+  useEffect(() => {
+    if (!selectedGym) return;
+    const closeOnEscape = (event: KeyboardEvent) => {
+      if (event.key === "Escape") setSelected(null);
+    };
+    document.addEventListener("keydown", closeOnEscape);
+    return () => document.removeEventListener("keydown", closeOnEscape);
+  }, [selectedGym]);
+
   const toggleNeighborhood = (neighborhood: string) => {
     setSelectedNeighborhoods((current) => current.includes(neighborhood)
       ? current.filter((item) => item !== neighborhood)
@@ -378,7 +389,12 @@ export default function GymExplorer() {
     const gym = filteredGyms.find((item) => item.id === id);
     if (!gym) return;
     setSelected(gym);
-    document.getElementById("map")?.scrollIntoView({ behavior: "smooth", block: "start" });
+    window.requestAnimationFrame(() => document.querySelector(".map-panel")?.scrollIntoView({ behavior: "smooth", block: "end" }));
+  };
+
+  const selectMapGym = (gym: Gym | null) => {
+    setSelected(gym);
+    if (gym) window.requestAnimationFrame(() => document.querySelector(".map-panel")?.scrollIntoView({ behavior: "smooth", block: "end" }));
   };
 
   const useCurrentLocation = () => {
@@ -457,7 +473,7 @@ export default function GymExplorer() {
   };
 
   return (
-    <main className="shell">
+    <main className={`shell${selectedGym ? " has-map-preview" : ""}`}>
       <header className="topbar">
         <a className="brand" href={`${basePath}/`} aria-label="SFGYMS home">
           <div className="logo brand-mark" aria-hidden="true">
@@ -549,23 +565,23 @@ export default function GymExplorer() {
           <span className="map-hint">Pan, zoom, and click a dot to inspect</span>
         </div>
         <div className="map-panel">
-          <GymMap gyms={filteredBaseGyms} selectedId={selectedGym?.id} highlightedId={highlightedId} rankedIds={rankedRows.slice(0, 10).map((row) => row.gym.id)} origin={origin} onSelect={setSelected} />
-          {selectedGym && <aside className="detail" aria-live="polite">
-            <div className="card-top"><div><span className="venue-badge">{venueTypeLabels[selectedGym.venueType]}</span><span className={`cost-status cost-status-${selectedGym.pricingStatus ?? "unresolved"}`}>{pricingStatusLabel(selectedGym)}</span><h3>{selectedGym.name}</h3><p className="card-subtitle">{selectedGym.neighborhood} - {selectedGym.gymType}</p></div><button className={`heart ${savedIds.includes(selectedGym.id) ? "saved" : ""}`} aria-label={`${savedIds.includes(selectedGym.id) ? "Remove" : "Save"} ${selectedGym.name}`} onClick={() => toggleSaved(selectedGym.id)}>{savedIds.includes(selectedGym.id) ? "♥" : "♡"}</button></div>
-            <p>{selectedGym.description}</p>
-            <p><strong>{monthlyCostLabel(selectedGym)}</strong> - {priceLabel(selectedGym.annualFee, " annual fee")} - {priceLabel(selectedGym.dayPassPrice, " day pass")}<br />{selectedGym.hours}{selectedDistance !== null && <><br /><strong>{formatDistanceMiles(selectedDistance)}</strong> from {origin?.label}</>}</p>
-            <div className="price-row">{selectedGym.amenities.slice(0, 4).map((amenity) => <span className="price-pill" key={amenity}>{amenity}</span>)}</div>
-            {selectedGym.priceNote && <p className="price-note">{selectedGym.priceNote}</p>}
-            {selectedGym.annualFeeNote && <p className="price-note">Annual fee: {selectedGym.annualFeeNote}</p>}
-            <div className="detail-actions"><a className="primary" href={gymDetailHref(selectedGym.id)}>Open full listing</a><a className="secondary" href={selectedGym.websiteUrl} target="_blank" rel="noreferrer">{selectedGym.websiteUrl === selectedGym.sourceUrl ? "View source listing" : "Visit gym site"}</a><button className="secondary" onClick={() => toggleCompare(selectedGym.id)}>{compareIds.includes(selectedGym.id) ? "Remove from compare" : "Add to compare"}</button></div>
-            <p className="source-note">{freshnessLabel(selectedGym)}. {selectedGym.priceSourceUrl && <><a href={selectedGym.priceSourceUrl} target="_blank" rel="noreferrer">See official price source</a>. </>}Listing source: <a href={selectedGym.sourceUrl} target="_blank" rel="noreferrer">{selectedGym.sourceName}</a>. Confirm pricing and hours before visiting.</p>
-          </aside>}
+          <GymMap gyms={filteredBaseGyms} selectedId={selectedGym?.id} highlightedId={highlightedId} origin={origin} onSelect={selectMapGym} />
+          {selectedGym && <GymMapPreview
+            gym={selectedGym}
+            distance={selectedDistance}
+            originLabel={origin?.label}
+            isSaved={savedIds.includes(selectedGym.id)}
+            isCompared={compareIds.includes(selectedGym.id)}
+            onClose={() => setSelected(null)}
+            onToggleSave={() => void toggleSaved(selectedGym.id)}
+            onToggleCompare={() => toggleCompare(selectedGym.id)}
+          />}
         </div>
         <RankedResultsDrawer rows={rankedRows} sortOrder={sortOrder} expanded={resultsExpanded} compareIds={compareIds} onToggle={() => setResultsExpanded((current) => !current)} onSelect={selectRankedGym} onCompare={toggleCompare} onHighlight={setHighlightedId} />
       </section>
 
       {compareMessage && <p className="global-compare-message" role="status">{compareMessage}</p>}
-      <CompareTray gyms={gyms} compareIds={compareIds} onRemove={toggleCompare} />
+      {!selectedGym && <CompareTray gyms={gyms} compareIds={compareIds} onRemove={toggleCompare} />}
 
       <footer className="footer"><span>Map tiles: OpenFreeMap / OpenStreetMap - Map data: <a href="https://www.openstreetmap.org/copyright" target="_blank" rel="noreferrer">OpenStreetMap contributors</a> - Listings are community source data.</span><span>More cities after the data earns your trust.</span></footer>
     </main>
