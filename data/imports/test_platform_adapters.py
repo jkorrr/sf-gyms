@@ -52,6 +52,27 @@ class PlatformAdapterTests(unittest.TestCase):
     def test_unknown_hosts_are_not_scraped_as_platform_catalogs(self) -> None:
         self.assertEqual(adapters.extract_candidates({"name": "Plan", "price": 99}, "https://tracker.invalid/api"), [])
 
+    def test_location_metadata_and_checkout_totals_are_not_products(self) -> None:
+        payload = {
+            "studio": {"id": "loc-1", "name": "Lotusland Yoga SF", "total": 99},
+            "checkout": {"name": "Order total", "amount": 99},
+        }
+        self.assertEqual(adapters.extract_candidates(payload, "https://momence.com/api/store"), [])
+
+    def test_new_student_language_is_marked_promotional(self) -> None:
+        candidates = adapters.extract_candidates(
+            {"products": [{"productId": "welcome", "name": "New Student Special", "price": 49, "billingPeriod": "month"}]},
+            "https://momence.com/api/memberships",
+        )
+        self.assertEqual(len(candidates), 1)
+        self.assertTrue(candidates[0]["promotion"]["isPromotion"])
+        self.assertEqual(candidates[0]["eligibility"]["type"], "new-client")
+
+    def test_bookee_unit_amount_is_interpreted_as_cents(self) -> None:
+        fixture = self.fixtures["bookee"]
+        candidate = adapters.extract_candidates(fixture["payload"], fixture["url"])[0]
+        self.assertEqual(candidate["amount"], 129)
+
 
 if __name__ == "__main__":
     unittest.main()

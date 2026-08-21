@@ -1,9 +1,10 @@
 {
   "_meta": {
-    "generatedAt": "2026-08-20",
+    "generatedAt": "2026-08-21",
     "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
-    "proposalCount": 32,
-    "rejectedUnattachedObservationCount": 433
+    "proposalCount": 25,
+    "unchangedApprovedCount": 6,
+    "rejectedUnattachedObservationCount": 435
   },
   "proposals": [
     {
@@ -95,6 +96,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -132,36 +138,7 @@
       "planOffers": [],
       "dropInOffers": [
         {
-          "sourceProductId": "",
-          "name": "Unlimited classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 30.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.hitfitsf.com/purchase",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "Unlimited classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30",
-            "contentHash": "65c8d3d8c277ee915dfa1739bdf52d1ad724da2e43a3ae55d2f68b54fb0741cf",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "",
+          "sourceProductId": "card-15d05a26cf393fd9",
           "name": "ted classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30 Single class",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 30.0,
@@ -185,11 +162,16 @@
             "contentHash": "b40cbde9bbfdbe56564fac569c0515ab60cd29d86404319d6b9e832cbbf6bf01",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-15d05a26cf393fd9",
             "conflictFlags": []
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "none-observed",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -210,82 +192,6 @@
           "dropIns": {
             "status": "source-catalog",
             "reason": "Reviewed public visit or class offers are retained before deterministic selection."
-          }
-        }
-      }
-    },
-    {
-      "gymId": "osm-node-10806697937",
-      "gymName": "CorePower Yoga Mission Bay",
-      "canonicalAddress": "1200 4th st",
-      "operatorId": "corepower-yoga",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "18e7c04cbbc98e973e1848099835261d4df214f089a5571b556b06f8103f972f",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "osm-node-10806697937:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
           }
         }
       }
@@ -412,6 +318,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -449,7 +360,7 @@
       "planOffers": [],
       "dropInOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-52a40bef080f6261",
           "name": "Single Class Expires 45 days from sale date $40",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 40.0,
@@ -466,18 +377,23 @@
           "fees": [],
           "evidence": {
             "url": "https://booking.lagreefit415.com/ca/lagree-fit-415/pricing/",
-            "observedAt": "2026-08-20",
+            "observedAt": "2026-08-21",
             "source": "operator-site",
             "method": "rendered-visible-plan-card",
             "rawLabel": "Single Class Expires 45 days from sale date $40",
-            "contentHash": "41d1c55766017fbf8238bc39aa4610cfa1fcb55f8fefbe522896141b8061406e",
+            "contentHash": "b3e7423ef6633997bd5f24999aafdc26dbd22b0628ae5464f2d4e60fcfa4eca3",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-52a40bef080f6261",
             "conflictFlags": []
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "none-observed",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -514,7 +430,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-6e969155c5165201",
           "name": "na & cold plunge. Unlimited Group Classes: Access to a variety of fitness classes. MEMBERSHIP OPTIONS Tier 1: $240 / month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -548,12 +464,12 @@
             "contentHash": "852f88ea18514f146c9e3d5461fdd7b42ec7f54899519056223e09f14102deab",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-6e969155c5165201",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-6e969155c5165201",
           "name": "ses - 5 Recovery Room sessions per month (2 week booking window) - 20-minute Dietitian consultation ‍ Tier 2: $370 / month",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -582,13 +498,29 @@
             "contentHash": "d484d45a7c830871db9797cdeb8a917ca0fe55385ee11484fb986ef51c576bd7",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-6e969155c5165201",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [],
-      "conflicts": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [
+        {
+          "type": "source-product-price-conflict",
+          "productType": "monthly",
+          "sourceProductKey": "6e969155c5165201c2ff050352f32f695f080aaf8eb0670a0972f978670b7ddd",
+          "amounts": [
+            240.0,
+            370.0
+          ],
+          "publicationEffect": "fail-closed"
+        }
+      ],
       "reviewChecklist": {
         "exactLocation": false,
         "standardAdultEligibility": false,
@@ -624,7 +556,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-1ce2dffbb684c251",
           "name": "4X/MONTH $129 BUY NOW 8X/MONTH",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -653,12 +585,17 @@
             "contentHash": "4b5d3c0ae9f0dc0d68254906c6e64f741221b27912b47feb52e22cf1eb22198c",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-1ce2dffbb684c251",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -679,82 +616,6 @@
           "dropIns": {
             "status": "source-catalog",
             "reason": "Reviewed public visit or class offers are retained before deterministic selection."
-          }
-        }
-      }
-    },
-    {
-      "gymId": "osm-node-2337759318",
-      "gymName": "CorePower Yoga - Cow Hollow",
-      "canonicalAddress": "2909 webster st",
-      "operatorId": "corepower-yoga",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "a2efbd6192d3a7fdaf4eb16e6128304eb4c9367c101466d7ccdc2f4d5b6fdeae",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "osm-node-2337759318:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
           }
         }
       }
@@ -841,6 +702,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -866,77 +732,6 @@
       }
     },
     {
-      "gymId": "osm-node-2666409791",
-      "gymName": "Lotusland Yoga",
-      "canonicalAddress": "1360 valencia st",
-      "operatorId": "lotusland-yoga",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://api.momence.com/schedule/GetLatestStandalone?hostUrl=lotusland-yoga-sf&timezoneOffset=-7&excludeCollections=true"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "Lotusland Yoga SF",
-          "productType": "membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 99.0,
-          "currency": "USD",
-          "billingInterval": "one-time",
-          "intervalCount": 1,
-          "commitmentType": "none",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://api.momence.com/schedule/GetLatestStandalone?hostUrl=lotusland-yoga-sf&timezoneOffset=-7&excludeCollections=true",
-            "observedAt": "2026-08-20",
-            "source": "momence",
-            "method": "public-momence-json",
-            "rawLabel": "Lotusland Yoga SF",
-            "contentHash": "075e57d3813a9c817796f9b0a041fd4b478dff6c1a21d2965e57195a201382bd",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 135.0,
-        "dayPassPrice": 18.0,
-        "selectedPlanId": "osm-node-2666409791:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
-          }
-        }
-      }
-    },
-    {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
       "canonicalAddress": "4159 24th st",
@@ -949,7 +744,7 @@
       "planOffers": [],
       "dropInOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-a5877467f7a73fd9",
           "name": "Drop-In $30",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 30.0,
@@ -966,19 +761,19 @@
           "fees": [],
           "evidence": {
             "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-20",
+            "observedAt": "2026-08-21",
             "source": "operator-site",
             "method": "rendered-visible-plan-card",
             "rawLabel": "Drop-In $30",
-            "contentHash": "3fe2815eb4c42105a3bb9ed4d4f18b44a0623c96a6465837fe85ca9e435eb28b",
+            "contentHash": "97d351fe9d388ac09f8b6ae3a69411a4304fa89712e7b566550001e7a362593d",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-a5877467f7a73fd9",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-7b22d509fa76133f",
           "name": "Drop-In $75",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 75.0,
@@ -995,18 +790,23 @@
           "fees": [],
           "evidence": {
             "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-20",
+            "observedAt": "2026-08-21",
             "source": "operator-site",
             "method": "rendered-visible-plan-card",
             "rawLabel": "Drop-In $75",
-            "contentHash": "b935ac58a1f38fe326257100938f1d1807fe8b59ec66d765807bcc4f72744486",
+            "contentHash": "920dba902374d4745561766a9e1e8c93e61da79a6fc283827767d91fd950ffae",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-7b22d509fa76133f",
             "conflictFlags": []
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "none-observed",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -1113,6 +913,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -1138,82 +943,6 @@
       }
     },
     {
-      "gymId": "osm-node-4548624459",
-      "gymName": "CorePower Yoga NoPa",
-      "canonicalAddress": "619 divisadero st",
-      "operatorId": "corepower-yoga",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "ca6577c95a4ac221ce74eed2bfe19bb33d23bbcf8e0def619292d66560f5c916",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "osm-node-4548624459:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
-          }
-        }
-      }
-    },
-    {
       "gymId": "osm-node-4558023336",
       "gymName": "Park Gym",
       "canonicalAddress": "1823 divisadero st",
@@ -1225,7 +954,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-c0b811820b2fae4a",
           "name": "12 Month Auto-Renew $245/mo",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -1255,12 +984,12 @@
             "contentHash": "81a8486f73015a2b2c5185501fc4d6183992389c1cda0014d957cf2b4cd34ed7",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-c0b811820b2fae4a",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-822225958a0992e8",
           "name": "Ultimate Monthly Membership $360/mo",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -1289,14 +1018,14 @@
             "contentHash": "0de442eae04531b6bfac66332fed2b2e7f33b9637744acb0e77633653dcf6a09",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-822225958a0992e8",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-d627818a6942a73d",
           "name": "Drop In Credit $35",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 35.0,
@@ -1320,11 +1049,16 @@
             "contentHash": "4ef57d9723be45e64d5a3df198d7672b65e4fc01d82450299a6bf37f9eed0dd9",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-d627818a6942a73d",
             "conflictFlags": []
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -1362,7 +1096,7 @@
       "planOffers": [],
       "dropInOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-72e285f2ba1ccbf6",
           "name": "Drop-In $75",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 75.0,
@@ -1379,18 +1113,23 @@
           "fees": [],
           "evidence": {
             "url": "https://www.yubalance.com/sunset/",
-            "observedAt": "2026-08-20",
+            "observedAt": "2026-08-21",
             "source": "operator-site",
             "method": "rendered-visible-plan-card",
             "rawLabel": "Drop-In $75",
-            "contentHash": "f537d931c1162359a7f4c61ea537d88303923b3f37933fcb54db52275ed8bf11",
+            "contentHash": "028c5def6bcab1d1e135777280383325b844ddf39e6a63365a80a429cd4cf5eb",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-72e285f2ba1ccbf6",
             "conflictFlags": []
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "none-observed",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -1416,82 +1155,6 @@
       }
     },
     {
-      "gymId": "osm-node-663533939",
-      "gymName": "CorePower Yoga Duboce",
-      "canonicalAddress": "100 church st",
-      "operatorId": "corepower-yoga",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "bd53783ab220793ba7ad22848829f4c5a3668c083036de0901b6b37b5eb54ae8",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "osm-node-663533939:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
-          }
-        }
-      }
-    },
-    {
       "gymId": "osm-node-8660742534",
       "gymName": "CrossFit Potrero Hill",
       "canonicalAddress": "175 de haro st",
@@ -1503,7 +1166,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-45cfbdf2aaed4f05",
           "name": "$219 / month",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -1532,12 +1195,12 @@
             "contentHash": "83597f4c303b7bf3a9b79c50ebf48d676d35d0fee213fc015315b5e6efa30f40",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-45cfbdf2aaed4f05",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-b4d7aa8fb942cc7d",
           "name": "Classes / Week A balanced plan for athletes who want steady progress, regular coaching and room for recovery. $259 / month",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -1566,12 +1229,12 @@
             "contentHash": "e8fd103fc4efa8428d26ef4878fd3c62a20fbe668bba42d538027887061d9b78",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-b4d7aa8fb942cc7d",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-b4d7aa8fb942cc7d",
           "name": "MOST POPULAR Unlimited Train as often as you like and make full use of both locations and eligible programs. $299 / month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -1605,14 +1268,14 @@
             "contentHash": "90435514814626862cee02cdd9ffc187df784054542c9b07dc094e454d3cfe5b",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-b4d7aa8fb942cc7d",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-141bb3f0ef89db3a",
           "name": "VISITING SAN FRANCISCO? DROP IN AT POTRERO HILL $35",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 35.0,
@@ -1636,12 +1299,28 @@
             "contentHash": "6fa4846bcc3be56915547e0d7cf14de7ed8015784650232d96aa43cb2d76e551",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-141bb3f0ef89db3a",
             "conflictFlags": []
           }
         }
       ],
-      "conflicts": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [
+        {
+          "type": "source-product-price-conflict",
+          "productType": "monthly",
+          "sourceProductKey": "b4d7aa8fb942cc7d4107d054be9f98d202a7ba869df00e0773131e03bfd10ba6",
+          "amounts": [
+            259.0,
+            299.0
+          ],
+          "publicationEffect": "fail-closed"
+        }
+      ],
       "reviewChecklist": {
         "exactLocation": false,
         "standardAdultEligibility": false,
@@ -2140,6 +1819,11 @@
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -2165,82 +1849,6 @@
       }
     },
     {
-      "gymId": "osm-node-9465192363",
-      "gymName": "CorePower Yoga Nob Hill",
-      "canonicalAddress": "1900 van ness ave",
-      "operatorId": "corepower-yoga",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-          "productType": "class-membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "All Access Membership Unlimited Studio • Live • On Demand $229 / mo",
-            "contentHash": "eb66c5a78c5eaa617b207019efd667d90385cbe1c24e2b43c71eee81d14b7e52",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "osm-node-9465192363:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
-          }
-        }
-      }
-    },
-    {
       "gymId": "osm-node-9718392241",
       "gymName": "Custom Fit Market Street",
       "canonicalAddress": "1844 market st",
@@ -2252,7 +1860,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-6e969155c5165201",
           "name": "na & cold plunge. Unlimited Group Classes: Access to a variety of fitness classes. MEMBERSHIP OPTIONS Tier 1: $240 / month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -2286,12 +1894,12 @@
             "contentHash": "852f88ea18514f146c9e3d5461fdd7b42ec7f54899519056223e09f14102deab",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-6e969155c5165201",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-6e969155c5165201",
           "name": "ses - 5 Recovery Room sessions per month (2 week booking window) - 20-minute Dietitian consultation ‍ Tier 2: $370 / month",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -2320,13 +1928,29 @@
             "contentHash": "d484d45a7c830871db9797cdeb8a917ca0fe55385ee11484fb986ef51c576bd7",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-6e969155c5165201",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [],
-      "conflicts": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [
+        {
+          "type": "source-product-price-conflict",
+          "productType": "monthly",
+          "sourceProductKey": "6e969155c5165201c2ff050352f32f695f080aaf8eb0670a0972f978670b7ddd",
+          "amounts": [
+            240.0,
+            370.0
+          ],
+          "publicationEffect": "fail-closed"
+        }
+      ],
       "reviewChecklist": {
         "exactLocation": false,
         "standardAdultEligibility": false,
@@ -2844,6 +2468,11 @@
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [
         {
           "type": "source-product-price-conflict",
@@ -3005,6 +2634,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -3114,6 +2748,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -3842,6 +3481,11 @@
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [
         {
           "type": "source-product-price-conflict",
@@ -3885,136 +3529,6 @@
       }
     },
     {
-      "gymId": "web-44c39e1d4144c1",
-      "gymName": "Sol Hot Yoga & Movement",
-      "canonicalAddress": "910 columbus ave",
-      "operatorId": "solyogasf.com",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://www.solyogasf.com/membership"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "",
-          "name": "oga Membership Take any of our yoga offerings, no limit, no restrictions! Click the link below to purchase! $100 Monthly",
-          "productType": "membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 100.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.solyogasf.com/membership",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "oga Membership Take any of our yoga offerings, no limit, no restrictions! Click the link below to purchase! $100 Monthly",
-            "contentHash": "0e35770ca4a028317c72e06c9216bcc20ff81e1d67fbaa88bf026c81ddf1a18d",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [
-        {
-          "sourceProductId": "",
-          "name": "ign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25 Drop-In",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 25.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.solyogasf.com/membership",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "ign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25 Drop-In",
-            "contentHash": "fc486e22112100e56585f92e5003bacf84a7a6ff4d69d2492b57f0885047fb42",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "",
-          "name": "sing Options Try one class or sign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 25.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.solyogasf.com/membership",
-            "observedAt": "2026-08-20",
-            "source": "operator-site",
-            "method": "rendered-visible-plan-card",
-            "rawLabel": "sing Options Try one class or sign up for an unlimited monthly membership. Membership and Drop-In Options Class Schedule $25",
-            "contentHash": "4f2904e00222d7d67615a5b23c95a573d3f7a8daa94e6227673d880fe8de0e4c",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 100.0,
-        "dayPassPrice": 25.0,
-        "selectedPlanId": "web-44c39e1d4144c1:plan:legacy-reviewed-selected",
-        "catalogStatus": {
-          "plans": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
-          },
-          "dropIns": {
-            "status": "selected-only",
-            "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
-          }
-        }
-      }
-    },
-    {
       "gymId": "web-70ca27f287a58c",
       "gymName": "Pilates Addiction SF King Street",
       "canonicalAddress": "272 king st",
@@ -4026,7 +3540,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-8b6d7763ee7b0033",
           "name": "BECOME A FOUNDING SILVER MEMBER $161 / MONTH",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4055,12 +3569,12 @@
             "contentHash": "6feb8b8b51117f9bc64bbd0c1a1eb824df1ddcf7087a9210787a25ccb2926955",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-8b6d7763ee7b0033",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-d167b4b0cc0a1ce7",
           "name": "BECOME A FOUNDING GOLD MEMBER $220 / MONTH",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4089,12 +3603,17 @@
             "contentHash": "1da1e94b7525b2c95e55aedad7a1313ea91db748d40e9f6bbb8dbe1c28989bdd",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-d167b4b0cc0a1ce7",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -4241,6 +3760,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -4277,7 +3801,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-f88bd84688c8750b",
           "name": "Fíor - Limited Member $250/Month",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4306,12 +3830,12 @@
             "contentHash": "6285bcfa73bc7b7ae176fa6f433c72cce04099bce1519586db3584c95bda5626",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-f88bd84688c8750b",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-277b117572b58515",
           "name": "Fíor - Unlimited Member $290/Month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4345,14 +3869,14 @@
             "contentHash": "5ceabc8e06689b103dc06df5a1461963592946c383392c31fb66bfe16d721845",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-277b117572b58515",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-12027daca714fc99",
           "name": "Fíor Fitness - Drop-In $30",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 30.0,
@@ -4376,12 +3900,12 @@
             "contentHash": "af9e2ccbc9cd93d5bfe4384a9d5cc60ce56d93e1ca741dd5b8994a4074fd5cb2",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-12027daca714fc99",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-de565a3dc3c91017",
           "name": "Fíor First Four $100 4 x Class Drop-In",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 100.0,
@@ -4405,11 +3929,16 @@
             "contentHash": "8739083bd786c3ac6dd9426498daeb4f9ec4aadfc62a1bbab7925657c692dea0",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-de565a3dc3c91017",
             "conflictFlags": []
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -4446,7 +3975,7 @@
       ],
       "planOffers": [
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-01c568c3125abebf",
           "name": "2 Classes / Week A consistent and sustainable schedule for athletes training twice each week. $219 / month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4479,12 +4008,12 @@
             "contentHash": "0970230ca0092e8d0398b27e23f0086468b616494f3b103f962a9e9fd90f742e",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-01c568c3125abebf",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-bde90164e472bcd3",
           "name": "3 Classes / Week $259 / Month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4517,12 +4046,12 @@
             "contentHash": "7f330bde1a94ec1c57269ef9b2a9ee68793a5afa0752768268bc0ab2479ef453",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-bde90164e472bcd3",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-65a0452a2d61f592",
           "name": "3 Classes / Week More weekly consistency and momentum without moving to an unlimited schedule. $259 / month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4555,12 +4084,12 @@
             "contentHash": "1c0991cb993e60bfea86dd3511a235523539b8b127b2d55dc5e435d42a2df353",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-65a0452a2d61f592",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-e5ebed33e0b5782d",
           "name": "MOST POPULAR Unlimited Train as often as you like and make full use of both locations and available programs. $299 / month",
           "productType": "class-membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4594,12 +4123,12 @@
             "contentHash": "25879f3f2a2c3e3f4795674125fce48cb029b1cf485259fc570d8abf3a6c20b2",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-e5ebed33e0b5782d",
             "conflictFlags": []
           }
         },
         {
-          "sourceProductId": "",
+          "sourceProductId": "card-9737be5df9e7864b",
           "name": "$419 / month",
           "productType": "membership",
           "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -4628,12 +4157,17 @@
             "contentHash": "27840a69034a3b0f635f4b0b447681252d37127a8d66eba3d50e0f459bdcecc1",
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
-            "sourceProductId": "",
+            "sourceProductId": "card-9737be5df9e7864b",
             "conflictFlags": []
           }
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -4666,8 +4200,7 @@
       "reviewStatus": "pending",
       "publicationEligible": false,
       "sourceUrls": [
-        "https://momence.com/_api/primary/plugin/memberships/142406",
-        "https://momence.com/_api/primary/schedule/GetLatestStandalone?hostId=35337&timezoneOffset=-7"
+        "https://momence.com/_api/primary/plugin/memberships/142406"
       ],
       "planOffers": [
         {
@@ -4741,43 +4274,14 @@
             "sourceProductId": "142406",
             "conflictFlags": []
           }
-        },
-        {
-          "sourceProductId": "",
-          "name": "Folk Yoga",
-          "productType": "membership",
-          "accessScope": "Scope must be confirmed from the linked official product card.",
-          "amount": 99.0,
-          "currency": "USD",
-          "billingInterval": "one-time",
-          "intervalCount": 1,
-          "commitmentType": "none",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://momence.com/_api/primary/schedule/GetLatestStandalone?hostId=35337&timezoneOffset=-7",
-            "observedAt": "2026-08-20",
-            "source": "momence",
-            "method": "public-momence-json",
-            "rawLabel": "Folk Yoga",
-            "contentHash": "5563313fad0655372693e1bce57a06de5d0ac73e263eafe15080050ceccb73ad",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "candidate",
-            "sourceProductId": "",
-            "conflictFlags": []
-          }
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -5262,6 +4766,11 @@
           }
         }
       ],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [
         {
           "type": "source-product-price-conflict",
@@ -5423,6 +4932,11 @@
         }
       ],
       "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "catalogCompletenessReason": "Automated extraction proves only the attached offers that were observed. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
       "conflicts": [],
       "reviewChecklist": {
         "exactLocation": false,
@@ -5446,6 +4960,92 @@
           }
         }
       }
+    }
+  ],
+  "unchangedApproved": [
+    {
+      "gymId": "osm-node-10806697937",
+      "gymName": "CorePower Yoga Mission Bay",
+      "sourceUrls": [
+        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay"
+      ],
+      "planOfferCount": 1,
+      "dropInOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "osm-node-2337759318",
+      "gymName": "CorePower Yoga - Cow Hollow",
+      "sourceUrls": [
+        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow"
+      ],
+      "planOfferCount": 1,
+      "dropInOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "osm-node-4548624459",
+      "gymName": "CorePower Yoga NoPa",
+      "sourceUrls": [
+        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa"
+      ],
+      "planOfferCount": 1,
+      "dropInOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "osm-node-663533939",
+      "gymName": "CorePower Yoga Duboce",
+      "sourceUrls": [
+        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce"
+      ],
+      "planOfferCount": 1,
+      "dropInOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "osm-node-9465192363",
+      "gymName": "CorePower Yoga Nob Hill",
+      "sourceUrls": [
+        "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill"
+      ],
+      "planOfferCount": 1,
+      "dropInOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "web-44c39e1d4144c1",
+      "gymName": "Sol Hot Yoga & Movement",
+      "sourceUrls": [
+        "https://www.solyogasf.com/membership"
+      ],
+      "planOfferCount": 1,
+      "dropInOfferCount": 1,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "status": "unchanged-approved"
     }
   ],
   "rejectedEvidence": [
@@ -6293,6 +5893,18 @@
       ]
     },
     {
+      "gymId": "osm-node-2666409791",
+      "observations": [
+        {
+          "amount": 99.0,
+          "rawLabel": "Lotusland Yoga SF",
+          "sourceUrl": "https://api.momence.com/schedule/GetLatestStandalone?hostUrl=lotusland-yoga-sf&timezoneOffset=-7&excludeCollections=true",
+          "method": "public-momence-json",
+          "reason": "Unattached price-shaped text is not a plan catalog record."
+        }
+      ]
+    },
+    {
       "gymId": "osm-node-2975978386",
       "observations": [
         {
@@ -6897,36 +6509,36 @@
         },
         {
           "amount": 75.0,
-          "rawLabel": "by Autopay – Our best deal ever at $36/class! $75 Off Your First Month for New Members MIGHTY MONTHLY",
-          "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+          "rawLabel": "by Autopay – Our best deal ever at $36/class! $75 Off Your First Month for New Members SIGN UP MIGHTY MONTHLY",
+          "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
           "method": "visible-text-candidate",
           "reason": "Unattached price-shaped text is not a plan catalog record."
         },
         {
           "amount": 76.0,
-          "rawLabel": "E SESSION (DUO) $82 per person 5 SEMI-PRIVATE SESSIONS $395 ($79/Session) 10 SEMI-PRIVATE SESSIONS $760 ($76/Session) MIGHTY MONTHLY",
-          "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+          "rawLabel": "$82 per person SIGN UP 5 SEMI-PRIVATE SESSIONS $395 ($79/Session) SIGN UP 10 SEMI-PRIVATE SESSIONS $760 ($76/Session) SIGN UP MIGHTY MONTHLY",
+          "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
           "method": "visible-text-candidate",
           "reason": "Unattached price-shaped text is not a plan catalog record."
         },
         {
           "amount": 99.0,
-          "rawLabel": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only MIGHTY MONTHLY",
-          "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+          "rawLabel": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY",
+          "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
           "method": "visible-text-candidate",
           "reason": "Unattached price-shaped text is not a plan catalog record."
         },
         {
           "amount": 360.0,
           "rawLabel": "PASS $360/month",
-          "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+          "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
           "method": "visible-text-candidate",
           "reason": "Unattached price-shaped text is not a plan catalog record."
         },
         {
           "amount": 620.0,
           "rawLabel": "20 PASS 20 classes a month plus $15% off everything else $620/month",
-          "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+          "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
           "method": "visible-text-candidate",
           "reason": "Unattached price-shaped text is not a plan catalog record."
         }
@@ -8690,6 +8302,13 @@
           "rawLabel": "when they join. After that, membership will renew at a special rate of $169/mo",
           "sourceUrl": "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
           "method": "visible-text-candidate",
+          "reason": "Unattached price-shaped text is not a plan catalog record."
+        },
+        {
+          "amount": 99.0,
+          "rawLabel": "Folk Yoga",
+          "sourceUrl": "https://momence.com/_api/primary/schedule/GetLatestStandalone?hostId=35337&timezoneOffset=-7",
+          "method": "public-momence-json",
           "reason": "Unattached price-shaped text is not a plan catalog record."
         }
       ]

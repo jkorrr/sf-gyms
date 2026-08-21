@@ -23,6 +23,7 @@ FIXTURE_PATH = ROOT / "sf-gyms-osm.json"
 STATIC_PATH = ROOT / "official-crawl-observations.json"
 RENDERED_PATH = ROOT / "rendered-crawl-observations.json"
 OUTPUT_PATH = ROOT / "official-catalog-review.json"
+APPROVED_PATH = ROOT / "official-crawl-approved.json"
 
 STRUCTURED_METHOD_PREFIXES = ("public-", "json-ld", "rendered-visible-plan-card")
 CARD_SEMANTIC_RE = re.compile(
@@ -42,12 +43,31 @@ def load_json(path: Path, fallback: dict[str, Any]) -> dict[str, Any]:
     return json.loads(path.read_text(encoding="utf-8"))
 
 
+def source_product_id(candidate: dict[str, Any]) -> str:
+    explicit = text(candidate.get("sourceProductId"))
+    if explicit:
+        return explicit
+    card_hash = text(candidate.get("cardAssociationHash")) or text(candidate.get("cardHash"))
+    return f"card-{card_hash[:16]}" if card_hash else ""
+
+
 def candidate_is_attached(candidate: dict[str, Any]) -> bool:
     """Accept only a product/card observation, never an unattached dollar regex."""
 
     method = text(candidate.get("method")).casefold()
     if method == "visible-text-candidate":
         return False
+    if method.startswith("public-"):
+        label = text(candidate.get("rawLabel"))
+        has_product_semantics = bool(
+            text(candidate.get("sourceProductId"))
+            or CARD_SEMANTIC_RE.search(label)
+            or candidate.get("classAllowance")
+            or text(candidate.get("cadence")) not in {"", "one-time"}
+            or text(candidate.get("productType")) in {"monthly", "drop-in"}
+        )
+        if not has_product_semantics:
+            return False
     if method == "rendered-visible-plan-card":
         label = text(candidate.get("rawLabel"))
         amounts = {float(value) for value in CARD_MONEY_RE.findall(label)}
@@ -77,7 +97,7 @@ def evidence(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
         "contentHash": digest,
         "evidenceTier": text(candidate.get("evidenceTier")) or "official-public",
         "exactLocationMatch": text(candidate.get("exactLocationMatch")) or "candidate",
-        "sourceProductId": text(candidate.get("sourceProductId")),
+        "sourceProductId": source_product_id(candidate),
         "conflictFlags": list(candidate.get("conflictFlags") or []),
     }
 
@@ -87,7 +107,7 @@ def plan_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
     cadence = text(candidate.get("cadence")) or "month"
     commitment = candidate.get("commitment") if isinstance(candidate.get("commitment"), dict) else {}
     result = {
-        "sourceProductId": text(candidate.get("sourceProductId")),
+        "sourceProductId": source_product_id(candidate),
         "name": label,
         "productType": "class-membership" if candidate.get("classAllowance") else "membership",
         "accessScope": "Scope must be confirmed from the linked official product card.",
@@ -110,7 +130,7 @@ def plan_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
 
 def drop_in_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
     return {
-        "sourceProductId": text(candidate.get("sourceProductId")),
+        "sourceProductId": source_product_id(candidate),
         "name": " ".join(text(candidate.get("rawLabel")).split())[:160] or "Single visit or class",
         "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
         "amount": float(candidate["amount"]),
@@ -121,6 +141,21 @@ def drop_in_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]
         "fees": list(candidate.get("fees") or []),
         "evidence": evidence(candidate, observed_at),
     }
+
+
+def offer_signature(offer: dict[str, Any], group: str) -> tuple[str, str, float, str]:
+    return (
+        group,
+        text(offer.get("sourceProductId")) or text(offer.get("name")).casefold(),
+        round(float(offer.get("amount") or 0), 2),
+        text(offer.get("billingInterval")) if group == "plan" else "visit",
+    )
+
+
+def catalog_signatures(value: dict[str, Any]) -> tuple[tuple[str, str, float, str], ...]:
+    signatures = [offer_signature(offer, "plan") for offer in value.get("planOffers", []) if isinstance(offer, dict)]
+    signatures.extend(offer_signature(offer, "drop-in") for offer in value.get("dropInOffers", []) if isinstance(offer, dict))
+    return tuple(sorted(signatures))
 
 
 def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -158,7 +193,12 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
     amounts_by_product: dict[tuple[str, str], set[float]] = defaultdict(set)
     for candidate in candidates:
         product_type = text(candidate.get("productType"))
-        product_key = text(candidate.get("sourceProductId")) or text(candidate.get("rawLabel")).casefold()
+        product_key = (
+            text(candidate.get("sourceProductId"))
+            or text(candidate.get("cardAssociationHash"))
+            or text(candidate.get("cardHash"))
+            or text(candidate.get("rawLabel")).casefold()
+        )
         amount = float(candidate.get("amount") or 0)
         if not product_key or amount <= 0:
             continue
@@ -167,8 +207,18 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
         incumbent = selected.get(key)
         method = text(candidate.get("method"))
         incumbent_method = text((incumbent or {}).get("method"))
-        score = 3 if method.startswith("public-") else 2 if method == "rendered-visible-plan-card" else 1
-        incumbent_score = 3 if incumbent_method.startswith("public-") else 2 if incumbent_method == "rendered-visible-plan-card" else 1
+        label_richness = min(len(re.findall(r"[a-z0-9]+", text(candidate.get("rawLabel")).casefold())), 30)
+        incumbent_richness = min(len(re.findall(r"[a-z0-9]+", text((incumbent or {}).get("rawLabel")).casefold())), 30)
+        score = (
+            3 if method.startswith("public-") else 2 if method == "rendered-visible-plan-card" else 1,
+            bool(text(candidate.get("sourceProductId"))),
+            label_richness,
+        )
+        incumbent_score = (
+            3 if incumbent_method.startswith("public-") else 2 if incumbent_method == "rendered-visible-plan-card" else 1,
+            bool(text((incumbent or {}).get("sourceProductId"))),
+            incumbent_richness,
+        )
         if incumbent is None or score > incumbent_score:
             selected[key] = candidate
     for (product_type, product_key), amounts in sorted(amounts_by_product.items()):
@@ -184,7 +234,10 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
 
 
 def build_review(
-    fixture: dict[str, Any], documents: list[dict[str, Any]], generated_at: str
+    fixture: dict[str, Any],
+    documents: list[dict[str, Any]],
+    generated_at: str,
+    approved_document: dict[str, Any] | None = None,
 ) -> dict[str, Any]:
     gyms = {text(gym.get("id")): gym for gym in fixture.get("gyms", [])}
     grouped: dict[str, list[dict[str, Any]]] = defaultdict(list)
@@ -207,7 +260,13 @@ def build_review(
                     "reason": "Unattached price-shaped text is not a plan catalog record.",
                 })
 
+    approved_by_id = {
+        text(item.get("gymId")): item
+        for item in (approved_document or {}).get("approvals", [])
+        if isinstance(item, dict) and text(item.get("gymId"))
+    }
     proposals: list[dict[str, Any]] = []
+    unchanged_approved: list[dict[str, Any]] = []
     for gym_id, candidates in sorted(grouped.items()):
         unique, conflicts = deduplicate(candidates)
         plans: list[dict[str, Any]] = []
@@ -226,7 +285,7 @@ def build_review(
             for offer in plans + drop_ins
             if text((offer.get("evidence") or {}).get("url"))
         })
-        proposals.append({
+        proposal = {
             "gymId": gym_id,
             "gymName": text(gym.get("name")),
             "canonicalAddress": text(gym.get("canonicalAddress")) or text(gym.get("address")),
@@ -236,6 +295,14 @@ def build_review(
             "sourceUrls": source_urls,
             "planOffers": plans,
             "dropInOffers": drop_ins,
+            "catalogCompleteness": {
+                "plans": "partial" if plans else "none-observed",
+                "dropIns": "partial" if drop_ins else "none-observed",
+            },
+            "catalogCompletenessReason": (
+                "Automated extraction proves only the attached offers that were observed. "
+                "A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete."
+            ),
             "conflicts": conflicts,
             "reviewChecklist": {
                 "exactLocation": False,
@@ -250,16 +317,31 @@ def build_review(
                 "selectedPlanId": gym.get("selectedPlanId"),
                 "catalogStatus": gym.get("catalogStatus"),
             },
-        })
+        }
+        prior_approval = approved_by_id.get(gym_id)
+        if prior_approval and catalog_signatures(prior_approval) == catalog_signatures(proposal):
+            unchanged_approved.append({
+                "gymId": gym_id,
+                "gymName": text(gym.get("name")),
+                "sourceUrls": source_urls,
+                "planOfferCount": len(plans),
+                "dropInOfferCount": len(drop_ins),
+                "catalogCompleteness": prior_approval.get("catalogCompleteness") or proposal["catalogCompleteness"],
+                "status": "unchanged-approved",
+            })
+            continue
+        proposals.append(proposal)
     rejected_count = sum(len(items) for items in rejected.values())
     return {
         "_meta": {
             "generatedAt": generated_at,
             "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
             "proposalCount": len(proposals),
+            "unchangedApprovedCount": len(unchanged_approved),
             "rejectedUnattachedObservationCount": rejected_count,
         },
         "proposals": proposals,
+        "unchangedApproved": unchanged_approved,
         "rejectedEvidence": [
             {"gymId": gym_id, "observations": items}
             for gym_id, items in sorted(rejected.items())
@@ -275,7 +357,8 @@ def main() -> int:
     fixture = load_json(FIXTURE_PATH, {"gyms": []})
     documents = [load_json(STATIC_PATH, {"observations": []}), load_json(RENDERED_PATH, {"observations": []})]
     generated_at = args.date or max((text(item.get("generatedAt")) for item in documents), default="")
-    output = build_review(fixture, documents, generated_at)
+    approved = load_json(APPROVED_PATH, {"approvals": []})
+    output = build_review(fixture, documents, generated_at, approved)
     args.output.write_text(json.dumps(output, indent=2, ensure_ascii=False) + "\n", encoding="utf-8")
     print(json.dumps(output["_meta"], indent=2))
     return 0

@@ -17,13 +17,19 @@ from urllib.parse import urlparse
 
 MONEY_RE = re.compile(r"\$?\s*(\d{1,6}(?:\.\d{1,2})?)")
 PROMOTION_RE = re.compile(
-    r"\b(?:intro|trial|first month|founding|presale|new client|new member|limited time|special|save|off)\b",
+    r"\b(?:intro|trial|first month|first class|first visit|first session|first week|founding|presale|"
+    r"new client|new member|new student|welcome|limited time|special|save|off)\b",
     re.IGNORECASE,
 )
 RESTRICTED_RE = re.compile(r"\b(?:student|resident|employee|senior|youth|military|corporate)\b", re.IGNORECASE)
 DROP_IN_RE = re.compile(r"\b(?:drop[ -]?in|single (?:class|visit|session)|day pass)\b", re.IGNORECASE)
 FEE_RE = re.compile(r"\b(?:annual|enrollment|enrolment|initiation|activation|processing|setup|join)\s+fee\b", re.IGNORECASE)
 BEST_VALUE_RE = re.compile(r"\b(?:best value|most popular|recommended)\b", re.IGNORECASE)
+PRODUCT_SEMANTIC_RE = re.compile(
+    r"\b(?:membership|plan|package|class|session|visit|pass|drop[ -]?in|unlimited|monthly|"
+    r"weekly|week|private|semi-private|training|open gym|autopay|recurring)\b",
+    re.IGNORECASE,
+)
 
 
 @dataclass(frozen=True)
@@ -50,8 +56,8 @@ PROFILES = (
 
 NAME_KEYS = ("name", "title", "label", "productName", "packageName", "membershipName", "serviceName")
 ID_KEYS = ("id", "uuid", "productId", "packageId", "membershipId", "planId", "priceId", "optionId")
-AMOUNT_KEYS = ("price", "amount", "unitAmount", "unit_price", "priceAmount", "regularPrice", "monthlyPrice", "total")
-CENTS_KEYS = ("amountCents", "amount_cents", "priceCents", "price_cents", "unitAmountCents", "unit_amount")
+AMOUNT_KEYS = ("price", "amount", "unitAmount", "unit_price", "priceAmount", "regularPrice", "monthlyPrice")
+CENTS_KEYS = ("amountCents", "amount_cents", "priceCents", "price_cents", "unitAmountCents", "unit_amount", "unit_amount_cents")
 CADENCE_KEYS = ("cadence", "interval", "billingInterval", "billingPeriod", "billingCycle", "frequency", "renewalPeriod")
 ALLOWANCE_KEYS = ("creditCount", "credit_count", "credits", "sessionsPerMonth", "classesPerMonth", "visitsPerMonth", "usageLimit")
 COMMITMENT_KEYS = ("minimumMonths", "minimum_months", "contractMonths", "termMonths", "commitmentMonths", "paymentCount")
@@ -190,6 +196,30 @@ def fees_from(node: dict[str, Any]) -> list[dict[str, Any]]:
     return result
 
 
+def has_product_semantics(node: dict[str, Any], label: str) -> bool:
+    """Reject location, cart, and account objects that merely contain money.
+
+    Public booking payloads frequently mix products with studio metadata and
+    checkout totals.  A candidate therefore needs either a product-shaped
+    label or an explicit product/billing attribute; a generic ``id`` and an
+    amount are deliberately insufficient.
+    """
+
+    if PRODUCT_SEMANTIC_RE.search(label):
+        return True
+    explicit_product_keys = (
+        "productId", "packageId", "membershipId", "planId", "priceId", "optionId",
+        "productName", "packageName", "membershipName", "serviceName",
+    )
+    if any(node.get(key) not in (None, "") for key in explicit_product_keys):
+        return True
+    semantic_keys = CADENCE_KEYS + ALLOWANCE_KEYS + COMMITMENT_KEYS + (
+        "recurring", "isRecurring", "is_recurring", "autoRenew", "autorenew",
+        "unlimited", "isUnlimited", "is_unlimited",
+    )
+    return any(node.get(key) not in (None, "") for key in semantic_keys)
+
+
 def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
     """Extract conservative review candidates from a supported platform JSON payload."""
 
@@ -202,6 +232,8 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
         label = text(first(node, NAME_KEYS))
         amount = amount_from(node)
         if not label or amount is None or amount <= 0 or amount > 10_000:
+            continue
+        if not has_product_semantics(node, label):
             continue
         if FEE_RE.search(label) and not re.search(r"\b(?:membership|plan|package|class|session)\b", label, re.IGNORECASE):
             continue
@@ -222,7 +254,7 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
         if key in seen:
             continue
         seen.add(key)
-        restricted = RESTRICTED_RE.search(label)
+        restricted = None if re.search(r"\bnew (?:client|member|student)\b", label, re.IGNORECASE) else RESTRICTED_RE.search(label)
         location_ids = node.get("locationIds") or node.get("locations") or node.get("studioIds") or []
         if not isinstance(location_ids, list):
             location_ids = [location_ids]

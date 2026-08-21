@@ -222,7 +222,7 @@ export type Gym = {
   monthlyPriceBlocker?: string;
   dayPassPriceBlocker?: string;
   metadataStatus?: Record<string, { status: string; reason: string }>;
-  catalogStatus?: Record<string, { status: "source-catalog" | "selected-only" | "none"; reason: string }>;
+  catalogStatus?: Record<string, { status: "source-catalog" | "source-fragment" | "selected-only" | "none"; reason: string }>;
   selectionRuleVersion?: string;
 };
 

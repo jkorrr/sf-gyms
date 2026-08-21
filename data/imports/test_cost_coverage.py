@@ -517,6 +517,20 @@ class CostCoverageTests(unittest.TestCase):
         self.assertIsNone(result["typicalPlanId"])
         self.assertEqual(result["planViewStatus"]["typical"]["status"], "unavailable-incomplete-catalog")
 
+    def test_source_fragment_does_not_invent_typical_or_highest_access(self) -> None:
+        value = gym("fragment", "Fragment Studio", 89, entityKindOverride="studio", accessModelOverride="class-membership")
+        value["planOffers"] = [
+            {"sourceProductId": "four", "name": "4 Classes", "amount": 89, "billingInterval": "month", "classAllowance": 4},
+            {"sourceProductId": "eight", "name": "8 Classes", "amount": 149, "billingInterval": "month", "classAllowance": 8},
+        ]
+        value["catalogCompleteness"] = {"plans": "partial", "dropIns": "none-observed"}
+        document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-20")
+        result = document["gyms"][0]
+        self.assertEqual(result["catalogStatus"]["plans"]["status"], "source-fragment")
+        self.assertIsNone(result["typicalPlanId"])
+        self.assertIsNone(result["highestAccessPlanId"])
+        self.assertEqual(report["fieldCoverage"]["sourcePlanFragmentCount"], 1)
+
     def test_operator_confirmed_price_is_separate_from_verified_monthly(self) -> None:
         value = gym("confirmed", "Confirmed Gym", None, pricingAccess="contact-required")
         applied = coverage.attach_operator_confirmed([value], {"approvals": [{
