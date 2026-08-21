@@ -8376,23 +8376,113 @@
           "candidateCount": 0
         },
         {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -8550,23 +8640,113 @@
           "candidateCount": 0
         },
         {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -8677,23 +8857,113 @@
           "candidateCount": 0
         },
         {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -8804,23 +9074,113 @@
           "candidateCount": 0
         },
         {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -8931,23 +9291,118 @@
           "candidateCount": 0
         },
         {
-          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32323",
           "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -9051,6 +9506,96 @@
           "url": "https://livefitgym.com/signup/",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "fetched",
+          "candidateCount": 1
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
@@ -9180,23 +9725,118 @@
           "candidateCount": 0
         },
         {
-          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=364260e12ea94538b5d4499ed356a8fc&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32323",
           "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=7301d4e290184005b71868d99fbf9707&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=78efafa87260496cbc842607918d10ce&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=c7e1c8f657c4472185cf2e3c92a1c91e&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32323",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=d1e53f419f094b8e9f211dbe9e95fa04&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32319",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32322",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/calculatePlan?planId=e130a80c8f54416eb6ab3781761bbf73&clubNumber=32324",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
