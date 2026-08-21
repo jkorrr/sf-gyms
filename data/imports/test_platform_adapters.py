@@ -6,7 +6,6 @@ from pathlib import Path
 
 import platform_adapters as adapters
 
-
 FIXTURE = Path(__file__).parent / "fixtures" / "platform-catalogs.json"
 RENDERED_FIXTURE = Path(__file__).parent / "fixtures" / "rendered-platform-cards.json"
 
@@ -101,6 +100,9 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertEqual(len(candidates), 1)
         self.assertEqual(candidates[0]["sourceProductId"], "11259")
         self.assertEqual(candidates[0]["amount"], 699)
+        self.assertEqual(candidates[0]["cadence"], "one-time")
+        self.assertEqual(candidates[0]["productType"], "offer")
+        self.assertEqual(candidates[0]["commitment"], {"type": "fixed-term", "minimumMonths": 3})
         self.assertTrue(candidates[0]["promotion"]["isPromotion"])
         self.assertEqual(candidates[0]["method"], "rendered-mindbody-purchase-item")
 

@@ -3933,7 +3933,7 @@
       "priceSource": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
       "priceSourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
       "priceObservedAt": "2026-08-21",
-      "priceNote": "The current official page says ongoing in-studio membership costs about $27–$32 per class and provides eight classes every four weeks. The public Mindbody storefront currently exposes $699 three-month promotional products. A separate duplicate-terms conflict remains disclosed, but no disputed amount or promotional product is selected as the standard plan.",
+      "priceNote": "The current official page says ongoing in-studio membership costs about $27–$32 per class and provides eight classes every four weeks, equivalent to an approximate $234–$277.33 calendar-month range. The complete public in-person Mindbody catalog exposes only $699 three-month promotional memberships plus specialty visits and packs; its recurring Contracts tab contains virtual-only products. Rentals, events, virtual products, and zero-dollar existing-member benefits are outside the location comparison catalog. One ancillary pole-workshop card conflicts between its $39 label and $0 row amount and remains non-selectable. A separate duplicate-terms conflict remains disclosed, but no disputed amount or promotional product is selected as the standard plan.",
       "costContextOffers": [
         {
           "kind": "range",
@@ -3942,12 +3942,14 @@
           "high": 32,
           "cadence": "class",
           "productType": "class-membership",
+          "normalizedMonthlyLow": 234,
+          "normalizedMonthlyHigh": 277.33,
           "sourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
           "observedAt": "2026-08-21",
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
           "conflictFlags": [],
-          "note": "The operator describes the amount as approximate; it remains cost context rather than an exact selected recurring price."
+          "note": "The operator describes the amount as approximate. Monthly normalization uses 8 classes per four-week cycle × 13 cycles ÷ 12 months; it remains cost context rather than an exact selected recurring price."
         }
       ],
       "planOffers": [
@@ -3992,7 +3994,7 @@
           "fees": []
         },
         {
-          "sourceProductId": "mindbody-11259",
+          "sourceProductId": "11259",
           "name": "3 Month In Studio Special",
           "productType": "class-pack",
           "accessScope": "Three-month in-studio promotional term",
@@ -4010,10 +4012,12 @@
             ]
           },
           "purchaseMethod": "direct-public",
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
           "fees": []
         },
         {
-          "sourceProductId": "mindbody-11057",
+          "sourceProductId": "11057",
           "name": "3 Month Summer Embodiment Series",
           "productType": "class-pack",
           "accessScope": "Three-month seasonal embodiment series",
@@ -4031,13 +4035,266 @@
             ]
           },
           "purchaseMethod": "direct-public",
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "11253",
+          "name": "10 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Ten one-hour private sessions; expires one year after purchase",
+          "classAllowance": 10,
+          "amount": 890,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10507",
+          "name": "3 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Three one-hour private sessions; expires six months after purchase",
+          "classAllowance": 3,
+          "amount": 279,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10324",
+          "name": "5 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Five one-hour private sessions; expires six months after purchase",
+          "classAllowance": 5,
+          "amount": 455,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "11146",
+          "name": "Yoga Trapeze 10 Pack — Non-Members",
+          "productType": "class-pack",
+          "accessScope": "Ten specialty Yoga Trapeze sessions for non-members; expires one year after purchase",
+          "classAllowance": 10,
+          "amount": 320,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze only; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "11145",
+          "name": "Yoga Trapeze 5 Pack — Non-Members",
+          "productType": "class-pack",
+          "accessScope": "Five specialty Yoga Trapeze sessions for non-members; expires one year after purchase",
+          "classAllowance": 5,
+          "amount": 185,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze only; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
           "fees": []
         }
       ],
-      "dropInOffers": [],
+      "dropInOffers": [
+        {
+          "sourceProductId": "10794",
+          "name": "Open Pole — Non-Members",
+          "accessScope": "One uncoached open-pole practice session",
+          "amount": 20,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Open-pole practice; not an ordinary coached class"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10116",
+          "name": "One-Hour Private",
+          "accessScope": "One private instruction session",
+          "amount": 95,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11606",
+          "name": "Private Open Pole Rental — Members",
+          "accessScope": "One private open-pole rental for existing members",
+          "amount": 30,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; private rental rather than ordinary class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11607",
+          "name": "Private Open Pole Rental — Non-Members",
+          "accessScope": "One private open-pole rental for non-members",
+          "amount": 45,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Private rental rather than ordinary class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10995",
+          "name": "Lap Dance Workshop — Members",
+          "accessScope": "One specialty workshop for existing members",
+          "amount": 49,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; specialty workshop"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10996",
+          "name": "Lap Dance Workshop — Non-Members",
+          "accessScope": "One specialty workshop for non-members",
+          "amount": 69,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Specialty workshop; not ordinary recurring class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10993",
+          "name": "Spin Pole Class — Non-Members",
+          "accessScope": "One specialty spin-pole class for non-members",
+          "amount": 25,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Specialty spin-pole class; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11141",
+          "name": "Yoga Trapeze — Members",
+          "accessScope": "One specialty Yoga Trapeze class for existing members",
+          "amount": 35,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; Yoga Trapeze specialty class"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11142",
+          "name": "Yoga Trapeze — Non-Members",
+          "accessScope": "One specialty Yoga Trapeze class for non-members",
+          "amount": 40,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze specialty class; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11563",
+          "name": "Pole Workshop — Non-Members (Conflicting Card)",
+          "accessScope": "One specialty pole workshop for non-members",
+          "amount": null,
+          "amountLow": 0,
+          "amountHigh": 39,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "The current card label says $39 while its price row says $0; no exact amount is selected"
+            ]
+          },
+          "conflictFlags": [
+            "mindbody-card-label-and-price-row-disagree"
+          ],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        }
+      ],
       "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
+        "plans": "complete",
+        "dropIns": "complete"
       }
     },
     {

@@ -2578,6 +2578,14 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             "attemptedGyms": len(attempts_by_gym),
             "requestCount": len(crawl_attempts),
             "statusCounts": dict(sorted(Counter(text(item.get("status")) for item in crawl_attempts).items())),
+            "staticAccessBlockedRequests": sum(
+                text(item.get("status")) == "access-blocked" for item in crawl_attempts
+            ),
+            "staticAccessBlockerCounts": dict(sorted(Counter(
+                text(item.get("accessBlocker"))
+                for item in crawl_attempts
+                if text(item.get("accessBlocker"))
+            ).items())),
             "reviewCandidatePages": sum(bool(item.get("requiresReview")) for item in crawl_attempts),
             "linkedStorefrontRequests": sum("linkedFrom" in item for item in crawl_attempts),
             "renderedRequests": len(rendered_crawl_document.get("attempts", [])),

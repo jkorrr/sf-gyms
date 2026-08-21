@@ -2137,7 +2137,23 @@
       "attemptedAt": "2026-08-21",
       "status": "access-blocked",
       "robotsStatus": "robots-http-404",
-      "contentHash": "20b3390853fba10dbc76891ccc474a5f200928c7f949718502957825c61f0362",
+      "contentHash": "10048f0a086c2933b16a80ca17bd2b64be875a6a83623b24ffa97963cb959325",
+      "networkEvidenceHashes": [],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "platform-security-check",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-3986912499",
+      "name": "Sisters in Motion — S Factor",
+      "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+      "attemptedAt": "2026-08-21",
+      "status": "access-blocked",
+      "robotsStatus": "robots-http-404",
+      "contentHash": "270b32fe7bc025c369689f5ce3c6bbcea14b27bdf575a0867005cdb4eabac4e7",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,
@@ -2153,7 +2169,7 @@
       "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "2c6ee0aa1095d84c6d5c1b4d792266ae4c4cb8d3b7f34ff2ab40dd50470b4ac2",
+      "contentHash": "86770bc9055a8408dee4503a1b681873410e57f3b93cf06978d7faf1a9551350",
       "networkEvidenceHashes": [
         "aa8ff9b91ce76fa761b00b4c33adbbad3ce84553b838aa728ef6fff9198d3786",
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
@@ -2172,7 +2188,7 @@
       "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "0c1e404dd3b2fd7d055e1df7793e4b2c15e7410a0d08ed3188a49f3e745eadc2",
+      "contentHash": "b0af03c18914b91b04c394c4bae0e3ded41f57bfce326a9ae7736920e78b34a3",
       "networkEvidenceHashes": [
         "aa8ff9b91ce76fa761b00b4c33adbbad3ce84553b838aa728ef6fff9198d3786",
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
@@ -2191,7 +2207,7 @@
       "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "ba9ef4df1bc398bb200da09b5d6aade1ec1167b65c1611ffc5322563f22b53bb",
+      "contentHash": "0a961c7b7dde210485f467f1eafaf68018c7b6f90f45a91b76b38800646e751f",
       "networkEvidenceHashes": [
         "aa8ff9b91ce76fa761b00b4c33adbbad3ce84553b838aa728ef6fff9198d3786",
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"

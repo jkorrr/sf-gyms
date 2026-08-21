@@ -17279,13 +17279,15 @@
   },
   "https://www.sistersinmotionsf.com/": {
     "status": "not-modified",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "0517114b3e0efaa3da417c1e6ff2659aefad67693f97433e185ca5044b52fa7c",
     "candidates": [],
     "linkedStorefronts": [
-      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt="
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
+      "https://www.sistersinmotionsf.com/faq"
     ],
     "locationCandidates": [
       {
@@ -17317,13 +17319,16 @@
     ]
   },
   "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=": {
-    "status": "fetched",
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "6a5a389dd115dff0bdf6a3cbb6b40248bcb7d30bb88784c7052d736252c904d4",
+    "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1"
+    ],
     "locationCandidates": []
   },
   "https://www.sfrecpark.org/facilities/facility/details/South-Sunset-Playground-274": {
@@ -45417,13 +45422,15 @@
   },
   "https://www.sistersinmotionsf.com/studioschedule": {
     "status": "not-modified",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "a7856d99867ffce3a831eb66ddeebf262263e8fe8af5bfcb31cd314b80123930",
+    "contentHash": "e495c47494c2c95c31a2adcf21be725da616e05a6fa3e6179708868ad8a8c365",
     "candidates": [],
     "linkedStorefronts": [
-      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt="
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
+      "https://www.sistersinmotionsf.com/faq"
     ],
     "locationCandidates": [
       {
@@ -45456,13 +45463,15 @@
   },
   "https://www.sistersinmotionsf.com/discoverypackage": {
     "status": "not-modified",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "79fdf697e4470077d1ec8de8359abb530f26a13cfe99ed5ac0b9a2f011d24260",
     "candidates": [],
     "linkedStorefronts": [
-      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt="
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
+      "https://www.sistersinmotionsf.com/faq"
     ],
     "locationCandidates": [
       {
@@ -52079,5 +52088,57 @@
         "autoPublishEligible": false
       }
     ]
+  },
+  "https://www.sistersinmotionsf.com/faq": {
+    "status": "not-modified",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "5f0292736775eb36be59cbb764881e30ed4c8b1fb40860ccda20a5821b165d80",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.sistersinmotionsf.com/faq#page",
+      "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt="
+    ],
+    "locationCandidates": [
+      {
+        "name": "Sisters in Motion SF",
+        "address": "245 Columbus Avenue\nSan Francisco, CA, 94133\nUnited States",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.sistersinmotionsf.com/faq",
+        "method": "json-ld-location",
+        "rawLabel": "Sisters in Motion SF | 245 Columbus Avenue San Francisco, CA, 94133 United States | []",
+        "contentHash": "4871b7909143f172f920c135823d047fdca2351d9fb13d3618ae777a778f7a84",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "301 8th Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.sistersinmotionsf.com/faq",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 301 8th Street",
+        "contentHash": "502b0ad6a31a918771fad7c547348125656975b015dbd7a5ca13dc97e9d0e6d6",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1": {
+    "status": "access-blocked",
+    "accessBlocker": "identity-session-reset-required",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "6a5a389dd115dff0bdf6a3cbb6b40248bcb7d30bb88784c7052d736252c904d4",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
   }
 }
