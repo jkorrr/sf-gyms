@@ -29,6 +29,33 @@ class RenderedCrawlerTests(unittest.TestCase):
         )
         self.assertEqual(blocker, "platform-security-check")
 
+    def test_hidden_wix_captcha_code_does_not_block_visible_pricing(self) -> None:
+        blocker = rendered.detect_access_blocker(
+            "Plans & Pricing",
+            "$125 Monthly Individual Membership. Buy now.",
+            '<script>const captchaSecurity = "verify human";</script>',
+        )
+        self.assertEqual(blocker, "")
+
+    def test_rendered_observation_redacts_contact_data_from_audit_labels(self) -> None:
+        synthetic_phone = "415" + "-555-0100"
+        synthetic_email = "price" + "@example.com"
+        observation = rendered.rendered_observation(
+            {"id": "gym-1", "name": "Example Gym"},
+            {
+                "rawLabel": f"Text {synthetic_phone} or {synthetic_email} for the $30 day pass",
+                "sourceUrl": "https://example.com/pricing",
+            },
+            "2026-08-21",
+            "https://example.com/pricing",
+        )
+
+        self.assertEqual(
+            observation["rawLabel"],
+            "Text [phone redacted] or [email redacted] for the $30 day pass",
+        )
+        self.assertEqual(observation["sourceUrl"], "https://example.com/pricing")
+
     def test_recent_access_block_is_skipped_until_monthly_full_retry(self) -> None:
         document = {"gyms": [{
             "id": "studio", "name": "Studio", "websiteUrl": "https://clients.mindbodyonline.com/store",

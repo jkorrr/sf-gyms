@@ -238,6 +238,45 @@ class PlatformAdapterTests(unittest.TestCase):
         })
         self.assertEqual(candidate["commitment"]["type"], "none")
 
+    def test_wix_purchase_card_recovers_stable_product_and_monthly_terms(self) -> None:
+        fixture = self.rendered_fixtures["wixMonthlyMembership"]
+
+        candidates = adapters.wix_purchase_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["purchaseHref"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["sourceProductId"], candidate["amount"]), ("113", 125))
+        self.assertIn("individual-monthly", candidate["sourceProductAliases"])
+        self.assertEqual((candidate["cadence"], candidate["productType"]), ("month", "monthly"))
+        self.assertEqual(candidate["commitment"]["type"], "month-to-month")
+        self.assertEqual(candidate["classAllowance"], {
+            "count": None, "period": "month", "unlimited": True,
+        })
+        self.assertEqual(candidate["scopeType"], "multi-location")
+        self.assertFalse(candidate["promotion"]["isPromotion"])
+
+    def test_wix_purchase_card_keeps_day_pass_and_annual_prepaid_distinct(self) -> None:
+        day = self.rendered_fixtures["wixDayPass"]
+        annual = self.rendered_fixtures["wixAnnualMembership"]
+
+        day_candidate = adapters.wix_purchase_card_candidates(
+            day["cardText"], day["url"], day["purchaseHref"],
+        )[0]
+        annual_candidate = adapters.wix_purchase_card_candidates(
+            annual["cardText"], annual["url"], annual["purchaseHref"],
+        )[0]
+
+        self.assertEqual((day_candidate["amount"], day_candidate["cadence"], day_candidate["productType"]), (30, "visit", "drop-in"))
+        self.assertEqual(day_candidate["commitment"]["type"], "none")
+        self.assertEqual((annual_candidate["amount"], annual_candidate["cadence"]), (1250, "year"))
+        self.assertEqual(annual_candidate["commitment"], {
+            "type": "fixed-term", "minimumMonths": 12, "minimumDays": None,
+            "rawLabel": "Annual membership",
+        })
+        self.assertFalse(annual_candidate["promotion"]["isPromotion"])
+
 
 if __name__ == "__main__":
     unittest.main()

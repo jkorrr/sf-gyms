@@ -11433,7 +11433,12 @@
         {
           "url": "https://www.musclebeachsf.com/",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.musclebeachsf.com/plans-pricing-1",
+          "status": "rendered",
+          "candidateCount": 13
         }
       ]
     },
@@ -11480,7 +11485,12 @@
         {
           "url": "https://www.musclebeachsf.com/",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.musclebeachsf.com/plans-pricing-1",
+          "status": "rendered",
+          "candidateCount": 13
         }
       ]
     },

@@ -3209,7 +3209,7 @@
     {
       "gymId": "osm-node-13743991602",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 10.0,
       "currency": "USD",
       "rawLabel": "ass is valid 24 hours from time of purchase, then it expires. BUY NOW $70 Week Pass 7-Day pass. $10",
@@ -3233,15 +3233,107 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-13743991602",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "day-pass",
+      "name": "Day Pass",
+      "amount": 30,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "productType": "drop-in",
+      "accessScope": "One 24-hour visit",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Day Pass $30/visit",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10044",
+      "sourceProductAliases": [
+        "day-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Day Pass",
       "amount": 30.0,
       "currency": "USD",
-      "rawLabel": "xt to 831-277-3990 to request your door code. codes are texted between hours of 7AM-9PM $30 Day Pass",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Day Pass",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Day Pass — USD 30 — visit",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "amount": 30.0,
+      "currency": "USD",
+      "rawLabel": "xt to [phone redacted] to request your door code. codes are texted between hours of 7AM-9PM $30 Day Pass",
       "cadence": "visit",
       "productType": "drop-in",
       "classAllowance": null,
@@ -3262,12 +3354,100 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-13743991602",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "week-pass",
+      "name": "Week Pass",
+      "amount": 70,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Seven-day visitor pass",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "7 days",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Week Pass $70/one-time",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10053",
+      "sourceProductAliases": [
+        "week-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Week Pass",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Week Pass",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Week Pass — USD 70 — one-time",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
       "amount": 70.0,
       "currency": "USD",
       "rawLabel": "ll be refunded. Pass is valid 24 hours from time of purchase, then it expires. BUY NOW $70 Week Pass 7-Day pass",
@@ -3291,18 +3471,74 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-13743991602",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "individual-monthly",
+      "name": "Monthly Individual Membership",
+      "amount": 125,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Unlimited gym visits at both Muscle Beach locations",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Monthly Individual Membership $125; unlimited visits; one-month minimum",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "113",
+      "sourceProductAliases": [
+        "monthly-individual-membership",
+        "individual-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Monthly Individual Membership",
       "amount": 125.0,
       "currency": "USD",
-      "rawLabel": "r visitors & guests. Free wifi Free Towel Service No Refunds valid 7 days from time of purchase BUY NOW $125 Monthly",
       "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
       "productType": "monthly",
-      "classAllowance": null,
+      "accessScope": "Monthly Individual Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -3312,26 +3548,143 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": "Cancel anytime"
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Individual Membership — USD 125 — month — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "operator-market-catalog",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-13743991602",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "couples-monthly",
+      "name": "Monthly Couples Membership",
+      "amount": 200,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Unlimited gym visits for two people at both locations",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "household",
+        "restrictions": [
+          "Two-person couples membership"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Monthly Couples Membership $200/month",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "114",
+      "sourceProductAliases": [
+        "monthly-couples-membership",
+        "couples-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Monthly Couples Membership",
       "amount": 200.0,
       "currency": "USD",
-      "rawLabel": "s to 2 gym locations No early cancellation Refunds Minimum one-month committment. BUY NOW Do What You Love $200 Monthly",
       "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
       "productType": "monthly",
-      "classAllowance": null,
+      "accessScope": "Monthly Couples Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "household",
+        "restrictions": [
+          "Two-person household membership"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": "Cancel anytime"
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Couples Membership — USD 200 — month — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-catalog",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "109",
+      "sourceProductAliases": [
+        "annual-individual-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Annual Individual Membership",
+      "amount": 1250.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Annual Individual Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -3341,15 +3694,75 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "Annual membership"
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Annual Individual Membership — USD 1250 — year — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "operator-market-catalog",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "115",
+      "sourceProductAliases": [
+        "annual-couples-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Annual Couples Membership",
+      "amount": 2000.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Annual Couples Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "household",
+        "restrictions": [
+          "Two-person household membership"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "Annual membership"
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Annual Couples Membership — USD 2000 — year — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-catalog",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-13905876759",
@@ -4832,7 +5245,7 @@
     {
       "gymId": "osm-node-4098815839",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 10.0,
       "currency": "USD",
       "rawLabel": "ass is valid 24 hours from time of purchase, then it expires. BUY NOW $70 Week Pass 7-Day pass. $10",
@@ -4856,15 +5269,107 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-4098815839",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "day-pass",
+      "name": "Day Pass",
+      "amount": 30,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "productType": "drop-in",
+      "accessScope": "One 24-hour visit",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Day Pass $30/visit",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10044",
+      "sourceProductAliases": [
+        "day-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Day Pass",
       "amount": 30.0,
       "currency": "USD",
-      "rawLabel": "xt to 831-277-3990 to request your door code. codes are texted between hours of 7AM-9PM $30 Day Pass",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Day Pass",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Day Pass — USD 30 — visit",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "amount": 30.0,
+      "currency": "USD",
+      "rawLabel": "xt to [phone redacted] to request your door code. codes are texted between hours of 7AM-9PM $30 Day Pass",
       "cadence": "visit",
       "productType": "drop-in",
       "classAllowance": null,
@@ -4885,12 +5390,100 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-4098815839",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "week-pass",
+      "name": "Week Pass",
+      "amount": 70,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Seven-day visitor pass",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "7 days",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Week Pass $70/one-time",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10053",
+      "sourceProductAliases": [
+        "week-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Week Pass",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Week Pass",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Week Pass — USD 70 — one-time",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
       "amount": 70.0,
       "currency": "USD",
       "rawLabel": "ll be refunded. Pass is valid 24 hours from time of purchase, then it expires. BUY NOW $70 Week Pass 7-Day pass",
@@ -4914,18 +5507,74 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-4098815839",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "individual-monthly",
+      "name": "Monthly Individual Membership",
+      "amount": 125,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Unlimited gym visits at both Muscle Beach locations",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Monthly Individual Membership $125; unlimited visits; one-month minimum",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "113",
+      "sourceProductAliases": [
+        "monthly-individual-membership",
+        "individual-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Monthly Individual Membership",
       "amount": 125.0,
       "currency": "USD",
-      "rawLabel": "r visitors & guests. Free wifi Free Towel Service No Refunds valid 7 days from time of purchase BUY NOW $125 Monthly",
       "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
       "productType": "monthly",
-      "classAllowance": null,
+      "accessScope": "Monthly Individual Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -4935,26 +5584,143 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": "Cancel anytime"
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Individual Membership — USD 125 — month — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "operator-market-catalog",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-4098815839",
       "gymName": "Muscle Beach",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "couples-monthly",
+      "name": "Monthly Couples Membership",
+      "amount": 200,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Unlimited gym visits for two people at both locations",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "household",
+        "restrictions": [
+          "Two-person couples membership"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Monthly Couples Membership $200/month",
+      "method": "visible-muscle-beach-catalog",
+      "adapter": "muscle-beach",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "114",
+      "sourceProductAliases": [
+        "monthly-couples-membership",
+        "couples-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Monthly Couples Membership",
       "amount": 200.0,
       "currency": "USD",
-      "rawLabel": "s to 2 gym locations No early cancellation Refunds Minimum one-month committment. BUY NOW Do What You Love $200 Monthly",
       "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
       "productType": "monthly",
-      "classAllowance": null,
+      "accessScope": "Monthly Couples Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "household",
+        "restrictions": [
+          "Two-person household membership"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": "Cancel anytime"
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Couples Membership — USD 200 — month — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-catalog",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "109",
+      "sourceProductAliases": [
+        "annual-individual-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Annual Individual Membership",
+      "amount": 1250.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Annual Individual Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -4964,15 +5730,75 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "Annual membership"
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Annual Individual Membership — USD 1250 — year — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "operator-market-catalog",
       "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "gymName": "Muscle Beach",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "115",
+      "sourceProductAliases": [
+        "annual-couples-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Annual Couples Membership",
+      "amount": 2000.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Annual Couples Membership",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "household",
+        "restrictions": [
+          "Two-person household membership"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "Annual membership"
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Annual Couples Membership — USD 2000 — year — Unlimited",
+      "method": "rendered-wix-purchase-card",
+      "adapter": "wix-purchase-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-catalog",
+      "sourceUrl": "https://www.musclebeachsf.com/plans-pricing-1",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.musclebeachsf.com/plans-pricing-1"
     },
     {
       "gymId": "osm-node-417957202",

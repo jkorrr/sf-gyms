@@ -130,13 +130,14 @@ def detect_access_blocker(title: str, visible_text: str, html: str = "") -> str:
     """Classify strong public-page access-control signals without bypassing them."""
 
     sample = " ".join(f"{title} {visible_text[:8_000]} {html[:8_000]}".casefold().split())
+    visible_sample = " ".join(f"{title} {visible_text[:8_000]}".casefold().split())
     cloudflare_signal = "cloudflare" in sample or "cf-chl-" in sample or "challenge-platform" in sample
     if cloudflare_signal and any(
         phrase in sample
         for phrase in ("security check", "verify you are human", "performing security verification", "just a moment")
     ):
         return "platform-security-check"
-    if "captcha" in sample and any(phrase in sample for phrase in ("verify", "security", "human")):
+    if "captcha" in visible_sample and any(phrase in visible_sample for phrase in ("verify", "security", "human")):
         return "captcha-required"
     if re.search(r"\b(?:sign in|log in)\b", title, re.IGNORECASE) and not re.search(
         r"\b(?:price|pricing|membership|package|plan)\b", visible_text, re.IGNORECASE
@@ -297,11 +298,31 @@ def rendered_observation(
 ) -> dict[str, Any]:
     """Attach the reviewed render target to redirected public evidence."""
 
+    def redact_contact_data(value: Any, field_name: str = "") -> Any:
+        """Keep contact details out of committed render evidence labels."""
+
+        if isinstance(value, dict):
+            return {key: redact_contact_data(item, key) for key, item in value.items()}
+        if isinstance(value, list):
+            return [redact_contact_data(item, field_name) for item in value]
+        if not isinstance(value, str) or field_name.casefold().endswith(("url", "id", "hash")):
+            return value
+        value = re.sub(
+            r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b",
+            "[email redacted]",
+            value,
+        )
+        return re.sub(
+            r"(?<!\d)(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}(?!\d)",
+            "[phone redacted]",
+            value,
+        )
+
     observation = {
         "gymId": gym["id"],
         "gymName": gym["name"],
         "capturedAt": attempted_at,
-        **candidate,
+        **redact_contact_data(candidate),
     }
     observation["catalogSourceUrl"] = text(candidate.get("catalogSourceUrl")) or catalog_source_url
     return observation
@@ -576,6 +597,37 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     )
                 except Exception:
                     continue
+        if page.locator("[class*='wixui']").count():
+            for purchase in page.locator("a, button").all()[:500]:
+                try:
+                    label = " ".join(purchase.inner_text(timeout=300).split()).casefold()
+                    if label not in {"buy now", "join now", "purchase", "purchase now", "enroll now"}:
+                        continue
+                    purchase_href = text(purchase.get_attribute("href"))
+                    if not purchase_href:
+                        continue
+                    card_text = purchase.evaluate(
+                        """element => {
+                            const actions = new Set(['buy now', 'join now', 'purchase', 'purchase now', 'enroll now']);
+                            for (let node = element.parentElement; node && node !== document.body; node = node.parentElement) {
+                                const value = (node.innerText || '').trim();
+                                const purchaseCount = Array.from(node.querySelectorAll('a, button')).filter(candidate =>
+                                    actions.has((candidate.innerText || '').trim().toLowerCase().replace(/\\s+/g, ' '))
+                                ).length;
+                                if (purchaseCount === 1 && value.length <= 4000 && /\\$\\s*[0-9]/.test(value)) return value;
+                            }
+                            return '';
+                        }"""
+                    )
+                    platform_card_candidates.extend(
+                        static_crawler.platform_adapters.wix_purchase_card_candidates(
+                            card_text,
+                            page.url,
+                            purchase_href,
+                        )
+                    )
+                except Exception:
+                    continue
         visible = capture_visible_state()
         page_title = page.title()
         for frame in page.frames:
@@ -593,6 +645,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             status = "access-blocked"
             network_candidates.clear()
             network_hashes.clear()
+            platform_card_candidates.clear()
             visible_sources.clear()
             visible_card_sources.clear()
     except Exception as exc:

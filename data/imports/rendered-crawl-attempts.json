@@ -1445,16 +1445,37 @@
       "gymId": "osm-node-13743991602",
       "name": "Muscle Beach",
       "url": "https://www.musclebeachsf.com/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "a97a94ee641971e42fa5c49900b8b03012f8fa8bd923c64667d887f192ebaabc",
-      "networkEvidenceHashes": [],
-      "clickedPublicTabs": [
-        "Membership"
+      "contentHash": "1b801f60e5289f2a0cd74a1e798236d6a3a2ea9f72562dd164bf5fc07f45b9cb",
+      "networkEvidenceHashes": [
+        "0afe7900f91f5b6f6b3cea8c5cbc0b5011dc2c7b359224d810de7039f5285243",
+        "e6c8133c10402d2cf94c68e8a257a305106b726ea96a1dff0af91694e62c7cf2"
       ],
-      "candidateCount": 5,
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-13743991602",
+      "name": "Muscle Beach",
+      "url": "https://www.musclebeachsf.com/plans-pricing-1",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "fe8691cb1272f4248ebe0112b048a3539460ea1e7d505ad12a80154141839b5e",
+      "networkEvidenceHashes": [
+        "0afe7900f91f5b6f6b3cea8c5cbc0b5011dc2c7b359224d810de7039f5285243",
+        "c1bd8bff3fede3b5bcd8d710c18ef21c4d873fa19bc915b57177d3e1f86f12d6"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 13,
       "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
@@ -2544,16 +2565,37 @@
       "gymId": "osm-node-4098815839",
       "name": "Muscle Beach",
       "url": "https://www.musclebeachsf.com/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "16031303400898e184652c750f6fee6a0f7f2bc338bb77b6c2c607a8542d220d",
-      "networkEvidenceHashes": [],
-      "clickedPublicTabs": [
-        "Membership"
+      "contentHash": "90474423beddade50fea83934e6de8b1e136e3295f6768492b2ad3360bcb6f87",
+      "networkEvidenceHashes": [
+        "0afe7900f91f5b6f6b3cea8c5cbc0b5011dc2c7b359224d810de7039f5285243",
+        "62532988951d84b83b9f14dfdadc5c34dd8047f5610646364701ba9ad691628c"
       ],
-      "candidateCount": 5,
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-4098815839",
+      "name": "Muscle Beach",
+      "url": "https://www.musclebeachsf.com/plans-pricing-1",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "139fb388ee6048a20dd5b5bbdf184576e66d6e6d479828b8d744c7f7ddef3814",
+      "networkEvidenceHashes": [
+        "0afe7900f91f5b6f6b3cea8c5cbc0b5011dc2c7b359224d810de7039f5285243",
+        "60dc5ee2bdefe5fee2164ae2506413b607614fa136ed197edfb0df285cdefd29"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 13,
       "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },

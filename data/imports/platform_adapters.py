@@ -13,7 +13,7 @@ import re
 from collections.abc import Iterable
 from dataclasses import dataclass
 from typing import Any
-from urllib.parse import urlparse
+from urllib.parse import parse_qs, urlparse
 
 MONEY_RE = re.compile(r"\$?\s*(\d{1,6}(?:\.\d{1,2})?)")
 PROMOTION_RE = re.compile(
@@ -1070,6 +1070,139 @@ def pushpress_plan_detail_candidates(
         "adapter": "pushpress",
         "evidenceTier": "official-public",
         "exactLocationMatch": "operator-storefront",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
+def wix_purchase_card_candidates(
+    card_text: str,
+    source_url: str,
+    purchase_href: str,
+) -> list[dict[str, Any]]:
+    """Reconstruct one bounded Wix purchase card with a stable checkout link.
+
+    Wix pages often render a plan as sibling text elements rather than a
+    semantic article.  The rendered crawler supplies only the nearest DOM
+    ancestor containing one purchase action, so prices from adjacent cards or
+    savings copy cannot attach to this offer.  A same-origin or recognized
+    public booking URL is required before a candidate is emitted.
+    """
+
+    try:
+        source = urlparse(source_url)
+        target = urlparse(purchase_href)
+    except ValueError:
+        return []
+    if source.scheme not in {"http", "https"} or not source.netloc or target.scheme not in {"http", "https"}:
+        return []
+    same_origin = target.netloc.casefold() == source.netloc.casefold()
+    if not same_origin and not platform_for_url(purchase_href):
+        return []
+
+    lines = [" ".join(line.split()) for line in text(card_text).splitlines() if " ".join(line.split())]
+    if not 3 <= len(lines) <= 80:
+        return []
+    price_indexes = [
+        index
+        for index, line in enumerate(lines)
+        if re.fullmatch(r"\$\s*[\d,]+(?:\.\d{1,2})?", line)
+    ]
+    if len(price_indexes) != 1:
+        return []
+    price_index = price_indexes[0]
+    amount_match = MONEY_RE.fullmatch(lines[price_index])
+    if not amount_match:
+        return []
+    amount = float(amount_match.group(1).replace(",", ""))
+    if not 0 < amount <= 25_000:
+        return []
+    name = next(
+        (
+            line
+            for line in lines[price_index + 1:price_index + 5]
+            if 2 <= len(line) <= 100 and PRODUCT_SEMANTIC_RE.search(line)
+        ),
+        "",
+    )
+    if not name:
+        return []
+
+    combined = " ".join(lines)
+    name_lower = name.casefold()
+    if DROP_IN_RE.search(name):
+        cadence, product_type = "visit", "drop-in"
+    elif re.search(r"\bweek(?:ly)?\b", name, re.IGNORECASE):
+        cadence, product_type = "one-time", "class-pack"
+    elif re.search(r"\b(?:annual|year(?:ly)?)\b", name, re.IGNORECASE):
+        cadence, product_type = "year", "monthly"
+    elif re.search(r"\bmonth(?:ly)?\b", name, re.IGNORECASE):
+        cadence, product_type = "month", "monthly"
+    else:
+        return []
+
+    query = {key.casefold(): values for key, values in parse_qs(target.query).items()}
+    product_id = next(
+        (
+            text(values[0])
+            for key in ("prodid", "productid", "planid", "serviceid", "itemid")
+            if (values := query.get(key)) and text(values[0])
+        ),
+        "",
+    )
+    if not product_id or len(product_id) > 100:
+        return []
+    slug = re.sub(r"[^a-z0-9]+", "-", name_lower).strip("-")
+    aliases = [slug] if slug else []
+    reordered = re.fullmatch(r"monthly\s+(.+?)\s+membership", name_lower)
+    if reordered:
+        aliases.append(f"{re.sub(r'[^a-z0-9]+', '-', reordered.group(1)).strip('-')}-monthly")
+
+    household = bool(re.search(r"\b(?:couples?|two|2)\s+(?:people|person|membership)|\bmembership\s+for\s+2\b", combined, re.IGNORECASE))
+    promotion = bool(PROMOTION_RE.search(name))
+    if product_type == "drop-in":
+        allowance = {"count": 1, "period": "visit", "unlimited": False}
+    elif re.search(r"\bunlimited\b", combined, re.IGNORECASE):
+        allowance = {"count": None, "period": cadence, "unlimited": True}
+    else:
+        allowance = None
+
+    if cadence == "month" and re.search(r"\b(?:cancel\s+any\s*time|no\s+contracts?)\b", combined, re.IGNORECASE):
+        commitment = {"type": "month-to-month", "minimumMonths": None, "minimumDays": None, "rawLabel": "Cancel anytime"}
+    elif cadence == "year":
+        commitment = {"type": "fixed-term", "minimumMonths": 12, "minimumDays": None, "rawLabel": "Annual membership"}
+    else:
+        commitment = {"type": "none" if cadence in {"visit", "one-time"} else "unknown", "minimumMonths": None, "minimumDays": None, "rawLabel": ""}
+
+    scope_type = "multi-location" if re.search(r"\baccess\s+to\s+\d+\s+gym\s+locations?\b", combined, re.IGNORECASE) else "single-location"
+    restrictions = ["Two-person household membership"] if household else []
+    raw_label = " — ".join(filter(None, (name, f"USD {amount:g}", cadence, "Unlimited" if (allowance or {}).get("unlimited") else "")))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductAliases": list(dict.fromkeys(alias for alias in aliases if alias)),
+        "sourceProductIdAuthority": "operator-widget",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": name,
+        "scopeType": scope_type,
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": name if promotion else ""},
+        "eligibility": {"type": "household" if household else "standard-adult", "restrictions": restrictions},
+        "commitment": commitment,
+        "fees": [],
+        "ordinaryUse": not promotion and not household and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(name)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-wix-purchase-card",
+        "adapter": "wix-purchase-card",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-catalog" if scope_type == "multi-location" else "exact-location",
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]

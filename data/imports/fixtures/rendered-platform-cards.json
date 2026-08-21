@@ -37,5 +37,20 @@
     "detailHref": "/landing/plans/plan_dropin123456/participant",
     "cardText": "drop in\n$32.50\n•\n1 session",
     "detailText": "drop in\nPrice\n$32.50\nBilling frequency\nOne time\nSessions\n1\nSelect"
+  },
+  "wixMonthlyMembership": {
+    "url": "https://www.musclebeachsf.com/plans-pricing-1",
+    "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=31391&stype=40&prodid=113",
+    "cardText": "$125\nMonthly Individual Membership\nMonthly unlimited gym visits\nmembership for 1 person.\nMonthly fees auto-renew until you cancel.\nYou may cancel anytime by email.\nFree wifi\nFree Towel Service\nAccess to 2 gym locations\nNo early cancellation Refunds\nMinimum one-month committment.\nBUY NOW"
+  },
+  "wixDayPass": {
+    "url": "https://www.musclebeachsf.com/plans-pricing-1",
+    "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=31391&stype=41&sTG=28&prodId=10044",
+    "cardText": "$30\nDay Pass\n1-day pass.\nExplore and enjoy the gym for 24 hours.\nPass is valid 24 hours from time of purchase, then it expires.\nBUY NOW"
+  },
+  "wixAnnualMembership": {
+    "url": "https://www.musclebeachsf.com/plans-pricing-1",
+    "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=31391&stype=40&prodid=109",
+    "cardText": "$1250\nAnnual Individual Membership\nSave $250 per year\nAnnual unlimited gym visits\nmembership for 1 person.\nAnnual fees renew until you cancel.\nAccess to 2 gym locations\nMinimum one-year committment.\nBUY NOW"
   }
 }
