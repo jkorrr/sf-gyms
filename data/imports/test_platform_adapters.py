@@ -277,6 +277,64 @@ class PlatformAdapterTests(unittest.TestCase):
         })
         self.assertFalse(annual_candidate["promotion"]["isPromotion"])
 
+    def test_squarespace_fluid_card_links_selected_plan_and_fee(self) -> None:
+        fixture = self.rendered_fixtures["squarespaceMonthToMonth"]
+
+        candidates = adapters.squarespace_fluid_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["purchaseHref"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["sourceProductId"], candidate["amount"]), ("100", 220))
+        self.assertIn("month-to-month-four-week", candidate["sourceProductAliases"])
+        self.assertEqual((candidate["cadence"], candidate["productType"]), ("4 weeks", "monthly"))
+        self.assertEqual(candidate["commitment"]["type"], "month-to-month")
+        self.assertEqual(candidate["classAllowance"], {
+            "count": None, "period": "4 weeks", "unlimited": True,
+        })
+        self.assertEqual(candidate["fees"], [{
+            "type": "enrollment", "amount": 75, "currency": "USD",
+            "cadence": "one-time", "mandatory": True,
+        }])
+        self.assertFalse(candidate["promotion"]["isPromotion"])
+
+    def test_squarespace_fluid_card_preserves_commitment_and_prepaid_amount(self) -> None:
+        contract = self.rendered_fixtures["squarespaceSixPayments"]
+        annual = self.rendered_fixtures["squarespaceAnnualPrepaid"]
+
+        contract_candidate = adapters.squarespace_fluid_card_candidates(
+            contract["cardText"], contract["url"], contract["purchaseHref"],
+        )[0]
+        annual_candidate = adapters.squarespace_fluid_card_candidates(
+            annual["cardText"], annual["url"], annual["purchaseHref"],
+        )[0]
+
+        self.assertEqual((contract_candidate["amount"], contract_candidate["cadence"]), (200, "4 weeks"))
+        self.assertEqual(contract_candidate["commitment"]["minimumDays"], 168)
+        self.assertNotIn("month-to-month-four-week", contract_candidate["sourceProductAliases"])
+        self.assertFalse(contract_candidate["promotion"]["isPromotion"])
+        self.assertEqual((annual_candidate["amount"], annual_candidate["cadence"]), (2340, "year"))
+        self.assertEqual(annual_candidate["commitment"]["minimumMonths"], 12)
+        self.assertEqual(annual_candidate["fees"], [])
+        self.assertTrue(annual_candidate["bestValueLabel"])
+
+    def test_squarespace_fluid_card_ignores_per_class_arithmetic_and_reads_fragment_id(self) -> None:
+        fixture = self.rendered_fixtures["squarespaceInlineMembership"]
+
+        candidates = adapters.squarespace_fluid_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["purchaseHref"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["sourceProductId"], candidate["amount"]), ("7443", 460))
+        self.assertEqual((candidate["cadence"], candidate["productType"]), ("4 weeks", "monthly"))
+        self.assertEqual(candidate["classAllowance"], {
+            "count": 8, "period": "4 weeks", "unlimited": False,
+        })
+        self.assertIn("semi-private-eight-four-week", candidate["sourceProductAliases"])
+
 
 if __name__ == "__main__":
     unittest.main()

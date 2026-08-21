@@ -1206,3 +1206,215 @@ def wix_purchase_card_candidates(
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]
+
+
+def squarespace_fluid_card_candidates(
+    card_text: str,
+    source_url: str,
+    purchase_href: str,
+) -> list[dict[str, Any]]:
+    """Reconstruct one Squarespace Fluid Engine price column.
+
+    Squarespace commonly stores a visual plan card as separate grid blocks for
+    its heading, price copy, and purchase button. The renderer groups only
+    blocks in the purchase button's grid column before calling this adapter.
+    Requiring one standalone display price and a stable public purchase link
+    prevents fee, savings, and adjacent-plan amounts from becoming products.
+    """
+
+    try:
+        source = urlparse(source_url)
+        target = urlparse(purchase_href)
+    except ValueError:
+        return []
+    if source.scheme not in {"http", "https"} or not source.netloc or target.scheme not in {"http", "https"}:
+        return []
+    if target.netloc.casefold() != source.netloc.casefold() and not platform_for_url(purchase_href):
+        return []
+
+    lines = [" ".join(line.split()) for line in text(card_text).splitlines() if " ".join(line.split())]
+    if not 3 <= len(lines) <= 80:
+        return []
+    standalone_price_indexes = [
+        index for index, line in enumerate(lines)
+        if re.fullmatch(r"\$\s*[\d,]+(?:\.\d{1,2})?", line)
+    ]
+    if len(standalone_price_indexes) == 1:
+        price_index = standalone_price_indexes[0]
+        amount_label = lines[price_index]
+    elif not standalone_price_indexes:
+        inline_prices: list[tuple[int, str]] = []
+        for index, line in enumerate(lines):
+            without_arithmetic = re.sub(r"\([^)]*\)", "", line)
+            matches = re.findall(r"\$\s*[\d,]+(?:\.\d{1,2})?", without_arithmetic)
+            if len(matches) == 1 and not re.search(r"\b(?:save|fee|due today)\b", without_arithmetic, re.IGNORECASE):
+                inline_prices.append((index, matches[0]))
+        if len(inline_prices) != 1:
+            return []
+        price_index, amount_label = inline_prices[0]
+    else:
+        return []
+    amount_match = MONEY_RE.fullmatch(amount_label)
+    if not amount_match:
+        return []
+    amount = float(amount_match.group(1).replace(",", ""))
+    if not 0 < amount <= 25_000:
+        return []
+
+    title_lines = [
+        line for line in lines[max(0, price_index - 4):price_index]
+        if len(line) <= 100 and not re.search(r"\b(?:all memberships?|all plans?)\b", line, re.IGNORECASE)
+    ]
+    name = " ".join(title_lines).strip(" -—")
+    if not name or not (
+        PRODUCT_SEMANTIC_RE.search(f"{name} {card_text}")
+        or re.search(r"\b(?:annual|year)\s+prepaid\b", f"{name} {card_text}", re.IGNORECASE)
+    ):
+        return []
+    combined = " ".join(lines)
+    query = {key.casefold(): values for key, values in parse_qs(target.query).items()}
+    product_id = next(
+        (
+            text(values[0])
+            for key in ("prodid", "productid", "planid", "serviceid", "itemid", "k_id")
+            if (values := query.get(key)) and text(values[0])
+        ),
+        "",
+    )
+    if not product_id and re.search(r"(?:^|/)pricing/buy/", target.fragment, re.IGNORECASE):
+        fragment_query = {
+            key.casefold(): values
+            for key, values in parse_qs(urlparse(target.fragment).query).items()
+        }
+        product_id = text((fragment_query.get("id") or [""])[0])
+    if not product_id or len(product_id) > 100:
+        return []
+
+    drop_in = bool(DROP_IN_RE.search(name))
+    class_pack_match = re.search(r"\b(\d{1,3})[ -]class pack\b", name, re.IGNORECASE)
+    trial = bool(re.search(r"\b(?:intro|trial|first[- ]?time|new client|new member|welcome)\b", combined, re.IGNORECASE))
+    every_four_weeks = re.search(
+        rf"\$\s*{re.escape(f'{amount:g}')}0*\b.{{0,80}}\bevery\s+(?:4|four)\s+weeks?\b",
+        combined,
+        re.IGNORECASE,
+    )
+    annual_prepaid = bool(re.search(r"\b(?:1|one)\s+year\s+prepaid\b|\bannual\s+prepaid\b", combined, re.IGNORECASE))
+    monthly = bool(re.search(r"\b(?:month(?:ly)?|membership|payments?)\b", name, re.IGNORECASE))
+    if drop_in:
+        cadence, product_type = "visit", "drop-in"
+    elif class_pack_match or trial:
+        cadence, product_type = "one-time", "class-pack"
+    elif annual_prepaid:
+        cadence, product_type = "year", "monthly"
+    elif every_four_weeks:
+        cadence, product_type = "4 weeks", "monthly"
+    elif monthly:
+        cadence, product_type = "month", "monthly"
+    else:
+        return []
+
+    unlimited = bool(re.search(r"\bunlimited\b", combined, re.IGNORECASE))
+    recurring_allowance = re.search(
+        r"\b(\d{1,3})\s+classes?\s+every\s+(?:4|four)\s+weeks?\b",
+        combined,
+        re.IGNORECASE,
+    )
+    if drop_in:
+        allowance = {"count": 1, "period": "visit", "unlimited": False}
+    elif class_pack_match:
+        allowance = {"count": int(class_pack_match.group(1)), "period": "one-time", "unlimited": False}
+    elif recurring_allowance:
+        allowance = {"count": int(recurring_allowance.group(1)), "period": cadence, "unlimited": False}
+    elif unlimited:
+        allowance = {"count": None, "period": cadence, "unlimited": True}
+    else:
+        allowance = None
+
+    if payments_match := re.search(r"\b(\d{1,2})\s+payments?\b", combined, re.IGNORECASE):
+        payment_count = int(payments_match.group(1))
+        commitment = {
+            "type": "fixed-term", "minimumMonths": None,
+            "minimumDays": payment_count * 28 if cadence == "4 weeks" else None,
+            "rawLabel": f"{payment_count} payments minimum",
+        }
+    elif annual_prepaid:
+        commitment = {
+            "type": "fixed-term", "minimumMonths": 12, "minimumDays": None,
+            "rawLabel": "One year prepaid",
+        }
+    elif re.search(r"\b(?:month\s+to\s+month|no contract|cancel any\s*time)\b", combined, re.IGNORECASE):
+        commitment = {
+            "type": "month-to-month", "minimumMonths": None, "minimumDays": None,
+            "rawLabel": "No contract; cancel any time",
+        }
+    else:
+        commitment = {
+            "type": "none" if cadence in {"visit", "one-time"} else "unknown",
+            "minimumMonths": None, "minimumDays": None, "rawLabel": "",
+        }
+
+    fees: list[dict[str, Any]] = []
+    if not re.search(r"\b(?:joining|enrollment|initiation|activation|setup)\s+fee\s+waived\b", combined, re.IGNORECASE):
+        fee_match = re.search(
+            r"\$\s*([\d,]+(?:\.\d{1,2})?)\s+(?:club\s+)?(?:joining|enrollment|initiation|activation|setup)\s+fee\b",
+            combined,
+            re.IGNORECASE,
+        )
+        if fee_match:
+            fees.append({
+                "type": "enrollment", "amount": float(fee_match.group(1).replace(",", "")),
+                "currency": "USD", "cadence": "one-time", "mandatory": True,
+            })
+
+    slug = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+    aliases = [slug] if slug else []
+    if cadence == "4 weeks" and commitment["type"] == "month-to-month":
+        aliases.append("month-to-month-four-week")
+    if cadence == "4 weeks" and recurring_allowance and re.search(r"\bsemi\s*[- ]\s*private\b", name, re.IGNORECASE):
+        allowance_words = {
+            1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+            7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+        }
+        allowance_count = int(recurring_allowance.group(1))
+        aliases.append(f"semi-private-{allowance_words.get(allowance_count, allowance_count)}-four-week")
+    eligibility_type = "new-client" if trial else "standard-adult"
+    access_scope = "Unlimited classes and open gym access" if unlimited and "open gym" in combined.casefold() else name
+    raw_label = " — ".join(filter(None, (
+        name,
+        f"USD {amount:g} per {cadence}",
+        access_scope if access_scope != name else "",
+        f"{fees[0]['type']} fee USD {fees[0]['amount']:g}" if fees else "",
+        commitment.get("rawLabel"),
+    )))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductAliases": list(dict.fromkeys(alias for alias in aliases if alias)),
+        "sourceProductIdAuthority": "operator-widget",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": access_scope,
+        "scopeType": "single-location",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": trial, "label": name if trial else ""},
+        "eligibility": {
+            "type": eligibility_type,
+            "restrictions": ["Introductory or new-client product"] if trial else [],
+        },
+        "commitment": commitment,
+        "fees": fees,
+        "ordinaryUse": not trial and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(name) or re.search(r"\bbest rate\b", name, re.IGNORECASE)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-squarespace-fluid-card",
+        "adapter": "squarespace-fluid-grid",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]

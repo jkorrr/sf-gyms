@@ -37,6 +37,18 @@ class RenderedCrawlerTests(unittest.TestCase):
         )
         self.assertEqual(blocker, "")
 
+    def test_strong_visible_waitlist_copy_creates_review_signal(self) -> None:
+        self.assertEqual(
+            rendered.detect_availability_signal(
+                "All semi-private classes are currently full. We are not accepting new members at this time."
+            ),
+            "enrollment-paused",
+        )
+        self.assertEqual(
+            rendered.detect_availability_signal("Join a class today or ask about future programs."),
+            "",
+        )
+
     def test_rendered_observation_redacts_contact_data_from_audit_labels(self) -> None:
         synthetic_phone = "415" + "-555-0100"
         synthetic_email = "price" + "@example.com"
@@ -105,6 +117,7 @@ class RenderedCrawlerTests(unittest.TestCase):
         current = "https://operator.example/locations/sf#pricing"
         self.assertTrue(rendered.safe_public_tab_href(current, "#memberships"))
         self.assertTrue(rendered.safe_public_tab_href(current, ""))
+        self.assertFalse(rendered.safe_public_tab_href(current, "https://operator.example/locations/sf"))
         self.assertFalse(rendered.safe_public_tab_href(current, "/memberships"))
         self.assertFalse(rendered.safe_public_tab_href(current, "https://operator.example/pricing"))
 

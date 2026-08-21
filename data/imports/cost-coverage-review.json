@@ -2693,6 +2693,16 @@
           "url": "https://castro-fitness.com/",
           "status": "rendered",
           "candidateCount": 1
+        },
+        {
+          "url": "https://castro-fitness.com/membership-agreement/",
+          "status": "rendered",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://castro-fitness.com/memberships/",
+          "status": "rendered",
+          "candidateCount": 1
         }
       ]
     },
@@ -4719,6 +4729,11 @@
         },
         {
           "url": "https://www.ehspilates.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ehspilates.com/pricing-and-packages",
           "status": "rendered",
           "candidateCount": 2
         }
@@ -7214,7 +7229,12 @@
         {
           "url": "https://www.glowyogasf.com/",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.glowyogasf.com/faq",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -7695,7 +7715,32 @@
         {
           "url": "https://hitfitsf.com/",
           "status": "rendered",
-          "candidateCount": 7
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.hitfitsf.com/purchase",
+          "status": "rendered",
+          "candidateCount": 13
+        },
+        {
+          "url": "https://www.wellnessliving.com/catalog/hitfitsf",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/home/text/terms-of-use-client.html",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/home/text/wellnessliving-privacy-policy.html",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/rs/catalog-view.html?k_business=94269&id_sale=1&k_id=3447167",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -7902,6 +7947,10 @@
       "crawlStatus": "attempted",
       "sourceAttemptStatus": "crawl-attempted",
       "sourceAttemptBlocker": "",
+      "availabilitySignals": [
+        "enrollment-paused"
+      ],
+      "availabilityReviewRequired": true,
       "crawlAttempts": [
         {
           "url": "https://www.ironandmettlefitness.com/",
@@ -7924,14 +7973,20 @@
           "candidateCount": 1
         },
         {
-          "url": "https://ironandmettle.onbookee.com/login",
+          "url": "https://www.ironandmettlefitness.com/",
           "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://www.ironandmettlefitness.com/",
+          "url": "https://www.ironandmettlefitness.com/amenities",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ironandmettlefitness.com/pricing",
+          "status": "rendered",
+          "candidateCount": 3,
+          "availabilitySignal": "enrollment-paused"
         }
       ]
     },
@@ -10498,7 +10553,17 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/appointments/37719?boardId=12869",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://momence.com/appointments/37719?boardId=14809",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/sign-up/visitor",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -12977,6 +13042,11 @@
         },
         {
           "url": "https://www.raisethebarfitness.net/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.raisethebarfitness.net/membership",
           "status": "rendered",
           "candidateCount": 1
         }
@@ -16720,17 +16790,42 @@
           "candidateCount": 7
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=176",
+          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=177",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&sessionChecked=true",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=195",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=178",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=179",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=196",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=41&sTG=2&prodId=10347",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=41&sTG=22&prodId=100042",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=41&sTG=22&prodId=10102",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -16837,17 +16932,42 @@
           "candidateCount": 7
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=177",
+          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=194",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=178",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=22&prodId=10102",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=179",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=180",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=205",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=2&prodId=10347",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=22&prodId=10467",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=42",
           "status": "access-blocked",
           "candidateCount": 0
         },

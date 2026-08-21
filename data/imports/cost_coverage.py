@@ -2280,7 +2280,14 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 "crawlStatus": "not-applicable" if not has_official_site else ("attempted" if gym_attempts else "queued"),
                 "sourceAttemptStatus": source_attempt_status,
                 "sourceAttemptBlocker": source_attempt_blocker,
-                "crawlAttempts": [{"url": item.get("url", ""), "status": item.get("status", ""), "candidateCount": item.get("candidateCount", 0)} for item in gym_attempts],
+                "crawlAttempts": [{
+                    "url": item.get("url", ""), "status": item.get("status", ""),
+                    "candidateCount": item.get("candidateCount", 0),
+                    **(
+                        {"availabilitySignal": item.get("availabilitySignal")}
+                        if text(item.get("availabilitySignal")) else {}
+                    ),
+                } for item in gym_attempts],
             }
         )
 
@@ -2298,6 +2305,11 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             if optional_field in gym and not text(gym.get(optional_field)):
                 gym.pop(optional_field, None)
         gym_attempts = attempts_by_gym.get(text(gym.get("id")), [])
+        availability_signals = sorted({
+            text(item.get("availabilitySignal"))
+            for item in gym_attempts
+            if text(item.get("availabilitySignal"))
+        })
         gym_id = text(gym.get("id"))
         has_official_site = bool(text(gym.get("websiteUrl"))) and not is_osm_url(text(gym.get("websiteUrl")))
         has_reviewed_official_evidence = bool(
@@ -2347,8 +2359,25 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 "crawlStatus": "not-applicable" if not has_official_site else ("attempted" if gym_attempts else "queued"),
                 "sourceAttemptStatus": source_attempt_status,
                 "sourceAttemptBlocker": source_attempt_blocker,
+                **(
+                    {
+                        "availabilitySignals": availability_signals,
+                        "availabilityReviewRequired": (
+                            normalized(gym.get("accessAvailability"))
+                            not in {normalized(value) for value in availability_signals}
+                        ),
+                    }
+                    if availability_signals else {}
+                ),
                 "crawlAttempts": [
-                    {"url": item.get("url", ""), "status": item.get("status", ""), "candidateCount": item.get("candidateCount", 0)}
+                    {
+                        "url": item.get("url", ""), "status": item.get("status", ""),
+                        "candidateCount": item.get("candidateCount", 0),
+                        **(
+                            {"availabilitySignal": item.get("availabilitySignal")}
+                            if text(item.get("availabilitySignal")) else {}
+                        ),
+                    }
                     for item in gym_attempts
                 ],
             }
@@ -2603,6 +2632,12 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 for item in rendered_crawl_document.get("attempts", [])
                 if text(item.get("accessBlocker"))
             ).items())),
+            "renderedAvailabilitySignalCounts": dict(sorted(Counter(
+                text(item.get("availabilitySignal"))
+                for item in rendered_crawl_document.get("attempts", [])
+                if text(item.get("availabilitySignal"))
+            ).items())),
+            "availabilityReviewCount": sum(bool(item.get("availabilityReviewRequired")) for item in review),
             "priceChangeFlags": sum(bool(item.get("priceChangeOver20Percent")) for item in crawl_attempts),
             "allReviewedSeedsGoneFlags": sum(bool(item.get("allReviewedSeedsGone")) for item in crawl_attempts),
         },

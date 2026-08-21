@@ -4890,8 +4890,27 @@ def deal_candidates(
                 "contentHash": hashlib.sha256(evidence_label.encode("utf-8")).hexdigest(),
                 "reviewStatus": "pending",
                 "replacesOrdinaryPrice": False,
+                "_stableProduct": bool(text(observation.get("sourceProductId"))),
             })
-    return sorted(deals, key=lambda item: (item["gymId"], item["sourceUrl"], item["amount"], item["label"]))
+    stable_semantics = {
+        (
+            item["gymId"], item["sourceUrl"], item["amount"],
+            item["productType"], item["cadence"],
+        )
+        for item in deals
+        if item["_stableProduct"]
+    }
+    filtered: list[dict[str, Any]] = []
+    for item in deals:
+        semantic = (
+            item["gymId"], item["sourceUrl"], item["amount"],
+            item["productType"], item["cadence"],
+        )
+        if not item["_stableProduct"] and semantic in stable_semantics:
+            continue
+        item.pop("_stableProduct", None)
+        filtered.append(item)
+    return sorted(filtered, key=lambda item: (item["gymId"], item["sourceUrl"], item["amount"], item["label"]))
 
 
 def load_rendered_deal_observations(path: Path = RENDERED_OBSERVATIONS_PATH) -> list[dict[str, Any]]:

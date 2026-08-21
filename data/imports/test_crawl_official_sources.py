@@ -2391,6 +2391,29 @@ Month-to-month with 30-day cancellation. Recommended casual visit is $35 and var
         )
         self.assertEqual(fee, [])
 
+    def test_stable_product_deal_supersedes_generic_visible_duplicate(self) -> None:
+        shared = {
+            "gymId": "gym", "gymName": "Gym", "amount": 40, "currency": "USD",
+            "productType": "class-pack", "cadence": "one-time",
+            "sourceUrl": "https://gym.example/pricing", "capturedAt": "2026-08-21",
+            "promotion": {"isPromotion": True, "label": "New Client Trial"},
+        }
+        observations = [
+            {
+                **shared, "method": "visible-text-candidate",
+                "rawLabel": "First-time offer: New Client Trial $40 for one week of classes",
+            },
+            {
+                **shared, "method": "rendered-squarespace-fluid-card",
+                "sourceProductId": "trial-40", "rawLabel": "New Client Trial — USD 40 per one-time",
+            },
+        ]
+
+        deals = crawler.deal_candidates(observations, {"gym"})
+
+        self.assertEqual(len(deals), 1)
+        self.assertEqual(deals[0]["label"], "New Client Trial")
+
     def test_weekly_mode_still_polls_current_deal_pages_daily(self) -> None:
         gym = {
             "websiteUrl": "https://gym.example/pricing", "publicationStatus": "publish",

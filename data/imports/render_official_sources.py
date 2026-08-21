@@ -98,6 +98,8 @@ def safe_public_tab_href(current_url: str, href: str) -> bool:
 
     if not text(href):
         return True
+    if not text(href).startswith("#"):
+        return False
     try:
         current = urldefrag(current_url)[0]
         target = urldefrag(urljoin(current_url, href))[0]
@@ -143,6 +145,19 @@ def detect_access_blocker(title: str, visible_text: str, html: str = "") -> str:
         r"\b(?:price|pricing|membership|package|plan)\b", visible_text, re.IGNORECASE
     ):
         return "authentication-required"
+    return ""
+
+
+def detect_availability_signal(visible_text: str) -> str:
+    """Return a review-only enrollment signal from strong visible copy."""
+
+    sample = " ".join(text(visible_text).casefold().split())
+    if (
+        re.search(r"\bnot accepting new\b.{0,100}\b(?:members?|clients?|enrollments?)\b", sample)
+        or re.search(r"\ball\b.{0,80}\bcurrently full\b", sample)
+        or re.search(r"\bwaitlist only\b", sample)
+    ):
+        return "enrollment-paused"
     return ""
 
 
@@ -381,8 +396,10 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     visible_sources: list[tuple[str, str]] = []
     visible_card_sources: list[tuple[str, str]] = []
     platform_card_candidates: list[dict[str, Any]] = []
+    adapter_metrics: dict[str, int] = {}
     clicked_tabs: list[str] = []
     access_blocker = ""
+    availability_signal = ""
     page_title = ""
 
     def capture_visible_state() -> str:
@@ -628,7 +645,92 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     )
                 except Exception:
                     continue
+        squarespace_grid_count = page.locator(".fluid-engine").count()
+        if squarespace_grid_count:
+            adapter_metrics["squarespaceFluidGridCount"] = squarespace_grid_count
+            adapter_metrics["squarespacePurchaseActionCount"] = 0
+            adapter_metrics["squarespaceAssembledCardCount"] = 0
+            adapter_metrics["squarespaceCandidateCount"] = 0
+            squarespace_cards = page.eval_on_selector_all(
+                ".fluid-engine a, .fluid-engine button",
+                """elements => elements.slice(0, 500).map(element => {
+                            const label = (element.innerText || '').trim().toLowerCase().replace(/\\s+/g, ' ').replace(/!+$/, '');
+                            const actions = new Set(['buy now', 'join now', 'purchase', 'purchase now', 'enroll now', 'start today']);
+                            const href = element.href || element.getAttribute('href') || '';
+                            if (!actions.has(label) || !href) return null;
+                            const grid = element.closest('.fluid-engine');
+                            if (!grid) return null;
+                            let actionBlock = element;
+                            while (actionBlock.parentElement && actionBlock.parentElement !== grid) actionBlock = actionBlock.parentElement;
+                            if (actionBlock.parentElement !== grid) return null;
+                            const parseArea = node => {
+                                const raw = getComputedStyle(node).gridArea.split('/').map(value => value.trim());
+                                if (raw.length !== 4) return null;
+                                const rowStart = Number.parseFloat(raw[0]);
+                                const colStart = Number.parseFloat(raw[1]);
+                                const resolveEnd = (value, start) => value.startsWith('span ')
+                                    ? start + Number.parseFloat(value.slice(5))
+                                    : Number.parseFloat(value);
+                                const rowEnd = resolveEnd(raw[2], rowStart);
+                                const colEnd = resolveEnd(raw[3], colStart);
+                                return [rowStart, colStart, rowEnd, colEnd].every(Number.isFinite)
+                                    ? {rowStart, colStart, rowEnd, colEnd}
+                                    : null;
+                            };
+                            const action = parseArea(actionBlock);
+                            let parts = [];
+                            if (action) {
+                                const actionSpan = action.colEnd - action.colStart;
+                                parts = Array.from(grid.children).map(node => {
+                                    const area = parseArea(node);
+                                    const text = (node.innerText || '').trim();
+                                    return area && text ? {area, text} : null;
+                                }).filter(Boolean).filter(item => {
+                                    const span = item.area.colEnd - item.area.colStart;
+                                    const center = (item.area.colStart + item.area.colEnd) / 2;
+                                    return span <= Math.max(actionSpan * 3, 8)
+                                        && center >= action.colStart - 2
+                                        && center <= action.colEnd + 2;
+                                });
+                                parts.sort((left, right) => left.area.rowStart - right.area.rowStart || left.area.colStart - right.area.colStart);
+                            }
+                            if (parts.length < 2) {
+                                const actionRect = actionBlock.getBoundingClientRect();
+                                const gridRect = grid.getBoundingClientRect();
+                                if (!actionRect.width || !gridRect.width) return {href, cardText: ''};
+                                parts = Array.from(grid.children).map(node => {
+                                    const rect = node.getBoundingClientRect();
+                                    const text = (node.innerText || '').trim();
+                                    return text && rect.width ? {rect, text} : null;
+                                }).filter(Boolean).filter(item => {
+                                    const center = item.rect.left + item.rect.width / 2;
+                                    return item.rect.width <= Math.max(actionRect.width * 3, gridRect.width * 0.28)
+                                        && center >= actionRect.left - actionRect.width / 2
+                                        && center <= actionRect.right + actionRect.width / 2;
+                                });
+                                parts.sort((left, right) => left.rect.top - right.rect.top || left.rect.left - right.rect.left);
+                            }
+                            return {href, cardText: parts.map(item => item.text).join('\\n')};
+                        }).filter(Boolean)""",
+            )
+            adapter_metrics["squarespacePurchaseActionCount"] = len(squarespace_cards)
+            for card in squarespace_cards:
+                try:
+                    card_text = text(card.get("cardText"))
+                    purchase_href = text(card.get("href"))
+                    if card_text:
+                        adapter_metrics["squarespaceAssembledCardCount"] += 1
+                    candidates = static_crawler.platform_adapters.squarespace_fluid_card_candidates(
+                        card_text,
+                        page.url,
+                        purchase_href,
+                    )
+                    adapter_metrics["squarespaceCandidateCount"] += len(candidates)
+                    platform_card_candidates.extend(candidates)
+                except Exception:
+                    continue
         visible = capture_visible_state()
+        availability_signal = detect_availability_signal(visible)
         page_title = page.title()
         for frame in page.frames:
             if frame == page.main_frame or not allowed_network_response(url, text(frame.url)):
@@ -701,6 +803,10 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         "error": error,
         "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
     }
+    if adapter_metrics:
+        attempt["adapterMetrics"] = adapter_metrics
+    if availability_signal:
+        attempt["availabilitySignal"] = availability_signal
     return attempt, deduplicated
 
 
@@ -723,7 +829,15 @@ def merge_incremental_results(
         if text(item.get("gymId")) not in processed_gym_ids
     }
     attempts_by_key.update({(text(item.get("gymId")), text(item.get("url"))): item for item in new_attempts})
-    attempts = sorted(attempts_by_key.values(), key=lambda item: (text(item.get("gymId")), text(item.get("url"))))
+    attempts = []
+    for item in attempts_by_key.values():
+        cleaned = dict(item)
+        if not cleaned.get("adapterMetrics"):
+            cleaned.pop("adapterMetrics", None)
+        if not text(cleaned.get("availabilitySignal")):
+            cleaned.pop("availabilitySignal", None)
+        attempts.append(cleaned)
+    attempts.sort(key=lambda item: (text(item.get("gymId")), text(item.get("url"))))
     combined_observations = [
         item for item in existing_observations
         if text(item.get("gymId")) not in processed_gym_ids

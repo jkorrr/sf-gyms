@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "full",
+  "mode": "weekly",
   "observations": [
     {
       "gymId": "osm-node-10047742013",
@@ -655,7 +655,57 @@
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100009",
+      "sourceProductAliases": [
+        "class-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Class Drop-In",
+      "amount": 30.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Class Drop-In",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Class Drop-In — USD 30 per visit",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.hitfitsf.com/purchase",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
+    },
+    {
+      "gymId": "osm-node-10665980914",
+      "gymName": "Hit Fit SF",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "Unlimited classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30",
@@ -684,12 +734,13 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
       "autoPublishEligible": false,
-      "cardHash": "15d05a26cf393fd9aa2bea00a5f5ca7ae56841536d768480a3d6b0a3921845b9"
+      "cardAssociationHash": "15d05a26cf393fd9aa2bea00a5f5ca7ae56841536d768480a3d6b0a3921845b9",
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30 Single class",
@@ -713,12 +764,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "nlimited classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30",
@@ -742,12 +794,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "ted classes for 1 week. 7-day expiration from date of purchase Start Today! Class Drop-In $30 Single class",
@@ -772,12 +825,13 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
       "autoPublishEligible": false,
-      "cardHash": "15d05a26cf393fd9aa2bea00a5f5ca7ae56841536d768480a3d6b0a3921845b9"
+      "cardAssociationHash": "15d05a26cf393fd9aa2bea00a5f5ca7ae56841536d768480a3d6b0a3921845b9",
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 40.0,
       "currency": "USD",
       "rawLabel": "Enroll now 1st time intro offer! 7 days of unlimited classes for just $40! Classpacks and Drop-Ins New Client Trial $40",
@@ -805,12 +859,65 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100011",
+      "sourceProductAliases": [
+        "new-client-trial"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "New Client Trial",
+      "amount": 40.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "New Client Trial",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "one-time",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "New Client Trial"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Introductory or new-client product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "New Client Trial — USD 40 per one-time",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.hitfitsf.com/purchase",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
+    },
+    {
+      "gymId": "osm-node-10665980914",
+      "gymName": "Hit Fit SF",
+      "capturedAt": "2026-08-21",
       "amount": 40.0,
       "currency": "USD",
       "rawLabel": "waived. (Save $75) Enroll now 1st time intro offer! 7 days of unlimited classes for just $40! Classpacks and Drop-In",
@@ -838,12 +945,180 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "102",
+      "sourceProductAliases": [
+        "6-payments-and-save-contract"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "6 Payments and Save Contract",
+      "amount": 200.0,
+      "currency": "USD",
+      "cadence": "4 weeks",
+      "billingInterval": "4 weeks",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes and open gym access",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "4 weeks",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": null,
+        "minimumDays": 168,
+        "rawLabel": "6 payments minimum"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 75.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "6 Payments and Save Contract — USD 200 per 4 weeks — Unlimited classes and open gym access — enrollment fee USD 75 — 6 payments minimum",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.hitfitsf.com/purchase",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
+    },
+    {
+      "gymId": "osm-node-10665980914",
+      "gymName": "Hit Fit SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100",
+      "sourceProductAliases": [
+        "month-to-month-no-contract",
+        "month-to-month-four-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Month to Month No Contract",
+      "amount": 220.0,
+      "currency": "USD",
+      "cadence": "4 weeks",
+      "billingInterval": "4 weeks",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes and open gym access",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "4 weeks",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": "No contract; cancel any time"
+      },
+      "fees": [
+        {
+          "type": "enrollment",
+          "amount": 75.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Month to Month No Contract — USD 220 per 4 weeks — Unlimited classes and open gym access — enrollment fee USD 75 — No contract; cancel any time",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.hitfitsf.com/purchase",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
+    },
+    {
+      "gymId": "osm-node-10665980914",
+      "gymName": "Hit Fit SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100010",
+      "sourceProductAliases": [
+        "10-class-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "10-Class Pack",
+      "amount": 275.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "10-Class Pack",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10,
+        "period": "one-time",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "10-Class Pack — USD 275 per one-time",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.hitfitsf.com/purchase",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
+    },
+    {
+      "gymId": "osm-node-10665980914",
+      "gymName": "Hit Fit SF",
+      "capturedAt": "2026-08-21",
       "amount": 275.0,
       "currency": "USD",
       "rawLabel": "Single class drop in. 14-day expiration from purchase date Buy Now 10-Class Pack $275",
@@ -867,7 +1142,54 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
+    },
+    {
+      "gymId": "osm-node-10665980914",
+      "gymName": "Hit Fit SF",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "101",
+      "sourceProductAliases": [
+        "best-rate-1-year-prepaid"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Best Rate 1 Year PrePaid",
+      "amount": 2340.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Best Rate 1 Year PrePaid",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "One year prepaid"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": true,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Best Rate 1 Year PrePaid — USD 2340 per year — One year prepaid",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.hitfitsf.com/purchase",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.hitfitsf.com/purchase"
     },
     {
       "gymId": "osm-node-10806697937",
@@ -2130,7 +2452,7 @@
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 40.0,
       "currency": "USD",
       "rawLabel": ", or go unlimited for $275/month. Both options include unlimited Core Access. Options: • Single class: $40",
@@ -2158,12 +2480,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 50.0,
       "currency": "USD",
       "rawLabel": "lso offer two-on-one (buddy) training and small group training options. Additional fee: Core Access for just $50/month",
@@ -2187,12 +2510,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 225.0,
       "currency": "USD",
       "rawLabel": ". Both options include unlimited Core Access. Options: • Single class: $40 • 10 classes: $300 • 3x/week: $225/month",
@@ -2219,12 +2543,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 225.0,
       "currency": "USD",
       "rawLabel": "S $ 225.00 USDper month Get energized with our dynamic community classes! Choose from 3 classes per week for $225/month",
@@ -2251,12 +2576,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 275.0,
       "currency": "USD",
       "rawLabel": ", or go unlimited for $275/month",
@@ -2284,12 +2610,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 275.0,
       "currency": "USD",
       "rawLabel": "• Unlimited: $275/month",
@@ -2317,12 +2644,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 420.0,
       "currency": "USD",
       "rawLabel": "es. Options: • Single 50 min stretch: $115 • 5 pack x 50 min stretch: $550 • 4 x 50 min stretch membership: $420/month",
@@ -2346,7 +2674,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.luxfitsf.com/locations/mission-rock"
     },
     {
       "gymId": "osm-node-12251148868",
@@ -2525,7 +2854,7 @@
     {
       "gymId": "osm-node-12559170747",
       "gymName": "EHS",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 37.0,
       "currency": "USD",
       "rawLabel": "Pre/Rehab focus NEW CLIENT SPECIAL $390 Value Save $60! BUY NOW! Memberships EL-8 DELUXE Membership $296 $37 Reformer Combo Chair Springboard CoreAlign 8 classes per month",
@@ -2552,12 +2881,13 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.ehspilates.com/pricing-and-packages"
     },
     {
       "gymId": "osm-node-12559170747",
       "gymName": "EHS",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 39.5,
       "currency": "USD",
       "rawLabel": "nd retail 5%off single private sessions 2 FREE bonus classes per year JOIN! EL-6 STANDARD Membership $237 $39.50 Reformer Combo Chair Springboard CoreAlign 6 classes per month",
@@ -2584,7 +2914,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.ehspilates.com/pricing-and-packages"
     },
     {
       "gymId": "osm-node-13185224799",
@@ -4604,7 +4935,57 @@
     {
       "gymId": "osm-node-2975978386",
       "gymName": "Iron + Mettle",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7572",
+      "sourceProductAliases": [
+        "semi-private-single-class"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "SEMI-PRIVATE SINGLE CLASS",
+      "amount": 65.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "SEMI-PRIVATE SINGLE CLASS",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "SEMI-PRIVATE SINGLE CLASS — USD 65 per visit",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.ironandmettlefitness.com/pricing",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.ironandmettlefitness.com/pricing"
+    },
+    {
+      "gymId": "osm-node-2975978386",
+      "gymName": "Iron + Mettle",
+      "capturedAt": "2026-08-21",
       "amount": 65.0,
       "currency": "USD",
       "rawLabel": "unlimited access to open gym times BUY NOW SEMI PRIVATE GROUP CLASS PRICING SEMI-PRIVATE SINGLE CLASS $65.00",
@@ -4632,7 +5013,59 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.ironandmettlefitness.com/pricing",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.ironandmettlefitness.com/pricing"
+    },
+    {
+      "gymId": "osm-node-2975978386",
+      "gymName": "Iron + Mettle",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7443",
+      "sourceProductAliases": [
+        "auto-pay-2x-week-semi-private-membership",
+        "semi-private-eight-four-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "AUTO-PAY 2X/WEEK SEMI - PRIVATE MEMBERSHIP",
+      "amount": 460.0,
+      "currency": "USD",
+      "cadence": "4 weeks",
+      "billingInterval": "4 weeks",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes and open gym access",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "4 weeks",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "AUTO-PAY 2X/WEEK SEMI - PRIVATE MEMBERSHIP — USD 460 per 4 weeks — Unlimited classes and open gym access",
+      "method": "rendered-squarespace-fluid-card",
+      "adapter": "squarespace-fluid-grid",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.ironandmettlefitness.com/pricing",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.ironandmettlefitness.com/pricing"
     },
     {
       "gymId": "osm-node-3161283284",
@@ -4756,7 +5189,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
     },
     {
       "gymId": "osm-node-3522837919",
@@ -4786,7 +5220,8 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
       "autoPublishEligible": false,
-      "cardAssociationHash": "a5877467f7a73fd9b9db87635bc02601b3068acdf7822d4117456286c1cab5a9"
+      "cardAssociationHash": "a5877467f7a73fd9b9db87635bc02601b3068acdf7822d4117456286c1cab5a9",
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
     },
     {
       "gymId": "osm-node-3522837919",
@@ -4815,7 +5250,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
     },
     {
       "gymId": "osm-node-3522837919",
@@ -4845,7 +5281,8 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
       "autoPublishEligible": false,
-      "cardAssociationHash": "7b22d509fa76133fb66062514fa68a767ba30c8e977cc6206e113a9f955921a1"
+      "cardAssociationHash": "7b22d509fa76133fb66062514fa68a767ba30c8e977cc6206e113a9f955921a1",
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
     },
     {
       "gymId": "osm-node-3522837919",
@@ -4874,7 +5311,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/noe-valley/"
     },
     {
       "gymId": "osm-node-3542720509",
@@ -5090,126 +5528,6 @@
       "autoPublishEligible": false
     },
     {
-      "gymId": "osm-node-3702219080",
-      "gymName": "Glow Yoga & Wellness",
-      "capturedAt": "2026-08-20",
-      "amount": 60.0,
-      "currency": "USD",
-      "rawLabel": "- Unlimited for 2 people to save $60/mo",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": true,
-        "label": "- Unlimited for 2 people to save $60/mo"
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-3702219080",
-      "gymName": "Glow Yoga & Wellness",
-      "capturedAt": "2026-08-20",
-      "amount": 85.0,
-      "currency": "USD",
-      "rawLabel": "ent Auctions and yearly fundraisers. ​ 3. Unlike any other studios in the city, our memberships begin with $85/month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-3702219080",
-      "gymName": "Glow Yoga & Wellness",
-      "capturedAt": "2026-08-20",
-      "amount": 150.0,
-      "currency": "USD",
-      "rawLabel": "r 10 Months of Golden Glow to get 2 months free, or get glowing before 9a with our Weekday Morning Membership $150/Month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-3702219080",
-      "gymName": "Glow Yoga & Wellness",
-      "capturedAt": "2026-08-20",
-      "amount": 420.0,
-      "currency": "USD",
-      "rawLabel": "....or b. Sign up with a partner or a roommate for Golden Buds $420/mo",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
-      "autoPublishEligible": false
-    },
-    {
       "gymId": "osm-node-4004802465",
       "gymName": "Benchmark Climbing",
       "capturedAt": "2026-08-21",
@@ -5240,7 +5558,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.benchmarkclimbing.com/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.benchmarkclimbing.com/"
     },
     {
       "gymId": "osm-node-4098815839",
@@ -5890,31 +6209,41 @@
     {
       "gymId": "osm-node-4199680597",
       "gymName": "Raise the Bar Fitness",
-      "capturedAt": "2026-08-20",
-      "amount": 150.0,
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "community-gym-membership",
+      "name": "Community Gym Membership",
+      "amount": 150,
       "currency": "USD",
-      "rawLabel": "vide access to our clean, private gym without the requirement of personal training sessions. Memberships are $150 per month",
       "cadence": "month",
+      "billingInterval": "month",
       "productType": "monthly",
+      "accessScope": "Independent use of the private gym without required personal-training sessions",
+      "scopeType": "single-location",
       "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
       "eligibility": {
         "type": "standard-adult",
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "month-to-month",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Community gym-only membership $150/month; availability intentionally limited",
+      "method": "visible-raise-the-bar-catalog",
+      "adapter": "raise-the-bar",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-location",
       "sourceUrl": "https://www.raisethebarfitness.net/membership",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "purchaseMethod": "contact-required",
+      "availability": "limited",
+      "catalogSourceUrl": "https://www.raisethebarfitness.net/membership"
     },
     {
       "gymId": "osm-node-4395534973",
@@ -6682,7 +7011,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/sunset/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
     },
     {
       "gymId": "osm-node-6471401829",
@@ -6711,7 +7041,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/sunset/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
     },
     {
       "gymId": "osm-node-6471401829",
@@ -6740,7 +7071,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/sunset/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
     },
     {
       "gymId": "osm-node-6471401829",
@@ -6770,7 +7102,8 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/sunset/",
       "autoPublishEligible": false,
-      "cardAssociationHash": "72e285f2ba1ccbf6dcdc103132f8bf96054465e2263a648b56c6c4230a839e3d"
+      "cardAssociationHash": "72e285f2ba1ccbf6dcdc103132f8bf96054465e2263a648b56c6c4230a839e3d",
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
     },
     {
       "gymId": "osm-node-6471401829",
@@ -6799,7 +7132,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/sunset/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.yubalance.com/sunset/"
     },
     {
       "gymId": "osm-node-6493825931",
@@ -15585,7 +15919,127 @@
     {
       "gymId": "web-e4d790e4a639c2",
       "gymName": "Castro Fitness",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "amount": 34.95,
+      "currency": "USD",
+      "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 BUY DAY PASS",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://castro-fitness.com/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/"
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "capturedAt": "2026-08-21",
+      "amount": 5.0,
+      "currency": "USD",
+      "rawLabel": "ed by the Gym. Membership can be frozen for a maximum of three (3) months. During the freeze period, a fee of $5 will be charged monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "capturedAt": "2026-08-21",
+      "amount": 34.95,
+      "currency": "USD",
+      "rawLabel": "s access to all facility and services of the club “Castro” on a recurring 4-week basis. 1 Day Pass: Sign-up Fee: None Cost: $34.95",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "capturedAt": "2026-08-21",
+      "amount": 135.95,
+      "currency": "USD",
+      "rawLabel": "one-week access to all facility and services of the club “Castro”. Single Month Pass: Sign-up Fee: None Cost: $135.95 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://castro-fitness.com/membership-agreement/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/membership-agreement/"
+    },
+    {
+      "gymId": "web-e4d790e4a639c2",
+      "gymName": "Castro Fitness",
+      "capturedAt": "2026-08-21",
       "amount": 34.95,
       "currency": "USD",
       "rawLabel": "closing on the day of use No sign-up fee No cancellation fee No commitment club \"Castro\" $34.95 BUY DAY PASS",
@@ -15609,7 +16063,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/memberships/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://castro-fitness.com/memberships/"
     },
     {
       "gymId": "web-f23343cfc28b93",

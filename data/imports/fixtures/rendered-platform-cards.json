@@ -52,5 +52,25 @@
     "url": "https://www.musclebeachsf.com/plans-pricing-1",
     "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=31391&stype=40&prodid=109",
     "cardText": "$1250\nAnnual Individual Membership\nSave $250 per year\nAnnual unlimited gym visits\nmembership for 1 person.\nAnnual fees renew until you cancel.\nAccess to 2 gym locations\nMinimum one-year committment.\nBUY NOW"
+  },
+  "squarespaceMonthToMonth": {
+    "url": "https://www.hitfitsf.com/purchase",
+    "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=40&prodId=100",
+    "cardText": "Month\nto Month\nNo Contract\n$220\n$220 every 4 weeks for unlimited classes and open gym time.\n$75 Club joining fee\nCancel any time (28 days prior to next bill date)\nEnroll now"
+  },
+  "squarespaceSixPayments": {
+    "url": "https://www.hitfitsf.com/purchase",
+    "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=40&prodId=102",
+    "cardText": "6 Payments\nand Save\nContract\n$200\n$200 every 4 weeks for unlimited classes and open gym time. (6 payments min.)\n$75 Club joining fee.\nAfter 6 payments - auto renews on a month to month basis at your promo price of $190.\nEnroll now"
+  },
+  "squarespaceAnnualPrepaid": {
+    "url": "https://www.hitfitsf.com/purchase",
+    "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=40&prodId=101",
+    "cardText": "Best\nRate\n1 Year PrePaid\n$2340\nEquates to $180 every 4 weeks\nSave $520 by pre paying $2340\nClub joining fee waived. (Save $75)\nEnroll now"
+  },
+  "squarespaceInlineMembership": {
+    "url": "https://www.ironandmettlefitness.com/pricing",
+    "purchaseHref": "https://www.ironandmettlefitness.com/schedule#/pricing/buy/r/984/loc/1027?plan_type=plan&id=7443",
+    "cardText": "auto-pay 2x/week semi - private membership\n$460 for 8 classes every 4 weeks\n($57.50/class)\nprice includes unlimited access to open gym times\nbuy now"
   }
 }

@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "full",
+  "mode": "weekly",
   "deals": [
     {
       "id": "f3c4cb1e60d3d20611c5",
@@ -19,18 +19,18 @@
       "replacesOrdinaryPrice": false
     },
     {
-      "id": "075a3e4b0d6f7e94d2c5",
+      "id": "e3567a6a48f9d3c6f6ea",
       "gymId": "osm-node-10665980914",
       "gymName": "Hit Fit SF",
       "amount": 40.0,
       "currency": "USD",
       "productType": "class-pack",
       "cadence": "one-time",
-      "label": "offer! 7 days of unlimited classes for just $40! Classpacks and Drop-Ins New Client Trial $40",
+      "label": "New Client Trial",
       "expiresAt": null,
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "capturedAt": "2026-08-20",
-      "contentHash": "24a69d4e4e7f55ead5c04531e24fcb96ac2d287c0c53be099f4aaf06a9368568",
+      "capturedAt": "2026-08-21",
+      "contentHash": "04813990d4f02e4f491398bca57e77c430c9a3d6a4eb83714343f258d666606f",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
     },
@@ -45,7 +45,7 @@
       "label": "waived. (Save $75) Enroll now 1st time intro offer! 7 days of unlimited classes for just $40! Classpacks an",
       "expiresAt": null,
       "sourceUrl": "https://www.hitfitsf.com/purchase",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "contentHash": "138952bda31379afa3b964b9b702b7684dbca4a5f404743a532aeef3c0bd2934",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
@@ -269,7 +269,7 @@
       "label": "single private sessions 2 FREE bonus classes per year JOIN! EL-6 STANDARD Membership $237 $39.50 Reformer Combo Chair Springboard CoreAlign 6 classes per month",
       "expiresAt": null,
       "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "contentHash": "92af1bffc37038a794a0588898073a2651fa768a69a1c3571eadd768a2010d99",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
@@ -285,7 +285,7 @@
       "label": "Pre/Rehab focus NEW CLIENT SPECIAL $390 Value Save $60! BUY NOW! Memberships EL-8 DELUXE Membership $296 $37 Reformer Combo Chair Springboard Co",
       "expiresAt": null,
       "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "contentHash": "23c373db167af224ff1930128f786a41ed1fd57fa16d9dcf49324e9ab7ef00e1",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
@@ -301,7 +301,7 @@
       "label": "%off single private sessions 2 FREE bonus classes per year JOIN! EL-6 STANDARD Membership $237 $39.50 Reformer Combo Chair Springboard CoreAlign 6 classes per month",
       "expiresAt": null,
       "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "contentHash": "de26664394b93b0cd3838d1d82612e96397e9f78e407f1bca9995a980d92de26",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
@@ -317,7 +317,7 @@
       "label": "Pre/Rehab focus NEW CLIENT SPECIAL $390 Value Save $60! BUY NOW! Memberships EL-8 DELUXE Membership $296 $37 Reformer Combo Chair",
       "expiresAt": null,
       "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "contentHash": "147a76e3d86953c121c7684d0152ecdb8308bc9d3d2924fb086dd99e197cac4f",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
@@ -655,22 +655,6 @@
       "sourceUrl": "https://core40.com/get-classes/",
       "capturedAt": "2026-08-21",
       "contentHash": "71f8ef22ad0e5e478f6e26e4c118017748728be5bc38ea4829372bea0264649a",
-      "reviewStatus": "pending",
-      "replacesOrdinaryPrice": false
-    },
-    {
-      "id": "da378e46065e6d51dec2",
-      "gymId": "osm-node-3702219080",
-      "gymName": "Glow Yoga & Wellness",
-      "amount": 60.0,
-      "currency": "USD",
-      "productType": "promotion",
-      "cadence": "one-time",
-      "label": "- Unlimited for 2 people to save $60/mo",
-      "expiresAt": null,
-      "sourceUrl": "https://www.glowyogasf.com/yoga-classes-san-francisco",
-      "capturedAt": "2026-08-20",
-      "contentHash": "823fbfb534add58b2480ba595e232e92fb92735c338284fac31240cb6d97497e",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
     },
