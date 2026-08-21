@@ -1,16 +1,125 @@
 from __future__ import annotations
 
-import unittest
 import concurrent.futures
 import json
 import threading
+import unittest
+from collections import defaultdict
 from datetime import datetime
 from pathlib import Path
+from unittest.mock import patch
 
 import crawl_official_sources as crawler
 
 
 class OfficialCrawlerTests(unittest.TestCase):
+    def test_reviewed_seed_routes_follow_operator_evidence_and_public_booking_only(self) -> None:
+        gym = {
+            "websiteUrl": "https://www.operator.example/",
+            "officialUrl": "https://operator.example/location/sf#details",
+            "priceSourceUrl": "https://operator.example/pricing#plans",
+            "sourceUrl": "https://directory.example/operator",
+            "plans": [
+                {"evidence": {"url": "https://momence.com/operator/memberships#current"}},
+                {"evidence": {"url": "https://unrelated.example/pricing"}},
+            ],
+            "dropIns": [{"sourceEvidence": {"url": "https://operator.example/checkout"}}],
+            "costContext": [
+                {"sourceUrl": "https://operator.example/pricing#range"},
+                {"sourceUrl": "https://classpass.com/studios/operator"},
+            ],
+        }
+
+        routes = crawler.reviewed_seed_routes(gym)
+
+        self.assertEqual(
+            routes,
+            [
+                {"url": "https://www.operator.example/", "sourceField": "websiteUrl"},
+                {"url": "https://operator.example/location/sf", "sourceField": "officialUrl"},
+                {"url": "https://operator.example/pricing", "sourceField": "priceSourceUrl"},
+                {"url": "https://momence.com/operator/memberships", "sourceField": "plans.evidence.url"},
+            ],
+        )
+
+    def test_official_url_without_website_is_still_a_crawl_seed(self) -> None:
+        gym = {"officialUrl": "https://operator.example/location/sf", "monthlyPrice": None}
+        self.assertTrue(crawler.should_crawl(gym, {}, "full", datetime(2026, 8, 21)))
+
+    def test_reviewed_price_route_is_crawled_even_when_homepage_is_404(self) -> None:
+        gym = {
+            "id": "example-gym",
+            "name": "Example Gym",
+            "websiteUrl": "https://operator.example/",
+            "officialUrl": "https://operator.example/",
+            "priceSourceUrl": "https://operator.example/pricing",
+            "monthlyPrice": None,
+        }
+        calls: list[str] = []
+
+        def fake_fetch(url: str, _timeout: float, _cached: object) -> dict[str, object]:
+            calls.append(url)
+            if url.endswith("/pricing"):
+                return {
+                    "status": "fetched",
+                    "url": url,
+                    "html": "<p>Basic membership $99 per month.</p>",
+                    "robotsStatus": "checked",
+                }
+            return {"status": "http-404", "url": url, "html": "", "robotsStatus": "checked"}
+
+        with patch.object(crawler, "fetch_page", side_effect=fake_fetch), patch.object(crawler, "DOMAIN_DELAY_SECONDS", 0):
+            attempts, observations, _locations, _updates = crawler.crawl_gym(
+                gym,
+                {},
+                datetime(2026, 8, 21),
+                1,
+                defaultdict(threading.Lock),
+                {},
+                {},
+                {},
+                {},
+                threading.Lock(),
+            )
+
+        self.assertEqual(calls, ["https://operator.example/", "https://operator.example/pricing"])
+        self.assertEqual(attempts[1]["linkedFrom"], "reviewed-record:priceSourceUrl")
+        self.assertFalse(attempts[0]["allReviewedSeedsGone"])
+        self.assertEqual([item["amount"] for item in observations], [99])
+
+    def test_all_reviewed_routes_gone_creates_status_review_flag(self) -> None:
+        gym = {
+            "id": "closed-gym",
+            "name": "Closed Gym",
+            "websiteUrl": "https://closed.example/",
+            "priceSourceUrl": "https://closed.example/pricing",
+            "monthlyPrice": None,
+        }
+
+        def fake_fetch(url: str, _timeout: float, _cached: object) -> dict[str, object]:
+            return {"status": "http-404", "url": url, "html": "", "robotsStatus": "checked"}
+
+        with patch.object(crawler, "fetch_page", side_effect=fake_fetch), patch.object(crawler, "DOMAIN_DELAY_SECONDS", 0):
+            attempts, _observations, _locations, _updates = crawler.crawl_gym(
+                gym,
+                {},
+                datetime(2026, 8, 21),
+                1,
+                defaultdict(threading.Lock),
+                {},
+                {},
+                {},
+                {},
+                threading.Lock(),
+            )
+
+        self.assertTrue(attempts[0]["allReviewedSeedsGone"])
+        self.assertTrue(attempts[0]["requiresReview"])
+        self.assertEqual(
+            attempts[0]["sourceStatusReviewReason"],
+            "all-reviewed-operator-and-evidence-routes-return-404-or-410",
+        )
+
     def test_concurrent_locations_share_one_physical_request(self) -> None:
         requests: dict[str, concurrent.futures.Future[dict[str, object]]] = {}
         lock = threading.Lock()

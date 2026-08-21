@@ -903,13 +903,20 @@ def normalize_drop_in(gym: dict[str, Any], offer: dict[str, Any], index: int, ac
 
 def build_plan_catalog(gym: dict[str, Any], access: str) -> tuple[list[dict[str, Any]], list[dict[str, Any]], str | None, str | None, list[str]]:
     raw_plans = gym.get("planOffers") if isinstance(gym.get("planOffers"), list) else []
-    if not raw_plans:
+    may_synthesize_legacy = access not in {"restricted", "not-applicable"} and gym.get("entityKind") != "non-consumer"
+    if not raw_plans and may_synthesize_legacy:
         legacy = legacy_plan_offer(gym, access)
         raw_plans = [legacy] if legacy else []
     plans = [normalize_plan_offer(gym, offer, index, access) for index, offer in enumerate(raw_plans) if offer]
     raw_drop_ins = gym.get("dropInOffers") if isinstance(gym.get("dropInOffers"), list) else []
-    if not raw_drop_ins and gym.get("dayPassPrice") is not None:
-        raw_drop_ins = [{"amount": gym["dayPassPrice"], "name": "Standard drop-in"}]
+    legacy_day_pass = gym.get("dayPassPrice")
+    if (
+        not raw_drop_ins
+        and may_synthesize_legacy
+        and isinstance(legacy_day_pass, (int, float))
+        and legacy_day_pass > 0
+    ):
+        raw_drop_ins = [{"amount": legacy_day_pass, "name": "Standard drop-in"}]
     drop_ins = [normalize_drop_in(gym, offer, index, access) for index, offer in enumerate(raw_drop_ins)]
     selected, reason = select_plan(plans, access)
     if selected:
@@ -2475,6 +2482,7 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 if text(item.get("accessBlocker"))
             ).items())),
             "priceChangeFlags": sum(bool(item.get("priceChangeOver20Percent")) for item in crawl_attempts),
+            "allReviewedSeedsGoneFlags": sum(bool(item.get("allReviewedSeedsGone")) for item in crawl_attempts),
         },
         "publicSourceDiscoverySummary": {
             "attemptedListings": public_discovery_document.get("attemptedListings", 0),

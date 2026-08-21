@@ -28,6 +28,31 @@ def gym(identifier: str, name: str, monthly: float | None, **extra: object) -> d
 
 
 class CostCoverageTests(unittest.TestCase):
+    def test_restricted_legacy_scalars_do_not_manufacture_consumer_catalogs(self) -> None:
+        value = gym(
+            "restricted-legacy",
+            "Restricted Legacy Facility",
+            99,
+            dayPassPrice=25,
+            entityKind="gym",
+        )
+
+        plans, drops, selected_plan, selected_drop, errors = coverage.build_plan_catalog(value, "restricted")
+
+        self.assertEqual(plans, [])
+        self.assertEqual(drops, [])
+        self.assertIsNone(selected_plan)
+        self.assertIsNone(selected_drop)
+        self.assertEqual(errors, [])
+
+    def test_zero_legacy_day_pass_does_not_create_fake_drop_in(self) -> None:
+        value = gym("zero-drop", "Zero Drop Gym", 99, dayPassPrice=0, entityKind="gym")
+
+        _plans, drops, _selected_plan, selected_drop, _errors = coverage.build_plan_catalog(value, "membership")
+
+        self.assertEqual(drops, [])
+        self.assertIsNone(selected_drop)
+
     def test_operator_catalog_approval_applies_only_to_explicit_matching_targets(self) -> None:
         first = gym("first", "First Branch", 80, operatorId="example-chain")
         second = gym("second", "Second Branch", 80, operatorId="example-chain")

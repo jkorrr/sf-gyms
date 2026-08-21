@@ -3252,48 +3252,6 @@
       ]
     },
     {
-      "id": "osm-node-10869882845",
-      "name": "Divine Yoga Studio",
-      "address": "406 Brannan Street, San Francisco, CA 94107",
-      "websiteUrl": "https://www.divineyogastudiosf.com/",
-      "entityKind": "studio",
-      "modality": "yoga",
-      "pricingStatus": "unresolved",
-      "pricingBlocker": "Current official operator and government sources disagree about whether this location is operating.",
-      "estimatedMonthly": null,
-      "reportedMonthly": null,
-      "priceReports": [],
-      "publicationStatus": "publish",
-      "planValidationErrors": [],
-      "selectedPlanId": null,
-      "catalogStatus": {
-        "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
-        },
-        "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
-        }
-      },
-      "discoveryStatus": "official-page-present",
-      "crawlStatus": "attempted",
-      "sourceAttemptStatus": "crawl-attempted",
-      "sourceAttemptBlocker": "",
-      "crawlAttempts": [
-        {
-          "url": "https://www.divineyogastudiosf.com/",
-          "status": "http-404",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://www.divineyogastudiosf.com/",
-          "status": "rendered",
-          "candidateCount": 0
-        }
-      ]
-    },
-    {
       "id": "osm-node-4057014702",
       "name": "Dogpatch Boulders",
       "address": "2573 3rd Street, San Francisco, CA 94107",
