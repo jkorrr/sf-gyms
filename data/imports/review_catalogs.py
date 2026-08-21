@@ -49,7 +49,23 @@ def approval_from_proposal(
         if not values and status != "none-observed":
             raise ValueError(f"{product_group} contains no offers and must be marked none-observed.")
     for offer in offers + drop_ins:
-        offer.setdefault("evidence", {})["exactLocationMatch"] = "exact-location-reviewed"
+        existing_evidence = offer.get("evidence") if isinstance(offer.get("evidence"), dict) else {}
+        existing_match = text(existing_evidence.get("exactLocationMatch") or offer.get("exactLocationMatch"))
+        eligibility = offer.get("eligibility") if isinstance(offer.get("eligibility"), dict) else {}
+        reviewed_match = (
+            "different-location"
+            if text(eligibility.get("type")) == "not-this-location" or existing_match == "different-location"
+            else "exact-location-reviewed"
+        )
+        if text(existing_evidence.get("url")) and text(existing_evidence.get("observedAt")):
+            existing_evidence["exactLocationMatch"] = reviewed_match
+            offer["evidence"] = existing_evidence
+        else:
+            # Do not create a sparse evidence object: normalization treats an
+            # explicit object as authoritative and would no longer hydrate the
+            # offer's valid top-level sourceUrl/observedAt fields.
+            offer.pop("evidence", None)
+            offer["exactLocationMatch"] = reviewed_match
     for context in contexts:
         context["exactLocationMatch"] = "exact-location-reviewed"
     note_parts: list[str] = []

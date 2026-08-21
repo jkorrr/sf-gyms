@@ -16486,13 +16486,15 @@
     ]
   },
   "https://www.performforgolf.com/locations": {
-    "status": "not-modified",
+    "status": "fetched",
     "lastAttemptAt": "2026-08-21",
-    "etag": "",
+    "etag": "W/\"9f01618eb9b97e33f7ef4b175c697946--gzip\"",
     "lastModified": "",
     "contentHash": "2ae5754c1596216df3aba7995f396f96b57dbd472e352d5b3333539e238f47c8",
     "candidates": [],
     "linkedStorefronts": [
+      "https://www.performforgolf.com/how-it-works",
+      "https://www.performforgolf.com/faq",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
     ],
     "locationCandidates": [
@@ -17276,9 +17278,9 @@
     "locationCandidates": []
   },
   "https://www.sistersinmotionsf.com/": {
-    "status": "fetched",
+    "status": "not-modified",
     "lastAttemptAt": "2026-08-21",
-    "etag": "W/\"a5f06d2a69ad1f74386ce580c7f4fccf--gzip\"",
+    "etag": "",
     "lastModified": "",
     "contentHash": "0517114b3e0efaa3da417c1e6ff2659aefad67693f97433e185ca5044b52fa7c",
     "candidates": [],
@@ -17319,7 +17321,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
+    "contentHash": "6a5a389dd115dff0bdf6a3cbb6b40248bcb7d30bb88784c7052d736252c904d4",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -29900,13 +29902,15 @@
     "locationCandidates": []
   },
   "https://www.performforgolf.com/locations/hayes-valley": {
-    "status": "not-modified",
+    "status": "fetched",
     "lastAttemptAt": "2026-08-21",
-    "etag": "",
+    "etag": "W/\"effc0cdb8a42f99bcdadd5a14f1f49d4--gzip\"",
     "lastModified": "",
     "contentHash": "fc8b060e1ab925a1853d2f7e1fd01155f55941806dda6c055200937b3114701e",
     "candidates": [],
     "linkedStorefronts": [
+      "https://www.performforgolf.com/how-it-works",
+      "https://www.performforgolf.com/faq",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
     ],
     "locationCandidates": [
@@ -29956,7 +29960,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "f7752a16aa97bb733e4891e090a580dc8a3f119b64f4e074257f75b1b1819ef3",
+    "contentHash": "b4240ad23075f26a1300abe074663a3a844883aefc25d7a101b1cea192237c81",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -29966,7 +29970,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "f7752a16aa97bb733e4891e090a580dc8a3f119b64f4e074257f75b1b1819ef3",
+    "contentHash": "6a5a389dd115dff0bdf6a3cbb6b40248bcb7d30bb88784c7052d736252c904d4",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -45412,9 +45416,9 @@
     "locationCandidates": []
   },
   "https://www.sistersinmotionsf.com/studioschedule": {
-    "status": "fetched",
+    "status": "not-modified",
     "lastAttemptAt": "2026-08-21",
-    "etag": "W/\"88a30531b0bdbd594451f77f43e14aa2--gzip\"",
+    "etag": "",
     "lastModified": "",
     "contentHash": "a7856d99867ffce3a831eb66ddeebf262263e8fe8af5bfcb31cd314b80123930",
     "candidates": [],
@@ -45451,9 +45455,9 @@
     ]
   },
   "https://www.sistersinmotionsf.com/discoverypackage": {
-    "status": "fetched",
+    "status": "not-modified",
     "lastAttemptAt": "2026-08-21",
-    "etag": "W/\"83347429edef7564935a65ffbf1cfc8d\"",
+    "etag": "",
     "lastModified": "",
     "contentHash": "79fdf697e4470077d1ec8de8359abb530f26a13cfe99ed5ac0b9a2f011d24260",
     "candidates": [],
@@ -51774,6 +51778,304 @@
         "method": "visible-address-candidate",
         "rawLabel": "Visible address: 640 Stanyan St San Francisco, CA 94117",
         "contentHash": "cd9df9ee0a2c1ab5684ea360c28f8c1d1925f80d66471f89bd2de8d2344e4f16",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://www.performforgolf.com/how-it-works": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"61ecd2adb5083f75db3bbbc5cde8456d--gzip\"",
+    "lastModified": "",
+    "contentHash": "755ef340df9fac4e7860b874f532037e5be7d82c83bf149bc40816d76355af8e",
+    "candidates": [
+      {
+        "kind": "plan-descriptor",
+        "sourceProductId": "par-4-sessions",
+        "name": "PAR Membership",
+        "amount": null,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": 4,
+          "period": "month",
+          "unlimited": false
+        },
+        "accessScope": "4 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+        "scopeType": "multi-location",
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null,
+          "rawLabel": "Auto-monthly basis"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "availability": "available",
+        "purchaseMethod": "contact-required",
+        "fees": [],
+        "rawLabel": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+        "method": "visible-perform-for-golf-plan-descriptor",
+        "adapter": "perform-for-golf-plan-descriptors",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "autoPublishEligible": false
+      },
+      {
+        "kind": "plan-descriptor",
+        "sourceProductId": "birdie-6-sessions",
+        "name": "Birdie Membership",
+        "amount": null,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": 6,
+          "period": "month",
+          "unlimited": false
+        },
+        "accessScope": "6 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+        "scopeType": "multi-location",
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null,
+          "rawLabel": "Auto-monthly basis"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "availability": "available",
+        "purchaseMethod": "contact-required",
+        "fees": [],
+        "rawLabel": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+        "method": "visible-perform-for-golf-plan-descriptor",
+        "adapter": "perform-for-golf-plan-descriptors",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "autoPublishEligible": false
+      },
+      {
+        "kind": "plan-descriptor",
+        "sourceProductId": "eagle-8-sessions",
+        "name": "Eagle Membership",
+        "amount": null,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": 8,
+          "period": "month",
+          "unlimited": false
+        },
+        "accessScope": "8 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+        "scopeType": "multi-location",
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null,
+          "rawLabel": "Auto-monthly basis"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "availability": "available",
+        "purchaseMethod": "contact-required",
+        "fees": [],
+        "rawLabel": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+        "method": "visible-perform-for-golf-plan-descriptor",
+        "adapter": "perform-for-golf-plan-descriptors",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "autoPublishEligible": false
+      },
+      {
+        "kind": "plan-descriptor",
+        "sourceProductId": "albatross-10-sessions",
+        "name": "Albatross Membership",
+        "amount": null,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": 10,
+          "period": "month",
+          "unlimited": false
+        },
+        "accessScope": "10 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+        "scopeType": "multi-location",
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null,
+          "rawLabel": "Auto-monthly basis"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "availability": "available",
+        "purchaseMethod": "contact-required",
+        "fees": [],
+        "rawLabel": "ALBATROSS (10 SESSIONS/MONTH)",
+        "method": "visible-perform-for-golf-plan-descriptor",
+        "adapter": "perform-for-golf-plan-descriptors",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "autoPublishEligible": false
+      },
+      {
+        "kind": "plan-descriptor",
+        "sourceProductId": "ace-12-sessions",
+        "name": "Ace Membership",
+        "amount": null,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": 12,
+          "period": "month",
+          "unlimited": false
+        },
+        "accessScope": "12 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+        "scopeType": "multi-location",
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null,
+          "rawLabel": "Auto-monthly basis"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "availability": "available",
+        "purchaseMethod": "contact-required",
+        "fees": [],
+        "rawLabel": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+        "method": "visible-perform-for-golf-plan-descriptor",
+        "adapter": "perform-for-golf-plan-descriptors",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://www.performforgolf.com/how-it-works#page",
+      "https://www.performforgolf.com/faq",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
+    ],
+    "locationCandidates": [
+      {
+        "name": "Perform For Golf - Marina",
+        "address": "2598 Lombard Street\nSan Francisco, CA, 94123\nUnited States",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.performforgolf.com/how-it-works",
+        "method": "json-ld-location",
+        "rawLabel": "Perform For Golf - Marina | 2598 Lombard Street San Francisco, CA, 94123 United States | []",
+        "contentHash": "d9ff651d0242ae2dab4efcc579cce4c6ec7d4a746dc2c09fdebd8ce77ec610b7",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://www.performforgolf.com/faq": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"5b55bb4eed04538fccae8a797e7a25cb\"",
+    "lastModified": "",
+    "contentHash": "1727a8d8fc6e585c851ce0ffab2e7621d5cc3882d9c380a1dba800ff70cb9af5",
+    "candidates": [
+      {
+        "kind": "plan-descriptor",
+        "sourceProductId": "unnamed-2-sessions",
+        "name": "2x/Month Membership (name not published)",
+        "amount": null,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "productType": "monthly",
+        "classAllowance": {
+          "count": 2,
+          "period": "month",
+          "unlimited": false
+        },
+        "accessScope": "2 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+        "scopeType": "multi-location",
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null,
+          "rawLabel": "Auto-monthly basis"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "availability": "available",
+        "purchaseMethod": "contact-required",
+        "fees": [],
+        "rawLabel": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+        "method": "visible-perform-for-golf-plan-descriptor",
+        "adapter": "perform-for-golf-plan-descriptors",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-market-multi-location",
+        "sourceUrl": "https://www.performforgolf.com/faq",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://www.performforgolf.com/faq#page",
+      "https://www.performforgolf.com/how-it-works",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41"
+    ],
+    "locationCandidates": [
+      {
+        "name": "Perform For Golf - Marina",
+        "address": "2598 Lombard Street\nSan Francisco, CA, 94123\nUnited States",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.performforgolf.com/faq",
+        "method": "json-ld-location",
+        "rawLabel": "Perform For Golf - Marina | 2598 Lombard Street San Francisco, CA, 94123 United States | []",
+        "contentHash": "d9ff651d0242ae2dab4efcc579cce4c6ec7d4a746dc2c09fdebd8ce77ec610b7",
         "autoPublishEligible": false
       }
     ]

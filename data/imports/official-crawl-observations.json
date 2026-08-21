@@ -2924,6 +2924,264 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "kind": "plan-descriptor",
+      "sourceProductId": "unnamed-2-sessions",
+      "name": "2x/Month Membership (name not published)",
+      "amount": null,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 2,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "2 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+      "scopeType": "multi-location",
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Auto-monthly basis"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "availability": "available",
+      "purchaseMethod": "contact-required",
+      "fees": [],
+      "rawLabel": "memberships based on one-on-one sessions. Clients can from 2x/month and up to 12x/month",
+      "method": "visible-perform-for-golf-plan-descriptor",
+      "adapter": "perform-for-golf-plan-descriptors",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-multi-location",
+      "sourceUrl": "https://www.performforgolf.com/faq",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "kind": "plan-descriptor",
+      "sourceProductId": "ace-12-sessions",
+      "name": "Ace Membership",
+      "amount": null,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "12 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+      "scopeType": "multi-location",
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Auto-monthly basis"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "availability": "available",
+      "purchaseMethod": "contact-required",
+      "fees": [],
+      "rawLabel": "ACE MEMBERSHIP (12 SESSIONS/MONTH)",
+      "method": "visible-perform-for-golf-plan-descriptor",
+      "adapter": "perform-for-golf-plan-descriptors",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-multi-location",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "kind": "plan-descriptor",
+      "sourceProductId": "albatross-10-sessions",
+      "name": "Albatross Membership",
+      "amount": null,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 10,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "10 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+      "scopeType": "multi-location",
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Auto-monthly basis"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "availability": "available",
+      "purchaseMethod": "contact-required",
+      "fees": [],
+      "rawLabel": "ALBATROSS (10 SESSIONS/MONTH)",
+      "method": "visible-perform-for-golf-plan-descriptor",
+      "adapter": "perform-for-golf-plan-descriptors",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-multi-location",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "kind": "plan-descriptor",
+      "sourceProductId": "birdie-6-sessions",
+      "name": "Birdie Membership",
+      "amount": null,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 6,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "6 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+      "scopeType": "multi-location",
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Auto-monthly basis"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "availability": "available",
+      "purchaseMethod": "contact-required",
+      "fees": [],
+      "rawLabel": "BIRDIE MEMBERSHI P (6 SESSIONS/MONTH)",
+      "method": "visible-perform-for-golf-plan-descriptor",
+      "adapter": "perform-for-golf-plan-descriptors",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-multi-location",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "kind": "plan-descriptor",
+      "sourceProductId": "eagle-8-sessions",
+      "name": "Eagle Membership",
+      "amount": null,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "8 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+      "scopeType": "multi-location",
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Auto-monthly basis"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "availability": "available",
+      "purchaseMethod": "contact-required",
+      "fees": [],
+      "rawLabel": "EAGLE MEMBERSHIP (8 SESSIONS/MONTH)",
+      "method": "visible-perform-for-golf-plan-descriptor",
+      "adapter": "perform-for-golf-plan-descriptors",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-multi-location",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "kind": "plan-descriptor",
+      "sourceProductId": "par-4-sessions",
+      "name": "PAR Membership",
+      "amount": null,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "4 interchangeable one-to-one coaching sessions per month plus designated open-gym and simulator access at all locations",
+      "scopeType": "multi-location",
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Auto-monthly basis"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "availability": "available",
+      "purchaseMethod": "contact-required",
+      "fees": [],
+      "rawLabel": "PAR MEMBERSHIP (4 SESSIONS/MONTH)",
+      "method": "visible-perform-for-golf-plan-descriptor",
+      "adapter": "perform-for-golf-plan-descriptors",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-market-multi-location",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
       "capturedAt": "2026-08-21",

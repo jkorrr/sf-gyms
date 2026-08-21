@@ -10439,9 +10439,7 @@
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -10545,9 +10543,7 @@
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -11196,8 +11192,8 @@
       "selectedPlanId": "osm-node-12132354827:plan:179",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -11225,13 +11221,23 @@
           "candidateCount": 0
         },
         {
+          "url": "https://www.performforgolf.com/faq",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://www.performforgolf.com/how-it-works",
+          "status": "fetched",
+          "candidateCount": 5
+        },
+        {
           "url": "https://www.performforgolf.com/locations",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.performforgolf.com/locations/hayes-valley",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         }
       ]
@@ -12351,17 +12357,17 @@
         },
         {
           "url": "https://www.sistersinmotionsf.com/",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://www.sistersinmotionsf.com/discoverypackage",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://www.sistersinmotionsf.com/studioschedule",
-          "status": "fetched",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
