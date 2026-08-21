@@ -6626,6 +6626,573 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "04233b5e-dcd6-415f-9161-f14fc9236ac0",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "351990",
+        "clubReadyPlanId": "538034"
+      },
+      "name": "8 Class Membership",
+      "amount": 189.0,
+      "currency": "USD",
+      "rawLabel": "8 Class Membership",
+      "description": "Eight classes per month. Perfect for two classes per week! 3 month minimum agreement. Auto-renews monthly.",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [
+        {
+          "type": "other",
+          "name": "Setup Fee",
+          "amount": 0.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "detailUrl": "",
+      "method": "public-xponential-package-detail-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/04233b5e-dcd6-415f-9161-f14fc9236ac0",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "1b33cea4-1013-4ea0-b8d5-e6aaa7f9c226",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "389814",
+        "clubReadyPlanId": "592599"
+      },
+      "name": "10 Class Pack",
+      "amount": 369.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Pack",
+      "description": "Enjoy 10 classes. Credits expire 90 days from purchase date.",
+      "cadence": "one-time",
+      "intervalCount": 3,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [
+        {
+          "type": "other",
+          "name": "Setup Fee",
+          "amount": 0.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "detailUrl": "",
+      "method": "public-xponential-package-detail-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/1b33cea4-1013-4ea0-b8d5-e6aaa7f9c226",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "550ac3d3-3c07-4a31-ac06-d4804cab0db6",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "352046",
+        "clubReadyPlanId": "538100"
+      },
+      "name": "Single Class",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "Single Class",
+      "description": "Enjoy 1 class. Credit expires 30 days from purchase date",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "detailUrl": "",
+      "method": "public-xponential-package-detail-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/550ac3d3-3c07-4a31-ac06-d4804cab0db6",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "379582",
+        "clubReadyPlanId": "578943"
+      },
+      "name": "Unlimited Class Membership",
+      "amount": 259.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Class Membership",
+      "description": "Enjoy up to 20% Off Your First Month of Unlimited Membership. Auto-renews at $259 upon month two on a monthly basis. Strengthen and tone your entire body with our low-impact high-intensity group fitness barre workout. Ex",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "Unlimited Class Membership"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Introductory or first-time-client product"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [
+        {
+          "type": "other",
+          "name": "Setup Fee",
+          "amount": 0.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "detailUrl": "",
+      "method": "public-xponential-package-detail-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "389816",
+        "clubReadyPlanId": "592601"
+      },
+      "name": "20 Class Pack",
+      "amount": 679.0,
+      "currency": "USD",
+      "rawLabel": "20 Class Pack",
+      "description": "Enjoy 20 classes. Credits expire 180 days from purchase date.",
+      "cadence": "one-time",
+      "intervalCount": 6,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [
+        {
+          "type": "other",
+          "name": "Setup Fee",
+          "amount": 0.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "detailUrl": "",
+      "method": "public-xponential-package-detail-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "e1a8bb50-623d-4aa0-8c65-84c3555567df",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "351989",
+        "clubReadyPlanId": "538032"
+      },
+      "name": "4 Class Membership",
+      "amount": 119.0,
+      "currency": "USD",
+      "rawLabel": "4 Class Membership",
+      "description": "Four classes per month. Perfect for one class per week! 3 month minimum agreement. Auto-renews monthly.",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [
+        {
+          "type": "other",
+          "name": "Setup Fee",
+          "amount": 0.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "detailUrl": "",
+      "method": "public-xponential-package-detail-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/e1a8bb50-623d-4aa0-8c65-84c3555567df",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "550ac3d3-3c07-4a31-ac06-d4804cab0db6",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "352046",
+        "clubReadyPlanId": "538100"
+      },
+      "name": "Single Class",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "Single Class",
+      "description": "Enjoy 1 class. Credit expires 30 days from purchase date",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "detailUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/550ac3d3-3c07-4a31-ac06-d4804cab0db6",
+      "method": "public-xponential-packages-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "e1a8bb50-623d-4aa0-8c65-84c3555567df",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "351989",
+        "clubReadyPlanId": "538032"
+      },
+      "name": "4 Class Membership",
+      "amount": 119.0,
+      "currency": "USD",
+      "rawLabel": "4 Class Membership",
+      "description": "Four classes per month. Perfect for one class per week! 3 month minimum agreement. Auto-renews monthly.",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "detailUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/e1a8bb50-623d-4aa0-8c65-84c3555567df",
+      "method": "public-xponential-packages-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "04233b5e-dcd6-415f-9161-f14fc9236ac0",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "351990",
+        "clubReadyPlanId": "538034"
+      },
+      "name": "8 Class Membership",
+      "amount": 189.0,
+      "currency": "USD",
+      "rawLabel": "8 Class Membership",
+      "description": "Eight classes per month. Perfect for two classes per week! 3 month minimum agreement. Auto-renews monthly.",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "detailUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/04233b5e-dcd6-415f-9161-f14fc9236ac0",
+      "method": "public-xponential-packages-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "379582",
+        "clubReadyPlanId": "578943"
+      },
+      "name": "Unlimited Class Membership",
+      "amount": 207.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Class Membership",
+      "description": "Enjoy up to 20% Off Your First Month of Unlimited Membership. Auto-renews at $259 upon month two on a monthly basis. Strengthen and tone your entire body with our low-impact high-intensity group fitness barre workout. Ex",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "Unlimited Class Membership"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Introductory or first-time-client product"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "detailUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+      "method": "public-xponential-packages-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "1b33cea4-1013-4ea0-b8d5-e6aaa7f9c226",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "389814",
+        "clubReadyPlanId": "592599"
+      },
+      "name": "10 Class Pack",
+      "amount": 369.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Pack",
+      "description": "Enjoy 10 classes. Credits expire 90 days from purchase date.",
+      "cadence": "one-time",
+      "intervalCount": 3,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "detailUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/1b33cea4-1013-4ea0-b8d5-e6aaa7f9c226",
+      "method": "public-xponential-packages-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+      "sourceSystemProductIds": {
+        "clubReadyPackageId": "389816",
+        "clubReadyPlanId": "592601"
+      },
+      "name": "20 Class Pack",
+      "amount": 679.0,
+      "currency": "USD",
+      "rawLabel": "20 Class Pack",
+      "description": "Enjoy 20 classes. Credits expire 180 days from purchase date.",
+      "cadence": "one-time",
+      "intervalCount": 6,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "detailUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+      "method": "public-xponential-packages-api",
+      "adapter": "xponential-member-app",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+    },
+    {
       "gymId": "osm-node-3658328826",
       "gymName": "CORE40 Sunset",
       "capturedAt": "2026-08-21",
@@ -12264,14 +12831,25 @@
       "gymId": "osm-node-6499455087",
       "gymName": "Empire Jiu Jitsu",
       "capturedAt": "2026-08-21",
-      "amount": 240.0,
+      "sourceProductId": "FC7B97E1-ED97-4641-A824-B084067BACA5",
+      "sourceProductAliases": [
+        "2-classes-a-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "2 Classes a Week",
+      "amount": 200.0,
       "currency": "USD",
-      "rawLabel": "imited Limited Monthly Class Packs 10 Class Pass ($350.00) 10 classes Sign Up Unlimited Unlimited Membership ($240.00) Unlimited classes Sign Up Limited Monthly",
+      "rawLabel": "Limited Monthly — 2 Classes a Week — 2 classes per week — $200",
       "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
       "productType": "monthly",
+      "accessScope": "2 classes per week",
+      "scopeType": "single-location",
       "classAllowance": {
-        "count": 10.0,
-        "period": "month"
+        "count": 2.0,
+        "period": "week",
+        "unlimited": false
       },
       "promotion": {
         "isPromotion": false,
@@ -12285,12 +12863,153 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-operator-catalog",
       "sourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm"
+    },
+    {
+      "gymId": "osm-node-6499455087",
+      "gymName": "Empire Jiu Jitsu",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "1EA59AFA-437E-46FA-B2E4-6FDFB0FC34BC",
+      "sourceProductAliases": [
+        "3-classes-a-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "3 Classes a Week",
+      "amount": 220.0,
+      "currency": "USD",
+      "rawLabel": "Limited Monthly — 3 Classes a Week — 3 classes per week — $220",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "3 classes per week",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "week",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm"
+    },
+    {
+      "gymId": "osm-node-6499455087",
+      "gymName": "Empire Jiu Jitsu",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "36ED5131-9B51-4C80-946B-85B0DB02BC49",
+      "sourceProductAliases": [
+        "unlimited-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Unlimited Membership",
+      "amount": 240.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited — Unlimited Membership — Unlimited classes — $240",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm"
+    },
+    {
+      "gymId": "osm-node-6499455087",
+      "gymName": "Empire Jiu Jitsu",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "A013896B-FE06-4190-AB54-04007CC24197",
+      "sourceProductAliases": [
+        "10-class-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "10 Class Pass",
+      "amount": 350.0,
+      "currency": "USD",
+      "rawLabel": "Class Packs — 10 Class Pass — 10 classes — $350",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "10 classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm"
     },
     {
       "gymId": "osm-node-6604031903",
@@ -13144,7 +13863,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://risecombatsf.com/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
     },
     {
       "gymId": "osm-node-7044717960",
@@ -13173,7 +13893,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://risecombatsf.com/",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
     },
     {
       "gymId": "osm-node-7044717960",
@@ -13206,7 +13927,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://risecombatsf.com/rates",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/rates"
     },
     {
       "gymId": "osm-node-7044717960",
@@ -13235,17 +13957,120 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://risecombatsf.com/rates",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/rates"
     },
     {
       "gymId": "osm-node-7044717960",
       "gymName": "Rise Combat Sports",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "09290112-4C26-4E89-B05C-F72ACA5A57FE",
+      "sourceProductAliases": [
+        "day-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Day Pass",
       "amount": 70.0,
       "currency": "USD",
-      "rawLabel": "classes Sign Up Class Pass Membership One Month Pass ($268.00) Unlimited classes Sign Up Day Pass ($70.00",
+      "rawLabel": "Class Pass Membership — Day Pass — Unlimited classes — $70",
       "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
       "productType": "drop-in",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "4D8B9A87-E8DE-425F-A352-D054CDE1374F",
+      "sourceProductAliases": [
+        "1-week-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "1 Week Pass",
+      "amount": 129.0,
+      "currency": "USD",
+      "rawLabel": "Class Pass Membership — 1 Week Pass — Unlimited classes — $129",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "454813B7-60FA-46EB-BE6F-691E5D4A57BE",
+      "sourceProductAliases": [
+        "adult-open"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Open",
+      "amount": 229.0,
+      "currency": "USD",
+      "rawLabel": "Adult Membership — Adult Open — Unlimited classes — $229",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
       "classAllowance": {
         "count": null,
         "period": "month",
@@ -13263,22 +14088,35 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-operator-catalog",
       "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
     },
     {
       "gymId": "osm-node-7044717960",
       "gymName": "Rise Combat Sports",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "E63901D2-2B76-4FA9-B7A9-9D55137B3B4F",
+      "sourceProductAliases": [
+        "one-month-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "One Month Pass",
       "amount": 268.0,
       "currency": "USD",
-      "rawLabel": "Up PIF 12 mo ($2,100.00) Unlimited classes Sign Up Class Pass Membership One Month Pass ($268.00) Unlimited classes Sign Up Day Pass",
-      "cadence": "visit",
-      "productType": "drop-in",
+      "rawLabel": "Class Pass Membership — One Month Pass — Unlimited classes — $268",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
       "classAllowance": {
         "count": null,
         "period": "month",
@@ -13293,15 +14131,248 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "fixed-term",
-        "minimumMonths": 12
+        "type": "prepaid",
+        "minimumMonths": 1
       },
-      "method": "visible-text-candidate",
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-operator-catalog",
       "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "22D29FD2-F0BA-4FC1-A97E-DC7E685CED9B",
+      "sourceProductAliases": [
+        "open-family-2"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "OPEN FAMILY 2",
+      "amount": 379.0,
+      "currency": "USD",
+      "rawLabel": "Family Membership — OPEN FAMILY 2 — Unlimited classes — $379",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "C3876C03-8EFB-49A0-B266-77C611324A8D",
+      "sourceProductAliases": [
+        "open-family-3"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "OPEN FAMILY 3",
+      "amount": 479.0,
+      "currency": "USD",
+      "rawLabel": "Family Membership — OPEN FAMILY 3 — Unlimited classes — $479",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "6810870B-90CF-4F0B-A2AA-42F571CDF076",
+      "sourceProductAliases": [
+        "pif-6-mo"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "PIF 6 mo",
+      "amount": 1100.0,
+      "currency": "USD",
+      "rawLabel": "Adult Membership — PIF 6 mo — Unlimited classes — $1100",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 6,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 6
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "1DEFC183-8FC2-40A1-A2AC-1BF731F31366",
+      "sourceProductAliases": [
+        "pif-12-mo"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "PIF 12 mo",
+      "amount": 2100.0,
+      "currency": "USD",
+      "rawLabel": "Adult Membership — PIF 12 mo — Unlimited classes — $2100",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 12,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "45C01DA2-4287-40CA-A588-C08857AEE080",
+      "sourceProductAliases": [
+        "legacy-membership-5-years"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Legacy Membership (5 Years)",
+      "amount": 5000.0,
+      "currency": "USD",
+      "rawLabel": "Membership Deals — Legacy Membership (5 Years) — Unlimited classes — $5000",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 60,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 60
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://risecombatsf.com/"
     },
     {
       "gymId": "osm-node-8641835222",
@@ -13682,48 +14753,25 @@
       "gymId": "osm-node-8660768875",
       "gymName": "Fitness Urbano",
       "capturedAt": "2026-08-21",
-      "amount": 1.0,
-      "currency": "USD",
-      "rawLabel": "( 6 months prepaid) ($729.00) Unlimited classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "zen-planner",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-8660768875",
-      "gymName": "Fitness Urbano",
-      "capturedAt": "2026-08-21",
+      "sourceProductId": "31BA285B-131D-463D-B677-7CEE45FB58B7",
+      "sourceProductAliases": [
+        "day-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Day Pass",
       "amount": 35.0,
       "currency": "USD",
-      "rawLabel": "ted classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass ($35.00",
+      "rawLabel": "Gym membership — Day Pass — Unlimited classes — $35",
       "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
       "productType": "drop-in",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
       "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
       },
       "promotion": {
         "isPromotion": false,
@@ -13734,25 +14782,39 @@
         "restrictions": []
       },
       "commitment": {
-        "type": "unknown",
+        "type": "none",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-operator-catalog",
       "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
     {
       "gymId": "osm-node-8660768875",
       "gymName": "Fitness Urbano",
       "capturedAt": "2026-08-21",
-      "amount": 1.0,
+      "sourceProductId": "35EDFB09-4453-4079-AC79-78A997A44202",
+      "sourceProductAliases": [
+        "urbano-anytime-monthly",
+        "monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Urbano Anytime (monthly)",
+      "amount": 135.0,
       "currency": "USD",
-      "rawLabel": "( 6 months prepaid) ($729.00) Unlimited classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass",
-      "cadence": "visit",
-      "productType": "drop-in",
+      "rawLabel": "Gym membership — Urbano Anytime (monthly) — Unlimited classes — $135",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
       "classAllowance": {
         "count": null,
         "period": "month",
@@ -13770,22 +14832,174 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
-      "autoPublishEligible": false
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
     {
       "gymId": "osm-node-8660768875",
       "gymName": "Fitness Urbano",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "20F52933-04CF-4878-B5A4-778ACE842E38",
+      "sourceProductAliases": [
+        "urbano-anytime-6-months-prepaid"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Urbano Anytime ( 6 months prepaid)",
+      "amount": 729.0,
+      "currency": "USD",
+      "rawLabel": "Gym membership — Urbano Anytime ( 6 months prepaid) — Unlimited classes — $729",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 6,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 6
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "gymName": "Fitness Urbano",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "B2D947BD-0F97-487A-91E5-55FD76A7526A",
+      "sourceProductAliases": [
+        "urbano-anytime-1-year-prepaid"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Urbano Anytime (1 year prepaid)",
+      "amount": 1458.0,
+      "currency": "USD",
+      "rawLabel": "Gym membership — Urbano Anytime (1 year prepaid) — Unlimited classes — $1458",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 12,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "gymName": "Fitness Urbano",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "31BA285B-131D-463D-B677-7CEE45FB58B7",
+      "sourceProductAliases": [
+        "day-pass"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Day Pass",
       "amount": 35.0,
       "currency": "USD",
-      "rawLabel": "ted classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass ($35.00",
+      "rawLabel": "Gym membership — Day Pass — Unlimited classes — $35",
       "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
       "productType": "drop-in",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "gymName": "Fitness Urbano",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "35EDFB09-4453-4079-AC79-78A997A44202",
+      "sourceProductAliases": [
+        "urbano-anytime-monthly",
+        "monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Urbano Anytime (monthly)",
+      "amount": 135.0,
+      "currency": "USD",
+      "rawLabel": "Gym membership — Urbano Anytime (monthly) — Unlimited classes — $135",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
       "classAllowance": {
         "count": null,
         "period": "month",
@@ -13803,12 +15017,107 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "visible-text-candidate",
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
+      "exactLocationMatch": "exact-operator-catalog",
       "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "gymName": "Fitness Urbano",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "20F52933-04CF-4878-B5A4-778ACE842E38",
+      "sourceProductAliases": [
+        "urbano-anytime-6-months-prepaid"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Urbano Anytime ( 6 months prepaid)",
+      "amount": 729.0,
+      "currency": "USD",
+      "rawLabel": "Gym membership — Urbano Anytime ( 6 months prepaid) — Unlimited classes — $729",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 6,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 6
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "gymName": "Fitness Urbano",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "B2D947BD-0F97-487A-91E5-55FD76A7526A",
+      "sourceProductAliases": [
+        "urbano-anytime-1-year-prepaid"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Urbano Anytime (1 year prepaid)",
+      "amount": 1458.0,
+      "currency": "USD",
+      "rawLabel": "Gym membership — Urbano Anytime (1 year prepaid) — Unlimited classes — $1458",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 12,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "public-zen-planner-plan-card",
+      "adapter": "zen-planner",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-operator-catalog",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
     {
       "gymId": "osm-node-8867020483",

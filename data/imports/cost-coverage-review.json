@@ -4660,7 +4660,12 @@
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?CalendarType=FREETRIAL",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=FF21F6C4%2DF366%2D4F07%2D9ED8%2D3E94A18FB7D1",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -4705,44 +4710,14 @@
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/freeTrial.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
           "url": "https://empirejiujitsuca.sites.zenplanner.com/index.cfm",
           "status": "fetched",
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/login.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=1EA59AFA-437E-46FA-B2E4-6FDFB0FC34BC&personId=169F8DF3-0938-4BCA-BF8A-432BE2943E21",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=36ED5131-9B51-4C80-946B-85B0DB02BC49&personId=9D414BD5-9510-4B58-90F8-0BBE66399028",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=A013896B-FE06-4190-AB54-04007CC24197&personId=1F1D1F9E-2535-48B3-A4AE-014815326FF1",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=FC7B97E1-ED97-4641-A824-B084067BACA5&personId=56153B63-F82D-4341-ACE9-2ACE26A301AA",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
           "url": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
           "status": "fetched",
-          "candidateCount": 1
+          "candidateCount": 4
         },
         {
           "url": "https://empirejiujitsuca.zenplanner.com/zenplanner/portal/calendar.cfm?frame=true",
@@ -4751,7 +4726,7 @@
         },
         {
           "url": "https://www.empirebjj.com/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -6066,91 +6041,6 @@
           "candidateCount": 0
         },
         {
-          "url": "https://fitnessurbano.sites.zenplanner.com/login.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm?programId=B7B0DA7C-2A88-44AC-B2A2-D0D44ED5DAA6",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm?programId=BAFAB4CA-7271-4F7F-9425-F131D7DA7469",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm?programId=D72E4C86-1473-4A48-A56F-CB142ED6BF88",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=20F52933-04CF-4878-B5A4-778ACE842E38&personId=0F154F2B-F53C-4BFA-B4D7-97CDB233D3B8",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=20F52933-04CF-4878-B5A4-778ACE842E38&personId=6F4C90CA-C513-4F17-AA26-12EE9BD270D5",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=31BA285B-131D-463D-B677-7CEE45FB58B7&personId=35E9015D-D0A2-40CA-8A85-64398D1F7972",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=31BA285B-131D-463D-B677-7CEE45FB58B7&personId=E8F977F8-19ED-42C8-A5C4-FFBC6B8CEC6F",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=35EDFB09-4453-4079-AC79-78A997A44202&personId=23EEB7A8-C7E3-4C2F-A5F8-615D7D5B5529",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=35EDFB09-4453-4079-AC79-78A997A44202&personId=4FB4B653-FAC1-4E18-AE0E-2CC683871729",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=81A0AA44-E612-46EC-807E-D4B5EA6B8497&personId=49E111EA-FA6C-4E0B-9A4D-A8B5F97F9B59",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=81A0AA44-E612-46EC-807E-D4B5EA6B8497&personId=5DB8C3F7-323F-4838-AFAF-942089DF6EB4",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=B2D947BD-0F97-487A-91E5-55FD76A7526A&personId=967A69D4-1C07-4E40-BCA8-FEDB42128C6F",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=B2D947BD-0F97-487A-91E5-55FD76A7526A&personId=D61108CD-E3DB-4905-9D30-BD4DE8AF2104",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=D0CE5FF8-19BA-4CEB-97FA-D5DA9BF02395&personId=5F48BAE3-5C59-4AB6-A43B-04F217D81F37",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://fitnessurbano.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=D0CE5FF8-19BA-4CEB-97FA-D5DA9BF02395&personId=D10F2E18-234E-4998-9B66-DC904699741A",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
           "url": "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=",
           "status": "robots-disallowed",
           "candidateCount": 0
@@ -6173,12 +6063,12 @@
         {
           "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
           "status": "fetched",
-          "candidateCount": 2
+          "candidateCount": 4
         },
         {
           "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
           "status": "fetched",
-          "candidateCount": 2
+          "candidateCount": 4
         },
         {
           "url": "https://fitnessurbano.com/gym-memberships/",
@@ -12764,6 +12654,51 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://members.purebarre.com",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/04233b5e-dcd6-415f-9161-f14fc9236ac0",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/1b33cea4-1013-4ea0-b8d5-e6aaa7f9c226",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/550ac3d3-3c07-4a31-ac06-d4804cab0db6",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/e1a8bb50-623d-4aa0-8c65-84c3555567df",
+          "status": "fetched",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+          "status": "fetched",
+          "candidateCount": 6
+        },
+        {
+          "url": "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73&",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.purebarre.com/location/san-francisco-west-portal-ca",
           "status": "fetched",
           "candidateCount": 0
@@ -12938,7 +12873,7 @@
         },
         {
           "url": "https://risecombatsf.com/rates",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 2
         },
         {
@@ -12947,22 +12882,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://risecombatsf.sites.zenplanner.com/calendar.cfm?CalendarType=FREETRIAL",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
           "url": "https://risecombatsf.sites.zenplanner.com/index.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/login.cfm",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -12973,66 +12893,6 @@
         },
         {
           "url": "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm?programId=052A06E9-DACA-4287-84D5-1BF4FA2F1EA9",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm?programId=111F1656-4E2B-47E0-8611-4D22A70DA6AB",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm?programId=DB9E2814-F2D2-48A3-86C9-517B98D14BE3",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=454813B7-60FA-46EB-BE6F-691E5D4A57BE&personId=D661C179-3144-4416-9F9B-226C5B9DF4EA",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=45C01DA2-4287-40CA-A588-C08857AEE080&personId=5F11FF91-C682-419E-8C6C-44EEB385B137",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/registration.cfm?payment=MEMBERSHIP&MembershipTemplateId=6810870B-90CF-4F0B-A2AA-42F571CDF076&personId=DE887DC0-07B1-4131-9BD0-A930F52D0D0D",
-          "status": "robots-disallowed",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/retail-cart.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/retail.cfm",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Apparel",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -13059,7 +12919,7 @@
         {
           "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
           "status": "fetched",
-          "candidateCount": 2
+          "candidateCount": 9
         },
         {
           "url": "https://risecombatsf.com/",

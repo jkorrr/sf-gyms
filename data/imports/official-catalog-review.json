@@ -2,9 +2,9 @@
   "_meta": {
     "generatedAt": "2026-08-21",
     "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
-    "proposalCount": 84,
-    "unchangedApprovedCount": 11,
-    "rejectedUnattachedObservationCount": 859
+    "proposalCount": 87,
+    "unchangedApprovedCount": 12,
+    "rejectedUnattachedObservationCount": 852
   },
   "proposals": [
     {
@@ -3831,6 +3831,140 @@
       }
     },
     {
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "canonicalAddress": "162 west portal ave",
+      "operatorId": "pure barre",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "e1a8bb50-623d-4aa0-8c65-84c3555567df",
+          "name": "4 Class Membership",
+          "accessScope": "Four Pure Barre classes monthly at West Portal",
+          "scopeType": "single-location",
+          "classAllowance": 4,
+          "amount": 119,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "04233b5e-dcd6-415f-9161-f14fc9236ac0",
+          "name": "8 Class Membership",
+          "accessScope": "Eight Pure Barre classes monthly at West Portal",
+          "scopeType": "single-location",
+          "classAllowance": 8,
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+          "name": "Unlimited Membership",
+          "accessScope": "Unlimited Pure Barre classes monthly at West Portal",
+          "scopeType": "single-location",
+          "classAllowance": "unlimited",
+          "amount": 259,
+          "billingInterval": "month",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "1b33cea4-1013-4ea0-b8d5-e6aaa7f9c226",
+          "name": "10 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten classes expiring after 90 days",
+          "classAllowance": 10,
+          "amount": 369,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+          "name": "20 Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Twenty classes expiring after 180 days",
+          "classAllowance": 20,
+          "amount": 679,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "550ac3d3-3c07-4a31-ac06-d4804cab0db6",
+          "name": "Single Class",
+          "accessScope": "One ordinary Pure Barre class, expiring after 30 days",
+          "amount": 38
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [
+        {
+          "type": "source-product-price-conflict",
+          "productType": "monthly",
+          "sourceProductKey": "5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+          "amounts": [
+            207.0,
+            259.0
+          ],
+          "publicationEffect": "fail-closed"
+        },
+        {
+          "type": "approved-source-product-price-conflict",
+          "productType": "plan",
+          "sourceProductKey": "5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+          "approvedAmount": 259.0,
+          "observedAmount": 207.0,
+          "publicationEffect": "fail-closed"
+        }
+      ],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 119.0,
+        "dayPassPrice": 38.0,
+        "selectedPlanId": "osm-node-3622501398:plan:e1a8bb50-623d-4aa0-8c65-84c3555567df",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 5,
+        "dropInOfferCount": 1,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "osm-node-3658328826",
       "gymName": "CORE40 Sunset",
       "canonicalAddress": "827 irving st",
@@ -7583,6 +7717,474 @@
       }
     },
     {
+      "gymId": "osm-node-7044717960",
+      "gymName": "Rise Combat Sports",
+      "canonicalAddress": "1118 harrison st",
+      "operatorId": "risecombatsf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://risecombatsf.com/",
+        "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "month-to-month",
+          "name": "Month-to-Month",
+          "accessScope": "Unlimited martial-arts and strength classes at Rise Combat Sports",
+          "scopeType": "single-location",
+          "classAllowance": "unlimited",
+          "amount": 229,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 29,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "six-month-prepaid",
+          "name": "Prepaid Six Months",
+          "productType": "class-pack",
+          "accessScope": "Six prepaid months of unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 1100,
+          "billingInterval": "one-time",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6,
+          "fees": []
+        },
+        {
+          "sourceProductId": "twelve-month-prepaid",
+          "name": "Prepaid Twelve Months",
+          "productType": "class-pack",
+          "accessScope": "Twelve prepaid months of unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 2100,
+          "billingInterval": "one-time",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "4D8B9A87-E8DE-425F-A352-D054CDE1374F",
+          "name": "Class Pass Membership — 1 Week Pass — Unlimited classes — $129",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 129.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Class Pass Membership — 1 Week Pass — Unlimited classes — $129",
+            "contentHash": "e0c479d673d96ce219c33cbb817b70d89eef76a14bd8efd60517131ef5c747e3",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "4D8B9A87-E8DE-425F-A352-D054CDE1374F",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "454813B7-60FA-46EB-BE6F-691E5D4A57BE",
+          "name": "Adult Membership — Adult Open — Unlimited classes — $229",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 229.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Adult Membership — Adult Open — Unlimited classes — $229",
+            "contentHash": "465c8db24366707d77c75ba0980fe78ca741388e46f21b0f6514a1fffd15643d",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "454813B7-60FA-46EB-BE6F-691E5D4A57BE",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "E63901D2-2B76-4FA9-B7A9-9D55137B3B4F",
+          "name": "Class Pass Membership — One Month Pass — Unlimited classes — $268",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 268.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 1,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Class Pass Membership — One Month Pass — Unlimited classes — $268",
+            "contentHash": "b8a5c834451477cea1b05f2cdbc3537a5295ca25438ef2621214271d02435136",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "E63901D2-2B76-4FA9-B7A9-9D55137B3B4F",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "22D29FD2-F0BA-4FC1-A97E-DC7E685CED9B",
+          "name": "Family Membership — OPEN FAMILY 2 — Unlimited classes — $379",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 379.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Family Membership — OPEN FAMILY 2 — Unlimited classes — $379",
+            "contentHash": "b16e61561bad2f40a16b73a6d6f18a85c4161a39f5e9627004d58b0d355ff956",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "22D29FD2-F0BA-4FC1-A97E-DC7E685CED9B",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "C3876C03-8EFB-49A0-B266-77C611324A8D",
+          "name": "Family Membership — OPEN FAMILY 3 — Unlimited classes — $479",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 479.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Family Membership — OPEN FAMILY 3 — Unlimited classes — $479",
+            "contentHash": "e761094447b3b7778f3f2f5dd0c510a5761c281baed91ee0a4df76b19b73144f",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "C3876C03-8EFB-49A0-B266-77C611324A8D",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "6810870B-90CF-4F0B-A2AA-42F571CDF076",
+          "name": "Adult Membership — PIF 6 mo — Unlimited classes — $1100",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 1100.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 6,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 6,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Adult Membership — PIF 6 mo — Unlimited classes — $1100",
+            "contentHash": "9412a745dc84cea83ee9cb5c3fc24778aa809e20874c6fbbcc179da48244e77a",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "6810870B-90CF-4F0B-A2AA-42F571CDF076",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "1DEFC183-8FC2-40A1-A2AC-1BF731F31366",
+          "name": "Adult Membership — PIF 12 mo — Unlimited classes — $2100",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 2100.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 12,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 12,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Adult Membership — PIF 12 mo — Unlimited classes — $2100",
+            "contentHash": "7dd0b308c7c2189a993d559cdbe007846f362d0b791153a377767093b01823e5",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "1DEFC183-8FC2-40A1-A2AC-1BF731F31366",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "45C01DA2-4287-40CA-A588-C08857AEE080",
+          "name": "Membership Deals — Legacy Membership (5 Years) — Unlimited classes — $5000",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 5000.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 60,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 60,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Membership Deals — Legacy Membership (5 Years) — Unlimited classes — $5000",
+            "contentHash": "e8b2577d25676b59f98367b3f01d59e56819d86994cb8449598445d3fe138151",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "45C01DA2-4287-40CA-A588-C08857AEE080",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "single-class",
+          "name": "One Class",
+          "accessScope": "One ordinary coached class",
+          "amount": 40
+        },
+        {
+          "sourceProductId": "day-pass",
+          "name": "Day Pass",
+          "accessScope": "Unlimited classes for one day",
+          "amount": 70
+        },
+        {
+          "sourceProductId": "09290112-4C26-4E89-B05C-F72ACA5A57FE",
+          "name": "Class Pass Membership — Day Pass — Unlimited classes — $70",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 70.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Class Pass Membership — Day Pass — Unlimited classes — $70",
+            "contentHash": "c20fb37756f002e5c8ec6acfe08ab129fa3d343e7890dee854ab3672323e64bd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "09290112-4C26-4E89-B05C-F72ACA5A57FE",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 229.0,
+        "dayPassPrice": 40.0,
+        "selectedPlanId": "osm-node-7044717960:plan:month-to-month",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 3,
+        "dropInOfferCount": 2,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "osm-node-8641835222",
       "gymName": "24 Hour Fitness Ocean",
       "canonicalAddress": "1850 ocean ave",
@@ -8089,6 +8691,248 @@
         "monthlyPrice": 219.0,
         "dayPassPrice": 35.0,
         "selectedPlanId": "osm-node-8660742534:plan:two-weekly",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 3,
+        "dropInOfferCount": 1,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "gymName": "Fitness Urbano",
+      "canonicalAddress": "80 missouri st",
+      "operatorId": "fitnessurbano.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://fitnessurbano.com/gym-memberships/",
+        "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "monthly",
+          "name": "Monthly",
+          "accessScope": "Anytime gym access at Fitness Urbano",
+          "amount": 135,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": []
+        },
+        {
+          "sourceProductId": "six-month-prepay",
+          "name": "Six-Month Membership",
+          "productType": "class-pack",
+          "accessScope": "Six prepaid months of anytime gym access",
+          "amount": 729,
+          "billingInterval": "one-time",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6,
+          "fees": []
+        },
+        {
+          "sourceProductId": "annual-prepay",
+          "name": "Annual Membership",
+          "productType": "class-pack",
+          "accessScope": "One prepaid year of anytime gym access",
+          "amount": 1458,
+          "billingInterval": "year",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "35EDFB09-4453-4079-AC79-78A997A44202",
+          "name": "Gym membership — Urbano Anytime (monthly) — Unlimited classes — $135",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 135.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "unknown",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Gym membership — Urbano Anytime (monthly) — Unlimited classes — $135",
+            "contentHash": "eb36eace83712b22a32235f98cb50d89a304ac2b5e7f0c883faaedbe424f4b07",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "35EDFB09-4453-4079-AC79-78A997A44202",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "20F52933-04CF-4878-B5A4-778ACE842E38",
+          "name": "Gym membership — Urbano Anytime ( 6 months prepaid) — Unlimited classes — $729",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 729.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 6,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 6,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Gym membership — Urbano Anytime ( 6 months prepaid) — Unlimited classes — $729",
+            "contentHash": "549f5eb8f09620117d10baceae694fe59c91c9aa3f939ea9e4f47d2a91c0aec4",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "20F52933-04CF-4878-B5A4-778ACE842E38",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "B2D947BD-0F97-487A-91E5-55FD76A7526A",
+          "name": "Gym membership — Urbano Anytime (1 year prepaid) — Unlimited classes — $1458",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes",
+          "scopeType": "single-location",
+          "amount": 1458.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 12,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "prepaid",
+          "minimumCommitmentMonths": 12,
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Gym membership — Urbano Anytime (1 year prepaid) — Unlimited classes — $1458",
+            "contentHash": "3a4e2afda9ab190b6aeaa472455ab98ac62877bf2a537eef908a60e6943cca03",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "B2D947BD-0F97-487A-91E5-55FD76A7526A",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "day-pass",
+          "name": "24-Hour Day Pass",
+          "amount": 35
+        },
+        {
+          "sourceProductId": "31BA285B-131D-463D-B677-7CEE45FB58B7",
+          "name": "Gym membership — Day Pass — Unlimited classes — $35",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 35.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+            "observedAt": "2026-08-21",
+            "source": "zen-planner",
+            "method": "public-zen-planner-plan-card",
+            "rawLabel": "Gym membership — Day Pass — Unlimited classes — $35",
+            "contentHash": "2fa96eabbf50e45ebe5f2a6822922f3ad84ef933de9613f2d97ed5aea8bbb838",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceProductId": "31BA285B-131D-463D-B677-7CEE45FB58B7",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 135.0,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "osm-node-8660768875:plan:monthly",
         "catalogStatus": {
           "plans": {
             "status": "source-catalog",
@@ -23500,6 +24344,21 @@
       "status": "unchanged-approved"
     },
     {
+      "gymId": "osm-node-6499455087",
+      "gymName": "Empire Jiu Jitsu",
+      "sourceUrls": [
+        "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm"
+      ],
+      "planOfferCount": 4,
+      "dropInOfferCount": 1,
+      "costContextOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "status": "unchanged-approved"
+    },
+    {
       "gymId": "osm-node-663533939",
       "gymName": "CorePower Yoga Duboce",
       "sourceUrls": [
@@ -27600,21 +28459,6 @@
       ]
     },
     {
-      "gymId": "osm-node-6499455087",
-      "observations": [
-        {
-          "amount": 240.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "imited Limited Monthly Class Packs 10 Class Pass ($350.00) 10 classes Sign Up Unlimited Unlimited Membership ($240.00) Unlimited classes Sign Up Limited Monthly",
-          "sourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        }
-      ]
-    },
-    {
       "gymId": "osm-node-6604031903",
       "observations": [
         {
@@ -27843,26 +28687,6 @@
           "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
         },
         {
-          "amount": 70.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "classes Sign Up Class Pass Membership One Month Pass ($268.00) Unlimited classes Sign Up Day Pass ($70.00",
-          "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 268.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "Up PIF 12 mo ($2,100.00) Unlimited classes Sign Up Class Pass Membership One Month Pass ($268.00) Unlimited classes Sign Up Day Pass",
-          "sourceUrl": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
           "amount": 40.0,
           "low": null,
           "high": null,
@@ -28017,46 +28841,6 @@
     {
       "gymId": "osm-node-8660768875",
       "observations": [
-        {
-          "amount": 1.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "( 6 months prepaid) ($729.00) Unlimited classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass",
-          "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 35.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "ted classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass ($35.00",
-          "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 1.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "( 6 months prepaid) ($729.00) Unlimited classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass",
-          "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
-        {
-          "amount": 35.0,
-          "low": null,
-          "high": null,
-          "kind": null,
-          "rawLabel": "ted classes Sign Up Urbano Anytime (1 year prepaid) ($1,458.00) Unlimited classes Sign Up Day Pass ($35.00",
-          "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
-          "method": "visible-text-candidate",
-          "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context."
-        },
         {
           "amount": 1.0,
           "low": null,

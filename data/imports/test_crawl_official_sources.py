@@ -1706,6 +1706,39 @@ CLUB INFO"""
         self.assertTrue(by_id["186"]["promotion"]["isPromotion"])
         self.assertEqual(by_id["186"]["commitment"]["minimumMonths"], 12)
 
+    def test_zen_planner_cards_retain_product_ids_allowances_and_prepaid_cadence(self) -> None:
+        fixture = (Path(__file__).parent / "fixtures" / "zenplanner-sign-up.html").read_text(
+            encoding="utf-8"
+        )
+        offers, stores, _digest = crawler.parse_page({
+            "url": "https://operator.sites.zenplanner.com/sign-up-now.cfm",
+            "contentType": "text/html",
+            "html": fixture,
+        })
+        by_id = {item.get("sourceProductId"): item for item in offers if item.get("sourceProductId")}
+        limited = by_id["FC7B97E1-ED97-4641-A824-B084067BACA5"]
+        self.assertEqual((limited["name"], limited["amount"]), ("2 Classes a Week", 200))
+        self.assertEqual(limited["classAllowance"], {"count": 2, "period": "week", "unlimited": False})
+        self.assertEqual(limited["productType"], "monthly")
+        monthly = by_id["35EDFB09-4453-4079-AC79-78A997A44202"]
+        self.assertEqual(monthly["sourceProductAliases"], ["urbano-anytime-monthly", "monthly"])
+        self.assertEqual(monthly["amount"], 135)
+        prepaid = by_id["20F52933-04CF-4878-B5A4-778ACE842E38"]
+        self.assertEqual((prepaid["amount"], prepaid["intervalCount"]), (729, 6))
+        self.assertEqual(prepaid["commitment"], {"type": "prepaid", "minimumMonths": 6})
+        abbreviated = by_id["6810870B-90CF-4F0B-A2AA-42F571CDF076"]
+        self.assertEqual((abbreviated["amount"], abbreviated["intervalCount"]), (1100, 6))
+        self.assertEqual(abbreviated["commitment"], {"type": "prepaid", "minimumMonths": 6})
+        weekly_pass = by_id["4D8B9A87-E8DE-425F-A352-D054CDE1374F"]
+        self.assertEqual((weekly_pass["productType"], weekly_pass["cadence"]), ("class-pack", "one-time"))
+        self.assertFalse(any(item.get("method") == "visible-text-candidate" for item in offers))
+        self.assertFalse(any("registration.cfm" in value for value in stores))
+
+    def test_pure_barre_member_api_is_an_approved_xponential_catalog(self) -> None:
+        url = "https://members.purebarre.com/api/locations/purebarre-example-ca/packages"
+        self.assertEqual(crawler.platform_name(url), "xponential-member-app")
+        self.assertTrue(crawler.approved_booking_url(url))
+
     def test_transient_refresh_preserves_last_parseable_cache_and_observations(self) -> None:
         previous_cache = {
             "status": "fetched",

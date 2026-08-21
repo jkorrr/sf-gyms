@@ -43,7 +43,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v17"
+PARSER_VERSION = "selected-plan-catalog-v19"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -71,6 +71,7 @@ BOOKING_DOMAINS = {
     "app.wodify.com",
     "onbookee.com",
     "members.clubpilates.com",
+    "members.purebarre.com",
     "members.stretchlab.com",
     "zenplanner.com",
     "as.me",
@@ -131,6 +132,11 @@ RESEARCH_PATH_RE = re.compile(
     re.IGNORECASE,
 )
 RESEARCH_EXCLUDE_RE = re.compile(r"/(?:login|signin|sign-in|account|checkout|cart)(?:/|$|[?#])", re.IGNORECASE)
+BOOKING_ACTION_EXCLUDE_RE = re.compile(
+    r"/(?:login|signin|sign-in|account|checkout|registration|prospect|free-?trial|retail(?:-cart)?)"
+    r"(?:\.cfm)?(?:/|$|[?#])",
+    re.IGNORECASE,
+)
 MONTH_TO_MONTH_RE = re.compile(r"\bmonth\s*[-–—]?\s*to\s*[-–—]?\s*month\b", re.IGNORECASE)
 BAY_CLUB_API_HOST = "oms-sales-api.bayclubs.io"
 BAY_CLUB_API_BASE = f"https://{BAY_CLUB_API_HOST}/api/1.0"
@@ -298,6 +304,7 @@ def platform_name(source_url: str) -> str:
         ("wodify.com", "wodify"),
         ("onbookee.com", "bookee"),
         ("members.clubpilates.com", "xponential-member-app"),
+        ("members.purebarre.com", "xponential-member-app"),
         ("members.stretchlab.com", "xponential-member-app"),
         ("zenplanner.com", "zen-planner"),
         ("as.me", "acuity"),
@@ -1718,6 +1725,175 @@ def wordpress_class_box_candidates(html: str, source_url: str) -> list[dict[str,
     return candidates
 
 
+ZEN_PLANNER_TOKEN_RE = re.compile(
+    r"(?P<heading><strong\b[^>]*>.*?</strong>)|"
+    r"(?P<card><table\b[^>]*\bid=[\"']category[\"'][^>]*>.*?</table>)",
+    re.IGNORECASE | re.DOTALL,
+)
+ZEN_PLANNER_PRODUCT_ID_RE = re.compile(
+    r"\bMembershipTemplateId=(?P<id>[0-9A-F]{8}(?:-[0-9A-F]{4}){3}-[0-9A-F]{12})\b",
+    re.IGNORECASE,
+)
+ZEN_PLANNER_TITLE_RE = re.compile(
+    r"<div\b[^>]*class=[\"'][^\"']*\bbold\b[^\"']*[\"'][^>]*>(?P<body>.*?)</div>",
+    re.IGNORECASE | re.DOTALL,
+)
+ZEN_PLANNER_SUBTEXT_RE = re.compile(
+    r"<div\b[^>]*class=[\"'][^\"']*\bsubtext\b[^\"']*[\"'][^>]*>(?P<body>.*?)</div>",
+    re.IGNORECASE | re.DOTALL,
+)
+ZEN_PLANNER_PRICE_RE = re.compile(
+    r"\(\s*\$\s*(?P<amount>\d{1,6}(?:,\d{3})*(?:\.\d{1,2})?)\s*\)\s*$",
+    re.IGNORECASE,
+)
+
+
+def zen_planner_html_candidates(html: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct public Zen Planner membership cards without entering checkout."""
+
+    if platform_name(source_url) != "zen-planner":
+        return []
+    current_category = ""
+    candidates: list[dict[str, Any]] = []
+    for token in ZEN_PLANNER_TOKEN_RE.finditer(html):
+        heading = token.group("heading")
+        if heading:
+            current_category = html_fragment_text(heading)
+            continue
+        card = token.group("card") or ""
+        product = ZEN_PLANNER_PRODUCT_ID_RE.search(card)
+        title_match = ZEN_PLANNER_TITLE_RE.search(card)
+        if not product or not title_match:
+            continue
+        title = html_fragment_text(title_match.group("body"))
+        price = ZEN_PLANNER_PRICE_RE.search(title)
+        if not price:
+            continue
+        amount = float(price.group("amount").replace(",", ""))
+        if amount <= 0 or amount > 20_000:
+            continue
+        name = ZEN_PLANNER_PRICE_RE.sub("", title).strip(" -–—:;")
+        subtext_match = ZEN_PLANNER_SUBTEXT_RE.search(card)
+        subtext = html_fragment_text(subtext_match.group("body")) if subtext_match else ""
+        semantic_text = " ".join(filter(None, (current_category, name, subtext)))
+        lowered = semantic_text.casefold()
+        is_drop_in = bool(re.search(r"\b(?:drop[ -]?in|day pass|single class)\b", lowered))
+        class_pack = re.search(r"\b(?P<count>\d{1,3})\s*class(?:es)?\s+pass\b", lowered)
+        duration = re.search(r"\b(?P<count>\d{1,2})\s*months?\s+prepaid\b", lowered)
+        pif_duration = re.search(r"\bpif\s+(?P<count>\d{1,2})\s*mo(?:nths?)?\b", lowered)
+        year_duration = re.search(r"\b(?P<count>\d{1,2})\s+years?(?:\s+prepaid)?\b", lowered)
+        one_year_prepaid = bool(re.search(r"\bone\s+year\s+prepaid\b", lowered))
+        one_month_pass = bool(re.search(r"\bone month pass\b", lowered))
+        one_week_pass = bool(re.search(r"\bone week pass\b|\b1 week pass\b", lowered))
+        allowance_match = re.search(
+            r"\b(?P<count>\d{1,3})\s*classes?\s+(?:a|per)\s+(?P<period>week|month)\b",
+            semantic_text,
+            re.IGNORECASE,
+        ) or CLASS_ALLOWANCE_RE.search(semantic_text)
+        if is_drop_in:
+            allowance = {"count": 1.0, "period": "visit", "unlimited": False}
+        elif class_pack:
+            allowance = {
+                "count": float(class_pack.group("count")),
+                "period": "purchase",
+                "unlimited": False,
+            }
+        elif "unlimited" in lowered:
+            allowance: dict[str, Any] | None = {
+                "count": None,
+                "period": "month",
+                "unlimited": True,
+            }
+        elif allowance_match:
+            allowance = {
+                "count": float(allowance_match.group("count") if "count" in allowance_match.groupdict() else allowance_match.group(1)),
+                "period": (
+                    allowance_match.group("period")
+                    if "period" in allowance_match.groupdict()
+                    else allowance_match.group(2)
+                    or "month"
+                ).casefold(),
+                "unlimited": False,
+            }
+        else:
+            allowance = None
+
+        prepaid_months = (
+            int(duration.group("count")) if duration
+            else int(pif_duration.group("count")) if pif_duration
+            else int(year_duration.group("count")) * 12 if year_duration
+            else 12 if one_year_prepaid
+            else 1 if one_month_pass
+            else 0
+        )
+        recurring = bool(
+            not prepaid_months
+            and not one_week_pass
+            and not is_drop_in
+            and not class_pack
+            and re.search(r"\b(?:membership|monthly|classes? (?:a|per) week)\b", lowered)
+        )
+        if is_drop_in:
+            product_type = "drop-in"
+            cadence = "visit"
+            interval_count = 1
+            commitment = {"type": "none", "minimumMonths": None}
+        elif class_pack or one_week_pass:
+            product_type = "class-pack"
+            cadence = "one-time"
+            interval_count = 1
+            commitment = {"type": "none", "minimumMonths": None}
+        elif prepaid_months:
+            product_type = "monthly"
+            cadence = "month"
+            interval_count = prepaid_months
+            commitment = {"type": "prepaid", "minimumMonths": prepaid_months}
+        elif recurring:
+            product_type = "monthly"
+            cadence = "month"
+            interval_count = 1
+            commitment = {"type": "unknown", "minimumMonths": None}
+        else:
+            continue
+
+        slug = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+        aliases = [slug] if slug else []
+        if re.search(r"\(\s*monthly\s*\)", name, re.IGNORECASE):
+            aliases.append("monthly")
+        raw_label = " — ".join(filter(None, (current_category, name, subtext, f"${amount:g}")))
+        candidates.append({
+            "sourceProductId": product.group("id").upper(),
+            "sourceProductAliases": list(dict.fromkeys(aliases)),
+            "sourceProductIdAuthority": "operator-widget",
+            "name": name,
+            "amount": amount,
+            "currency": "USD",
+            "rawLabel": raw_label[:500],
+            "cadence": cadence,
+            "billingInterval": cadence,
+            "intervalCount": interval_count,
+            "productType": product_type,
+            "accessScope": subtext or current_category,
+            "scopeType": "single-location",
+            "classAllowance": allowance,
+            "promotion": {
+                "isPromotion": bool(PROMOTION_RE.search(semantic_text)),
+                "label": semantic_text if PROMOTION_RE.search(semantic_text) else "",
+            },
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": commitment,
+            "fees": [],
+            "bestValueLabel": bool(re.search(r"\bbest value\b|\bmost popular\b", semantic_text, re.IGNORECASE)),
+            "method": "public-zen-planner-plan-card",
+            "adapter": "zen-planner",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-operator-catalog",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        })
+    return deduplicate_candidates(candidates)
+
+
 def perform_for_golf_plan_descriptors(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     """Retain amount-withheld P4G memberships as reviewable catalog products.
 
@@ -2230,6 +2406,7 @@ def xponential_package_candidates(payload: dict[str, Any], source_url: str) -> t
                 "clubReadyPackageId": text(package.get("clubready_id")),
                 "clubReadyPlanId": text(package.get("clubready_plan_id")),
             },
+            "name": name,
             "amount": amount,
             "currency": text((package.get("price") or {}).get("currency_code")) or "USD",
             "rawLabel": name,
@@ -2254,7 +2431,12 @@ def xponential_package_candidates(payload: dict[str, Any], source_url: str) -> t
 
 
 def xponential_storefronts(html: str) -> list[str]:
-    domain_match = re.search(r"data-endpoint-domain\s*=\s*['\"](https://members\.(?:clubpilates|stretchlab)\.com)['\"]", html, re.IGNORECASE)
+    domain_match = re.search(
+        r"data-endpoint-domain\s*=\s*['\"]"
+        r"(https://members\.(?:clubpilates|purebarre|stretchlab)\.com)['\"]",
+        html,
+        re.IGNORECASE,
+    )
     route_match = re.search(r"data-endpoint\s*=\s*['\"]/api/v2/locations/([^/'\"]+)/schedule_entries", html, re.IGNORECASE)
     if not domain_match:
         return []
@@ -2817,7 +2999,9 @@ def linked_storefronts(
         host = hostname(candidate)
         if not is_public_http_url(candidate):
             continue
-        approved_booking = approved_booking_url(candidate)
+        approved_booking = approved_booking_url(candidate) and not BOOKING_ACTION_EXCLUDE_RE.search(
+            urlparse(candidate).path
+        )
         approved_operator_page = (
             host == base_host
             and candidate != base_url
@@ -3372,6 +3556,7 @@ def parse_page(
         "duda-plan-card",
     ))
     bounded_candidates.extend(wordpress_class_box_candidates(html, source_url))
+    bounded_candidates.extend(zen_planner_html_candidates(html, source_url))
     visible_page_candidates = visible_candidates(visible, text(result.get("url")))
     if bounded_candidates:
         # A page-wide text regex loses card boundaries and can reinterpret

@@ -515,6 +515,38 @@
       "replacesOrdinaryPrice": false
     },
     {
+      "id": "e77516830246b0de8d79",
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "amount": 259.0,
+      "currency": "USD",
+      "productType": "monthly",
+      "cadence": "month",
+      "label": "Unlimited Class Membership",
+      "expiresAt": null,
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/5f9ca467-9b85-4eda-8bbb-88c95961cce0",
+      "capturedAt": "2026-08-21",
+      "contentHash": "eafed7914fb729392e5e9ffacb8269ff00c04e2e313c842f0212fbe10b9f2600",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
+      "id": "db29cff7496d54f5bd63",
+      "gymId": "osm-node-3622501398",
+      "gymName": "Pure Barre San Francisco — West Portal",
+      "amount": 207.0,
+      "currency": "USD",
+      "productType": "monthly",
+      "cadence": "month",
+      "label": "Unlimited Class Membership",
+      "expiresAt": null,
+      "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+      "capturedAt": "2026-08-21",
+      "contentHash": "eafed7914fb729392e5e9ffacb8269ff00c04e2e313c842f0212fbe10b9f2600",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
       "id": "32c59f4c92370b1a42cd",
       "gymId": "osm-node-3658328826",
       "gymName": "CORE40 Sunset",

@@ -43,7 +43,10 @@ PROFILES = (
     PlatformProfile("momence", ("momence.com",)),
     PlatformProfile("wellnessliving", ("wellnessliving.com",)),
     PlatformProfile("clubready", ("clubready.com",)),
-    PlatformProfile("xponential-member-app", ("members.clubpilates.com", "members.stretchlab.com")),
+    PlatformProfile(
+        "xponential-member-app",
+        ("members.clubpilates.com", "members.purebarre.com", "members.stretchlab.com"),
+    ),
     PlatformProfile("pushpress", ("pushpress.com",)),
     PlatformProfile("wodify", ("wodify.com",)),
     PlatformProfile("zen-planner", ("zenplanner.com",)),

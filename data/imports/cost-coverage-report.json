@@ -656,10 +656,10 @@
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1821,
+    "requestCount": 1793,
     "statusCounts": {
       "access-blocked": 50,
-      "fetched": 1030,
+      "fetched": 1023,
       "host-backoff-after-429": 1,
       "http-301": 2,
       "http-403": 90,
@@ -667,10 +667,10 @@
       "http-429": 25,
       "http-502": 2,
       "network-error": 7,
-      "not-modified": 216,
+      "not-modified": 214,
       "render-error": 4,
       "rendered": 288,
-      "robots-disallowed": 93
+      "robots-disallowed": 74
     },
     "staticAccessBlockedRequests": 50,
     "staticAccessBlockerCounts": {
@@ -679,12 +679,12 @@
       "platform-security-check": 31
     },
     "selectedPlanPriceAuditStatusCounts": {
-      "matched-within-threshold": 108,
-      "selected-plan-not-observed": 46,
+      "matched-within-threshold": 112,
+      "selected-plan-not-observed": 42,
       "selected-plan-terms-changed": 2
     },
-    "reviewCandidatePages": 454,
-    "linkedStorefrontRequests": 1194,
+    "reviewCandidatePages": 461,
+    "linkedStorefrontRequests": 1166,
     "renderedRequests": 339,
     "renderedAccessBlockedRequests": 34,
     "renderedAccessBlockerCounts": {
