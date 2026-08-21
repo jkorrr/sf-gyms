@@ -779,15 +779,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6496142801:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-6496142801:plan:membership-8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -821,15 +821,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-9411404744:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-9411404744:plan:membership-8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -863,15 +863,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-18e908eb2543ab:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-18e908eb2543ab:plan:membership-8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -1073,15 +1073,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-94d9302c37678b:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-94d9302c37678b:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2481,15 +2481,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-663533939:plan:card-5781677c566289f8",
+      "selectedPlanId": "osm-node-663533939:plan:all-access",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2523,15 +2523,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-10806697937:plan:card-5781677c566289f8",
+      "selectedPlanId": "osm-node-10806697937:plan:all-access",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2565,15 +2565,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6604031903:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-6604031903:plan:all-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2607,15 +2607,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-9465192363:plan:card-5781677c566289f8",
+      "selectedPlanId": "osm-node-9465192363:plan:all-access",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2649,15 +2649,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-2337759318:plan:card-5781677c566289f8",
+      "selectedPlanId": "osm-node-2337759318:plan:all-access",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2691,15 +2691,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-4548624459:plan:card-5781677c566289f8",
+      "selectedPlanId": "osm-node-4548624459:plan:all-access",
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -3294,15 +3294,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-abd8e24f4af4d8:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-abd8e24f4af4d8:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4194,15 +4194,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-2338837133:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-2338837133:plan:all-gym-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4236,15 +4236,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-a298d8310b9dc9:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-a298d8310b9dc9:plan:all-gym-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4278,15 +4278,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-3881440385:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-3881440385:plan:all-gym-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4320,15 +4320,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-f54e94809da91c:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-f54e94809da91c:plan:all-gym-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4404,15 +4404,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-25371830:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-25371830:plan:all-gym-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4446,15 +4446,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-396cf2ddf3bead:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-396cf2ddf3bead:plan:all-gym-access",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7291,15 +7291,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-0509e54f1e3c89:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-0509e54f1e3c89:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9405,15 +9405,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-13185224799:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-13185224799:plan:four-month-to-month",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9447,15 +9447,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-0ed19b0a7a3073:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-0ed19b0a7a3073:plan:four-month-to-month",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9489,15 +9489,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-c585a394b269ab:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-c585a394b269ab:plan:four-month-to-month",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9531,15 +9531,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-8a0d4e16015d6d:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-8a0d4e16015d6d:plan:four-month-to-month",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9645,15 +9645,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-4001664955:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-4001664955:plan:soul-renew-4",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9687,15 +9687,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-7935d5eb8b6a85:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-7935d5eb8b6a85:plan:soul-renew-4",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10723,7 +10723,7 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-9953947674:plan:adult-membership",
+      "selectedPlanId": "osm-node-9953947674:plan:adult",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -10802,15 +10802,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-e220d3accf950e:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-e220d3accf950e:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10844,15 +10844,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-193054131:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-193054131:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10886,15 +10886,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-69020085:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-69020085:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10928,15 +10928,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-286276068:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-286276068:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10970,15 +10970,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6615153559:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-6615153559:plan:adult",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",

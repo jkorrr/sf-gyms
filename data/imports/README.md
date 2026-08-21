@@ -22,6 +22,8 @@ Every absent compatibility price has its own explanation: `monthlyPriceBlocker` 
 
 `catalogStatus.plans` and `catalogStatus.dropIns` distinguish a reviewed source catalog from a legacy selected-price wrapper and a genuinely absent catalog. A verified compatibility price therefore never implies that every alternative product has already been reconstructed. Reviewed hours, amenities, schedule semantics, operator IDs, and URL corrections recovered in broad audits live in `official-metadata-recovery-*.json`; they use the same approved-discovery field allowlist and remain separate from price observations.
 
+`official-operator-catalog-approved.json` is the reviewed multi-location catalog layer. Every approval must enumerate the exact canonical location IDs it applies to, match their canonical `operatorId`, provide an HTTPS official source and observation date, and include only allowlisted catalog fields. Operator identity by itself never triggers propagation. A scoped rebuild containing none of an approval's locations ignores that approval; once any target is present, a missing target or operator mismatch fails closed.
+
 ## Public JavaScript-backed sources
 
 Inspect sources in this order:

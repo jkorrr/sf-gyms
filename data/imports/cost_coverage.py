@@ -8,6 +8,7 @@ prices by existing consumers of the fixture.
 from __future__ import annotations
 
 import argparse
+import copy
 import hashlib
 import json
 import math
@@ -30,6 +31,7 @@ CRAWL_ATTEMPTS_PATH = ROOT / "data" / "imports" / "official-crawl-attempts.json"
 RENDERED_CRAWL_ATTEMPTS_PATH = ROOT / "data" / "imports" / "rendered-crawl-attempts.json"
 LOCATION_METADATA_APPROVED_PATH = ROOT / "data" / "imports" / "official-location-approved.json"
 APPROVED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "official-crawl-approved.json"
+OPERATOR_CATALOG_APPROVED_PATH = ROOT / "data" / "imports" / "official-operator-catalog-approved.json"
 LOCATION_OVERRIDES_PATH = ROOT / "data" / "imports" / "official-location-overrides.json"
 SOURCE_DISCOVERIES_PATH = ROOT / "data" / "imports" / "public-source-discovery.json"
 METADATA_RECOVERY_GLOB = "official-metadata-recovery-*.json"
@@ -357,10 +359,37 @@ def evidence_for(gym: dict[str, Any], raw_label: str, method: str = "reviewed-of
         "rawLabel": raw_label[:220],
         "contentHash": digest,
         "evidenceTier": "official-public",
-        "exactLocationMatch": "exact-location" if re.search(r"\d", text(gym.get("address"))) else "location-unconfirmed",
+        "exactLocationMatch": (
+            "operator-market-multi-location"
+            if text(gym.get("operatorCatalogApprovalId"))
+            else "exact-location"
+            if re.search(r"\d", text(gym.get("address")))
+            else "location-unconfirmed"
+        ),
         "sourceProductId": "",
         "conflictFlags": [],
     }
+
+
+def evidence_for_offer(gym: dict[str, Any], offer: dict[str, Any], raw_label: str) -> dict[str, Any]:
+    """Build evidence while allowing a reviewed offer to name its own source page."""
+
+    evidence = evidence_for(gym, raw_label)
+    url = text(offer.get("sourceUrl")) or evidence["url"]
+    observed_at = text(offer.get("observedAt")) or evidence["observedAt"]
+    source = text(offer.get("source")) or evidence["source"]
+    method = text(offer.get("captureMethod")) or evidence["method"]
+    evidence.update(
+        {
+            "url": url,
+            "observedAt": observed_at,
+            "source": source,
+            "method": method,
+            "sourceProductId": text(offer.get("sourceProductId")),
+            "contentHash": hashlib.sha256(f"{url}|{observed_at}|{raw_label}".encode("utf-8")).hexdigest(),
+        }
+    )
+    return evidence
 
 
 def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int, access: str) -> dict[str, Any]:
@@ -383,7 +412,7 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
     scope = text(offer.get("accessScope")) or text(gym.get("planScope")) or ("Named studio" if access == "class-membership" else "Named location")
     raw_label = text(offer.get("rawLabel")) or text(offer.get("name")) or text(gym.get("priceNote"))
     fees = offer.get("fees") if isinstance(offer.get("fees"), list) else fee_list(gym)
-    evidence = dict(offer.get("evidence")) if isinstance(offer.get("evidence"), dict) else evidence_for(gym, raw_label)
+    evidence = dict(offer.get("evidence")) if isinstance(offer.get("evidence"), dict) else evidence_for_offer(gym, offer, raw_label)
     evidence.setdefault("evidenceTier", text(offer.get("evidenceTier")) or "official-public")
     evidence.setdefault("exactLocationMatch", text(offer.get("exactLocationMatch")) or "exact-location")
     evidence.setdefault("sourceProductId", source_product_id)
@@ -845,7 +874,7 @@ def normalize_drop_in(gym: dict[str, Any], offer: dict[str, Any], index: int, ac
         "availability": text(offer.get("availability")) or ("presale" if gym.get("recordStatus") == "coming_soon" else "available"),
         "purchaseMethod": text(offer.get("purchaseMethod")) or "direct-public",
         "ordinaryUse": offer.get("ordinaryUse", True) is not False,
-        "evidence": offer.get("evidence") or evidence_for(gym, raw_label),
+        "evidence": offer.get("evidence") or evidence_for_offer(gym, offer, raw_label),
         "selected": False,
         "selectionReason": "",
     }
@@ -924,6 +953,80 @@ def apply_approved_observations(gyms: list[dict[str, Any]], document: dict[str, 
                 gym[field] = approval[field]
         gym["freshness"] = "verified"
         applied += 1
+    return applied
+
+
+def apply_operator_catalog_approvals(gyms: list[dict[str, Any]], document: dict[str, Any]) -> int:
+    """Apply one reviewed multi-location catalog to explicit, operator-matched targets.
+
+    Operator identity alone is never enough to fan out a catalog. Each approval
+    must enumerate its target location IDs, name the canonical operator ID, and
+    carry current official evidence. Invalid scope fails the rebuild rather than
+    publishing a catalog on the wrong branch.
+    """
+
+    by_id = {text(gym.get("id")): gym for gym in gyms}
+    allowed = {
+        "monthlyPrice",
+        "dayPassPrice",
+        "annualFee",
+        "enrollmentFee",
+        "initiationFee",
+        "processingFee",
+        "activationFee",
+        "billingInterval",
+        "billingIntervalPrice",
+        "planName",
+        "planScope",
+        "priceSource",
+        "priceSourceUrl",
+        "priceObservedAt",
+        "priceNote",
+        "commitmentType",
+        "minimumCommitmentMonths",
+        "planOffers",
+        "dropInOffers",
+        "catalogCompleteness",
+        "costContextOffers",
+        "officialPriceConflict",
+    }
+    applied = 0
+    for approval in document.get("approvals", []):
+        if approval.get("reviewStatus") != "approved":
+            continue
+        operator_id = text(approval.get("operatorId"))
+        gym_ids = [text(value) for value in approval.get("gymIds", []) if text(value)]
+        fields = approval.get("sharedFields")
+        if not operator_id or not gym_ids or len(gym_ids) != len(set(gym_ids)) or not isinstance(fields, dict):
+            raise ValueError("Reviewed operator catalog requires operatorId, unique gymIds, and sharedFields.")
+        if not any(gym_id in by_id for gym_id in gym_ids):
+            # Unit tests and scoped audit runs may intentionally operate on an
+            # unrelated subset. Once any approved target is in scope, require
+            # the complete reviewed target set and fail closed below.
+            continue
+        unknown_fields = set(fields) - allowed
+        if unknown_fields:
+            raise ValueError(f"Unsupported operator catalog fields: {sorted(unknown_fields)}")
+        source_url = text(fields.get("priceSourceUrl"))
+        observed_at = text(fields.get("priceObservedAt"))
+        if not source_url.startswith("https://") or not observed_at:
+            raise ValueError("Reviewed operator catalog requires an HTTPS source and observation date.")
+        targets: list[dict[str, Any]] = []
+        for gym_id in gym_ids:
+            gym = by_id.get(gym_id)
+            if gym is None:
+                raise ValueError(f"Unknown operator catalog target: {gym_id}")
+            if text(gym.get("operatorId")) != operator_id:
+                raise ValueError(
+                    f"Operator catalog target {gym_id} belongs to {text(gym.get('operatorId'))!r}, not {operator_id!r}."
+                )
+            targets.append(gym)
+        for gym in targets:
+            for field, value in fields.items():
+                gym[field] = copy.deepcopy(value)
+            gym["operatorCatalogApprovalId"] = text(approval.get("id"))
+            gym["freshness"] = "verified"
+            applied += 1
     return applied
 
 
@@ -1699,6 +1802,8 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
     location_metadata_applied = apply_location_metadata_approvals(gyms, location_approvals_document)
     approvals_document = json.loads(APPROVED_OBSERVATIONS_PATH.read_text(encoding="utf-8")) if APPROVED_OBSERVATIONS_PATH.exists() else {"approvals": []}
     approvals_applied = apply_approved_observations(gyms, approvals_document)
+    operator_catalog_document = json.loads(OPERATOR_CATALOG_APPROVED_PATH.read_text(encoding="utf-8")) if OPERATOR_CATALOG_APPROVED_PATH.exists() else {"approvals": []}
+    operator_catalog_locations_applied = apply_operator_catalog_approvals(gyms, operator_catalog_document)
     reports_document = json.loads(REPORTED_EVIDENCE_PATH.read_text(encoding="utf-8")) if REPORTED_EVIDENCE_PATH.exists() else {"reports": []}
     reported_evidence_attached = attach_reported_evidence(gyms, reports_document, generated_at)
     operator_confirmed_document = json.loads(OPERATOR_CONFIRMED_PATH.read_text(encoding="utf-8")) if OPERATOR_CONFIRMED_PATH.exists() else {"approvals": []}
@@ -2194,6 +2299,7 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
         "verifiedDayPassCount": sum(gym.get("dayPassPrice") is not None for gym in gyms),
         "staleVerifiedCount": sum(gym.get("pricingStatus") == "verified" and gym.get("freshness") == "stale" for gym in gyms),
         "approvedCrawlObservationsApplied": approvals_applied,
+        "approvedOperatorCatalogLocationsApplied": operator_catalog_locations_applied,
         "operatorConfirmedObservationsApplied": operator_confirmed_attached,
         "operatorConfirmedMonthlyCount": sum(gym.get("operatorConfirmedMonthly") is not None for gym in gyms),
         "approvedDealsApplied": approved_deals_attached,

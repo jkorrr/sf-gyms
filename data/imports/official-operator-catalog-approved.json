@@ -1,0 +1,391 @@
+{
+  "_meta": {
+    "reviewedAt": "2026-08-21",
+    "methodology": "Human-reviewed operator or market catalogs applied only to explicit canonical location IDs after operator identity, access scope, plan-card association, cadence, promotions, and plan-linked fees were verified."
+  },
+  "approvals": [
+    {
+      "id": "fitness-sf-all-gym-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "fitness-sf",
+      "gymIds": [
+        "osm-node-2338837133",
+        "web-a298d8310b9dc9",
+        "osm-node-3881440385",
+        "web-f54e94809da91c",
+        "osm-way-25371830",
+        "web-396cf2ddf3bead"
+      ],
+      "sharedFields": {
+        "monthlyPrice": 134.95,
+        "dayPassPrice": 35,
+        "priceSource": "FITNESS SF official membership and pass help pages",
+        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The current All-Gym Access plan is $134.95/month and includes every open San Francisco location. FITNESS SF publishes no enrollment, sign-up, or annual fee; a full first and final month are upfront dues. The ordinary all-gym one-day pass is $35; the $30 member-hosted rate is restricted and not selected.",
+        "planOffers": [
+          {
+            "sourceProductId": "all-gym-access",
+            "name": "All-Gym Access Membership",
+            "accessScope": "All FITNESS SF locations",
+            "scopeType": "multi-location",
+            "amount": 134.95,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "upfrontDues": [
+              {"type": "first-month-dues", "amount": 134.95, "currency": "USD"},
+              {"type": "final-month-dues", "amount": 134.95, "currency": "USD"}
+            ],
+            "fees": []
+          },
+          {
+            "sourceProductId": "marin-access",
+            "name": "Marin Access Membership",
+            "accessScope": "Marin location only",
+            "scopeType": "single-location",
+            "amount": 79.95,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "eligibility": {"type": "not-this-location", "restrictions": ["Does not permit use of the named San Francisco location"]},
+            "fees": []
+          },
+          {
+            "sourceProductId": "oakland-access",
+            "name": "Oakland Access Membership",
+            "accessScope": "Oakland location only",
+            "scopeType": "single-location",
+            "amount": 49.95,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "eligibility": {"type": "not-this-location", "restrictions": ["Does not permit use of the named San Francisco location"]},
+            "fees": []
+          }
+        ],
+        "dropInOffers": [
+          {
+            "sourceProductId": "sf-all-gym-one-day",
+            "name": "San Francisco All-Gym One-Day Pass",
+            "accessScope": "One day at open FITNESS SF gyms",
+            "amount": 35,
+            "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+            "observedAt": "2026-08-21"
+          },
+          {
+            "sourceProductId": "sf-all-gym-member-guest-day",
+            "name": "Member-Hosted One-Day Pass",
+            "accessScope": "One day when visiting with a member",
+            "amount": 30,
+            "ordinaryUse": false,
+            "eligibility": {"type": "member-hosted", "restrictions": ["Requires a FITNESS SF member host"]},
+            "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+            "observedAt": "2026-08-21"
+          },
+          {
+            "sourceProductId": "sf-all-gym-seven-day",
+            "name": "San Francisco All-Gym Seven-Day Pass",
+            "accessScope": "Seven consecutive days at open FITNESS SF gyms",
+            "amount": 129,
+            "ordinaryUse": false,
+            "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+            "observedAt": "2026-08-21"
+          }
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "ymca-greater-sf-membership-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "ymca",
+      "gymIds": [
+        "web-94d9302c37678b",
+        "web-abd8e24f4af4d8",
+        "web-0509e54f1e3c89",
+        "web-e220d3accf950e",
+        "osm-way-193054131",
+        "osm-way-69020085",
+        "osm-way-286276068",
+        "osm-node-6615153559",
+        "osm-node-9953947674"
+      ],
+      "sharedFields": {
+        "monthlyPrice": 91,
+        "dayPassPrice": null,
+        "priceSource": "YMCA of Greater San Francisco official membership page",
+        "priceSourceUrl": "https://www.ymcasf.org/membership/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The standard adult membership is $91/month plus a mandatory $149 join fee and includes YMCA of Greater San Francisco fitness facilities. Age-specific, household, financial-assistance, employer, health-plan, and insurance products are retained or excluded according to their published eligibility and do not replace the standard adult selection.",
+        "planOffers": [
+          {
+            "sourceProductId": "teen",
+            "name": "Teen Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 55,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "age-restricted", "restrictions": ["Ages 13–18", "In-person signup"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "young-adult",
+            "name": "Young Adult Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 75,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "age-restricted", "restrictions": ["Ages 19–25"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "adult",
+            "name": "Adult Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 91,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "standard-adult", "restrictions": ["Published adult band is ages 26–66"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "active-older-adult",
+            "name": "Active Older Adult Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 85,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "age-restricted", "restrictions": ["Ages 67+"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "single-adult-household-with-children",
+            "name": "Single Adult Household with Children",
+            "accessScope": "One adult and dependent children at YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 112,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "household", "restrictions": ["One adult age 19+ and dependent children under 18 in the same household"]},
+            "fees": [{"type": "enrollment", "amount": 199, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "dual-adult-household",
+            "name": "Dual Adult Household with No Children",
+            "accessScope": "Two adults at YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 152,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "household", "restrictions": ["Two adults age 19+ in the same household"]},
+            "fees": [{"type": "enrollment", "amount": 199, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "dual-adult-household-with-children",
+            "name": "Dual Adult Household with Children",
+            "accessScope": "Two adults and dependent children at YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 182,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "household", "restrictions": ["Two adults age 19+ and dependent children under 18 in the same household"]},
+            "fees": [{"type": "enrollment", "amount": 199, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          }
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "none-observed"}
+      }
+    },
+    {
+      "id": "corepower-sf-market-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "corepower-yoga",
+      "gymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "sharedFields": {
+        "monthlyPrice": 229,
+        "dayPassPrice": 38,
+        "priceSource": "CorePower Yoga official San Francisco studio catalog",
+        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The official San Francisco studio catalog lists All Access at $229/month with unlimited studio, live, and on-demand classes. A single studio class is $38. First-month and free-week offers are promotional and do not replace the ongoing price; location-specific intro amounts may vary. Multi-class packs are retained as one-time alternatives.",
+        "planOffers": [
+          {
+            "sourceProductId": "all-access",
+            "name": "All Access Membership",
+            "accessScope": "Unlimited CorePower studio, live, and on-demand classes",
+            "scopeType": "multi-location",
+            "classAllowance": "unlimited",
+            "amount": 229,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "fees": []
+          },
+          {
+            "sourceProductId": "intro-month-variable",
+            "name": "Intro Month Membership — Location-Specific Offer",
+            "accessScope": "Promotional first month followed by $229/month ongoing",
+            "scopeType": "multi-location",
+            "classAllowance": "unlimited",
+            "amount": null,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "promotion": {"isPromotion": true, "label": "First-month offer varies by studio"},
+            "fees": []
+          },
+          {
+            "sourceProductId": "five-studio-classes",
+            "name": "5 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Five classes usable at almost any CorePower studio; expires in six months",
+            "scopeType": "multi-location",
+            "classAllowance": 5,
+            "amount": 179,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "ten-studio-classes",
+            "name": "10 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Ten classes usable at almost any CorePower studio; expires in one year",
+            "scopeType": "multi-location",
+            "classAllowance": 10,
+            "amount": 319,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "twenty-studio-classes",
+            "name": "20 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Twenty classes usable at almost any CorePower studio; expires in one year",
+            "scopeType": "multi-location",
+            "classAllowance": 20,
+            "amount": 610,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "thirty-studio-classes",
+            "name": "30 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Thirty classes usable at almost any CorePower studio; expires in 18 months",
+            "scopeType": "multi-location",
+            "classAllowance": 30,
+            "amount": 900,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "fifty-studio-classes",
+            "name": "50 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Fifty classes usable at almost any CorePower studio; expires in 18 months",
+            "scopeType": "multi-location",
+            "classAllowance": 50,
+            "amount": 1450,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          }
+        ],
+        "dropInOffers": [
+          {
+            "sourceProductId": "single-studio-class",
+            "name": "Single Studio Class",
+            "accessScope": "One class at almost any CorePower studio; expires in 30 days",
+            "amount": 38
+          }
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "barrys-northern-california-2026-08-17",
+      "reviewStatus": "approved",
+      "operatorId": "barrys",
+      "gymIds": ["osm-node-6496142801", "osm-node-9411404744", "web-18e908eb2543ab"],
+      "sharedFields": {
+        "monthlyPrice": 260,
+        "dayPassPrice": 38,
+        "priceSource": "Barry's official Northern California pricing catalog",
+        "priceSourceUrl": "https://app.barrys.com/pricing?location=10298",
+        "priceObservedAt": "2026-08-17",
+        "priceNote": "Northern California recurring memberships are $260 for 8 classes, $365 for 12, $445 for 16, and $530 for 30 per month. The standard single class is $38. The first-timer three-pack is promotional and excluded from selection; no mandatory fee was disclosed.",
+        "planOffers": [
+          {"sourceProductId": "membership-8", "name": "8 Classes Monthly", "accessScope": "Eight Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 8, "amount": 260, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "membership-12", "name": "12 Classes Monthly", "accessScope": "Twelve Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 12, "amount": 365, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "membership-16", "name": "16 Classes Monthly", "accessScope": "Sixteen Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 16, "amount": 445, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "membership-30", "name": "30 Classes Monthly", "accessScope": "Thirty Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 30, "amount": 530, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []}
+        ],
+        "dropInOffers": [
+          {"sourceProductId": "single-class", "name": "Single Class", "amount": 38},
+          {"sourceProductId": "five-class-pack", "name": "5-Class Pack", "amount": 185, "ordinaryUse": false},
+          {"sourceProductId": "ten-class-pack", "name": "10-Class Pack", "amount": 365, "ordinaryUse": false},
+          {"sourceProductId": "twenty-class-pack", "name": "20-Class Pack", "amount": 710, "ordinaryUse": false},
+          {"sourceProductId": "fifty-class-pack", "name": "50-Class Pack", "amount": 1680, "ordinaryUse": false},
+          {"sourceProductId": "first-timer-three-pack", "name": "First-Timer 3-Pack", "amount": 75, "ordinaryUse": false, "promotion": {"isPromotion": true, "label": "New-client offer"}}
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "solidcore-san-francisco-2026-08-17",
+      "reviewStatus": "approved",
+      "operatorId": "solidcore",
+      "gymIds": ["osm-node-13185224799", "web-0ed19b0a7a3073", "web-c585a394b269ab", "web-8a0d4e16015d6d"],
+      "sharedFields": {
+        "monthlyPrice": 145,
+        "dayPassPrice": 43,
+        "priceSource": "solidcore official San Francisco membership catalog",
+        "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+        "priceObservedAt": "2026-08-17",
+        "priceNote": "San Francisco month-to-month memberships are $145 for 4 classes, $255 for 8, and $385 unlimited. A 12-month four-class plan is $108/month but is not selected over month-to-month access. The standard single class is $43; prices may be subject to tax and no mandatory fee was disclosed.",
+        "planOffers": [
+          {"sourceProductId": "four-month-to-month", "name": "4 Classes — Month-to-Month", "accessScope": "Four solidcore classes per month", "scopeType": "operator-market", "classAllowance": 4, "amount": 145, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "eight-month-to-month", "name": "8 Classes — Month-to-Month", "accessScope": "Eight solidcore classes per month", "scopeType": "operator-market", "classAllowance": 8, "amount": 255, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "unlimited-month-to-month", "name": "Unlimited — Month-to-Month", "accessScope": "Unlimited solidcore classes", "scopeType": "operator-market", "classAllowance": "unlimited", "amount": 385, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "four-twelve-month", "name": "4 Classes — 12-Month Commitment", "accessScope": "Four solidcore classes per month", "scopeType": "operator-market", "classAllowance": 4, "amount": 108, "billingInterval": "month", "commitmentType": "minimum-term", "minimumCommitmentMonths": 12, "fees": []}
+        ],
+        "dropInOffers": [{"sourceProductId": "single-class", "name": "Single Class", "amount": 43}],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "soulcycle-san-francisco-2026-08-17",
+      "reviewStatus": "approved",
+      "operatorId": "soulcycle",
+      "gymIds": ["osm-node-4001664955", "web-7935d5eb8b6a85"],
+      "sharedFields": {
+        "monthlyPrice": 128.85,
+        "dayPassPrice": 38,
+        "priceSource": "SoulCycle official San Francisco series catalog",
+        "priceSourceUrl": "https://www.soul-cycle.com/series/",
+        "priceObservedAt": "2026-08-17",
+        "priceNote": "Soul Renew bills every 30 days: $127 for 4 classes, $245 for 8, $355 for 12, and $456 for 16. The selected four-class plan normalizes to $128.85 per calendar month. The standard single class is $38; new-rider offers are promotional and no mandatory fee was disclosed.",
+        "billingInterval": "30 days",
+        "billingIntervalPrice": 127,
+        "planOffers": [
+          {"sourceProductId": "soul-renew-4", "name": "Soul Renew 4", "accessScope": "Four SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 4, "period": "30 days"}, "amount": 127, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "soul-renew-8", "name": "Soul Renew 8", "accessScope": "Eight SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 8, "period": "30 days"}, "amount": 245, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "soul-renew-12", "name": "Soul Renew 12", "accessScope": "Twelve SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 12, "period": "30 days"}, "amount": 355, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "soul-renew-16", "name": "Soul Renew 16", "accessScope": "Sixteen SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 16, "period": "30 days"}, "amount": 456, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []}
+        ],
+        "dropInOffers": [{"sourceProductId": "single-class", "name": "Single Class", "amount": 38}],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    }
+  ]
+}
