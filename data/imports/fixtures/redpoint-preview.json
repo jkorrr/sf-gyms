@@ -1,0 +1,40 @@
+{
+  "data": {
+    "session": {
+      "previewContract": {
+        "cart": {
+          "items": [
+            {
+              "__typename": "CartProductItem",
+              "unitPrice": 59,
+              "originalUnitPrice": 59,
+              "quantity": 1,
+              "description": "Initiation Fee- Individual",
+              "extendedTotal": 59,
+              "note": null,
+              "productVariant": {"id": "UHJvZHVjdFZhcmlhbnQ6NDE0NTYzMzk="}
+            },
+            {
+              "__typename": "CartProductItem",
+              "unitPrice": 115,
+              "originalUnitPrice": 115,
+              "quantity": 1,
+              "description": "Monthly Dues",
+              "extendedTotal": 115,
+              "note": null,
+              "productVariant": {"id": "UHJvZHVjdFZhcmlhbnQ6MTAwMDA5OTQ="}
+            }
+          ],
+          "subtotal": 174,
+          "inclusiveTaxTotal": 0,
+          "exclusiveTaxTotal": 0,
+          "total": 174,
+          "surchargeNote": null
+        },
+        "nextBillDate": "2026-09-21",
+        "paymentDueMode": "FULL_AMOUNT",
+        "depositAmount": 0
+      }
+    }
+  }
+}

@@ -10,6 +10,7 @@ import argparse
 import concurrent.futures
 import gzip
 import hashlib
+import http.cookiejar
 import json
 import re
 import threading
@@ -24,8 +25,8 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, parse_qsl, urldefrag, urlencode, urljoin, urlparse
-from urllib.request import Request, urlopen
+from urllib.parse import parse_qs, parse_qsl, unquote, urldefrag, urlencode, urljoin, urlparse
+from urllib.request import HTTPCookieProcessor, Request, build_opener, urlopen
 from urllib.robotparser import RobotFileParser
 
 import brotli
@@ -43,7 +44,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v19"
+PARSER_VERSION = "selected-plan-catalog-v20"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -143,6 +144,17 @@ BAY_CLUB_API_BASE = f"https://{BAY_CLUB_API_HOST}/api/1.0"
 BAY_CLUB_CLUBS_URL = f"{BAY_CLUB_API_BASE}/clubs"
 BAY_CLUB_BUILDER_HOST = "join.bayclubs.com"
 BAY_CLUB_BUILDER_PATH = "/shared/membership-builder"
+REDPOINT_HOST = "portal.movementgyms.com"
+REDPOINT_CLIENT_VERSION = "1.3.723"
+REDPOINT_PREVIEW_MARKER = "sfGymPreview"
+REDPOINT_GRAPHQL_PATH = "/graphql-public"
+REDPOINT_CSRF_PATH = "/csrf-bootstrap"
+REDPOINT_ID_PREFIXES = {
+    "plan": "UGxhbjo",
+    "session": "U2Vzc2lvbj",
+    "facility": "RmFjaWxpdHk6",
+    "enrollment": "RW5yb2xsbWVudFR5cGU6",
+}
 
 
 class PageParser(HTMLParser):
@@ -2979,11 +2991,60 @@ def public_platform_json_candidates(
         return xponential_package_candidates(payload if isinstance(payload, dict) else {}, source_url)
     if platform == "abc-fitness":
         return abc_fitness_catalog_candidates(payload, source_url)
+    if platform == "redpoint" and is_redpoint_preview_url(source_url):
+        return redpoint_preview_candidates(payload, source_url), []
     if platform_adapters.platform_for_url(source_url):
         candidates = platform_adapters.extract_candidates(payload, source_url)
         candidates.extend(structured_candidates([json.dumps(payload)], source_url, "public-platform-json"))
         return deduplicate_candidates(candidates), []
     return [], []
+
+
+def redpoint_location_slug(url: str) -> str:
+    """Return the reviewed Movement location segment carried by a URL."""
+
+    parsed = urlparse(text(url))
+    host = parsed.netloc.casefold()
+    segments = [segment.casefold() for segment in parsed.path.split("/") if segment]
+    if not segments:
+        return ""
+    if host == REDPOINT_HOST:
+        return segments[0] if segments[0] not in {"n", "graphql-public", "csrf-bootstrap"} else ""
+    if host in {"movementgyms.com", "www.movementgyms.com"}:
+        return segments[0]
+    return ""
+
+
+def redpoint_catalog_link_allowed(base_url: str, candidate_url: str) -> bool:
+    """Bound Movement's portal frontier to one location's public catalogs.
+
+    The portal footer exposes every Movement market plus profile, tour,
+    instruction, youth, and calendar routes. Following all of them turned one
+    reviewed San Francisco record into dozens of unrelated requests. Only
+    membership/pass catalogs under the exact location slug are useful for a
+    cost audit. The crawler-created read-only preview route is also allowed.
+    """
+
+    parsed = urlparse(text(candidate_url))
+    if parsed.netloc.casefold() != REDPOINT_HOST:
+        return True
+    query = parse_qs(parsed.query)
+    if parsed.path.casefold() == REDPOINT_GRAPHQL_PATH and query.get(REDPOINT_PREVIEW_MARKER) == ["1"]:
+        return True
+    segments = [segment.casefold() for segment in parsed.path.split("/") if segment]
+    if len(segments) < 3:
+        return False
+    base_slug = redpoint_location_slug(base_url)
+    if not base_slug or segments[0] != base_slug:
+        return False
+    remainder = segments[1:]
+    if remainder[0] == "n":
+        remainder = remainder[1:]
+    return bool(
+        len(remainder) >= 2
+        and remainder[0] in {"membership", "memberships", "pass", "passes"}
+        and not BOOKING_ACTION_EXCLUDE_RE.search(parsed.path)
+    )
 
 
 def linked_storefronts(
@@ -2999,15 +3060,17 @@ def linked_storefronts(
         host = hostname(candidate)
         if not is_public_http_url(candidate):
             continue
+        redpoint_allowed = host != REDPOINT_HOST or redpoint_catalog_link_allowed(base_url, candidate)
         approved_booking = approved_booking_url(candidate) and not BOOKING_ACTION_EXCLUDE_RE.search(
             urlparse(candidate).path
-        )
+        ) and redpoint_allowed
         approved_operator_page = (
             host == base_host
             and candidate != base_url
             and RESEARCH_PATH_RE.search(urlparse(candidate).path + ("?" + urlparse(candidate).query if urlparse(candidate).query else ""))
             and not RESEARCH_EXCLUDE_RE.search(urlparse(candidate).path)
             and operator_page_matches_gym(candidate, gym)
+            and redpoint_allowed
         )
         if approved_booking or approved_operator_page:
             identity = request_identity(candidate)
@@ -3406,10 +3469,423 @@ def decode_response_body(body: bytes, content_encoding: str) -> bytes:
     return decoded
 
 
+def decode_nuxt_devalue_payload(value: str) -> Any:
+    """Decode Nuxt's bounded public ``devalue`` state without executing it."""
+
+    try:
+        table = json.loads(value)
+    except (json.JSONDecodeError, TypeError):
+        return None
+    if not isinstance(table, list) or not table or len(table) > 75_000:
+        return None
+    cache: dict[int, Any] = {}
+    resolving: set[int] = set()
+    node_count = 0
+
+    def resolve_index(index: int, depth: int = 0) -> Any:
+        nonlocal node_count
+        if index < 0:
+            return None
+        if index >= len(table) or depth > 80 or node_count > 250_000:
+            raise ValueError("invalid or excessive Nuxt devalue graph")
+        if index in cache:
+            return cache[index]
+        if index in resolving:
+            return None
+        resolving.add(index)
+        raw = table[index]
+        node_count += 1
+        if isinstance(raw, dict):
+            output: dict[str, Any] = {}
+            cache[index] = output
+            for key, child in raw.items():
+                output[text(key)] = resolve_child(child, depth + 1)
+        elif isinstance(raw, list):
+            output = []
+            cache[index] = output
+            output.extend(resolve_child(child, depth + 1) for child in raw)
+        else:
+            output = raw
+            cache[index] = output
+        resolving.discard(index)
+        return output
+
+    def resolve_child(child: Any, depth: int) -> Any:
+        if isinstance(child, bool):
+            return child
+        if isinstance(child, int):
+            return resolve_index(child, depth)
+        if isinstance(child, list):
+            return [resolve_child(item, depth + 1) for item in child]
+        if isinstance(child, dict):
+            return {text(key): resolve_child(item, depth + 1) for key, item in child.items()}
+        return child
+
+    try:
+        return resolve_index(0)
+    except (RecursionError, ValueError):
+        return None
+
+
+NUXT_DATA_SCRIPT_RE = re.compile(
+    r"<script\b(?=[^>]*(?:\bid\s*=\s*['\"]__NUXT_DATA__['\"]|\bdata-nuxt-data\b))[^>]*>(?P<body>.*?)</script>",
+    re.IGNORECASE | re.DOTALL,
+)
+
+
+def redpoint_membership_metadata(html: str, source_url: str) -> dict[str, str]:
+    """Recover exact public IDs needed by Movement's read-only price preview."""
+
+    if platform_name(source_url) != "redpoint" or not text(html):
+        return {}
+    decoded = None
+    for match in NUXT_DATA_SCRIPT_RE.finditer(html):
+        # Script contents are JSON, not HTML text. Decoding entities here can
+        # turn a literal ``&quot;`` inside an embedded rich-text string into an
+        # unescaped quote and corrupt the entire payload.
+        decoded = decode_nuxt_devalue_payload(match.group("body"))
+        if decoded is not None:
+            break
+    if decoded is None:
+        return {}
+    nodes = list(walk_json(decoded))
+
+    def first_node(prefix: str, predicate: Any | None = None) -> dict[str, Any]:
+        for node in nodes:
+            identifier = text(node.get("id"))
+            if identifier.startswith(prefix) and (predicate is None or predicate(node)):
+                return node
+        return {}
+
+    plan = first_node(
+        REDPOINT_ID_PREFIXES["plan"],
+        lambda node: text(node.get("planType")).casefold() in {"", "membership"},
+    )
+    session = first_node(REDPOINT_ID_PREFIXES["session"])
+    expected_location = redpoint_location_slug(source_url).replace("-", " ")
+    facility = first_node(
+        REDPOINT_ID_PREFIXES["facility"],
+        lambda node: normalized_label(text(node.get("label") or node.get("slug"))).casefold().replace("-", " ") == expected_location,
+    )
+    enrollment = first_node(
+        REDPOINT_ID_PREFIXES["enrollment"],
+        lambda node: bool(re.search(
+            r"\bprimary member\b",
+            " ".join(text(node.get(key)) for key in ("name", "title", "label", "singular", "plural")),
+            re.IGNORECASE,
+        )),
+    )
+    if not enrollment:
+        enrollment = first_node(
+            REDPOINT_ID_PREFIXES["enrollment"],
+            lambda node: not re.search(
+                r"\b(?:student|child|youth|household|dependent|senior)\b",
+                " ".join(text(node.get(key)) for key in ("name", "title", "label", "singular", "plural")),
+                re.IGNORECASE,
+            ),
+        )
+    if not all((plan, session, facility, enrollment)):
+        return {}
+    if plan.get("active") is False:
+        return {}
+
+    date_values: set[str] = set()
+    for node in nodes:
+        for key, value in node.items():
+            if "date" not in key.casefold():
+                continue
+            values = value if isinstance(value, list) else [value]
+            for item in values:
+                match = re.match(r"^(\d{4}-\d{2}-\d{2})(?:[ T]|$)", text(item))
+                if match:
+                    date_values.add(match.group(1))
+    if not date_values:
+        return {}
+
+    billing_interval = ""
+    billing_type = ""
+    for node in nodes:
+        candidate_interval = text(node.get("billingInterval"))
+        candidate_type = text(node.get("billingType"))
+        if candidate_interval or candidate_type:
+            billing_interval = billing_interval or candidate_interval
+            billing_type = billing_type or candidate_type
+    client_match = re.search(r"/cpx/static/v(?P<version>\d+-\d+-\d+)(?:-|/)", html, re.IGNORECASE)
+    parsed = urlparse(source_url)
+    presentation = plan.get("presentation") if isinstance(plan.get("presentation"), dict) else {}
+    return {
+        "planId": text(plan.get("id")),
+        "planName": text(plan.get("presentationTitle") or presentation.get("title") or plan.get("title") or plan.get("name") or "Membership"),
+        "sessionId": text(session.get("id")),
+        "facilityId": text(facility.get("id")),
+        "enrollmentTypeId": text(enrollment.get("id")),
+        "enrollmentTypeName": text(enrollment.get("name") or enrollment.get("title") or enrollment.get("label") or enrollment.get("singular") or "Primary Member"),
+        "startDate": min(date_values),
+        "billingInterval": billing_interval,
+        "billingType": billing_type,
+        "sourcePath": parsed.path,
+        "locationSlug": redpoint_location_slug(source_url),
+        "clientVersion": client_match.group("version").replace("-", ".") if client_match else REDPOINT_CLIENT_VERSION,
+    }
+
+
+def redpoint_preview_route(html: str, source_url: str) -> str:
+    """Create a deterministic internal route for one anonymous price preview."""
+
+    metadata = redpoint_membership_metadata(html, source_url)
+    if not metadata:
+        return ""
+    if metadata.get("billingInterval").casefold() not in {"", "month", "monthly"}:
+        return ""
+    if metadata.get("billingType").casefold() not in {"", "recurring"}:
+        return ""
+    query = urlencode(((REDPOINT_PREVIEW_MARKER, "1"), *sorted(metadata.items())))
+    return f"https://{REDPOINT_HOST}{REDPOINT_GRAPHQL_PATH}?{query}"
+
+
+def is_redpoint_preview_url(url: str) -> bool:
+    parsed = urlparse(text(url))
+    return bool(
+        parsed.scheme.casefold() == "https"
+        and parsed.netloc.casefold() == REDPOINT_HOST
+        and parsed.path.casefold() == REDPOINT_GRAPHQL_PATH
+        and parse_qs(parsed.query).get(REDPOINT_PREVIEW_MARKER) == ["1"]
+    )
+
+
+REDPOINT_PREVIEW_QUERY = """query PreviewSessionContractQuery($sessionId: ID!, $input: PreviewContractInput!, $language: Language!) {
+  session(id: $sessionId) {
+    previewContract(input: $input) {
+      cart {
+        items {
+          __typename
+          ... on CartProductItem {
+            unitPrice originalUnitPrice quantity description extendedTotal note
+            productVariant { id }
+          }
+        }
+        subtotal inclusiveTaxTotal exclusiveTaxTotal total surchargeNote(language: $language)
+      }
+      nextBillDate paymentDueMode depositAmount
+    }
+  }
+}"""
+
+
+def redpoint_preview_request_payload(url: str) -> dict[str, Any]:
+    values = {key: item[0] for key, item in parse_qs(urlparse(url).query).items() if item}
+    required = ("sessionId", "facilityId", "enrollmentTypeId", "startDate", "sourcePath")
+    if not is_redpoint_preview_url(url) or not all(text(values.get(key)) for key in required):
+        return {}
+    source_path = text(values["sourcePath"])
+    if not source_path.startswith("/") or ".." in source_path:
+        return {}
+    return {
+        "operationName": "PreviewSessionContractQuery",
+        "query": REDPOINT_PREVIEW_QUERY,
+        "variables": {
+            "sessionId": text(values["sessionId"]),
+            "input": {
+                "startDate": f"{text(values['startDate'])}T00:00:00",
+                "enrollmentTypeCounts": [{
+                    "enrollmentTypeId": text(values["enrollmentTypeId"]),
+                    "count": 1,
+                }],
+                "promotionCodes": [],
+            },
+            "language": "ENGLISH",
+        },
+    }
+
+
+def redpoint_preview_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
+    """Associate Movement's public recurring dues and fee line items."""
+
+    if not is_redpoint_preview_url(source_url) or not isinstance(payload, dict):
+        return []
+    values = {key: item[0] for key, item in parse_qs(urlparse(source_url).query).items() if item}
+    preview = (((payload.get("data") or {}).get("session") or {}).get("previewContract") or {})
+    cart = preview.get("cart") or {}
+    items = cart.get("items") or []
+    dues_item: dict[str, Any] | None = None
+    fees: list[dict[str, Any]] = []
+    for item in items:
+        if not isinstance(item, dict):
+            continue
+        label = text(item.get("description") or item.get("note"))
+        amount = numeric(item.get("unitPrice") or item.get("extendedTotal"))
+        if amount is None or amount <= 0:
+            continue
+        lowered = label.casefold()
+        if re.search(r"\b(?:annual|enrollment|enrolment|initiation|activation|processing|setup|join)\s+fee\b", lowered):
+            fee_type = next(
+                (mapped for token, mapped in (
+                    ("annual", "annual"), ("enrollment", "enrollment"), ("enrolment", "enrollment"),
+                    ("initiation", "initiation"), ("activation", "activation"),
+                    ("processing", "processing"), ("setup", "processing"), ("join", "enrollment"),
+                ) if token in lowered),
+                "other",
+            )
+            fees.append({
+                "type": fee_type,
+                "name": label,
+                "amount": amount,
+                "currency": "USD",
+                "cadence": "year" if fee_type == "annual" else "one-time",
+                "mandatory": True,
+            })
+        elif re.search(r"\b(?:monthly dues|membership dues|monthly membership|membership)\b", lowered):
+            dues_item = item
+    if not dues_item:
+        return []
+    amount = numeric(dues_item.get("unitPrice") or dues_item.get("extendedTotal"))
+    if amount is None or amount <= 0:
+        return []
+    source_path = text(values.get("sourcePath"))
+    source_page = f"https://{REDPOINT_HOST}{source_path}"
+    plan_id = text(values.get("planId"))
+    plan_name = text(values.get("planName")) or "Monthly Membership — Primary Member"
+    slug_alias = re.sub(r"[^a-z0-9]+", "-", plan_name.casefold()).strip("-")
+    path_alias = urlparse(source_page).path.rstrip("/").rsplit("/", 1)[-1]
+    aliases = list(dict.fromkeys(filter(None, ("monthly-primary", slug_alias, path_alias))))
+    fee_label = ", ".join(f"{fee['name']} ${fee['amount']:g}" for fee in fees)
+    raw_label = f"{plan_name} — {text(dues_item.get('description'))} ${amount:g}/month"
+    if fee_label:
+        raw_label += f"; {fee_label}"
+    return [{
+        "sourceProductId": plan_id,
+        "sourceProductAliases": aliases,
+        "sourceProductIdAuthority": "operator-widget",
+        "name": plan_name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Unlimited climbing, yoga, and fitness access across Movement locations",
+        "scopeType": "multi-location",
+        "classAllowance": {"count": None, "period": "month", "unlimited": True},
+        "eligibility": {"type": "standard-adult", "restrictions": []},
+        "commitment": {"type": "unknown", "minimumMonths": None},
+        "promotion": {"isPromotion": False, "label": ""},
+        "fees": fees,
+        "bestValueLabel": False,
+        "rawLabel": raw_label[:500],
+        "method": "public-redpoint-preview-query",
+        "adapter": "redpoint",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": source_page,
+        "autoPublishEligible": False,
+    }]
+
+
+def fetch_redpoint_preview(url: str, timeout: float, robots_status: str) -> dict[str, Any]:
+    """Execute only Movement's anonymous, read-only contract preview query."""
+
+    payload = redpoint_preview_request_payload(url)
+    if not payload:
+        return {"status": "invalid-public-preview", "url": url, "robotsStatus": robots_status}
+    values = {key: item[0] for key, item in parse_qs(urlparse(url).query).items() if item}
+    source_page = f"https://{REDPOINT_HOST}{values['sourcePath']}"
+    csrf_url = f"https://{REDPOINT_HOST}{REDPOINT_CSRF_PATH}"
+    for candidate in (source_page, csrf_url):
+        allowed, status = robots_allowed(candidate, timeout)
+        if not allowed:
+            return {"status": "robots-disallowed", "url": url, "robotsStatus": status}
+    cookie_jar = http.cookiejar.CookieJar()
+    opener = build_opener(HTTPCookieProcessor(cookie_jar))
+
+    def public_request(request: Request, limit: int = MAX_RESPONSE_BYTES) -> tuple[bytes, Any]:
+        with opener.open(request, timeout=timeout) as response:  # noqa: S310 - exact reviewed public operator host.
+            body = response.read(limit + 1)
+            if len(body) > limit:
+                raise OverflowError("Redpoint response exceeds size limit")
+            return decode_response_body(body, text(response.headers.get("Content-Encoding"))), response.headers
+
+    common_headers = {
+        "User-Agent": USER_AGENT,
+        "Accept-Encoding": "identity",
+        "X-Redpoint-Hq-Client": text(values.get("clientVersion")) or REDPOINT_CLIENT_VERSION,
+    }
+    try:
+        public_request(Request(source_page, headers={**common_headers, "Accept": "text/html"}))
+        time.sleep(DOMAIN_DELAY_SECONDS)
+        bootstrap_body, bootstrap_headers = public_request(Request(
+            csrf_url,
+            headers={**common_headers, "Accept": "application/json,text/plain;q=0.9,*/*;q=0.5", "Referer": source_page},
+        ), 500_000)
+        csrf_token = text(bootstrap_headers.get("X-CSRF-Token"))
+        for cookie in cookie_jar:
+            if "csrf" in cookie.name.casefold() or "xsrf" in cookie.name.casefold():
+                csrf_token = unquote(cookie.value)
+                break
+        if not csrf_token:
+            try:
+                bootstrap_payload = json.loads(bootstrap_body.decode("utf-8", errors="replace"))
+            except json.JSONDecodeError:
+                bootstrap_payload = {}
+            csrf_token = text(bootstrap_payload.get("token") or bootstrap_payload.get("csrfToken")) if isinstance(bootstrap_payload, dict) else ""
+        if not csrf_token:
+            return {"status": "public-preview-csrf-unavailable", "url": url, "robotsStatus": robots_status}
+        time.sleep(DOMAIN_DELAY_SECONDS)
+        request_body = json.dumps(payload, separators=(",", ":")).encode("utf-8")
+        response_body, response_headers = public_request(Request(
+            f"https://{REDPOINT_HOST}{REDPOINT_GRAPHQL_PATH}",
+            data=request_body,
+            method="POST",
+            headers={
+                **common_headers,
+                "Accept": "application/json",
+                "Content-Type": "application/json",
+                "Origin": f"https://{REDPOINT_HOST}",
+                "Referer": source_page,
+                "X-CSRF-TOKEN": csrf_token,
+                "RPHQ-Facility": text(values.get("facilityId")),
+            },
+        ))
+        body_text = response_body.decode(response_headers.get_content_charset() or "utf-8", errors="replace")
+        try:
+            response_payload = json.loads(body_text)
+        except json.JSONDecodeError:
+            return {"status": "public-preview-invalid-json", "url": url, "robotsStatus": robots_status}
+        if not redpoint_preview_candidates(response_payload, url):
+            return {
+                "status": "public-preview-no-price",
+                "url": url,
+                "robotsStatus": robots_status,
+                "html": body_text,
+                "contentType": "application/json",
+            }
+        return {
+            "status": "fetched",
+            "url": url,
+            "robotsStatus": robots_status,
+            "html": body_text,
+            "contentType": "application/json",
+            "contentEncoding": text(response_headers.get("Content-Encoding")),
+            "etag": "",
+            "lastModified": "",
+            "accessBlocker": "",
+        }
+    except HTTPError as error:
+        return {
+            "status": f"http-{error.code}",
+            "url": url,
+            "robotsStatus": robots_status,
+            "retryAfter": text(error.headers.get("Retry-After")) if error.headers else "",
+        }
+    except (URLError, TimeoutError, OSError, OverflowError, ValueError, zlib.error, brotli.error) as error:
+        return {"status": "network-error", "url": url, "robotsStatus": robots_status, "error": text(error)[:200]}
+
+
 def fetch_page(url: str, timeout: float, conditional: dict[str, Any] | None = None) -> dict[str, Any]:
     allowed, robots_status = robots_allowed(url, timeout)
     if not allowed:
         return {"status": "robots-disallowed", "url": url, "robotsStatus": robots_status}
+    if is_redpoint_preview_url(url):
+        return fetch_redpoint_preview(url, timeout, robots_status)
     headers = {
         "User-Agent": USER_AGENT,
         "Accept": preferred_accept_header(url),
@@ -3577,6 +4053,9 @@ def parse_page(
     stores: list[str] = []
     stores.extend(equinox_membership_catalog_routes(parser.hydration_json, source_url))
     stores.extend(bay_club_catalog_routes(source_url, gym))
+    redpoint_preview = redpoint_preview_route(html, source_url)
+    if redpoint_preview:
+        stores.append(redpoint_preview)
     mindbody_services = mindbody_public_services_route(source_url)
     if mindbody_services and request_identity(mindbody_services) != request_identity(source_url):
         stores.append(mindbody_services)

@@ -20322,6 +20322,63 @@
       "catalogSourceUrl": "https://movementgyms.com/san-francisco/"
     },
     {
+      "gymId": "osm-way-24334661",
+      "gymName": "Movement San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "UGxhbjo0MTQ1NjI5Mg==",
+      "sourceProductAliases": [
+        "monthly-primary",
+        "monthly-recurring-membership",
+        "monthly-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Monthly Recurring Membership",
+      "amount": 115.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited climbing, yoga, and fitness access across Movement locations",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee- Individual",
+          "amount": 59.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Monthly Recurring Membership — Monthly Dues $115/month; Initiation Fee- Individual $59",
+      "method": "public-redpoint-preview-query",
+      "adapter": "redpoint",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership"
+    },
+    {
       "gymId": "osm-way-24460896",
       "gymName": "Bay Club Gateway",
       "capturedAt": "2026-08-21",

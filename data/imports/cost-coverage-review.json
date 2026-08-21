@@ -11117,69 +11117,14 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
-          "url": "http://portal.movementgyms.com/profile",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
           "url": "https://movementgyms.com/san-francisco/",
           "status": "fetched",
           "candidateCount": 9
         },
         {
-          "url": "https://portal.movementgyms.com/",
+          "url": "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sessionId=U2Vzc2lvbjplOGZlNTI2Zjk3OGJhMGI0MGNiN2I2YmI5NjAxYzYyOA%3D%3D&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21",
           "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/baker",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/belmont",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/boulder",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/centennial",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/englewood",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/fountain-valley",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/golden",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/mountain-view",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/profile",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco",
-          "status": "fetched",
-          "candidateCount": 0
+          "candidateCount": 1
         },
         {
           "url": "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
@@ -11202,57 +11147,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/n/memberships",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/n/passes",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
           "url": "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/san-francisco/programs/book-a-tour",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/santa-clara",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://portal.movementgyms.com/sunnyvale",
           "status": "fetched",
           "candidateCount": 0
         },

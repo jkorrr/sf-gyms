@@ -988,6 +988,75 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(crawler.platform_name("https://benchmark.portal.approach.app/membership-type/3"), "approach")
         self.assertEqual(crawler.platform_name("https://example.com/pricing"), "operator-site")
 
+    def test_redpoint_frontier_stays_inside_exact_location_cost_catalogs(self) -> None:
+        base = "https://movementgyms.com/san-francisco/"
+        links = [
+            "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
+            "https://portal.movementgyms.com/san-francisco/passes/day-pass",
+            "https://portal.movementgyms.com/denver/memberships/monthly-membership",
+            "https://portal.movementgyms.com/san-francisco/book-a-tour",
+            "https://portal.movementgyms.com/san-francisco/profile",
+            "https://portal.movementgyms.com/",
+        ]
+
+        stores = crawler.linked_storefronts(base, links)
+
+        self.assertEqual(stores, links[:2])
+        portal_base = links[0]
+        self.assertEqual(
+            crawler.linked_storefronts(portal_base, [
+                "https://portal.movementgyms.com/san-francisco/n/memberships",
+                "https://portal.movementgyms.com/san-francisco/profile",
+                "https://portal.movementgyms.com/denver/memberships/monthly-membership",
+            ]),
+            [],
+        )
+
+    def test_redpoint_nuxt_state_yields_one_anonymous_read_only_preview(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "redpoint-membership.html"
+        html = fixture.read_text(encoding="utf-8")
+        source = "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership"
+
+        metadata = crawler.redpoint_membership_metadata(html, source)
+        offers, stores, digest = crawler.parse_page({"html": html, "url": source})
+
+        self.assertEqual(metadata["planId"], "UGxhbjo0MTQ1NjI5Mg==")
+        self.assertEqual(metadata["facilityId"], "RmFjaWxpdHk6MTAwMDAwODY=")
+        self.assertEqual(metadata["enrollmentTypeName"], "Primary Member")
+        self.assertEqual(metadata["startDate"], "2026-08-21")
+        self.assertEqual(metadata["clientVersion"], "1.3.723")
+        self.assertEqual(offers, [])
+        self.assertEqual(len(stores), 1)
+        self.assertTrue(crawler.is_redpoint_preview_url(stores[0]))
+        self.assertTrue(digest)
+        payload = crawler.redpoint_preview_request_payload(stores[0])
+        serialized = json.dumps(payload).casefold()
+        self.assertEqual(payload["operationName"], "PreviewSessionContractQuery")
+        self.assertNotIn("mutation", serialized)
+        self.assertNotIn("customer", serialized)
+        self.assertNotIn("email", serialized)
+        self.assertNotIn("phone", serialized)
+
+    def test_redpoint_preview_links_dues_and_initiation_fee_to_same_plan(self) -> None:
+        html_fixture = Path(__file__).with_name("fixtures") / "redpoint-membership.html"
+        preview_fixture = Path(__file__).with_name("fixtures") / "redpoint-preview.json"
+        source = "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership"
+        route = crawler.redpoint_preview_route(html_fixture.read_text(encoding="utf-8"), source)
+        payload = json.loads(preview_fixture.read_text(encoding="utf-8"))
+
+        candidates, nested = crawler.public_platform_json_candidates(payload, route)
+
+        self.assertEqual(nested, [])
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual(candidate["amount"], 115)
+        self.assertEqual(candidate["cadence"], "month")
+        self.assertTrue(candidate["classAllowance"]["unlimited"])
+        self.assertIn("monthly-primary", candidate["sourceProductAliases"])
+        self.assertEqual([(fee["type"], fee["amount"]) for fee in candidate["fees"]], [("initiation", 59)])
+        self.assertEqual(candidate["method"], "public-redpoint-preview-query")
+        self.assertEqual(candidate["sourceUrl"], source)
+
     def test_abc_fitness_catalog_expands_plan_list_and_plan_linked_fee(self) -> None:
         join_url = "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=general"
         self.assertEqual(

@@ -9774,8 +9774,8 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "bd51daefdba7c87a3aba05dc4a37383cd057a92e0abbbc37d898111647f039c2",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "43bb11d028094af4717fb69996d2c5791ceeec7cc68f111444009c34c515f720",
     "candidates": [
       {
         "kind": "starting-price",
@@ -10016,14 +10016,9 @@
       }
     ],
     "linkedStorefronts": [
-      "http://portal.movementgyms.com/profile",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
       "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/programs/book-a-tour",
-      "https://portal.movementgyms.com/profile"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
     ],
     "locationCandidates": [
       {
@@ -45809,22 +45804,16 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "1f0940be7ba11e9f87a5cdbb97ceeb761809922a0db35071ef54a2f0375f32b9",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "e2d03d37e728bd135f682b8430142bec2aeef63addaf4a993c3ccd0241272865",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-      "https://portal.movementgyms.com/san-francisco/n/memberships",
+      "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sessionId=U2Vzc2lvbjplOGZlNTI2Zjk3OGJhMGI0MGNiN2I2YmI5NjAxYzYyOA%3D%3D&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -45873,22 +45862,15 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "7d82eaf6710d5bb5c8c610b1213e4b78744bd5c83f11d6adb86cd3249021a436",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "43e13925e0d1893bd4c37dc842ae8f0e1525f1571e56fb81ce1eb02bafaf630d",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-      "https://portal.movementgyms.com/san-francisco/n/memberships",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -45898,22 +45880,15 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "7ab582f83fc6ddcde2b1ebba762b0c52e07fb28e2f3388c0f2afee1566b00ee9",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "6ce247c1469ebd64826710fda3811288fc658997ec11ab07029dbf69e32eb6b3",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-      "https://portal.movementgyms.com/san-francisco/n/memberships",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -46087,22 +46062,16 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "c380c7ba8358f7324c4b3b6c26231738ef97160007a4d117aea2151a383984b6",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "6eb3874335d60bbe22845b9fd6095f8cd8d7299fc9535a772529f47162cd7424",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-      "https://portal.movementgyms.com/san-francisco/n/memberships",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
       "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -46112,22 +46081,15 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "7ec42d9db12c4aec365d069b80de03bc9dcef18a53d50c21259b9f2f79ba7933",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "9b17cae5b52c2e89ab2513ed54c4d5d4ad88518c0b701d48352ad447a39209cd",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-      "https://portal.movementgyms.com/san-francisco/n/memberships",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -46137,22 +46099,16 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "a43067bebc10e3c3fe9d6446138dc8b02ba8b8ca9b3df541cac2e6b2a4bdb856",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "3c9436d97e4e548afdef2dea64cf0f846c0ad56537ab203f468e8fe10491cee3",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
       "https://portal.movementgyms.com/san-francisco/n/memberships",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -46162,22 +46118,15 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v6",
-    "contentHash": "888994569be743da2b80f3c113ae1f5a41963a4dc2ab4a09632c6f7b34dc00c6",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "c8df7fd87532cbdcaf0963c45950af9e93c4340ab8cb9b0118a491c26a49ca97",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/san-francisco",
-      "https://portal.movementgyms.com/san-francisco/n/memberships-passes",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-instruction",
-      "https://portal.movementgyms.com/san-francisco/n/youth-programs",
-      "https://portal.movementgyms.com/san-francisco/n/climbing-yoga-fitness-calendar",
-      "https://portal.movementgyms.com/san-francisco/n/memberships",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
-      "https://portal.movementgyms.com/san-francisco/n/referral-memberships",
-      "https://portal.movementgyms.com/san-francisco/n/passes",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
-      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership"
+      "https://portal.movementgyms.com/san-francisco/memberships/trial-membership",
+      "https://portal.movementgyms.com/san-francisco/passes/sfo-bel-7-visit-pass"
     ],
     "locationCandidates": []
   },
@@ -58659,6 +58608,72 @@
         "evidenceTier": "official-public",
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sessionId=U2Vzc2lvbjplOGZlNTI2Zjk3OGJhMGI0MGNiN2I2YmI5NjAxYzYyOA%3D%3D&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21": {
+    "status": "fetched",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v20",
+    "contentHash": "9fdd2e4de5af6672ee4607df0bfd0d55cdef9f1a0ff5f7286dcf9c98c5fbaa44",
+    "candidates": [
+      {
+        "sourceProductId": "UGxhbjo0MTQ1NjI5Mg==",
+        "sourceProductAliases": [
+          "monthly-primary",
+          "monthly-recurring-membership",
+          "monthly-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Monthly Recurring Membership",
+        "amount": 115.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Unlimited climbing, yoga, and fitness access across Movement locations",
+        "scopeType": "multi-location",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [
+          {
+            "type": "initiation",
+            "name": "Initiation Fee- Individual",
+            "amount": 59.0,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": true
+          }
+        ],
+        "bestValueLabel": false,
+        "rawLabel": "Monthly Recurring Membership — Monthly Dues $115/month; Initiation Fee- Individual $59",
+        "method": "public-redpoint-preview-query",
+        "adapter": "redpoint",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
         "autoPublishEligible": false
       }
     ],
