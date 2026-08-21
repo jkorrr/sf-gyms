@@ -1401,6 +1401,187 @@ def linked_purchase_card_candidates(
     }]
 
 
+def sectioned_price_card_candidates(
+    card_text: str,
+    source_url: str,
+    section_label: str,
+    section_note: str = "",
+) -> list[dict[str, Any]]:
+    """Reconstruct one bounded title/price card under a semantic section.
+
+    Some operator pages render packages and memberships as adjacent headings
+    without a usable checkout URL.  The renderer supplies the nearest section
+    heading and only one small card.  Requiring one standalone price, one
+    product title, and a recognized section/title combination keeps unrelated
+    fee and savings amounts from becoming products.
+    """
+
+    try:
+        source = urlparse(source_url)
+    except ValueError:
+        return []
+    if source.scheme not in {"http", "https"} or not source.netloc:
+        return []
+
+    section = " ".join(text(section_label).split())
+    note = " ".join(text(section_note).split())
+    if not 2 <= len(section) <= 120 or len(note) > 500:
+        return []
+    lines = [" ".join(line.split()) for line in text(card_text).splitlines() if " ".join(line.split())]
+    price_lines = [(index, match) for index, line in enumerate(lines) if (match := MONEY_RE.fullmatch(line))]
+    if len(price_lines) != 1:
+        return []
+    price_index, amount_match = price_lines[0]
+    amount = float(amount_match.group(1).replace(",", ""))
+    if not 0 < amount <= 25_000:
+        return []
+
+    action_re = re.compile(
+        r"^(?:buy|join|purchase|enroll|start|select|book)(?:\s+(?:now|today|plan|membership))?!?$",
+        re.IGNORECASE,
+    )
+    title_lines = [
+        line for index, line in enumerate(lines)
+        if index != price_index and not action_re.fullmatch(line)
+    ]
+    if len(title_lines) != 1 or not 2 <= len(title_lines[0]) <= 100:
+        return []
+    name = title_lines[0]
+    section_lower = section.casefold()
+    name_lower = name.casefold()
+    combined = f"{section} {note} {name}"
+
+    intro_section = bool(re.search(r"\b(?:intro|new (?:client|member|student)|trial|welcome)\b", section, re.IGNORECASE))
+    membership_section = bool(re.search(r"\b(?:memberships?|autopay|monthly)\b", section, re.IGNORECASE))
+    package_section = bool(re.search(r"\b(?:class\s+)?(?:packages?|packs?|passes?)\b", section, re.IGNORECASE))
+    monthly_count = re.search(
+        r"\b(?P<count>\d{1,3})\s*(?:x|times?|class(?:es)?|sessions?)\s*(?:/|per|a)\s*month\b",
+        name,
+        re.IGNORECASE,
+    )
+    membership_count = re.search(
+        r"\b(?P<count>\d{1,3})\s*(?:class(?:es)?|sessions?)\s+(?:monthly\s+)?membership\b",
+        name,
+        re.IGNORECASE,
+    )
+    package_count = re.fullmatch(r"(?P<count>\d{1,3})\s*(?:class(?:es)?|sessions?|visits?)(?:\s+pack)?", name, re.IGNORECASE)
+    unlimited = bool(re.fullmatch(r"(?:monthly\s+)?unlimited(?:\s+membership)?", name, re.IGNORECASE))
+    first_visit = bool(re.fullmatch(r"first\s+(?:class|session|visit)", name, re.IGNORECASE))
+
+    allowance_count: int | None = None
+    if monthly_count or membership_count:
+        allowance_count = int((monthly_count or membership_count).group("count"))
+    elif package_count:
+        allowance_count = int(package_count.group("count"))
+    if allowance_count is not None and not 0 < allowance_count <= 365:
+        return []
+
+    promotion = intro_section or bool(PROMOTION_RE.search(name))
+    if membership_section and (monthly_count or membership_count or unlimited):
+        cadence, product_type = "month", "monthly"
+    elif package_section and package_count:
+        cadence, product_type = ("visit", "drop-in") if allowance_count == 1 else ("one-time", "class-pack")
+    elif intro_section and (first_visit or package_count or unlimited):
+        cadence, product_type = "one-time", "class-pack"
+    else:
+        return []
+
+    if unlimited:
+        allowance = {
+            "count": None,
+            "period": "month" if cadence == "month" else "purchase",
+            "unlimited": True,
+        }
+    elif first_visit:
+        allowance = {"count": 1, "period": "purchase", "unlimited": False}
+    elif allowance_count is not None:
+        allowance = {
+            "count": allowance_count,
+            "period": "visit" if cadence == "visit" else "month" if cadence == "month" else "purchase",
+            "unlimited": False,
+        }
+    else:
+        return []
+
+    term_match = re.search(
+        r"\b(?P<months>\d{1,2})[ -]months?\s+(?:minimum|commitment)\b"
+        r"|\b(?:minimum|commitment)(?:\s+of)?\s+(?P<minimum_months>\d{1,2})[ -]months?\b",
+        f"{section} {note}",
+        re.IGNORECASE,
+    )
+    minimum_months = int(term_match.group("months") or term_match.group("minimum_months")) if term_match else None
+    if cadence in {"visit", "one-time"}:
+        commitment = {"type": "none", "minimumMonths": None, "minimumDays": None, "rawLabel": ""}
+    elif minimum_months:
+        commitment = {
+            "type": "minimum-term", "minimumMonths": minimum_months, "minimumDays": None,
+            "rawLabel": term_match.group(0),
+        }
+    elif re.search(r"\b(?:cancel any\s*time|no contract|month[ -]to[ -]month)\b", note, re.IGNORECASE):
+        commitment = {
+            "type": "month-to-month", "minimumMonths": None, "minimumDays": None,
+            "rawLabel": "Month-to-month",
+        }
+    else:
+        commitment = {"type": "unknown", "minimumMonths": None, "minimumDays": None, "rawLabel": ""}
+
+    synthetic_id = re.sub(r"[^a-z0-9]+", "-", f"{section_lower}-{name_lower}").strip("-")
+    aliases = [re.sub(r"[^a-z0-9]+", "-", name_lower).strip("-")]
+    number_words = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+    }
+    if cadence == "month" and allowance_count is not None:
+        aliases.append(f"{number_words.get(allowance_count, allowance_count)}-monthly")
+    if cadence == "month" and unlimited:
+        aliases.append("unlimited-monthly")
+    if product_type == "drop-in":
+        aliases.append("class-drop-in")
+
+    if allowance.get("unlimited"):
+        access_scope = "Unlimited classes per month" if cadence == "month" else name
+    elif cadence == "month":
+        access_scope = f"{allowance_count} classes per month"
+    elif product_type == "drop-in":
+        access_scope = "One ordinary class"
+    else:
+        access_scope = name
+    eligibility = {
+        "type": "new-client" if promotion else "standard-adult",
+        "restrictions": ["Promotional or introductory product"] if promotion else [],
+    }
+    raw_label = " — ".join(filter(None, (section, name, f"USD {amount:g}", note, commitment.get("rawLabel"))))
+    return [{
+        "sourceProductId": synthetic_id,
+        "sourceProductAliases": list(dict.fromkeys(alias for alias in aliases if alias)),
+        "sourceProductIdAuthority": "synthetic-label",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": access_scope,
+        "scopeType": "single-location",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": section if promotion else ""},
+        "eligibility": eligibility,
+        "commitment": commitment,
+        "fees": [],
+        "ordinaryUse": not promotion and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-sectioned-price-card",
+        "adapter": "sectioned-price-card",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
 def squarespace_fluid_card_candidates(
     card_text: str,
     source_url: str,

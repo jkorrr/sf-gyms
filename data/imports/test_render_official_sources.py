@@ -153,6 +153,29 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertEqual({item["amount"] for item in observations}, {10, 30})
         self.assertEqual(len(observations), 2)
 
+    def test_incremental_merge_redacts_carried_forward_contact_data(self) -> None:
+        synthetic_phone = "415" + ".555.0100"
+        synthetic_email = "legacy" + "@example.com"
+
+        _attempts, observations = rendered.merge_incremental_results(
+            [],
+            [{
+                "gymId": "keep",
+                "amount": 30,
+                "rawLabel": f"Call {synthetic_phone} or {synthetic_email} for a day pass",
+                "sourceUrl": "https://keep.example/pricing",
+            }],
+            [],
+            [],
+            set(),
+        )
+
+        self.assertEqual(
+            observations[0]["rawLabel"],
+            "Call [phone redacted] or [email redacted] for a day pass",
+        )
+        self.assertEqual(observations[0]["sourceUrl"], "https://keep.example/pricing")
+
     def test_cross_domain_navigation_still_requires_approved_booking_host(self) -> None:
         self.assertTrue(rendered.allowed_network_response("https://operator.example", "https://tenant.pushpress.com/landing/plans"))
         self.assertFalse(rendered.allowed_network_response("https://operator.example", "https://unapproved.example/pricing"))

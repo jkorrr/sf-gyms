@@ -679,10 +679,10 @@
       "platform-security-check": 51
     },
     "selectedPlanPriceAuditStatusCounts": {
-      "matched-within-threshold": 128,
-      "selected-plan-not-observed": 28
+      "matched-within-threshold": 130,
+      "selected-plan-not-observed": 26
     },
-    "reviewCandidatePages": 484,
+    "reviewCandidatePages": 486,
     "linkedStorefrontRequests": 1206,
     "renderedRequests": 380,
     "renderedAccessBlockedRequests": 54,

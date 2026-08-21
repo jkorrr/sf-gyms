@@ -1856,6 +1856,22 @@ CLUB INFO"""
         self.assertTrue(recurring[0]["bestValueLabel"])
         self.assertTrue(all(not offer["promotion"]["isPromotion"] for offer in recurring))
 
+    def test_allowance_cards_accept_natural_frequency_wording_and_keep_term(self) -> None:
+        offers = crawler.visible_candidates(
+            "Memberships. 3 Month Commitment. 30 Day Cancellation. "
+            "4x A Month $129 8 Times Per Month $189 12 Classes A Month $239",
+            "https://operator.example/location/",
+        )
+
+        recurring = [offer for offer in offers if offer.get("adapter") == "allowance-plan-cards"]
+        self.assertEqual(
+            [(offer["classAllowance"]["count"], offer["amount"]) for offer in recurring],
+            [(4, 129), (8, 189), (12, 239)],
+        )
+        self.assertTrue(all(offer["commitment"] == {
+            "type": "minimum-term", "minimumMonths": 3,
+        } for offer in recurring))
+
     def test_jccsf_card_keeps_standard_enrollment_with_ordinary_adult_dues(self) -> None:
         offers = crawler.visible_candidates(
             "Adult Full Access Regular Rate: $198/month + $200 Enrollment Fee. "

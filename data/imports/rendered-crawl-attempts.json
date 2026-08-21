@@ -2143,16 +2143,19 @@
       "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "113beeef304536268415463384d43457e63121d311f1951013a82e730996dc09",
+      "contentHash": "5f1d08b51e19dd24cdb443abb78542eea70e499e2600953bead19fca022eb3ab",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [
         "MEMBERSHIPS"
       ],
-      "candidateCount": 0,
-      "requiresReview": false,
+      "candidateCount": 14,
+      "requiresReview": true,
       "accessBlocker": "",
       "error": "",
-      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
+      "adapterMetrics": {
+        "sectionedPriceCardCount": 11
+      }
     },
     {
       "gymId": "osm-node-3379321522",
@@ -2161,7 +2164,7 @@
       "attemptedAt": "2026-08-21",
       "status": "access-blocked",
       "robotsStatus": "robots-http-404",
-      "contentHash": "e0e22a4fb0d4986a756ce89045f877c5fe1b824bb6c771b9aca6821929aee2ef",
+      "contentHash": "48cc8796a978f29dfed38549f406c6082ad62885e654c061177d1d829207a07b",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,
@@ -3961,16 +3964,19 @@
       "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "e9a3cf493c6e2e6a5a8aad288f37a5259e5475d5767016a971ed1353d4462c22",
+      "contentHash": "0f62381dee968855a73a2fbdc5d252ffa936abca71cc6957f2faa8fd7a3aac58",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [
         "MEMBERSHIPS"
       ],
-      "candidateCount": 0,
-      "requiresReview": false,
+      "candidateCount": 14,
+      "requiresReview": true,
       "accessBlocker": "",
       "error": "",
-      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
+      "adapterMetrics": {
+        "sectionedPriceCardCount": 11
+      }
     },
     {
       "gymId": "osm-node-6815206679",
@@ -3979,7 +3985,7 @@
       "attemptedAt": "2026-08-21",
       "status": "access-blocked",
       "robotsStatus": "robots-http-404",
-      "contentHash": "3c6ecad7c8c9a47f0042c76f19f1341fbea97dc30073d7a2a910254dbfefee71",
+      "contentHash": "a8c524f8d68dddd1e0808ebe12d6aea6a672b74a23ec41c9e0eae8c6e2071e56",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,

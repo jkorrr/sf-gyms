@@ -2216,7 +2216,7 @@ def solidcore_visible_candidates(visible_text: str, source_url: str) -> list[dic
 
 
 ALLOWANCE_MONTHLY_CARD_RE = re.compile(
-    r"\b(?P<count>\d{1,3})\s*(?:x|classes?)\s*(?:/|per)\s*month\s*:?\s*"
+    r"\b(?P<count>\d{1,3})\s*(?:x|class(?:es)?|times?)\s*(?:/|per|a)\s*month\s*:?\s*"
     r"\$\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?)\b",
     re.IGNORECASE,
 )
@@ -2235,6 +2235,14 @@ def allowance_monthly_card_candidates(visible_text: str, source_url: str) -> lis
         # Promotion words must be attached to this compact card, not a later
         # intro product in the page-wide flattened text.
         local = compact[max(0, match.start() - 45):min(len(compact), match.end() + 20)]
+        term_context = compact[max(0, match.start() - 260):min(len(compact), match.end() + 80)]
+        minimum_term = re.search(
+            r"\b(?P<months>\d{1,2})[ -]months?\s+(?:minimum|commitment)\b"
+            r"|\b(?:minimum|commitment)(?:\s+of)?\s+(?P<minimum_months>\d{1,2})[ -]months?\b",
+            term_context,
+            re.IGNORECASE,
+        )
+        minimum_months = int(minimum_term.group("months") or minimum_term.group("minimum_months")) if minimum_term else None
         name = f"{count}x Monthly"
         raw_label = f"{name} ${amount:g}/month"
         is_promotion = bool(PROMOTION_RE.search(local))
@@ -2251,8 +2259,8 @@ def allowance_monthly_card_candidates(visible_text: str, source_url: str) -> lis
             "promotion": {"isPromotion": is_promotion, "label": local if is_promotion else ""},
             "eligibility": {"type": "standard-adult", "restrictions": []},
             "commitment": {
-                "type": "month-to-month" if MONTH_TO_MONTH_RE.search(compact) else "unknown",
-                "minimumMonths": None,
+                "type": "minimum-term" if minimum_months else "month-to-month" if MONTH_TO_MONTH_RE.search(compact) else "unknown",
+                "minimumMonths": minimum_months,
             },
             "fees": [],
             "bestValueLabel": bool(re.search(r"\bbest value\b", compact[max(0, match.start() - 80):match.start()], re.IGNORECASE)),

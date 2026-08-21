@@ -5306,7 +5306,7 @@
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-3379321522",
@@ -10968,7 +10968,7 @@
       "bookingRequestCount": 1,
       "frontierSkipReasons": {},
       "allReviewedSeedsGone": false,
-      "selectedPlanPriceAuditStatus": "selected-plan-not-observed"
+      "selectedPlanPriceAuditStatus": "matched-within-threshold"
     },
     {
       "gymId": "osm-node-6815206679",

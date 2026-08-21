@@ -46,6 +46,27 @@ def text(value: Any) -> str:
     return str(value).strip() if value is not None else ""
 
 
+def redact_render_contact_data(value: Any, field_name: str = "") -> Any:
+    """Keep contact details out of all persisted rendered-crawl evidence."""
+
+    if isinstance(value, dict):
+        return {key: redact_render_contact_data(item, key) for key, item in value.items()}
+    if isinstance(value, list):
+        return [redact_render_contact_data(item, field_name) for item in value]
+    if not isinstance(value, str) or field_name.casefold().endswith(("url", "id", "hash")):
+        return value
+    value = re.sub(
+        r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b",
+        "[email redacted]",
+        value,
+    )
+    return re.sub(
+        r"(?<!\d)(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}(?!\d)",
+        "[phone redacted]",
+        value,
+    )
+
+
 def host(url: str) -> str:
     try:
         return urlparse(url).netloc.casefold()
@@ -313,31 +334,11 @@ def rendered_observation(
 ) -> dict[str, Any]:
     """Attach the reviewed render target to redirected public evidence."""
 
-    def redact_contact_data(value: Any, field_name: str = "") -> Any:
-        """Keep contact details out of committed render evidence labels."""
-
-        if isinstance(value, dict):
-            return {key: redact_contact_data(item, key) for key, item in value.items()}
-        if isinstance(value, list):
-            return [redact_contact_data(item, field_name) for item in value]
-        if not isinstance(value, str) or field_name.casefold().endswith(("url", "id", "hash")):
-            return value
-        value = re.sub(
-            r"(?i)\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}\b",
-            "[email redacted]",
-            value,
-        )
-        return re.sub(
-            r"(?<!\d)(?:\+?1[-.\s]?)?\(?\d{3}\)?[-.\s]\d{3}[-.\s]\d{4}(?!\d)",
-            "[phone redacted]",
-            value,
-        )
-
     observation = {
         "gymId": gym["id"],
         "gymName": gym["name"],
         "capturedAt": attempted_at,
-        **redact_contact_data(candidate),
+        **redact_render_contact_data(candidate),
     }
     observation["catalogSourceUrl"] = text(candidate.get("catalogSourceUrl")) or catalog_source_url
     return observation
@@ -397,6 +398,8 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     visible_card_sources: list[tuple[str, str]] = []
     platform_card_candidates: list[dict[str, Any]] = []
     adapter_metrics: dict[str, int] = {}
+    sectioned_card_keys: set[tuple[str, str, str]] = set()
+    sectioned_candidate_keys: set[tuple[str, float, str]] = set()
     clicked_tabs: list[str] = []
     access_blocker = ""
     availability_signal = ""
@@ -415,6 +418,52 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                 card_text = "\n".join(line.strip() for line in card.inner_text(timeout=300).splitlines() if line.strip())
                 if "$" in card_text and 8 <= len(card_text) <= 1_500:
                     visible_card_sources.append((page.url, card_text))
+                    section_context = card.evaluate(
+                        r"""element => {
+                            const visible = candidate => {
+                                const style = getComputedStyle(candidate);
+                                return style.display !== 'none' && style.visibility !== 'hidden'
+                                    && candidate.getClientRects().length > 0;
+                            };
+                            for (let node = element.parentElement; node && node !== document.body; node = node.parentElement) {
+                                const children = Array.from(node.children);
+                                const branchIndex = children.findIndex(child => child === element || child.contains(element));
+                                if (branchIndex < 0) continue;
+                                const headingIndex = children.findIndex(child =>
+                                    /^(?:H1|H2)$/.test(child.tagName) && visible(child)
+                                );
+                                if (headingIndex < 0 || headingIndex >= branchIndex) continue;
+                                const label = (children[headingIndex].innerText || '').trim().replace(/\s+/g, ' ');
+                                const note = children.slice(headingIndex + 1, branchIndex)
+                                    .map(child => (child.innerText || '').trim().replace(/\s+/g, ' '))
+                                    .filter(Boolean).join(' ').slice(0, 500);
+                                if (label) return {label, note};
+                            }
+                            return {label: '', note: ''};
+                        }"""
+                    )
+                    section_label = text((section_context or {}).get("label"))
+                    section_note = text((section_context or {}).get("note"))
+                    section_key = (section_label, section_note, card_text)
+                    if section_label and section_key not in sectioned_card_keys:
+                        sectioned_card_keys.add(section_key)
+                        candidates = static_crawler.platform_adapters.sectioned_price_card_candidates(
+                            card_text,
+                            page.url,
+                            section_label,
+                            section_note,
+                        )
+                        for candidate in candidates:
+                            candidate_key = (
+                                text(candidate.get("sourceProductId")),
+                                float(candidate.get("amount") or 0),
+                                text(candidate.get("productType")),
+                            )
+                            if candidate_key not in sectioned_candidate_keys:
+                                sectioned_candidate_keys.add(candidate_key)
+                                platform_card_candidates.append(candidate)
+                        if sectioned_candidate_keys:
+                            adapter_metrics["sectionedPriceCardCount"] = len(sectioned_candidate_keys)
             except Exception:
                 continue
         return current_visible
@@ -906,7 +955,7 @@ def merge_incremental_results(
     attempts_by_key.update({(text(item.get("gymId")), text(item.get("url"))): item for item in new_attempts})
     attempts = []
     for item in attempts_by_key.values():
-        cleaned = dict(item)
+        cleaned = redact_render_contact_data(dict(item))
         if not cleaned.get("adapterMetrics"):
             cleaned.pop("adapterMetrics", None)
         if not text(cleaned.get("availabilitySignal")):
@@ -914,9 +963,9 @@ def merge_incremental_results(
         attempts.append(cleaned)
     attempts.sort(key=lambda item: (text(item.get("gymId")), text(item.get("url"))))
     combined_observations = [
-        item for item in existing_observations
+        redact_render_contact_data(item) for item in existing_observations
         if text(item.get("gymId")) not in processed_gym_ids
-    ] + new_observations
+    ] + [redact_render_contact_data(item) for item in new_observations]
     observations: list[dict[str, Any]] = []
     observation_keys: set[tuple[Any, ...]] = set()
     for item in combined_observations:
@@ -1021,6 +1070,7 @@ def main() -> int:
         static_observations_document.get("observations", []) + observations,
         eligible_deal_ids,
     )
+    deals = redact_render_contact_data(deals)
     save_json(static_crawler.DEAL_OBSERVATIONS_PATH, {
         "generatedAt": attempted_at,
         "mode": args.mode,

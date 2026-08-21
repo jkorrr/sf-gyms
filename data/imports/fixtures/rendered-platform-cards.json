@@ -86,5 +86,23 @@
     "linkLabel": "Annual Membership",
     "sectionLabel": "Monthly Class Memberships",
     "cardText": "Annual Membership\n$2,399\nUnlimited classes for one year. Enjoy over 1 Month FREE!"
+  },
+  "sectionedMonthlyMembership": {
+    "url": "https://bodyrok.com/studio/marina/",
+    "sectionLabel": "Memberships",
+    "sectionNote": "3 Month Commitment. 30 Day Cancellation.",
+    "cardText": "4X A MONTH\n$129\nBUY NOW"
+  },
+  "sectionedClassPackage": {
+    "url": "https://bodyrok.com/studio/marina/",
+    "sectionLabel": "Class Packages",
+    "sectionNote": "6 Month Expiration",
+    "cardText": "1 CLASS\n$35\nBUY NOW"
+  },
+  "sectionedIntroOffer": {
+    "url": "https://bodyrok.com/studio/marina/",
+    "sectionLabel": "Intro Offers",
+    "sectionNote": "30 Day Expiration",
+    "cardText": "FIRST CLASS\n$20\nBUY NOW"
   }
 }

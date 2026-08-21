@@ -391,6 +391,55 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertEqual(candidate["eligibility"]["type"], "trainer-required")
         self.assertFalse(candidate["ordinaryUse"])
 
+    def test_sectioned_cards_reconstruct_recurring_plan_term_and_alias(self) -> None:
+        fixture = self.rendered_fixtures["sectionedMonthlyMembership"]
+
+        candidates = adapters.sectioned_price_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["sectionLabel"], fixture["sectionNote"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["amount"], candidate["cadence"], candidate["productType"]), (129, "month", "monthly"))
+        self.assertEqual(candidate["classAllowance"], {"count": 4, "period": "month", "unlimited": False})
+        self.assertEqual(candidate["commitment"]["type"], "minimum-term")
+        self.assertEqual(candidate["commitment"]["minimumMonths"], 3)
+        self.assertIn("four-monthly", candidate["sourceProductAliases"])
+        self.assertEqual(candidate["sourceProductIdAuthority"], "synthetic-label")
+        self.assertTrue(candidate["ordinaryUse"])
+
+    def test_sectioned_cards_keep_drop_in_and_intro_offer_distinct(self) -> None:
+        package = self.rendered_fixtures["sectionedClassPackage"]
+        intro = self.rendered_fixtures["sectionedIntroOffer"]
+
+        drop_in = adapters.sectioned_price_card_candidates(
+            package["cardText"], package["url"], package["sectionLabel"], package["sectionNote"],
+        )[0]
+        promotion = adapters.sectioned_price_card_candidates(
+            intro["cardText"], intro["url"], intro["sectionLabel"], intro["sectionNote"],
+        )[0]
+
+        self.assertEqual((drop_in["amount"], drop_in["productType"], drop_in["cadence"]), (35, "drop-in", "visit"))
+        self.assertTrue(drop_in["ordinaryUse"])
+        self.assertEqual(drop_in["sourceProductAliases"][-1], "class-drop-in")
+        self.assertEqual((promotion["amount"], promotion["productType"]), (20, "class-pack"))
+        self.assertTrue(promotion["promotion"]["isPromotion"])
+        self.assertFalse(promotion["ordinaryUse"])
+
+    def test_sectioned_cards_fail_closed_without_one_attached_price_or_known_section(self) -> None:
+        self.assertEqual(
+            adapters.sectioned_price_card_candidates(
+                "4X A MONTH\n$129\nSetup Fee $49", "https://operator.example/location", "Memberships",
+            ),
+            [],
+        )
+        self.assertEqual(
+            adapters.sectioned_price_card_candidates(
+                "Basic\n$99", "https://operator.example/location", "Amenities",
+            ),
+            [],
+        )
+
 
 if __name__ == "__main__":
     unittest.main()

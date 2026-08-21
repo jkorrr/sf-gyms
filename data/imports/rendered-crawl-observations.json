@@ -5159,6 +5159,687 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "intro-offers-first-class",
+      "sourceProductAliases": [
+        "first-class"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "FIRST CLASS",
+      "amount": 20.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "FIRST CLASS",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO OFFERS"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO OFFERS — FIRST CLASS — USD 20 — 30 Day Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-1-class",
+      "sourceProductAliases": [
+        "1-class",
+        "class-drop-in"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "1 CLASS",
+      "amount": 35.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "One ordinary class",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 1 CLASS — USD 35 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "intro-offers-5-classes",
+      "sourceProductAliases": [
+        "5-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "5 CLASSES",
+      "amount": 99.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "5 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO OFFERS"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO OFFERS — 5 CLASSES — USD 99 — 30 Day Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "4x Monthly",
+      "amount": 129.0,
+      "currency": "USD",
+      "rawLabel": "4x Monthly $129/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "contentHash": "f6c85194c9edb497d8cd36f166680bda38fb3555b298f334dfc95e4ad091c103",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-4x-a-month",
+      "sourceProductAliases": [
+        "4x-a-month",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "4X A MONTH",
+      "amount": 129.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — 4X A MONTH — USD 129 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "intro-offers-unlimited",
+      "sourceProductAliases": [
+        "unlimited"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "UNLIMITED",
+      "amount": 149.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "UNLIMITED",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "purchase",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO OFFERS"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO OFFERS — UNLIMITED — USD 149 — 30 Day Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-5-classes",
+      "sourceProductAliases": [
+        "5-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "5 CLASSES",
+      "amount": 169.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "5 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 5 CLASSES — USD 169 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "8x Monthly",
+      "amount": 189.0,
+      "currency": "USD",
+      "rawLabel": "8x Monthly $189/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "contentHash": "dc3dca5a5706433a7f8b567e24d84661881bb73186890769b7cf8bc87a81318b",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-8x-a-month",
+      "sourceProductAliases": [
+        "8x-a-month",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "8X A MONTH",
+      "amount": 189.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — 8X A MONTH — USD 189 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "12x Monthly",
+      "amount": 239.0,
+      "currency": "USD",
+      "rawLabel": "12x Monthly $239/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "contentHash": "6c0549248f2ffd7c8c765a73860ed26dcf4fab216a343149777a820e3eaa1b8f",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-12x-a-month",
+      "sourceProductAliases": [
+        "12x-a-month",
+        "twelve-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "12X A MONTH",
+      "amount": 239.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — 12X A MONTH — USD 239 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-unlimited",
+      "sourceProductAliases": [
+        "unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "UNLIMITED",
+      "amount": 279.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "minimum-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — UNLIMITED — USD 279 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-10-classes",
+      "sourceProductAliases": [
+        "10-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "10 CLASSES",
+      "amount": 299.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "10 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 10 CLASSES — USD 299 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "gymName": "BODYROK Marina",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-20-classes",
+      "sourceProductAliases": [
+        "20-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "20 CLASSES",
+      "amount": 549.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "20 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 20,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 20 CLASSES — USD 549 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/marina/"
+    },
+    {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
       "capturedAt": "2026-08-21",
@@ -7295,7 +7976,7 @@
       "capturedAt": "2026-08-21",
       "amount": 99.0,
       "currency": "USD",
-      "rawLabel": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY",
+      "rawLabel": "| [phone redacted] ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": {
@@ -7304,7 +7985,7 @@
       },
       "promotion": {
         "isPromotion": true,
-        "label": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY"
+        "label": "| [phone redacted] ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY"
       },
       "eligibility": {
         "type": "standard-adult",
@@ -8827,6 +9508,687 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "intro-offers-first-class",
+      "sourceProductAliases": [
+        "first-class"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "FIRST CLASS",
+      "amount": 20.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "FIRST CLASS",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO OFFERS"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO OFFERS — FIRST CLASS — USD 20 — 30 Day Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-1-class",
+      "sourceProductAliases": [
+        "1-class",
+        "class-drop-in"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "1 CLASS",
+      "amount": 35.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "One ordinary class",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 1 CLASS — USD 35 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "intro-offers-5-classes",
+      "sourceProductAliases": [
+        "5-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "5 CLASSES",
+      "amount": 99.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "5 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO OFFERS"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO OFFERS — 5 CLASSES — USD 99 — 30 Day Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "4x Monthly",
+      "amount": 129.0,
+      "currency": "USD",
+      "rawLabel": "4x Monthly $129/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "contentHash": "f6c85194c9edb497d8cd36f166680bda38fb3555b298f334dfc95e4ad091c103",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-4x-a-month",
+      "sourceProductAliases": [
+        "4x-a-month",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "4X A MONTH",
+      "amount": 129.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — 4X A MONTH — USD 129 — 30 Day Cancellation",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "intro-offers-unlimited",
+      "sourceProductAliases": [
+        "unlimited"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "UNLIMITED",
+      "amount": 149.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "UNLIMITED",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "purchase",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO OFFERS"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO OFFERS — UNLIMITED — USD 149 — 30 Day Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-5-classes",
+      "sourceProductAliases": [
+        "5-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "5 CLASSES",
+      "amount": 169.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "5 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 5 CLASSES — USD 169 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "8x Monthly",
+      "amount": 189.0,
+      "currency": "USD",
+      "rawLabel": "8x Monthly $189/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "contentHash": "dc3dca5a5706433a7f8b567e24d84661881bb73186890769b7cf8bc87a81318b",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-8x-a-month",
+      "sourceProductAliases": [
+        "8x-a-month",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "8X A MONTH",
+      "amount": 189.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — 8X A MONTH — USD 189 — 30 Day Cancellation",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "name": "12x Monthly",
+      "amount": 239.0,
+      "currency": "USD",
+      "rawLabel": "12x Monthly $239/month",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "method": "visible-allowance-plan-card",
+      "adapter": "allowance-plan-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "contentHash": "6c0549248f2ffd7c8c765a73860ed26dcf4fab216a343149777a820e3eaa1b8f",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-12x-a-month",
+      "sourceProductAliases": [
+        "12x-a-month",
+        "twelve-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "12X A MONTH",
+      "amount": 239.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — 12X A MONTH — USD 239 — 30 Day Cancellation",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-unlimited",
+      "sourceProductAliases": [
+        "unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "UNLIMITED",
+      "amount": 279.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MEMBERSHIPS — UNLIMITED — USD 279 — 30 Day Cancellation",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-10-classes",
+      "sourceProductAliases": [
+        "10-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "10 CLASSES",
+      "amount": 299.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "10 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 10 CLASSES — USD 299 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "gymName": "BODYROK Haight",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "class-packages-20-classes",
+      "sourceProductAliases": [
+        "20-classes"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "20 CLASSES",
+      "amount": 549.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "20 CLASSES",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 20,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "CLASS PACKAGES — 20 CLASSES — USD 549 — 6 Month Expiration",
+      "method": "rendered-sectioned-price-card",
+      "adapter": "sectioned-price-card",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
     },
     {
       "gymId": "osm-node-7044717960",
