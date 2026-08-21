@@ -1,4 +1,4 @@
-import { demoGyms, type Gym } from "./demo-data";
+import { demoGyms, type CostContext, type Gym } from "./demo-data";
 
 export function getGymById(id: string): Gym | undefined {
   return demoGyms.find((gym) => gym.id === id);
@@ -9,13 +9,29 @@ export function priceText(value: number | null, suffix: string): string {
   return value === null ? "Not listed" : `$${value.toFixed(2)}${suffix}`;
 }
 
+export function costContextText(context: CostContext, decimals = 0): string {
+  const amount = context.low === context.high
+    ? `$${context.low.toFixed(decimals)}`
+    : `$${context.low.toFixed(decimals)}–$${context.high.toFixed(decimals)}`;
+  const cadence = context.cadence && context.cadence !== "unknown" ? ` / ${context.cadence}` : "";
+  if (context.kind === "starting-price") return `From ${amount}${cadence}`;
+  if (context.kind === "conflicting-price") return `Conflicting ${amount}${cadence}`;
+  return `${amount}${cadence}`;
+}
+
+export function costContextStatusText(context: CostContext): string {
+  if (context.kind === "conflicting-price" || context.conflictFlags?.length) return "Official conflict";
+  if (context.kind === "range" || context.kind === "starting-price") return "Official range";
+  return "Official cost";
+}
+
 export function monthlyCostText(gym: Gym): string {
   if (gym.monthlyPrice !== null) return priceText(gym.monthlyPrice, "/mo");
   if (gym.operatorConfirmedMonthly?.freshness === "current") return `$${gym.operatorConfirmedMonthly.normalizedMonthly.toFixed(0)}/mo`;
   if (gym.reportedMonthly) return `~$${gym.reportedMonthly.point.toFixed(0)}/mo`;
   if (gym.estimatedMonthly) return `~$${gym.estimatedMonthly.point.toFixed(0)}/mo`;
   const context = gym.costContext?.[0];
-  if (context) return context.low === context.high ? `From $${context.low.toFixed(0)}` : `$${context.low.toFixed(0)}–$${context.high.toFixed(0)}`;
+  if (context) return costContextText(context);
   if (gym.pricingStatus === "free") return "Free/public";
   if (gym.pricingStatus === "pay-per-visit") return "Pay per visit";
   if (gym.pricingStatus === "not-applicable") return "Not applicable";
@@ -23,7 +39,7 @@ export function monthlyCostText(gym: Gym): string {
 }
 
 export function pricingStatusText(gym: Gym): string {
-  if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) return "Official range";
+  if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) return costContextStatusText(gym.costContext[0]);
   const labels: Record<string, string> = {
     verified: "Official price",
     "operator-confirmed": "Operator confirmed",

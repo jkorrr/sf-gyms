@@ -95,13 +95,23 @@ function priceLabel(value: number | null, suffix: string): string {
   return value === null ? "Not listed" : `$${value}${suffix}`;
 }
 
+function costContextLabel(context: NonNullable<Gym["costContext"]>[number]): string {
+  const amount = context.low === context.high
+    ? `$${context.low.toFixed(0)}`
+    : `$${context.low.toFixed(0)}–$${context.high.toFixed(0)}`;
+  const cadence = context.cadence && context.cadence !== "unknown" ? ` / ${context.cadence}` : "";
+  if (context.kind === "starting-price") return `From ${amount}${cadence}`;
+  if (context.kind === "conflicting-price") return `Conflicting ${amount}${cadence}`;
+  return `${amount}${cadence}`;
+}
+
 function monthlyCostLabel(gym: Gym): string {
   if (gym.monthlyPrice !== null) return priceLabel(gym.monthlyPrice, "/mo");
   if (gym.operatorConfirmedMonthly?.freshness === "current") return `$${gym.operatorConfirmedMonthly.normalizedMonthly.toFixed(0)}/mo`;
   if (gym.reportedMonthly) return `~$${gym.reportedMonthly.point.toFixed(0)}/mo`;
   if (gym.estimatedMonthly) return `~$${gym.estimatedMonthly.point.toFixed(0)}/mo`;
   const context = gym.costContext?.[0];
-  if (context) return context.low === context.high ? `From $${context.low.toFixed(0)}` : `$${context.low.toFixed(0)}–$${context.high.toFixed(0)}`;
+  if (context) return costContextLabel(context);
   if (gym.pricingStatus === "free") return "Free/public";
   if (gym.pricingStatus === "pay-per-visit") return "Pay per visit";
   if (gym.pricingStatus === "not-applicable") return "Not applicable";
@@ -109,7 +119,12 @@ function monthlyCostLabel(gym: Gym): string {
 }
 
 function pricingStatusLabel(gym: Gym): string {
-  if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) return "Official range";
+  if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) {
+    const context = gym.costContext[0];
+    if (context.kind === "conflicting-price" || context.conflictFlags?.length) return "Official conflict";
+    if (context.kind === "range" || context.kind === "starting-price") return "Official range";
+    return "Official cost";
+  }
   const labels: Record<string, string> = {
     verified: "Official price",
     "operator-confirmed": "Operator confirmed",
