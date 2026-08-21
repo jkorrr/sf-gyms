@@ -984,6 +984,11 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.barrys.com/ar/pricing/castro",
           "status": "fetched",
           "candidateCount": 0
@@ -995,6 +1000,11 @@
         },
         {
           "url": "https://www.barrys.com/es/pricing/castro",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -1034,6 +1044,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "rendered",
+          "candidateCount": 17
+        },
+        {
           "url": "https://www.barrys.com/studio/castro/",
           "status": "rendered",
           "candidateCount": 0
@@ -1071,6 +1086,11 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.barrys.com/ar/pricing/fidi",
           "status": "fetched",
           "candidateCount": 0
@@ -1082,6 +1102,11 @@
         },
         {
           "url": "https://www.barrys.com/es/pricing/fidi",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -1118,6 +1143,11 @@
         {
           "url": "https://www.barrys.com/sv/pricing/fidi",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1158,62 +1188,112 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.barrys.com/ar/pricing/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/da/pricing/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/es/faq",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/es/pricing/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=2",
-          "status": "not-modified",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/faq",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/fr/pricing/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/it/pricing/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/pricing/san-francisco-marina",
-          "status": "not-modified",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://www.barrys.com/pricing/san-francisco-marina?0a1118d2_page=2",
-          "status": "not-modified",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://www.barrys.com/pricing/san-francisco-marina?40dddf7b_page=2",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/studio/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/sv/pricing/san-francisco-marina",
-          "status": "not-modified",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/ar/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/da/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/es/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=2",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/fr/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/it/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/pricing/san-francisco-marina",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
           "url": "https://www.barrys.com/studio/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/sv/pricing/san-francisco-marina",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -1250,6 +1330,11 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayclubs.com/memberships",
           "status": "fetched",
           "candidateCount": 0
@@ -1257,6 +1342,11 @@
         {
           "url": "https://www.bayclubs.com/sf-campus",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1297,6 +1387,11 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayclubs.com/clubs/thegateway",
           "status": "fetched",
           "candidateCount": 0
@@ -1304,6 +1399,11 @@
         {
           "url": "https://www.bayclubs.com/memberships",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1344,6 +1444,11 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayclubs.com/memberships",
           "status": "fetched",
           "candidateCount": 0
@@ -1351,6 +1456,11 @@
         {
           "url": "https://www.bayclubs.com/sf-campus",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1450,7 +1560,7 @@
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -4284,7 +4394,7 @@
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -5447,8 +5557,18 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+          "status": "fetched",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.fitnesssf.com/location/castro",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -5489,8 +5609,18 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+          "status": "fetched",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.fitnesssf.com/location/sf-embarcadero",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -5532,8 +5662,23 @@
       "crawlAttempts": [
         {
           "url": "https://fitnesssf.com/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://fitnesssf.com/join",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+          "status": "fetched",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "fetched",
+          "candidateCount": 3
         },
         {
           "url": "https://fitnesssf.com/",
@@ -5572,6 +5717,16 @@
       "sourceAttemptStatus": "crawl-attempted",
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
+        {
+          "url": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+          "status": "fetched",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "fetched",
+          "candidateCount": 3
+        },
         {
           "url": "https://www.fitnesssf.com/location/mid-market",
           "status": "fetched",
@@ -5658,8 +5813,18 @@
       "crawlAttempts": [
         {
           "url": "https://fitnesssf.com/location/soma/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+          "status": "fetched",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "fetched",
+          "candidateCount": 3
         },
         {
           "url": "https://fitnesssf.com/location/soma/",
@@ -5699,8 +5864,18 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+          "status": "fetched",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.fitnesssf.com/location/sf-transbay",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
@@ -9865,13 +10040,13 @@
       "crawlAttempts": [
         {
           "url": "https://www.ymcasf.org/location/mission-ymca/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -9885,6 +10060,11 @@
         },
         {
           "url": "https://www.ymcasf.org/membership/membership-faqs/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/safety-at-the-y/",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -14695,7 +14875,7 @@
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -14823,13 +15003,13 @@
       "crawlAttempts": [
         {
           "url": "https://www.ymcasf.org/location/chinatown-ymca/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -14890,13 +15070,13 @@
       "crawlAttempts": [
         {
           "url": "https://www.ymcasf.org/Embarcadero/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -14910,6 +15090,11 @@
         },
         {
           "url": "https://www.ymcasf.org/membership/membership-faqs/",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/safety-at-the-y/",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -14963,7 +15148,7 @@
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -15024,18 +15209,18 @@
       "crawlAttempts": [
         {
           "url": "https://www.ymcasf.org/location/richmond-district-ymca/#hours",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.ymcasf.org/locations/richmond-district-ymca",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
         },
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",
@@ -15107,7 +15292,7 @@
         {
           "url": "https://www.ymcasf.org/membership/",
           "status": "fetched",
-          "candidateCount": 6
+          "candidateCount": 7
         },
         {
           "url": "https://www.ymcasf.org/membership/member-referral-program/?utm_source=website&utm_medium=landing-page&utm_content=cta-btn&utm_campaign=fy25q1-household-membership",

@@ -40,6 +40,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
+PARSER_VERSION = "selected-plan-catalog-v2"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -292,6 +293,20 @@ def location_route_slug(url: str) -> str | None:
     while tail and tail[-1] in LOCATION_ROUTE_TAILS:
         tail.pop()
     return tail[-1] if tail else ""
+
+
+def conditional_cache_metadata(entry: dict[str, Any] | None) -> dict[str, Any] | None:
+    """Use validators only when cached candidates came from this parser build.
+
+    A 304 response has no body to reparse.  Sending old validators after an
+    extractor upgrade would therefore preserve stale or malformed candidates
+    indefinitely.  Parser-version mismatch forces one full response, after
+    which ordinary ETag/Last-Modified requests resume.
+    """
+
+    if not isinstance(entry, dict) or text(entry.get("parserVersion")) != PARSER_VERSION:
+        return None
+    return entry
 
 
 def operator_location_slugs(gym: dict[str, Any]) -> set[str]:
@@ -830,6 +845,7 @@ def operator_visible_candidate(
     fees: list[dict[str, Any]] | None = None,
     best_value: bool = False,
     raw_label: str = "",
+    exact_location_match: str = "exact-location",
 ) -> dict[str, Any]:
     return {
         "sourceProductId": product_id,
@@ -851,10 +867,74 @@ def operator_visible_candidate(
         "method": f"visible-{adapter}-catalog",
         "adapter": adapter,
         "evidenceTier": "official-public",
-        "exactLocationMatch": "exact-location",
+        "exactLocationMatch": exact_location_match,
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }
+
+
+def ymca_sf_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct YMCA SF's market-wide membership table and linked join fees.
+
+    The public page renders ``Monthly Fee`` and ``join fee`` in the same card.
+    A generic nearest-dollar regex therefore mistakes the enrollment charge
+    for recurring dues.  This adapter requires each age/household descriptor,
+    keeps the fee attached to its own plan, and excludes savings copy elsewhere
+    on the page from the product catalog.
+    """
+
+    host = hostname(source_url)
+    if not (host == "ymcasf.org" or host.endswith(".ymcasf.org")):
+        return []
+    value = " ".join(visible_text.split())
+    if "Membership Types" not in value or "Monthly Fee" not in value or "join fee" not in value:
+        return []
+    specs = (
+        ("teen", "Teen Membership", r"\bTeen\b.{0,90}?Individuals ages 13-18", "youth", ["Ages 13–18"]),
+        ("young-adult", "Young Adult Membership", r"\bYoung Adult\b.{0,90}?Individuals ages 19-25", "age-restricted", ["Ages 19–25"]),
+        ("adult", "Adult Membership", r"\bAdult\b.{0,90}?Individuals ages 26-66", "standard-adult", ["Published adult band is ages 26–66"]),
+        ("active-older-adult", "Active Older Adult Membership", r"\bActive Older Adult\b.{0,90}?Individuals ages 67\+", "senior", ["Ages 67+"]),
+        ("single-adult-household", "Single Adult Household with Children", r"\bSingle Adult Household\b.{0,30}?with Children", "household", ["One adult plus dependent children"]),
+        ("dual-adult-household", "Dual Adult Household with No Children", r"\bDual Adult Household\b.{0,30}?with no Children", "household", ["Two adults in one household"]),
+        ("dual-adult-household-children", "Dual Adult Household with Children", r"\bDual Adult Household\b.{0,30}?with Children", "household", ["Two adults plus dependent children"]),
+    )
+    candidates: list[dict[str, Any]] = []
+    for product_id, name, identity_pattern, eligibility_type, restrictions in specs:
+        match = re.search(
+            identity_pattern
+            + r".{0,260}?Monthly Fee\s*\$?\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?)"
+            + r"\s*join fee\s*\$?\s*(?P<join>\d{1,4}(?:\.\d{1,2})?)",
+            value,
+            re.IGNORECASE,
+        )
+        if not match:
+            continue
+        amount = float(match.group("amount"))
+        join_fee = float(match.group("join"))
+        candidates.append(operator_visible_candidate(
+            source_url,
+            "ymca-sf-membership-table",
+            product_id,
+            name,
+            amount,
+            product_type="monthly",
+            cadence="month",
+            access_scope="YMCA of Greater San Francisco facilities",
+            scope_type="multi-location",
+            commitment_type="unknown",
+            eligibility_type=eligibility_type,
+            restrictions=restrictions,
+            fees=[{
+                "type": "enrollment",
+                "amount": join_fee,
+                "currency": "USD",
+                "cadence": "one-time",
+                "mandatory": True,
+            }],
+            raw_label=f"{name} ${amount:g}/month; ${join_fee:g} join fee",
+            exact_location_match="operator-market-multi-location",
+        ))
+    return candidates
 
 
 def orangetheory_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
@@ -1231,6 +1311,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or twenty_four_hour_visible_candidates(visible_text, source_url)
         or equinox_visible_candidates(visible_text, source_url)
         or planet_fitness_visible_candidates(visible_text, source_url)
+        or ymca_sf_visible_candidates(visible_text, source_url)
         or orangetheory_visible_candidates(visible_text, source_url)
         or approach_visible_candidates(visible_text, source_url)
         or independent_operator_visible_candidates(visible_text, source_url)
@@ -1930,6 +2011,15 @@ def reviewed_seed_routes(
         if platform_name(url) == "operator-site"
     }
 
+    def matches_operator_host(url: str) -> bool:
+        candidate_host = host_key(url)
+        return any(
+            candidate_host == reviewed_host
+            or candidate_host.endswith(f".{reviewed_host}")
+            or reviewed_host.endswith(f".{candidate_host}")
+            for reviewed_host in operator_hosts
+        )
+
     values: list[tuple[str, Any]] = [
         ("websiteUrl", gym.get("websiteUrl")),
         ("officialUrl", gym.get("officialUrl")),
@@ -1950,7 +2040,7 @@ def reviewed_seed_routes(
         )
         if (
             (exact_match or operator_wide)
-            and host_key(url) in operator_hosts
+            and matches_operator_host(url)
             and RESEARCH_PATH_RE.search(urlparse(url).path)
             and not RESEARCH_EXCLUDE_RE.search(urlparse(url).path)
         ):
@@ -1975,7 +2065,7 @@ def reviewed_seed_routes(
             continue
         source_field, url = normalized
         allowed = source_field in {"websiteUrl", "officialUrl"}
-        allowed = allowed or host_key(url) in operator_hosts or approved_booking_url(url)
+        allowed = allowed or matches_operator_host(url) or approved_booking_url(url)
         identity = request_identity(url)
         if not allowed or identity in seen:
             continue
@@ -2684,9 +2774,18 @@ def reconcile_selected_plan_price_audits(
 ) -> list[dict[str, Any]]:
     """Replace page-wide price flags with selected-plan-aware audit evidence."""
 
+    gym_list = list(gyms)
+    gyms_by_id = {text(gym.get("id")): gym for gym in gym_list}
     observations_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
+    observations_by_reviewed_source: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
     for observation in observations:
-        observations_by_gym[text(observation.get("gymId"))].append(observation)
+        gym_id = text(observation.get("gymId"))
+        observations_by_gym[gym_id].append(observation)
+        source_gym = gyms_by_id.get(gym_id, {})
+        operator_id = text(source_gym.get("operatorId") or source_gym.get("operatorKey"))
+        source_identity = request_identity(text(observation.get("sourceUrl")))
+        if operator_id and source_identity:
+            observations_by_reviewed_source[(operator_id, source_identity)].append(observation)
     attempts_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for attempt in attempts:
         if "requiresReviewBeforePriceAudit" in attempt:
@@ -2695,11 +2794,20 @@ def reconcile_selected_plan_price_audits(
         attempt.pop("selectedPlanPriceAuditStatus", None)
         attempt["priceChangeOver20Percent"] = False
         attempts_by_gym[text(attempt.get("gymId"))].append(attempt)
-    for gym in gyms:
+    for gym in gym_list:
         gym_attempts = attempts_by_gym.get(text(gym.get("id")), [])
         if not gym_attempts:
             continue
-        audit = audit_selected_plan_price(gym, observations_by_gym.get(text(gym.get("id")), []))
+        gym_id = text(gym.get("id"))
+        gym_observations = list(observations_by_gym.get(gym_id, []))
+        operator_id = text(gym.get("operatorId") or gym.get("operatorKey"))
+        reviewed_source = request_identity(text(gym.get("priceSourceUrl")))
+        if operator_id and reviewed_source:
+            for observation in observations_by_reviewed_source.get((operator_id, reviewed_source), []):
+                if text(observation.get("gymId")) == gym_id:
+                    continue
+                gym_observations.append({**observation, "gymId": gym_id})
+        audit = audit_selected_plan_price(gym, gym_observations)
         if not audit:
             continue
         root = next((item for item in gym_attempts if "reviewedSeedCount" in item), gym_attempts[0])
@@ -2748,7 +2856,7 @@ def crawl_gym(
                 )
                 if wait_for > 0:
                     time.sleep(wait_for)
-                result = fetch_page(url, timeout, cache.get(url))
+                result = fetch_page(url, timeout, conditional_cache_metadata(cache.get(url)))
                 last_domain_request[host] = time.monotonic()
                 if result.get("status") == "http-429":
                     domain_429_counts[host] = domain_429_counts.get(host, 0) + 1
@@ -2803,6 +2911,7 @@ def crawl_gym(
             "lastAttemptAt": attempted_at,
             "etag": result.get("etag", ""),
             "lastModified": result.get("lastModified", ""),
+            "parserVersion": PARSER_VERSION,
             "contentHash": digest,
             "candidates": offers,
             "linkedStorefronts": storefronts,
@@ -2872,6 +2981,7 @@ def crawl_gym(
             "lastAttemptAt": attempted_at,
             "etag": store_result.get("etag", ""),
             "lastModified": store_result.get("lastModified", ""),
+            "parserVersion": PARSER_VERSION,
             "contentHash": store_digest,
             "candidates": store_offers,
             "linkedStorefronts": nested,
