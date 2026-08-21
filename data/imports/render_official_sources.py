@@ -28,8 +28,13 @@ STATIC_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "official-crawl-observati
 ATTEMPTS_PATH = ROOT / "data" / "imports" / "rendered-crawl-attempts.json"
 OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 MAX_JSON_BYTES = 4_000_000
-PUBLIC_TAB_LABELS = {"membership", "memberships", "package", "packages", "pricing", "rates", "passes", "personal training"}
+PUBLIC_TAB_LABELS = {
+    "membership", "memberships", "package", "packages", "pricing", "rates", "passes", "personal training",
+    "monthly", "month-to-month", "flexible", "6-month", "12-month",
+}
+NEUTRAL_TERM_TAB_LABELS = ("monthly", "month-to-month", "flexible")
 PRICE_CARD_SELECTOR = "article, [role='listitem'], [class*='price' i], [class*='plan' i], [class*='membership' i], [class*='package' i]"
+PUBLIC_TAB_SELECTOR = "button, [role='tab'], a, label[for]"
 ACCESS_BLOCK_COOLDOWN_DAYS = 28
 RENDER_RESEARCH_PATH_RE = re.compile(
     r"/(?:pricing|prices|pricespolicies|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join)(?:/|$|[?#])",
@@ -340,6 +345,24 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     clicked_tabs: list[str] = []
     access_blocker = ""
     page_title = ""
+
+    def capture_visible_state() -> str:
+        try:
+            current_visible = page.locator("body").inner_text(timeout=timeout_ms)
+        except Exception:
+            return ""
+        visible_sources.append((page.url, current_visible))
+        for card in page.locator(PRICE_CARD_SELECTOR).all()[:250]:
+            try:
+                if not card.is_visible():
+                    continue
+                card_text = "\n".join(line.strip() for line in card.inner_text(timeout=300).splitlines() if line.strip())
+                if "$" in card_text and 8 <= len(card_text) <= 1_500:
+                    visible_card_sources.append((page.url, card_text))
+            except Exception:
+                continue
+        return current_visible
+
     try:
         page.goto(url, wait_until="commit", timeout=timeout_ms)
         # Crunch hydrates regular rates and plan-linked fee tables after its
@@ -347,7 +370,9 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         # early summary amounts from being mistaken for complete plan cards.
         platform = static_crawler.platform_name(url)
         dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "jane"}
-        page.wait_for_timeout(4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com")) else 1500)
+        page.wait_for_timeout(
+            4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com", "solidcore.co")) else 1500
+        )
         if static_crawler.platform_name(url) == "approach":
             choices: list[tuple[int, Any]] = []
             for button in page.locator("button").all()[:100]:
@@ -368,7 +393,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                             break
                     except Exception:
                         continue
-        for locator in page.locator("button, [role='tab'], a").all()[:150]:
+        for locator in page.locator(PUBLIC_TAB_SELECTOR).all()[:150]:
             try:
                 label = " ".join(locator.inner_text(timeout=300).split())
                 if is_safe_public_tab_label(label) and locator.is_visible():
@@ -378,8 +403,33 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     locator.click(timeout=1000)
                     page.wait_for_timeout(500)
                     clicked_tabs.append(label)
+                    capture_visible_state()
             except Exception:
                 continue
+        # React tab controls can invalidate handles collected before the first
+        # click. Reacquire the controls and finish on a neutral no-term option
+        # so the selected-plan audit never treats a commitment discount as the
+        # ordinary month-to-month price.
+        neutral_tab_activated = False
+        for neutral_label in NEUTRAL_TERM_TAB_LABELS:
+            for locator in page.locator(PUBLIC_TAB_SELECTOR).all()[:150]:
+                try:
+                    label = " ".join(locator.inner_text(timeout=300).split())
+                    if label.casefold() != neutral_label or not locator.is_visible():
+                        continue
+                    href = text(locator.get_attribute("href"))
+                    if not safe_public_tab_href(page.url, href):
+                        continue
+                    locator.click(timeout=1000)
+                    page.wait_for_timeout(750)
+                    clicked_tabs.append(label)
+                    capture_visible_state()
+                    neutral_tab_activated = True
+                    break
+                except Exception:
+                    continue
+            if neutral_tab_activated:
+                break
         if platform == "mindbody":
             category_options: list[tuple[str, str]] = []
             try:
@@ -455,18 +505,8 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     )
                 except Exception:
                     continue
-        visible = page.locator("body").inner_text(timeout=timeout_ms)
+        visible = capture_visible_state()
         page_title = page.title()
-        visible_sources.append((page.url, visible))
-        for card in page.locator(PRICE_CARD_SELECTOR).all()[:250]:
-            try:
-                if not card.is_visible():
-                    continue
-                card_text = "\n".join(line.strip() for line in card.inner_text(timeout=300).splitlines() if line.strip())
-                if "$" in card_text and 8 <= len(card_text) <= 1_500:
-                    visible_card_sources.append((page.url, card_text))
-            except Exception:
-                continue
         for frame in page.frames:
             if frame == page.main_frame or not allowed_network_response(url, text(frame.url)):
                 continue

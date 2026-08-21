@@ -1141,12 +1141,41 @@
     {
       "gymId": "osm-node-13185224799",
       "name": "[solidcore] Castro",
+      "url": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "58ea3dba2761903a6155153d177229c712edc1836db39a4b27c7883ccc6cf148",
+      "networkEvidenceHashes": [
+        "0bd376576228783771a69984d8a791f81fa458b13d54576e36355d304d92c7a1",
+        "99811aee56bf92251b893ccb2c3e8d7414f6533dbc5b44d8f96b32c5e0f02d9f"
+      ],
+      "clickedPublicTabs": [
+        "12-Month",
+        "6-Month",
+        "Monthly"
+      ],
+      "candidateCount": 16,
+      "requiresReview": true,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "name": "[solidcore] Castro",
       "url": "https://www.solidcore.co/ca/california/castro/",
-      "attemptedAt": "2026-08-20",
-      "status": "robots-disallowed",
-      "robotsStatus": "robots-http-403",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "f65d6f4004cecbb4a46d2961323a16e9943ba653f99740bbe6831db591eac101",
+      "networkEvidenceHashes": [],
+      "clickedPublicTabs": [],
       "candidateCount": 0,
-      "requiresReview": false
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
     {
       "gymId": "osm-node-13507740638",
@@ -3798,11 +3827,36 @@
     {
       "gymId": "osm-way-261268792",
       "name": "Flagship Training - Castro",
-      "url": "https://momence.com/Flagship/membership/New-Member-Promo---San-Francisco/236964",
-      "attemptedAt": "2026-08-20",
+      "url": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "robots-http-404",
-      "contentHash": "0ed1fe4d5de0c4f017a7671d76e0d30a11ce0f2a20856d4313ea305fdba47591",
+      "contentHash": "6fd6dbc18e30b0a36ae73daa22a7eab56c56d71286d0c4601d39a111e8665d13",
+      "networkEvidenceHashes": [
+        "420ad538341aba81f9316cc17ca083905f4236332131640b88524578ee00a147",
+        "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "7bc81a5a0bb8ef9e9a494edb3b420e1fe6b0e5ac185c27da61eae51cf5d32592",
+        "9ec7ae86b632a41982b5bf9c545a90641eb99e7d9296a8a0ea9f4de29f94bf09",
+        "a503345d68e94f6469231bce3734cb95db89fb35c70a0c22ffb6a8cccdc33d98",
+        "e82c4e7d969ab72786032313472701ed79f0bc7a6b3525ebc921c96fd8c4444b",
+        "ea676298fddd977d83d95e45e0ee6e03580181be99743e6742157dc4f227ca01",
+        "f3c952a49a2ea4a7e840455f5f1296240a9bcc8f7d2eac40825fd126ef1a7fcc"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 2,
+      "requiresReview": true,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-way-261268792",
+      "name": "Flagship Training - Castro",
+      "url": "https://momence.com/Flagship/membership/New-Member-Promo---San-Francisco/236964",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "robots-http-404",
+      "contentHash": "c44d4927bc5b31e6151db16cbfce43aa40f3d3aa5d36c8325baf029f6cbb83b0",
       "networkEvidenceHashes": [
         "420ad538341aba81f9316cc17ca083905f4236332131640b88524578ee00a147",
         "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
@@ -3816,6 +3870,7 @@
       "clickedPublicTabs": [],
       "candidateCount": 2,
       "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
@@ -3823,13 +3878,25 @@
       "gymId": "osm-way-261268792",
       "name": "Flagship Training - Castro",
       "url": "https://momence.com/m/239432",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "robots-http-404",
-      "contentHash": "abd9863bc8ed98a8b55d89b5fa1f93f006a8b43968b6ead6038f7c625cb028bd",
+      "contentHash": "7cd46d4eef7f1cf20641b40555644a74cbb75f0e17f29358040d8d74c87bd16b",
       "networkEvidenceHashes": [
+        "14703a882cfd61a3bd58f60a95ae42d0489304eb7e94208fad8936f7dbe37b77",
+        "216e5c8a2057bea16508d8ba57d5aeecb16029c588b37c20656ab766413fa48e",
+        "2c0b2817ffac3b1f1d5da070acce20a7332fedea1e17ca02aa6b8e74ba3f2f2e",
+        "420ad538341aba81f9316cc17ca083905f4236332131640b88524578ee00a147",
+        "4ea4fc15ca9c14782323743c4145f0d50e1dc07102b806789ffb06d0ca71593a",
         "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "76a2bff097b1c18d997fc8ef57cd279705487119cf51258e02d806e9c80294e9",
         "7bc81a5a0bb8ef9e9a494edb3b420e1fe6b0e5ac185c27da61eae51cf5d32592",
+        "996bfff2375f85e725bcf518ccaee9348347c23552a5744e27b40d8f79914a67",
+        "9ec7ae86b632a41982b5bf9c545a90641eb99e7d9296a8a0ea9f4de29f94bf09",
+        "a503345d68e94f6469231bce3734cb95db89fb35c70a0c22ffb6a8cccdc33d98",
+        "b5bea41b6c623f7c09f1bf24dcae58ebab3c0cdd90ad966bc43a45b44867e12b",
+        "b6319965a9291123a2e4d99e13c85b761e72a3c412c2eb695901e6eb35d3aa86",
+        "b726f865fd089a0abb66fb10fd8d08174bcc6d772aa3f6d6302ad1a34a6a53f9",
         "b7646531f5aafbbe25a6f2c3b0cf785f424b8173b3fd72e3f99ae248363a8bdf",
         "e82c4e7d969ab72786032313472701ed79f0bc7a6b3525ebc921c96fd8c4444b",
         "ea676298fddd977d83d95e45e0ee6e03580181be99743e6742157dc4f227ca01"
@@ -3837,6 +3904,7 @@
       "clickedPublicTabs": [],
       "candidateCount": 1,
       "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
@@ -3844,18 +3912,51 @@
       "gymId": "osm-way-261268792",
       "name": "Flagship Training - Castro",
       "url": "https://www.trainflagship.com/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "2888223e7e9a0cd6b86839c18c79e291b920a6cff685ea1488f2389c669f0aa2",
+      "contentHash": "3710e1e7d7d568b12c3512f2584f889c955412d9870ed200fbc6b34b1f568ef8",
       "networkEvidenceHashes": [
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
       ],
-      "clickedPublicTabs": [
-        "MEMBERSHIPS"
-      ],
-      "candidateCount": 4,
+      "clickedPublicTabs": [],
+      "candidateCount": 2,
       "requiresReview": true,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-way-261268792",
+      "name": "Flagship Training - Castro",
+      "url": "https://www.trainflagship.com/drop-in",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "df94a79f365624c5349e781f828bd39a0b089e83a059ad0f9ba9deba8b65f80a",
+      "networkEvidenceHashes": [
+        "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-way-261268792",
+      "name": "Flagship Training - Castro",
+      "url": "https://www.trainflagship.com/faq",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "0e6aa7f3ea46eb84fbd8b52d4c31bb558d73b1df824bb48613a6c921a3035fd1",
+      "networkEvidenceHashes": [],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },

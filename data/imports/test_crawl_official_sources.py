@@ -140,6 +140,101 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(adult["exactLocationMatch"], "operator-market-multi-location")
         self.assertFalse(any(item["amount"] == 340 for item in candidates))
 
+    def test_json_ld_product_preserves_billing_increment_and_product_identity(self) -> None:
+        payload = {
+            "@context": "https://schema.org",
+            "@graph": [{
+                "@type": "Product",
+                "name": "F45 Unlimited | Month to Month | Biweekly Autopay",
+                "offers": {
+                    "@type": "Offer",
+                    "priceCurrency": "USD",
+                    "price": 155,
+                    "priceSpecification": {
+                        "@type": "UnitPriceSpecification",
+                        "price": 155,
+                        "billingIncrement": 2,
+                        "unitCode": "WEEK",
+                        "eligibleQuantity": {
+                            "@type": "QuantitativeValue", "unitCode": "WEEK", "minValue": 6,
+                        },
+                    },
+                },
+            }],
+        }
+        candidates = crawler.structured_candidates(
+            [json.dumps(payload)], "https://f45training.com/studio/citycentersf/",
+        )
+        recurring = next(item for item in candidates if item["rawLabel"].startswith("F45 Unlimited"))
+
+        self.assertEqual((recurring["amount"], recurring["cadence"], recurring["intervalCount"]), (155, "WEEK", 2))
+        self.assertTrue(recurring["classAllowance"]["unlimited"])
+        self.assertEqual(recurring["commitment"]["minimumDays"], 42)
+        self.assertEqual(crawler.candidate_normalized_monthly(recurring), 335.83)
+
+        gym = {
+            "id": "f45", "monthlyPrice": 335.83, "selectedPlanId": "f45:plan:unlimited-biweekly",
+            "plans": [{
+                "id": "f45:plan:unlimited-biweekly", "sourceProductId": "unlimited-biweekly",
+                "name": "Unlimited Membership",
+                "classAllowance": {"count": None, "period": "month", "unlimited": True},
+                "billing": {"amount": 155, "normalizedMonthly": 335.83},
+                "evidence": {
+                    "url": "https://f45training.com/studio/citycentersf/", "rawLabel": "Unlimited Membership",
+                },
+            }],
+        }
+        audit = crawler.audit_selected_plan_price(gym, [{**recurring, "gymId": "f45"}])
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 335.83)
+
+    def test_visible_monthly_toggle_state_preserves_plan_label(self) -> None:
+        visible = """
+        MEMBERSHIPS Monthly
+        Monthly 4 Membership $145/mo* Auto-charged each month. Classes do not roll over month over month.
+        Monthly 8 Membership $255/mo* Auto-charged each month.
+        Monthly Unlimited Membership $385/mo* Max 1 class per day.
+        """
+        candidates = crawler.visible_candidates(
+            visible, "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+        )
+        four = next(item for item in candidates if item["amount"] == 145)
+
+        self.assertIn("Monthly 4 Membership", four["rawLabel"])
+        self.assertEqual(four["cadence"], "month")
+        gym = {
+            "id": "solidcore", "monthlyPrice": 145, "selectedPlanId": "solidcore:plan:four",
+            "plans": [{
+                "id": "solidcore:plan:four", "sourceProductId": "four-month-to-month",
+                "name": "4 Classes — Month-to-Month",
+                "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+                "billing": {"amount": 145, "normalizedMonthly": 145},
+                "evidence": {
+                    "url": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+                    "rawLabel": "4 Classes — Month-to-Month",
+                },
+            }],
+        }
+        audit = crawler.audit_selected_plan_price(gym, [{**four, "gymId": "solidcore"}])
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+
+    def test_solidcore_committed_tab_is_not_labeled_month_to_month(self) -> None:
+        visible = """
+        MEMBERSHIPS 12-Month
+        Committed+ 4 Membership $108/mo Save 25% with a 12-month commitment.
+        Committed+ 8 Membership $191/mo Save 25% with a 12-month commitment.
+        Committed+ Unlimited Membership $288/mo Save 25% with a 12-month commitment.
+        Committed+ Travel Monthly Unlimited $315/mo Save 25% with a 12-month commitment.
+        """
+
+        candidates = crawler.solidcore_visible_candidates(
+            visible, "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+        )
+
+        self.assertEqual(candidates, [])
+
     def test_official_url_without_website_is_still_a_crawl_seed(self) -> None:
         gym = {"officialUrl": "https://operator.example/location/sf", "monthlyPrice": None}
         self.assertTrue(crawler.should_crawl(gym, {}, "full", datetime(2026, 8, 21)))
@@ -537,6 +632,69 @@ class OfficialCrawlerTests(unittest.TestCase):
 
         self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "matched-within-threshold")
         self.assertEqual(attempts[1]["selectedPlanPriceAuditStatus"], "selected-plan-not-observed")
+
+    def test_selected_plan_audit_accepts_matching_product_from_public_platform_api(self) -> None:
+        gym = {
+            "id": "flagship", "monthlyPrice": 128.92, "selectedPlanId": "flagship:plan:weekly",
+            "priceSourceUrl": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+            "plans": [{
+                "id": "flagship:plan:weekly", "sourceProductId": "237774", "name": "1x per Week",
+                "billing": {"amount": 119, "normalizedMonthly": 128.92},
+                "evidence": {
+                    "url": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+                    "rawLabel": "1x per Week",
+                },
+            }],
+        }
+        observation = {
+            "gymId": "flagship", "sourceProductId": "237774", "amount": 119,
+            "rawLabel": "1x per Week", "cadence": "week", "intervalCount": 1,
+            "promotion": {"isPromotion": False},
+            "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/237774",
+        }
+
+        audit = crawler.audit_selected_plan_price(gym, [observation])
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["sourceProductId"], "237774")
+
+        observation["sourceProductId"] = "different-product"
+        self.assertEqual(
+            crawler.audit_selected_plan_price(gym, [observation])["status"],
+            "selected-plan-not-observed",
+        )
+
+    def test_reconcile_shares_public_platform_api_product_for_same_declared_source(self) -> None:
+        price_source = "https://momence.com/Flagship/membership/1x-per-Week/237774"
+        gyms = [
+            {
+                "id": gym_id, "operatorId": "flagship", "priceSourceUrl": price_source,
+                "monthlyPrice": 128.92, "selectedPlanId": f"{gym_id}:plan:weekly",
+                "plans": [{
+                    "id": f"{gym_id}:plan:weekly", "sourceProductId": "237774", "name": "1x per Week",
+                    "billing": {"amount": 119, "normalizedMonthly": 128.92},
+                    "evidence": {"url": price_source, "rawLabel": "1x per Week"},
+                }],
+            }
+            for gym_id in ("castro", "marina")
+        ]
+        attempts = [
+            {"gymId": gym["id"], "url": price_source, "reviewedSeedCount": 1, "requiresReview": False}
+            for gym in gyms
+        ]
+        observations = [{
+            "gymId": "castro", "sourceProductId": "237774", "amount": 119,
+            "rawLabel": "1x per Week", "cadence": "week", "intervalCount": 1,
+            "promotion": {"isPromotion": False},
+            "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/237774",
+        }]
+
+        crawler.reconcile_selected_plan_price_audits(gyms, attempts, observations)
+
+        self.assertEqual(
+            [attempt["selectedPlanPriceAuditStatus"] for attempt in attempts],
+            ["matched-within-threshold", "matched-within-threshold"],
+        )
 
     def test_selected_plan_label_match_rejects_multi_price_visible_snippet(self) -> None:
         selected = {"name": "Unlimited Month-to-Month", "sourceProductId": ""}

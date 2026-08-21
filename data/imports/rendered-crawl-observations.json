@@ -2364,6 +2364,506 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 26.0,
+      "currency": "USD",
+      "rawLabel": "* Buy Expires 40 days. *subject to tax Power30 Single Class $26",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 43.0,
+      "currency": "USD",
+      "rawLabel": "* $39/class Buy Expires 45 days. *subject to tax Single Class $43",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 108.0,
+      "currency": "USD",
+      "rawLabel": "commit to longer. Take 25% off when you commit to 12 months. 25% off membership Committed+ 4/mo. Membership $108/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "commit to longer. Take 25% off when you commit to 12 months. 25% off membership Committed+ 4/mo. Membership $108/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 123.0,
+      "currency": "USD",
+      "rawLabel": "rsion of yourself and enjoy a reduced-rate 6-month membership. 15% off membership Committed 4/mo. Membership $123/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "rsion of yourself and enjoy a reduced-rate 6-month membership. 15% off membership Committed 4/mo. Membership $123/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 145.0,
+      "currency": "USD",
+      "rawLabel": "Monthly 4 Membership",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-plan-cards",
+      "adapter": "solidcore",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 191.0,
+      "currency": "USD",
+      "rawLabel": "l over month over month. 12-month commitment. *subject to tax 25% off membership Committed+ 8/mo. Membership $191/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "l over month over month. 12-month commitment. *subject to tax 25% off membership Committed+ 8/mo. Membership $191/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 195.0,
+      "currency": "USD",
+      "rawLabel": "* $37/class Buy Expires 90 days. *subject to tax Save 9% vs. single class 5-class pack $195",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "* $37/class Buy Expires 90 days. *subject to tax Save 9% vs. single class 5-class pack $195"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 216.0,
+      "currency": "USD",
+      "rawLabel": "oll over month over month. 6-month commitment. *subject to tax 15% off membership Committed 8/mo. Membership $216/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "oll over month over month. 6-month commitment. *subject to tax 15% off membership Committed 8/mo. Membership $216/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 255.0,
+      "currency": "USD",
+      "rawLabel": "Monthly 8 Membership",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-plan-cards",
+      "adapter": "solidcore",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 288.0,
+      "currency": "USD",
+      "rawLabel": "over month over month. 12-month commitment. *subject to tax 25% off membership Committed+ Monthly Unlimited $288/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "over month over month. 12-month commitment. *subject to tax 25% off membership Committed+ Monthly Unlimited $288/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 315.0,
+      "currency": "USD",
+      "rawLabel": "rged each month. 12-month commitment. *subject to tax 25% off membership Committed+ Travel Monthly Unlimited $315/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "rged each month. 12-month commitment. *subject to tax 25% off membership Committed+ Travel Monthly Unlimited $315/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 327.0,
+      "currency": "USD",
+      "rawLabel": "th over month. 6-month commitment. *subject to tax 15% off membership Committed Monthly Unlimited Membership $327/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "th over month. 6-month commitment. *subject to tax 15% off membership Committed Monthly Unlimited Membership $327/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 357.0,
+      "currency": "USD",
+      "rawLabel": "harged each month. 6-month commitment. *subject to tax 15% off membership Committed Travel Monthly Unlimited $357/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "harged each month. 6-month commitment. *subject to tax 15% off membership Committed Travel Monthly Unlimited $357/mo"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "amount": 370.0,
+      "currency": "USD",
+      "rawLabel": "to tax PACKAGES Create the strongest version of you, one class at a time. Save 14% vs. single class 10-class pack $370",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "to tax PACKAGES Create the strongest version of you, one class at a time. Save 14% vs. single class 10-class pack $370"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 385.0,
+      "currency": "USD",
+      "rawLabel": "Monthly Unlimited Membership",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-plan-cards",
+      "adapter": "solidcore",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13185224799",
+      "gymName": "[solidcore] Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "",
+      "amount": 420.0,
+      "currency": "USD",
+      "rawLabel": "Travel Monthly Unlimited",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "method": "visible-plan-cards",
+      "adapter": "solidcore",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "osm-node-13712240860",
       "gymName": "Fog City Community Fitness",
       "capturedAt": "2026-08-20",
@@ -7760,37 +8260,7 @@
     {
       "gymId": "osm-way-261268792",
       "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
-      "sourceProductId": "236964",
-      "amount": 189.0,
-      "currency": "USD",
-      "rawLabel": "New Member Promo",
-      "cadence": "",
-      "productType": "offer",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": true,
-        "label": "New Member Promo"
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "rendered-public-json",
-      "adapter": "momence",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/236964",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-way-261268792",
-      "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "sourceProductId": "236964",
       "amount": 189.0,
       "currency": "usd",
@@ -7827,17 +8297,45 @@
     {
       "gymId": "osm-way-261268792",
       "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
-      "sourceProductId": "239432",
-      "amount": 19.0,
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "236964",
+      "amount": 189.0,
       "currency": "USD",
-      "rawLabel": "2 Classes For $20 (Prospective First Time Members)",
+      "rawLabel": "New Member Promo",
       "cadence": "",
       "productType": "offer",
-      "classAllowance": {
-        "count": 2.0,
-        "period": "month"
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "New Member Promo"
       },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "public-platform-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/236964",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-way-261268792",
+      "gymName": "Flagship Training - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "237774",
+      "amount": 119.0,
+      "currency": "usd",
+      "rawLabel": "1x per Week",
+      "cadence": "week",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": null,
       "promotion": {
         "isPromotion": false,
         "label": ""
@@ -7850,7 +8348,80 @@
         "type": "unknown",
         "minimumMonths": null
       },
-      "method": "rendered-public-json",
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "public-momence-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/237774",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-way-261268792",
+      "gymName": "Flagship Training - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "237774",
+      "amount": 119.0,
+      "currency": "USD",
+      "rawLabel": "1x per Week",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "public-platform-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/237774",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-way-261268792",
+      "gymName": "Flagship Training - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "239432",
+      "amount": 19.0,
+      "currency": "usd",
+      "rawLabel": "2 Classes For $20 (Prospective First Time Members)",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 2.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "public-momence-json",
       "adapter": "momence",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
@@ -7860,45 +8431,19 @@
     {
       "gymId": "osm-way-261268792",
       "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
-      "amount": 36.0,
+      "capturedAt": "2026-08-21",
+      "amount": 20.0,
       "currency": "USD",
-      "rawLabel": "every 4 weeks 10-PACK $ 325 CLICK TO JOIN 3-Pack - $105 5-Pack - $167 OTHER OPTIONS $36 Single Drop-In",
+      "rawLabel": "ity, Community. TRIAL MONTH - $189! SF RESIDENTS INTERESTED IN JOINING: TRY 2 CLASSES FOR $20! Visiting SF? Book a DROP-IN",
       "cadence": "visit",
       "productType": "drop-in",
-      "classAllowance": null,
+      "classAllowance": {
+        "count": 2.0,
+        "period": "month"
+      },
       "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.trainflagship.com/membership-sf",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-way-261268792",
-      "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
-      "amount": 36.0,
-      "currency": "USD",
-      "rawLabel": "reset every 4 weeks 10-PACK $ 325 CLICK TO JOIN 3-Pack - $105 5-Pack - $167 OTHER OPTIONS $36 Single Drop-In",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
+        "isPromotion": true,
+        "label": "ity, Community. TRIAL MONTH - $189! SF RESIDENTS INTERESTED IN JOINING: TRY 2 CLASSES FOR $20! Visiting SF? Book a DROP-IN"
       },
       "eligibility": {
         "type": "standard-adult",
@@ -7912,53 +8457,26 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.trainflagship.com/membership-sf",
+      "sourceUrl": "https://www.trainflagship.com/",
       "autoPublishEligible": false,
-      "cardHash": "3791164c324ead393b846b8d3c7083f39d3eea3598cb255ad85f866209d90941"
+      "cardAssociationHash": "b9d6fa19e7964616cea1abce255f68072be26f34662bf1c0621edf19327c63ff"
     },
     {
       "gymId": "osm-way-261268792",
       "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
-      "amount": 104.0,
+      "capturedAt": "2026-08-21",
+      "amount": 20.0,
       "currency": "USD",
-      "rawLabel": "4 weeks 10-PACK $ 325 CLICK TO JOIN 3-Pack - $105 5-Pack - $167 OTHER OPTIONS $36 Single Drop-In $104",
+      "rawLabel": "y, Community. TRIAL MONTH - $189! SF RESIDENTS INTERESTED IN JOINING: TRY 2 CLASSES FOR $20! Visiting SF? Book a DROP-IN",
       "cadence": "visit",
       "productType": "drop-in",
-      "classAllowance": null,
+      "classAllowance": {
+        "count": 2.0,
+        "period": "month"
+      },
       "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "rendered-visible-plan-card",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.trainflagship.com/membership-sf",
-      "autoPublishEligible": false,
-      "cardHash": "3791164c324ead393b846b8d3c7083f39d3eea3598cb255ad85f866209d90941"
-    },
-    {
-      "gymId": "osm-way-261268792",
-      "gymName": "Flagship Training - Castro",
-      "capturedAt": "2026-08-20",
-      "amount": 104.0,
-      "currency": "USD",
-      "rawLabel": "ks 10-PACK $ 325 CLICK TO JOIN 3-Pack - $105 5-Pack - $167 OTHER OPTIONS $36 Single Drop-In $104",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
+        "isPromotion": true,
+        "label": "y, Community. TRIAL MONTH - $189! SF RESIDENTS INTERESTED IN JOINING: TRY 2 CLASSES FOR $20! Visiting SF? Book a DROP-IN"
       },
       "eligibility": {
         "type": "standard-adult",
@@ -7972,7 +8490,7 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.trainflagship.com/membership-sf",
+      "sourceUrl": "https://www.trainflagship.com/",
       "autoPublishEligible": false
     },
     {

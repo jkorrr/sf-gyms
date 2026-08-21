@@ -39,8 +39,13 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertTrue(rendered.is_safe_public_tab_label("Memberships"))
         self.assertTrue(rendered.is_safe_public_tab_label(" Packages "))
         self.assertTrue(rendered.is_safe_public_tab_label("Personal Training"))
+        self.assertTrue(rendered.is_safe_public_tab_label("Monthly"))
+        self.assertTrue(rendered.is_safe_public_tab_label("12-Month"))
+        self.assertTrue(rendered.is_safe_public_tab_label("Flexible"))
         self.assertFalse(rendered.is_safe_public_tab_label("Join now"))
+        self.assertFalse(rendered.is_safe_public_tab_label("Buy"))
         self.assertFalse(rendered.is_safe_public_tab_label("Create account"))
+        self.assertIn("label[for]", rendered.PUBLIC_TAB_SELECTOR)
 
     def test_mindbody_category_selector_avoids_account_and_gift_actions(self) -> None:
         self.assertTrue(rendered.is_safe_mindbody_category_label("In Studio Memberships"))

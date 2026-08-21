@@ -40,7 +40,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v2"
+PARSER_VERSION = "selected-plan-catalog-v3"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -385,6 +385,82 @@ def structured_candidates(json_blocks: list[str], source_url: str, method: str =
         for node in walk_json(parsed):
             node_type = node.get("@type") or node.get("type")
             types = {text(item).casefold() for item in node_type} if isinstance(node_type, list) else {text(node_type).casefold()}
+            if method == "json-ld" and "product" in types:
+                product_label = text(
+                    node.get("name") or node.get("title") or node.get("label") or node.get("productName")
+                ) or text(node.get("description"))
+                offer_value = node.get("offers")
+                offers = offer_value if isinstance(offer_value, list) else [offer_value]
+                for offer in offers:
+                    if not isinstance(offer, dict):
+                        continue
+                    specification_value = offer.get("priceSpecification")
+                    specifications = specification_value if isinstance(specification_value, list) else [specification_value]
+                    billing_nodes = [item for item in specifications if isinstance(item, dict)] or [offer]
+                    for billing_node in billing_nodes:
+                        amount = numeric(
+                            next(
+                                (
+                                    billing_node.get(key)
+                                    for key in ("price", "amount", "unitAmount", "priceAmount")
+                                    if billing_node.get(key) is not None
+                                ),
+                                offer.get("price"),
+                            )
+                        )
+                        if amount is None or amount <= 0 or amount > 2000:
+                            continue
+                        cadence = text(
+                            billing_node.get("unitCode")
+                            or billing_node.get("billingDuration")
+                            or billing_node.get("billingPeriod")
+                            or billing_node.get("interval")
+                            or billing_node.get("frequency")
+                        )
+                        interval_count = numeric(
+                            billing_node.get("billingIncrement")
+                            or billing_node.get("billingIntervalCount")
+                            or billing_node.get("intervalCount")
+                        )
+                        metadata = candidate_metadata(product_label, cadence)
+                        eligible_quantity = billing_node.get("eligibleQuantity")
+                        if isinstance(eligible_quantity, dict):
+                            minimum_value = numeric(eligible_quantity.get("minValue"))
+                            minimum_unit = text(eligible_quantity.get("unitCode")).casefold()
+                            if minimum_value and minimum_unit in {"day", "week", "month"}:
+                                minimum_days = minimum_value * {"day": 1, "week": 7, "month": 30}[minimum_unit]
+                                metadata["commitment"] = {
+                                    "type": "minimum-term",
+                                    "minimumMonths": minimum_value if minimum_unit == "month" else None,
+                                    "minimumDays": minimum_days,
+                                }
+                        candidate = {
+                            "sourceProductId": text(
+                                billing_node.get("@id")
+                                or billing_node.get("id")
+                                or offer.get("@id")
+                                or offer.get("id")
+                                or node.get("@id")
+                                or node.get("id")
+                                or node.get("sku")
+                            ),
+                            "amount": amount,
+                            "currency": text(
+                                billing_node.get("priceCurrency") or offer.get("priceCurrency")
+                            ) or "USD",
+                            "rawLabel": normalized_label(product_label),
+                            "cadence": normalized_label(cadence),
+                            **metadata,
+                            "method": method,
+                            "adapter": platform_name(source_url),
+                            "evidenceTier": "official-public",
+                            "exactLocationMatch": "candidate",
+                            "sourceUrl": source_url,
+                            "autoPublishEligible": False,
+                        }
+                        if interval_count is not None and interval_count > 0:
+                            candidate["intervalCount"] = interval_count
+                        candidates.append(candidate)
             price_keys = ("price", "lowPrice", "amount", "unitAmount", "priceAmount")
             if method == "json-ld" and not types.intersection({"offer", "aggregateoffer", "unitpricespecification", "product"}):
                 continue
@@ -1305,6 +1381,66 @@ def perform_for_golf_plan_descriptors(visible_text: str, source_url: str) -> lis
     return []
 
 
+def solidcore_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Parse solidcore's public month-to-month tab without mixing term discounts.
+
+    The page defaults to a 12-month discount and changes the same cards when
+    the public ``Monthly`` tab is activated.  Candidate identity therefore
+    comes from the visible plan title, allowance and attached ``/mo`` amount,
+    never from a page-wide dollar regex.
+    """
+
+    if not hostname(source_url).endswith("solidcore.co"):
+        return []
+    compact = " ".join(visible_text.split())
+    # The 12-month and month-to-month tabs reuse nearly identical card names.
+    # Require the neutral tab's complete plan vocabulary before interpreting
+    # any amount as month-to-month; otherwise ``Travel Monthly Unlimited`` on
+    # the default committed tab can look like an ordinary monthly plan.
+    neutral_plan_markers = (
+        "monthly 4 membership",
+        "monthly 8 membership",
+        "monthly unlimited membership",
+    )
+    if not all(marker in compact.casefold() for marker in neutral_plan_markers):
+        return []
+    plan_re = re.compile(
+        r"\b(?P<name>Monthly\s+(?:(?P<count>4|8)\s+Membership|Unlimited\s+Membership)"
+        r"|Travel\s+Monthly\s+Unlimited)\s+\$\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?)\s*/\s*mo\b",
+        re.IGNORECASE,
+    )
+    candidates: list[dict[str, Any]] = []
+    for match in plan_re.finditer(compact):
+        name = normalized_label(match.group("name"))
+        count = numeric(match.group("count"))
+        unlimited = "unlimited" in name.casefold()
+        candidates.append(
+            {
+                "sourceProductId": "",
+                "amount": float(match.group("amount")),
+                "currency": "USD",
+                "rawLabel": name,
+                "cadence": "month",
+                "productType": "monthly",
+                "classAllowance": {
+                    "count": count,
+                    "period": "month",
+                    "unlimited": unlimited,
+                },
+                "promotion": {"isPromotion": False, "label": ""},
+                "eligibility": {"type": "standard-adult", "restrictions": []},
+                "commitment": {"type": "month-to-month", "minimumMonths": None},
+                "method": "visible-plan-cards",
+                "adapter": "solidcore",
+                "evidenceTier": "official-public",
+                "exactLocationMatch": "candidate",
+                "sourceUrl": source_url,
+                "autoPublishEligible": False,
+            }
+        )
+    return candidates
+
+
 def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     specialized = (
         crunch_visible_candidates(visible_text, source_url)
@@ -1316,6 +1452,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or approach_visible_candidates(visible_text, source_url)
         or independent_operator_visible_candidates(visible_text, source_url)
         or perform_for_golf_plan_descriptors(visible_text, source_url)
+        or solidcore_visible_candidates(visible_text, source_url)
     )
     candidates: list[dict[str, Any]] = list(specialized)
     candidates.extend(visible_cost_context_candidates(visible_text, source_url))
@@ -2680,13 +2817,20 @@ def audit_selected_plan_price(
         }
     selected_billing = selected.get("billing") or {}
     selected_raw_amount = numeric(selected_billing.get("amount"))
-    selected_urls = {
-        request_identity(url)
+    selected_source_product_id = text(selected.get("sourceProductId"))
+    selected_source_url_values = tuple(
+        url
         for url in (
             text((selected.get("evidence") or {}).get("url")),
             text(gym.get("priceSourceUrl")),
         )
         if url
+    )
+    selected_urls = {
+        request_identity(url) for url in selected_source_url_values
+    }
+    selected_public_platforms = {
+        platform_name(url) for url in selected_source_url_values if platform_name(url) != "operator-site"
     }
     matches: list[dict[str, Any]] = []
     for candidate in observations:
@@ -2694,7 +2838,13 @@ def audit_selected_plan_price(
             continue
         source_url = text(candidate.get("sourceUrl"))
         if selected_urls and source_url and request_identity(source_url) not in selected_urls:
-            continue
+            stable_public_platform_product = (
+                bool(selected_source_product_id)
+                and text(candidate.get("sourceProductId")) == selected_source_product_id
+                and platform_name(source_url) in selected_public_platforms
+            )
+            if not stable_public_platform_product:
+                continue
         promotion = candidate.get("promotion") or {}
         eligibility = candidate.get("eligibility") or {}
         if promotion.get("isPromotion") or text(eligibility.get("type")) in {
@@ -2778,6 +2928,7 @@ def reconcile_selected_plan_price_audits(
     gyms_by_id = {text(gym.get("id")): gym for gym in gym_list}
     observations_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
     observations_by_reviewed_source: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
+    observations_by_declared_source: dict[tuple[str, str], list[dict[str, Any]]] = defaultdict(list)
     for observation in observations:
         gym_id = text(observation.get("gymId"))
         observations_by_gym[gym_id].append(observation)
@@ -2786,6 +2937,9 @@ def reconcile_selected_plan_price_audits(
         source_identity = request_identity(text(observation.get("sourceUrl")))
         if operator_id and source_identity:
             observations_by_reviewed_source[(operator_id, source_identity)].append(observation)
+        declared_source_identity = request_identity(text(source_gym.get("priceSourceUrl")))
+        if operator_id and declared_source_identity:
+            observations_by_declared_source[(operator_id, declared_source_identity)].append(observation)
     attempts_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for attempt in attempts:
         if "requiresReviewBeforePriceAudit" in attempt:
@@ -2803,7 +2957,15 @@ def reconcile_selected_plan_price_audits(
         operator_id = text(gym.get("operatorId") or gym.get("operatorKey"))
         reviewed_source = request_identity(text(gym.get("priceSourceUrl")))
         if operator_id and reviewed_source:
-            for observation in observations_by_reviewed_source.get((operator_id, reviewed_source), []):
+            shared_observations = (
+                observations_by_reviewed_source.get((operator_id, reviewed_source), [])
+                + observations_by_declared_source.get((operator_id, reviewed_source), [])
+            )
+            seen_shared_observations: set[int] = set()
+            for observation in shared_observations:
+                if id(observation) in seen_shared_observations:
+                    continue
+                seen_shared_observations.add(id(observation))
                 if text(observation.get("gymId")) == gym_id:
                     continue
                 gym_observations.append({**observation, "gymId": gym_id})
