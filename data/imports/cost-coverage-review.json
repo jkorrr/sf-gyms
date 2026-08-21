@@ -57,9 +57,9 @@
           "candidateCount": 0
         },
         {
-          "url": "https://link.24go.co/TIh6r00EI1",
+          "url": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
           "status": "rendered",
-          "candidateCount": 3
+          "candidateCount": 6
         }
       ]
     },
@@ -121,7 +121,7 @@
         {
           "url": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport",
           "status": "rendered",
-          "candidateCount": 3
+          "candidateCount": 6
         }
       ]
     },
@@ -183,7 +183,7 @@
         {
           "url": "https://www.24hourfitness.com/gyms/san-francisco-ca/sutter-montgomery-sport",
           "status": "rendered",
-          "candidateCount": 3
+          "candidateCount": 6
         }
       ]
     },
@@ -245,7 +245,7 @@
         {
           "url": "https://www.24hourfitness.com/gyms/san-francisco-ca/van-ness-sport",
           "status": "rendered",
-          "candidateCount": 3
+          "candidateCount": 6
         }
       ]
     },
@@ -310,13 +310,13 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/ASP/main_appts.asp?studioid=7487",
-          "status": "access-blocked",
+          "url": "https://active-pilates.com/rates/",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/home?studioid=7487",
-          "status": "access-blocked",
+          "url": "https://active-pilates.com/rates/specials/",
+          "status": "rendered",
           "candidateCount": 0
         }
       ]
@@ -471,6 +471,11 @@
           "url": "https://www.crossfitalinea.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.crossfitalinea.com/memberships",
+          "status": "rendered",
+          "candidateCount": 6
         }
       ]
     },
@@ -703,6 +708,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://astayoga.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://astayoga.com/rates",
           "status": "rendered",
           "candidateCount": 3
@@ -710,12 +720,12 @@
         {
           "url": "https://momence.com/AstaYoga/membership/Unlimited-Membership-(No-Auto-Renewal)/72936",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 2
         },
         {
           "url": "https://momence.com/m/20903",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 2
         },
         {
           "url": "https://momence.com/m/21061",
@@ -880,29 +890,64 @@
           "candidateCount": 0
         },
         {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/contact",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/gallery",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 0
         },
         {
           "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/instructors",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing",
           "status": "rendered",
           "candidateCount": 1
         },
         {
           "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/schedule",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 0
+        },
+        {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/signup",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/signup/v/contact",
+          "status": "rendered",
+          "candidateCount": 0
         },
         {
           "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/signup/v/l7pb4",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 2
+        },
+        {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/signup?membership=151583&type=2",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://back-to-sports-fitness-and-therapy.gymdesk.com/signup?membership=167451&type=2",
+          "status": "rendered",
+          "candidateCount": 0
         },
         {
           "url": "https://backtosports.com/",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 0
         }
       ]
     },
@@ -950,6 +995,11 @@
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/bakar-fitness-center-ucsf-mission-bay",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
+          "status": "rendered",
+          "candidateCount": 6
         }
       ]
     },
@@ -1032,6 +1082,11 @@
           "url": "https://www.barrys.com/sv/pricing/castro",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "rendered",
+          "candidateCount": 17
         },
         {
           "url": "https://www.barrys.com/studio/castro/",
@@ -1118,6 +1173,11 @@
         {
           "url": "https://www.barrys.com/sv/pricing/fidi",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1213,7 +1273,62 @@
           "candidateCount": 0
         },
         {
+          "url": "https://app.barrys.com/pricing?location=10298",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/ar/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/da/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/es/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/es/pricing/san-francisco-marina?0a1118d2_page=2",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/fr/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/it/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/pricing/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/pricing/san-francisco-marina?0a1118d2_page=2",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/pricing/san-francisco-marina?40dddf7b_page=2",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.barrys.com/studio/san-francisco-marina",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.barrys.com/sv/pricing/san-francisco-marina",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -1257,6 +1372,11 @@
         {
           "url": "https://www.bayclubs.com/sf-campus",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1307,6 +1427,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayclubs.com/clubs/thegateway",
           "status": "rendered",
           "candidateCount": 0
@@ -1351,6 +1476,11 @@
         {
           "url": "https://www.bayclubs.com/sf-campus",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://join.bayclubs.com/shared/membership-builder",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -1403,6 +1533,16 @@
         {
           "url": "https://www.bayjiujitsu.com/locations",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=-2&subTab=info",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.bayjiujitsu.com/adults",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -1476,6 +1616,11 @@
           "url": "https://www.ymcasf.org/location/bayview-hunters-point-ymca/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -1553,8 +1698,8 @@
         },
         {
           "url": "https://www.beachglasshyp.com/",
-          "status": "rendered",
-          "candidateCount": 3
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -1679,6 +1824,11 @@
           "url": "https://www.bhaktisf.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.bhaktisf.com/schedule",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -1753,22 +1903,22 @@
           "candidateCount": 6
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?fl=true&tabID=7",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-7&sView=day&sLoc=0",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-8&sTG=8&sVT=9&sView=day&sLoc=0",
+          "url": "https://www.bijayoga.com/contact-4",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://www.bijayoga.com/",
+          "url": "https://www.bijayoga.com/our-teachers",
           "status": "access-blocked",
           "candidateCount": 0
         }
@@ -1830,7 +1980,27 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=42&sLoc=0&giftCardID=10114",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://hotyogaplus-sf.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://hotyogaplus-sf.com/class-descriptions/",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -1878,7 +2048,12 @@
         },
         {
           "url": "https://www.bilikyoga.com/",
-          "status": "rendered",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.bilikyoga.com/book-online",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -2019,23 +2194,58 @@
           "candidateCount": 0
         },
         {
+          "url": "https://bodytempyoga.com/memberships",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://bodytempyoga.com/pricing",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://marianatek.com/?ref_noscript",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.bodytempyoga.com/memberships",
           "status": "rendered",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://www.marianatek.com/?ref_noscript#content",
+          "url": "https://www.marianatek.com/?ref_noscript",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.marianatek.com/barre-studio-software/",
           "status": "rendered",
           "candidateCount": 0
         },
         {
           "url": "https://www.marianatek.com/book-a-demo/",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.marianatek.com/cookie-list/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.marianatek.com/features/business-management/",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.marianatek.com/features/customer-experience/",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -2094,6 +2304,21 @@
           "url": "https://bodytonicsfonline.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://bodytonicsfonline.com/rates",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://momence.com/m/574928",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://momence.com/m/844522",
+          "status": "rendered",
+          "candidateCount": 3
         }
       ]
     },
@@ -2140,6 +2365,11 @@
         {
           "url": "https://bodyrok.com/studio/haight/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=23335&stype=41",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -2188,6 +2418,11 @@
           "url": "https://bodyrok.com/studio/fidi/",
           "status": "rendered",
           "candidateCount": 3
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=23335&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -2234,6 +2469,11 @@
         {
           "url": "https://bodyrok.com/studio/marina/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=23335&stype=41",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -2299,12 +2539,22 @@
           "candidateCount": 3
         },
         {
-          "url": "https://clients.mindbodyonline.com/app/business/classic/ws?studioid=42901&stype=43&prodid=10320",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=42901&stype=41&sTG=2&prodId=10281",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://www.brightstarpilates.com/",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=42901&stype=41&sTG=43",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.brightstarpilates.com/know-before-you-go",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.brightstarpilates.com/pricing",
           "status": "access-blocked",
           "candidateCount": 0
         }
@@ -2390,6 +2640,11 @@
         {
           "url": "https://www.cmasf.com/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.cmasf.com/pricing",
+          "status": "rendered",
           "candidateCount": 5
         }
       ]
@@ -2441,6 +2696,16 @@
         },
         {
           "url": "https://castro-fitness.com/",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://castro-fitness.com/membership-agreement/",
+          "status": "rendered",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://castro-fitness.com/memberships/",
           "status": "rendered",
           "candidateCount": 1
         }
@@ -2501,6 +2766,11 @@
         },
         {
           "url": "https://www.graciesanfrancisco.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.graciesanfrancisco.com/schedule/",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -2939,7 +3209,22 @@
         {
           "url": "https://www.thecitycrossfit.com/",
           "status": "rendered",
-          "candidateCount": 6
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/drop-in",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/memberships",
+          "status": "rendered",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://www.thecitycrossfit.com/schedule",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -2981,6 +3266,11 @@
         {
           "url": "https://citysportsfitness.com/pages/clubhome.aspx?clubid=914",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://citysportsfitness.com/Pages/MembershipSignUpSearch.aspx",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -3067,12 +3357,37 @@
         },
         {
           "url": "https://members.clubpilates.com",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://members.clubpilates.com/refer",
+          "url": "https://members.clubpilates.com/api/locations/clubpilates-soma-ca/package_details/9f5816a4-056d-4ce8-ad21-c2274e0d9b58",
           "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.clubpilates.com/api/locations/clubpilates-soma-ca/package_details/d2e5e3c4-a338-4ca5-93bd-ae7eb290968f",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.clubpilates.com/api/locations/clubpilates-soma-ca/package_details/e91563f9-9ad3-437c-8b7f-e1efaa0007aa",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://members.clubpilates.com/api/locations/clubpilates-soma-ca/package_details/f6096570-c20c-4a25-83e1-0197cf68fdc9",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.clubpilates.com/api/locations/clubpilates-soma-ca/packages",
+          "status": "rendered",
+          "candidateCount": 5
+        },
+        {
+          "url": "https://members.clubpilates.com/refer",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -3178,6 +3493,11 @@
           "url": "https://thecoremvmt.com/location/castro/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+          "status": "robots-disallowed",
+          "candidateCount": 0
         }
       ]
     },
@@ -3237,14 +3557,14 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
-          "status": "access-blocked",
-          "candidateCount": 0
+          "url": "https://core40.com/get-classes/",
+          "status": "rendered",
+          "candidateCount": 1
         },
         {
           "url": "https://core40.com/nob-hill/",
@@ -3309,14 +3629,14 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=41",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
-          "status": "access-blocked",
-          "candidateCount": 0
+          "url": "https://core40.com/get-classes/",
+          "status": "rendered",
+          "candidateCount": 1
         },
         {
           "url": "https://core40.com/sunset/",
@@ -3418,6 +3738,11 @@
           "candidateCount": 2
         },
         {
+          "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+          "status": "rendered",
+          "candidateCount": 5
+        },
+        {
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay",
           "status": "rendered",
           "candidateCount": 5
@@ -3470,6 +3795,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+          "status": "rendered",
+          "candidateCount": 5
+        },
+        {
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/hayes-valley",
           "status": "rendered",
           "candidateCount": 0
@@ -3520,6 +3850,11 @@
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill",
           "status": "not-modified",
           "candidateCount": 2
+        },
+        {
+          "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+          "status": "rendered",
+          "candidateCount": 5
         },
         {
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill",
@@ -3577,6 +3912,11 @@
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow",
           "status": "rendered",
           "candidateCount": 5
+        },
+        {
+          "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+          "status": "rendered",
+          "candidateCount": 5
         }
       ]
     },
@@ -3624,6 +3964,11 @@
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa",
           "status": "not-modified",
           "candidateCount": 2
+        },
+        {
+          "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+          "status": "rendered",
+          "candidateCount": 5
         },
         {
           "url": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa",
@@ -3683,7 +4028,17 @@
           "candidateCount": 0
         },
         {
+          "url": "https://crossfitgoldengate.pushpress.com/landing/plans",
+          "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.crossfitgoldengate.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.crossfitgoldengate.com/membership",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -3742,6 +4097,16 @@
         {
           "url": "https://crossfitpotrerohill.com/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://crossfitpotrerohill.com/drop-in/",
+          "status": "rendered",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://crossfitpotrerohill.com/membership/",
+          "status": "rendered",
           "candidateCount": 12
         }
       ]
@@ -3794,6 +4159,11 @@
         {
           "url": "https://www.crossfitsouthpark.com/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.crossfitsouthpark.com/membership",
+          "status": "rendered",
           "candidateCount": 16
         }
       ]
@@ -3842,6 +4212,11 @@
           "url": "https://www.crunch.com/locations/chestnut",
           "status": "fetched",
           "candidateCount": 3
+        },
+        {
+          "url": "https://www.crunch.com/join/chestnut",
+          "status": "rendered",
+          "candidateCount": 8
         },
         {
           "url": "https://www.crunch.com/locations/chestnut",
@@ -3896,6 +4271,11 @@
           "candidateCount": 3
         },
         {
+          "url": "https://www.crunch.com/join/polk-st",
+          "status": "rendered",
+          "candidateCount": 8
+        },
+        {
           "url": "https://www.crunch.com/locations/polk-st",
           "status": "rendered",
           "candidateCount": 6
@@ -3946,6 +4326,11 @@
           "url": "https://www.crunch.com/locations/union-street",
           "status": "fetched",
           "candidateCount": 3
+        },
+        {
+          "url": "https://www.crunch.com/join/union-street",
+          "status": "rendered",
+          "candidateCount": 8
         },
         {
           "url": "https://www.crunch.com/locations/union-street",
@@ -4000,6 +4385,11 @@
           "candidateCount": 3
         },
         {
+          "url": "https://www.crunch.com/join/yerba-buena",
+          "status": "rendered",
+          "candidateCount": 8
+        },
+        {
           "url": "https://www.crunch.com/locations/yerba-buena",
           "status": "rendered",
           "candidateCount": 6
@@ -4050,6 +4440,16 @@
           "url": "https://www.customfitsf.com/",
           "status": "not-modified",
           "candidateCount": 2
+        },
+        {
+          "url": "https://customfitsf.com/",
+          "status": "rendered",
+          "candidateCount": 4
+        },
+        {
+          "url": "https://customfitsf.com/memberships",
+          "status": "rendered",
+          "candidateCount": 5
         },
         {
           "url": "https://www.customfitsf.com/",
@@ -4107,6 +4507,11 @@
           "url": "https://customfitsf.com/",
           "status": "rendered",
           "candidateCount": 4
+        },
+        {
+          "url": "https://customfitsf.com/memberships",
+          "status": "rendered",
+          "candidateCount": 5
         }
       ]
     },
@@ -4241,7 +4646,12 @@
         },
         {
           "url": "https://touchstoneclimbing.com/dogpatch-boulders/",
-          "status": "rendered",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://touchstoneclimbing.com/dogpatch-boulders/membership-and-passes/",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -4308,6 +4718,11 @@
         },
         {
           "url": "https://www.ymcasf.org/location/dogpatch-ymca-at-crane-cove/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
           "status": "rendered",
           "candidateCount": 7
         }
@@ -4394,6 +4809,11 @@
           "url": "https://www.edensf.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.edensf.com/blog/reasons-women-hate-going-to-gyms",
+          "status": "rendered",
+          "candidateCount": 1
         }
       ]
     },
@@ -4439,8 +4859,13 @@
         },
         {
           "url": "https://www.ehspilates.com/",
-          "status": "rendered",
-          "candidateCount": 2
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ehspilates.com/pricing-and-packages",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -4575,6 +5000,26 @@
           "candidateCount": 0
         },
         {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/freeTrial.cfm",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/index.cfm",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/login.cfm",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
           "url": "https://www.empirebjj.com/",
           "status": "rendered",
           "candidateCount": 0
@@ -4634,7 +5079,7 @@
         {
           "url": "https://www.equinox.com/clubs/northern-california/bealest",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 12
         }
       ]
     },
@@ -4686,7 +5131,7 @@
         {
           "url": "https://www.equinox.com/clubs/northern-california/pinest",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 12
         }
       ]
     },
@@ -4738,7 +5183,7 @@
         {
           "url": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 3
         }
       ]
     },
@@ -4790,7 +5235,7 @@
         {
           "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 12
         }
       ]
     },
@@ -4842,7 +5287,7 @@
         {
           "url": "https://www.equinox.com/clubs/northern-california/vanmission",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 12
         }
       ]
     },
@@ -4884,6 +5329,11 @@
         {
           "url": "https://www.ethanrichperformance.com/services",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ethanrichperformance.com/",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -5004,7 +5454,22 @@
           "candidateCount": 3
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742110&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://evolvestronger.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://evolvestronger.com/contact/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://evolvestronger.com/packages/",
           "status": "rendered",
           "candidateCount": 2
         }
@@ -5073,7 +5538,17 @@
         {
           "url": "https://www.fiorfitness.org/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.fiorfitness.org/pricing",
+          "status": "rendered",
           "candidateCount": 13
+        },
+        {
+          "url": "https://www.fiorfitness.org/programs/drop-in",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -5249,12 +5724,7 @@
           "candidateCount": 3
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=264454&stype=-2&subTab=info",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://www.federalfitnesscenters.com/federal-fitness-center",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=264454&stype=41",
           "status": "access-blocked",
           "candidateCount": 0
         }
@@ -5413,6 +5883,11 @@
           "url": "https://fitlocalfit.com/Locations/Glen-Park/Gym",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://fitlocalfit.com/Members/Gym-Membership",
+          "status": "rendered",
+          "candidateCount": 2
         }
       ]
     },
@@ -5450,6 +5925,11 @@
           "url": "https://www.fitnesssf.com/location/castro",
           "status": "not-modified",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "rendered",
+          "candidateCount": 4
         },
         {
           "url": "https://www.fitnesssf.com/location/castro",
@@ -5492,6 +5972,11 @@
           "url": "https://www.fitnesssf.com/location/sf-embarcadero",
           "status": "not-modified",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "rendered",
+          "candidateCount": 4
         },
         {
           "url": "https://www.fitnesssf.com/location/sf-embarcadero",
@@ -5539,6 +6024,11 @@
           "url": "https://fitnesssf.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "rendered",
+          "candidateCount": 4
         }
       ]
     },
@@ -5576,6 +6066,11 @@
           "url": "https://www.fitnesssf.com/location/mid-market",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "rendered",
+          "candidateCount": 4
         },
         {
           "url": "https://www.fitnesssf.com/location/mid-market",
@@ -5665,6 +6160,11 @@
           "url": "https://fitnesssf.com/location/soma/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "rendered",
+          "candidateCount": 4
         }
       ]
     },
@@ -5702,6 +6202,11 @@
           "url": "https://www.fitnesssf.com/location/sf-transbay",
           "status": "not-modified",
           "candidateCount": 0
+        },
+        {
+          "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+          "status": "rendered",
+          "candidateCount": 4
         },
         {
           "url": "https://www.fitnesssf.com/location/sf-transbay",
@@ -5876,7 +6381,17 @@
           "candidateCount": 2
         },
         {
+          "url": "https://fitnessurbano.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://fitnessurbano.com/gym-memberships/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://fitnessurbano.sites.zenplanner.com/index.cfm",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -5886,9 +6401,34 @@
           "candidateCount": 0
         },
         {
+          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm?programId=B7B0DA7C-2A88-44AC-B2A2-D0D44ED5DAA6",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm?programId=BAFAB4CA-7271-4F7F-9425-F131D7DA7469",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://fitnessurbano.sites.zenplanner.com/prospect.cfm?programId=D72E4C86-1473-4A48-A56F-CB142ED6BF88",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://fitnessurbano.sites.zenplanner.com/scheduler.cfm",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
+          "status": "rendered",
+          "candidateCount": 2
         },
         {
           "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
@@ -5994,7 +6534,12 @@
         },
         {
           "url": "https://www.fiveanimalskungfu-sf.com/",
-          "status": "rendered",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.fiveanimalskungfu-sf.com/schedule",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -6055,6 +6600,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
           "url": "https://momence.com/Flagship/membership/New-Member-Promo---San-Francisco/236964",
           "status": "rendered",
           "candidateCount": 2
@@ -6067,7 +6617,12 @@
         {
           "url": "https://www.trainflagship.com/",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 2
+        },
+        {
+          "url": "https://www.trainflagship.com/drop-in",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -6132,6 +6687,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
           "url": "https://momence.com/Flagship/membership/New-Member-Promo---San-Francisco/236964",
           "status": "rendered",
           "candidateCount": 2
@@ -6144,7 +6704,17 @@
         {
           "url": "https://www.trainflagship.com/",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 2
+        },
+        {
+          "url": "https://www.trainflagship.com/drop-in",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.trainflagship.com/faq",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -6209,6 +6779,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
           "url": "https://momence.com/Flagship/membership/New-Member-Promo---San-Francisco/236964",
           "status": "rendered",
           "candidateCount": 2
@@ -6221,7 +6796,17 @@
         {
           "url": "https://www.trainflagship.com/",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 2
+        },
+        {
+          "url": "https://www.trainflagship.com/drop-in",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.trainflagship.com/faq",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -6281,6 +6866,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/Flagship/membership/1x-per-Week/237774",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
           "url": "https://momence.com/Flagship/membership/2-Classes-For-%2420-(Prospective-First-Time-Members)/239432",
           "status": "rendered",
           "candidateCount": 1
@@ -6293,7 +6883,7 @@
         {
           "url": "https://www.trainflagship.com/marina",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 0
         }
       ]
     },
@@ -6363,7 +6953,37 @@
           "candidateCount": 4
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=10015&sTG=22&studioid=30825&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=10154&sTG=22&studioid=30825&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?sView=day&studioid=30825&stype=-7",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=30825&stype=40&prodId=119",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.fogcitycf.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.fogcitycf.com/contact-us",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.fogcitycf.com/membership",
           "status": "rendered",
           "candidateCount": 4
         }
@@ -6452,7 +7072,37 @@
         {
           "url": "https://folksf.com",
           "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://folksf.com/memberships/",
+          "status": "rendered",
           "candidateCount": 4
+        },
+        {
+          "url": "https://folksf.com/memberships/all-access-membership/",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://folksf.com/memberships/single-class-pass/",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://folksf.com/memberships/ten-class-pack/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://folksf.com/memberships/twentyclasspack/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://folksf.com/memberships/wellness-services/",
+          "status": "rendered",
+          "candidateCount": 0
         },
         {
           "url": "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
@@ -6462,7 +7112,7 @@
         {
           "url": "https://momence.com/Folk/membership/%2479-New-Student-Intro-Offer/142406",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 2
         },
         {
           "url": "https://momence.com/video/plugin/35337",
@@ -6557,9 +7207,14 @@
           "candidateCount": 0
         },
         {
+          "url": "https://folksf.com",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
           "url": "https://folksf.com/classes/schedule/richmond/",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 0
         },
         {
           "url": "https://momence.com/Folk-Yoga/gift-card-checkout/35337",
@@ -6574,7 +7229,7 @@
         {
           "url": "https://momence.com/video/plugin/35337",
           "status": "rendered",
-          "candidateCount": 1
+          "candidateCount": 0
         }
       ]
     },
@@ -6644,12 +7299,17 @@
           "candidateCount": 5
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=40",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100002",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100003",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100010",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -6657,6 +7317,11 @@
           "url": "https://www.forgekravmaga.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.forgekravmaga.com/pricing",
+          "status": "rendered",
+          "candidateCount": 11
         }
       ]
     },
@@ -6708,7 +7373,7 @@
         {
           "url": "https://www.funkydoor.com/san-francisco-pricing",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 13
         }
       ]
     },
@@ -6833,8 +7498,13 @@
         },
         {
           "url": "https://www.glowyogasf.com/",
-          "status": "rendered",
-          "candidateCount": 4
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.glowyogasf.com/faq",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -7100,6 +7770,11 @@
           "url": "https://www.hapkidousa.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.hapkidousa.com/membership/",
+          "status": "rendered",
+          "candidateCount": 8
         }
       ]
     },
@@ -7142,6 +7817,11 @@
           "url": "https://haumsf.com/haight-ashbury-studio/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.haumstudios.com/buy-classes",
+          "status": "rendered",
+          "candidateCount": 11
         }
       ]
     },
@@ -7187,6 +7867,11 @@
         },
         {
           "url": "https://www.haumstudios.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.haumstudios.com/buy-classes",
           "status": "rendered",
           "candidateCount": 11
         }
@@ -7308,9 +7993,64 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=40&prodId=100",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=40&prodId=101",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=40&prodId=102",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=41&sTG=26&prodId=100009",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=41&sTG=26&prodId=100010",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5751026&stype=41&sTG=26&prodId=100011",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://hitfitsf.com/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.hitfitsf.com/purchase",
+          "status": "rendered",
           "candidateCount": 7
+        },
+        {
+          "url": "https://www.wellnessliving.com/catalog/hitfitsf",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/home/text/terms-of-use-client.html",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/home/text/wellnessliving-privacy-policy.html",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/rs/catalog-view.html?k_business=94269&id_sale=1&k_id=3447167",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -7375,14 +8115,19 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=8179&stype=-2&subTab=account",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5737562&stype=41",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=8179&stype=40&prodId=207",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=8179&stype=41",
           "status": "access-blocked",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.hot8yoga.com/membership-pricing-norcal",
+          "status": "rendered",
+          "candidateCount": 5
         },
         {
           "url": "https://www.hot8yoga.com/studio/san-francisco-fidi",
@@ -7428,7 +8173,7 @@
         },
         {
           "url": "https://www.infinitytrainingcentersf.com/",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -7483,7 +8228,7 @@
         },
         {
           "url": "https://www.invinciblebarbell.com/",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -7539,12 +8284,17 @@
           "candidateCount": 1
         },
         {
-          "url": "https://ironandmettle.onbookee.com/login",
+          "url": "https://www.ironandmettlefitness.com/",
           "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://www.ironandmettlefitness.com/",
+          "url": "https://www.ironandmettlefitness.com/amenities",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.ironandmettlefitness.com/pricing",
           "status": "rendered",
           "candidateCount": 1
         }
@@ -7699,6 +8449,46 @@
         },
         {
           "url": "https://www.jccsf.org/join/",
+          "status": "rendered",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://www.jccsf.org/join/community-membership-2/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/community-membership/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/fitness-full-access/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/jccsf-mobile-app/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/jccsf-perks/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/jccsf-perks/jccsf-perks-information-update-form/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/new-fitness-enhancements/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jccsf.org/join/referafriend/",
           "status": "rendered",
           "candidateCount": 3
         }
@@ -7879,6 +8669,16 @@
           "url": "https://www.usfca.edu/koret",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.usfca.edu/koret/membership",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.usfca.edu/koret/membership/membership-types",
+          "status": "rendered",
+          "candidateCount": 10
         }
       ]
     },
@@ -7931,6 +8731,16 @@
           "url": "https://www.swimlpb.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.swimlpb.com/contact-us/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.swimlpb.com/swim-classes/tuition",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -7980,14 +8790,14 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=42",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=41",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://www.lagreefit415.com/",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 0
         }
       ]
     },
@@ -8041,7 +8851,7 @@
         },
         {
           "url": "https://www.lamaskenpokarate.com/",
-          "status": "rendered",
+          "status": "robots-disallowed",
           "candidateCount": 0
         }
       ]
@@ -8254,6 +9064,61 @@
           "url": "https://livefitgym.com/locations/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -8428,6 +9293,61 @@
           "url": "https://livefitgym.com/locations/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -8553,6 +9473,61 @@
         },
         {
           "url": "https://livefitgym.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -8682,6 +9657,61 @@
           "url": "https://livefitgym.com/locations/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -8802,6 +9832,61 @@
         },
         {
           "url": "https://livefitgym.com/locations/nob-hill/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -8931,6 +10016,61 @@
           "url": "https://livefitgym.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -9051,6 +10191,61 @@
         },
         {
           "url": "https://livefitgym.com/locations/castro/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -9177,6 +10372,61 @@
           "candidateCount": 0
         },
         {
+          "url": "https://livefitgym.com/signup/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32319",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32322",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32323",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/api/online-join/signup/planList?clubNumber=32324",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=364260e12ea94538b5d4499ed356a8fc",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=7301d4e290184005b71868d99fbf9707",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32319&planId=e130a80c8f54416eb6ab3781761bbf73",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=78efafa87260496cbc842607918d10ce",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=c7e1c8f657c4472185cf2e3c92a1c91e",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onlinejoin.abcfitness.com/signup/plan?club=32322&planId=d1e53f419f094b8e9f211dbe9e95fa04",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.livefitgym.com",
           "status": "rendered",
           "candidateCount": 0
@@ -9221,6 +10471,11 @@
         {
           "url": "https://www.localsfitness.com/",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://localsfitness.com/",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -9361,6 +10616,41 @@
           "candidateCount": 0
         },
         {
+          "url": "https://lotuslandyogasf.com/pricespolicies/",
+          "status": "rendered",
+          "candidateCount": 6
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/classstyles",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/events",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/schedule",
+          "status": "rendered",
+          "candidateCount": 11
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/videos",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/gcc/32989",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/l/79heGllJ",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://momence.com/l/b8hy9BOQ",
           "status": "rendered",
           "candidateCount": 0
@@ -9371,7 +10661,12 @@
           "candidateCount": 0
         },
         {
-          "url": "https://momence.com/u/lotusland-yoga-sf",
+          "url": "https://momence.com/m/102171",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/105560",
           "status": "rendered",
           "candidateCount": 1
         }
@@ -9458,7 +10753,17 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/appointments/37719?boardId=12869",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://momence.com/appointments/37719?boardId=14809",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/sign-up/visitor",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -9555,12 +10860,32 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/LuxFit/membership/3x%2FWeek-Membership/184405",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/LuxFit/membership/Core-Access/184788",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
           "url": "https://momence.com/appointments/37719?boardId=12868",
           "status": "rendered",
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/appointments/37719?boardId=12869",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://momence.com/appointments/37719?boardId=14809",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/sign-up/visitor",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -9644,21 +10969,6 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
           "url": "https://www.mightypilates.com/presidio-heights/",
           "status": "rendered",
           "candidateCount": 5
@@ -9709,6 +11019,11 @@
           "url": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/millberry-fitness-center-ucsf-parnassus",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
+          "status": "rendered",
+          "candidateCount": 6
         }
       ]
     },
@@ -9754,7 +11069,12 @@
         },
         {
           "url": "https://touchstoneclimbing.com/mission-cliffs/",
-          "status": "rendered",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://touchstoneclimbing.com/mission-cliffs/membership-and-passes/",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -9897,6 +11217,11 @@
           "url": "https://www.ymcasf.org/location/mission-ymca/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -9953,17 +11278,17 @@
         {
           "url": "https://momence.com/m/44653",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
         },
         {
           "url": "https://momence.com/m/45297",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
         },
         {
-          "url": "https://momence.com/sign-in?hostId=23854",
+          "url": "https://momence.com/m/45536",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
         },
         {
           "url": "https://newmissionyoga.com/mission-yoga-classes/",
@@ -10010,6 +11335,11 @@
         {
           "url": "https://www.moonandstars.studio/",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5737359&stype=41",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -10227,7 +11557,62 @@
           "candidateCount": 0
         },
         {
+          "url": "http://portal.movementgyms.com/profile",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
           "url": "https://movementgyms.com/san-francisco/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/baker",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/belmont",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/boulder",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/centennial",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/englewood",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/fountain-valley",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/golden",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/mountain-view",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -10269,8 +11654,13 @@
           "candidateCount": 0
         },
         {
-          "url": "https://yogamukunda.com/",
+          "url": "https://mukundastudio.com/group-class-pricing/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://yogamukunda.com/",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -10317,8 +11707,13 @@
         },
         {
           "url": "https://www.musclebeachsf.com/",
-          "status": "rendered",
-          "candidateCount": 5
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.musclebeachsf.com/plans-pricing-1",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -10364,8 +11759,13 @@
         },
         {
           "url": "https://www.musclebeachsf.com/",
-          "status": "rendered",
-          "candidateCount": 5
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.musclebeachsf.com/plans-pricing-1",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -10422,7 +11822,12 @@
         {
           "url": "https://mx3fitness.com/gym-near-me",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 0
+        },
+        {
+          "url": "https://mx3fitness.com/monthly-signup",
+          "status": "rendered",
+          "candidateCount": 6
         }
       ]
     },
@@ -10526,7 +11931,12 @@
         {
           "url": "https://mx3fitness.com/mission",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 0
+        },
+        {
+          "url": "https://mx3fitness.com/monthly-signup",
+          "status": "rendered",
+          "candidateCount": 6
         }
       ]
     },
@@ -10623,8 +12033,18 @@
           "candidateCount": 0
         },
         {
+          "url": "https://nmotionfitness.com",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.nmotionfitness.com/",
-          "status": "rendered",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.nmotionfitness.com/plans-pricing",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -10732,17 +12152,32 @@
           "candidateCount": 1
         },
         {
-          "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135",
+          "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-3-Private-Sessions/478137",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135",
+          "status": "rendered",
+          "candidateCount": 1
         },
         {
           "url": "https://momence.com/m/478137",
           "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/776365",
+          "status": "rendered",
+          "candidateCount": 3
+        },
+        {
+          "url": "https://momence.com/u/NICE-Pilates",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://momence.com/sign-in",
+          "url": "https://nicepilates.studio/",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -10899,6 +12334,16 @@
           "url": "https://onemartialarts.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://onemartialarts.com/san-francisco/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://onemartialarts.com/virtual-training/fitness-kickboxing/",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -11006,6 +12451,11 @@
           "url": "https://www.pacificwushu.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.pacificwushu.com/classes",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -11088,8 +12538,13 @@
         },
         {
           "url": "https://www.theparkgym.com",
-          "status": "rendered",
-          "candidateCount": 9
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.theparkgym.com/pricing",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -11239,6 +12694,26 @@
           "url": "https://www.performforgolf.com/locations/hayes-valley",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.performforgolf.com/locations",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -11370,6 +12845,11 @@
           "url": "https://pop-sf.com/",
           "status": "render-error",
           "candidateCount": 0
+        },
+        {
+          "url": "https://pop-sf.com/rates.html",
+          "status": "render-error",
+          "candidateCount": 0
         }
       ]
     },
@@ -11419,7 +12899,17 @@
           "candidateCount": 1
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=982032",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://pilatesstorystudio.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://pilatesstorystudio.com/faq/",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -11629,8 +13119,13 @@
           "candidateCount": 0
         },
         {
+          "url": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.purebarre.com/location/san-francisco-west-portal-ca",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -11677,8 +13172,13 @@
         },
         {
           "url": "https://www.raisethebarfitness.net/",
-          "status": "rendered",
-          "candidateCount": 1
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.raisethebarfitness.net/membership",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -11927,7 +13427,17 @@
           "candidateCount": 2
         },
         {
+          "url": "https://risecombatsf.com/rates",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
           "url": "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://risecombatsf.sites.zenplanner.com/index.cfm",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -11937,12 +13447,37 @@
           "candidateCount": 0
         },
         {
-          "url": "https://risecombatsf.sites.zenplanner.com/retail.cfm",
+          "url": "https://risecombatsf.sites.zenplanner.com/page.cfm?pageId=378DE3D1-6653-4C39-B60F-98D050E9C7E4",
           "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://risecombatsf.sites.zenplanner.com/scheduler.cfm",
+          "url": "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm?programId=052A06E9-DACA-4287-84D5-1BF4FA2F1EA9",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm?programId=111F1656-4E2B-47E0-8611-4D22A70DA6AB",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://risecombatsf.sites.zenplanner.com/prospect.cfm?programId=DB9E2814-F2D2-48A3-86C9-517B98D14BE3",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://risecombatsf.sites.zenplanner.com/retail-cart.cfm",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -12029,19 +13564,44 @@
           "candidateCount": 1
         },
         {
-          "url": "https://momence.com/m/568650",
+          "url": "https://momence.com/Roar/membership/Five-Class-Package/269804",
           "status": "rendered",
           "candidateCount": 1
         },
         {
-          "url": "https://momence.com/sign-in?hostId=39921",
+          "url": "https://momence.com/Roar/membership/Ten-Class-Package/281455",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/Roar/membership/Twenty-Class-Package/281456",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/568648",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://momence.com/m/568650",
+          "status": "rendered",
+          "candidateCount": 2
+        },
+        {
+          "url": "https://momence.com/m/568651",
+          "status": "rendered",
+          "candidateCount": 2
         },
         {
           "url": "https://www.roarsf.com/membershipspackages",
           "status": "rendered",
           "candidateCount": 3
+        },
+        {
+          "url": "https://www.roarsf.com/ourstudios",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -12178,6 +13738,11 @@
           "url": "https://sffencers.com/",
           "status": "render-error",
           "candidateCount": 0
+        },
+        {
+          "url": "https://sffencers.com/faq/",
+          "status": "render-error",
+          "candidateCount": 0
         }
       ]
     },
@@ -12244,12 +13809,17 @@
         {
           "url": "https://momence.com/m/44132",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 3
         },
         {
           "url": "https://momence.com/m/45705",
           "status": "rendered",
           "candidateCount": 1
+        },
+        {
+          "url": "https://sanchezstreetstudios.com/",
+          "status": "rendered",
+          "candidateCount": 0
         },
         {
           "url": "https://sanchezstreetstudios.com/specials",
@@ -12381,16 +13951,6 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
           "url": "https://www.sistersinmotionsf.com/",
           "status": "rendered",
           "candidateCount": 0
@@ -12454,6 +14014,16 @@
         },
         {
           "url": "https://skrappackmarina.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://skrappackmarina.com/join",
+          "status": "rendered",
+          "candidateCount": 7
+        },
+        {
+          "url": "https://www.skrappackmarina.com/",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -12588,9 +14158,24 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5722599&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.solyogasf.com/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.solyogasf.com/membership",
+          "status": "rendered",
           "candidateCount": 8
+        },
+        {
+          "url": "https://www.solyogasf.com/schedule",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -12635,8 +14220,13 @@
           "candidateCount": 0
         },
         {
+          "url": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+          "status": "rendered",
+          "candidateCount": 7
+        },
+        {
           "url": "https://www.solidcore.co/ca/california/castro/",
-          "status": "robots-disallowed",
+          "status": "rendered",
           "candidateCount": 0
         }
       ]
@@ -12682,8 +14272,13 @@
           "candidateCount": 0
         },
         {
+          "url": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+          "status": "rendered",
+          "candidateCount": 7
+        },
+        {
           "url": "https://solidcore.co/studios/laurel-village",
-          "status": "robots-disallowed",
+          "status": "rendered",
           "candidateCount": 0
         }
       ]
@@ -12729,8 +14324,13 @@
           "candidateCount": 0
         },
         {
+          "url": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+          "status": "rendered",
+          "candidateCount": 7
+        },
+        {
           "url": "https://solidcore.co/studios/marina",
-          "status": "robots-disallowed",
+          "status": "rendered",
           "candidateCount": 0
         }
       ]
@@ -12776,8 +14376,13 @@
           "candidateCount": 0
         },
         {
+          "url": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+          "status": "rendered",
+          "candidateCount": 7
+        },
+        {
           "url": "https://solidcore.co/studios/mission-bay",
-          "status": "robots-disallowed",
+          "status": "rendered",
           "candidateCount": 0
         }
       ]
@@ -12843,24 +14448,19 @@
           "candidateCount": 9
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=40&prodId=100",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=41&sTG=22",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=40&prodId=101",
-          "status": "access-blocked",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=40&prodId=103",
-          "status": "access-blocked",
+          "url": "https://clients.mindbodyonline.com/connect/engageappbutton?siteID=5749162",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
           "url": "https://www.solunayogaandwellness.com/",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 8
         }
       ]
     },
@@ -12908,6 +14508,11 @@
           "url": "https://www.soul-cycle.com",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.soul-cycle.com/series/",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -12949,6 +14554,11 @@
         {
           "url": "https://www.soul-cycle.com/studios/ca-sanfrancisco-unionstreet/",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.soul-cycle.com/series/",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
@@ -13132,23 +14742,63 @@
         },
         {
           "url": "https://members.stretchlab.com",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://members.stretchlab.com/refer",
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/217f9a40-92d8-4f36-b915-aec7d9bea7eb",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
         },
         {
-          "url": "https://members.stretchlab.com/simple-book/classes?location_id=soma",
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/48103b23-15bc-4d24-bdd9-1e067a7cb4fb",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/62480316-99fb-42b9-b27a-c76763d0d62e",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/b38234ab-4e2b-429d-9a0b-0aeda1cfaaa3",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/c9da624e-3399-44c9-bcfe-c0a85a037268",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/ce27d604-de00-4d7f-828f-b45ae7cba65d",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/d30b8292-f2d3-444b-8d41-be102edbc561",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/d91f6cf1-eaaa-49cd-bb98-5be155658243",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/package_details/ebae1dac-912d-433f-a091-28195adc21d5",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://members.stretchlab.com/api/locations/stretchlab-soma/packages",
+          "status": "rendered",
+          "candidateCount": 11
         },
         {
           "url": "https://www.stretchlab.com/location/soma",
           "status": "rendered",
-          "candidateCount": 14
+          "candidateCount": 11
         }
       ]
     },
@@ -13206,6 +14856,11 @@
           "url": "https://www.strongfriendsgym.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.strongfriendsgym.com/programs/drop-in",
+          "status": "rendered",
+          "candidateCount": 3
         }
       ]
     },
@@ -13255,9 +14910,19 @@
           "candidateCount": 2
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5746509&stype=42&sLoc=0&giftCardID=70",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.studiobylivebetter.com/",
           "status": "rendered",
-          "candidateCount": 5
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.studiobylivebetter.com/pricing",
+          "status": "rendered",
+          "candidateCount": 13
         }
       ]
     },
@@ -13339,9 +15004,14 @@
           "candidateCount": 1
         },
         {
-          "url": "https://sunsetgym.com/memberships/",
+          "url": "https://sunsetgym.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://sunsetgym.com/memberships/",
+          "status": "rendered",
+          "candidateCount": 3
         }
       ]
     },
@@ -13392,6 +15062,16 @@
         },
         {
           "url": "https://www.tcstrengthandfitness.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.tcstrengthandfitness.com/pricing",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.tcstrengthandfitness.com/schedule",
           "status": "rendered",
           "candidateCount": 0
         }
@@ -13544,7 +15224,7 @@
         {
           "url": "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154",
           "status": "rendered",
-          "candidateCount": 14
+          "candidateCount": 0
         },
         {
           "url": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
@@ -13639,9 +15319,59 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=40&prodid=118",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=42",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=43&prodid=100004",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=43&prodid=100005",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=43&prodid=100006",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=43&prodid=100007",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=43&prodid=100008",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5739873&stype=43&prodid=100103",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.castroroom.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.castroroom.com/about",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.castroroom.com/purchase",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -13687,8 +15417,13 @@
         },
         {
           "url": "https://www.thefirmsf.com/",
-          "status": "rendered",
-          "candidateCount": 2
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.thefirmsf.com/memberships",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -13947,26 +15682,61 @@
         {
           "url": "https://www.pilatesschoolsf.com/",
           "status": "rendered",
-          "candidateCount": 3
+          "candidateCount": 8
         },
         {
-          "url": "https://www.wellnessliving.com/rs/catalog-view.html?k_business=314003&id_sale=1&k_id=4205652",
+          "url": "https://www.pilatesschoolsf.com/drop-in-pricing/",
+          "status": "rendered",
+          "candidateCount": 21
+        },
+        {
+          "url": "https://www.wellnessliving.com/",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/Wl/Home/Team.html",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/Wl/Video/Catalog/Catalog.html?k_business=314003",
           "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://www.wellnessliving.com/rs/profile.html",
+          "url": "https://www.wellnessliving.com/catalog/pilatesschoolsf",
           "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://www.wellnessliving.com/rs/report-page.html?sid_report_page=profile-attendance-schedule",
+          "url": "https://www.wellnessliving.com/explore/locations/pilates/us-san_francisco/thepilatesschoolsf-geary/",
           "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://www.wellnessliving.com/schedule/pilatesschoolsf",
+          "url": "https://www.wellnessliving.com/fitness/software/",
           "status": "rendered",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://www.wellnessliving.com/gym/software/",
+          "status": "rendered",
+          "candidateCount": 9
+        },
+        {
+          "url": "https://www.wellnessliving.com/home.html",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/home/price.html",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.wellnessliving.com/home/testimonial.html",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -14274,9 +16044,64 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100003&sTG=24&studioid=5728426&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100004&sTG=24&studioid=5728426&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100006&sTG=24&studioid=5728426&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40&prodId=104",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100039",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100045",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100147",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100172",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://theyogashalasf.com/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://theyogashalasf.com/pricing",
+          "status": "rendered",
           "candidateCount": 5
+        },
+        {
+          "url": "https://theyogashalasf.com/schedule/",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -14366,7 +16191,57 @@
           "candidateCount": 5
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100003&sTG=24&studioid=5728426&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100004&sTG=24&studioid=5728426&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=100006&sTG=24&studioid=5728426&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=40&prodId=104",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100039",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100045",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100147",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5728426&stype=41&sTG=24&prodId=100172",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://theyogashalasf.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://theyogashalasf.com/pricing",
           "status": "rendered",
           "candidateCount": 5
         }
@@ -14438,9 +16313,39 @@
           "candidateCount": 3
         },
         {
+          "url": "https://momence.com/m/391175",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/433897",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/724907",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/732321",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/773929",
+          "status": "rendered",
+          "candidateCount": 1
+        },
+        {
           "url": "https://www.tinyhavenyogasf.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.tinyhavenyogasf.com/classes",
+          "status": "rendered",
+          "candidateCount": 3
         }
       ]
     },
@@ -14597,6 +16502,11 @@
           "url": "https://www.vrv3studios.com/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.vrv3studios.com/schedule",
+          "status": "rendered",
+          "candidateCount": 0
         }
       ]
     },
@@ -14647,8 +16557,18 @@
         },
         {
           "url": "https://www.worldteamusa.net/",
-          "status": "rendered",
-          "candidateCount": 2
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.worldteamusa.net/schedule",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.worldteamusa.net/services",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -14721,6 +16641,11 @@
           "url": "https://www.ymcasf.org/location/presidio-community-ymca/letterman-pool-gym/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -14855,6 +16780,11 @@
           "url": "https://www.ymcasf.org/location/chinatown-ymca/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -14922,6 +16852,11 @@
           "url": "https://www.ymcasf.org/Embarcadero/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -14989,6 +16924,11 @@
           "url": "https://www.ymcasf.org/location/presidio-community-ymca/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -15061,6 +17001,11 @@
           "url": "https://www.ymcasf.org/locations/richmond-district-ymca",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.ymcasf.org/membership/",
+          "status": "rendered",
+          "candidateCount": 7
         }
       ]
     },
@@ -15172,6 +17117,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://yogaflowsf.com/membership/",
           "status": "robots-disallowed",
           "candidateCount": 0
@@ -15219,6 +17169,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://yogaflowsf.com/membership/",
           "status": "robots-disallowed",
           "candidateCount": 0
@@ -15263,6 +17218,11 @@
         {
           "url": "https://yogaflowsf.com/membership/",
           "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -15323,14 +17283,19 @@
           "candidateCount": 2
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41",
-          "status": "access-blocked",
+          "url": "https://www.yogamayu.com/",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://www.yogamayu.com/",
+          "url": "https://www.yogamayu.com/about",
           "status": "rendered",
-          "candidateCount": 4
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.yogamayu.com/pricing",
+          "status": "rendered",
+          "candidateCount": 10
         }
       ]
     },
@@ -15430,17 +17395,42 @@
           "candidateCount": 7
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=176",
+          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=177",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&sessionChecked=true",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=195",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=178",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=179",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=196",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=41&sTG=2&prodId=10347",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=41&sTG=22&prodId=100042",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=41&sTG=22&prodId=10102",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -15547,17 +17537,42 @@
           "candidateCount": 7
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=177",
+          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=194",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=178",
           "status": "access-blocked",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=22&prodId=10102",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=179",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=180",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=205",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=2&prodId=10347",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=22&prodId=10467",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=42",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -15628,6 +17643,16 @@
         },
         {
           "url": "https://sfgoju.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://sfgoju.com/adult-karate/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://sfgoju.com/schedule/",
           "status": "rendered",
           "candidateCount": 0
         }

@@ -656,9 +656,9 @@
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1587,
+    "requestCount": 1992,
     "statusCounts": {
-      "access-blocked": 36,
+      "access-blocked": 138,
       "fetched": 916,
       "host-backoff-after-429": 1,
       "http-403": 102,
@@ -667,27 +667,29 @@
       "http-502": 2,
       "network-error": 7,
       "not-modified": 118,
-      "render-error": 4,
-      "rendered": 269,
-      "robots-disallowed": 94
+      "render-error": 6,
+      "rendered": 571,
+      "robots-disallowed": 93
     },
-    "staticAccessBlockedRequests": 36,
+    "staticAccessBlockedRequests": 138,
     "staticAccessBlockerCounts": {
-      "captcha-required": 3,
+      "authentication-required": 3,
+      "captcha-required": 46,
       "identity-session-reset-required": 2,
-      "platform-security-check": 31
+      "platform-security-check": 87
     },
     "selectedPlanPriceAuditStatusCounts": {
       "matched-within-threshold": 52,
       "selected-plan-not-observed": 104
     },
-    "reviewCandidatePages": 299,
+    "reviewCandidatePages": 394,
     "linkedStorefrontRequests": 978,
-    "renderedRequests": 321,
-    "renderedAccessBlockedRequests": 34,
+    "renderedRequests": 726,
+    "renderedAccessBlockedRequests": 136,
     "renderedAccessBlockerCounts": {
-      "captcha-required": 3,
-      "platform-security-check": 31
+      "authentication-required": 3,
+      "captcha-required": 46,
+      "platform-security-check": 87
     },
     "priceChangeFlags": 0,
     "allReviewedSeedsGoneFlags": 2
