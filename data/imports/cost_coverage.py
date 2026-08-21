@@ -689,13 +689,34 @@ def select_plan_views(
     by_price = sorted(eligible, key=lambda plan: (float(plan["billing"]["normalizedMonthly"]), text(plan.get("id"))))
     typical = by_price[(len(by_price) - 1) // 2]
 
-    def scope_rank(plan: dict[str, Any]) -> int:
-        scope = normalized(f"{plan.get('scopeType', '')} {plan.get('accessScope', '')}")
+    def scope_rank(plan: dict[str, Any]) -> tuple[int, int]:
+        """Rank only access breadth that the operator actually discloses.
+
+        A binary single/multi-location rank made a 90-club plan look identical
+        to a global or operator-specific expanded tier.  Preserve the explicit
+        hierarchy without inventing amenity value: named expanded tiers first,
+        then global, disclosed club count, national, regional, generic
+        multi-location, and finally single-location access.
+        """
+
+        scope = normalized(f"{plan.get('name', '')} {plan.get('scopeType', '')} {plan.get('accessScope', '')}")
+        counts = [int(value) for value in re.findall(r"\b(\d{2,4})\s*\+?\s*clubs?\b", scope)]
+        disclosed_count = max(counts, default=0)
+        if "destination west" in scope:
+            return 7, disclosed_count
+        if any(label in scope for label in ("global", "worldwide")):
+            return 6, disclosed_count
+        if disclosed_count:
+            return 5, disclosed_count
+        if any(label in scope for label in ("national", "north america")):
+            return 4, 0
+        if "regional" in scope:
+            return 3, 0
         if any(label in scope for label in ("all location", "multi location", "all club", "all gym")):
-            return 2
-        if any(label in scope for label in ("single location", "named location", "home location", "named studio")):
-            return 1
-        return 0
+            return 2, 0
+        if any(label in scope for label in ("single location", "named location", "home location", "named studio", "one club")):
+            return 1, 0
+        return 0, 0
 
     def allowance_rank(plan: dict[str, Any]) -> float:
         allowance = plan.get("classAllowance") or {}

@@ -426,10 +426,265 @@ def crunch_visible_candidates(visible_text: str, source_url: str) -> list[dict[s
     return candidates
 
 
+def twenty_four_hour_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct the public 24 Hour Fitness membership matrix for review.
+
+    The location cards split plan names, dues, billing variants, and ``Due
+    Today`` values across typographic nodes.  Generic currency extraction does
+    not see the dues at all because the dollar sign is omitted from the
+    accessible amount node.  This adapter keeps no-commitment, commitment, and
+    yearly variants distinct and never treats upfront dues as a fee.
+    """
+
+    host = hostname(source_url)
+    if not (host == "24hourfitness.com" or host.endswith(".24hourfitness.com")):
+        return []
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    if not all(label in value for label in ("Monthly", "Monthly Commitment", "Yearly", "Silver")):
+        return []
+
+    section_re = re.compile(
+        r"\bMonthly\b(?P<monthly>.*?)(?:\bMonthly Commitment\b)"
+        r"(?P<commitment>.*?)(?:\bYearly\b)(?P<yearly>.*?)(?:\bChoose the gym membership|\bWhat you get:|$)",
+        re.IGNORECASE,
+    )
+    sections = section_re.search(value)
+    if not sections:
+        return []
+
+    annual_match = re.search(r"\$(\d{1,4}(?:\.\d{1,2})?)\s+Annual Fee required", value, re.IGNORECASE)
+    annual_fee = float(annual_match.group(1)) if annual_match else None
+
+    def fees() -> list[dict[str, Any]]:
+        return ([{
+            "type": "annual", "amount": annual_fee, "currency": "USD",
+            "cadence": "yearly", "mandatory": True,
+        }] if annual_fee is not None else [])
+
+    common = {
+        "currency": "USD",
+        "productType": "monthly",
+        "classAllowance": None,
+        "eligibility": {"type": "standard-adult", "restrictions": []},
+        "method": "visible-24-hour-membership-matrix",
+        "adapter": "24-hour-membership-matrix",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }
+    scopes = {
+        "platinum": ("National club access with premium amenities and a buddy pass", "multi-location"),
+        "gold": ("Northern California regional club access with classes and amenities", "multi-location"),
+        "silver": ("One-club cardio and weights access at the named location", "single-location"),
+        "national": ("National club access with classes and amenities", "multi-location"),
+    }
+    candidates: list[dict[str, Any]] = []
+    monthly_section = sections.group("monthly")
+    monthly_re = re.compile(
+        r"(?P<name>Platinum|Gold|Silver)\s+as low as\s+\$?(?P<amount>\d{1,4}(?:\.\d{1,2})?)"
+        r"\s+per month\s+\$?(?P<due>\d{1,4}(?:\.\d{1,2})?)\s+Due Today",
+        re.IGNORECASE,
+    )
+    for match in monthly_re.finditer(monthly_section):
+        name = match.group("name").capitalize()
+        key = name.casefold()
+        amount = float(match.group("amount"))
+        card_prefix = monthly_section[max(0, match.start() - 40):match.start()]
+        promoted = bool(re.search(r"\$10\s+OFF", card_prefix, re.IGNORECASE))
+        access_scope, scope_type = scopes[key]
+        candidates.append({
+            **common,
+            "sourceProductId": f"{key}-monthly-no-commitment",
+            "name": f"{name} Monthly",
+            "amount": amount,
+            "cadence": "month",
+            "billingInterval": "month",
+            "accessScope": access_scope,
+            "scopeType": scope_type,
+            "commitment": {"type": "month-to-month", "minimumMonths": None},
+            "promotion": {"isPromotion": promoted, "label": "$10 off ongoing monthly dues" if promoted else ""},
+            "fees": fees(),
+            "rawLabel": f"{name} ${amount:g}/month; ${float(match.group('due')):g} due today",
+        })
+
+    commitment_match = re.search(
+        r"Platinum\s+\$?(?P<amount>\d{1,4}(?:\.\d{1,2})?)\s+per month\s+"
+        r"\$?(?P<due>\d{1,4}(?:\.\d{1,2})?)\s+Due Today",
+        sections.group("commitment"), re.IGNORECASE,
+    )
+    if commitment_match:
+        amount = float(commitment_match.group("amount"))
+        candidates.append({
+            **common,
+            "sourceProductId": "platinum-monthly-commitment",
+            "name": "Platinum Monthly Commitment",
+            "amount": amount,
+            "cadence": "month",
+            "billingInterval": "month",
+            "accessScope": scopes["platinum"][0],
+            "scopeType": scopes["platinum"][1],
+            "commitment": {"type": "fixed-term", "minimumMonths": None, "rawLabel": "Monthly Commitment"},
+            "promotion": {"isPromotion": False, "label": ""},
+            "fees": fees(),
+            "rawLabel": f"Platinum commitment ${amount:g}/month; ${float(commitment_match.group('due')):g} due today",
+        })
+
+    yearly_re = re.compile(
+        r"(?P<name>Platinum|National)\s+\$?(?P<equivalent>\d{1,4}(?:\.\d{1,2})?)\s+per month\s+"
+        r"\$?(?P<due>\d{1,5}(?:\.\d{1,2})?)\s+Due Today",
+        re.IGNORECASE,
+    )
+    for match in yearly_re.finditer(sections.group("yearly")):
+        name = match.group("name").capitalize()
+        key = name.casefold()
+        annual_dues = float(match.group("due"))
+        access_scope, scope_type = scopes[key]
+        candidates.append({
+            **common,
+            "sourceProductId": f"{key}-yearly-auto-renewal",
+            "name": f"{name} Yearly Auto-Renewal",
+            "amount": annual_dues,
+            "cadence": "year",
+            "billingInterval": "year",
+            "accessScope": access_scope,
+            "scopeType": scope_type,
+            "commitment": {"type": "prepaid", "minimumMonths": 12},
+            "promotion": {"isPromotion": False, "label": ""},
+            "fees": fees(),
+            "rawLabel": f"{name} ${annual_dues:g}/year; displayed equivalent ${float(match.group('equivalent')):g}/month",
+        })
+    return candidates
+
+
+def equinox_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Extract the complete public Equinox membership cards for a club."""
+
+    host = hostname(source_url)
+    if not (host == "equinox.com" or host.endswith(".equinox.com")):
+        return []
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    card_re = re.compile(
+        r"(?P<name>Destination West|All-Access|Destination|Select)\s+"
+        r"(?P<popular>Most Popular\s+)?\$(?P<amount>\d{1,4}(?:\.\d{1,2})?)\s*/\s*mo\b",
+        re.IGNORECASE,
+    )
+    cards = list(card_re.finditer(value))
+    if len(cards) < 2:
+        return []
+    product_ids = {"select": "15", "all-access": "2931", "destination": "2735", "destination west": "2737"}
+    scopes = {
+        "select": ("One-club access at the named Equinox location", "single-location"),
+        "all-access": ("Access to 90+ Equinox clubs across North America", "multi-location"),
+        "destination": ("Access to 110+ Equinox clubs globally including Sports Club locations", "multi-location"),
+        "destination west": ("Destination access plus Equinox Century City and Santa Monica East", "multi-location"),
+    }
+    candidates: list[dict[str, Any]] = []
+    for card in cards:
+        display_name = " ".join(word.capitalize() for word in card.group("name").split())
+        key = card.group("name").casefold()
+        amount = float(card.group("amount"))
+        access_scope, scope_type = scopes[key]
+        candidates.append({
+            "sourceProductId": product_ids[key],
+            "name": display_name,
+            "amount": amount,
+            "currency": "USD",
+            "cadence": "month",
+            "billingInterval": "month",
+            "productType": "monthly",
+            "accessScope": access_scope,
+            "scopeType": scope_type,
+            "classAllowance": None,
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": {"type": "unknown", "minimumMonths": None},
+            "promotion": {"isPromotion": False, "label": ""},
+            "fees": [],
+            "bestValueLabel": bool(card.group("popular")),
+            "rawLabel": f"{display_name} ${amount:g}/month" + ("; Most Popular" if card.group("popular") else ""),
+            "method": "visible-equinox-plan-card",
+            "adapter": "equinox-plan-cards",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        })
+    return candidates
+
+
+def planet_fitness_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Associate Planet Fitness dues, fees, commitments, and access cards."""
+
+    host = hostname(source_url)
+    if not (host == "planetfitness.com" or host.endswith(".planetfitness.com")):
+        return []
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    black_start = re.search(r"PF BLACK CARD", value, re.IGNORECASE)
+    classic_start = re.search(r"\bClassic\b", value, re.IGNORECASE)
+    if not black_start or not classic_start or classic_start.start() <= black_start.start():
+        return []
+    end_match = re.search(r"\bCLUB INFO\b", value[classic_start.end():], re.IGNORECASE)
+    classic_end = classic_start.end() + end_match.start() if end_match else len(value)
+    segments = [
+        ("PF Black Card", "pf-black-card", value[black_start.start():classic_start.start()]),
+        ("Classic", "classic", value[classic_start.start():classic_end]),
+    ]
+    candidates: list[dict[str, Any]] = []
+    for name, slug, segment in segments:
+        amount_match = re.search(r"\$(\d{1,4}(?:\.\d{1,2})?)\s*/\s*mo\b", segment, re.IGNORECASE)
+        startup_match = re.search(r"\$(\d{1,4}(?:\.\d{1,2})?)\s+Startup Fee", segment, re.IGNORECASE)
+        annual_match = re.search(r"\$(\d{1,4}(?:\.\d{1,2})?)\s+Annual Fee", segment, re.IGNORECASE)
+        if not amount_match or not startup_match or not annual_match:
+            continue
+        amount = float(amount_match.group(1))
+        no_commitment = bool(re.search(r"No Commitment", segment, re.IGNORECASE))
+        term_match = re.search(r"(\d{1,2})\s+Month Commitment", segment, re.IGNORECASE)
+        presale = bool(re.search(r"Pre-Grand Opening|Pre-Sale|SPECIAL DEAL", segment, re.IGNORECASE))
+        worldwide = slug == "pf-black-card"
+        startup_amount = float(startup_match.group(1))
+        plan_fees = []
+        if startup_amount > 0:
+            plan_fees.append({"type": "enrollment", "amount": startup_amount, "currency": "USD", "cadence": "one-time", "mandatory": True})
+        plan_fees.append({"type": "annual", "amount": float(annual_match.group(1)), "currency": "USD", "cadence": "yearly", "mandatory": True})
+        candidates.append({
+            "sourceProductId": slug,
+            "name": name,
+            "amount": amount,
+            "currency": "USD",
+            "cadence": "month",
+            "billingInterval": "month",
+            "productType": "monthly",
+            "accessScope": "All Planet Fitness clubs worldwide" if worldwide else "Unlimited access to the named home club",
+            "scopeType": "multi-location" if worldwide else "single-location",
+            "classAllowance": None,
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": {
+                "type": "month-to-month" if no_commitment else "fixed-term" if term_match else "unknown",
+                "minimumMonths": int(term_match.group(1)) if term_match else None,
+            },
+            "promotion": {"isPromotion": presale, "label": "Pre-grand-opening sale" if presale else ""},
+            "fees": plan_fees,
+            "bestValueLabel": worldwide and bool(re.search(r"Best Value", segment, re.IGNORECASE)),
+            "rawLabel": f"{name} ${amount:g}/month; ${startup_amount:g} startup; ${float(annual_match.group(1)):g} annual",
+            "method": "visible-planet-fitness-plan-card",
+            "adapter": "planet-fitness-plan-cards",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        })
+    return candidates
+
+
 def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
-    crunch_candidates = crunch_visible_candidates(visible_text, source_url)
-    candidates: list[dict[str, Any]] = list(crunch_candidates)
-    patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if crunch_candidates else (
+    specialized = (
+        crunch_visible_candidates(visible_text, source_url)
+        or twenty_four_hour_visible_candidates(visible_text, source_url)
+        or equinox_visible_candidates(visible_text, source_url)
+        or planet_fitness_visible_candidates(visible_text, source_url)
+    )
+    candidates: list[dict[str, Any]] = list(specialized)
+    patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if specialized else (
         ("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)
     )
     for kind, pattern in patterns:

@@ -59,9 +59,19 @@ describe("estimateGymCost", () => {
   });
 
   it("keeps disclosed catalog fees in structured comparison totals", () => {
-    const planetFitness = demoGyms.find((item) => item.id === "web-bbf32ec975a42d");
+    const planetFitness = demoGyms.find((item) => item.id === "web-859ef7f95053f4");
     expect(planetFitness?.annualFee).toBe(49);
-    expect(estimateGymCost(planetFitness as Gym, DEFAULT_COMPARISON_ASSUMPTIONS).membershipTotal).toBe(230);
+    expect(planetFitness?.enrollmentFee).toBe(49);
+    expect(estimateGymCost(planetFitness as Gym, DEFAULT_COMPARISON_ASSUMPTIONS).membershipTotal).toBe(278);
+  });
+
+  it("does not leak presale fees into exact comparison fields", () => {
+    const relocation = demoGyms.find((item) => item.id === "web-bbf32ec975a42d");
+    expect(relocation?.pricingStatus).toBe("gated");
+    expect(relocation?.monthlyPrice).toBeNull();
+    expect(relocation?.annualFee).toBeNull();
+    expect(relocation?.plans?.some((plan) => plan.promotion?.isPromotion && plan.fees.some((fee) => fee.type === "annual"))).toBe(true);
+    expect(estimateGymCost(relocation as Gym, DEFAULT_COMPARISON_ASSUMPTIONS).membershipTotal).toBeNull();
   });
 });
 

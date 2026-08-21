@@ -654,6 +654,19 @@ class CostCoverageTests(unittest.TestCase):
         self.assertTrue(result["typicalPlanId"].endswith(":eight"))
         self.assertTrue(result["highestAccessPlanId"].endswith(":unlimited"))
 
+    def test_full_service_highest_access_respects_disclosed_market_breadth(self) -> None:
+        value = gym("scope-views", "Scope Views Gym", 242)
+        value["planOffers"] = [
+            {"sourceProductId": "select", "name": "Select", "amount": 242, "accessScope": "One-club access at the named location", "scopeType": "single-location"},
+            {"sourceProductId": "all-access", "name": "All-Access", "amount": 350, "accessScope": "Access to 90+ clubs across North America", "scopeType": "multi-location"},
+            {"sourceProductId": "destination", "name": "Destination", "amount": 370, "accessScope": "Access to 110+ clubs globally", "scopeType": "multi-location"},
+            {"sourceProductId": "destination-west", "name": "Destination West", "amount": 410, "accessScope": "Destination access plus two expanded West Coast clubs", "scopeType": "multi-location"},
+        ]
+        document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-21")
+        result = document["gyms"][0]
+        self.assertTrue(result["selectedPlanId"].endswith(":select"))
+        self.assertTrue(result["highestAccessPlanId"].endswith(":destination-west"))
+
     def test_best_value_requires_an_explicit_operator_label(self) -> None:
         value = gym("value", "Value Studio", 119, entityKindOverride="studio", accessModelOverride="class-membership")
         value["planOffers"] = [

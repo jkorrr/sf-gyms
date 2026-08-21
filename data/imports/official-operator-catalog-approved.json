@@ -774,6 +774,239 @@
         ],
         "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
       }
+    },
+    {
+      "id": "24-hour-ocean-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["osm-node-8641835222"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Ocean official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Ocean: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives. Yearly prepaid and 12-month Platinum variants are retained but do not displace Silver.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Ocean","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":38.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":38.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":53.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":53.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":60.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":411.52,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":411.52,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":537.52,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":537.52,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "24-hour-potrero-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["web-4aaec1680acf72"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Potrero official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Potrero: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives. Yearly prepaid and 12-month Platinum variants are retained but do not displace Silver.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Potrero","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":34.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":34.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":49.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":49.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":56.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":299.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":299.88,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":347.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":347.88,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "24-hour-sutter-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["web-8891970863af87"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Sutter-Montgomery official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/sutter-montgomery-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Sutter-Montgomery: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives. Yearly prepaid and 12-month Platinum variants are retained but do not displace Silver.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Sutter-Montgomery","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":34.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":34.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":49.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":49.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":56.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":299.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":299.88,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":347.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":347.88,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "24-hour-van-ness-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["osm-node-417957202"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Van Ness official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/van-ness-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Van Ness: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. This replaces the stale $44.99 selected price. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Van Ness","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":34.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":34.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":49.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":49.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":56.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":299.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":299.88,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":347.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":347.88,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-beale-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["web-e71c82ac2eb475"],
+      "sharedFields": {
+        "monthlyPrice": 242,
+        "priceSource": "Equinox Beale Street official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Beale Street use at $242/month. All-Access, Destination, and Destination West are retained as progressively broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Beale Street","scopeType":"single-location","amount":242,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-pine-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["web-678cd02ed5fd30"],
+      "sharedFields": {
+        "monthlyPrice": 297,
+        "priceSource": "Equinox Pine Street official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Pine Street use at $297/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Pine Street","scopeType":"single-location","amount":297,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-sports-club-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["osm-node-6848648284"],
+      "sharedFields": {
+        "monthlyPrice": 370,
+        "priceSource": "Equinox Sports Club San Francisco official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Sports Club San Francisco requires Destination access; the cheapest current public option is $370/month. Destination West at $410/month adds the flagship West Coast clubs. No Select or All-Access card, mandatory fee, public day pass, or commitment term is disclosed on this club page.",
+        "planOffers": [
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-union-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["web-8a074bb0e133c0"],
+      "sharedFields": {
+        "monthlyPrice": 310,
+        "priceSource": "Equinox Union Street official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Union Street use at $310/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Union Street","scopeType":"single-location","amount":310,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-van-mission-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["osm-node-10069564222"],
+      "sharedFields": {
+        "monthlyPrice": 280,
+        "priceSource": "Equinox Van Mission official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Van Mission use at $280/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Van Mission","scopeType":"single-location","amount":280,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "planet-fitness-lakeshore-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "planet-fitness",
+      "gymIds": ["web-859ef7f95053f4"],
+      "sharedFields": {
+        "monthlyPrice": 15,
+        "priceSource": "Planet Fitness Lakeshore official location membership cards",
+        "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Classic is the cheapest standard no-commitment plan at $15/month with a plan-linked $49 startup fee and $49 annual fee. PF Black Card is $24.99/month with a $1 startup fee, $49 annual fee, worldwide club access, guest privileges, and the operator's Best Value label. Both current offer disclosures run through August 30; no ordinary paid day pass is published.",
+        "planOffers": [
+          {"sourceProductId":"pfx:offers:eb6c8771-8c4b-11f1-8cdc-623b4c39050c","name":"Classic","accessScope":"Unlimited access to the Lakeshore home club","scopeType":"single-location","amount":15,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":49,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"pfx:offers:7aaf7c8f-8c4c-11f1-8cdc-623b4c39050c","name":"PF Black Card","accessScope":"Any Planet Fitness club worldwide plus guest and Black Card spa benefits","scopeType":"multi-location","amount":24.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}],"bestValueLabel":true}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "planet-fitness-kearny-presale-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "planet-fitness",
+      "gymIds": ["web-bbf32ec975a42d"],
+      "sharedFields": {
+        "monthlyPrice": null,
+        "priceSource": "Planet Fitness San Francisco Kearny relocation official presale membership cards",
+        "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The Kearny relocation is still coming soon and publishes only a pre-grand-opening sale through August 30. Classic is $15/month with a $1 startup fee, $49 annual fee, and 12-month commitment; PF Black Card is $24.99/month with a $0 startup fee, $49 annual fee, and no commitment. Both are retained as presale deals, not selected as the neutral ongoing plan for an unopened location.",
+        "planOffers": [
+          {"sourceProductId":"pfx:offers:658c81ff-7fae-11f1-a4ea-86ac2a50dfc9","name":"Classic — Pre-Grand-Opening Sale","accessScope":"Future unlimited access to the Kearny home club; temporary area-club access before opening","scopeType":"single-location","amount":15,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"availability":"presale","promotion":{"isPromotion":true,"label":"Pre-grand-opening sale","expiresAt":"2026-08-30"},"fees":[{"type":"enrollment","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"pfx:offers:eb6696a9-7fab-11f1-84fa-aafb02b39358","name":"PF Black Card — Pre-Grand-Opening Sale","accessScope":"Any Planet Fitness club worldwide plus future Kearny home-club and Black Card benefits","scopeType":"multi-location","amount":24.99,"billingInterval":"month","commitmentType":"month-to-month","availability":"presale","promotion":{"isPromotion":true,"label":"Pre-grand-opening sale","expiresAt":"2026-08-30"},"fees":[{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
     }
   ]
 }
