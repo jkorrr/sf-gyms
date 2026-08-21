@@ -1134,6 +1134,461 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "new-student-three",
+      "name": "New Student 3-Class Special",
+      "amount": 30,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Named location",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 3,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "New-student offer"
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "New Student 3-Class Special $30/one-time",
+      "method": "visible-lotusland-yoga-catalog",
+      "adapter": "lotusland-yoga",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "five-class-pack",
+      "name": "5 Class Package",
+      "amount": 122,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Named location",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "5 Class Package $122/one-time",
+      "method": "visible-lotusland-yoga-catalog",
+      "adapter": "lotusland-yoga",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "one-month-unlimited",
+      "name": "One-Month Unlimited Pass",
+      "amount": 175,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Named location",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "One-Month Unlimited Pass $175/one-time",
+      "method": "visible-lotusland-yoga-catalog",
+      "adapter": "lotusland-yoga",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ten-class-pack",
+      "name": "10 Class Package",
+      "amount": 220,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Named location",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "10 Class Package $220/one-time",
+      "method": "visible-lotusland-yoga-catalog",
+      "adapter": "lotusland-yoga",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "three-month-unlimited",
+      "name": "Three-Month Unlimited Pass",
+      "amount": 450,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "productType": "offer",
+      "accessScope": "Named location",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "3 months",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "prepaid",
+        "minimumMonths": 3
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Three-Month Unlimited Pass $450/one-time",
+      "method": "visible-lotusland-yoga-catalog",
+      "adapter": "lotusland-yoga",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "kind": "range",
+      "low": 135.0,
+      "high": 175.0,
+      "currency": "USD",
+      "rawLabel": "e a part of something special by becoming an integral part of our community through our Unlimited Monthly Sliding-Scale Membership $135 - $175",
+      "cadence": "month",
+      "productType": "cost-context",
+      "contextProductType": "membership",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "method": "visible-cost-context",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "autoPublishEligible": false,
+      "selectable": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "amount": 18.0,
+      "currency": "USD",
+      "rawLabel": "nate Class Schedule Class Packages New Student Special ✴︎ 3 Classes for $30 Sliding Scale Drop-In ✴︎ $18",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "restricted",
+        "restrictions": [
+          "Student"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "amount": 30.0,
+      "currency": "USD",
+      "rawLabel": "Blog Contact Us Donate Class Schedule Class Packages New Student Special ✴︎ 3 Classes for $30 Sliding Scale Drop-In",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "restricted",
+        "restrictions": [
+          "Student"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "Donate Class Schedule Class Packages New Student Special ✴︎ 3 Classes for $30 Sliding Scale Drop-In ✴︎ $18 - $38 Monthly",
+      "cadence": "month",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "restricted",
+        "restrictions": [
+          "Student"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "kind": "range",
+      "low": 18.0,
+      "high": 38.0,
+      "currency": "USD",
+      "rawLabel": "30 Sliding Scale Drop-In ✴︎ $18 - $38",
+      "cadence": "class",
+      "productType": "cost-context",
+      "contextProductType": "drop-in",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "method": "visible-cost-context",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+      "autoPublishEligible": false,
+      "selectable": false
+    },
+    {
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "capturedAt": "2026-08-21",
+      "kind": "range",
+      "low": 135.0,
+      "high": 175.0,
+      "currency": "USD",
+      "rawLabel": "Monthly Unlimited Membership ✴︎ $135 - 175",
+      "cadence": "month",
+      "productType": "cost-context",
+      "contextProductType": "membership",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "method": "visible-cost-context",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+      "autoPublishEligible": false,
+      "selectable": false
+    },
+    {
+      "gymId": "osm-node-2815132111",
+      "gymName": "PowerPlaySF",
+      "capturedAt": "2026-08-21",
+      "amount": 600.0,
+      "currency": "USD",
+      "rawLabel": "our POWER process Meet individually with our fitness coach Schedule weekly or bi-weekly sessions Starting at $600/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://powerplaysf.com/sessions",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2815132111",
+      "gymName": "PowerPlaySF",
+      "capturedAt": "2026-08-21",
+      "amount": 600.0,
+      "currency": "USD",
+      "rawLabel": "stie or a partner in for your sessions with a fitness coach Schedule weekly or bi-weekly sessions Starting at $600/mo",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://powerplaysf.com/sessions",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-2815132111",
+      "gymName": "PowerPlaySF",
+      "capturedAt": "2026-08-21",
+      "kind": "starting-price",
+      "low": 600.0,
+      "high": 600.0,
+      "currency": "USD",
+      "rawLabel": "ckage will be discussed during your discovery call Go through our POWER process Bring a bestie or a partner in for your sessions with a fitness coach Schedule weekly or bi-weekly sessions Starting at $600",
+      "cadence": "unknown",
+      "productType": "cost-context",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "method": "visible-cost-context",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://powerplaysf.com/sessions",
+      "autoPublishEligible": false,
+      "selectable": false
+    },
+    {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
       "capturedAt": "2026-08-20",
@@ -3949,6 +4404,29 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-way-264527987",
+      "gymName": "Sabrofit",
+      "capturedAt": "2026-08-21",
+      "kind": "starting-price",
+      "low": 210.0,
+      "high": 210.0,
+      "currency": "USD",
+      "rawLabel": "Home The Gym Training Bio Contact Me Rates Hosting More Home The Gym Training Bio Contact Me Rates Hosting Home The Gym Training Bio Contact Me Rates Hosting Private and Group Training Starts at $210 per hour",
+      "cadence": "hour",
+      "productType": "cost-context",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "method": "visible-cost-context",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://sabrofit.com/rates",
+      "autoPublishEligible": false,
+      "selectable": false
+    },
+    {
       "gymId": "osm-way-272700932",
       "gymName": "Crunch Fitness Chestnut",
       "capturedAt": "2026-08-20",
@@ -6238,6 +6716,30 @@
       "adapter": "operator-site",
       "sourceUrl": "https://f45training.com/studio/citycentersf/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-d4b58ff151c226",
+      "gymName": "DIAKADI Fitness Performance Life",
+      "capturedAt": "2026-08-21",
+      "kind": "range",
+      "low": 170.0,
+      "high": 225.0,
+      "currency": "USD",
+      "rawLabel": "Each of our personal trainers sets their own rates, with an average of $170-$225 per session",
+      "cadence": "session",
+      "productType": "cost-context",
+      "contextProductType": "service",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "method": "visible-cost-context",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.diakadi.life/general-info-details",
+      "autoPublishEligible": false,
+      "selectable": false
     },
     {
       "gymId": "web-e20a10174e60fa",

@@ -1,7 +1,7 @@
 import importedData from "./sf-gyms-osm.json";
 
 export type PriceFreshness = "verified" | "gym_reported" | "stale" | "unknown";
-export type PricingStatus = "verified" | "operator-confirmed" | "reported" | "estimated" | "free" | "pay-per-visit" | "not-applicable" | "gated" | "unresolved";
+export type PricingStatus = "verified" | "official-range" | "operator-confirmed" | "reported" | "estimated" | "free" | "pay-per-visit" | "not-applicable" | "gated" | "unresolved";
 export type EntityKind = "gym" | "studio" | "martial-arts" | "public-recreation" | "outdoor-equipment" | "non-consumer";
 export type AccessModel = "membership" | "class-membership" | "class-pack" | "drop-in" | "free-public" | "restricted" | "not-applicable";
 export type PublicationStatus = "publish" | "suppress-alias" | "review-hold";
@@ -108,7 +108,7 @@ export type GymPlan = {
   accessScope: string;
   scopeType?: string;
   classAllowance?: { count: number | null; period: string; unlimited: boolean; disclosed: boolean } | null;
-  billing: { amount: number | null; currency: string; interval: string; intervalCount: number; normalizedMonthly: number | null; normalizationFormula?: string };
+  billing: { amount: number | null; amountLow?: number | null; amountHigh?: number | null; currency: string; interval: string; intervalCount: number; normalizedMonthly: number | null; normalizationFormula?: string };
   commitment?: { type: string; minimumMonths?: number | null; minimumDays?: number | null; rawLabel?: string };
   availability?: string;
   purchaseMethod?: string;
@@ -147,7 +147,9 @@ export type GymDropIn = {
   name: string;
   productType: "drop-in";
   accessScope: string;
-  amount: number;
+  amount: number | null;
+  amountLow?: number | null;
+  amountHigh?: number | null;
   currency: string;
   selected: boolean;
   selectionReason: string;

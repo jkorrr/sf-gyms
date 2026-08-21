@@ -388,7 +388,11 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         dom_candidates.extend(static_crawler.bookee_visible_candidates(visible_text, visible_url))
     for visible_url, card_text in visible_card_sources:
         for candidate in static_crawler.visible_candidates(card_text, visible_url):
-            candidate["method"] = "rendered-visible-plan-card"
+            candidate["method"] = (
+                "rendered-visible-cost-context"
+                if candidate.get("kind") in {"range", "starting-price"}
+                else "rendered-visible-plan-card"
+            )
             candidate["cardAssociationHash"] = hashlib.sha256(card_text.encode("utf-8")).hexdigest()
             dom_candidates.append(candidate)
     dom_candidates = remove_unattached_crunch_promotions(dom_candidates, url)
@@ -396,7 +400,10 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     deduplicated: list[dict[str, Any]] = []
     seen: set[tuple[Any, ...]] = set()
     for candidate in observations:
-        key = (candidate.get("amount"), candidate.get("productType"), candidate.get("rawLabel"), candidate.get("sourceUrl"))
+        key = (
+            candidate.get("kind"), candidate.get("low"), candidate.get("high"), candidate.get("amount"),
+            candidate.get("productType"), candidate.get("rawLabel"), candidate.get("sourceUrl"),
+        )
         if key not in seen:
             seen.add(key)
             deduplicated.append({"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **candidate})
@@ -448,6 +455,7 @@ def merge_incremental_results(
     for item in combined_observations:
         key = (
             text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("sourceProductId")),
+            text(item.get("kind")), float(item.get("low", 0) or 0), float(item.get("high", 0) or 0),
             float(item.get("amount", 0) or 0), text(item.get("productType")), text(item.get("rawLabel")),
         )
         if key in observation_keys:
@@ -457,6 +465,7 @@ def merge_incremental_results(
     observations.sort(
         key=lambda item: (
             text(item.get("gymId")), text(item.get("sourceUrl")),
+            text(item.get("kind")), float(item.get("low", 0) or 0),
             float(item.get("amount", 0) or 0), text(item.get("rawLabel")),
         )
     )

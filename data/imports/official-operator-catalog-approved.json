@@ -1271,14 +1271,14 @@
       "operatorId": "lotusland-yoga",
       "gymIds": ["osm-node-2666409791"],
       "sharedFields": {
-        "monthlyPrice": 135,
-        "dayPassPrice": 18,
+        "monthlyPrice": null,
+        "dayPassPrice": null,
         "priceSource": "Lotusland Yoga official Prices & Policies page",
         "priceSourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "The unlimited auto-renewing membership is explicitly sliding scale at $135–$175; the compatibility price retains the publicly available $135 lower endpoint and the full range remains in the plan name and cost context. The one-month unlimited pass is $175, three months is $450, and packs are $122/5 and $220/10. Ordinary classes remain sliding scale; the existing $18–$38 official drop-in observation is retained.",
+        "priceNote": "The unlimited auto-renewing membership is explicitly sliding scale at $135–$175 and ordinary classes are $18–$38. Verified-only compatibility fields remain null because each buyer selects an amount; neither lower endpoint is an exact plan price. The one-month unlimited pass is $175, three months is $450, and packs are $122/5 and $220/10.",
         "planOffers": [
-          {"sourceProductId":"sliding-scale-monthly","name":"Unlimited Monthly Sliding-Scale Membership ($135–$175)","accessScope":"Unlimited in-person, virtual, and recorded classes","classAllowance":{"unlimited":true,"period":"month"},"amount":135,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"sliding-scale","restrictions":["Member selects an amount from $135 to $175"]},"fees":[]},
+          {"sourceProductId":"sliding-scale-monthly","name":"Unlimited Monthly Sliding-Scale Membership ($135–$175)","accessScope":"Unlimited in-person, virtual, and recorded classes","classAllowance":{"unlimited":true,"period":"month"},"amount":null,"amountLow":135,"amountHigh":175,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"sliding-scale","restrictions":["Member selects an amount from $135 to $175"]},"fees":[]},
           {"sourceProductId":"one-month-unlimited","name":"One-Month Unlimited Pass","productType":"class-pack","classAllowance":{"unlimited":true,"period":"month"},"amount":175,"billingInterval":"one-time","commitmentType":"none","fees":[]},
           {"sourceProductId":"three-month-unlimited","name":"Three-Month Unlimited Pass","productType":"class-pack","classAllowance":{"unlimited":true,"period":"3 months"},"amount":450,"billingInterval":"one-time","commitmentType":"prepaid","minimumCommitmentMonths":3,"fees":[]},
           {"sourceProductId":"five-class-pack","name":"5 Class Package","productType":"class-pack","classAllowance":{"count":5,"period":"purchase"},"amount":122,"billingInterval":"one-time","commitmentType":"none","fees":[]},
@@ -1286,7 +1286,11 @@
           {"sourceProductId":"new-student-three","name":"New Student 3-Class Special","productType":"class-pack","classAllowance":{"count":3,"period":"purchase"},"amount":30,"billingInterval":"one-time","commitmentType":"none","promotion":{"isPromotion":true,"label":"New-student offer"},"fees":[]}
         ],
         "dropInOffers": [
-          {"sourceProductId":"sliding-scale-drop-in","name":"Sliding-Scale Drop-In ($18–$38)","amount":18,"eligibility":{"type":"sliding-scale","restrictions":["Student selects an amount from $18 to $38"]}}
+          {"sourceProductId":"sliding-scale-drop-in","name":"Sliding-Scale Drop-In ($18–$38)","amount":null,"amountLow":18,"amountHigh":38,"eligibility":{"type":"sliding-scale","restrictions":["Student selects an amount from $18 to $38"]}}
+        ],
+        "costContextOffers": [
+          {"sourceProductId":"sliding-scale-monthly","kind":"range","label":"Unlimited Monthly Sliding-Scale Membership","low":135,"high":175,"currency":"USD","cadence":"month","productType":"class-membership","sourceUrl":"https://lotuslandyogasf.com/pricespolicies/","observedAt":"2026-08-21","evidenceTier":"official-public","exactLocationMatch":"exact-location-reviewed","note":"Member selects an amount from $135 to $175; the range is not an exact scalar.","selectable":false},
+          {"sourceProductId":"sliding-scale-drop-in","kind":"range","label":"Sliding-Scale Drop-In","low":18,"high":38,"currency":"USD","cadence":"class","productType":"drop-in","sourceUrl":"https://lotuslandyogasf.com/pricespolicies/","observedAt":"2026-08-21","evidenceTier":"official-public","exactLocationMatch":"exact-location-reviewed","note":"Student selects an amount from $18 to $38; the range is not an exact scalar.","selectable":false}
         ],
         "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
       }

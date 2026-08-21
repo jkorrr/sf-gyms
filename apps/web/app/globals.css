@@ -71,6 +71,7 @@ button { cursor: pointer; }
 .freshness.stale::before { background: #c9985f; }
 .cost-status { display: inline-flex; align-items: center; width: fit-content; gap: .35rem; padding: .3rem .55rem; border-radius: 999px; background: #edf3ef; color: #355346; font-family: var(--mono-font); font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
 .cost-status-estimated { background: #fff1d9; color: #7a5120; }
+.cost-status-official-range { background: #e7eefb; color: #35577d; }
 .cost-status-reported { background: #e9e3f8; color: #59417e; }
 .cost-status-free { background: #e6f5ea; color: #27623b; }
 .cost-status-pay-per-visit { background: #e7f1f6; color: #28566f; }

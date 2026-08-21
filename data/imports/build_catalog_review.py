@@ -17,7 +17,6 @@ from collections import defaultdict
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parent
 FIXTURE_PATH = ROOT / "sf-gyms-osm.json"
 STATIC_PATH = ROOT / "official-crawl-observations.json"
@@ -25,9 +24,13 @@ RENDERED_PATH = ROOT / "rendered-crawl-observations.json"
 OUTPUT_PATH = ROOT / "official-catalog-review.json"
 APPROVED_PATH = ROOT / "official-crawl-approved.json"
 
-STRUCTURED_METHOD_PREFIXES = ("public-", "json-ld", "rendered-visible-plan-card")
+STRUCTURED_METHOD_PREFIXES = (
+    "public-", "json-ld", "rendered-visible-plan-card",
+    "visible-cost-context", "rendered-visible-cost-context",
+)
 CARD_SEMANTIC_RE = re.compile(
-    r"\b(?:membership|plan|package|class|drop[ -]?in|unlimited|monthly|month|week|visit|session|pass)\b",
+    r"\b(?:memberships?|plans?|packages?|classes?|drop[ -]?ins?|unlimited|monthly|month|week|visits?|sessions?|passes?|"
+    r"training|tuition|programs?|rates?|lessons?|hours?|day passes?)\b",
     re.IGNORECASE,
 )
 CARD_MONEY_RE = re.compile(r"\$\s*(\d{1,6}(?:\.\d{1,2})?)")
@@ -54,6 +57,8 @@ def source_product_id(candidate: dict[str, Any]) -> str:
 def candidate_is_attached(candidate: dict[str, Any]) -> bool:
     """Accept only a product/card observation, never an unattached dollar regex."""
 
+    if candidate_is_cost_context(candidate):
+        return True
     method = text(candidate.get("method")).casefold()
     if method == "visible-text-candidate":
         return False
@@ -78,6 +83,31 @@ def candidate_is_attached(candidate: dict[str, Any]) -> bool:
         or text(candidate.get("cardAssociationHash"))
         or text(candidate.get("cardHash"))
         or method.startswith(STRUCTURED_METHOD_PREFIXES)
+    )
+
+
+def candidate_is_cost_context(candidate: dict[str, Any]) -> bool:
+    """Validate a non-selectable official range or starting price."""
+
+    if text(candidate.get("kind")) not in {"range", "starting-price"}:
+        return False
+    if (candidate.get("promotion") or {}).get("isPromotion"):
+        return False
+    try:
+        low = float(candidate.get("low"))
+        high = float(candidate.get("high"))
+    except (TypeError, ValueError):
+        return False
+    if not (0 < low <= high <= 10_000):
+        return False
+    method = text(candidate.get("method")).casefold()
+    label = text(candidate.get("rawLabel"))
+    if method in {"visible-cost-context", "rendered-visible-cost-context"} and not CARD_SEMANTIC_RE.search(label):
+        return False
+    return bool(text(candidate.get("sourceUrl"))) and (
+        method.startswith("public-")
+        or method.startswith("json-ld")
+        or method in {"visible-cost-context", "rendered-visible-cost-context"}
     )
 
 
@@ -144,6 +174,31 @@ def drop_in_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]
     }
 
 
+def cost_context_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
+    raw_label = " ".join(text(candidate.get("rawLabel")).split())[:220]
+    return {
+        "sourceProductId": source_product_id(candidate),
+        "kind": text(candidate.get("kind")),
+        "label": raw_label or "Official cost context",
+        "low": float(candidate["low"]),
+        "high": float(candidate["high"]),
+        "currency": text(candidate.get("currency")) or "USD",
+        "cadence": text(candidate.get("cadence")) or "unknown",
+        "productType": text(candidate.get("contextProductType")) or "service",
+        "sourceUrl": text(candidate.get("sourceUrl")),
+        "observedAt": observed_at,
+        "evidenceTier": text(candidate.get("evidenceTier")) or "official-public",
+        "exactLocationMatch": text(candidate.get("exactLocationMatch")) or "candidate",
+        "captureMethod": text(candidate.get("method")) or "catalog-review-candidate",
+        "contentHash": text(candidate.get("contentHash")) or hashlib.sha256(
+            f"{text(candidate.get('sourceUrl'))}|{observed_at}|{raw_label}".encode("utf-8")
+        ).hexdigest(),
+        "conflictFlags": list(candidate.get("conflictFlags") or []),
+        "note": text(candidate.get("note")),
+        "selectable": False,
+    }
+
+
 def offer_signature(offer: dict[str, Any], group: str) -> tuple[str, str, float, str]:
     return (
         group,
@@ -153,10 +208,65 @@ def offer_signature(offer: dict[str, Any], group: str) -> tuple[str, str, float,
     )
 
 
-def catalog_signatures(value: dict[str, Any]) -> tuple[tuple[str, str, float, str], ...]:
+def catalog_signatures(value: dict[str, Any]) -> tuple[tuple[Any, ...], ...]:
     signatures = [offer_signature(offer, "plan") for offer in value.get("planOffers", []) if isinstance(offer, dict)]
     signatures.extend(offer_signature(offer, "drop-in") for offer in value.get("dropInOffers", []) if isinstance(offer, dict))
+    signatures.extend(
+        (
+            "cost-context", text(offer.get("kind")),
+            text(offer.get("sourceProductId")) or text(offer.get("label")).casefold(),
+            round(float(offer.get("low") or 0), 2), round(float(offer.get("high") or 0), 2),
+            text(offer.get("cadence")),
+        )
+        for offer in value.get("costContextOffers", []) if isinstance(offer, dict)
+    )
     return tuple(sorted(signatures))
+
+
+def deduplicate_cost_contexts(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
+    selected: dict[tuple[Any, ...], dict[str, Any]] = {}
+    values_by_product: dict[tuple[str, str, str], set[tuple[float, float]]] = defaultdict(set)
+    for candidate in candidates:
+        source_url = text(candidate.get("sourceUrl"))
+        product_key = (
+            source_product_id(candidate)
+            or text(candidate.get("cardAssociationHash"))
+            or " ".join(text(candidate.get("rawLabel")).casefold().split())
+        )
+        kind = text(candidate.get("kind"))
+        low, high = float(candidate["low"]), float(candidate["high"])
+        values_by_product[(source_url, kind, product_key)].add((low, high))
+        context_product_type = text(candidate.get("contextProductType")) or "service"
+        cadence = text(candidate.get("cadence")) or "unknown"
+        dedup_key = (
+            kind, context_product_type, low, high, cadence,
+            product_key if context_product_type == "service" else "",
+        )
+        incumbent = selected.get(dedup_key)
+        candidate_score = (
+            bool(re.search(r"/(?:pricing|prices|rates|memberships?|packages?)(?:/|$)", source_url, re.IGNORECASE)),
+            bool(source_product_id(candidate)),
+            -len(text(candidate.get("rawLabel"))),
+        )
+        incumbent_score = (
+            bool(re.search(r"/(?:pricing|prices|rates|memberships?|packages?)(?:/|$)", text((incumbent or {}).get("sourceUrl")), re.IGNORECASE)),
+            bool(source_product_id(incumbent or {})),
+            -len(text((incumbent or {}).get("rawLabel"))),
+        )
+        if incumbent is None or candidate_score > incumbent_score:
+            selected[dedup_key] = candidate
+    conflicts = [
+        {
+            "type": "source-product-range-conflict",
+            "kind": kind,
+            "sourceProductKey": product_key,
+            "ranges": [{"low": low, "high": high} for low, high in sorted(values)],
+            "publicationEffect": "fail-closed",
+        }
+        for (_source_url, kind, product_key), values in sorted(values_by_product.items())
+        if len(values) > 1
+    ]
+    return list(selected.values()), conflicts
 
 
 def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]], list[dict[str, Any]]]:
@@ -255,10 +365,13 @@ def build_review(
             else:
                 rejected[text(candidate.get("gymId"))].append({
                     "amount": candidate.get("amount"),
+                    "low": candidate.get("low"),
+                    "high": candidate.get("high"),
+                    "kind": candidate.get("kind"),
                     "rawLabel": text(candidate.get("rawLabel"))[:220],
                     "sourceUrl": text(candidate.get("sourceUrl")),
                     "method": text(candidate.get("method")),
-                    "reason": "Unattached price-shaped text is not a plan catalog record.",
+                    "reason": "Unattached price/range-shaped text is not a plan catalog record or official cost context.",
                 })
 
     approved_by_id = {
@@ -269,7 +382,11 @@ def build_review(
     proposals: list[dict[str, Any]] = []
     unchanged_approved: list[dict[str, Any]] = []
     for gym_id, candidates in sorted(grouped.items()):
-        unique, conflicts = deduplicate(candidates)
+        context_candidates = [candidate for candidate in candidates if candidate_is_cost_context(candidate)]
+        price_candidates = [candidate for candidate in candidates if not candidate_is_cost_context(candidate)]
+        unique, conflicts = deduplicate(price_candidates)
+        unique_contexts, context_conflicts = deduplicate_cost_contexts(context_candidates)
+        conflicts.extend(context_conflicts)
         plans: list[dict[str, Any]] = []
         drop_ins: list[dict[str, Any]] = []
         for candidate in unique:
@@ -278,7 +395,11 @@ def build_review(
                 drop_ins.append(drop_in_offer(candidate, observed_at))
             else:
                 plans.append(plan_offer(candidate, observed_at))
-        if not plans and not drop_ins:
+        contexts = [
+            cost_context_offer(candidate, text(candidate.pop("_observedAt", generated_at)))
+            for candidate in unique_contexts
+        ]
+        if not plans and not drop_ins and not contexts:
             continue
         gym = gyms[gym_id]
         source_urls = sorted({
@@ -286,6 +407,9 @@ def build_review(
             for offer in plans + drop_ins
             if text((offer.get("evidence") or {}).get("url"))
         })
+        source_urls = sorted(set(source_urls).union(
+            text(item.get("sourceUrl")) for item in contexts if text(item.get("sourceUrl"))
+        ))
         proposal = {
             "gymId": gym_id,
             "gymName": text(gym.get("name")),
@@ -296,6 +420,7 @@ def build_review(
             "sourceUrls": source_urls,
             "planOffers": plans,
             "dropInOffers": drop_ins,
+            "costContextOffers": contexts,
             "catalogCompleteness": {
                 "plans": "partial" if plans else "none-observed",
                 "dropIns": "partial" if drop_ins else "none-observed",
@@ -327,6 +452,7 @@ def build_review(
                 "sourceUrls": source_urls,
                 "planOfferCount": len(plans),
                 "dropInOfferCount": len(drop_ins),
+                "costContextOfferCount": len(contexts),
                 "catalogCompleteness": prior_approval.get("catalogCompleteness") or proposal["catalogCompleteness"],
                 "status": "unchanged-approved",
             })

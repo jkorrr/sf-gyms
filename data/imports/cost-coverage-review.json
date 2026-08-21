@@ -3221,8 +3221,8 @@
       "websiteUrl": "https://www.diakadi.life/",
       "entityKind": "gym",
       "modality": "personal-training",
-      "pricingStatus": "not-applicable",
-      "pricingBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
@@ -3246,8 +3246,13 @@
       "crawlAttempts": [
         {
           "url": "https://www.diakadi.life/",
-          "status": "not-modified",
+          "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://www.diakadi.life/general-info-details",
+          "status": "fetched",
+          "candidateCount": 1
         }
       ]
     },
@@ -5939,8 +5944,8 @@
       "websiteUrl": "https://www.jbodyworks.com/",
       "entityKind": "studio",
       "modality": "personal-training",
-      "pricingStatus": "gated",
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
@@ -5965,6 +5970,16 @@
         {
           "url": "https://www.jbodyworks.com/",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jbodyworks.com/3-ways-to-train",
+          "status": "not-modified",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.jbodyworks.com/appointments",
+          "status": "not-modified",
           "candidateCount": 0
         },
         {
@@ -6839,15 +6854,13 @@
       "websiteUrl": "https://lotuslandyogasf.com/",
       "entityKind": "studio",
       "modality": "yoga",
-      "pricingStatus": "unresolved",
-      "pricingBlocker": "A source price exists but no eligible recurring plan can be selected.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but no single standard-adult scalar can be selected without inventing precision.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [
-        "A source price exists but no eligible recurring plan can be selected."
-      ],
+      "planValidationErrors": [],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -6870,6 +6883,36 @@
           "candidateCount": 0
         },
         {
+          "url": "https://lotuslandyogasf.com/pricespolicies/",
+          "status": "fetched",
+          "candidateCount": 6
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/classstyles",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/events",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/schedule",
+          "status": "fetched",
+          "candidateCount": 5
+        },
+        {
+          "url": "https://lotuslandyogasf.com/pricespolicies/videos",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/gcc/32989",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://momence.com/l/79heGllJ",
           "status": "fetched",
           "candidateCount": 0
@@ -6885,7 +6928,47 @@
           "candidateCount": 0
         },
         {
+          "url": "https://momence.com/m/102171",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/105560",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/105561",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/105562",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/105563",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/105564",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/188217",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
           "url": "https://momence.com/u/lotusland-yoga-sf",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/video/plugin/32989",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -8670,8 +8753,8 @@
       "websiteUrl": "https://powerplaysf.com/",
       "entityKind": "studio",
       "modality": "personal-training",
-      "pricingStatus": "gated",
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
@@ -8697,6 +8780,11 @@
           "url": "https://powerplaysf.com/",
           "status": "fetched",
           "candidateCount": 0
+        },
+        {
+          "url": "https://powerplaysf.com/sessions",
+          "status": "fetched",
+          "candidateCount": 3
         }
       ]
     },
@@ -9029,8 +9117,8 @@
       "websiteUrl": "https://sabrofit.com/training",
       "entityKind": "studio",
       "modality": "personal-training",
-      "pricingStatus": "gated",
-      "pricingBlocker": "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
@@ -9052,6 +9140,16 @@
       "sourceAttemptStatus": "crawl-attempted",
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
+        {
+          "url": "https://sabrofit.com",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://sabrofit.com/rates",
+          "status": "not-modified",
+          "candidateCount": 1
+        },
         {
           "url": "https://sabrofit.com/training",
           "status": "fetched",
@@ -9108,22 +9206,9 @@
       "websiteUrl": "https://sffencers.com/",
       "entityKind": "studio",
       "modality": "martial-arts-boxing",
-      "pricingStatus": "estimated",
-      "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
-      "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
-        "currency": "USD",
-        "confidence": "medium",
-        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
-        "sampleSize": 8,
-        "generatedAt": "2026-08-21",
-        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
-        "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
-        "validationRangeCoverage": 1.0
-      },
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but no single standard-adult scalar can be selected without inventing precision.",
+      "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
@@ -9146,6 +9231,11 @@
       "crawlAttempts": [
         {
           "url": "https://sffencers.com/",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://sffencers.com/faq/",
           "status": "network-error",
           "candidateCount": 0
         },

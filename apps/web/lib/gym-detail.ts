@@ -42,6 +42,7 @@ export function pricingStatusText(gym: Gym): string {
   if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) return costContextStatusText(gym.costContext[0]);
   const labels: Record<string, string> = {
     verified: "Official price",
+    "official-range": "Official range",
     "operator-confirmed": "Operator confirmed",
     reported: "Recently reported",
     estimated: "Estimated",
