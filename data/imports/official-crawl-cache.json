@@ -2835,11 +2835,11 @@
     ]
   },
   "https://www.diakadi.life/": {
-    "status": "not-modified",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "",
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"d508b0355c596ec5fc479d1e23fbae14--gzip\"",
     "lastModified": "",
-    "contentHash": "1785161c4b6faebb040be9f09ea132afe37c270f10eb365b4d3364599b3e645d",
+    "contentHash": "00271660b40d2f293002d2eed17ea8415b85987c0dbdd6dd8c870bc825383343",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": [
@@ -6620,6 +6620,7 @@
     "contentHash": "00c0e993732912e81a30c7b3ccfdaf140de13ece1ac3f1b061ff21ab0a651797",
     "candidates": [],
     "linkedStorefronts": [
+      "https://lotuslandyogasf.com/pricespolicies/",
       "https://momence.com/u/lotusland-yoga-sf",
       "https://momence.com/l/k8ha016b",
       "https://momence.com/l/b8hy9BOQ",
@@ -6695,7 +6696,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "eae0b8430000f2600068348c7538d4af342a54a46330014bdadc0494990e48bf",
+    "contentHash": "c15b93eb1a5b4dfac705c8b6938320b4b878f86c0ea49870d91adaa4d2aae266",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -6705,7 +6706,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "9bec57c3c9e697c9e33e320895c58e58c70357f8e8a9bf2bd10dda271070eb65",
+    "contentHash": "3912f63f1561e7ac80bc3f1fe59ee72f3f5bdc3d2bed514b12a62ded1cc72285",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -8678,12 +8679,14 @@
   },
   "https://sabrofit.com": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-18",
+    "lastAttemptAt": "2026-08-21",
     "etag": "8bad9fc5a609638e0c2789b0b665f1f3",
     "lastModified": "",
     "contentHash": "279d4041eab2cc9be6e80cf4ffa26f91700ed93592752e68f6ca2e2011fc78a8",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://sabrofit.com/rates"
+    ],
     "locationCandidates": []
   },
   "https://sfrecpark.org/destination/st-marys-rec-center/": {
@@ -13338,10 +13341,10 @@
   },
   "https://www.jbodyworks.com/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
-    "etag": "W/\"4344cfa1e00ab3fe6d4bb9c087e2fb26--gzip\"",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"572447fe99737a1cbef5937ecf2261b8\"",
     "lastModified": "",
-    "contentHash": "641a50efdb9b21627bd5a3cada38c2ed43afb06dc806a7dff5d59e73a542d9ab",
+    "contentHash": "536fe1ed441f1a9785559f6dfbe63a7437acc96c3cbd6f0fd70c32e293a6ee25",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": [
@@ -14858,7 +14861,7 @@
   },
   "https://powerplaysf.com/": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "5e723a02c003e6eaa01489413c4bdc9fab429da80c7f13f6a0f712ade43bdb01",
@@ -15271,12 +15274,14 @@
   },
   "https://sabrofit.com/training": {
     "status": "fetched",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "62d2cfd82e94986fd6135b7a719038bc",
     "lastModified": "",
     "contentHash": "3f2d06d1dd5da5edff1757fcb58ccd62b4e0e4ad1a66643c9fa3cca0b351a6a3",
     "candidates": [],
-    "linkedStorefronts": [],
+    "linkedStorefronts": [
+      "https://sabrofit.com/rates"
+    ],
     "locationCandidates": []
   },
   "https://sfrecpark.org/Facilities/Facility/Details/St-Marys-Rec-Center-109": {
@@ -15305,7 +15310,7 @@
   },
   "https://sffencers.com/": {
     "status": "network-error",
-    "lastAttemptAt": "2026-08-20",
+    "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
     "contentHash": "",
@@ -17522,7 +17527,7 @@
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "e89e39df5cc88bcaccd552cdcf5641bea3e1d797fd2650a1eb3a65f5ed2772d3",
+    "contentHash": "cdf94448400e8178b36ffcb79674e21d6d5f0f87edb2d3a1167f049648b8188a",
     "candidates": [],
     "linkedStorefronts": [],
     "locationCandidates": []
@@ -18125,6 +18130,921 @@
   },
   "https://www.divineyogastudiosf.com/book-now": {
     "status": "http-404",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://www.diakadi.life/general-info-details": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"ff8d90608941953f144bb681259d851f--gzip\"",
+    "lastModified": "",
+    "contentHash": "4d9ea37bc5740b88d1e1760d4594d226a8c8338e8cfb5b775ce62d708bb8b0e6",
+    "candidates": [
+      {
+        "kind": "range",
+        "low": 170.0,
+        "high": 225.0,
+        "currency": "USD",
+        "rawLabel": "Each of our personal trainers sets their own rates, with an average of $170-$225 per session",
+        "cadence": "session",
+        "productType": "cost-context",
+        "contextProductType": "service",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "method": "visible-cost-context",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://www.diakadi.life/general-info-details",
+        "autoPublishEligible": false,
+        "selectable": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.diakadi.life/general-info-details",
+        "method": "json-ld-location",
+        "rawLabel": "| | []",
+        "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "DIAKADI Fitness Performance Life",
+        "address": "290 Division St Fl 2, San Francisco, CA, 94103",
+        "latitude": 37.76966365443743,
+        "longitude": -122.4082781,
+        "hours": [
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Monday",
+            "opens": "06:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Tuesday",
+            "opens": "06:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Wednesday",
+            "opens": "06:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Thursday",
+            "opens": "06:00",
+            "closes": "19:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Friday",
+            "opens": "06:00",
+            "closes": "17:00"
+          },
+          {
+            "@type": "OpeningHoursSpecification",
+            "dayOfWeek": "Saturday",
+            "opens": "08:00",
+            "closes": "12:00"
+          }
+        ],
+        "amenities": [],
+        "sourceUrl": "https://www.diakadi.life/general-info-details",
+        "method": "json-ld-location",
+        "rawLabel": "DIAKADI Fitness Performance Life | 290 Division St Fl 2, San Francisco, CA, 94103 | [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': 'Monday', 'opens': '06:00', 'closes': '19:00'}, {'@type': 'OpeningHoursSpecificatio",
+        "contentHash": "828f98cf4afa1ba5685a23b147eb0f9a99c896be0e55d0b871b05a7fade20c41",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "20 times in 21 Years. LOCATION. 290 Division St",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.diakadi.life/general-info-details",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 20 times in 21 Years. LOCATION. 290 Division St",
+        "contentHash": "32e65fa128830eca974b10b6fd576b0b13a4658a93f334e3d9fbb3286cb325a6",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "290 Division Street",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.diakadi.life/general-info-details",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 290 Division Street",
+        "contentHash": "93ca2815eecd6ccb0933cc4f493d3482674815055852e7304bc34da0a8d0bcc3",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://www.jbodyworks.com/appointments": {
+    "status": "not-modified",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "eedc0c8e1e6bfb6714f6a872487c615f14f7d5d7f1bf413ec620b8129fde8552",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.jbodyworks.com/appointments",
+        "method": "json-ld-location",
+        "rawLabel": "| | []",
+        "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "425 2nd Street, San Francisco, CA",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.jbodyworks.com/appointments",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 425 2nd Street, San Francisco, CA",
+        "contentHash": "5ca1cb955ef9ae8b4970e3862527a22afabd128fe371828eae6084410fcd9833",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://www.jbodyworks.com/3-ways-to-train": {
+    "status": "not-modified",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "bc2feabb0aa9965ca68ec9dc1e27cd5a5334e4ccc263bb6dd740bc1ff0fd23f4",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.jbodyworks.com/3-ways-to-train",
+        "method": "json-ld-location",
+        "rawLabel": "| | []",
+        "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "425 2nd Street, San Francisco, CA",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.jbodyworks.com/3-ways-to-train",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 425 2nd Street, San Francisco, CA",
+        "contentHash": "5ca1cb955ef9ae8b4970e3862527a22afabd128fe371828eae6084410fcd9833",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://lotuslandyogasf.com/pricespolicies/": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "6dc699cd34eb41ef520c6cc9a421632d5a1d9b2369746df300af91dd96e4bc93",
+    "candidates": [
+      {
+        "sourceProductId": "one-month-unlimited",
+        "name": "One-Month Unlimited Pass",
+        "amount": 175,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "One-Month Unlimited Pass $175/one-time",
+        "method": "visible-lotusland-yoga-catalog",
+        "adapter": "lotusland-yoga",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "three-month-unlimited",
+        "name": "Three-Month Unlimited Pass",
+        "amount": 450,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": null,
+          "period": "3 months",
+          "unlimited": true
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "prepaid",
+          "minimumMonths": 3
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "Three-Month Unlimited Pass $450/one-time",
+        "method": "visible-lotusland-yoga-catalog",
+        "adapter": "lotusland-yoga",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "five-class-pack",
+        "name": "5 Class Package",
+        "amount": 122,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 5,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "5 Class Package $122/one-time",
+        "method": "visible-lotusland-yoga-catalog",
+        "adapter": "lotusland-yoga",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "ten-class-pack",
+        "name": "10 Class Package",
+        "amount": 220,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 10,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "10 Class Package $220/one-time",
+        "method": "visible-lotusland-yoga-catalog",
+        "adapter": "lotusland-yoga",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "new-student-three",
+        "name": "New Student 3-Class Special",
+        "amount": 30,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "productType": "offer",
+        "accessScope": "Named location",
+        "scopeType": "single-location",
+        "classAllowance": {
+          "count": 3,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "New-student offer"
+        },
+        "fees": [],
+        "bestValueLabel": false,
+        "rawLabel": "New Student 3-Class Special $30/one-time",
+        "method": "visible-lotusland-yoga-catalog",
+        "adapter": "lotusland-yoga",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "autoPublishEligible": false
+      },
+      {
+        "kind": "range",
+        "low": 135.0,
+        "high": 175.0,
+        "currency": "USD",
+        "rawLabel": "e a part of something special by becoming an integral part of our community through our Unlimited Monthly Sliding-Scale Membership $135 - $175",
+        "cadence": "month",
+        "productType": "cost-context",
+        "contextProductType": "membership",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "method": "visible-cost-context",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "autoPublishEligible": false,
+        "selectable": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://momence.com/u/lotusland-yoga-sf",
+      "https://momence.com/m/188217",
+      "https://momence.com/m/105560",
+      "https://momence.com/m/105564",
+      "https://momence.com/m/105563",
+      "https://momence.com/m/105561",
+      "https://momence.com/m/105562",
+      "https://lotuslandyogasf.com/pricespolicies/classstyles",
+      "https://lotuslandyogasf.com/pricespolicies/schedule",
+      "https://lotuslandyogasf.com/pricespolicies/videos",
+      "https://momence.com/gcc/32989",
+      "https://lotuslandyogasf.com/pricespolicies/events"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1360 Valencia Street San Francisco, CA 94110",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1360 Valencia Street San Francisco, CA 94110",
+        "contentHash": "b7f120a43b6d0e5be39e9ead06246f2853467e02702ae1f773c185561ebb11ca",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://momence.com/m/188217": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "ef34a106944ea7ec1c82b6d94c454c072764c7130490ed93ba42a8f4ab764fae",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/105560": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "fcb1828baf2338de6233d97295d80e8b28d7d0979c255fae5cebd48ccd107e0e",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/105564": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "ecd40f4227bd265a36108d3654be8136b7649fca1d4dedcc1e38c0e6b5f3f197",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/105563": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "6b7018f5cbcabd261ec2b1ee78b95dc2256f26eda0e198e078417b653a799861",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/105561": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "922f74074378b4a52e4d9486271cc6b6d7b697b20c6bb7a5f417e8f6f103ff1e",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/m/105562": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "ccc718b33ca237472a6bc32d99992b4522bfa4782d16c78a86e869c6a2df139a",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://lotuslandyogasf.com/pricespolicies/classstyles": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "a2ea3451953aa5e1593107d99520aef7c17160cfa4a1b5401444d445c791bda1",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://lotuslandyogasf.com/pricespolicies/"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1360 Valencia Street San Francisco, CA 94110",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://lotuslandyogasf.com/classstyles/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1360 Valencia Street San Francisco, CA 94110",
+        "contentHash": "b7f120a43b6d0e5be39e9ead06246f2853467e02702ae1f773c185561ebb11ca",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://lotuslandyogasf.com/pricespolicies/schedule": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "308609fafc2c991fe933da33a9dd1017b12859e3151d0c5da6c234c6d3ee49c9",
+    "candidates": [
+      {
+        "kind": "range",
+        "low": 18.0,
+        "high": 38.0,
+        "currency": "USD",
+        "rawLabel": "30 Sliding Scale Drop-In ✴︎ $18 - $38",
+        "cadence": "class",
+        "productType": "cost-context",
+        "contextProductType": "drop-in",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "method": "visible-cost-context",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+        "autoPublishEligible": false,
+        "selectable": false
+      },
+      {
+        "kind": "range",
+        "low": 135.0,
+        "high": 175.0,
+        "currency": "USD",
+        "rawLabel": "Monthly Unlimited Membership ✴︎ $135 - 175",
+        "cadence": "month",
+        "productType": "cost-context",
+        "contextProductType": "membership",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "method": "visible-cost-context",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+        "autoPublishEligible": false,
+        "selectable": false
+      },
+      {
+        "amount": 38.0,
+        "currency": "USD",
+        "rawLabel": "Donate Class Schedule Class Packages New Student Special ✴︎ 3 Classes for $30 Sliding Scale Drop-In ✴︎ $18 - $38 Monthly",
+        "cadence": "month",
+        "productType": "drop-in",
+        "classAllowance": {
+          "count": 3.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "restricted",
+          "restrictions": [
+            "Student"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 18.0,
+        "currency": "USD",
+        "rawLabel": "nate Class Schedule Class Packages New Student Special ✴︎ 3 Classes for $30 Sliding Scale Drop-In ✴︎ $18",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": {
+          "count": 3.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "restricted",
+          "restrictions": [
+            "Student"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 30.0,
+        "currency": "USD",
+        "rawLabel": "Blog Contact Us Donate Class Schedule Class Packages New Student Special ✴︎ 3 Classes for $30 Sliding Scale Drop-In",
+        "cadence": "visit",
+        "productType": "drop-in",
+        "classAllowance": {
+          "count": 3.0,
+          "period": "month"
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "restricted",
+          "restrictions": [
+            "Student"
+          ]
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [
+      "https://lotuslandyogasf.com/pricespolicies/",
+      "https://momence.com/m/105560",
+      "https://momence.com/m/102171",
+      "https://momence.com/m/188217",
+      "https://momence.com/m/105561",
+      "https://momence.com/m/105562",
+      "https://momence.com/gcc/32989"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1360 Valencia Street San Francisco, CA 94110",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://lotuslandyogasf.com/schedule/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1360 Valencia Street San Francisco, CA 94110",
+        "contentHash": "b7f120a43b6d0e5be39e9ead06246f2853467e02702ae1f773c185561ebb11ca",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://lotuslandyogasf.com/pricespolicies/videos": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "f7578507f640961da826391b1999eb8354d7af72a3ef6a1c0b7a813a846dc0a4",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://lotuslandyogasf.com/pricespolicies/",
+      "https://momence.com/video/plugin/32989"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1360 Valencia Street San Francisco, CA 94110",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://lotuslandyogasf.com/videos/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1360 Valencia Street San Francisco, CA 94110",
+        "contentHash": "b7f120a43b6d0e5be39e9ead06246f2853467e02702ae1f773c185561ebb11ca",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://momence.com/gcc/32989": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "592c66a7fe52019028ab1a2af4d9378423f065d0c154f18a09522839a1875713",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://lotuslandyogasf.com/pricespolicies/events": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "613dc9437a2b9faababa8e9c42eaed6190b2fc8dd976e84ad4125dba1e2a22cd",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://lotuslandyogasf.com/pricespolicies/"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1360 Valencia Street San Francisco, CA 94110",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://lotuslandyogasf.com/events/",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1360 Valencia Street San Francisco, CA 94110",
+        "contentHash": "b7f120a43b6d0e5be39e9ead06246f2853467e02702ae1f773c185561ebb11ca",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://momence.com/m/102171": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "b742a21bf4125d05674e817820e1615c1d873b9d9ce02de90fea5e9c027feee9",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://momence.com/video/plugin/32989": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "912981e545a32aa295cc894b688e2fb546f1b881e4329e4dcf9ab71ea9afa4e1",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://powerplaysf.com/sessions": {
+    "status": "fetched",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "28217b4981da7c7fe136b0f5e9f7292fde1047277089f1bdaaacfca04eeeedd4",
+    "candidates": [
+      {
+        "kind": "starting-price",
+        "low": 600.0,
+        "high": 600.0,
+        "currency": "USD",
+        "rawLabel": "ckage will be discussed during your discovery call Go through our POWER process Bring a bestie or a partner in for your sessions with a fitness coach Schedule weekly or bi-weekly sessions Starting at $600",
+        "cadence": "unknown",
+        "productType": "cost-context",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "method": "visible-cost-context",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://powerplaysf.com/sessions",
+        "autoPublishEligible": false,
+        "selectable": false
+      },
+      {
+        "amount": 600.0,
+        "currency": "USD",
+        "rawLabel": "our POWER process Meet individually with our fitness coach Schedule weekly or bi-weekly sessions Starting at $600/mo",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://powerplaysf.com/sessions",
+        "autoPublishEligible": false
+      },
+      {
+        "amount": 600.0,
+        "currency": "USD",
+        "rawLabel": "stie or a partner in for your sessions with a fitness coach Schedule weekly or bi-weekly sessions Starting at $600/mo",
+        "cadence": "month",
+        "productType": "monthly",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "method": "visible-text-candidate",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://powerplaysf.com/sessions",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "1235 4th Street san Francisco, CA",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://powerplaysf.com/sessions",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1235 4th Street san Francisco, CA",
+        "contentHash": "5320d5a5302b28d7f8744f05f8a8bd6f149349df1db713c62f7e1c333ae543e4",
+        "autoPublishEligible": false
+      }
+    ]
+  },
+  "https://sabrofit.com/rates": {
+    "status": "not-modified",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "contentHash": "b8ee5f9c17c8d4282ef67dcd8a31071998fec51bfc9c7733601fe32ecfc2c83d",
+    "candidates": [
+      {
+        "kind": "starting-price",
+        "low": 210.0,
+        "high": 210.0,
+        "currency": "USD",
+        "rawLabel": "Home The Gym Training Bio Contact Me Rates Hosting More Home The Gym Training Bio Contact Me Rates Hosting Home The Gym Training Bio Contact Me Rates Hosting Private and Group Training Starts at $210 per hour",
+        "cadence": "hour",
+        "productType": "cost-context",
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "method": "visible-cost-context",
+        "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": "https://sabrofit.com/rates",
+        "autoPublishEligible": false,
+        "selectable": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": []
+  },
+  "https://sffencers.com/faq/": {
+    "status": "network-error",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",

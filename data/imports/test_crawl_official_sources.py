@@ -2,6 +2,7 @@ from __future__ import annotations
 
 import concurrent.futures
 import json
+import tempfile
 import threading
 import unittest
 from collections import defaultdict
@@ -13,6 +14,49 @@ import crawl_official_sources as crawler
 
 
 class OfficialCrawlerTests(unittest.TestCase):
+    def test_static_deal_refresh_can_retain_rendered_observations(self) -> None:
+        with tempfile.TemporaryDirectory() as folder:
+            path = Path(folder) / "rendered.json"
+            path.write_text(json.dumps({"observations": [{"gymId": "gym-1", "amount": 99}]}), encoding="utf-8")
+
+            observations = crawler.load_rendered_deal_observations(path)
+
+        self.assertEqual(observations, [{"gymId": "gym-1", "amount": 99}])
+
+    def test_visible_official_ranges_and_starting_prices_are_non_scalar_candidates(self) -> None:
+        candidates = crawler.visible_cost_context_candidates(
+            "1-on-1 Training $150–$250 per session. Classes start at $200 per month.",
+            "https://operator.example/rates",
+        )
+
+        self.assertEqual([(item["kind"], item["low"], item["high"]) for item in candidates], [
+            ("range", 150, 250), ("starting-price", 200, 200),
+        ])
+        self.assertTrue(all("amount" not in item and item["selectable"] is False for item in candidates))
+
+    def test_visible_cost_context_rejects_promotions_and_bare_numeric_ranges(self) -> None:
+        candidates = crawler.visible_cost_context_candidates(
+            "First month membership special $99-$129. Dimensions are $100-$200.",
+            "https://operator.example/rates",
+        )
+
+        self.assertEqual(candidates, [])
+
+    def test_json_ld_aggregate_offer_is_range_not_false_exact_price(self) -> None:
+        block = json.dumps({
+            "@type": "AggregateOffer",
+            "name": "Adult Training Memberships",
+            "lowPrice": 150,
+            "highPrice": 250,
+            "priceCurrency": "USD",
+        })
+
+        candidates = crawler.structured_candidates([block], "https://operator.example/pricing")
+
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual((candidates[0]["kind"], candidates[0]["low"], candidates[0]["high"]), ("range", 150, 250))
+        self.assertNotIn("amount", candidates[0])
+
     def test_reviewed_seed_routes_follow_operator_evidence_and_public_booking_only(self) -> None:
         gym = {
             "websiteUrl": "https://www.operator.example/",
@@ -528,9 +572,12 @@ Month-to-month with 30-day cancellation. Recommended casual visit is $35 and var
             "Unlimited Monthly Sliding-Scale Membership $135 - $175 $175 One Month $450 3 Month $122 5 Class $220 10 Class",
             "https://www.lotuslandyogasf.com/pricespolicies/",
         )
-        sliding = next(item for item in lotus if item["sourceProductId"] == "sliding-scale-monthly")
-        self.assertEqual(sliding["amount"], 135)
-        self.assertEqual(sliding["eligibility"]["type"], "sliding-scale")
+        self.assertNotIn("sliding-scale-monthly", {item["sourceProductId"] for item in lotus})
+        context = crawler.visible_cost_context_candidates(
+            "Unlimited Monthly Sliding-Scale Membership $135 - $175",
+            "https://www.lotuslandyogasf.com/pricespolicies/",
+        )[0]
+        self.assertEqual((context["low"], context["high"]), (135, 175))
         self.assertTrue(crawler.RESEARCH_PATH_RE.search("/pricespolicies/"))
 
     def test_follows_owned_storefront_but_not_marketplace(self) -> None:

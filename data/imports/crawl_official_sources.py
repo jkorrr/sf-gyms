@@ -35,6 +35,7 @@ CACHE_PATH = ROOT / "data" / "imports" / "official-crawl-cache.json"
 LOCATION_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "official-location-observations.json"
 DEAL_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "deal-observations.json"
 DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
+RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
@@ -88,6 +89,23 @@ DROP_IN_BEFORE_RE = re.compile(
 PROMOTION_RE = re.compile(
     r"\b(?:intro|introductory|trial|first month|founding|presale|limited time|new client|new member|"
     r"save|discount|percent off|free month|waived|special offer|flash sale)\b|\b\d{1,2}%\s*off\b",
+    re.IGNORECASE,
+)
+COST_CONTEXT_SEMANTIC_RE = re.compile(
+    r"\b(?:memberships?|training|tuition|programs?|packages?|rates?|lessons?|sessions?|classes?|visits?|drop[ -]?ins?|day passes?|hours?)\b",
+    re.IGNORECASE,
+)
+COST_RANGE_VISIBLE_RE = re.compile(
+    r"(?P<label>[^.;\n$]{0,120}?\b(?:memberships?|training|tuition|programs?|packages?|rates?|lessons?|sessions?|classes?|visits?|drop[ -]?ins?|day passes?|hours?)\b[^.;\n$]{0,80}?)"
+    r"\$\s*(?P<low>\d{1,5}(?:\.\d{1,2})?)\s*(?:[–—-]|\bto\b)\s*\$?\s*(?P<high>\d{1,5}(?:\.\d{1,2})?)"
+    r"\s*(?:(?:/|per\s+)(?P<cadence>session|class|visit|hour|month|week|4\s+weeks?|28\s+days?|one[ -]?time))?",
+    re.IGNORECASE,
+)
+COST_START_VISIBLE_RE = re.compile(
+    r"(?P<label>[^.;\n$]{0,120}?\b(?:memberships?|training|tuition|programs?|packages?|rates?|lessons?|sessions?|classes?|visits?|drop[ -]?ins?|day passes?|hours?)\b[^.;\n$]{0,80}?"
+    r"\b(?:starts?|starting)\s+(?:from|at)|[^.;\n$]{0,120}?\b(?:memberships?|training|tuition|programs?|packages?|rates?|lessons?|sessions?|classes?|visits?|drop[ -]?ins?|day passes?|hours?)\b[^.;\n$]{0,80}?\bfrom)"
+    r"\s*\$\s*(?P<amount>\d{1,5}(?:\.\d{1,2})?)"
+    r"\s*(?:(?:/|per\s+)(?P<cadence>session|class|visit|hour|month|week|4\s+weeks?|28\s+days?|one[ -]?time))?",
     re.IGNORECASE,
 )
 RESTRICTED_RE = re.compile(r"\b(?:student|resident|employee|employer|corporate|senior|youth|military)\b", re.IGNORECASE)
@@ -279,11 +297,41 @@ def structured_candidates(json_blocks: list[str], source_url: str, method: str =
                 continue
             if method != "json-ld" and not any(key in node for key in price_keys):
                 continue
+            label = text(node.get("name") or node.get("title") or node.get("label") or node.get("productName")) or text(node.get("description")) or "/".join(sorted(types))
+            cadence = text(node.get("unitCode") or node.get("billingDuration") or node.get("billingIncrement") or node.get("billingPeriod") or node.get("interval") or node.get("frequency"))
+            low_price = numeric(node.get("lowPrice"))
+            high_price = numeric(node.get("highPrice"))
+            if "aggregateoffer" in types and low_price is not None and 0 < low_price <= 10_000:
+                high_price = high_price if high_price is not None else low_price
+                if low_price <= high_price <= 10_000:
+                    raw_label = normalized_label(
+                        f"{label} ${low_price:g}"
+                        + (f"–${high_price:g}" if high_price != low_price else " and up")
+                        + (f" per {cadence}" if cadence else "")
+                    )
+                    candidates.append(
+                        {
+                            "kind": "range" if high_price != low_price else "starting-price",
+                            "low": low_price,
+                            "high": high_price,
+                            "currency": text(node.get("priceCurrency")) or "USD",
+                            "rawLabel": raw_label,
+                            "cadence": normalized_label(cadence) or "unknown",
+                            "productType": "cost-context",
+                            "promotion": {"isPromotion": bool(PROMOTION_RE.search(raw_label)), "label": raw_label if PROMOTION_RE.search(raw_label) else ""},
+                            "method": method,
+                            "adapter": platform_name(source_url),
+                            "evidenceTier": "official-public",
+                            "exactLocationMatch": "candidate",
+                            "sourceUrl": source_url,
+                            "autoPublishEligible": False,
+                            "selectable": False,
+                        }
+                    )
+                continue
             amount = numeric(next((node.get(key) for key in price_keys if node.get(key) is not None), None))
             if amount is None or amount <= 0 or amount > 2000:
                 continue
-            label = text(node.get("name") or node.get("title") or node.get("label") or node.get("productName")) or text(node.get("description")) or "/".join(sorted(types))
-            cadence = text(node.get("unitCode") or node.get("billingDuration") or node.get("billingIncrement") or node.get("billingPeriod") or node.get("interval") or node.get("frequency"))
             if method != "json-ld" and not normalized_label(label):
                 continue
             metadata = candidate_metadata(label, cadence)
@@ -1009,7 +1057,6 @@ def independent_operator_visible_candidates(visible_text: str, source_url: str) 
     if host.endswith("lotuslandyogasf.com") and has("Unlimited Monthly Sliding-Scale Membership $135 - $175", "$175", "One Month", "$450", "3 Month", "$122", "5 Class", "$220", "10 Class"):
         adapter = "lotusland-yoga"
         return [
-            operator_visible_candidate(source_url, adapter, "sliding-scale-monthly", "Unlimited Monthly Sliding-Scale Membership ($135–$175)", 135, product_type="monthly", cadence="month", allowance={"count": None, "period": "month", "unlimited": True}, commitment_type="month-to-month", eligibility_type="sliding-scale", raw_label="Unlimited Monthly Sliding-Scale Membership $135–$175"),
             operator_visible_candidate(source_url, adapter, "one-month-unlimited", "One-Month Unlimited Pass", 175, allowance={"count": None, "period": "month", "unlimited": True}),
             operator_visible_candidate(source_url, adapter, "three-month-unlimited", "Three-Month Unlimited Pass", 450, allowance={"count": None, "period": "3 months", "unlimited": True}, commitment_type="prepaid", minimum_months=3),
             operator_visible_candidate(source_url, adapter, "five-class-pack", "5 Class Package", 122, allowance={"count": 5, "period": "purchase", "unlimited": False}),
@@ -1030,6 +1077,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or independent_operator_visible_candidates(visible_text, source_url)
     )
     candidates: list[dict[str, Any]] = list(specialized)
+    candidates.extend(visible_cost_context_candidates(visible_text, source_url))
     requires_complete_card_adapter = hostname(source_url).endswith("orangetheory.com")
     patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if specialized or requires_complete_card_adapter else (
         ("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)
@@ -1056,6 +1104,65 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
                 }
             )
     return candidates
+
+
+def visible_cost_context_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Capture explicit official ranges/starting prices without inventing a scalar.
+
+    A range is accepted only when the same visible phrase names a purchasable
+    product or service. Promotions are retained by the crawler only as scalar
+    deal candidates elsewhere; they are not eligible official cost context.
+    """
+
+    candidates: list[dict[str, Any]] = []
+    matches: list[tuple[str, re.Match[str]]] = [
+        *(('range', match) for match in COST_RANGE_VISIBLE_RE.finditer(visible_text)),
+        *(('starting-price', match) for match in COST_START_VISIBLE_RE.finditer(visible_text)),
+    ]
+    for kind, match in matches:
+        raw_label = normalized_label(match.group(0))
+        if not COST_CONTEXT_SEMANTIC_RE.search(raw_label) or PROMOTION_RE.search(raw_label):
+            continue
+        if kind == "range":
+            low = float(match.group("low"))
+            high = float(match.group("high"))
+        else:
+            low = high = float(match.group("amount"))
+        if not (0 < low <= high <= 10_000):
+            continue
+        cadence = normalized_label(match.group("cadence") or "unknown").casefold()
+        if cadence == "unknown":
+            lowered = raw_label.casefold()
+            if re.search(r"\b(?:monthly|per month)\b", lowered):
+                cadence = "month"
+            elif re.search(r"\bdrop[ -]?in\b", lowered):
+                cadence = "class"
+        context_product_type = (
+            "drop-in" if re.search(r"\bdrop[ -]?in\b", raw_label, re.IGNORECASE)
+            else "membership" if re.search(r"\b(?:membership|monthly)\b", raw_label, re.IGNORECASE)
+            else "service"
+        )
+        candidates.append(
+            {
+                "kind": kind,
+                "low": low,
+                "high": high,
+                "currency": "USD",
+                "rawLabel": raw_label,
+                "cadence": cadence,
+                "productType": "cost-context",
+                "contextProductType": context_product_type,
+                "promotion": {"isPromotion": False, "label": ""},
+                "method": "visible-cost-context",
+                "adapter": platform_name(source_url),
+                "evidenceTier": "official-public",
+                "exactLocationMatch": "candidate",
+                "sourceUrl": source_url,
+                "autoPublishEligible": False,
+                "selectable": False,
+            }
+        )
+    return deduplicate_candidates(candidates)
 
 
 def bookee_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
@@ -1663,7 +1770,10 @@ def deduplicate_candidates(candidates: list[dict[str, Any]]) -> list[dict[str, A
     deduplicated: list[dict[str, Any]] = []
     seen: set[tuple[Any, ...]] = set()
     for candidate in candidates:
-        key = (candidate.get("amount"), candidate.get("productType"), candidate.get("rawLabel"), candidate.get("sourceProductId"))
+        key = (
+            candidate.get("kind"), candidate.get("low"), candidate.get("high"), candidate.get("amount"),
+            candidate.get("productType"), candidate.get("rawLabel"), candidate.get("sourceProductId"),
+        )
         if key not in seen:
             seen.add(key)
             deduplicated.append(candidate)
@@ -1909,6 +2019,15 @@ def deal_candidates(
     return sorted(deals, key=lambda item: (item["gymId"], item["sourceUrl"], item["amount"], item["label"]))
 
 
+def load_rendered_deal_observations(path: Path = RENDERED_OBSERVATIONS_PATH) -> list[dict[str, Any]]:
+    """Keep rendered promotion evidence when a static crawl refreshes deals."""
+
+    if not path.exists():
+        return []
+    document = json.loads(path.read_text(encoding="utf-8"))
+    return [item for item in document.get("observations", []) if isinstance(item, dict)]
+
+
 def crawl_gym(
     gym: dict[str, Any],
     cache: dict[str, Any],
@@ -2130,7 +2249,12 @@ def main() -> int:
     attempts_by_key.update({(text(item.get("gymId")), text(item.get("url"))): item for item in attempts})
     attempts = sorted(attempts_by_key.values(), key=lambda item: (text(item.get("gymId")), text(item.get("url"))))
     observations = [item for item in existing_observations_document.get("observations", []) if text(item.get("gymId")) not in crawled_gym_ids] + observations
-    observations.sort(key=lambda item: (text(item.get("gymId")), text(item.get("sourceUrl")), float(item.get("amount", 0)), text(item.get("rawLabel"))))
+    observations.sort(
+        key=lambda item: (
+            text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("kind")),
+            float(item.get("low", 0) or 0), float(item.get("amount", 0) or 0), text(item.get("rawLabel")),
+        )
+    )
     location_observations = [item for item in existing_locations_document.get("observations", []) if text(item.get("gymId")) not in crawled_gym_ids] + location_observations
     location_observations.sort(key=lambda item: (text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("rawLabel"))))
     save_json(CACHE_PATH, cache)
@@ -2140,7 +2264,10 @@ def main() -> int:
     eligible_deal_ids = {
         text(gym.get("id")) for gym in document.get("gyms", []) if deal_eligible_gym(gym)
     }
-    deals = deal_candidates(observations, eligible_deal_ids)
+    deals = deal_candidates(
+        observations + load_rendered_deal_observations(),
+        eligible_deal_ids,
+    )
     save_json(DEAL_OBSERVATIONS_PATH, {"generatedAt": today.date().isoformat(), "mode": args.mode, "deals": deals})
     save_json(DEAL_REPORT_PATH, {
         "generatedAt": today.date().isoformat(),
@@ -2149,6 +2276,7 @@ def main() -> int:
         "locationCount": len({item["gymId"] for item in deals}),
         "reviewRequiredCount": sum(item["reviewStatus"] == "pending" for item in deals),
         "ordinaryPricesRemainAuthoritative": True,
+        "includesRenderedEvidence": True,
     })
     print(json.dumps({
         "candidateGyms": len(candidates),

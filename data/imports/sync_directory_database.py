@@ -17,7 +17,6 @@ from dataclasses import dataclass
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parents[2]
 DEFAULT_SOURCE = ROOT / "data" / "imports" / "sf-gyms-osm.json"
 DEFAULT_OUTPUTS = (
@@ -29,6 +28,9 @@ HASH_RE = re.compile(r"^[0-9a-f]{64}$")
 ALLOWED_PUBLICATION_STATUSES = {"publish", "suppress-alias", "review-hold"}
 ALLOWED_PRICING_STATUSES = {
     "verified",
+    "official-range",
+    "operator-confirmed",
+    "reported",
     "estimated",
     "free",
     "pay-per-visit",

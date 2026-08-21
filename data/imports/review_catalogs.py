@@ -7,7 +7,6 @@ import json
 from pathlib import Path
 from typing import Any
 
-
 ROOT = Path(__file__).resolve().parent
 REVIEW_PATH = ROOT / "official-catalog-review.json"
 APPROVED_PATH = ROOT / "official-crawl-approved.json"
@@ -32,9 +31,10 @@ def approval_from_proposal(
         raise ValueError("Proposal has unresolved source-product conflicts; it cannot be approved.")
     offers = list(proposal.get("planOffers") or [])
     drop_ins = list(proposal.get("dropInOffers") or [])
+    contexts = list(proposal.get("costContextOffers") or [])
     source_urls = list(proposal.get("sourceUrls") or [])
-    if not offers and not drop_ins:
-        raise ValueError("Proposal contains no attached plan or drop-in offers.")
+    if not offers and not drop_ins and not contexts:
+        raise ValueError("Proposal contains no attached plan, drop-in, or official cost-context offers.")
     proposed_completeness = proposal.get("catalogCompleteness") if isinstance(proposal.get("catalogCompleteness"), dict) else {}
     completeness = {
         "plans": plan_completeness or text(proposed_completeness.get("plans")) or ("partial" if offers else "none-observed"),
@@ -50,6 +50,8 @@ def approval_from_proposal(
             raise ValueError(f"{product_group} contains no offers and must be marked none-observed.")
     for offer in offers + drop_ins:
         offer.setdefault("evidence", {})["exactLocationMatch"] = "exact-location-reviewed"
+    for context in contexts:
+        context["exactLocationMatch"] = "exact-location-reviewed"
     note_parts: list[str] = []
     if offers:
         note_parts.append(
@@ -63,17 +65,22 @@ def approval_from_proposal(
             if completeness["dropIns"] == "complete"
             else "The observed single-visit offers were reviewed, but the source catalog may contain additional products."
         )
+    if contexts:
+        note_parts.append(
+            "Official public ranges or starting prices were reviewed as non-selectable cost context; no exact compatibility price was inferred."
+        )
+    observed_dates = [
+        text((offer.get("evidence") or {}).get("observedAt")) for offer in offers + drop_ins
+    ] + [text(context.get("observedAt")) for context in contexts]
     return {
         "gymId": text(proposal.get("gymId")),
         "priceSource": "Reviewed official public offers",
         "priceSourceUrl": source_urls[0] if source_urls else "",
-        "priceObservedAt": max(
-            (text((offer.get("evidence") or {}).get("observedAt")) for offer in offers + drop_ins),
-            default=reviewed_at,
-        ),
+        "priceObservedAt": max((value for value in observed_dates if value), default=reviewed_at),
         "priceNote": " ".join(note_parts),
         "planOffers": offers,
         "dropInOffers": drop_ins,
+        "costContextOffers": contexts,
         "catalogCompleteness": completeness,
     }
 

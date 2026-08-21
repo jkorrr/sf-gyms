@@ -66,6 +66,7 @@ ACCESS_MODELS = {
 }
 PRICING_STATUSES = {
     "verified",
+    "official-range",
     "operator-confirmed",
     "reported",
     "estimated",
@@ -396,6 +397,10 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
     billing_input = offer.get("billing", {}) if isinstance(offer.get("billing"), dict) else {}
     raw_amount = billing_input.get("amount", offer.get("amount"))
     amount = float(raw_amount) if raw_amount is not None and text(raw_amount) else None
+    raw_amount_low = billing_input.get("amountLow", offer.get("amountLow"))
+    raw_amount_high = billing_input.get("amountHigh", offer.get("amountHigh"))
+    amount_low = float(raw_amount_low) if raw_amount_low is not None and text(raw_amount_low) else None
+    amount_high = float(raw_amount_high) if raw_amount_high is not None and text(raw_amount_high) else None
     interval = text(billing_input.get("interval") or offer.get("billingInterval")) or "month"
     interval_count = int(billing_input.get("intervalCount") or offer.get("intervalCount") or 1)
     monthly = billing_input.get("normalizedMonthly")
@@ -435,6 +440,8 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
         ),
         "billing": {
             "amount": amount,
+            "amountLow": amount_low,
+            "amountHigh": amount_high,
             "currency": text(billing_input.get("currency") or offer.get("currency")) or "USD",
             "interval": interval,
             "intervalCount": interval_count,
@@ -848,7 +855,10 @@ def build_cost_context(gym: dict[str, Any], plans: list[dict[str, Any]]) -> list
     note = text(gym.get("priceNote"))
     source_url = text(gym.get("priceSourceUrl")) or text(gym.get("officialUrl"))
     observed_at = text(gym.get("priceObservedAt"))
-    if source_url:
+    # Free-text parsing is a legacy fallback. Reviewed explicit contexts and
+    # structured starting-price plans are authoritative and should not be
+    # duplicated under a second, sentence-fragment label.
+    if source_url and not contexts:
         for match in COST_RANGE_RE.finditer(note):
             low, high = float(match.group("low")), float(match.group("high"))
             if 0 < low <= high <= 10_000:
@@ -879,8 +889,43 @@ def build_cost_context(gym: dict[str, Any], plans: list[dict[str, Any]]) -> list
     return deduplicated
 
 
+def has_publishable_official_cost_context(gym: dict[str, Any]) -> bool:
+    """Return true only for reviewed, nonconflicting official ranges."""
+
+    if gym.get("officialPriceConflict") or normalized(gym.get("pricingAccess")) in {
+        "official status conflict", "official price conflict",
+    }:
+        return False
+    contexts = gym.get("costContext") if isinstance(gym.get("costContext"), list) else []
+    if any(
+        text(item.get("kind")) == "conflicting-price" or bool(item.get("conflictFlags"))
+        for item in contexts if isinstance(item, dict)
+    ):
+        return False
+    for item in contexts:
+        if not isinstance(item, dict) or text(item.get("kind")) not in {"range", "starting-price"}:
+            continue
+        try:
+            low, high = float(item.get("low")), float(item.get("high"))
+        except (TypeError, ValueError):
+            continue
+        if (
+            0 < low <= high <= 10_000
+            and text(item.get("evidenceTier")) == "official-public"
+            and text(item.get("sourceUrl")).startswith("https://")
+            and bool(text(item.get("observedAt")))
+            and item.get("selectable") is False
+        ):
+            return True
+    return False
+
+
 def normalize_drop_in(gym: dict[str, Any], offer: dict[str, Any], index: int, access: str) -> dict[str, Any]:
-    amount = float(offer.get("amount", 0) or 0)
+    raw_amount = offer.get("amount")
+    amount = float(raw_amount) if raw_amount is not None and text(raw_amount) else None
+    raw_low, raw_high = offer.get("amountLow"), offer.get("amountHigh")
+    amount_low = float(raw_low) if raw_low is not None and text(raw_low) else None
+    amount_high = float(raw_high) if raw_high is not None and text(raw_high) else None
     raw_label = text(offer.get("rawLabel")) or text(offer.get("name")) or "Standard unrestricted single visit or class"
     return {
         "id": f"{gym['id']}:drop-in:{text(offer.get('sourceProductId')) or index}",
@@ -889,6 +934,8 @@ def normalize_drop_in(gym: dict[str, Any], offer: dict[str, Any], index: int, ac
         "productType": "drop-in",
         "accessScope": text(offer.get("accessScope")) or "Single unrestricted visit or class",
         "amount": amount,
+        "amountLow": amount_low,
+        "amountHigh": amount_high,
         "currency": text(offer.get("currency")) or "USD",
         "eligibility": offer.get("eligibility") or {"type": "standard-adult", "restrictions": []},
         "promotion": offer.get("promotion") or {"isPromotion": False, "label": "", "expiresAt": None},
@@ -929,6 +976,7 @@ def build_plan_catalog(gym: dict[str, Any], access: str) -> tuple[list[dict[str,
         and (offer.get("eligibility") or {}).get("type") == "standard-adult"
         and not (offer.get("promotion") or {}).get("isPromotion")
         and offer.get("ordinaryUse", True)
+        and isinstance(offer.get("amount"), (int, float))
         and offer["amount"] > 0
     ]
     selected_drop = min(eligible_drop_ins, key=lambda offer: offer["amount"], default=None)
@@ -2008,6 +2056,7 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
     for gym in gyms:
         estimate_rejected = False
         forced_unresolved = normalized(gym.get("pricingAccess")) in {"official status conflict", "official price conflict"}
+        held_or_invalid = gym.get("publicationStatus") == "review-hold" or bool(gym.get("planValidationErrors"))
         if gym.get("publicationStatus") == "review-hold" or gym.get("planValidationErrors"):
             gym["pricingStatus"] = "unresolved"
             gym["pricingBlocker"] = "; ".join(gym.get("planValidationErrors", [])) or "Identity or official pricing requires review."
@@ -2031,6 +2080,10 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             if (gym.get("operatorConfirmedMonthly") or {}).get("freshness") == "current":
                 gym["pricingStatus"] = "operator-confirmed"
                 gym["pricingBlocker"] = "The operator confirmed a current standard-adult price privately; no reproducible public checkout price is available."
+            elif not held_or_invalid and has_publishable_official_cost_context(gym):
+                gym["pricingStatus"] = "official-range"
+                gym["estimatedMonthly"] = None
+                gym["pricingBlocker"] = "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar."
             elif gym["entityKind"] in {"gym", "studio", "martial-arts"} and gym.get("pricingAccess") in {"account-required", "contact-required", "form-required"}:
                 gym["pricingStatus"] = "gated"
                 gym["pricingBlocker"] = "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable."
@@ -2068,7 +2121,6 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             gym["pricingStatus"] = "pay-per-visit"
             gym["pricingBlocker"] = "Official public class, session, or term packages are available, but no eligible recurring membership was verified."
             continue
-        held_or_invalid = gym.get("publicationStatus") == "review-hold" or bool(gym.get("planValidationErrors"))
         if not held_or_invalid and gym.get("monthlyPrice") is not None and gym.get("selectedPlanId"):
             gym["pricingStatus"] = "verified"
             if verified_price_is_stale(gym, generated_at):
@@ -2082,6 +2134,11 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             gym["pricingStatus"] = "operator-confirmed"
             gym["estimatedMonthly"] = None
             gym["pricingBlocker"] = "The operator confirmed a current standard-adult price privately; no reproducible public checkout price is available."
+            continue
+        if not held_or_invalid and has_publishable_official_cost_context(gym):
+            gym["pricingStatus"] = "official-range"
+            gym["estimatedMonthly"] = None
+            gym["pricingBlocker"] = "The operator publishes a current official range or starting price, but no single standard-adult scalar can be selected without inventing precision."
             continue
         if not held_or_invalid and gym.get("pricingAccess") in {"account-required", "contact-required", "form-required"}:
             exact_price_blocker = {
@@ -2261,10 +2318,10 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
         gym for gym in commercial
         if review_by_id.get(text(gym.get("id")), {}).get("sourceAttemptStatus") != "unattempted"
     ]
-    actionable = [gym for gym in commercial if gym["pricingStatus"] in {"verified", "operator-confirmed", "reported", "estimated", "pay-per-visit"}]
+    actionable = [gym for gym in commercial if gym["pricingStatus"] in {"verified", "official-range", "operator-confirmed", "reported", "estimated", "pay-per-visit"}]
     meaningful_cost = [
         gym for gym in commercial
-        if gym["pricingStatus"] in {"verified", "operator-confirmed", "reported", "estimated", "pay-per-visit", "free", "not-applicable"}
+        if gym["pricingStatus"] in {"verified", "official-range", "operator-confirmed", "reported", "estimated", "pay-per-visit", "free", "not-applicable"}
         or bool(gym.get("costContext"))
     ]
     publicly_priced_commercial = [
@@ -2342,6 +2399,7 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             for item in external_comparables
         ),
         "officialCostContextListingCount": sum(bool(gym.get("costContext")) for gym in gyms),
+        "officialRangeCount": sum(gym.get("pricingStatus") == "official-range" for gym in gyms),
         "fieldCoverage": {
             "specificDescriptionCount": sum(
                 bool(text(gym.get("description")))
@@ -2530,6 +2588,13 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             "operatorConfirmedPricesRemainOutOfVerifiedFields": all(
                 gym.get("monthlyPrice") is None and (gym.get("operatorConfirmedMonthly") or {}).get("publiclyReproducible") is False
                 for gym in gyms if gym.get("pricingStatus") == "operator-confirmed"
+            ),
+            "officialRangesRemainOutOfVerifiedFields": all(
+                gym.get("monthlyPrice") is None
+                and gym.get("dayPassPrice") is None
+                and gym.get("estimatedMonthly") is None
+                and has_publishable_official_cost_context(gym)
+                for gym in gyms if gym.get("pricingStatus") == "official-range"
             ),
             "dealsNeverReplaceOrdinaryPrices": all(
                 deal.get("replacesOrdinaryPrice") is False

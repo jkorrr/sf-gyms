@@ -128,6 +128,7 @@ function pricingStatusLabel(gym: Gym): string {
   }
   const labels: Record<string, string> = {
     verified: "Official price",
+    "official-range": "Official range",
     "operator-confirmed": "Operator confirmed",
     reported: "Recently reported",
     estimated: "Estimated",

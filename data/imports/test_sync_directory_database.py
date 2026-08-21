@@ -58,6 +58,13 @@ class SyncDirectoryDatabaseTests(unittest.TestCase):
             loaded = load_fixture(path)
         self.assertEqual(loaded.source_hash, prepare_fixture(raw).source_hash)
 
+    def test_accepts_every_non_scalar_published_pricing_tier(self):
+        for status in ("official-range", "operator-confirmed", "reported"):
+            raw = fixture()
+            raw["gyms"][0]["pricingStatus"] = status
+            raw["gyms"][0]["monthlyPrice"] = None
+            self.assertEqual(prepare_fixture(raw).records[0].pricing_status, status)
+
 
 if __name__ == "__main__":
     unittest.main()

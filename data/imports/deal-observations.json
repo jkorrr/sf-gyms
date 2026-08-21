@@ -211,6 +211,22 @@
       "replacesOrdinaryPrice": false
     },
     {
+      "id": "994be3e77b220d3e9b8b",
+      "gymId": "osm-node-2666409791",
+      "gymName": "Lotusland Yoga",
+      "amount": 30.0,
+      "currency": "USD",
+      "productType": "offer",
+      "cadence": "one-time",
+      "label": "New-student offer",
+      "expiresAt": null,
+      "sourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+      "capturedAt": "2026-08-21",
+      "contentHash": "9302a7c1999a440bc542a6dfb20f222d2af7100349728e173864b9e4455af21c",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
       "id": "88c179e3e5e4f94aeee6",
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",

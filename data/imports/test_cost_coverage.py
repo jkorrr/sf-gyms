@@ -714,11 +714,37 @@ class CostCoverageTests(unittest.TestCase):
         document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-20")
         result = document["gyms"][0]
         self.assertIsNone(result["monthlyPrice"])
-        self.assertEqual(result["pricingStatus"], "gated")
+        self.assertEqual(result["pricingStatus"], "official-range")
         self.assertEqual(result["costContext"][0]["low"], 150)
         self.assertEqual(result["costContext"][0]["high"], 250)
         self.assertFalse(result["costContext"][0]["selectable"])
         self.assertTrue(report["publicationChecks"]["costContextNeverLeaksIntoVerifiedFields"])
+        self.assertTrue(report["publicationChecks"]["officialRangesRemainOutOfVerifiedFields"])
+
+    def test_exact_selected_price_takes_priority_over_extra_official_range(self) -> None:
+        value = gym(
+            "exact-with-range", "Exact With Range", 99,
+            costContextOffers=[{
+                "kind": "range", "label": "Optional training", "low": 150, "high": 250,
+                "cadence": "session", "sourceUrl": "https://example.com/rates",
+                "observedAt": "2026-08-20", "evidenceTier": "official-public",
+            }],
+        )
+        document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-20")
+        self.assertEqual(document["gyms"][0]["pricingStatus"], "verified")
+
+    def test_non_consumer_with_range_remains_not_applicable(self) -> None:
+        value = gym(
+            "institutional-range", "Institutional Range", None,
+            entityKindOverride="non-consumer", accessModelOverride="not-applicable",
+            costContextOffers=[{
+                "kind": "starting-price", "label": "Program starts at $100", "low": 100, "high": 100,
+                "cadence": "month", "sourceUrl": "https://example.com/program",
+                "observedAt": "2026-08-20", "evidenceTier": "official-public",
+            }],
+        )
+        document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-20")
+        self.assertEqual(document["gyms"][0]["pricingStatus"], "not-applicable")
 
     def test_explicit_conflicting_context_preserves_warning_and_normalizes_four_week_cadence(self) -> None:
         value = gym(
