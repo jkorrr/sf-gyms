@@ -578,9 +578,10 @@
     "studio": 106
   },
   "verifiedMonthlyCount": 156,
-  "verifiedDayPassCount": 116,
+  "verifiedDayPassCount": 122,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 135,
+  "approvedOperatorCatalogLocationsApplied": 30,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
   "approvedDealsApplied": 11,
@@ -591,7 +592,7 @@
   "reportedMonthlyCount": 0,
   "estimatedMonthlyCount": 10,
   "approvedExternalComparableCount": 1,
-  "officialCostContextListingCount": 22,
+  "officialCostContextListingCount": 17,
   "fieldCoverage": {
     "specificDescriptionCount": 248,
     "officialUrlCount": 246,
@@ -602,18 +603,18 @@
     "hoursNotApplicableCount": 0,
     "amenitiesListedCount": 245,
     "operatorLocationIdCount": 124,
-    "sourcePlanCatalogCount": 104,
-    "sourcePlanFragmentCount": 6,
-    "selectedOnlyPlanCatalogCount": 77,
+    "sourcePlanCatalogCount": 133,
+    "sourcePlanFragmentCount": 1,
+    "selectedOnlyPlanCatalogCount": 53,
     "noPlanCatalogCount": 61,
-    "sourceDropInCatalogCount": 77,
+    "sourceDropInCatalogCount": 98,
     "sourceDropInFragmentCount": 1,
-    "selectedOnlyDropInCatalogCount": 56,
-    "noDropInCatalogCount": 114,
-    "selectedUnknownCommitmentCount": 89,
+    "selectedOnlyDropInCatalogCount": 33,
+    "noDropInCatalogCount": 116,
+    "selectedUnknownCommitmentCount": 80,
     "selectedUndisclosedClassAllowanceCount": 9,
-    "typicalPlanSelectedCount": 80,
-    "highestAccessPlanSelectedCount": 80,
+    "typicalPlanSelectedCount": 109,
+    "highestAccessPlanSelectedCount": 109,
     "bestValuePlanSelectedCount": 0,
     "explicitMonthlyPriceStateCount": 248,
     "explicitDayPassPriceStateCount": 248,
@@ -635,12 +636,12 @@
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
     "publiclyPricedCommercialListings": 171,
-    "reconstructedRelevantCatalogListings": 90,
-    "reconstructedRelevantCatalogCoverage": 0.5263,
+    "reconstructedRelevantCatalogListings": 118,
+    "reconstructedRelevantCatalogCoverage": 0.6901,
     "targetCoverage": 0.9,
     "targetMet": false,
     "priorityPlatformCounts": {
-      "generic-official": 74,
+      "generic-official": 46,
       "mindbody": 4,
       "mariana-tek": 1,
       "momence": 1,
@@ -703,50 +704,6 @@
         "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership"
       },
       {
-        "id": "osm-node-6496142801",
-        "name": "Barry's San Francisco - Castro",
-        "operatorId": "barrys",
-        "platforms": [],
-        "monthlyPrice": 260.0,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://app.barrys.com/pricing?location=10298"
-      },
-      {
-        "id": "osm-node-9411404744",
-        "name": "Barry's San Francisco - FiDi",
-        "operatorId": "barrys",
-        "platforms": [],
-        "monthlyPrice": 260.0,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://app.barrys.com/pricing?location=10298"
-      },
-      {
-        "id": "web-18e908eb2543ab",
-        "name": "Barry's San Francisco - Marina",
-        "operatorId": "barrys",
-        "platforms": [],
-        "monthlyPrice": 260.0,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://app.barrys.com/pricing?location=10298"
-      },
-      {
-        "id": "web-94d9302c37678b",
-        "name": "Bayview Hunters Point YMCA",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
-      },
-      {
         "id": "osm-node-4004802465",
         "name": "Benchmark Climbing",
         "operatorId": "benchmarkclimbing.com",
@@ -767,72 +724,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://www.thecitycrossfit.com/memberships"
-      },
-      {
-        "id": "osm-node-663533939",
-        "name": "CorePower Yoga Duboce",
-        "operatorId": "corepower-yoga",
-        "platforms": [],
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce"
-      },
-      {
-        "id": "osm-node-10806697937",
-        "name": "CorePower Yoga Mission Bay",
-        "operatorId": "corepower-yoga",
-        "platforms": [],
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/mission-bay"
-      },
-      {
-        "id": "osm-node-6604031903",
-        "name": "CorePower Yoga",
-        "operatorId": "corepower-yoga",
-        "platforms": [],
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow"
-      },
-      {
-        "id": "osm-node-9465192363",
-        "name": "CorePower Yoga Nob Hill",
-        "operatorId": "corepower-yoga",
-        "platforms": [],
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nob-hill"
-      },
-      {
-        "id": "osm-node-2337759318",
-        "name": "CorePower Yoga - Cow Hollow",
-        "operatorId": "corepower-yoga",
-        "platforms": [],
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/cow-hollow"
-      },
-      {
-        "id": "osm-node-4548624459",
-        "name": "CorePower Yoga NoPa",
-        "operatorId": "corepower-yoga",
-        "platforms": [],
-        "monthlyPrice": 229.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "source-fragment",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/nopa"
       },
       {
         "id": "osm-way-272700932",
@@ -888,17 +779,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://touchstoneclimbing.com/dogpatch-boulders/faq/"
-      },
-      {
-        "id": "web-abd8e24f4af4d8",
-        "name": "Dogpatch YMCA at Crane Cove",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
       },
       {
         "id": "web-e71c82ac2eb475",
@@ -1011,72 +891,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "none",
         "priceSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a"
-      },
-      {
-        "id": "osm-node-2338837133",
-        "name": "FITNESS SF Castro",
-        "operatorId": "fitness-sf",
-        "platforms": [],
-        "monthlyPrice": 129.95,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
-      },
-      {
-        "id": "web-a298d8310b9dc9",
-        "name": "FITNESS SF Embarcadero",
-        "operatorId": "fitness-sf",
-        "platforms": [],
-        "monthlyPrice": 129.95,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
-      },
-      {
-        "id": "osm-node-3881440385",
-        "name": "FITNESS SF Fillmore",
-        "operatorId": "fitness-sf",
-        "platforms": [],
-        "monthlyPrice": 129.95,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
-      },
-      {
-        "id": "web-f54e94809da91c",
-        "name": "FITNESS SF Mid Market",
-        "operatorId": "fitness-sf",
-        "platforms": [],
-        "monthlyPrice": 129.95,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
-      },
-      {
-        "id": "osm-way-25371830",
-        "name": "Fitness SF SOMA",
-        "operatorId": "fitness-sf",
-        "platforms": [],
-        "monthlyPrice": 129.95,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
-      },
-      {
-        "id": "web-396cf2ddf3bead",
-        "name": "FITNESS SF Transbay",
-        "operatorId": "fitness-sf",
-        "platforms": [],
-        "monthlyPrice": 129.95,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
       },
       {
         "id": "web-06bc58a9a5ca84",
@@ -1226,17 +1040,6 @@
         "priceSourceUrl": "https://touchstoneclimbing.com/mission-cliffs/faq/"
       },
       {
-        "id": "web-0509e54f1e3c89",
-        "name": "Mission YMCA",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
-      },
-      {
         "id": "osm-way-24334661",
         "name": "Movement San Francisco",
         "operatorId": "movementgyms.com",
@@ -1314,50 +1117,6 @@
         "priceSourceUrl": "https://www.solyogasf.com/membership"
       },
       {
-        "id": "osm-node-13185224799",
-        "name": "[solidcore] Castro",
-        "operatorId": "solidcore",
-        "platforms": [],
-        "monthlyPrice": 145.0,
-        "dayPassPrice": 43.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11"
-      },
-      {
-        "id": "web-0ed19b0a7a3073",
-        "name": "[solidcore] Laurel Village",
-        "operatorId": "solidcore",
-        "platforms": [],
-        "monthlyPrice": 145.0,
-        "dayPassPrice": 43.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=20"
-      },
-      {
-        "id": "web-c585a394b269ab",
-        "name": "[solidcore] Marina",
-        "operatorId": "solidcore",
-        "platforms": [],
-        "monthlyPrice": 145.0,
-        "dayPassPrice": 43.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=13"
-      },
-      {
-        "id": "web-8a0d4e16015d6d",
-        "name": "[solidcore] Mission Bay",
-        "operatorId": "solidcore",
-        "platforms": [],
-        "monthlyPrice": 145.0,
-        "dayPassPrice": 43.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=12"
-      },
-      {
         "id": "osm-node-6493825931",
         "name": "Soluna Yoga and Wellness",
         "operatorId": "solunayogaandwellness.com",
@@ -1369,28 +1128,6 @@
         "planCatalogStatus": "selected-only",
         "dropInCatalogStatus": "selected-only",
         "priceSourceUrl": "https://www.solunayogaandwellness.com/"
-      },
-      {
-        "id": "osm-node-4001664955",
-        "name": "SoulCycle Castro",
-        "operatorId": "soulcycle",
-        "platforms": [],
-        "monthlyPrice": 127.0,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.soul-cycle.com/series/"
-      },
-      {
-        "id": "web-7935d5eb8b6a85",
-        "name": "SoulCycle Union Street",
-        "operatorId": "soulcycle",
-        "platforms": [],
-        "monthlyPrice": 127.0,
-        "dayPassPrice": 38.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.soul-cycle.com/series/"
       },
       {
         "id": "web-c745e6dbdcadb6",
@@ -1463,50 +1200,6 @@
         "priceSourceUrl": "https://www.worldteamusa.net/services"
       },
       {
-        "id": "web-e220d3accf950e",
-        "name": "YMCA of Greater San Francisco - Chinatown",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
-      },
-      {
-        "id": "osm-way-193054131",
-        "name": "YMCA of Greater San Francisco - Embarcadero",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
-      },
-      {
-        "id": "osm-way-69020085",
-        "name": "Presidio Community YMCA",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
-      },
-      {
-        "id": "osm-way-286276068",
-        "name": "YMCA of Greater San Francisco - Richmond District",
-        "operatorId": "ymca",
-        "platforms": [],
-        "monthlyPrice": 91.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.ymcasf.org/membership/"
-      },
-      {
         "id": "osm-node-6471124709",
         "name": "Yoga Flow",
         "operatorId": "yogaflowsf.com",
@@ -1553,10 +1246,10 @@
         "priceSourceUrl": "https://www.yogamayu.com/pricing"
       }
     ],
-    "sourceFragmentPlanCatalogs": 6,
-    "selectedOnlyPlanCatalogs": 77,
+    "sourceFragmentPlanCatalogs": 1,
+    "selectedOnlyPlanCatalogs": 53,
     "sourceFragmentDropInCatalogs": 1,
-    "selectedOnlyDropInCatalogs": 56
+    "selectedOnlyDropInCatalogs": 33
   },
   "crawlSummary": {
     "attemptedGyms": 288,

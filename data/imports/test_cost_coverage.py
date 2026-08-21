@@ -28,6 +28,99 @@ def gym(identifier: str, name: str, monthly: float | None, **extra: object) -> d
 
 
 class CostCoverageTests(unittest.TestCase):
+    def test_operator_catalog_approval_applies_only_to_explicit_matching_targets(self) -> None:
+        first = gym("first", "First Branch", 80, operatorId="example-chain")
+        second = gym("second", "Second Branch", 80, operatorId="example-chain")
+        unrelated = gym("unrelated", "Unrelated Gym", 70, operatorId="other-chain")
+        document = {
+            "approvals": [{
+                "id": "example-market-catalog",
+                "reviewStatus": "approved",
+                "operatorId": "example-chain",
+                "gymIds": ["first", "second"],
+                "sharedFields": {
+                    "monthlyPrice": 90,
+                    "priceSource": "Example official market catalog",
+                    "priceSourceUrl": "https://example.com/pricing",
+                    "priceObservedAt": "2026-08-21",
+                    "planOffers": [{
+                        "sourceProductId": "all-access",
+                        "name": "All Access",
+                        "amount": 90,
+                        "billingInterval": "month",
+                        "scopeType": "multi-location",
+                        "commitmentType": "month-to-month",
+                        "fees": [],
+                    }],
+                    "catalogCompleteness": {"plans": "complete", "dropIns": "none-observed"},
+                },
+            }]
+        }
+
+        values = [first, second, unrelated]
+        self.assertEqual(coverage.apply_operator_catalog_approvals(values, document), 2)
+        self.assertEqual(first["monthlyPrice"], 90)
+        self.assertEqual(second["monthlyPrice"], 90)
+        self.assertEqual(unrelated["monthlyPrice"], 70)
+        self.assertEqual(first["operatorCatalogApprovalId"], "example-market-catalog")
+        self.assertIsNot(first["planOffers"], second["planOffers"])
+
+    def test_operator_catalog_approval_rejects_operator_mismatch(self) -> None:
+        value = gym("branch", "Wrong Branch", 80, operatorId="other-chain")
+        document = {
+            "approvals": [{
+                "id": "bad-scope",
+                "reviewStatus": "approved",
+                "operatorId": "example-chain",
+                "gymIds": ["branch"],
+                "sharedFields": {
+                    "priceSourceUrl": "https://example.com/pricing",
+                    "priceObservedAt": "2026-08-21",
+                    "planOffers": [],
+                },
+            }]
+        }
+        with self.assertRaisesRegex(ValueError, "belongs to"):
+            coverage.apply_operator_catalog_approvals([value], document)
+
+    def test_operator_catalog_approval_ignores_fully_unrelated_scoped_input(self) -> None:
+        document = {
+            "approvals": [{
+                "id": "out-of-scope",
+                "reviewStatus": "approved",
+                "operatorId": "example-chain",
+                "gymIds": ["missing-first", "missing-second"],
+                "sharedFields": {
+                    "priceSourceUrl": "https://example.com/pricing",
+                    "priceObservedAt": "2026-08-21",
+                    "planOffers": [],
+                },
+            }]
+        }
+
+        value = gym("unrelated", "Unrelated Gym", 70, operatorId="other-chain")
+        self.assertEqual(coverage.apply_operator_catalog_approvals([value], document), 0)
+        self.assertNotIn("operatorCatalogApprovalId", value)
+
+    def test_operator_catalog_approval_rejects_partially_missing_target_set(self) -> None:
+        document = {
+            "approvals": [{
+                "id": "partial-scope",
+                "reviewStatus": "approved",
+                "operatorId": "example-chain",
+                "gymIds": ["present", "missing"],
+                "sharedFields": {
+                    "priceSourceUrl": "https://example.com/pricing",
+                    "priceObservedAt": "2026-08-21",
+                    "planOffers": [],
+                },
+            }]
+        }
+
+        value = gym("present", "Present Branch", 80, operatorId="example-chain")
+        with self.assertRaisesRegex(ValueError, "Unknown operator catalog target"):
+            coverage.apply_operator_catalog_approvals([value], document)
+
     def test_enrichment_is_idempotent_for_fixed_date(self) -> None:
         value = gym("stable", "Stable Gym", 80, dayPassPrice=25)
         value["planOffers"] = [{
@@ -76,6 +169,30 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(plans[0]["id"], selected_id)
         self.assertEqual(plans[0]["billing"]["normalizedMonthly"], 25)
         self.assertEqual({fee["type"] for fee in plans[0]["fees"]}, {"annual", "initiation"})
+
+    def test_offer_specific_source_page_is_preserved_in_evidence(self) -> None:
+        value = gym("sources", "Example Gym", 80)
+        value["planOffers"] = [{
+            "sourceProductId": "basic",
+            "name": "Basic",
+            "amount": 80,
+            "billingInterval": "month",
+            "sourceUrl": "https://example.com/membership",
+            "observedAt": "2026-08-21",
+            "fees": [],
+        }]
+        value["dropInOffers"] = [{
+            "sourceProductId": "single",
+            "name": "Single Visit",
+            "amount": 25,
+            "sourceUrl": "https://example.com/day-passes",
+            "observedAt": "2026-08-21",
+        }]
+        plans, drops, *_rest = coverage.build_plan_catalog(value, "membership")
+        self.assertEqual(plans[0]["evidence"]["url"], "https://example.com/membership")
+        self.assertEqual(plans[0]["evidence"]["sourceProductId"], "basic")
+        self.assertEqual(drops[0]["evidence"]["url"], "https://example.com/day-passes")
+        self.assertEqual(drops[0]["evidence"]["sourceProductId"], "single")
 
     def test_activation_fee_remains_linked_to_selected_plan(self) -> None:
         value = gym("activation", "Example Combat Gym", 229)
