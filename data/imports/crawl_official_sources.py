@@ -121,7 +121,7 @@ VISIBLE_ADDRESS_RE = re.compile(
     re.IGNORECASE,
 )
 RESEARCH_PATH_RE = re.compile(
-    r"/(?:pricing|prices|pricespolicies|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join|locations?)(?:/|$|[?#])",
+    r"/(?:pricing|prices|pricespolicies|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join|locations?|faqs?|how-it-works)(?:/|$|[?#])",
     re.IGNORECASE,
 )
 RESEARCH_EXCLUDE_RE = re.compile(r"/(?:login|signin|sign-in|account|checkout|cart)(?:/|$|[?#])", re.IGNORECASE)
@@ -1143,6 +1143,87 @@ def independent_operator_visible_candidates(visible_text: str, source_url: str) 
     return []
 
 
+def perform_for_golf_plan_descriptors(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Retain amount-withheld P4G memberships as reviewable catalog products.
+
+    Perform for Golf publicly enumerates recurring plan names and session
+    allowances while disclosing the coached-plan amounts only after a
+    consultation.  Dropping those cards makes a complete public catalog look
+    like one isolated $300 Mindbody contract.  These descriptors preserve the
+    named products with ``amount=None`` and can never become a selected exact
+    price because their purchase method is contact-required.
+    """
+
+    host = hostname(source_url)
+    if not (host == "performforgolf.com" or host.endswith(".performforgolf.com")):
+        return []
+    compact = " ".join(visible_text.split())
+    named_plans = (
+        ("par-4-sessions", "PAR Membership", 4, r"PAR\s+MEMBERSHIP\s*\(\s*4\s+SESSIONS?\s*/\s*MONTH\s*\)"),
+        ("birdie-6-sessions", "Birdie Membership", 6, r"BIRDIE\s+MEMBERSHI\s*P\s*\(\s*6\s+SESSIONS?\s*/\s*MONTH\s*\)"),
+        ("eagle-8-sessions", "Eagle Membership", 8, r"EAGLE\s+MEMBERSHIP\s*\(\s*8\s+SESSIONS?\s*/\s*MONTH\s*\)"),
+        ("albatross-10-sessions", "Albatross Membership", 10, r"ALBATROSS(?:\s+MEMBERSHIP)?\s*\(\s*10\s+SESSIONS?\s*/\s*MONTH\s*\)"),
+        ("ace-12-sessions", "Ace Membership", 12, r"ACE\s+MEMBERSHIP\s*\(\s*12\s+SESSIONS?\s*/\s*MONTH\s*\)"),
+    )
+
+    def descriptor(product_id: str, name: str, allowance: int, raw_label: str) -> dict[str, Any]:
+        return {
+            "kind": "plan-descriptor",
+            "sourceProductId": product_id,
+            "name": name,
+            "amount": None,
+            "currency": "USD",
+            "cadence": "month",
+            "billingInterval": "month",
+            "productType": "monthly",
+            "classAllowance": {"count": allowance, "period": "month", "unlimited": False},
+            "accessScope": (
+                f"{allowance} interchangeable one-to-one coaching sessions per month plus "
+                "designated open-gym and simulator access at all locations"
+            ),
+            "scopeType": "multi-location",
+            "commitment": {"type": "unknown", "minimumMonths": None, "rawLabel": "Auto-monthly basis"},
+            "promotion": {"isPromotion": False, "label": ""},
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "availability": "available",
+            "purchaseMethod": "contact-required",
+            "fees": [],
+            "rawLabel": raw_label,
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "adapter": "perform-for-golf-plan-descriptors",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        }
+
+    matches = [
+        descriptor(product_id, name, allowance, match.group(0))
+        for product_id, name, allowance, pattern in named_plans
+        if (match := re.search(pattern, compact, re.IGNORECASE))
+    ]
+    # Fail closed if the visible membership table is incomplete or has changed.
+    if matches and len(matches) != len(named_plans):
+        return []
+    if matches:
+        return matches
+
+    minimum = re.search(
+        r"memberships?\s+based\s+on\s+one[- ]on[- ]one\s+sessions?.{0,100}?"
+        r"(?:from\s+)?2x\s*/\s*month.{0,80}?(?:up\s+to\s+)?12x\s*/\s*month",
+        compact,
+        re.IGNORECASE,
+    )
+    if minimum:
+        return [descriptor(
+            "unnamed-2-sessions",
+            "2x/Month Membership (name not published)",
+            2,
+            minimum.group(0),
+        )]
+    return []
+
+
 def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     specialized = (
         crunch_visible_candidates(visible_text, source_url)
@@ -1152,6 +1233,7 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or orangetheory_visible_candidates(visible_text, source_url)
         or approach_visible_candidates(visible_text, source_url)
         or independent_operator_visible_candidates(visible_text, source_url)
+        or perform_for_golf_plan_descriptors(visible_text, source_url)
     )
     candidates: list[dict[str, Any]] = list(specialized)
     candidates.extend(visible_cost_context_candidates(visible_text, source_url))

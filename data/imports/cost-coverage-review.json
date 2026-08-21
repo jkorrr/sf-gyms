@@ -10433,18 +10433,20 @@
       "websiteUrl": "https://mx3fitness.com",
       "entityKind": "gym",
       "modality": "independent-gym",
-      "pricingStatus": "not-applicable",
-      "pricingBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
+      "pricingStatus": "gated",
+      "pricingBlocker": "The operator currently limits or pauses ordinary enrollment.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -10537,18 +10539,20 @@
       "websiteUrl": "https://www.mx3fitness.com/",
       "entityKind": "gym",
       "modality": "independent-gym",
-      "pricingStatus": "not-applicable",
-      "pricingBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
+      "pricingStatus": "gated",
+      "pricingBlocker": "The operator currently limits or pauses ordinary enrollment.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",

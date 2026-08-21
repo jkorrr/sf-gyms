@@ -357,6 +357,62 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(report["commercialListings"], 1)
         self.assertEqual(report["actionableCommercialCoverage"], 1)
 
+    def test_monthly_members_only_language_does_not_make_a_consumer_gym_restricted(self) -> None:
+        value = gym(
+            "member-gym",
+            "Member Gym",
+            None,
+            priceNote="This location is limited to monthly members only.",
+        )
+
+        self.assertEqual(coverage.access_model(value, "gym"), "membership")
+
+    def test_waitlisted_public_catalog_stays_gated_and_unselected(self) -> None:
+        value = gym(
+            "waitlisted-catalog",
+            "Waitlisted Gym",
+            None,
+            accessAvailability="waitlist",
+            pricingAccess="form-required",
+            priceSourceUrl="https://example.com/monthly-signup",
+            priceObservedAt="2026-08-21",
+            planOffers=[{
+                "sourceProductId": "open-gym",
+                "name": "Open Gym Only",
+                "amount": 109,
+                "billingInterval": "month",
+                "commitmentType": "month-to-month",
+                "availability": "waitlist",
+                "purchaseMethod": "waitlist",
+                "fees": [{
+                    "type": "activation", "amount": 75, "currency": "USD",
+                    "cadence": "one-time", "mandatory": True,
+                }],
+            }],
+            costContextOffers=[{
+                "kind": "starting-price",
+                "label": "Monthly memberships start at $109",
+                "amount": 109,
+                "cadence": "month",
+                "sourceUrl": "https://example.com/monthly-signup",
+                "observedAt": "2026-08-21",
+            }],
+        )
+
+        document, _report, _review = coverage.enrich_document(
+            {"_meta": {}, "gyms": [value]}, "2026-08-21",
+        )
+        published = document["gyms"][0]
+        self.assertEqual(published["accessModel"], "membership")
+        self.assertEqual(published["pricingStatus"], "gated")
+        self.assertEqual(len(published["plans"]), 1)
+        self.assertEqual(published["plans"][0]["availability"], "waitlist")
+        self.assertEqual(published["plans"][0]["fees"][0]["amount"], 75)
+        self.assertEqual(published["costContext"][0]["low"], 109)
+        self.assertIsNone(published["selectedPlanId"])
+        self.assertIsNone(published["monthlyPrice"])
+        self.assertIsNone(published["activationFee"])
+
     def test_official_class_pack_is_actionable_without_monthly_price(self) -> None:
         value = gym("pack", "Example Training Studio", None, accessModelOverride="class-pack")
         value["planOffers"] = [{
