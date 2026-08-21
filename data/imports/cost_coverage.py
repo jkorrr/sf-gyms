@@ -884,6 +884,7 @@ def apply_approved_observations(gyms: list[dict[str, Any]], document: dict[str, 
         "minimumCommitmentMonths",
         "planOffers",
         "dropInOffers",
+        "catalogCompleteness",
         "costContextOffers",
         "officialPriceConflict",
     )
@@ -1711,8 +1712,13 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
         existing_access = text(gym.get("accessModel"))
         gym["accessModel"] = text(gym.get("accessModelOverride")) or (existing_access if existing_access in ACCESS_MODELS else "") or access_model(gym, kind)
         gym["selectionRuleVersion"] = SELECTION_RULE_VERSION
-        has_source_plan_catalog = isinstance(gym.get("planOffers"), list) and bool(gym.get("planOffers"))
-        has_source_drop_in_catalog = isinstance(gym.get("dropInOffers"), list) and bool(gym.get("dropInOffers"))
+        has_source_plan_offers = isinstance(gym.get("planOffers"), list) and bool(gym.get("planOffers"))
+        has_source_drop_in_offers = isinstance(gym.get("dropInOffers"), list) and bool(gym.get("dropInOffers"))
+        completeness = gym.get("catalogCompleteness") if isinstance(gym.get("catalogCompleteness"), dict) else {}
+        plan_completeness = text(completeness.get("plans")) or ("complete" if has_source_plan_offers else "none-observed")
+        drop_in_completeness = text(completeness.get("dropIns")) or ("complete" if has_source_drop_in_offers else "none-observed")
+        has_source_plan_catalog = has_source_plan_offers and plan_completeness == "complete"
+        has_source_drop_in_catalog = has_source_drop_in_offers and drop_in_completeness == "complete"
         plans, drop_ins, selected_plan_id, selected_drop_in_id, plan_errors = build_plan_catalog(gym, gym["accessModel"])
         gym["plans"] = plans
         gym["dropIns"] = drop_ins
@@ -1734,10 +1740,20 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
         gym["planValidationErrors"] = plan_errors
         gym["catalogStatus"] = {
             "plans": {
-                "status": "source-catalog" if has_source_plan_catalog else ("selected-only" if plans else "none"),
+                "status": (
+                    "source-catalog"
+                    if has_source_plan_catalog
+                    else "source-fragment"
+                    if has_source_plan_offers
+                    else "selected-only"
+                    if plans
+                    else "none"
+                ),
                 "reason": (
                     "Reviewed source offers are retained before deterministic selection."
                     if has_source_plan_catalog
+                    else "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+                    if has_source_plan_offers
                     else (
                         "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
                         if plans
@@ -1746,10 +1762,20 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 ),
             },
             "dropIns": {
-                "status": "source-catalog" if has_source_drop_in_catalog else ("selected-only" if drop_ins else "none"),
+                "status": (
+                    "source-catalog"
+                    if has_source_drop_in_catalog
+                    else "source-fragment"
+                    if has_source_drop_in_offers
+                    else "selected-only"
+                    if drop_ins
+                    else "none"
+                ),
                 "reason": (
                     "Reviewed public visit or class offers are retained before deterministic selection."
                     if has_source_drop_in_catalog
+                    else "Reviewed visit or class offers are retained, but completeness of the public catalog has not been established."
+                    if has_source_drop_in_offers
                     else (
                         "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
                         if drop_ins
@@ -2106,9 +2132,11 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             "amenitiesListedCount": sum(bool(gym.get("amenities")) for gym in gyms),
             "operatorLocationIdCount": sum(bool(text(gym.get("operatorLocationId"))) for gym in gyms),
             "sourcePlanCatalogCount": sum((gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "source-catalog" for gym in gyms),
+            "sourcePlanFragmentCount": sum((gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "source-fragment" for gym in gyms),
             "selectedOnlyPlanCatalogCount": sum((gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "selected-only" for gym in gyms),
             "noPlanCatalogCount": sum((gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "none" for gym in gyms),
             "sourceDropInCatalogCount": sum((gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") == "source-catalog" for gym in gyms),
+            "sourceDropInFragmentCount": sum((gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") == "source-fragment" for gym in gyms),
             "selectedOnlyDropInCatalogCount": sum((gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") == "selected-only" for gym in gyms),
             "noDropInCatalogCount": sum((gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") == "none" for gym in gyms),
             "selectedUnknownCommitmentCount": sum(
@@ -2176,8 +2204,14 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             for item in review
         ),
         "catalogReconstructionQueue": {
+            "sourceFragmentPlanCatalogs": sum(
+                (gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "source-fragment" for gym in gyms
+            ),
             "selectedOnlyPlanCatalogs": sum(
                 (gym.get("catalogStatus", {}).get("plans") or {}).get("status") == "selected-only" for gym in gyms
+            ),
+            "sourceFragmentDropInCatalogs": sum(
+                (gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") == "source-fragment" for gym in gyms
             ),
             "selectedOnlyDropInCatalogs": sum(
                 (gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") == "selected-only" for gym in gyms
@@ -2190,6 +2224,15 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             "reviewCandidatePages": sum(bool(item.get("requiresReview")) for item in crawl_attempts),
             "linkedStorefrontRequests": sum("linkedFrom" in item for item in crawl_attempts),
             "renderedRequests": len(rendered_crawl_document.get("attempts", [])),
+            "renderedAccessBlockedRequests": sum(
+                text(item.get("status")) == "access-blocked"
+                for item in rendered_crawl_document.get("attempts", [])
+            ),
+            "renderedAccessBlockerCounts": dict(sorted(Counter(
+                text(item.get("accessBlocker"))
+                for item in rendered_crawl_document.get("attempts", [])
+                if text(item.get("accessBlocker"))
+            ).items())),
             "priceChangeFlags": sum(bool(item.get("priceChangeOver20Percent")) for item in crawl_attempts),
         },
         "publicSourceDiscoverySummary": {
@@ -2297,8 +2340,8 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 for gym in gyms
             ),
             "allCatalogCompletenessStatesExplicit": all(
-                (gym.get("catalogStatus", {}).get("plans") or {}).get("status") in {"source-catalog", "selected-only", "none"}
-                and (gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") in {"source-catalog", "selected-only", "none"}
+                (gym.get("catalogStatus", {}).get("plans") or {}).get("status") in {"source-catalog", "source-fragment", "selected-only", "none"}
+                and (gym.get("catalogStatus", {}).get("dropIns") or {}).get("status") in {"source-catalog", "source-fragment", "selected-only", "none"}
                 for gym in gyms
             ),
             "costContextNeverLeaksIntoVerifiedFields": all(

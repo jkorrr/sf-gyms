@@ -11,6 +11,7 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import re
 import time
 from collections import defaultdict
 from datetime import UTC, datetime
@@ -29,6 +30,7 @@ OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.jso
 MAX_JSON_BYTES = 4_000_000
 PUBLIC_TAB_LABELS = {"membership", "memberships", "package", "packages", "pricing", "rates", "passes"}
 PRICE_CARD_SELECTOR = "article, [role='listitem'], [class*='price' i], [class*='plan' i], [class*='membership' i], [class*='package' i]"
+ACCESS_BLOCK_COOLDOWN_DAYS = 28
 
 
 def text(value: Any) -> str:
@@ -60,12 +62,51 @@ def is_safe_public_tab_label(label: str) -> bool:
     return " ".join(text(label).casefold().split()) in PUBLIC_TAB_LABELS
 
 
+def detect_access_blocker(title: str, visible_text: str, html: str = "") -> str:
+    """Classify strong public-page access-control signals without bypassing them."""
+
+    sample = " ".join(f"{title} {visible_text[:8_000]} {html[:8_000]}".casefold().split())
+    cloudflare_signal = "cloudflare" in sample or "cf-chl-" in sample or "challenge-platform" in sample
+    if cloudflare_signal and any(
+        phrase in sample
+        for phrase in ("security check", "verify you are human", "performing security verification", "just a moment")
+    ):
+        return "platform-security-check"
+    if "captcha" in sample and any(phrase in sample for phrase in ("verify", "security", "human")):
+        return "captcha-required"
+    if re.search(r"\b(?:sign in|log in)\b", title, re.IGNORECASE) and not re.search(
+        r"\b(?:price|pricing|membership|package|plan)\b", visible_text, re.IGNORECASE
+    ):
+        return "authentication-required"
+    return ""
+
+
+def access_block_is_current(attempted_at: str, as_of: str, cooldown_days: int = ACCESS_BLOCK_COOLDOWN_DAYS) -> bool:
+    try:
+        attempted = datetime.fromisoformat(text(attempted_at)[:10]).date()
+        current = datetime.fromisoformat(text(as_of)[:10]).date()
+    except ValueError:
+        return False
+    return 0 <= (current - attempted).days < cooldown_days
+
+
 def candidate_gyms(
-    document: dict[str, Any], attempts_document: dict[str, Any], mode: str = "weekly"
+    document: dict[str, Any],
+    attempts_document: dict[str, Any],
+    mode: str = "weekly",
+    rendered_attempts_document: dict[str, Any] | None = None,
+    as_of: str = "",
 ) -> list[dict[str, Any]]:
     attempts_by_gym: dict[str, list[dict[str, Any]]] = defaultdict(list)
     for attempt in attempts_document.get("attempts", []):
         attempts_by_gym[text(attempt.get("gymId"))].append(attempt)
+    blocked_render_keys = {
+        (text(attempt.get("gymId")), text(attempt.get("url")))
+        for attempt in (rendered_attempts_document or {}).get("attempts", [])
+        if mode != "full"
+        and text(attempt.get("status")) == "access-blocked"
+        and access_block_is_current(text(attempt.get("attemptedAt")), as_of)
+    }
     candidates = []
     for gym in document.get("gyms", []):
         url = text(gym.get("websiteUrl"))
@@ -99,7 +140,7 @@ def candidate_gyms(
                 render_urls.append(attempt_url)
         for render_url in render_urls:
             key = (text(gym.get("id")), render_url)
-            if not render_url or key in seen:
+            if not render_url or key in seen or key in blocked_render_keys:
                 continue
             seen.add(key)
             expanded.append({**gym, "websiteUrl": render_url, "renderSourceUrl": text(gym.get("websiteUrl"))})
@@ -165,6 +206,8 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     visible_sources: list[tuple[str, str]] = []
     visible_card_sources: list[tuple[str, str]] = []
     clicked_tabs: list[str] = []
+    access_blocker = ""
+    page_title = ""
     try:
         page.goto(url, wait_until="commit", timeout=timeout_ms)
         page.wait_for_timeout(1500)
@@ -184,6 +227,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             except Exception:
                 continue
         visible = page.locator("body").inner_text(timeout=timeout_ms)
+        page_title = page.title()
         visible_sources.append((page.url, visible))
         for card in page.locator(PRICE_CARD_SELECTOR).all()[:250]:
             try:
@@ -204,6 +248,13 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             if frame_text.strip():
                 visible_sources.append((text(frame.url), frame_text))
         html = page.content()
+        access_blocker = detect_access_blocker(page_title, visible, html)
+        if access_blocker:
+            status = "access-blocked"
+            network_candidates.clear()
+            network_hashes.clear()
+            visible_sources.clear()
+            visible_card_sources.clear()
     except Exception as exc:
         status = "render-error"
         error = text(exc)[:240]
@@ -239,6 +290,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         "clickedPublicTabs": sorted(set(clicked_tabs)),
         "candidateCount": len(deduplicated),
         "requiresReview": bool(deduplicated),
+        "accessBlocker": access_blocker,
         "error": error,
         "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
     }
@@ -291,7 +343,13 @@ def main() -> int:
     static_attempts = json.loads(STATIC_ATTEMPTS_PATH.read_text(encoding="utf-8")) if STATIC_ATTEMPTS_PATH.exists() else {"attempts": []}
     existing_attempts_document = json.loads(ATTEMPTS_PATH.read_text(encoding="utf-8")) if ATTEMPTS_PATH.exists() else {"attempts": []}
     existing_observations_document = json.loads(OBSERVATIONS_PATH.read_text(encoding="utf-8")) if OBSERVATIONS_PATH.exists() else {"observations": []}
-    gyms = candidate_gyms(document, static_attempts, args.mode)
+    gyms = candidate_gyms(
+        document,
+        static_attempts,
+        args.mode,
+        existing_attempts_document,
+        attempted_at,
+    )
     if args.gym_id:
         requested_ids = set(args.gym_id)
         gyms = [gym for gym in gyms if text(gym.get("id")) in requested_ids]

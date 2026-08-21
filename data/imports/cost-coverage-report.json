@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "estimatorVersion": "sf-bay-area-v4-calibrated",
   "selectionRuleVersion": "neutral-basic-v2",
   "totalListings": 249,
@@ -575,7 +575,7 @@
   "verifiedMonthlyCount": 156,
   "verifiedDayPassCount": 116,
   "staleVerifiedCount": 0,
-  "approvedCrawlObservationsApplied": 133,
+  "approvedCrawlObservationsApplied": 134,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
   "approvedDealsApplied": 11,
@@ -598,11 +598,13 @@
     "amenitiesListedCount": 245,
     "operatorLocationIdCount": 124,
     "sourcePlanCatalogCount": 104,
-    "selectedOnlyPlanCatalogCount": 83,
-    "noPlanCatalogCount": 62,
+    "sourcePlanFragmentCount": 6,
+    "selectedOnlyPlanCatalogCount": 70,
+    "noPlanCatalogCount": 69,
     "sourceDropInCatalogCount": 77,
-    "selectedOnlyDropInCatalogCount": 57,
-    "noDropInCatalogCount": 115,
+    "sourceDropInFragmentCount": 1,
+    "selectedOnlyDropInCatalogCount": 44,
+    "noDropInCatalogCount": 127,
     "selectedUnknownCommitmentCount": 89,
     "selectedUndisclosedClassAllowanceCount": 9,
     "typicalPlanSelectedCount": 80,
@@ -627,13 +629,16 @@
   "officialSiteDiscoveryQueue": 0,
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
-    "selectedOnlyPlanCatalogs": 83,
-    "selectedOnlyDropInCatalogs": 57
+    "sourceFragmentPlanCatalogs": 6,
+    "selectedOnlyPlanCatalogs": 70,
+    "sourceFragmentDropInCatalogs": 1,
+    "selectedOnlyDropInCatalogs": 44
   },
   "crawlSummary": {
     "attemptedGyms": 288,
     "requestCount": 722,
     "statusCounts": {
+      "access-blocked": 33,
       "fetched": 323,
       "http-403": 5,
       "http-404": 5,
@@ -641,12 +646,17 @@
       "network-error": 4,
       "not-modified": 32,
       "render-error": 4,
-      "rendered": 298,
+      "rendered": 265,
       "robots-disallowed": 36
     },
     "reviewCandidatePages": 150,
     "linkedStorefrontRequests": 120,
     "renderedRequests": 314,
+    "renderedAccessBlockedRequests": 33,
+    "renderedAccessBlockerCounts": {
+      "captcha-required": 3,
+      "platform-security-check": 30
+    },
     "priceChangeFlags": 30
   },
   "publicSourceDiscoverySummary": {
@@ -694,14 +704,14 @@
       "rangeCoverage": 1.0
     },
     "yoga": {
-      "sampleSize": 21,
-      "medianAbsolutePercentageError": 0.0604,
-      "rangeCoverage": 0.8095
+      "sampleSize": 20,
+      "medianAbsolutePercentageError": 0.0487,
+      "rangeCoverage": 0.8
     },
     "overall": {
-      "sampleSize": 71,
-      "medianAbsolutePercentageError": 0.0901,
-      "rangeCoverage": 0.831
+      "sampleSize": 70,
+      "medianAbsolutePercentageError": 0.0877,
+      "rangeCoverage": 0.8286
     }
   },
   "withheldEstimateModalities": {},

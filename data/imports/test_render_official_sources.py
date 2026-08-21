@@ -6,6 +6,27 @@ import render_official_sources as rendered
 
 
 class RenderedCrawlerTests(unittest.TestCase):
+    def test_cloudflare_security_check_is_classified_without_bypass(self) -> None:
+        blocker = rendered.detect_access_blocker(
+            "Security Check",
+            "Performing security verification. Verify you are human.",
+            '<script src="/cdn-cgi/challenge-platform/h/g/orchestrate/chl_page/v1"></script>',
+        )
+        self.assertEqual(blocker, "platform-security-check")
+
+    def test_recent_access_block_is_skipped_until_monthly_full_retry(self) -> None:
+        document = {"gyms": [{
+            "id": "studio", "name": "Studio", "websiteUrl": "https://clients.mindbodyonline.com/store",
+            "publicationStatus": "publish", "recordStatus": "open", "entityKind": "studio",
+            "accessModel": "class-membership", "monthlyPrice": None,
+        }]}
+        rendered_attempts = {"attempts": [{
+            "gymId": "studio", "url": "https://clients.mindbodyonline.com/store",
+            "status": "access-blocked", "accessBlocker": "platform-security-check", "attemptedAt": "2026-08-20",
+        }]}
+        self.assertEqual(rendered.candidate_gyms(document, {"attempts": []}, "weekly", rendered_attempts, "2026-08-21"), [])
+        self.assertEqual(len(rendered.candidate_gyms(document, {"attempts": []}, "full", rendered_attempts, "2026-08-21")), 1)
+
     def test_network_capture_is_limited_to_operator_or_approved_booking_domains(self) -> None:
         operator = "https://example.com/pricing"
         self.assertTrue(rendered.allowed_network_response(operator, "https://api.example.com/plans.json"))

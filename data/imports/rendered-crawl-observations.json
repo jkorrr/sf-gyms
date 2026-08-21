@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "mode": "weekly",
   "observations": [
     {
@@ -1333,7 +1333,7 @@
     {
       "gymId": "osm-node-10897941853",
       "gymName": "Lagree Fit 415",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 40.0,
       "currency": "USD",
       "rawLabel": "$100 termination fee $239 Buy Class Packs + Packages No commitment/contract required Single Class Expires 45 days from sale date $40",
@@ -1362,7 +1362,7 @@
     {
       "gymId": "osm-node-10897941853",
       "gymName": "Lagree Fit 415",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 40.0,
       "currency": "USD",
       "rawLabel": "Single Class Expires 45 days from sale date $40",
@@ -1387,12 +1387,12 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://booking.lagreefit415.com/ca/lagree-fit-415/pricing/",
       "autoPublishEligible": false,
-      "cardHash": "52a40bef080f6261d4723b4e73692c3a077a7a909888597a7f97a86e9e56ee6c"
+      "cardAssociationHash": "52a40bef080f6261d4723b4e73692c3a077a7a909888597a7f97a86e9e56ee6c"
     },
     {
       "gymId": "osm-node-10897941853",
       "gymName": "Lagree Fit 415",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 119.0,
       "currency": "USD",
       "rawLabel": "ly 3month minimum commitment. 15 day notice required to avoid $100 termination fee. Credits do not rollover $119 Buy Activates on sale date 8 Class Monthly",
@@ -1421,7 +1421,7 @@
     {
       "gymId": "osm-node-10897941853",
       "gymName": "Lagree Fit 415",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 119.0,
       "currency": "USD",
       "rawLabel": "thly 3month minimum commitment. 15 day notice required to avoid $100 termination fee. Credits do not rollover $119 Buy Activates on sale date 8 Class Monthly",
@@ -1446,12 +1446,12 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://booking.lagreefit415.com/ca/lagree-fit-415/pricing/",
       "autoPublishEligible": false,
-      "cardHash": "7d8f863bbaaeb7d245614cde2d225861ebe3444391fa7ecedf030f0cbcc3c85c"
+      "cardAssociationHash": "7d8f863bbaaeb7d245614cde2d225861ebe3444391fa7ecedf030f0cbcc3c85c"
     },
     {
       "gymId": "osm-node-10897941853",
       "gymName": "Lagree Fit 415",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 199.0,
       "currency": "USD",
       "rawLabel": "3month minimum commitment. 15 day notice required to avoid $100 termination fee. Credits do not rollover $199 Buy Activates on sale date Monthly",
@@ -3092,7 +3092,7 @@
     {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 2.0,
       "currency": "USD",
       "rawLabel": "onth. Unlimited $229 3+ workouts per week. Setup autopay and take $50 OFF your first month. Annual Membership $2,399 Unlimited classes for one year. Enjoy over 1 month FREE! Monthly",
@@ -3125,7 +3125,7 @@
     {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "Drop-In $30",
@@ -3150,12 +3150,12 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
       "autoPublishEligible": false,
-      "cardHash": "a5877467f7a73fd9b9db87635bc02601b3068acdf7822d4117456286c1cab5a9"
+      "cardAssociationHash": "a5877467f7a73fd9b9db87635bc02601b3068acdf7822d4117456286c1cab5a9"
     },
     {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "le Your Workouts Small Classes Personal Training Join the Club! Monthly Class Memberships Drop-In $30",
@@ -3184,7 +3184,7 @@
     {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
       "rawLabel": "Drop-In $75",
@@ -3209,12 +3209,12 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/noe-valley/",
       "autoPublishEligible": false,
-      "cardHash": "7b22d509fa76133fb66062514fa68a767ba30c8e977cc6206e113a9f955921a1"
+      "cardAssociationHash": "7b22d509fa76133fb66062514fa68a767ba30c8e977cc6206e113a9f955921a1"
     },
     {
       "gymId": "osm-node-3522837919",
       "gymName": "YuBalance Noe Valley",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
       "rawLabel": "ited classes for one year. Enjoy over 1 month FREE! Monthly Personal Training Memberships Drop-In $75",
@@ -3969,7 +3969,7 @@
     {
       "gymId": "osm-node-4395534973",
       "gymName": "Yoga Mayu",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 28.0,
       "currency": "USD",
       "rawLabel": "ROP IN $60 New Student Special 3 Classes • 2 Weeks FIRST TIME STUDENTS ONLY BUY IT $28 Drop-in",
@@ -4003,7 +4003,7 @@
     {
       "gymId": "osm-node-4395534973",
       "gymName": "Yoga Mayu",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 60.0,
       "currency": "USD",
       "rawLabel": "kip to Content About Classes Workshops Pricing Teachers Location Book a Class SPECIALS & DROP IN $60",
@@ -4032,7 +4032,7 @@
     {
       "gymId": "osm-node-4395534973",
       "gymName": "Yoga Mayu",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 125.0,
       "currency": "USD",
       "rawLabel": "New Student Special 3 Classes • 2 Weeks FIRST TIME STUDENTS ONLY BUY IT $28 Drop-in 1 class BUY IT IN STUDIO PASSES $125",
@@ -4066,7 +4066,7 @@
     {
       "gymId": "osm-node-4395534973",
       "gymName": "Yoga Mayu",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 195.0,
       "currency": "USD",
       "rawLabel": "nd the given time frame. MONTHLY PASSES $205 Unlimited classes EXPIRES 30 DAYS (one class / day) BUY IT $195 Unlimited classes MONTHLY",
@@ -4523,16 +4523,16 @@
     {
       "gymId": "osm-node-5810883731",
       "gymName": "Mighty Pilates Presidio Heights",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
-      "rawLabel": "by Autopay – Our best deal ever at $36/class! $75 Off Your First Month for New Members MIGHTY MONTHLY",
+      "rawLabel": "by Autopay – Our best deal ever at $36/class! $75 Off Your First Month for New Members SIGN UP MIGHTY MONTHLY",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": null,
       "promotion": {
         "isPromotion": true,
-        "label": "by Autopay – Our best deal ever at $36/class! $75 Off Your First Month for New Members MIGHTY MONTHLY"
+        "label": "by Autopay – Our best deal ever at $36/class! $75 Off Your First Month for New Members SIGN UP MIGHTY MONTHLY"
       },
       "eligibility": {
         "type": "standard-adult",
@@ -4546,16 +4546,16 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-node-5810883731",
       "gymName": "Mighty Pilates Presidio Heights",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 76.0,
       "currency": "USD",
-      "rawLabel": "E SESSION (DUO) $82 per person 5 SEMI-PRIVATE SESSIONS $395 ($79/Session) 10 SEMI-PRIVATE SESSIONS $760 ($76/Session) MIGHTY MONTHLY",
+      "rawLabel": "$82 per person SIGN UP 5 SEMI-PRIVATE SESSIONS $395 ($79/Session) SIGN UP 10 SEMI-PRIVATE SESSIONS $760 ($76/Session) SIGN UP MIGHTY MONTHLY",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": null,
@@ -4575,16 +4575,16 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-node-5810883731",
       "gymName": "Mighty Pilates Presidio Heights",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 99.0,
       "currency": "USD",
-      "rawLabel": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only MIGHTY MONTHLY",
+      "rawLabel": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": {
@@ -4593,7 +4593,7 @@
       },
       "promotion": {
         "isPromotion": true,
-        "label": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only MIGHTY MONTHLY"
+        "label": "| 415.563.1947 ABOUT THE STUDIO INSTRUCTORS PRICING SCHEDULE A CLASS NEW CLIENT CLASS SPECIAL 5 Classes for $99 Intro offer for brand new clients only SIGN UP MIGHTY MONTHLY"
       },
       "eligibility": {
         "type": "standard-adult",
@@ -4607,13 +4607,13 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-node-5810883731",
       "gymName": "Mighty Pilates Presidio Heights",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 360.0,
       "currency": "USD",
       "rawLabel": "PASS $360/month",
@@ -4636,13 +4636,13 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-node-5810883731",
       "gymName": "Mighty Pilates Presidio Heights",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 620.0,
       "currency": "USD",
       "rawLabel": "20 PASS 20 classes a month plus $15% off everything else $620/month",
@@ -4668,7 +4668,7 @@
       "adapter": "operator-site",
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/#pricing-sf",
       "autoPublishEligible": false
     },
     {
@@ -4705,7 +4705,7 @@
     {
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 2.0,
       "currency": "USD",
       "rawLabel": "1 workout per week. Setup autopay and take $30 OFF your first month. Drop-In $30 Visit us! Annual Membership $2,399 Unlimited classes for one year. Enjoy over 1 Month FREE! Monthly",
@@ -4737,7 +4737,7 @@
     {
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "h. 4 Class Pack $109 1 workout per week. Setup autopay and take $30 OFF your first month. Drop-In $30",
@@ -4766,7 +4766,7 @@
     {
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "ke $40 OFF your first month. 4 Class Pack $109 1 workout per week. Setup autopay and take $30 OFF your first month. Drop-In",
@@ -4795,7 +4795,7 @@
     {
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
       "rawLabel": "Drop-In $75",
@@ -4820,12 +4820,12 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.yubalance.com/sunset/",
       "autoPublishEligible": false,
-      "cardHash": "72e285f2ba1ccbf6dcdc103132f8bf96054465e2263a648b56c6c4230a839e3d"
+      "cardAssociationHash": "72e285f2ba1ccbf6dcdc103132f8bf96054465e2263a648b56c6c4230a839e3d"
     },
     {
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 75.0,
       "currency": "USD",
       "rawLabel": "ited classes for one year. Enjoy over 1 Month FREE! Monthly Personal Training Memberships Drop-In $75",
@@ -4854,7 +4854,7 @@
     {
       "gymId": "osm-node-6493825931",
       "gymName": "Soluna Yoga and Wellness",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 35.0,
       "currency": "USD",
       "rawLabel": "pecial - three classes for $30 Single Drop in class - $35",
@@ -4883,7 +4883,7 @@
     {
       "gymId": "osm-node-6493825931",
       "gymName": "Soluna Yoga and Wellness",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 100.0,
       "currency": "USD",
       "rawLabel": "ferings for every age and ability. All are welcome here. Schedule Explore Our Memberships Basic Membership $100 5 Classes per Month",
@@ -4915,7 +4915,7 @@
     {
       "gymId": "osm-node-6493825931",
       "gymName": "Soluna Yoga and Wellness",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 160.0,
       "currency": "USD",
       "rawLabel": "Sign Up Standard Membership $160 9 per Month",
@@ -4944,7 +4944,7 @@
     {
       "gymId": "osm-node-6493825931",
       "gymName": "Soluna Yoga and Wellness",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 189.0,
       "currency": "USD",
       "rawLabel": "Sign Up Unlimited Membership $189 Unlimited Classes per Month",

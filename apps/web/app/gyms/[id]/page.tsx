@@ -120,6 +120,7 @@ export default async function GymPage({ params }: GymPageProps) {
               <span>Promotions are shown separately and never replace the ordinary plan price.</span>
             </div>}
             {gym.catalogStatus?.plans.status === "selected-only" && <p className="detail-muted">The selected official plan is verified; alternative membership products have not yet been fully reconstructed.</p>}
+            {gym.catalogStatus?.plans.status === "source-fragment" && <p className="detail-muted">The displayed official offers were reviewed, but the operator may publish additional membership products that the source did not expose to the crawler.</p>}
             {mandatoryFees.length > 0 && <div className="detail-price-grid">{mandatoryFees.map(([label, amount]) => <div key={label}><span>{label}</span><strong>{priceText(amount, "")}</strong></div>)}</div>}
             <p className="detail-muted">{priceFreshnessText(gym)}</p>
             {gym.priceNote && <p className="price-note">{gym.priceNote}</p>}

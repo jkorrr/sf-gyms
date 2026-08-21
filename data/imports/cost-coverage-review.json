@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "records": [
     {
       "id": "osm-node-8641835222",
@@ -221,12 +221,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/ASP/main_appts.asp?studioid=7487",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/home?studioid=7487",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -336,7 +336,7 @@
           "sourceType": "first-person-report",
           "evidenceLabel": "A recent visitor reported a $25 drop-in at the current CrossFit Alinea location.",
           "eligibleForSummary": false,
-          "ageDays": 127
+          "ageDays": 128
         }
       ],
       "publicationStatus": "publish",
@@ -1080,8 +1080,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -1316,22 +1316,22 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-7&sView=day&sLoc=0",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-8&sTG=8&sVT=9&sView=day&sLoc=0",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://www.bijayoga.com/",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -1712,12 +1712,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/app/business/classic/ws?studioid=42901&stype=43&prodid=10320",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://www.brightstarpilates.com/",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -2408,12 +2408,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -2470,12 +2470,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=6",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=39007&stype=-7&sView=week&sLoc=9",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -2499,11 +2499,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-663533939:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-663533939:plan:card-5781677c566289f8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -2541,11 +2541,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-10806697937:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-10806697937:plan:card-5781677c566289f8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -2625,11 +2625,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-9465192363:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-9465192363:plan:card-5781677c566289f8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -2667,11 +2667,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-2337759318:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-2337759318:plan:card-5781677c566289f8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -2709,11 +2709,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-4548624459:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-4548624459:plan:card-5781677c566289f8",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -3194,8 +3194,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -3319,8 +3319,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4054,12 +4054,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=264454&stype=-2&subTab=info",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://www.federalfitnesscenters.com/federal-fitness-center",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -5121,12 +5121,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=-2&subTab=info",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5742601&stype=41&sTG=23&prodId=100002",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -5709,12 +5709,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=8179&stype=-2&subTab=account",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=8179&stype=40&prodId=207",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -6196,7 +6196,7 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=812511&stype=42",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -6265,12 +6265,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6726,8 +6726,8 @@
           "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7052,17 +7052,17 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -7251,8 +7251,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7650,8 +7650,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -7729,8 +7729,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -9074,12 +9074,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9138,7 +9138,7 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -9277,15 +9277,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-44c39e1d4144c1:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-44c39e1d4144c1:plan:card-ac2400f664593a01",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-fragment",
+          "reason": "Reviewed visit or class offers are retained, but completeness of the public catalog has not been established."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -9525,17 +9525,17 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=40&prodId=100",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=40&prodId=101",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5749162&stype=40&prodId=103",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -10289,8 +10289,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
           "status": "none",
@@ -10682,12 +10682,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "none",
+          "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10723,8 +10723,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10765,8 +10765,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10807,8 +10807,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10849,8 +10849,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10891,8 +10891,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -11075,7 +11075,7 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -11137,17 +11137,17 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=176",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=177",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=195",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -11209,17 +11209,17 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=177",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=194",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=41&sTG=22&prodId=10102",
-          "status": "rendered",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
