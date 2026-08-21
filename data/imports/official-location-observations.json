@@ -15829,16 +15829,45 @@
       "gymId": "web-e71c82ac2eb475",
       "gymName": "Equinox Beale Street",
       "capturedAt": "2026-08-21",
-      "name": "",
-      "address": "0024 Address 320 Mission Street San Francisco, CA 94105",
-      "latitude": null,
-      "longitude": null,
-      "hours": [],
+      "name": "Equinox Beale Street",
+      "address": "320 Mission Street, San Francisco, CA, 94105",
+      "latitude": 37.791728,
+      "longitude": -122.39668,
+      "hours": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Monday",
+            "Tuesday",
+            "Wednesday",
+            "Thursday"
+          ],
+          "opens": "05:00",
+          "closes": "21:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Friday"
+          ],
+          "opens": "05:00",
+          "closes": "20:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": [
+            "Saturday",
+            "Sunday"
+          ],
+          "opens": "Invalid date",
+          "closes": "Invalid date"
+        }
+      ],
       "amenities": [],
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
-      "method": "visible-address-candidate",
-      "rawLabel": "Visible address: 0024 Address 320 Mission Street San Francisco, CA 94105",
-      "contentHash": "045ac4e40eb9fc66db8c28a1a1d007f3e91e6510ecde4530222e0bd27c9ee30b",
+      "method": "json-ld-location",
+      "rawLabel": "Equinox Beale Street | 320 Mission Street, San Francisco, CA, 94105 | [{'@type': 'OpeningHoursSpecification', 'dayOfWeek': ['Monday', 'Tuesday', 'Wednesday', 'Thursday'], 'opens': '05:00', 'closes': '21:00'}, {'@type': '",
+      "contentHash": "b8086db4eb5b9e5d76169758fdae48fea1e5d31240f66fc40cffc916477a837a",
       "autoPublishEligible": false
     },
     {
@@ -15846,15 +15875,79 @@
       "gymName": "Equinox Beale Street",
       "capturedAt": "2026-08-21",
       "name": "",
-      "address": "3900 Union Street 2055 Union Street San Francisco, CA 94123",
+      "address": "1 Pilates Studio Other locations near Beale Street",
       "latitude": null,
       "longitude": null,
       "hours": [],
       "amenities": [],
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
       "method": "visible-address-candidate",
-      "rawLabel": "Visible address: 3900 Union Street 2055 Union Street San Francisco, CA 94123",
-      "contentHash": "ac6112bc08827f1dea380b7ca7b5959e4ed683c8661dd37c7a45d7314216a2a5",
+      "rawLabel": "Visible address: 1 Pilates Studio Other locations near Beale Street",
+      "contentHash": "05969478f6304e9afc9aca9358a756029ab6468e716afa930b380b6d19cd9d85",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "name": "",
+      "address": "2055 Union Street San Francisco, CA 94123",
+      "latitude": null,
+      "longitude": null,
+      "hours": [],
+      "amenities": [],
+      "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
+      "method": "visible-address-candidate",
+      "rawLabel": "Visible address: 2055 Union Street San Francisco, CA 94123",
+      "contentHash": "1023372479a6d6fa264fa3929236eeb3a1ee0317cdcc68e957572cc426f4181e",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "name": "",
+      "address": "2600 Shattuck Avenue",
+      "latitude": null,
+      "longitude": null,
+      "hours": [],
+      "amenities": [],
+      "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
+      "method": "visible-address-candidate",
+      "rawLabel": "Visible address: 2600 Shattuck Avenue",
+      "contentHash": "fdf7e11b396dd6df0b634d54d8ba133fc605051c15b6afbfed8047f724558632",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "name": "",
+      "address": "320 Mission Street San Francisco , CA 94105",
+      "latitude": null,
+      "longitude": null,
+      "hours": [],
+      "amenities": [],
+      "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
+      "method": "visible-address-candidate",
+      "rawLabel": "Visible address: 320 Mission Street San Francisco , CA 94105",
+      "contentHash": "e75f65140b06ab470ff1227a05155b99ab4908e67d79e3d19702c408e86c52d9",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "name": "",
+      "address": "3900 Featured Amenities Basketball Court",
+      "latitude": null,
+      "longitude": null,
+      "hours": [],
+      "amenities": [],
+      "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
+      "method": "visible-address-candidate",
+      "rawLabel": "Visible address: 3900 Featured Amenities Basketball Court",
+      "contentHash": "fe104519791ac47ce37865c39d6a0ca39d52df91bcde2eb6d56f07b483d0c516",
       "autoPublishEligible": false
     },
     {

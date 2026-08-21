@@ -921,14 +921,14 @@
       "gymIds": ["web-e71c82ac2eb475"],
       "sharedFields": {
         "monthlyPrice": 242,
-        "priceSource": "Equinox Beale Street official club membership cards",
+        "priceSource": "Equinox Beale Street official club membership cards and public facility plan API",
         "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Select is the cheapest current public membership permitting ordinary Beale Street use at $242/month. All-Access, Destination, and Destination West are retained as progressively broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Beale Street use at $242/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
         "planOffers": [
-          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Beale Street","scopeType":"single-location","amount":242,"billingInterval":"month","commitmentType":"unknown","fees":[]},
-          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
-          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Beale Street","scopeType":"single-location","amount":242,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":300,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}]},
           {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
         ],
         "dropInOffers": [],
@@ -942,14 +942,14 @@
       "gymIds": ["web-678cd02ed5fd30"],
       "sharedFields": {
         "monthlyPrice": 297,
-        "priceSource": "Equinox Pine Street official club membership cards",
+        "priceSource": "Equinox Pine Street official club membership cards and public facility plan API",
         "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Select is the cheapest current public membership permitting ordinary Pine Street use at $297/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Pine Street use at $297/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
         "planOffers": [
-          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Pine Street","scopeType":"single-location","amount":297,"billingInterval":"month","commitmentType":"unknown","fees":[]},
-          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
-          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Pine Street","scopeType":"single-location","amount":297,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":300,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}]},
           {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
         ],
         "dropInOffers": [],
@@ -963,13 +963,13 @@
       "gymIds": ["osm-node-6848648284"],
       "sharedFields": {
         "monthlyPrice": 370,
-        "priceSource": "Equinox Sports Club San Francisco official club membership cards",
+        "priceSource": "Equinox Sports Club San Francisco official club membership cards and public facility plan API",
         "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Sports Club San Francisco requires Destination access; the cheapest current public option is $370/month. Destination West at $410/month adds the flagship West Coast clubs. No Select or All-Access card, mandatory fee, public day pass, or commitment term is disclosed on this club page.",
+        "priceNote": "Sports Club San Francisco requires Destination access; the cheapest current public option is $370/month. The facility-specific public plan API confirms a standard $500 initiation fee on both Destination and Destination West; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No Select or All-Access plan, public day pass, or commitment term is disclosed.",
         "planOffers": [
-          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
-          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}]}
         ],
         "dropInOffers": [],
         "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
@@ -982,14 +982,14 @@
       "gymIds": ["web-8a074bb0e133c0"],
       "sharedFields": {
         "monthlyPrice": 310,
-        "priceSource": "Equinox Union Street official club membership cards",
+        "priceSource": "Equinox Union Street official club membership cards and public facility plan API",
         "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Select is the cheapest current public membership permitting ordinary Union Street use at $310/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Union Street use at $310/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
         "planOffers": [
-          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Union Street","scopeType":"single-location","amount":310,"billingInterval":"month","commitmentType":"unknown","fees":[]},
-          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
-          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Union Street","scopeType":"single-location","amount":310,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":300,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}]},
           {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
         ],
         "dropInOffers": [],
@@ -1003,14 +1003,14 @@
       "gymIds": ["osm-node-10069564222"],
       "sharedFields": {
         "monthlyPrice": 280,
-        "priceSource": "Equinox Van Mission official club membership cards",
+        "priceSource": "Equinox Van Mission official club membership cards and public facility plan API",
         "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Select is the cheapest current public membership permitting ordinary Van Mission use at $280/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Van Mission use at $280/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
         "planOffers": [
-          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Van Mission","scopeType":"single-location","amount":280,"billingInterval":"month","commitmentType":"unknown","fees":[]},
-          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
-          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Van Mission","scopeType":"single-location","amount":280,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":300,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":500,"currency":"USD","cadence":"one-time","mandatory":true}]},
           {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
         ],
         "dropInOffers": [],

@@ -32639,13 +32639,13 @@
       "sourceId": "web-research/web-e71c82ac2eb475",
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
       "importedAt": "2026-08-21T00:00:00Z",
-      "priceSource": "Equinox Beale Street official club membership cards",
+      "priceSource": "Equinox Beale Street official club membership cards and public facility plan API",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
-      "priceNote": "Select is the cheapest current public membership permitting ordinary Beale Street use at $242/month. All-Access, Destination, and Destination West are retained as progressively broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+      "priceNote": "Select is the cheapest current public membership permitting ordinary Beale Street use at $242/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
-      "initiationFee": null,
+      "initiationFee": 300,
       "processingFee": null,
       "billingIntervalPrice": null,
       "officialUrl": "https://www.equinox.com/clubs/northern-california/bealest",
@@ -32664,7 +32664,15 @@
           "amount": 242,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2931",
@@ -32674,7 +32682,15 @@
           "amount": 350,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true
         },
         {
@@ -32685,7 +32701,15 @@
           "amount": 370,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2737",
@@ -32749,13 +32773,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/bealest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Beale Street official club membership cards",
+            "source": "Equinox Beale Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Select",
             "contentHash": "ce8c9e0b8ffa1853aa0959185aa01ddadd200eda8005f1cc2a77d543a1c59429",
@@ -32802,13 +32834,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/bealest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Beale Street official club membership cards",
+            "source": "Equinox Beale Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "All-Access",
             "contentHash": "7166598c63d0492b2cc4f6befd41ae2a4648037a2ac4608598d5605cd4f8853a",
@@ -32855,13 +32895,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/bealest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Beale Street official club membership cards",
+            "source": "Equinox Beale Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination",
             "contentHash": "beb3911c3406204c81a9afb56b11548918ae827f5a69f92aa3e92d590f21d777",
@@ -32914,7 +32962,7 @@
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/bealest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Beale Street official club membership cards",
+            "source": "Equinox Beale Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination West",
             "contentHash": "b1b3d3808f45ae33d3d5811a4c7d26fe2057fde517f984279611db46a28f190e",
@@ -33014,13 +33062,13 @@
       "sourceId": "web-research/web-678cd02ed5fd30",
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
       "importedAt": "2026-08-21T00:00:00Z",
-      "priceSource": "Equinox Pine Street official club membership cards",
+      "priceSource": "Equinox Pine Street official club membership cards and public facility plan API",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
-      "priceNote": "Select is the cheapest current public membership permitting ordinary Pine Street use at $297/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+      "priceNote": "Select is the cheapest current public membership permitting ordinary Pine Street use at $297/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
-      "initiationFee": null,
+      "initiationFee": 300,
       "processingFee": null,
       "billingIntervalPrice": null,
       "officialUrl": "https://www.equinox.com/clubs/northern-california/pinest",
@@ -33039,7 +33087,15 @@
           "amount": 297,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2931",
@@ -33049,7 +33105,15 @@
           "amount": 350,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true
         },
         {
@@ -33060,7 +33124,15 @@
           "amount": 370,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2737",
@@ -33124,13 +33196,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/pinest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Pine Street official club membership cards",
+            "source": "Equinox Pine Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Select",
             "contentHash": "c3971c1f80da8022f23dc68a3e5fe9883ec0723ce0da689a31b0b44e5ea81751",
@@ -33177,13 +33257,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/pinest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Pine Street official club membership cards",
+            "source": "Equinox Pine Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "All-Access",
             "contentHash": "534b4bff79f9ad8a6dd4cf48d56d73f01e755777c6e433142acd65c3d1e03a79",
@@ -33230,13 +33318,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/pinest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Pine Street official club membership cards",
+            "source": "Equinox Pine Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination",
             "contentHash": "f68de503333cd8c4eb9eee11f663ab4abc8df99fd8468672182db7df5fef428c",
@@ -33289,7 +33385,7 @@
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/pinest",
             "observedAt": "2026-08-21",
-            "source": "Equinox Pine Street official club membership cards",
+            "source": "Equinox Pine Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination West",
             "contentHash": "4503a3005b45f0e0fe0dfce8c2248dbc58e03b408a0a6f72c54f9b44776f74dc",
@@ -33387,13 +33483,13 @@
       "sourceId": "node/6848648284",
       "sourceUrl": "https://www.openstreetmap.org/node/6848648284",
       "importedAt": "2026-08-17T00:39:44Z",
-      "priceSource": "Equinox Sports Club San Francisco official club membership cards",
+      "priceSource": "Equinox Sports Club San Francisco official club membership cards and public facility plan API",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
-      "priceNote": "Sports Club San Francisco requires Destination access; the cheapest current public option is $370/month. Destination West at $410/month adds the flagship West Coast clubs. No Select or All-Access card, mandatory fee, public day pass, or commitment term is disclosed on this club page.",
+      "priceNote": "Sports Club San Francisco requires Destination access; the cheapest current public option is $370/month. The facility-specific public plan API confirms a standard $500 initiation fee on both Destination and Destination West; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No Select or All-Access plan, public day pass, or commitment term is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
-      "initiationFee": null,
+      "initiationFee": 500,
       "processingFee": null,
       "officialUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
       "operatorLocationId": "",
@@ -33411,7 +33507,15 @@
           "amount": 370,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2737",
@@ -33421,7 +33525,15 @@
           "amount": 410,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         }
       ],
       "dropInOffers": [],
@@ -33475,13 +33587,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
             "observedAt": "2026-08-21",
-            "source": "Equinox Sports Club San Francisco official club membership cards",
+            "source": "Equinox Sports Club San Francisco official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination",
             "contentHash": "fe5f959ea8140acd8e8cae5491e657f7f607a71d968fd3ff8e8e061577244f76",
@@ -33528,13 +33648,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
             "observedAt": "2026-08-21",
-            "source": "Equinox Sports Club San Francisco official club membership cards",
+            "source": "Equinox Sports Club San Francisco official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination West",
             "contentHash": "7f66bc57af709740ee5efe22f33ede1348685b4517a4e0c957a0c2f28dd8f81b",
@@ -33634,13 +33762,13 @@
       "sourceId": "web-research/web-8a074bb0e133c0",
       "sourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
       "importedAt": "2026-08-21T00:00:00Z",
-      "priceSource": "Equinox Union Street official club membership cards",
+      "priceSource": "Equinox Union Street official club membership cards and public facility plan API",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
-      "priceNote": "Select is the cheapest current public membership permitting ordinary Union Street use at $310/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+      "priceNote": "Select is the cheapest current public membership permitting ordinary Union Street use at $310/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
-      "initiationFee": null,
+      "initiationFee": 300,
       "processingFee": null,
       "billingIntervalPrice": null,
       "officialUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
@@ -33659,7 +33787,15 @@
           "amount": 310,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2931",
@@ -33669,7 +33805,15 @@
           "amount": 350,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true
         },
         {
@@ -33680,7 +33824,15 @@
           "amount": 370,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2737",
@@ -33744,13 +33896,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
             "observedAt": "2026-08-21",
-            "source": "Equinox Union Street official club membership cards",
+            "source": "Equinox Union Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Select",
             "contentHash": "9781fb362bb736facb3298c1b982b81868b1f42aca1fbe7899ce8a30fdcf3f7f",
@@ -33797,13 +33957,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
             "observedAt": "2026-08-21",
-            "source": "Equinox Union Street official club membership cards",
+            "source": "Equinox Union Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "All-Access",
             "contentHash": "a3c33ff5dc25047716bf38309c9e08fc0dbe428e49104dcd91ca8b3e457e6ca6",
@@ -33850,13 +34018,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
             "observedAt": "2026-08-21",
-            "source": "Equinox Union Street official club membership cards",
+            "source": "Equinox Union Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination",
             "contentHash": "b8a429a13dbea13f74f193e3fab40ebebb293109e3ed5e5ef8b7b884fe2c804a",
@@ -33909,7 +34085,7 @@
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
             "observedAt": "2026-08-21",
-            "source": "Equinox Union Street official club membership cards",
+            "source": "Equinox Union Street official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination West",
             "contentHash": "994af42e9de89bf66df3b3eb52f4618a7bf337a81e00d84080072bd62b6b6ef3",
@@ -34007,13 +34183,13 @@
       "sourceId": "node/10069564222",
       "sourceUrl": "https://www.openstreetmap.org/node/10069564222",
       "importedAt": "2026-08-17T00:39:44Z",
-      "priceSource": "Equinox Van Mission official club membership cards",
+      "priceSource": "Equinox Van Mission official club membership cards and public facility plan API",
       "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission",
-      "priceNote": "Select is the cheapest current public membership permitting ordinary Van Mission use at $280/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+      "priceNote": "Select is the cheapest current public membership permitting ordinary Van Mission use at $280/month. The facility-specific public plan API confirms a standard $300 initiation fee on Select and $500 on the returned broader-access plans; a temporary $100-initiation and $200-spa-credit offer is kept separate from ordinary dues and fees. No public day pass or commitment term is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
-      "initiationFee": null,
+      "initiationFee": 300,
       "processingFee": null,
       "officialUrl": "https://www.equinox.com/clubs/northern-california/vanmission",
       "operatorLocationId": "",
@@ -34031,7 +34207,15 @@
           "amount": 280,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2931",
@@ -34041,7 +34225,15 @@
           "amount": 350,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true
         },
         {
@@ -34052,7 +34244,15 @@
           "amount": 370,
           "billingInterval": "month",
           "commitmentType": "unknown",
-          "fees": []
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
         },
         {
           "sourceProductId": "2737",
@@ -34116,13 +34316,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 300,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/vanmission",
             "observedAt": "2026-08-21",
-            "source": "Equinox Van Mission official club membership cards",
+            "source": "Equinox Van Mission official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Select",
             "contentHash": "a9bcb99316686286998907bacc00739b2826e5aeb9b8e2e99ed2ad644c8153c1",
@@ -34169,13 +34377,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": true,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/vanmission",
             "observedAt": "2026-08-21",
-            "source": "Equinox Van Mission official club membership cards",
+            "source": "Equinox Van Mission official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "All-Access",
             "contentHash": "bb1e51dc9f589c0a6781fb1ee4475ef24bddc36db337bbb8141f8a2fc750657c",
@@ -34222,13 +34438,21 @@
             "label": "",
             "expiresAt": null
           },
-          "fees": [],
+          "fees": [
+            {
+              "type": "initiation",
+              "amount": 500,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/vanmission",
             "observedAt": "2026-08-21",
-            "source": "Equinox Van Mission official club membership cards",
+            "source": "Equinox Van Mission official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination",
             "contentHash": "4d0d27180579813aaa55c8144361afb4d377ccb86be59b2b82684b687550c0ed",
@@ -34281,7 +34505,7 @@
           "evidence": {
             "url": "https://www.equinox.com/clubs/northern-california/vanmission",
             "observedAt": "2026-08-21",
-            "source": "Equinox Van Mission official club membership cards",
+            "source": "Equinox Van Mission official club membership cards and public facility plan API",
             "method": "reviewed-official-observation",
             "rawLabel": "Destination West",
             "contentHash": "220cc104b5b188a6d16e6bde363b945ad04d8c92a90b77c9b036090e7b849865",

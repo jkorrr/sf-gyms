@@ -4722,7 +4722,17 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.equinox.com/api/cms/facilities/727/membership/plans",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.equinox.com/clubs/northern-california/bealest",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.equinox.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -4732,12 +4742,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://www.equinox.com/join/step1",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://www.equinox.com/membership",
+          "url": "https://www.equinox.com/join/step1/727",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -4779,7 +4784,17 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.equinox.com/api/cms/facilities/720/membership/plans",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.equinox.com/clubs/northern-california/pinest",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.equinox.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -4831,7 +4846,17 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.equinox.com/api/cms/facilities/724/membership/plans",
+          "status": "fetched",
+          "candidateCount": 2
+        },
+        {
           "url": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.equinox.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -4883,7 +4908,17 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.equinox.com/api/cms/facilities/723/membership/plans",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.equinox.com/clubs/northern-california/unionstreet",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.equinox.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -4935,7 +4970,17 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
+          "url": "https://www.equinox.com/api/cms/facilities/726/membership/plans",
+          "status": "fetched",
+          "candidateCount": 3
+        },
+        {
           "url": "https://www.equinox.com/clubs/northern-california/vanmission",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.equinox.com/faq",
           "status": "fetched",
           "candidateCount": 0
         },

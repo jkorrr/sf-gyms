@@ -40,7 +40,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v4"
+PARSER_VERSION = "selected-plan-catalog-v5"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -1912,6 +1912,160 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
     return [candidate], []
 
 
+EQUINOX_MEMBERSHIP_API_RE = re.compile(
+    r"^/api/cms/facilities/(?P<facility_id>\d{1,8})/membership/plans/?$",
+    re.IGNORECASE,
+)
+
+
+def is_equinox_membership_api_url(source_url: str) -> bool:
+    """Allow only Equinox's documented, same-origin public plan endpoint."""
+
+    parsed = urlparse(text(source_url))
+    host = parsed.netloc.casefold()
+    return bool(
+        parsed.scheme.casefold() == "https"
+        and (host == "equinox.com" or host.endswith(".equinox.com"))
+        and EQUINOX_MEMBERSHIP_API_RE.fullmatch(parsed.path)
+    )
+
+
+def equinox_membership_catalog_routes(hydration_blocks: Iterable[str], source_url: str) -> list[str]:
+    """Recover one exact-club plan API route from Equinox Next.js state.
+
+    Club pages also embed a global appointment locator containing hundreds of
+    other facility IDs.  Only the page's authoritative club/facility fields or
+    its dynamic route parameter are accepted so a location crawl cannot fan
+    out into unrelated branches.
+    """
+
+    parsed_source = urlparse(text(source_url))
+    host = parsed_source.netloc.casefold()
+    if not (
+        parsed_source.scheme.casefold() == "https"
+        and (host == "equinox.com" or host.endswith(".equinox.com"))
+        and not is_equinox_membership_api_url(source_url)
+    ):
+        return []
+
+    for block in hydration_blocks:
+        try:
+            payload = json.loads(block)
+        except json.JSONDecodeError:
+            continue
+        if not isinstance(payload, dict):
+            continue
+        page_props = payload.get("props", {}).get("pageProps", {})
+        if not isinstance(page_props, dict):
+            page_props = {}
+        club = page_props.get("club", {})
+        facility = page_props.get("facility", {})
+        club_details = page_props.get("clubDetails", {})
+        query = payload.get("query", {})
+        candidates = (
+            club.get("fields", {}).get("clubData", {}).get("fields", {}).get("facilityId")
+            if isinstance(club, dict) else None,
+            facility.get("facilityId") if isinstance(facility, dict) else None,
+            club_details.get("facilityId") if isinstance(club_details, dict) else None,
+            query.get("facilityId") if isinstance(query, dict) else None,
+        )
+        facility_id = next(
+            (text(value) for value in candidates if re.fullmatch(r"\d{1,8}", text(value))),
+            "",
+        )
+        if facility_id:
+            return [
+                f"{parsed_source.scheme}://{parsed_source.netloc}"
+                f"/api/cms/facilities/{facility_id}/membership/plans"
+            ]
+    return []
+
+
+def equinox_membership_catalog_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct exact recurring plans from Equinox's public club API."""
+
+    if not isinstance(payload, dict) or not is_equinox_membership_api_url(source_url):
+        return []
+    facility_status = text(payload.get("facilityStatus")).casefold()
+    is_presale = payload.get("isPresale") is True
+    if facility_status and facility_status not in {"open", "presale", "coming soon"}:
+        return []
+    country = text(payload.get("country")).upper()
+    currency = {"US": "USD", "CA": "CAD", "GB": "GBP"}.get(country, "USD")
+    club_name = text(payload.get("clubName"))
+    candidates: list[dict[str, Any]] = []
+    for plan in payload.get("result", []):
+        if not isinstance(plan, dict):
+            continue
+        properties = plan.get("planProperties", {})
+        if not isinstance(properties, dict):
+            continue
+        amount = numeric(properties.get("monthlyFee"))
+        product_id = text(plan.get("id") or plan.get("planId"))
+        name = text(plan.get("planType") or plan.get("friendlyName") or plan.get("name"))
+        if not product_id or not name or amount is None or amount <= 0:
+            continue
+        access_scope = text(
+            plan.get("planDescription")
+            or plan.get("description")
+            or plan.get("membershipModuleDescription")
+        )
+        promotion = plan.get("promotion", {})
+        if not isinstance(promotion, dict):
+            promotion = {}
+        promotion_label = text(promotion.get("description") or promotion.get("name"))
+        fees: list[dict[str, Any]] = []
+        initiation = properties.get("initiation", {})
+        initiation_amount = numeric(initiation.get("totalDues")) if isinstance(initiation, dict) else numeric(initiation)
+        if initiation_amount is not None and initiation_amount > 0:
+            fees.append({
+                "type": "initiation",
+                "name": "Initiation Fee",
+                "amount": initiation_amount,
+                "currency": currency,
+                "cadence": "one-time",
+                "mandatory": True,
+            })
+        raw_parts = [f"{name} ${amount:g}/month"]
+        if club_name:
+            raw_parts.append(club_name)
+        if fees:
+            raw_parts.append(f"standard initiation ${fees[0]['amount']:g}")
+        if promotion_label:
+            raw_parts.append(f"current offer: {promotion_label}")
+        candidates.append({
+            "sourceProductId": product_id,
+            "name": name,
+            "amount": amount,
+            "currency": currency,
+            "cadence": "month",
+            "billingInterval": "month",
+            "productType": "monthly",
+            "accessScope": access_scope or ("Named home location" if name.casefold() == "select" else name),
+            "scopeType": "single-location" if name.casefold() == "select" else "multi-location",
+            "classAllowance": None,
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "commitment": {"type": "unknown", "minimumMonths": None, "rawLabel": "Not disclosed by plan API"},
+            # A temporary initiation discount or spa credit does not make the
+            # ordinary recurring monthly dues promotional.
+            "promotion": {
+                "isPromotion": is_presale,
+                "label": promotion_label if is_presale else "",
+                "context": promotion_label,
+            },
+            "fees": fees,
+            "bestValueLabel": False,
+            "rawLabel": "; ".join(raw_parts)[:500],
+            "method": "public-equinox-membership-api",
+            "adapter": "equinox",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        })
+    return candidates
+
+
 def may_follow_nested_catalog(source_url: str, depth: int) -> bool:
     """Permit only documented public catalog-to-detail hops past the base frontier."""
 
@@ -1934,6 +2088,8 @@ def public_platform_json_candidates(payload: Any, source_url: str) -> tuple[list
     JavaScript hydration cannot silently lose catalog semantics.
     """
 
+    if is_equinox_membership_api_url(source_url):
+        return equinox_membership_catalog_candidates(payload, source_url), []
     platform = platform_name(source_url)
     if platform == "mariana-tek":
         return mariana_buy_page_candidates(payload if isinstance(payload, dict) else {}, source_url), []
@@ -2391,8 +2547,9 @@ def parse_page(
     source_url = text(result.get("url"))
     is_json = "json" in text(result.get("contentType")).casefold()
     public_platform = platform_adapters.platform_for_url(source_url)
+    approved_public_catalog = bool(public_platform) or is_equinox_membership_api_url(source_url)
     json_shaped = html.lstrip().startswith(("{", "["))
-    if public_platform and (is_json or json_shaped):
+    if approved_public_catalog and (is_json or json_shaped):
         try:
             payload = json.loads(html)
         except json.JSONDecodeError:
@@ -2411,6 +2568,7 @@ def parse_page(
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
     stores: list[str] = []
+    stores.extend(equinox_membership_catalog_routes(parser.hydration_json, source_url))
     mindbody_services = mindbody_public_services_route(source_url)
     if mindbody_services and request_identity(mindbody_services) != request_identity(source_url):
         stores.append(mindbody_services)
@@ -2897,7 +3055,10 @@ def audit_selected_plan_price(
         if selected_urls and source_url and request_identity(source_url) not in selected_urls:
             linked_public_catalog = (
                 request_identity(text(candidate.get("catalogSourceUrl"))) in selected_urls
-                and platform_name(source_url) != "operator-site"
+                and (
+                    platform_name(source_url) != "operator-site"
+                    or is_equinox_membership_api_url(source_url)
+                )
             )
             stable_public_platform_product = (
                 bool(selected_source_product_id)

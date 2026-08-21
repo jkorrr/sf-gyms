@@ -432,6 +432,150 @@
       "selectable": false
     },
     {
+      "gymId": "osm-node-10069564222",
+      "gymName": "Equinox Van Mission",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "15",
+      "name": "Select",
+      "amount": 280.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to Van Mission.",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Select $280/month; Van Mission; standard initiation $300; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/726/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission"
+    },
+    {
+      "gymId": "osm-node-10069564222",
+      "gymName": "Equinox Van Mission",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2931",
+      "name": "All-Access",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except E 63rd Street (NYC), Greenwich Ave (NYC), Hudson Yards (NYC), Printing House (NYC), Domino (NYC), Century City (SoCal), Pacific Palisades (SoCal), Studio City (SoCal),Santa Monica East (SoCal), Equinox Sports Clubs, E Clubs, and all London locations.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "All-Access $350/month; Van Mission; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/726/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission"
+    },
+    {
+      "gymId": "osm-node-10069564222",
+      "gymName": "Equinox Van Mission",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2735",
+      "name": "Destination",
+      "amount": 370.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except Century City (SoCal), Santa Monica East (SoCal), Hudson Yards (NYC), and E Clubs.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Destination $370/month; Van Mission; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/726/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission"
+    },
+    {
       "gymId": "osm-node-10198521798",
       "gymName": "MX3 Fitness - Castro",
       "capturedAt": "2026-08-21",
@@ -12194,6 +12338,102 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-6848648284",
+      "gymName": "Equinox Sports Club San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2735",
+      "name": "Destination",
+      "amount": 370.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except Century City (SoCal), Santa Monica East (SoCal), Hudson Yards (NYC), and E Clubs.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Destination $370/month; Sports Club San Francisco; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/724/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco"
+    },
+    {
+      "gymId": "osm-node-6848648284",
+      "gymName": "Equinox Sports Club San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2737",
+      "name": "Destination West",
+      "amount": 410.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except Hudson Yards (NYC) and E Clubs.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Destination West $410/month; Sports Club San Francisco; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/724/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco"
     },
     {
       "gymId": "osm-node-7044717960",
@@ -25353,6 +25593,150 @@
       "catalogSourceUrl": "https://livefitgym.com/signup/"
     },
     {
+      "gymId": "web-678cd02ed5fd30",
+      "gymName": "Equinox Pine Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "15",
+      "name": "Select",
+      "amount": 297.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to Pine Street.",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Select $297/month; Pine Street; standard initiation $300; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/720/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest"
+    },
+    {
+      "gymId": "web-678cd02ed5fd30",
+      "gymName": "Equinox Pine Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2931",
+      "name": "All-Access",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except E 63rd Street (NYC), Greenwich Ave (NYC), Hudson Yards (NYC), Printing House (NYC), Domino (NYC), Century City (SoCal), Pacific Palisades (SoCal), Studio City (SoCal),Santa Monica East (SoCal), Equinox Sports Clubs, E Clubs, and all London locations.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "All-Access $350/month; Pine Street; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/720/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest"
+    },
+    {
+      "gymId": "web-678cd02ed5fd30",
+      "gymName": "Equinox Pine Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2735",
+      "name": "Destination",
+      "amount": 370.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except Century City (SoCal), Santa Monica East (SoCal), Hudson Yards (NYC), and E Clubs.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Destination $370/month; Pine Street; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/720/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest"
+    },
+    {
       "gymId": "web-686330489fbf10",
       "gymName": "HAUM Studios - Mission District",
       "capturedAt": "2026-08-21",
@@ -30079,6 +30463,150 @@
         }
       ],
       "rawLabel": "Platinum $347.88/year; displayed equivalent $28.99/month"
+    },
+    {
+      "gymId": "web-8a074bb0e133c0",
+      "gymName": "Equinox Union Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "15",
+      "name": "Select",
+      "amount": 310.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to Union Street.",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Select $310/month; Union Street; standard initiation $300; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/723/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet"
+    },
+    {
+      "gymId": "web-8a074bb0e133c0",
+      "gymName": "Equinox Union Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2931",
+      "name": "All-Access",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except E 63rd Street (NYC), Greenwich Ave (NYC), Hudson Yards (NYC), Printing House (NYC), Domino (NYC), Century City (SoCal), Pacific Palisades (SoCal), Studio City (SoCal),Santa Monica East (SoCal), Equinox Sports Clubs, E Clubs, and all London locations.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "All-Access $350/month; Union Street; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/723/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet"
+    },
+    {
+      "gymId": "web-8a074bb0e133c0",
+      "gymName": "Equinox Union Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2735",
+      "name": "Destination",
+      "amount": 370.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except Century City (SoCal), Santa Monica East (SoCal), Hudson Yards (NYC), and E Clubs.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Destination $370/month; Union Street; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/723/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet"
     },
     {
       "gymId": "web-8e0d13fb9738f9",
@@ -38551,6 +39079,150 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://castro-fitness.com/memberships/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "15",
+      "name": "Select",
+      "amount": 242.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to Beale Street.",
+      "scopeType": "single-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 300.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Select $242/month; Beale Street; standard initiation $300; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/727/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest"
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2931",
+      "name": "All-Access",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except E 63rd Street (NYC), Greenwich Ave (NYC), Hudson Yards (NYC), Printing House (NYC), Domino (NYC), Century City (SoCal), Pacific Palisades (SoCal), Studio City (SoCal),Santa Monica East (SoCal), Equinox Sports Clubs, E Clubs, and all London locations.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "All-Access $350/month; Beale Street; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/727/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest"
+    },
+    {
+      "gymId": "web-e71c82ac2eb475",
+      "gymName": "Equinox Beale Street",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2735",
+      "name": "Destination",
+      "amount": 370.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Access to all Clubs except Century City (SoCal), Santa Monica East (SoCal), Hudson Yards (NYC), and E Clubs.",
+      "scopeType": "multi-location",
+      "classAllowance": null,
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "rawLabel": "Not disclosed by plan API"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": "",
+        "context": "Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026."
+      },
+      "fees": [
+        {
+          "type": "initiation",
+          "name": "Initiation Fee",
+          "amount": 500.0,
+          "currency": "USD",
+          "cadence": "one-time",
+          "mandatory": true
+        }
+      ],
+      "bestValueLabel": false,
+      "rawLabel": "Destination $370/month; Beale Street; standard initiation $500; current offer: Join now for $100 initiation and receive a $200 Spa credit. Credits will be granted on 9/15/2026.",
+      "method": "public-equinox-membership-api",
+      "adapter": "equinox",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.equinox.com/api/cms/facilities/727/membership/plans",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest"
     },
     {
       "gymId": "web-f23343cfc28b93",
