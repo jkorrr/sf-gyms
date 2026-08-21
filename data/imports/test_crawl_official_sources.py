@@ -679,6 +679,48 @@ Month-to-month with 30-day cancellation. Recommended casual visit is $35 and var
         self.assertEqual((offers[0]["amount"], offers[0]["productType"]), (99, "monthly"))
         self.assertTrue(offers[0]["classAllowance"]["unlimited"])
 
+    def test_perform_for_golf_retains_named_amount_withheld_memberships(self) -> None:
+        visible = """
+        Membership Types
+        PAR MEMBERSHIP (4 SESSIONS/MONTH)
+        BIRDIE MEMBERSHIP (6 SESSIONS/MONTH)
+        EAGLE MEMBERSHIP (8 SESSIONS/MONTH)
+        ALBATROSS (10 SESSIONS/MONTH)
+        ACE MEMBERSHIP (12 SESSIONS/MONTH)
+        Membership runs on an auto-monthly basis.
+        """
+
+        offers = crawler.visible_candidates(visible, "https://www.performforgolf.com/how-it-works")
+
+        self.assertEqual(len(offers), 5)
+        self.assertEqual([offer["classAllowance"]["count"] for offer in offers], [4, 6, 8, 10, 12])
+        self.assertTrue(all(offer["amount"] is None for offer in offers))
+        self.assertTrue(all(offer["purchaseMethod"] == "contact-required" for offer in offers))
+        self.assertTrue(all(offer["kind"] == "plan-descriptor" for offer in offers))
+
+    def test_perform_for_golf_retains_unnamed_public_minimum_tier(self) -> None:
+        visible = (
+            "We have memberships based on one-on-one sessions. "
+            "Clients can from 2x/month and up to 12x/month"
+        )
+
+        offers = crawler.visible_candidates(visible, "https://www.performforgolf.com/faq")
+
+        self.assertEqual(len(offers), 1)
+        self.assertEqual(offers[0]["sourceProductId"], "unnamed-2-sessions")
+        self.assertEqual(offers[0]["classAllowance"]["count"], 2)
+        self.assertIsNone(offers[0]["amount"])
+
+    def test_partial_perform_for_golf_table_fails_closed(self) -> None:
+        visible = "PAR MEMBERSHIP (4 SESSIONS/MONTH) BIRDIE MEMBERSHIP (6 SESSIONS/MONTH)"
+
+        self.assertEqual(
+            crawler.perform_for_golf_plan_descriptors(
+                visible, "https://www.performforgolf.com/how-it-works",
+            ),
+            [],
+        )
+
     def test_remaining_operator_cards_preserve_terms_fees_and_restrictions(self) -> None:
         federal = crawler.independent_operator_visible_candidates(
             "General Public $47 monthly. Federal Employee $40. All Clubs $43. $40 Initiation Fee. Day Pass $20.",

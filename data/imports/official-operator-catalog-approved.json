@@ -636,6 +636,53 @@
       }
     },
     {
+      "id": "mx3-lower-haight-waitlist-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "mx3-fitness",
+      "gymIds": ["osm-node-2484293076"],
+      "sharedFields": {
+        "priceSource": "MX3 Fitness official monthly signup page",
+        "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Lower Haight is a consumer monthly-membership gym, but new enrollment is currently waitlisted. It uses reservation-based access, with public recurring tiers from one to seven visits weekly at $129-$219/month plus a mandatory $75 setup fee. Open Gym Only does not apply to Lower Haight, and official gym credits are limited to Mission and Castro.",
+        "planOffers": [
+          {"sourceProductId":"one-reservation-weekly","name":"1x/Week Reservation Plan","accessScope":"One reserved fitness-station visit per week at MX3 Lower Haight","scopeType":"single-location","classAllowance":{"count":1,"period":"week"},"amount":129,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"three-reservations-weekly","name":"3x/Week Reservation Plan","accessScope":"Three reserved fitness-station visits per week at MX3 Lower Haight","scopeType":"single-location","classAllowance":{"count":3,"period":"week"},"amount":159,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"five-reservations-weekly","name":"5x/Week Reservation Plan","accessScope":"Five reserved fitness-station visits per week at MX3 Lower Haight","scopeType":"single-location","classAllowance":{"count":5,"period":"week"},"amount":189,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"seven-reservations-weekly","name":"7x/Week Reservation Plan","accessScope":"Seven reserved fitness-station visits per week at MX3 Lower Haight","scopeType":"single-location","classAllowance":{"count":7,"period":"week"},"amount":219,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [],
+        "costContextOffers": [
+          {"sourceProductId":"lower-haight-membership-starting","kind":"starting-price","label":"Lower Haight monthly memberships start at $129","amount":129,"currency":"USD","cadence":"month","productType":"membership","sourceUrl":"https://mx3fitness.com/monthly-signup","observedAt":"2026-08-21","evidenceTier":"official-public","exactLocationMatch":"operator-market-multi-location","note":"Current public amount; enrollment at Lower Haight is waitlisted and cannot be selected as a direct-purchase plan.","selectable":false}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "mx3-noe-valley-waitlist-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "mx3-fitness",
+      "gymIds": ["osm-node-6471124711"],
+      "sharedFields": {
+        "priceSource": "MX3 Fitness official monthly signup page",
+        "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Noe Valley is a consumer monthly-membership gym, but new enrollment is currently waitlisted. Open Gym Only is $109/month plus a mandatory $75 setup fee; reservation tiers run from one to seven visits weekly at $129-$219/month with the same fee. Official gym credits are limited to Mission and Castro.",
+        "planOffers": [
+          {"sourceProductId":"open-gym-only","name":"Open Gym Only","accessScope":"Ordinary open-gym access at MX3 Noe Valley","scopeType":"single-location","amount":109,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"one-reservation-weekly","name":"1x/Week Reservation Plan","accessScope":"One reserved fitness-station visit per week at MX3 Noe Valley","scopeType":"single-location","classAllowance":{"count":1,"period":"week"},"amount":129,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"three-reservations-weekly","name":"3x/Week Reservation Plan","accessScope":"Three reserved fitness-station visits per week at MX3 Noe Valley","scopeType":"single-location","classAllowance":{"count":3,"period":"week"},"amount":159,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"five-reservations-weekly","name":"5x/Week Reservation Plan","accessScope":"Five reserved fitness-station visits per week at MX3 Noe Valley","scopeType":"single-location","classAllowance":{"count":5,"period":"week"},"amount":189,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"seven-reservations-weekly","name":"7x/Week Reservation Plan","accessScope":"Seven reserved fitness-station visits per week at MX3 Noe Valley","scopeType":"single-location","classAllowance":{"count":7,"period":"week"},"amount":219,"billingInterval":"month","commitmentType":"month-to-month","availability":"waitlist","purchaseMethod":"waitlist","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [],
+        "costContextOffers": [
+          {"sourceProductId":"noe-valley-membership-starting","kind":"starting-price","label":"Noe Valley monthly memberships start at $109","amount":109,"currency":"USD","cadence":"month","productType":"membership","sourceUrl":"https://mx3fitness.com/monthly-signup","observedAt":"2026-08-21","evidenceTier":"official-public","exactLocationMatch":"operator-market-multi-location","note":"Current public amount; enrollment at Noe Valley is waitlisted and cannot be selected as a direct-purchase plan.","selectable":false}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
       "id": "touchstone-dogpatch-2026-08-21",
       "reviewStatus": "approved",
       "operatorId": "touchstoneclimbing.com",

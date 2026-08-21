@@ -30,6 +30,55 @@ class CatalogReviewTests(unittest.TestCase):
         self.assertEqual(result["proposals"][0]["planOffers"][0]["sourceProductId"], "basic")
         self.assertEqual(result["proposals"][0]["catalogCompleteness"]["plans"], "partial")
 
+    def test_amount_withheld_named_plan_becomes_nonselectable_catalog_offer(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One", "address": "1 Main St"}]}
+        document = {"generatedAt": "2026-08-21", "observations": [{
+            "gymId": "gym-1",
+            "kind": "plan-descriptor",
+            "amount": None,
+            "rawLabel": "PAR Membership (4 sessions/month)",
+            "sourceProductId": "par-4-sessions",
+            "productType": "monthly",
+            "cadence": "month",
+            "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+            "purchaseMethod": "contact-required",
+            "method": "visible-perform-for-golf-plan-descriptor",
+            "sourceUrl": "https://operator.example/how-it-works",
+        }]}
+
+        result = build_review(fixture, [document], "2026-08-21")
+
+        proposal = result["proposals"][0]
+        self.assertEqual(len(proposal["planOffers"]), 1)
+        self.assertEqual(proposal["planOffers"][0]["sourceProductId"], "par-4-sessions")
+        self.assertIsNone(proposal["planOffers"][0]["amount"])
+        self.assertEqual(proposal["planOffers"][0]["purchaseMethod"], "contact-required")
+        self.assertEqual(proposal["planOffers"][0]["classAllowance"]["count"], 4)
+
+    def test_priced_product_supersedes_its_amount_withheld_descriptor(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One", "address": "1 Main St"}]}
+        common = {
+            "gymId": "gym-1", "rawLabel": "Basic Membership", "sourceProductId": "basic",
+            "productType": "monthly", "cadence": "month", "sourceUrl": "https://operator.example/pricing",
+        }
+        observations = [
+            {
+                **common, "kind": "plan-descriptor", "amount": None,
+                "classAllowance": {"count": 4, "period": "month", "unlimited": False},
+                "purchaseMethod": "contact-required",
+                "method": "visible-perform-for-golf-plan-descriptor",
+            },
+            {**common, "amount": 119, "method": "public-operator-json"},
+        ]
+
+        result = build_review(
+            fixture, [{"generatedAt": "2026-08-21", "observations": observations}], "2026-08-21",
+        )
+
+        offers = result["proposals"][0]["planOffers"]
+        self.assertEqual(len(offers), 1)
+        self.assertEqual(offers[0]["amount"], 119)
+
     def test_official_range_becomes_context_only_proposal(self):
         fixture = {"gyms": [{"id": "gym-1", "name": "Gym One", "address": "1 Main St"}]}
         document = {"generatedAt": "2026-08-20", "observations": [{

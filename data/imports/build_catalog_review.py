@@ -54,9 +54,34 @@ def source_product_id(candidate: dict[str, Any]) -> str:
     return f"card-{card_hash[:16]}" if card_hash else ""
 
 
+def candidate_is_plan_descriptor(candidate: dict[str, Any]) -> bool:
+    """Validate a named recurring plan whose public amount is withheld."""
+
+    if text(candidate.get("kind")) != "plan-descriptor" or text(candidate.get("amount")):
+        return False
+    allowance = candidate.get("classAllowance")
+    if not isinstance(allowance, dict):
+        return False
+    try:
+        count = float(allowance.get("count") or 0)
+    except (TypeError, ValueError):
+        return False
+    return bool(
+        source_product_id(candidate)
+        and count > 0
+        and text(candidate.get("cadence")) == "month"
+        and text(candidate.get("productType")) == "monthly"
+        and text(candidate.get("purchaseMethod")) in {"account-required", "contact-required", "form-required"}
+        and text(candidate.get("sourceUrl")).startswith("https://")
+        and CARD_SEMANTIC_RE.search(text(candidate.get("rawLabel")))
+    )
+
+
 def candidate_is_attached(candidate: dict[str, Any]) -> bool:
     """Accept only a product/card observation, never an unattached dollar regex."""
 
+    if candidate_is_plan_descriptor(candidate):
+        return True
     if candidate_is_cost_context(candidate):
         return True
     method = text(candidate.get("method")).casefold()
@@ -116,7 +141,7 @@ def evidence(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
     raw_label = " ".join(text(candidate.get("rawLabel")).split())[:220]
     method = text(candidate.get("method")) or "catalog-review-candidate"
     digest = text(candidate.get("contentHash")) or hashlib.sha256(
-        f"{source_url}|{observed_at}|{method}|{raw_label}".encode("utf-8")
+        f"{source_url}|{observed_at}|{method}|{raw_label}".encode()
     ).hexdigest()
     return {
         "url": source_url,
@@ -142,7 +167,7 @@ def plan_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
         "productType": "class-membership" if candidate.get("classAllowance") else "membership",
         "accessScope": text(candidate.get("accessScope")) or "Scope must be confirmed from the linked official product card.",
         "scopeType": text(candidate.get("scopeType")) or None,
-        "amount": float(candidate["amount"]),
+        "amount": float(candidate["amount"]) if text(candidate.get("amount")) else None,
         "currency": text(candidate.get("currency")) or "USD",
         "billingInterval": cadence,
         "intervalCount": int(candidate.get("intervalCount") or 1),
@@ -151,12 +176,13 @@ def plan_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
         "minimumCommitmentMonths": commitment.get("minimumMonths"),
         "promotion": candidate.get("promotion") or {"isPromotion": False, "label": ""},
         "eligibility": candidate.get("eligibility") or {"type": "standard-adult", "restrictions": []},
+        "availability": text(candidate.get("availability")) or "available",
         "purchaseMethod": text(candidate.get("purchaseMethod")) or "direct-public",
         "fees": list(candidate.get("fees") or []),
         "bestValueLabel": bool(candidate.get("bestValueLabel")),
         "evidence": evidence(candidate, observed_at),
     }
-    return {key: value for key, value in result.items() if value is not None}
+    return {key: value for key, value in result.items() if value is not None or key == "amount"}
 
 
 def drop_in_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
@@ -191,7 +217,7 @@ def cost_context_offer(candidate: dict[str, Any], observed_at: str) -> dict[str,
         "exactLocationMatch": text(candidate.get("exactLocationMatch")) or "candidate",
         "captureMethod": text(candidate.get("method")) or "catalog-review-candidate",
         "contentHash": text(candidate.get("contentHash")) or hashlib.sha256(
-            f"{text(candidate.get('sourceUrl'))}|{observed_at}|{raw_label}".encode("utf-8")
+            f"{text(candidate.get('sourceUrl'))}|{observed_at}|{raw_label}".encode()
         ).hexdigest(),
         "conflictFlags": list(candidate.get("conflictFlags") or []),
         "note": text(candidate.get("note")),
@@ -302,6 +328,13 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
     selected: dict[tuple[str, float, str], dict[str, Any]] = {}
     conflicts: list[dict[str, Any]] = []
     amounts_by_product: dict[tuple[str, str], set[float]] = defaultdict(set)
+    priced_products = {
+        text(candidate.get("sourceProductId"))
+        for candidate in candidates
+        if text(candidate.get("sourceProductId"))
+        and not candidate_is_plan_descriptor(candidate)
+        and float(candidate.get("amount") or 0) > 0
+    }
     for candidate in candidates:
         product_type = text(candidate.get("productType"))
         product_key = (
@@ -310,10 +343,14 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
             or text(candidate.get("cardHash"))
             or text(candidate.get("rawLabel")).casefold()
         )
-        amount = float(candidate.get("amount") or 0)
-        if not product_key or amount <= 0:
+        descriptor = candidate_is_plan_descriptor(candidate)
+        if descriptor and text(candidate.get("sourceProductId")) in priced_products:
             continue
-        amounts_by_product[(product_type, product_key)].add(amount)
+        amount = float(candidate.get("amount") or 0)
+        if not product_key or (amount <= 0 and not descriptor):
+            continue
+        if not descriptor:
+            amounts_by_product[(product_type, product_key)].add(amount)
         key = (product_key, amount, product_type)
         incumbent = selected.get(key)
         method = text(candidate.get("method"))
@@ -321,12 +358,12 @@ def deduplicate(candidates: list[dict[str, Any]]) -> tuple[list[dict[str, Any]],
         label_richness = min(len(re.findall(r"[a-z0-9]+", text(candidate.get("rawLabel")).casefold())), 30)
         incumbent_richness = min(len(re.findall(r"[a-z0-9]+", text((incumbent or {}).get("rawLabel")).casefold())), 30)
         score = (
-            3 if method.startswith("public-") else 2 if method == "rendered-visible-plan-card" else 1,
+            3 if method.startswith("public-") else 2 if method in {"rendered-visible-plan-card", "visible-perform-for-golf-plan-descriptor"} else 1,
             bool(text(candidate.get("sourceProductId"))),
             label_richness,
         )
         incumbent_score = (
-            3 if incumbent_method.startswith("public-") else 2 if incumbent_method == "rendered-visible-plan-card" else 1,
+            3 if incumbent_method.startswith("public-") else 2 if incumbent_method in {"rendered-visible-plan-card", "visible-perform-for-golf-plan-descriptor"} else 1,
             bool(text((incumbent or {}).get("sourceProductId"))),
             incumbent_richness,
         )
@@ -371,7 +408,7 @@ def build_review(
                     "rawLabel": text(candidate.get("rawLabel"))[:220],
                     "sourceUrl": text(candidate.get("sourceUrl")),
                     "method": text(candidate.get("method")),
-                    "reason": "Unattached price/range-shaped text is not a plan catalog record or official cost context.",
+                    "reason": "Unattached price/range/descriptor text is not a plan catalog record or official cost context.",
                 })
 
     approved_by_id = {

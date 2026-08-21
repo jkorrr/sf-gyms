@@ -64939,17 +64939,23 @@
         "personal training",
         "keyless entry"
       ],
-      "description": "MX3 Fitness - Lower Haight is a independent fitness gym in Lower Haight. It is not classified as a generally purchasable consumer membership. Listed features include fitness, Wheelchair access, private fitness stations.",
+      "description": "MX3 Fitness - Lower Haight is a independent fitness gym in Lower Haight. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include fitness, Wheelchair access, private fitness stations.",
       "hours": "Member reservation hours vary by booking system",
       "websiteUrl": "https://mx3fitness.com",
       "sourceName": "OpenStreetMap",
       "sourceId": "node/2484293076",
       "sourceUrl": "https://www.openstreetmap.org/node/2484293076",
       "importedAt": "2026-08-17T00:39:44Z",
-      "priceSource": "MX3 Fitness",
+      "priceSource": "MX3 Fitness official monthly signup page",
       "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
-      "priceNote": "Official monthly signup page lists reservation tiers from $129/month plus $75 setup. Official day-pass page says Lower Haight is limited to monthly members only, so no day-pass price is recorded.",
-      "priceObservedAt": "2026-08-16",
+      "priceNote": "Lower Haight is a consumer monthly-membership gym, but new enrollment is currently waitlisted. It uses reservation-based access, with public recurring tiers from one to seven visits weekly at $129-$219/month plus a mandatory $75 setup fee. Open Gym Only does not apply to Lower Haight, and official gym credits are limited to Mission and Castro.",
+      "priceObservedAt": "2026-08-21",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "independent-gym",
+      "accessAvailability": "waitlist",
+      "pricingAccess": "form-required",
       "officialUrl": "https://mx3fitness.com",
       "operatorLocationId": "",
       "canonicalLocationId": "osm-node-2484293076",
@@ -64957,6 +64963,127 @@
       "canonicalAddress": "520 waller st",
       "sourceAliases": [],
       "publicationStatus": "publish",
+      "planOffers": [
+        {
+          "sourceProductId": "one-reservation-weekly",
+          "name": "1x/Week Reservation Plan",
+          "accessScope": "One reserved fitness-station visit per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1,
+            "period": "week"
+          },
+          "amount": 129,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "three-reservations-weekly",
+          "name": "3x/Week Reservation Plan",
+          "accessScope": "Three reserved fitness-station visits per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3,
+            "period": "week"
+          },
+          "amount": 159,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "five-reservations-weekly",
+          "name": "5x/Week Reservation Plan",
+          "accessScope": "Five reserved fitness-station visits per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5,
+            "period": "week"
+          },
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "seven-reservations-weekly",
+          "name": "7x/Week Reservation Plan",
+          "accessScope": "Seven reserved fitness-station visits per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 7,
+            "period": "week"
+          },
+          "amount": 219,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        }
+      ],
+      "dropInOffers": [],
+      "costContextOffers": [
+        {
+          "sourceProductId": "lower-haight-membership-starting",
+          "kind": "starting-price",
+          "label": "Lower Haight monthly memberships start at $129",
+          "amount": 129,
+          "currency": "USD",
+          "cadence": "month",
+          "productType": "membership",
+          "sourceUrl": "https://mx3fitness.com/monthly-signup",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "operator-market-multi-location",
+          "note": "Current public amount; enrollment at Lower Haight is waitlisted and cannot be selected as a direct-purchase plan.",
+          "selectable": false
+        }
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      },
+      "operatorCatalogApprovalId": "mx3-lower-haight-waitlist-2026-08-21",
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -64964,9 +65091,274 @@
       "entityKind": "gym",
       "modality": "independent-gym",
       "operatorKey": "mx3-fitness",
-      "accessModel": "restricted",
+      "accessModel": "membership",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "osm-node-2484293076:plan:one-reservation-weekly",
+          "sourceProductId": "one-reservation-weekly",
+          "name": "1x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "One reserved fitness-station visit per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 129.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 129.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "1x/Week Reservation Plan",
+            "contentHash": "f6cdff002ab438c42d2306596f9130c54683babdad431ed0573514cf6710b7b0",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "one-reservation-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-2484293076:plan:three-reservations-weekly",
+          "sourceProductId": "three-reservations-weekly",
+          "name": "3x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "Three reserved fitness-station visits per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 159.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 159.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "3x/Week Reservation Plan",
+            "contentHash": "3cc408dc4d309c8d0f45ce68f481791dae95fdc0727e604d885d6763f34d1a0e",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "three-reservations-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-2484293076:plan:five-reservations-weekly",
+          "sourceProductId": "five-reservations-weekly",
+          "name": "5x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "Five reserved fitness-station visits per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 189.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 189.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "5x/Week Reservation Plan",
+            "contentHash": "2ea6dc9746a771f8e820986dc37a55d3afb52aea79c210102fa0f79b5c22be08",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "five-reservations-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-2484293076:plan:seven-reservations-weekly",
+          "sourceProductId": "seven-reservations-weekly",
+          "name": "7x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "Seven reserved fitness-station visits per week at MX3 Lower Haight",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 7,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 219.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 219.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "7x/Week Reservation Plan",
+            "contentHash": "8cded5d7177cc4ae286035f22b19e3a3a9837819919a7f6bdda4c2a8a05095b8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "seven-reservations-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
       "selectedPlanId": null,
       "selectedDropInId": null,
@@ -64975,25 +65367,47 @@
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
         },
         "highestAccess": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
         },
         "bestValue": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-labeled-by-operator",
+          "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "starting-price",
+          "label": "Lower Haight monthly memberships start at $129",
+          "low": 129.0,
+          "high": 129.0,
+          "currency": "USD",
+          "cadence": "month",
+          "productType": "membership",
+          "sourceUrl": "https://mx3fitness.com/monthly-signup",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "operator-market-multi-location",
+          "conflictFlags": [],
+          "note": "Current public amount; enrollment at Lower Haight is waitlisted and cannot be selected as a direct-purchase plan.",
+          "selectable": false,
+          "normalizedMonthlyLow": 129.0,
+          "normalizedMonthlyHigh": 129.0,
+          "id": "osm-node-2484293076:cost-context:76c7fa430285"
+        }
+      ],
       "selectionReason": "",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -65006,10 +65420,10 @@
       "processingFee": null,
       "activationFee": null,
       "estimatedMonthly": null,
-      "pricingBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
-      "pricingStatus": "not-applicable",
-      "monthlyPriceBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
-      "dayPassPriceBlocker": "This is not a generally purchasable consumer facility, so an ordinary day pass does not apply.",
+      "pricingBlocker": "The operator currently limits or pauses ordinary enrollment.",
+      "pricingStatus": "gated",
+      "monthlyPriceBlocker": "The operator currently limits or pauses ordinary enrollment.",
+      "dayPassPriceBlocker": "Ordinary public visits are not currently available.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -65787,7 +66201,7 @@
       "longitude": -122.4328448,
       "monthlyPrice": null,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "open gym",
@@ -65796,7 +66210,7 @@
         "personal training",
         "keyless entry"
       ],
-      "description": "MX3 Fitness - Noe Valley is a independent fitness gym in San Francisco. It is not classified as a generally purchasable consumer membership. Listed features include open gym, private fitness stations, cardio equipment.",
+      "description": "MX3 Fitness - Noe Valley is a independent fitness gym in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include open gym, private fitness stations, cardio equipment.",
       "hours": "Member reservation hours vary by booking system",
       "websiteUrl": "https://www.mx3fitness.com/",
       "sourceName": "OpenStreetMap",
@@ -65816,16 +66230,163 @@
       "initiationFee": null,
       "processingFee": null,
       "billingIntervalPrice": null,
-      "priceSource": "MX3 Fitness",
+      "priceSource": "MX3 Fitness official monthly signup page",
       "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
-      "priceNote": "Official monthly signup page lists Open Gym Only at $109/month plus $75 setup and higher reservation tiers. Official day-pass page says Noe Valley is limited to monthly members only, so no day-pass price is recorded.",
-      "priceObservedAt": "2026-08-16",
+      "priceNote": "Noe Valley is a consumer monthly-membership gym, but new enrollment is currently waitlisted. Open Gym Only is $109/month plus a mandatory $75 setup fee; reservation tiers run from one to seven visits weekly at $129-$219/month with the same fee. Official gym credits are limited to Mission and Castro.",
+      "priceObservedAt": "2026-08-21",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "independent-gym",
+      "accessAvailability": "waitlist",
+      "pricingAccess": "form-required",
       "officialUrl": "https://www.mx3fitness.com/",
       "operatorLocationId": "",
       "canonicalLocationId": "osm-node-6471124711",
       "operatorId": "mx3-fitness",
       "canonicalAddress": "4045 24th st",
       "publicationStatus": "publish",
+      "planOffers": [
+        {
+          "sourceProductId": "open-gym-only",
+          "name": "Open Gym Only",
+          "accessScope": "Ordinary open-gym access at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "amount": 109,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "one-reservation-weekly",
+          "name": "1x/Week Reservation Plan",
+          "accessScope": "One reserved fitness-station visit per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1,
+            "period": "week"
+          },
+          "amount": 129,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "three-reservations-weekly",
+          "name": "3x/Week Reservation Plan",
+          "accessScope": "Three reserved fitness-station visits per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3,
+            "period": "week"
+          },
+          "amount": 159,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "five-reservations-weekly",
+          "name": "5x/Week Reservation Plan",
+          "accessScope": "Five reserved fitness-station visits per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5,
+            "period": "week"
+          },
+          "amount": 189,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        },
+        {
+          "sourceProductId": "seven-reservations-weekly",
+          "name": "7x/Week Reservation Plan",
+          "accessScope": "Seven reserved fitness-station visits per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 7,
+            "period": "week"
+          },
+          "amount": 219,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ]
+        }
+      ],
+      "dropInOffers": [],
+      "costContextOffers": [
+        {
+          "sourceProductId": "noe-valley-membership-starting",
+          "kind": "starting-price",
+          "label": "Noe Valley monthly memberships start at $109",
+          "amount": 109,
+          "currency": "USD",
+          "cadence": "month",
+          "productType": "membership",
+          "sourceUrl": "https://mx3fitness.com/monthly-signup",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "operator-market-multi-location",
+          "note": "Current public amount; enrollment at Noe Valley is waitlisted and cannot be selected as a direct-purchase plan.",
+          "selectable": false
+        }
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      },
+      "operatorCatalogApprovalId": "mx3-noe-valley-waitlist-2026-08-21",
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -65833,9 +66394,335 @@
       "entityKind": "gym",
       "modality": "independent-gym",
       "operatorKey": "mx3-fitness",
-      "accessModel": "restricted",
+      "accessModel": "membership",
       "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
+      "plans": [
+        {
+          "id": "osm-node-6471124711:plan:open-gym-only",
+          "sourceProductId": "open-gym-only",
+          "name": "Open Gym Only",
+          "productType": "membership",
+          "accessScope": "Ordinary open-gym access at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": null,
+          "billing": {
+            "amount": 109.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 109.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Open Gym Only",
+            "contentHash": "85c6da17854e76b262552cc9a37304779b7ccaffc1b91bec105ab05531bcf151",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "open-gym-only",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-6471124711:plan:one-reservation-weekly",
+          "sourceProductId": "one-reservation-weekly",
+          "name": "1x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "One reserved fitness-station visit per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 129.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 129.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "1x/Week Reservation Plan",
+            "contentHash": "f6cdff002ab438c42d2306596f9130c54683babdad431ed0573514cf6710b7b0",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "one-reservation-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-6471124711:plan:three-reservations-weekly",
+          "sourceProductId": "three-reservations-weekly",
+          "name": "3x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "Three reserved fitness-station visits per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 159.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 159.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "3x/Week Reservation Plan",
+            "contentHash": "3cc408dc4d309c8d0f45ce68f481791dae95fdc0727e604d885d6763f34d1a0e",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "three-reservations-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-6471124711:plan:five-reservations-weekly",
+          "sourceProductId": "five-reservations-weekly",
+          "name": "5x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "Five reserved fitness-station visits per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 189.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 189.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "5x/Week Reservation Plan",
+            "contentHash": "2ea6dc9746a771f8e820986dc37a55d3afb52aea79c210102fa0f79b5c22be08",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "five-reservations-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-6471124711:plan:seven-reservations-weekly",
+          "sourceProductId": "seven-reservations-weekly",
+          "name": "7x/Week Reservation Plan",
+          "productType": "membership",
+          "accessScope": "Seven reserved fitness-station visits per week at MX3 Noe Valley",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 7,
+            "period": "week",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 219.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "month",
+            "intervalCount": 1,
+            "normalizedMonthly": 219.0,
+            "normalizationFormula": "amount"
+          },
+          "commitment": {
+            "type": "month-to-month",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "waitlist",
+          "purchaseMethod": "waitlist",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [
+            {
+              "type": "activation",
+              "amount": 75,
+              "currency": "USD",
+              "cadence": "one-time",
+              "mandatory": true
+            }
+          ],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://mx3fitness.com/monthly-signup",
+            "observedAt": "2026-08-21",
+            "source": "MX3 Fitness official monthly signup page",
+            "method": "reviewed-official-observation",
+            "rawLabel": "7x/Week Reservation Plan",
+            "contentHash": "8cded5d7177cc4ae286035f22b19e3a3a9837819919a7f6bdda4c2a8a05095b8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-market-multi-location",
+            "sourceProductId": "seven-reservations-weekly",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "dropIns": [],
       "selectedPlanId": null,
       "selectedDropInId": null,
@@ -65844,25 +66731,47 @@
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
         },
         "highestAccess": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
         },
         "bestValue": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-labeled-by-operator",
+          "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "starting-price",
+          "label": "Noe Valley monthly memberships start at $109",
+          "low": 109.0,
+          "high": 109.0,
+          "currency": "USD",
+          "cadence": "month",
+          "productType": "membership",
+          "sourceUrl": "https://mx3fitness.com/monthly-signup",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "operator-market-multi-location",
+          "conflictFlags": [],
+          "note": "Current public amount; enrollment at Noe Valley is waitlisted and cannot be selected as a direct-purchase plan.",
+          "selectable": false,
+          "normalizedMonthlyLow": 109.0,
+          "normalizedMonthlyHigh": 109.0,
+          "id": "osm-node-6471124711:cost-context:ff5687607035"
+        }
+      ],
       "selectionReason": "",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -65871,10 +66780,10 @@
       },
       "activationFee": null,
       "estimatedMonthly": null,
-      "pricingBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
-      "pricingStatus": "not-applicable",
-      "monthlyPriceBlocker": "This restricted facility does not offer an ordinary public membership or unrestricted visit.",
-      "dayPassPriceBlocker": "This is not a generally purchasable consumer facility, so an ordinary day pass does not apply.",
+      "pricingBlocker": "The operator currently limits or pauses ordinary enrollment.",
+      "pricingStatus": "gated",
+      "monthlyPriceBlocker": "The operator currently limits or pauses ordinary enrollment.",
+      "dayPassPriceBlocker": "Ordinary public visits are not currently available.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -69221,6 +70130,121 @@
         "observedAt": "2026-08-21",
         "note": "The official location page confirms appointment-based coaching, while the plan page says designated open-gym and simulator access applies at all locations. The site's public HealCode configuration exposes Mindbody Site ID 5734215, whose unauthenticated Contracts tab publishes a $300 every-month Gym/Sim Access Membership with month-to-month terms. Coached membership amounts remain consultation-gated."
       },
+      "priceSource": "Perform for Golf official site and operator-linked public Mindbody storefront",
+      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The public Mindbody Contracts tab publishes a Gym/Sim Access Membership at $300 every month with month-to-month auto-renewal. The official operator page says designated open-gym and simulator access applies at all locations, so this is selected as the cheapest disclosed direct recurring plan permitting normal facility use. Auto-monthly coached memberships with 4, 6, 8, 10, or 12 sessions are named publicly but their amounts still require consultation. Exact $200 one-to-one training and swing-coaching services are retained as trainer-led appointments and do not become an ordinary day pass.",
+      "planOffers": [
+        {
+          "sourceProductId": "179",
+          "name": "Gym/Sim Access Membership",
+          "productType": "membership",
+          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
+          "scopeType": "multi-location",
+          "amount": 300,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Contracts tab",
+          "captureMethod": "rendered-mindbody-contract",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100002",
+          "name": "Golf Performance Training (1:1)",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led golf performance session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100132",
+          "name": "Swing Coaching",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led swing-coaching session",
+          "scopeType": "multi-location",
+          "classAllowance": 1,
+          "amount": 200,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Coach appointment; not an ordinary unrestricted gym visit"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "operator-market-multi-location"
+        },
+        {
+          "sourceProductId": "100164",
+          "name": "Golf Fitting — Los Altos Only",
+          "productType": "class-pack",
+          "accessScope": "One golf-fitting appointment at Los Altos only",
+          "scopeType": "single-location",
+          "classAllowance": 1,
+          "amount": 375,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "not-this-location",
+            "restrictions": [
+              "Public product is explicitly limited to Los Altos"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "observedAt": "2026-08-21",
+          "source": "Perform for Golf public Mindbody Services tab",
+          "captureMethod": "rendered-mindbody-purchase-item",
+          "exactLocationMatch": "different-location"
+        }
+      ],
+      "catalogCompleteness": {
+        "plans": "fragment",
+        "dropIns": "none-observed"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -69525,121 +70549,6 @@
           "status": "listed",
           "reason": ""
         }
-      },
-      "priceSource": "Perform for Golf official site and operator-linked public Mindbody storefront",
-      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
-      "priceObservedAt": "2026-08-21",
-      "priceNote": "The public Mindbody Contracts tab publishes a Gym/Sim Access Membership at $300 every month with month-to-month auto-renewal. The official operator page says designated open-gym and simulator access applies at all locations, so this is selected as the cheapest disclosed direct recurring plan permitting normal facility use. Auto-monthly coached memberships with 4, 6, 8, 10, or 12 sessions are named publicly but their amounts still require consultation. Exact $200 one-to-one training and swing-coaching services are retained as trainer-led appointments and do not become an ordinary day pass.",
-      "planOffers": [
-        {
-          "sourceProductId": "179",
-          "name": "Gym/Sim Access Membership",
-          "productType": "membership",
-          "accessScope": "Designated open-gym and golf-simulator access at all operator locations",
-          "scopeType": "multi-location",
-          "amount": 300,
-          "billingInterval": "month",
-          "commitmentType": "month-to-month",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Contracts tab",
-          "captureMethod": "rendered-mindbody-contract",
-          "exactLocationMatch": "operator-market-multi-location"
-        },
-        {
-          "sourceProductId": "100002",
-          "name": "Golf Performance Training (1:1)",
-          "productType": "class-pack",
-          "accessScope": "One trainer-led golf performance session",
-          "scopeType": "multi-location",
-          "classAllowance": 1,
-          "amount": 200,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "eligibility": {
-            "type": "trainer-required",
-            "restrictions": [
-              "One-to-one appointment; not an ordinary unrestricted gym visit"
-            ]
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Services tab",
-          "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "operator-market-multi-location"
-        },
-        {
-          "sourceProductId": "100132",
-          "name": "Swing Coaching",
-          "productType": "class-pack",
-          "accessScope": "One trainer-led swing-coaching session",
-          "scopeType": "multi-location",
-          "classAllowance": 1,
-          "amount": 200,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "eligibility": {
-            "type": "trainer-required",
-            "restrictions": [
-              "Coach appointment; not an ordinary unrestricted gym visit"
-            ]
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Services tab",
-          "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "operator-market-multi-location"
-        },
-        {
-          "sourceProductId": "100164",
-          "name": "Golf Fitting — Los Altos Only",
-          "productType": "class-pack",
-          "accessScope": "One golf-fitting appointment at Los Altos only",
-          "scopeType": "single-location",
-          "classAllowance": 1,
-          "amount": 375,
-          "billingInterval": "one-time",
-          "commitmentType": "none",
-          "eligibility": {
-            "type": "not-this-location",
-            "restrictions": [
-              "Public product is explicitly limited to Los Altos"
-            ]
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "fees": [],
-          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
-          "observedAt": "2026-08-21",
-          "source": "Perform for Golf public Mindbody Services tab",
-          "captureMethod": "rendered-mindbody-purchase-item",
-          "exactLocationMatch": "different-location"
-        }
-      ],
-      "catalogCompleteness": {
-        "plans": "fragment",
-        "dropIns": "none-observed"
       }
     },
     {

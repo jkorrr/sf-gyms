@@ -15,9 +15,10 @@ import math
 import re
 import statistics
 from collections import Counter, defaultdict
+from collections.abc import Iterable
 from datetime import UTC, datetime
 from pathlib import Path
-from typing import Any, Iterable
+from typing import Any
 from urllib.parse import urlparse
 
 import platform_adapters
@@ -261,7 +262,6 @@ def access_model(gym: dict[str, Any], entity_kind: str) -> str:
             "current clients working with a trainer",
             "employee only",
             "employees only",
-            "members only",
         )
     ):
         return "restricted"
@@ -351,7 +351,7 @@ def class_allowance(value: Any) -> dict[str, Any] | None:
 def evidence_for(gym: dict[str, Any], raw_label: str, method: str = "reviewed-official-observation") -> dict[str, Any]:
     url = text(gym.get("priceSourceUrl"))
     observed = text(gym.get("priceObservedAt"))
-    digest = hashlib.sha256(f"{url}|{observed}|{raw_label}".encode("utf-8")).hexdigest()
+    digest = hashlib.sha256(f"{url}|{observed}|{raw_label}".encode()).hexdigest()
     return {
         "url": url,
         "observedAt": observed,
@@ -393,7 +393,7 @@ def evidence_for_offer(gym: dict[str, Any], offer: dict[str, Any], raw_label: st
             "exactLocationMatch": exact_location_match,
             "conflictFlags": conflict_flags,
             "sourceProductId": text(offer.get("sourceProductId")),
-            "contentHash": hashlib.sha256(f"{url}|{observed_at}|{raw_label}".encode("utf-8")).hexdigest(),
+            "contentHash": hashlib.sha256(f"{url}|{observed_at}|{raw_label}".encode()).hexdigest(),
         }
     )
     return evidence
@@ -414,7 +414,7 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
         monthly = normalized_monthly(amount, interval, interval_count)
     source_product_id = text(offer.get("sourceProductId"))
     stable_part = source_product_id or hashlib.sha1(
-        f"{text(offer.get('name'))}|{amount if amount is not None else 'undisclosed'}|{interval}|{interval_count}".encode("utf-8")
+        f"{text(offer.get('name'))}|{amount if amount is not None else 'undisclosed'}|{interval}|{interval_count}".encode()
     ).hexdigest()[:12]
     commitment_input = offer.get("commitment", {}) if isinstance(offer.get("commitment"), dict) else {}
     promotion_input = offer.get("promotion", {}) if isinstance(offer.get("promotion"), dict) else {}
@@ -889,12 +889,12 @@ def build_cost_context(gym: dict[str, Any], plans: list[dict[str, Any]]) -> list
                 })
     deduplicated: list[dict[str, Any]] = []
     seen: set[tuple[str, float, float, str]] = set()
-    for index, item in enumerate(contexts):
+    for item in contexts:
         key = (normalized(item["label"]), item["low"], item["high"], item["cadence"])
         if key in seen:
             continue
         seen.add(key)
-        item["id"] = f"{gym['id']}:cost-context:{hashlib.sha1('|'.join(map(str, key)).encode('utf-8')).hexdigest()[:12]}"
+        item["id"] = f"{gym['id']}:cost-context:{hashlib.sha1('|'.join(map(str, key)).encode()).hexdigest()[:12]}"
         deduplicated.append(item)
     return deduplicated
 
@@ -1400,7 +1400,7 @@ def attach_deals(gyms: list[dict[str, Any]], document: dict[str, Any], generated
             continue
         gym["deals"].append({
             "id": text(approval.get("id")) or hashlib.sha256(
-                f"{gym['id']}|{source_url}|{content_hash}".encode("utf-8")
+                f"{gym['id']}|{source_url}|{content_hash}".encode()
             ).hexdigest()[:20],
             "label": text(approval.get("label"))[:220],
             "amount": float(amount),
@@ -2155,6 +2155,20 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             gym["dayPassPrice"] = None
             gym["pricingBlocker"] = blocker_for(gym)
             continue
+        if gym.get("recordStatus") == "coming_soon" or gym.get("accessAvailability") in {
+            "waitlist",
+            "enrollment-paused",
+            "members-only",
+            "presale",
+        }:
+            gym["pricingStatus"] = "gated"
+            gym["estimatedMonthly"] = None
+            gym["pricingBlocker"] = (
+                "This location is not open for ordinary enrollment yet."
+                if gym.get("recordStatus") == "coming_soon"
+                else "The operator currently limits or pauses ordinary enrollment."
+            )
+            continue
         eligible_class_packs = [
             plan for plan in gym.get("plans", [])
             if plan.get("productType") == "class-pack"
@@ -2208,15 +2222,7 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             gym["pricingBlocker"] = blocker_for(gym)
             if estimate_rejected:
                 gym["pricingBlocker"] += " The comparable modality failed cross-validated error or uncertainty-range requirements."
-        if not held_or_invalid and (gym.get("recordStatus") == "coming_soon" or gym.get("accessAvailability") in {"waitlist", "enrollment-paused", "members-only"}):
-            gym["pricingStatus"] = "gated"
-            gym["estimatedMonthly"] = None
-            gym["pricingBlocker"] = (
-                "This location is not open for ordinary enrollment yet."
-                if gym.get("recordStatus") == "coming_soon"
-                else "The operator currently limits or pauses ordinary enrollment."
-            )
-        elif not held_or_invalid and gym.get("reportedMonthly") is not None:
+        if not held_or_invalid and gym.get("reportedMonthly") is not None:
             gym["pricingStatus"] = "reported"
         elif not held_or_invalid and estimate is not None:
             gym["pricingStatus"] = "estimated"
