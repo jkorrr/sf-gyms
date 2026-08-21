@@ -1605,34 +1605,62 @@
     {
       "gymId": "osm-node-1364959516",
       "name": "VRV3 Studios",
-      "url": "https://vrv3studioscom.onbookee.com/public/forms/60e61d8b-f5b3-4886-8578-51fc2663f8fd",
-      "attemptedAt": "2026-08-20",
-      "status": "rendered",
+      "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "attemptedAt": "2026-08-21",
+      "status": "access-blocked",
       "robotsStatus": "checked",
-      "contentHash": "9329d2a0a332f6bda810f32ed5771b9a171f4943b675c04d9ffc03fc430b4a43",
+      "contentHash": "540aa104c9e096a07448ec6c8ac5081b0c2c69e86b4d3905dc80cfc702d5e1fc",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,
       "requiresReview": false,
+      "accessBlocker": "platform-security-check",
       "error": "",
-      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
+      "adapterMetrics": {
+        "bookeeProductCardCount": 0,
+        "bookeeCandidateCount": 0
+      }
     },
     {
       "gymId": "osm-node-1364959516",
       "name": "VRV3 Studios",
       "url": "https://www.vrv3studios.com/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "f33d9e76dee8935f17b4fc13cf54f9e762e86a42e48067c76c06aac1ae6dfacf",
+      "contentHash": "4bde1901f95d51141c1953e03cbed4ffb004ef9e6158f1e6acf0d51de25c6f35",
       "networkEvidenceHashes": [],
-      "clickedPublicTabs": [
-        "Pricing"
-      ],
+      "clickedPublicTabs": [],
       "candidateCount": 0,
       "requiresReview": false,
+      "accessBlocker": "",
       "error": "",
-      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
+      "adapterMetrics": {
+        "bookeeProductCardCount": 0,
+        "bookeeCandidateCount": 0
+      }
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "name": "VRV3 Studios",
+      "url": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "50e98c18e6ea55fc6a3479a52fa3fd95cea8506670b91727aae01b9d06fcb37b",
+      "networkEvidenceHashes": [],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
+      "adapterMetrics": {
+        "bookeeProductCardCount": 0,
+        "bookeeCandidateCount": 0
+      }
     },
     {
       "gymId": "osm-node-13712240860",

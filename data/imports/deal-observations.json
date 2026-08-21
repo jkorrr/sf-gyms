@@ -515,6 +515,38 @@
       "replacesOrdinaryPrice": false
     },
     {
+      "id": "91e2fba29580775d7e95",
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "amount": 79.0,
+      "currency": "USD",
+      "productType": "class-pack",
+      "cadence": "one-time",
+      "label": "Intro Offers",
+      "expiresAt": null,
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "capturedAt": "2026-08-21",
+      "contentHash": "b4afd3ae20382865763ab9b0824939080ec536b83495c53687ea7f0922876638",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
+      "id": "0ab655a8709678dfe598",
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "amount": 139.0,
+      "currency": "USD",
+      "productType": "class-pack",
+      "cadence": "one-time",
+      "label": "Intro Offers",
+      "expiresAt": null,
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "capturedAt": "2026-08-21",
+      "contentHash": "b4afd3ae20382865763ab9b0824939080ec536b83495c53687ea7f0922876638",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
       "id": "d0d03eb0bd539234858c",
       "gymId": "osm-node-2167144976",
       "gymName": "Crunch Fitness Polk Street",

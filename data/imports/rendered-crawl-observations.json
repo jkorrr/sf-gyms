@@ -4088,6 +4088,921 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5086-open-studio-x1",
+      "sourceProductAliases": [
+        "open-studio-x1",
+        "open-studio-drop-in"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Open Studio x1",
+      "amount": 18.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "One ordinary class",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "practice-only",
+        "restrictions": [
+          "Open-practice access; no ordinary instructed class"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Open Studio — Open Studio x1 — USD 18 per visit — One ordinary class — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "6fd293d5e08c9b5963147397f96c6e5f584c5e5289b252eb744b82924ee3b77f",
+      "cardAssociationHash": "6fd293d5e08c9b5963147397f96c6e5f584c5e5289b252eb744b82924ee3b77f",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5103-drop-in-class-x1",
+      "sourceProductAliases": [
+        "drop-in-class-x1",
+        "class-drop-in"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Drop-In Class x1",
+      "amount": 44.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "One ordinary class",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In Class Packs — Drop-In Class x1 — USD 44 per visit — One ordinary class — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "6b5288076dddf24305c611aa66a40c31d013a468b7d7f1ea9e9495339854692a",
+      "cardAssociationHash": "6b5288076dddf24305c611aa66a40c31d013a468b7d7f1ea9e9495339854692a",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5484-intro-offer-4-class-pack-2-week-expiration",
+      "sourceProductAliases": [
+        "intro-offer-4-class-pack-2-week-expiration",
+        "intro-four"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Intro Offer: 4-Class Pack (2 WEEK EXPIRATION)",
+      "amount": 79.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Intro Offer: 4-Class Pack (2 WEEK EXPIRATION)",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "Intro Offers"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Intro Offers — Intro Offer: 4-Class Pack (2 WEEK EXPIRATION) — USD 79 per one-time — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "b6b64d8d4bf2e7deecb37484a529ed053c08d6cb6f0f923fe8c49d66fe16ed1c",
+      "cardAssociationHash": "b6b64d8d4bf2e7deecb37484a529ed053c08d6cb6f0f923fe8c49d66fe16ed1c",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5086-monthly-training-membership-8-open-studio-6-m",
+      "sourceProductAliases": [
+        "monthly-training-membership-8-open-studio-6-m",
+        "eight-monthly",
+        "eight-monthly-6m",
+        "open-studio-eight-monthly"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Training Membership (8 Open Studio, 6 M)",
+      "amount": 100.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 practice sessions per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "practice-only",
+        "restrictions": [
+          "Open-practice access; no ordinary instructed class"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 6,
+        "minimumDays": null,
+        "rawLabel": "6 M"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Open Studio — Monthly Training Membership (8 Open Studio, 6 M) — USD 100 per month — 8 practice sessions per month — 6 M — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "6d9380b4a2115cbb48dbeb3c18be00e08d0aea235c369816587c4312db0dfd3d",
+      "cardAssociationHash": "6d9380b4a2115cbb48dbeb3c18be00e08d0aea235c369816587c4312db0dfd3d",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5484-intro-offer-2-week-unlimited",
+      "sourceProductAliases": [
+        "intro-offer-2-week-unlimited",
+        "intro-unlimited-two-week"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Intro Offer: 2-Week Unlimited",
+      "amount": 139.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Unlimited classes per one-time",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "purchase",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "Intro Offers"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Intro Offers — Intro Offer: 2-Week Unlimited — USD 139 per one-time — Unlimited classes per one-time — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "b1aae73bc3517fa6591f223e15e8e9eaacd3c785007f4a554498d34295042ae4",
+      "cardAssociationHash": "b1aae73bc3517fa6591f223e15e8e9eaacd3c785007f4a554498d34295042ae4",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12510-monthly-membership-4x-classes-12m",
+      "sourceProductAliases": [
+        "monthly-membership-4x-classes-12m",
+        "four-monthly",
+        "four-monthly-12m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Membership (4x Classes, 12M)",
+      "amount": 139.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "12 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (12 Month Commitment) — Monthly Membership (4x Classes, 12M) — USD 139 per month — 4 classes per month — 12 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "ad4f46fef514ed358f654012bdf9721fbda1291f13205a230ad3f5eb7429b4ef",
+      "cardAssociationHash": "ad4f46fef514ed358f654012bdf9721fbda1291f13205a230ad3f5eb7429b4ef",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7800-monthly-membership-4x-classes-3m",
+      "sourceProductAliases": [
+        "monthly-membership-4x-classes-3m",
+        "four-monthly",
+        "four-monthly-3m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Membership (4x Classes, 3M)",
+      "amount": 149.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (3 Month Commitment) — Monthly Membership (4x Classes, 3M) — USD 149 per month — 4 classes per month — 3 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "432fca16cc73b9982837f9dd548533d409eaea0e1b9570a93ddabe8e98085765",
+      "cardAssociationHash": "432fca16cc73b9982837f9dd548533d409eaea0e1b9570a93ddabe8e98085765",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5103-drop-in-class-x5",
+      "sourceProductAliases": [
+        "drop-in-class-x5",
+        "five-class-pack"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Drop-In Class x5",
+      "amount": 205.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Drop-In Class x5",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In Class Packs — Drop-In Class x5 — USD 205 per one-time — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "a8dd0e0df5eacb46f78a2309785d2388f96cf47d10d775a1464c1f25e1850bde",
+      "cardAssociationHash": "a8dd0e0df5eacb46f78a2309785d2388f96cf47d10d775a1464c1f25e1850bde",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12510-monthly-membership-8x-classes-12m",
+      "sourceProductAliases": [
+        "monthly-membership-8x-classes-12m",
+        "eight-monthly",
+        "eight-monthly-12m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Membership (8x Classes, 12M)",
+      "amount": 250.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "12 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": true,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (12 Month Commitment) — Monthly Membership (8x Classes, 12M) — USD 250 per month — 8 classes per month — 12 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "f023f836d9f8757d4c0e56f5e06ef4b7c5d21f19ced31a190552e8f34b89f27a",
+      "cardAssociationHash": "f023f836d9f8757d4c0e56f5e06ef4b7c5d21f19ced31a190552e8f34b89f27a",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7800-monthly-membership-8x-classes-3m",
+      "sourceProductAliases": [
+        "monthly-membership-8x-classes-3m",
+        "eight-monthly",
+        "eight-monthly-3m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Membership (8x Classes, 3M)",
+      "amount": 270.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": true,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (3 Month Commitment) — Monthly Membership (8x Classes, 3M) — USD 270 per month — 8 classes per month — 3 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "3782e42e9fb084eee5785bd589a50bd2e3d023086f98e5842d52910b7d6a9ef4",
+      "cardAssociationHash": "3782e42e9fb084eee5785bd589a50bd2e3d023086f98e5842d52910b7d6a9ef4",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5320-60-min-party",
+      "sourceProductAliases": [
+        "60-min-party"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "60 Min Party",
+      "amount": 300.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "service",
+      "accessScope": "60 Min Party",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "special-event",
+        "restrictions": [
+          "Private event or facility rental"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Parties & Rentals — 60 Min Party — USD 300 per one-time — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "6325c6c19725bbc8843c8745aef7890f7d96ddf0a372a5fe8fae992cd578b5d6",
+      "cardAssociationHash": "6325c6c19725bbc8843c8745aef7890f7d96ddf0a372a5fe8fae992cd578b5d6",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12510-monthly-membership-12x-classes-12m",
+      "sourceProductAliases": [
+        "monthly-membership-12x-classes-12m",
+        "twelve-monthly",
+        "twelve-monthly-12m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Membership (12x Classes, 12M)",
+      "amount": 339.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "12 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (12 Month Commitment) — Monthly Membership (12x Classes, 12M) — USD 339 per month — 12 classes per month — 12 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "958392d2df511769d8ffbdc31e103de1645d49de4693ef6f1ec969d57a548e8f",
+      "cardAssociationHash": "958392d2df511769d8ffbdc31e103de1645d49de4693ef6f1ec969d57a548e8f",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5320-90-min-party",
+      "sourceProductAliases": [
+        "90-min-party"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "90 Min Party",
+      "amount": 350.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "service",
+      "accessScope": "90 Min Party",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "special-event",
+        "restrictions": [
+          "Private event or facility rental"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Parties & Rentals — 90 Min Party — USD 350 per one-time — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "b8cfe895a51c84ad17fa51750f3fdbc78abad38672ae58596714ccb0b1b2c2c3",
+      "cardAssociationHash": "b8cfe895a51c84ad17fa51750f3fdbc78abad38672ae58596714ccb0b1b2c2c3",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "7800-monthly-membership-12x-classes-3m",
+      "sourceProductAliases": [
+        "monthly-membership-12x-classes-3m",
+        "twelve-monthly",
+        "twelve-monthly-3m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Monthly Membership (12x Classes, 3M)",
+      "amount": 359.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3,
+        "minimumDays": null,
+        "rawLabel": "3 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (3 Month Commitment) — Monthly Membership (12x Classes, 3M) — USD 359 per month — 12 classes per month — 3 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "de1d6477470f52b0992e318cf1278bb1b28f40e1d98f8e83479db868d0850397",
+      "cardAssociationHash": "de1d6477470f52b0992e318cf1278bb1b28f40e1d98f8e83479db868d0850397",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "5103-drop-in-class-x10",
+      "sourceProductAliases": [
+        "drop-in-class-x10",
+        "ten-class-pack"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Drop-In Class x10",
+      "amount": 400.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "Drop-In Class x10",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In Class Packs — Drop-In Class x10 — USD 400 per one-time — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "18c0e4eba3967a5f55368642b5807c2002484afb7d8f523b6684c4d461b1536f",
+      "cardAssociationHash": "18c0e4eba3967a5f55368642b5807c2002484afb7d8f523b6684c4d461b1536f",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "12510-unlimited-monthly-membership-12-months",
+      "sourceProductAliases": [
+        "unlimited-monthly-membership-12-months",
+        "unlimited-monthly",
+        "unlimited-monthly-12m"
+      ],
+      "sourceProductIdAuthority": "synthetic-label",
+      "name": "Unlimited Monthly Membership (12 Months)",
+      "amount": 400.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12,
+        "minimumDays": null,
+        "rawLabel": "12 Month Commitment"
+      },
+      "fees": [],
+      "locations": [
+        "San Francisco"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Monthly Memberships (12 Month Commitment) — Unlimited Monthly Membership (12 Months) — USD 400 per month — Unlimited classes per month — 12 Month Commitment — San Francisco",
+      "method": "captured-public-bookee-product-card",
+      "adapter": "bookee",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "autoPublishEligible": false,
+      "contentHash": "6048aa818e3c8aec310d0ecf43736214f1ee01dc27075522c6fe31d1bfedbe44",
+      "cardAssociationHash": "6048aa818e3c8aec310d0ecf43736214f1ee01dc27075522c6fe31d1bfedbe44",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+    },
+    {
       "gymId": "osm-node-13712240860",
       "gymName": "Fog City Community Fitness",
       "capturedAt": "2026-08-20",

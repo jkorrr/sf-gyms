@@ -41,6 +41,95 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertFalse(by_id["charity-1"]["ordinaryUse"])
         self.assertEqual(by_id["pack-1"]["productType"], "class-pack")
 
+    def test_bookee_cards_reconstruct_catalog_semantics_and_stable_aliases(self) -> None:
+        monthly_fixture = self.rendered_fixtures["bookeeMonthlyMembership"]
+        drop_in_fixture = self.rendered_fixtures["bookeeDropIn"]
+        monthly = adapters.bookee_product_card_candidates(
+            monthly_fixture["cardText"], monthly_fixture["productName"],
+            monthly_fixture["displayedPrice"], monthly_fixture["url"],
+            monthly_fixture["serviceGroupId"], monthly_fixture["locationLabel"],
+            monthly_fixture["sectionLabel"],
+        )[0]
+        drop_in = adapters.bookee_product_card_candidates(
+            drop_in_fixture["cardText"], drop_in_fixture["productName"],
+            drop_in_fixture["displayedPrice"], drop_in_fixture["url"],
+            drop_in_fixture["serviceGroupId"], drop_in_fixture["locationLabel"],
+            drop_in_fixture["sectionLabel"],
+        )[0]
+
+        self.assertEqual((monthly["amount"], monthly["productType"], monthly["cadence"]), (149, "monthly", "month"))
+        self.assertEqual(monthly["classAllowance"], {"count": 4, "period": "month", "unlimited": False})
+        self.assertEqual(monthly["commitment"]["minimumMonths"], 3)
+        self.assertIn("four-monthly-3m", monthly["sourceProductAliases"])
+        self.assertTrue(monthly["ordinaryUse"])
+        self.assertEqual(monthly["exactLocationMatch"], "exact-location")
+        self.assertEqual((drop_in["amount"], drop_in["productType"], drop_in["cadence"]), (44, "drop-in", "visit"))
+        self.assertIn("class-drop-in", drop_in["sourceProductAliases"])
+        self.assertTrue(drop_in["ordinaryUse"])
+
+    def test_bookee_cards_keep_promotions_and_practice_only_memberships_ineligible(self) -> None:
+        intro_fixture = self.rendered_fixtures["bookeeIntroOffer"]
+        practice_fixture = self.rendered_fixtures["bookeePracticeMembership"]
+        intro = adapters.bookee_product_card_candidates(
+            intro_fixture["cardText"], intro_fixture["productName"], intro_fixture["displayedPrice"],
+            intro_fixture["url"], intro_fixture["serviceGroupId"], intro_fixture["locationLabel"],
+            intro_fixture["sectionLabel"],
+        )[0]
+        practice = adapters.bookee_product_card_candidates(
+            practice_fixture["cardText"], practice_fixture["productName"], practice_fixture["displayedPrice"],
+            practice_fixture["url"], practice_fixture["serviceGroupId"], practice_fixture["locationLabel"],
+            practice_fixture["sectionLabel"],
+        )[0]
+
+        self.assertTrue(intro["promotion"]["isPromotion"])
+        self.assertIn("intro-four", intro["sourceProductAliases"])
+        self.assertFalse(intro["ordinaryUse"])
+        self.assertEqual(practice["eligibility"]["type"], "practice-only")
+        self.assertEqual(practice["commitment"]["minimumMonths"], 6)
+        self.assertIn("open-studio-eight-monthly", practice["sourceProductAliases"])
+        self.assertFalse(practice["ordinaryUse"])
+
+    def test_bookee_open_studio_single_is_a_restricted_drop_in(self) -> None:
+        candidate = adapters.bookee_product_card_candidates(
+            "OPEN STUDIO X1\n$\n18\n1 credit\nCredit pack\nSan Francisco",
+            "OPEN STUDIO X1", "$18",
+            "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+            "5086", "San Francisco", "Open Studio",
+        )[0]
+
+        self.assertEqual((candidate["productType"], candidate["cadence"]), ("drop-in", "visit"))
+        self.assertEqual(candidate["eligibility"]["type"], "practice-only")
+        self.assertIn("open-studio-drop-in", candidate["sourceProductAliases"])
+        self.assertFalse(candidate["ordinaryUse"])
+
+    def test_bookee_class_pack_has_review_stable_semantic_alias(self) -> None:
+        candidate = adapters.bookee_product_card_candidates(
+            "Drop-In Class x5\n$\n205\n5 credit\nCredit pack\n3 months\nSan Francisco",
+            "Drop-In Class x5", "$205",
+            "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+            "5103", "San Francisco", "Drop-In Class Packs",
+        )[0]
+
+        self.assertEqual(candidate["productType"], "class-pack")
+        self.assertIn("five-class-pack", candidate["sourceProductAliases"])
+
+    def test_bookee_cards_fail_closed_without_bounded_identity_or_single_price(self) -> None:
+        fixture = self.rendered_fixtures["bookeeMonthlyMembership"]
+        self.assertEqual(
+            adapters.bookee_product_card_candidates(
+                fixture["cardText"], fixture["productName"], fixture["displayedPrice"],
+                fixture["url"], "", fixture["locationLabel"], fixture["sectionLabel"],
+            ),
+            [],
+        )
+        self.assertEqual(
+            adapters.bookee_product_card_candidates(
+                fixture["cardText"], fixture["productName"], "$149/month $30 add-on",
+                fixture["url"], fixture["serviceGroupId"], fixture["locationLabel"], fixture["sectionLabel"],
+            ),
+            [],
+        )
+
     def test_cents_prices_and_four_week_cadence_are_preserved(self) -> None:
         fixture = self.fixtures["momence"]
         candidate = adapters.extract_candidates(fixture["payload"], fixture["url"])[0]

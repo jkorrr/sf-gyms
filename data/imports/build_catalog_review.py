@@ -162,8 +162,12 @@ def plan_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
     label = " ".join(text(candidate.get("rawLabel")).split())[:160] or "Public plan"
     cadence = text(candidate.get("cadence")) or "month"
     commitment = candidate.get("commitment") if isinstance(candidate.get("commitment"), dict) else {}
+    aliases = list(dict.fromkeys(
+        text(value) for value in candidate.get("sourceProductAliases", []) if text(value)
+    ))
     result = {
         "sourceProductId": source_product_id(candidate),
+        **({"sourceProductAliases": aliases} if aliases else {}),
         "name": label,
         "productType": "class-membership" if candidate.get("classAllowance") else "membership",
         "accessScope": text(candidate.get("accessScope")) or "Scope must be confirmed from the linked official product card.",
@@ -187,8 +191,12 @@ def plan_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
 
 
 def drop_in_offer(candidate: dict[str, Any], observed_at: str) -> dict[str, Any]:
+    aliases = list(dict.fromkeys(
+        text(value) for value in candidate.get("sourceProductAliases", []) if text(value)
+    ))
     return {
         "sourceProductId": source_product_id(candidate),
+        **({"sourceProductAliases": aliases} if aliases else {}),
         "name": " ".join(text(candidate.get("rawLabel")).split())[:160] or "Single visit or class",
         "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
         "amount": float(candidate["amount"]),
@@ -267,17 +275,48 @@ def merge_with_approved_offers(
     merged = [copy.deepcopy(item) for item in approved if isinstance(item, dict)]
     index_by_key: dict[str, int] = {}
     for index, offer in enumerate(merged):
-        key = text(offer.get("sourceProductId")) or text(offer.get("name")).casefold()
-        if key:
-            index_by_key[key] = index
+        keys = [
+            text(offer.get("sourceProductId")) or text(offer.get("name")).casefold(),
+            *(text(value) for value in offer.get("sourceProductAliases", [])),
+        ]
+        for key in keys:
+            if key:
+                index_by_key[key] = index
     conflicts: list[dict[str, Any]] = []
-    for offer in observed:
-        key = text(offer.get("sourceProductId")) or text(offer.get("name")).casefold()
-        if not key or key not in index_by_key:
-            index_by_key[key] = len(merged)
-            merged.append(offer)
+    for raw_offer in observed:
+        offer = copy.deepcopy(raw_offer)
+        source_key = text(offer.get("sourceProductId")) or text(offer.get("name")).casefold()
+        aliases = [text(value) for value in offer.get("sourceProductAliases", []) if text(value)]
+        matching_indexes = {
+            index_by_key[key]
+            for key in [source_key, *aliases]
+            if key in index_by_key
+        }
+        if len(matching_indexes) > 1:
+            conflicts.append({
+                "type": "approved-source-product-alias-conflict",
+                "productType": group,
+                "sourceProductKey": source_key,
+                "aliases": aliases,
+                "approvedSourceProductIds": sorted(
+                    text(merged[index].get("sourceProductId")) for index in matching_indexes
+                ),
+                "publicationEffect": "fail-closed",
+            })
             continue
-        incumbent = merged[index_by_key[key]]
+        if not matching_indexes:
+            new_index = len(merged)
+            merged.append(offer)
+            for key in [source_key, *aliases]:
+                if key:
+                    index_by_key[key] = new_index
+            continue
+        incumbent_index = matching_indexes.pop()
+        incumbent = merged[incumbent_index]
+        canonical_key = text(incumbent.get("sourceProductId")) or text(incumbent.get("name")).casefold()
+        if source_key and source_key != canonical_key:
+            offer["sourceProductId"] = canonical_key
+            offer["sourceProductAliases"] = list(dict.fromkeys([source_key, *aliases]))
         incumbent_amount = incumbent.get("amount")
         observed_amount = offer.get("amount")
         if incumbent_amount is not None and observed_amount is not None:
@@ -285,14 +324,16 @@ def merge_with_approved_offers(
                 conflicts.append({
                     "type": "approved-source-product-price-conflict",
                     "productType": group,
-                    "sourceProductKey": key,
+                    "sourceProductKey": canonical_key,
                     "approvedAmount": float(incumbent_amount),
                     "observedAmount": float(observed_amount),
                     "publicationEffect": "fail-closed",
                 })
             continue
         if incumbent_amount is None and observed_amount is not None:
-            merged[index_by_key[key]] = offer
+            merged[incumbent_index] = offer
+    for offer in merged:
+        offer.pop("sourceProductAliases", None)
     return merged, conflicts
 
 

@@ -27,6 +27,7 @@ STATIC_ATTEMPTS_PATH = ROOT / "data" / "imports" / "official-crawl-attempts.json
 STATIC_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "official-crawl-observations.json"
 ATTEMPTS_PATH = ROOT / "data" / "imports" / "rendered-crawl-attempts.json"
 OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
+BROWSER_CAPTURES_PATH = ROOT / "data" / "imports" / "public-browser-captures.json"
 MAX_JSON_BYTES = 4_000_000
 PUBLIC_TAB_LABELS = {
     "membership", "memberships", "package", "packages", "pricing", "rates", "passes", "personal training",
@@ -164,6 +165,9 @@ def detect_access_blocker(title: str, visible_text: str, html: str = "") -> str:
         for phrase in ("security check", "verify you are human", "performing security verification", "just a moment")
     ):
         return "platform-security-check"
+    aws_waf_signal = "aws-waf-token" in sample or "sdk.awswaf.com" in sample
+    if aws_waf_signal and not text(visible_text):
+        return "platform-security-check"
     if "captcha" in visible_sample and any(phrase in visible_sample for phrase in ("verify", "security", "human")):
         return "captcha-required"
     if re.search(r"\b(?:sign in|log in)\b", title, re.IGNORECASE) and not re.search(
@@ -235,12 +239,22 @@ def render_target_urls(gym: dict[str, Any], attempts: list[dict[str, Any]]) -> l
     ]
     stable_location_slug = max(location_slugs, key=len, default="")
     values = list(seeds)
+    _price_base, price_fragment = urldefrag(text(gym.get("priceSourceUrl")))
+    bookee_pricing_fragment = (
+        price_fragment
+        if re.fullmatch(r"/pricing/r/\d{1,12}/loc/\d{1,12}/?", price_fragment, re.IGNORECASE)
+        else ""
+    )
     for attempt in attempts:
         attempt_url = text(attempt.get("url"))
         if text(attempt.get("status")) in {"robots-disallowed", "host-backoff-after-429"}:
             continue
-        is_platform = bool(static_crawler.platform_adapters.platform_for_url(attempt_url))
         parsed = urlparse(attempt_url) if static_crawler.is_public_http_url(attempt_url) else None
+        is_platform = bool(
+            parsed
+            and static_crawler.platform_adapters.platform_for_url(attempt_url)
+            and not re.search(r"/(?:public/)?forms?/", parsed.path, re.IGNORECASE)
+        )
         is_operator_research = bool(
             parsed
             and host(attempt_url) in operator_hosts
@@ -253,12 +267,28 @@ def render_target_urls(gym: dict[str, Any], attempts: list[dict[str, Any]]) -> l
         )
         if is_platform or is_operator_research:
             values.append(attempt_url)
+        # The operator's SPA fragment contains the public Bookee resource and
+        # location IDs, while an operator-linked Bookee URL establishes the
+        # tenant host. Combining those two reviewed facts produces the public
+        # catalog route without guessing a tenant, location, or product ID.
+        if bookee_pricing_fragment and static_crawler.platform_name(attempt_url) == "bookee":
+            parsed_platform = urlparse(attempt_url)
+            values.append(f"{parsed_platform.scheme}://{parsed_platform.netloc}{bookee_pricing_fragment}")
     result: list[str] = []
     seen: set[str] = set()
     for value in values:
         if not static_crawler.is_public_http_url(value):
             continue
-        normalized_url = urldefrag(value)[0]
+        defragmented, fragment = urldefrag(value)
+        # Bookee's public embedded catalog is an SPA route. Removing this
+        # reviewed pricing fragment silently loads the class schedule and
+        # makes the complete catalog disappear. Preserve only the narrow,
+        # read-only pricing route; checkout, login, and arbitrary fragments
+        # remain stripped.
+        if re.fullmatch(r"/pricing/r/\d{1,12}/loc/\d{1,12}/?", fragment, re.IGNORECASE):
+            normalized_url = f"{defragmented}#{fragment}"
+        else:
+            normalized_url = defragmented
         if normalized_url in seen:
             continue
         seen.add(normalized_url)
@@ -352,6 +382,69 @@ def rendered_observation(
     return observation
 
 
+def public_browser_capture_observations(
+    document: dict[str, Any],
+    captures_document: dict[str, Any],
+    processed_gym_ids: set[str],
+) -> list[dict[str, Any]]:
+    """Validate compact public-browser captures and route them through adapters.
+
+    This is the fail-closed fallback for a public widget whose bot-protection
+    blocks fresh headless sessions. Captures contain no HTML, cookies, tokens,
+    contact details, or account state. They remain review-only and retain the
+    original observation date rather than masquerading as a fresh live crawl.
+    """
+
+    gyms_by_id = {text(gym.get("id")): gym for gym in document.get("gyms", [])}
+    observations: list[dict[str, Any]] = []
+    for capture in captures_document.get("captures", []):
+        gym_id = text(capture.get("gymId"))
+        gym = gyms_by_id.get(gym_id)
+        source_url = text(capture.get("sourceUrl"))
+        catalog_source_url = text(capture.get("catalogSourceUrl"))
+        captured_at = text(capture.get("capturedAt"))
+        if (
+            gym_id not in processed_gym_ids
+            or not gym
+            or gym.get("publicationStatus") != "publish"
+            or static_crawler.platform_name(source_url) != "bookee"
+            or not re.search(r"/pricing/r/\d{1,12}/loc/\d{1,12}/?$", urlparse(source_url).path, re.IGNORECASE)
+            or catalog_source_url not in {
+                text(gym.get("priceSourceUrl")), text(gym.get("officialUrl")), text(gym.get("websiteUrl")),
+            }
+            or not allowed_network_response(catalog_source_url, source_url)
+            or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", captured_at)
+        ):
+            continue
+        cards = capture.get("cards")
+        if not isinstance(cards, list) or not 1 <= len(cards) <= 150:
+            continue
+        for card in cards:
+            if not isinstance(card, dict):
+                continue
+            compact_card = {
+                key: text(card.get(key))
+                for key in (
+                    "serviceGroupId", "productName", "displayedPrice", "locationLabel",
+                    "sectionLabel", "cardText",
+                )
+            }
+            digest = hashlib.sha256(
+                json.dumps(compact_card, sort_keys=True, ensure_ascii=False).encode("utf-8")
+            ).hexdigest()
+            candidates = static_crawler.platform_adapters.bookee_product_card_candidates(
+                compact_card["cardText"], compact_card["productName"], compact_card["displayedPrice"],
+                source_url, compact_card["serviceGroupId"], compact_card["locationLabel"],
+                compact_card["sectionLabel"],
+            )
+            for candidate in candidates:
+                candidate["method"] = "captured-public-bookee-product-card"
+                candidate["contentHash"] = digest
+                candidate["cardAssociationHash"] = digest
+                observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
+    return observations
+
+
 def operator_product_key(candidate: dict[str, Any]) -> tuple[str, str, float] | None:
     """Identify one stable public platform product across API and DOM views."""
 
@@ -427,6 +520,51 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     availability_signal = ""
     page_title = ""
 
+    def capture_bookee_cards(container: Any, source_url: str) -> list[dict[str, Any]]:
+        """Capture bounded public Bookee cards from a page or embedded frame."""
+
+        candidates: list[dict[str, Any]] = []
+        cards = container.locator("[service_group_id]:has(h3)").all()[:150]
+        adapter_metrics["bookeeProductCardCount"] = adapter_metrics.get("bookeeProductCardCount", 0) + len(cards)
+        for card in cards:
+            try:
+                if not card.is_visible():
+                    continue
+                heading = card.locator("h3").first
+                name = heading.inner_text(timeout=500)
+                price = heading.locator("xpath=following-sibling::*[1]").inner_text(timeout=500)
+                service_group_id = text(card.get_attribute("service_group_id"))
+                location_label = ""
+                for titled in card.locator("[title]").all()[:20]:
+                    label = " ".join(text(titled.get_attribute("title")).split())
+                    if label and label != " ".join(name.split()):
+                        location_label = label
+                        break
+                section_label = text(card.evaluate(
+                    "element => element.closest('section')?.querySelector('h2')?.innerText || ''"
+                ))
+                card_text = card.inner_text(timeout=700)
+                card_digest = hashlib.sha256(card_text.encode("utf-8")).hexdigest()
+                card_candidates = (
+                    static_crawler.platform_adapters.bookee_product_card_candidates(
+                        card_text,
+                        name,
+                        price,
+                        source_url,
+                        service_group_id,
+                        location_label,
+                        section_label,
+                    )
+                )
+                for candidate in card_candidates:
+                    candidate["contentHash"] = card_digest
+                    candidate["cardAssociationHash"] = card_digest
+                candidates.extend(card_candidates)
+            except Exception:
+                continue
+        adapter_metrics["bookeeCandidateCount"] = adapter_metrics.get("bookeeCandidateCount", 0) + len(candidates)
+        return candidates
+
     def capture_visible_state() -> str:
         try:
             current_visible = page.locator("body").inner_text(timeout=timeout_ms)
@@ -496,7 +634,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         # summary prices. Waiting for that operator-owned DOM prevents the
         # early summary amounts from being mistaken for complete plan cards.
         platform = static_crawler.platform_name(url)
-        dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "momence", "pushpress", "jane"}
+        dynamic_platform = platform in {"approach", "bookee", "mariana-tek", "xponential-member-app", "mindbody", "momence", "pushpress", "jane"}
         page.wait_for_timeout(
             4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com", "solidcore.co")) else 1500
         )
@@ -525,6 +663,13 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     adapter_metrics["publicPlatformFrameReady"] = 1
                     break
                 page.wait_for_timeout(500)
+        if platform == "bookee":
+            try:
+                page.locator("[service_group_id]:has(h3)").first.wait_for(
+                    state="visible", timeout=min(15_000, timeout_ms)
+                )
+            except Exception:
+                pass
         if static_crawler.platform_name(url) == "approach":
             choices: list[tuple[int, Any]] = []
             for button in page.locator("button").all()[:100]:
@@ -710,6 +855,8 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                     )
                 except Exception:
                     continue
+        if platform == "bookee":
+            platform_card_candidates.extend(capture_bookee_cards(page, page.url))
         linked_cards = page.eval_on_selector_all(
             "a[href*='prod'], a[href*='product'], a[href*='plan'], "
             "a[href*='service'], a[href*='item'], a[href*='k_id']",
@@ -912,7 +1059,10 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                 continue
             frame_platform = static_crawler.platform_adapters.platform_for_url(text(frame.url))
             frame_candidates: list[dict[str, Any]] = []
-            if frame_platform == "mariana-tek":
+            if frame_platform == "bookee":
+                frame_candidates = capture_bookee_cards(frame, text(frame.url))
+                platform_card_candidates.extend(frame_candidates)
+            elif frame_platform == "mariana-tek":
                 location_label = ""
                 try:
                     heading = frame.locator("h1").first
@@ -1143,8 +1293,16 @@ def main() -> int:
         finally:
             browser.close()
     run_attempts = attempts
-    run_observations = observations
     processed_gym_ids = {text(gym.get("id")) for gym in gyms}
+    captures_document = (
+        json.loads(BROWSER_CAPTURES_PATH.read_text(encoding="utf-8"))
+        if BROWSER_CAPTURES_PATH.exists()
+        else {"captures": []}
+    )
+    capture_observations = public_browser_capture_observations(
+        document, captures_document, processed_gym_ids,
+    )
+    run_observations = observations + capture_observations
     attempts, observations = merge_incremental_results(
         existing_attempts_document.get("attempts", []),
         existing_observations_document.get("observations", []),
@@ -1181,7 +1339,12 @@ def main() -> int:
         "ordinaryPricesRemainAuthoritative": True,
         "includesRenderedEvidence": True,
     })
-    print(json.dumps({"candidateGyms": len(gyms), "attempts": len(run_attempts), "observations": len(run_observations), "dealCandidates": len(deals), "reviewRequired": sum(bool(item.get("requiresReview")) for item in run_attempts)}, sort_keys=True))
+    print(json.dumps({
+        "candidateGyms": len(gyms), "attempts": len(run_attempts),
+        "observations": len(run_observations), "browserCaptureObservations": len(capture_observations),
+        "dealCandidates": len(deals),
+        "reviewRequired": sum(bool(item.get("requiresReview")) for item in run_attempts),
+    }, sort_keys=True))
     return 0
 
 

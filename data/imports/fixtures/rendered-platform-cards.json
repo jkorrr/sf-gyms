@@ -62,6 +62,42 @@
     "locationLabel": "Castro",
     "cardText": "40-Class Pack\n$1,110\n.00\n40\nclasses\nDeepen your practice and save."
   },
+  "bookeeMonthlyMembership": {
+    "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+    "serviceGroupId": "7800",
+    "productName": "Monthly Membership (4x Classes, 3M)",
+    "displayedPrice": "$\n149/month",
+    "locationLabel": "San Francisco",
+    "sectionLabel": "Monthly Memberships (3 Month Commitment)",
+    "cardText": "Monthly Membership (4x Classes, 3M)\n$\n149/month\n4 credit\nSubscription\nRenews in 1 month\nSan Francisco\nThis membership requires a 3-month commitment.\nUp to 2 rollover credits per month\n$30 for additional drop-in classes"
+  },
+  "bookeeDropIn": {
+    "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+    "serviceGroupId": "5103",
+    "productName": "Drop-In Class x1",
+    "displayedPrice": "$\n44",
+    "locationLabel": "San Francisco",
+    "sectionLabel": "Drop-In Class Packs",
+    "cardText": "Drop-In Class x1\n$\n44\n1 credit\nCredit pack\n1 month\nSan Francisco\nA single drop-in class that can be applied to any weekly class."
+  },
+  "bookeeIntroOffer": {
+    "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+    "serviceGroupId": "5484",
+    "productName": "Intro Offer: 4-Class Pack (2 WEEK EXPIRATION)",
+    "displayedPrice": "$\n79",
+    "locationLabel": "San Francisco",
+    "sectionLabel": "Intro Offers",
+    "cardText": "Intro Offer: 4-Class Pack (2 WEEK EXPIRATION)\n$\n79\n4 credit\nCredit pack\n2 weeks\nSan Francisco\nAvailable to anyone new to the studio."
+  },
+  "bookeePracticeMembership": {
+    "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+    "serviceGroupId": "5086",
+    "productName": "Monthly Training Membership (8 Open Studio, 6 M)",
+    "displayedPrice": "$\n100/month",
+    "locationLabel": "San Francisco",
+    "sectionLabel": "Open Studio",
+    "cardText": "Monthly Training Membership (8 Open Studio, 6 M)\n$\n100/month\n8 credit\nSubscription\nRenews in 1 month\nSan Francisco\nThis membership requires a 6-month commitment."
+  },
   "wixMonthlyMembership": {
     "url": "https://www.musclebeachsf.com/plans-pricing-1",
     "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=31391&stype=40&prodid=113",

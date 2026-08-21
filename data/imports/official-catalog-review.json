@@ -2,8 +2,8 @@
   "_meta": {
     "generatedAt": "2026-08-21",
     "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
-    "proposalCount": 96,
-    "unchangedApprovedCount": 16,
+    "proposalCount": 94,
+    "unchangedApprovedCount": 19,
     "rejectedUnattachedObservationCount": 822
   },
   "proposals": [
@@ -831,55 +831,6 @@
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "102",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "100",
-          "name": "Month to Month No Contract — USD 220 per 4 weeks — Unlimited classes and open gym access — enrollment fee USD 75 — No contract; cancel any time",
-          "productType": "class-membership",
-          "accessScope": "Unlimited classes and open gym access",
-          "scopeType": "single-location",
-          "amount": 220.0,
-          "currency": "USD",
-          "billingInterval": "4 weeks",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "4 weeks",
-            "unlimited": true
-          },
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "enrollment",
-              "amount": 75.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.hitfitsf.com/purchase",
-            "observedAt": "2026-08-21",
-            "source": "squarespace-fluid-grid",
-            "method": "rendered-squarespace-fluid-card",
-            "rawLabel": "Month to Month No Contract — USD 220 per 4 weeks — Unlimited classes and open gym access — enrollment fee USD 75 — No contract; cancel any time",
-            "contentHash": "594a139684702228c8234eb66b8f098a83ca1c4f6d67fccdb27d8ec8199a7c1e",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "100",
             "conflictFlags": []
           }
         },
@@ -3651,6 +3602,316 @@
       }
     },
     {
+      "gymId": "osm-node-1364959516",
+      "gymName": "VRV3 Studios",
+      "canonicalAddress": "520 haight st",
+      "operatorId": "vrv3studios.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+        "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "four-monthly-3m",
+          "name": "Monthly Membership — Four Classes, Three Months",
+          "accessScope": "Four pole, aerial, dance, conditioning, or flexibility classes monthly",
+          "scopeType": "single-location",
+          "classAllowance": 4,
+          "amount": 149,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "eight-monthly-3m",
+          "name": "Monthly Membership — Eight Classes, Three Months",
+          "accessScope": "Eight pole, aerial, dance, conditioning, or flexibility classes monthly",
+          "scopeType": "single-location",
+          "classAllowance": 8,
+          "amount": 270,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "twelve-monthly-3m",
+          "name": "Monthly Membership — Twelve Classes, Three Months",
+          "accessScope": "Twelve pole, aerial, dance, conditioning, or flexibility classes monthly",
+          "scopeType": "single-location",
+          "classAllowance": 12,
+          "amount": 359,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 3,
+          "fees": []
+        },
+        {
+          "sourceProductId": "four-monthly-12m",
+          "name": "Monthly Membership — Four Classes, Twelve Months",
+          "accessScope": "Four pole, aerial, dance, conditioning, or flexibility classes monthly",
+          "scopeType": "single-location",
+          "classAllowance": 4,
+          "amount": 139,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "eight-monthly-12m",
+          "name": "Monthly Membership — Eight Classes, Twelve Months",
+          "accessScope": "Eight pole, aerial, dance, conditioning, or flexibility classes monthly",
+          "scopeType": "single-location",
+          "classAllowance": 8,
+          "amount": 250,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "twelve-monthly-12m",
+          "name": "Monthly Membership — Twelve Classes, Twelve Months",
+          "accessScope": "Twelve pole, aerial, dance, conditioning, or flexibility classes monthly",
+          "scopeType": "single-location",
+          "classAllowance": 12,
+          "amount": 339,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "unlimited-monthly-12m",
+          "name": "Unlimited Monthly Membership — Twelve Months",
+          "accessScope": "Unlimited instructed classes, skill labs, and open-studio access",
+          "scopeType": "single-location",
+          "classAllowance": "unlimited",
+          "amount": 400,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": []
+        },
+        {
+          "sourceProductId": "open-studio-eight-monthly",
+          "name": "Monthly Training Membership — Eight Open-Studio Sessions",
+          "accessScope": "Eight independent open-studio practice sessions monthly",
+          "scopeType": "single-location",
+          "classAllowance": 8,
+          "amount": 100,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 6,
+          "eligibility": {
+            "type": "practice-only",
+            "restrictions": [
+              "Does not provide ordinary instructed-class access"
+            ]
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "intro-four",
+          "name": "Intro Four-Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Four classes for a client new to the studio, expiring after two weeks",
+          "classAllowance": 4,
+          "amount": 79,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": true,
+            "label": "New-studio-client introductory offer"
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "intro-unlimited-two-week",
+          "name": "Intro Two-Week Unlimited",
+          "productType": "class-pack",
+          "accessScope": "Unlimited classes for two weeks for a client new to the studio",
+          "classAllowance": "unlimited",
+          "amount": 139,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": true,
+            "label": "New-studio-client introductory offer"
+          },
+          "fees": []
+        },
+        {
+          "sourceProductId": "five-class-pack",
+          "name": "Five-Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Five non-recurring classes expiring after two months",
+          "classAllowance": 5,
+          "amount": 205,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "ten-class-pack",
+          "name": "Ten-Class Pack",
+          "productType": "class-pack",
+          "accessScope": "Ten non-recurring classes expiring after three months",
+          "classAllowance": 10,
+          "amount": 400,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": []
+        },
+        {
+          "sourceProductId": "5320-60-min-party",
+          "name": "Parties & Rentals — 60 Min Party — USD 300 per one-time — San Francisco",
+          "productType": "class-membership",
+          "accessScope": "60 Min Party",
+          "scopeType": "single-location",
+          "amount": 300.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 1,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "special-event",
+            "restrictions": [
+              "Private event or facility rental"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+            "observedAt": "2026-08-21",
+            "source": "bookee",
+            "method": "captured-public-bookee-product-card",
+            "rawLabel": "Parties & Rentals — 60 Min Party — USD 300 per one-time — San Francisco",
+            "contentHash": "6325c6c19725bbc8843c8745aef7890f7d96ddf0a372a5fe8fae992cd578b5d6",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "5320-60-min-party",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "5320-90-min-party",
+          "name": "Parties & Rentals — 90 Min Party — USD 350 per one-time — San Francisco",
+          "productType": "class-membership",
+          "accessScope": "90 Min Party",
+          "scopeType": "single-location",
+          "amount": 350.0,
+          "currency": "USD",
+          "billingInterval": "one-time",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 1,
+            "period": "purchase",
+            "unlimited": false
+          },
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "special-event",
+            "restrictions": [
+              "Private event or facility rental"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+            "observedAt": "2026-08-21",
+            "source": "bookee",
+            "method": "captured-public-bookee-product-card",
+            "rawLabel": "Parties & Rentals — 90 Min Party — USD 350 per one-time — San Francisco",
+            "contentHash": "b8cfe895a51c84ad17fa51750f3fdbc78abad38672ae58596714ccb0b1b2c2c3",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "5320-90-min-party",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "class-drop-in",
+          "name": "Drop-In Class",
+          "accessScope": "One ordinary weekly pole, aerial, dance, flexibility, or conditioning class",
+          "amount": 44
+        },
+        {
+          "sourceProductId": "open-studio-drop-in",
+          "name": "Open-Studio Practice",
+          "accessScope": "One independent practice session without instruction",
+          "amount": 18,
+          "eligibility": {
+            "type": "practice-only",
+            "restrictions": [
+              "Does not provide ordinary instructed-class access"
+            ]
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 149.0,
+        "dayPassPrice": 44.0,
+        "selectedPlanId": "osm-node-1364959516:plan:four-monthly-3m",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": true,
+        "planOfferCount": 12,
+        "dropInOfferCount": 2,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "osm-node-13743991602",
       "gymName": "Muscle Beach",
       "canonicalAddress": "4027 noriega st",
@@ -3759,126 +4020,6 @@
           }
         },
         {
-          "sourceProductId": "10053",
-          "name": "Week Pass — USD 70 — one-time",
-          "productType": "membership",
-          "accessScope": "Week Pass",
-          "scopeType": "single-location",
-          "amount": 70.0,
-          "currency": "USD",
-          "billingInterval": "one-time",
-          "intervalCount": 1,
-          "commitmentType": "none",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Week Pass — USD 70 — one-time",
-            "contentHash": "78bfe78f69f0e04ffab61011d2748086aa47acac345b72eadeb1daa65f7acfc0",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10053",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "113",
-          "name": "Monthly Individual Membership — USD 125 — month — Unlimited",
-          "productType": "class-membership",
-          "accessScope": "Monthly Individual Membership",
-          "scopeType": "multi-location",
-          "amount": 125.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Monthly Individual Membership — USD 125 — month — Unlimited",
-            "contentHash": "1bf5eb75a8837f7caaf28535c271d28b4d04a3f78ff2a6ea02b1ea6e71004b2b",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-catalog",
-            "sourceProductId": "113",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "114",
-          "name": "Monthly Couples Membership — USD 200 — month — Unlimited",
-          "productType": "class-membership",
-          "accessScope": "Monthly Couples Membership",
-          "scopeType": "multi-location",
-          "amount": 200.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "household",
-            "restrictions": [
-              "Two-person household membership"
-            ]
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Monthly Couples Membership — USD 200 — month — Unlimited",
-            "contentHash": "a165c806d209f34287a2606adac0de780ce550c39dda183812061cc457b6db2a",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-catalog",
-            "sourceProductId": "114",
-            "conflictFlags": []
-          }
-        },
-        {
           "sourceProductId": "109",
           "name": "Annual Individual Membership — USD 1250 — year — Unlimited",
           "productType": "class-membership",
@@ -3975,35 +4116,6 @@
           "sourceProductId": "week-pass",
           "name": "Seven-Day Pass",
           "amount": 70
-        },
-        {
-          "sourceProductId": "10044",
-          "name": "Day Pass — USD 30 — visit",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 30.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Day Pass — USD 30 — visit",
-            "contentHash": "47579fcc6e908e91db4f3a7dbb3921dc10b82cffb511dc3256dfdf9a93be6717",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10044",
-            "conflictFlags": []
-          }
         }
       ],
       "costContextOffers": [],
@@ -5373,47 +5485,6 @@
             "label": "New-client offer"
           },
           "fees": []
-        },
-        {
-          "sourceProductId": "7443",
-          "name": "AUTO-PAY 2X/WEEK SEMI - PRIVATE MEMBERSHIP — USD 460 per 4 weeks — Unlimited classes and open gym access",
-          "productType": "class-membership",
-          "accessScope": "Unlimited classes and open gym access",
-          "scopeType": "single-location",
-          "amount": 460.0,
-          "currency": "USD",
-          "billingInterval": "4 weeks",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 8,
-            "period": "4 weeks",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.ironandmettlefitness.com/pricing",
-            "observedAt": "2026-08-21",
-            "source": "squarespace-fluid-grid",
-            "method": "rendered-squarespace-fluid-card",
-            "rawLabel": "AUTO-PAY 2X/WEEK SEMI - PRIVATE MEMBERSHIP — USD 460 per 4 weeks — Unlimited classes and open gym access",
-            "contentHash": "d5782ac70594ef5d6780f4c7982e20e7d21735aab7197f734e8f701070d20022",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "7443",
-            "conflictFlags": []
-          }
         }
       ],
       "dropInOffers": [
@@ -5646,48 +5717,6 @@
           }
         },
         {
-          "sourceProductId": "memberships-4x-a-month",
-          "name": "MEMBERSHIPS — 4X A MONTH — USD 129 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-          "productType": "class-membership",
-          "accessScope": "4 classes per month",
-          "scopeType": "single-location",
-          "amount": 129.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 4,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "minimum-term",
-          "minimumCommitmentMonths": 3,
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/marina/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — 4X A MONTH — USD 129 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-            "contentHash": "85afe5940545d0cf424d6d6e1eb2345f0cdf4fc1df1c1093d15d7ff58123d213",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-4x-a-month",
-            "conflictFlags": []
-          }
-        },
-        {
           "sourceProductId": "intro-offers-unlimited",
           "name": "INTRO OFFERS — UNLIMITED — USD 149 — 30 Day Expiration",
           "productType": "class-membership",
@@ -5727,173 +5756,6 @@
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "intro-offers-unlimited",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "class-packages-5-classes",
-          "name": "CLASS PACKAGES — 5 CLASSES — USD 169 — 6 Month Expiration",
-          "productType": "class-membership",
-          "accessScope": "5 CLASSES",
-          "scopeType": "single-location",
-          "amount": 169.0,
-          "currency": "USD",
-          "billingInterval": "one-time",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 5,
-            "period": "purchase",
-            "unlimited": false
-          },
-          "commitmentType": "none",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/marina/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "CLASS PACKAGES — 5 CLASSES — USD 169 — 6 Month Expiration",
-            "contentHash": "2eeb7113373c4d0b366c424e0338b3d78ed6045cc17f46467206dae4b437a497",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "class-packages-5-classes",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "memberships-8x-a-month",
-          "name": "MEMBERSHIPS — 8X A MONTH — USD 189 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-          "productType": "class-membership",
-          "accessScope": "8 classes per month",
-          "scopeType": "single-location",
-          "amount": 189.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 8,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "minimum-term",
-          "minimumCommitmentMonths": 3,
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/marina/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — 8X A MONTH — USD 189 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-            "contentHash": "1c8648b1c41a6ecffe15436f4d6e06ff80f93acecd26f24a1566bf337ed57e0c",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-8x-a-month",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "memberships-12x-a-month",
-          "name": "MEMBERSHIPS — 12X A MONTH — USD 239 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-          "productType": "class-membership",
-          "accessScope": "12 classes per month",
-          "scopeType": "single-location",
-          "amount": 239.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 12,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "minimum-term",
-          "minimumCommitmentMonths": 3,
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/marina/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — 12X A MONTH — USD 239 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-            "contentHash": "8de1623bb737b79a9490943991036337e0fac138b17cdfeb9efd8fbce5c8442b",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-12x-a-month",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "memberships-unlimited",
-          "name": "MEMBERSHIPS — UNLIMITED — USD 279 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-          "productType": "class-membership",
-          "accessScope": "Unlimited classes per month",
-          "scopeType": "single-location",
-          "amount": 279.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "minimum-term",
-          "minimumCommitmentMonths": 3,
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/marina/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — UNLIMITED — USD 279 — 3 Month Commitment. 30 Day Cancellation. — 3 Month Commitment",
-            "contentHash": "1ece6d0965595b1e5d61c0ad45dc376afb0f8448db02a07f2809e120a99dc28f",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-unlimited",
             "conflictFlags": []
           }
         },
@@ -6031,7 +5893,30 @@
         "dropIns": "partial"
       },
       "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
-      "conflicts": [],
+      "conflicts": [
+        {
+          "type": "approved-source-product-price-conflict",
+          "productType": "plan",
+          "sourceProductKey": "intro-offers-5-classes",
+          "approvedAmount": 99.0,
+          "observedAmount": 169.0,
+          "publicationEffect": "fail-closed"
+        },
+        {
+          "type": "approved-source-product-alias-conflict",
+          "productType": "plan",
+          "sourceProductKey": "memberships-unlimited",
+          "aliases": [
+            "unlimited",
+            "unlimited-monthly"
+          ],
+          "approvedSourceProductIds": [
+            "intro-offers-unlimited",
+            "unlimited-monthly"
+          ],
+          "publicationEffect": "fail-closed"
+        }
+      ],
       "reviewChecklist": {
         "exactLocation": false,
         "standardAdultEligibility": false,
@@ -6118,129 +6003,6 @@
           "commitmentType": "fixed-term",
           "minimumCommitmentMonths": 12,
           "fees": []
-        },
-        {
-          "sourceProductId": "194",
-          "name": "4 Class Pack — USD 109 per month — 4 classes per month",
-          "productType": "class-membership",
-          "accessScope": "4 classes per month",
-          "scopeType": "single-location",
-          "amount": 109.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 4,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "4 Class Pack — USD 109 per month — 4 classes per month",
-            "contentHash": "1245ab1e08b01284af9dff9238b411898dc9e5f215f5272c0d750e472696bec6",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "194",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "177",
-          "name": "8 Class Pack — USD 189 per month — 8 classes per month",
-          "productType": "class-membership",
-          "accessScope": "8 classes per month",
-          "scopeType": "single-location",
-          "amount": 189.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 8,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "8 Class Pack — USD 189 per month — 8 classes per month",
-            "contentHash": "a40187484738ac437d81c94e218332be5d93ff05100f9895c49b0b0f73ce3ed2",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "177",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "178",
-          "name": "Unlimited — USD 229 per month — Unlimited access per month",
-          "productType": "class-membership",
-          "accessScope": "Unlimited access per month",
-          "scopeType": "single-location",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "Unlimited — USD 229 per month — Unlimited access per month",
-            "contentHash": "434e86e80dd2e0644cdc04e94acb215cdb4ebda42f3046fae3b43665ec9642b8",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "178",
-            "conflictFlags": []
-          }
         },
         {
           "sourceProductId": "205",
@@ -6370,48 +6132,6 @@
             "sourceProductId": "180",
             "conflictFlags": []
           }
-        },
-        {
-          "sourceProductId": "10467",
-          "name": "Annual Membership — USD 2399 per year — Unlimited access per year — Annual purchase",
-          "productType": "class-membership",
-          "accessScope": "Unlimited access per year",
-          "scopeType": "single-location",
-          "amount": 2399.0,
-          "currency": "USD",
-          "billingInterval": "year",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "year",
-            "unlimited": true
-          },
-          "commitmentType": "fixed-term",
-          "minimumCommitmentMonths": 12,
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "Annual Membership — USD 2399 per year — Unlimited access per year — Annual purchase",
-            "contentHash": "6ac4842f19058a68bcee1a02ee08114ff9a68b42cf4b8c2206e4c88902bd6fcf",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10467",
-            "conflictFlags": []
-          }
         }
       ],
       "dropInOffers": [
@@ -6446,35 +6166,6 @@
             "evidenceTier": "official-public",
             "exactLocationMatch": "candidate",
             "sourceProductId": "card-a5877467f7a73fd9",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "10102",
-          "name": "Drop-In — USD 30 per visit",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 30.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.yubalance.com/noe-valley/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "Drop-In — USD 30 per visit",
-            "contentHash": "5aef1938303d8236ecfeb7a73509553a0a840b0c4f24da47ae9879b51c349a3b",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10102",
             "conflictFlags": []
           }
         },
@@ -7204,6 +6895,9 @@
       "planOffers": [
         {
           "sourceProductId": "597762",
+          "sourceProductAliases": [
+            "soulcycle-starter-1-classes"
+          ],
           "name": "SoulCycle Starter 1 Classes — 1 New Rider Take your first ride at SOUL at a reduced rate. New Rider 1 Class $25 Let's Ride SOULCYCLE New Rider $25 Dollars Expir",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7245,6 +6939,9 @@
         },
         {
           "sourceProductId": "634444",
+          "sourceProductAliases": [
+            "soulcycle-student-1-classes"
+          ],
           "name": "SoulCycle Student 1 Classes — 1 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for ",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7288,6 +6985,9 @@
         },
         {
           "sourceProductId": "596483",
+          "sourceProductAliases": [
+            "soulcycle-starter-3-classes"
+          ],
           "name": "SoulCycle Starter 3 Classes — 3 SOULCYCLE Starter After your first class, keep riding with The Starter Pack —three classes at a special price, just for you!* *O",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7329,6 +7029,9 @@
         },
         {
           "sourceProductId": "654004",
+          "sourceProductAliases": [
+            "soulcycle-starter-unlimited"
+          ],
           "name": "SoulCycle Starter Unlimited — ∞ Unlimited Starter San Francisco Ride once a day for 2 weeks with a special introductory price. Includes a $15 no show fee. SOULC",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7370,6 +7073,9 @@
         },
         {
           "sourceProductId": "652214",
+          "sourceProductAliases": [
+            "soul-renew-4"
+          ],
           "name": "Soul Renew 4 — 4 4 Classes $127 Let's Ride Soul Renew SF $127 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7411,6 +7117,9 @@
         },
         {
           "sourceProductId": "634445",
+          "sourceProductAliases": [
+            "soulcycle-student-5-classes"
+          ],
           "name": "SoulCycle Student 5 Classes — 5 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for ",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7454,6 +7163,9 @@
         },
         {
           "sourceProductId": "596479",
+          "sourceProductAliases": [
+            "soulcycle-5-classes"
+          ],
           "name": "SoulCycle 5 Classes — 5 SOULCYCLE 5 Classes $185 Let's Ride SOULCYCLE 5 Classes $185 Dollars Expires in 45 days",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7495,6 +7207,9 @@
         },
         {
           "sourceProductId": "652215",
+          "sourceProductAliases": [
+            "soul-renew-8"
+          ],
           "name": "Soul Renew 8 — 8 8 Classes $245 Let's Ride Soul Renew SF $245 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7536,6 +7251,9 @@
         },
         {
           "sourceProductId": "634446",
+          "sourceProductAliases": [
+            "soulcycle-student-10-classes"
+          ],
           "name": "SoulCycle Student 10 Classes — 10 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible fo",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7579,6 +7297,9 @@
         },
         {
           "sourceProductId": "652216",
+          "sourceProductAliases": [
+            "soul-renew-12"
+          ],
           "name": "Soul Renew 12 — 12 12 Classes $355 Let's Ride Soul Renew SF $355 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7620,6 +7341,9 @@
         },
         {
           "sourceProductId": "596480",
+          "sourceProductAliases": [
+            "soulcycle-10-classes"
+          ],
           "name": "SoulCycle 10 Classes — 10 SOULCYCLE 10 Classes $365 Let's Ride SOULCYCLE 10 Classes $365 Dollars Expires in 3 months",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7661,6 +7385,9 @@
         },
         {
           "sourceProductId": "652217",
+          "sourceProductAliases": [
+            "soul-renew-16"
+          ],
           "name": "Soul Renew 16 — 16 16 Classes $456 Let's Ride Soul Renew SF $456 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7702,6 +7429,9 @@
         },
         {
           "sourceProductId": "596481",
+          "sourceProductAliases": [
+            "soulcycle-20-classes"
+          ],
           "name": "SoulCycle 20 Classes — 20 SOULCYCLE 20 Classes $710 Let's Ride SOULCYCLE 20 Classes $710 Dollars Expires in 9 months",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7743,6 +7473,9 @@
         },
         {
           "sourceProductId": "596482",
+          "sourceProductAliases": [
+            "soulcycle-30-classes"
+          ],
           "name": "SoulCycle 30 Classes — 30 SOULCYCLE 30 Classes $1,020 Let's Ride SOULCYCLE 30 Classes $1,020 Dollars Expires in 12 months",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7784,6 +7517,9 @@
         },
         {
           "sourceProductId": "596484",
+          "sourceProductAliases": [
+            "soulcycle-50-classes"
+          ],
           "name": "SoulCycle 50 Classes — 50 SuperSoul Allows riders to reserve classes in advance of sign-ups. Includes full concierge service and priority on waitlists. Learn mo",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -7827,6 +7563,9 @@
       "dropInOffers": [
         {
           "sourceProductId": "596478",
+          "sourceProductAliases": [
+            "single-class"
+          ],
           "name": "Single Class — 1 SOULCYCLE 1 Class $38 Let's Ride SOULCYCLE 1 Class $38 Dollars Expires in 30 days",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 38.0,
@@ -8146,126 +7885,6 @@
           }
         },
         {
-          "sourceProductId": "10053",
-          "name": "Week Pass — USD 70 — one-time",
-          "productType": "membership",
-          "accessScope": "Week Pass",
-          "scopeType": "single-location",
-          "amount": 70.0,
-          "currency": "USD",
-          "billingInterval": "one-time",
-          "intervalCount": 1,
-          "commitmentType": "none",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Week Pass — USD 70 — one-time",
-            "contentHash": "78bfe78f69f0e04ffab61011d2748086aa47acac345b72eadeb1daa65f7acfc0",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10053",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "113",
-          "name": "Monthly Individual Membership — USD 125 — month — Unlimited",
-          "productType": "class-membership",
-          "accessScope": "Monthly Individual Membership",
-          "scopeType": "multi-location",
-          "amount": 125.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Monthly Individual Membership — USD 125 — month — Unlimited",
-            "contentHash": "1bf5eb75a8837f7caaf28535c271d28b4d04a3f78ff2a6ea02b1ea6e71004b2b",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-catalog",
-            "sourceProductId": "113",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "114",
-          "name": "Monthly Couples Membership — USD 200 — month — Unlimited",
-          "productType": "class-membership",
-          "accessScope": "Monthly Couples Membership",
-          "scopeType": "multi-location",
-          "amount": 200.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "household",
-            "restrictions": [
-              "Two-person household membership"
-            ]
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Monthly Couples Membership — USD 200 — month — Unlimited",
-            "contentHash": "a165c806d209f34287a2606adac0de780ce550c39dda183812061cc457b6db2a",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "operator-market-catalog",
-            "sourceProductId": "114",
-            "conflictFlags": []
-          }
-        },
-        {
           "sourceProductId": "109",
           "name": "Annual Individual Membership — USD 1250 — year — Unlimited",
           "productType": "class-membership",
@@ -8362,35 +7981,6 @@
           "sourceProductId": "week-pass",
           "name": "Seven-Day Pass",
           "amount": 70
-        },
-        {
-          "sourceProductId": "10044",
-          "name": "Day Pass — USD 30 — visit",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 30.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.musclebeachsf.com/plans-pricing-1",
-            "observedAt": "2026-08-21",
-            "source": "wix-purchase-card",
-            "method": "rendered-wix-purchase-card",
-            "rawLabel": "Day Pass — USD 30 — visit",
-            "contentHash": "47579fcc6e908e91db4f3a7dbb3921dc10b82cffb511dc3256dfdf9a93be6717",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10044",
-            "conflictFlags": []
-          }
         }
       ],
       "costContextOffers": [],
@@ -8448,6 +8038,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -8502,6 +8095,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -8548,6 +8144,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -8594,6 +8193,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -8648,6 +8250,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -8702,6 +8307,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9385,6 +8993,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9439,6 +9050,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9485,6 +9099,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9531,6 +9148,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9585,6 +9205,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9639,6 +9262,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -9857,129 +9483,6 @@
           "fees": []
         },
         {
-          "sourceProductId": "195",
-          "name": "4 Class Pack — USD 109 per month — 4 classes per month",
-          "productType": "class-membership",
-          "accessScope": "4 classes per month",
-          "scopeType": "single-location",
-          "amount": 109.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 4,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/sunset/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "4 Class Pack — USD 109 per month — 4 classes per month",
-            "contentHash": "395b93020d3f345fa4d743a8e167a8cc8a6da96e07c57ba1d1a702ad64eda654",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "195",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "176",
-          "name": "8 Class Pack — USD 189 per month — 8 classes per month",
-          "productType": "class-membership",
-          "accessScope": "8 classes per month",
-          "scopeType": "single-location",
-          "amount": 189.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 8,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/sunset/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "8 Class Pack — USD 189 per month — 8 classes per month",
-            "contentHash": "d308ce0d5e05cf2b21c67c3355eff9d1e339cc396795ec4acb2008d1156c9559",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "176",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "177",
-          "name": "Unlimited — USD 229 per month — Unlimited access per month",
-          "productType": "class-membership",
-          "accessScope": "Unlimited access per month",
-          "scopeType": "single-location",
-          "amount": 229.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/sunset/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "Unlimited — USD 229 per month — Unlimited access per month",
-            "contentHash": "edc26007962ad4d1f4c524596e67ece912b64334fafcd2cb44a296cfe5af85d5",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "177",
-            "conflictFlags": []
-          }
-        },
-        {
           "sourceProductId": "196",
           "name": "4 Sessions — USD 269 per month — 4 sessions per month",
           "productType": "class-membership",
@@ -10107,48 +9610,6 @@
             "sourceProductId": "179",
             "conflictFlags": []
           }
-        },
-        {
-          "sourceProductId": "100042",
-          "name": "Annual Membership — USD 2399 per year — Unlimited access per year — Annual purchase",
-          "productType": "class-membership",
-          "accessScope": "Unlimited access per year",
-          "scopeType": "single-location",
-          "amount": 2399.0,
-          "currency": "USD",
-          "billingInterval": "year",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "year",
-            "unlimited": true
-          },
-          "commitmentType": "fixed-term",
-          "minimumCommitmentMonths": 12,
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://www.yubalance.com/sunset/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "Annual Membership — USD 2399 per year — Unlimited access per year — Annual purchase",
-            "contentHash": "34fb0de94ae0d9cff6499086425c1b36e6ef5507a2511c925607481121622ee7",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "100042",
-            "conflictFlags": []
-          }
         }
       ],
       "dropInOffers": [
@@ -10156,35 +9617,6 @@
           "sourceProductId": "class-drop-in",
           "name": "Class Drop-In",
           "amount": 30
-        },
-        {
-          "sourceProductId": "10102",
-          "name": "Drop-In — USD 30 per visit",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 30.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://www.yubalance.com/sunset/",
-            "observedAt": "2026-08-21",
-            "source": "linked-product-card",
-            "method": "rendered-linked-purchase-card",
-            "rawLabel": "Drop-In — USD 30 per visit",
-            "contentHash": "14584629d32d23568a77f90fd504753b429dadd62c626dd2e9a5c19ed65e3f73",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "10102",
-            "conflictFlags": []
-          }
         },
         {
           "sourceProductId": "card-72e285f2ba1ccbf6",
@@ -11722,47 +11154,6 @@
           }
         },
         {
-          "sourceProductId": "memberships-4x-a-month",
-          "name": "MEMBERSHIPS — 4X A MONTH — USD 129 — 30 Day Cancellation",
-          "productType": "class-membership",
-          "accessScope": "4 classes per month",
-          "scopeType": "single-location",
-          "amount": 129.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 4,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/haight/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — 4X A MONTH — USD 129 — 30 Day Cancellation",
-            "contentHash": "4d9d96c4f0a1127a628d011de29b45f802640b859d51553157adc102b072e3c9",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-4x-a-month",
-            "conflictFlags": []
-          }
-        },
-        {
           "sourceProductId": "intro-offers-unlimited",
           "name": "INTRO OFFERS — UNLIMITED — USD 149 — 30 Day Expiration",
           "productType": "class-membership",
@@ -11802,170 +11193,6 @@
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "intro-offers-unlimited",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "class-packages-5-classes",
-          "name": "CLASS PACKAGES — 5 CLASSES — USD 169 — 6 Month Expiration",
-          "productType": "class-membership",
-          "accessScope": "5 CLASSES",
-          "scopeType": "single-location",
-          "amount": 169.0,
-          "currency": "USD",
-          "billingInterval": "one-time",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 5,
-            "period": "purchase",
-            "unlimited": false
-          },
-          "commitmentType": "none",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/haight/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "CLASS PACKAGES — 5 CLASSES — USD 169 — 6 Month Expiration",
-            "contentHash": "32fb77d51ca068383d31999a438df5fc501e7dde413b9104a4b908278dd323e3",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "class-packages-5-classes",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "memberships-8x-a-month",
-          "name": "MEMBERSHIPS — 8X A MONTH — USD 189 — 30 Day Cancellation",
-          "productType": "class-membership",
-          "accessScope": "8 classes per month",
-          "scopeType": "single-location",
-          "amount": 189.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 8,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/haight/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — 8X A MONTH — USD 189 — 30 Day Cancellation",
-            "contentHash": "5a68e41aad895f4b7bfde58c88feaaaa522a0eb6106e0a6679e062d0f8fc7682",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-8x-a-month",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "memberships-12x-a-month",
-          "name": "MEMBERSHIPS — 12X A MONTH — USD 239 — 30 Day Cancellation",
-          "productType": "class-membership",
-          "accessScope": "12 classes per month",
-          "scopeType": "single-location",
-          "amount": 239.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": 12,
-            "period": "month",
-            "unlimited": false
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/haight/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — 12X A MONTH — USD 239 — 30 Day Cancellation",
-            "contentHash": "cd6e1fb8f284daa6cd1d0876f7ffffa38d0c2e05bcff8ed4de7d8a47b281077b",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-12x-a-month",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "memberships-unlimited",
-          "name": "MEMBERSHIPS — UNLIMITED — USD 279 — 30 Day Cancellation",
-          "productType": "class-membership",
-          "accessScope": "Unlimited classes per month",
-          "scopeType": "single-location",
-          "amount": 279.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://bodyrok.com/studio/haight/",
-            "observedAt": "2026-08-21",
-            "source": "sectioned-price-card",
-            "method": "rendered-sectioned-price-card",
-            "rawLabel": "MEMBERSHIPS — UNLIMITED — USD 279 — 30 Day Cancellation",
-            "contentHash": "d582dd4a7bf2ad4ec8cee3841894f819a3aeb15a6eea895139c2b34be8cd59d0",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "memberships-unlimited",
             "conflictFlags": []
           }
         },
@@ -12103,7 +11330,30 @@
         "dropIns": "partial"
       },
       "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
-      "conflicts": [],
+      "conflicts": [
+        {
+          "type": "approved-source-product-price-conflict",
+          "productType": "plan",
+          "sourceProductKey": "intro-offers-5-classes",
+          "approvedAmount": 99.0,
+          "observedAmount": 169.0,
+          "publicationEffect": "fail-closed"
+        },
+        {
+          "type": "approved-source-product-alias-conflict",
+          "productType": "plan",
+          "sourceProductKey": "memberships-unlimited",
+          "aliases": [
+            "unlimited",
+            "unlimited-monthly"
+          ],
+          "approvedSourceProductIds": [
+            "intro-offers-unlimited",
+            "unlimited-monthly"
+          ],
+          "publicationEffect": "fail-closed"
+        }
+      ],
       "reviewChecklist": {
         "exactLocation": false,
         "standardAdultEligibility": false,
@@ -12676,35 +11926,6 @@
           "name": "Day Pass",
           "accessScope": "Unlimited classes for one day",
           "amount": 70
-        },
-        {
-          "sourceProductId": "09290112-4C26-4E89-B05C-F72ACA5A57FE",
-          "name": "Class Pass Membership — Day Pass — Unlimited classes — $70",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 70.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
-            "observedAt": "2026-08-21",
-            "source": "zen-planner",
-            "method": "public-zen-planner-plan-card",
-            "rawLabel": "Class Pass Membership — Day Pass — Unlimited classes — $70",
-            "contentHash": "c20fb37756f002e5c8ec6acfe08ab129fa3d343e7890dee854ab3672323e64bd",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-operator-catalog",
-            "sourceProductId": "09290112-4C26-4E89-B05C-F72ACA5A57FE",
-            "conflictFlags": []
-          }
         }
       ],
       "costContextOffers": [],
@@ -13314,47 +12535,6 @@
           "fees": []
         },
         {
-          "sourceProductId": "35EDFB09-4453-4079-AC79-78A997A44202",
-          "name": "Gym membership — Urbano Anytime (monthly) — Unlimited classes — $135",
-          "productType": "class-membership",
-          "accessScope": "Unlimited classes",
-          "scopeType": "single-location",
-          "amount": 135.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "classAllowance": {
-            "count": null,
-            "period": "month",
-            "unlimited": true
-          },
-          "commitmentType": "unknown",
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
-            "observedAt": "2026-08-21",
-            "source": "zen-planner",
-            "method": "public-zen-planner-plan-card",
-            "rawLabel": "Gym membership — Urbano Anytime (monthly) — Unlimited classes — $135",
-            "contentHash": "eb36eace83712b22a32235f98cb50d89a304ac2b5e7f0c883faaedbe424f4b07",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-operator-catalog",
-            "sourceProductId": "35EDFB09-4453-4079-AC79-78A997A44202",
-            "conflictFlags": []
-          }
-        },
-        {
           "sourceProductId": "20F52933-04CF-4878-B5A4-778ACE842E38",
           "name": "Gym membership — Urbano Anytime ( 6 months prepaid) — Unlimited classes — $729",
           "productType": "class-membership",
@@ -13444,35 +12624,6 @@
           "sourceProductId": "day-pass",
           "name": "24-Hour Day Pass",
           "amount": 35
-        },
-        {
-          "sourceProductId": "31BA285B-131D-463D-B677-7CEE45FB58B7",
-          "name": "Gym membership — Day Pass — Unlimited classes — $35",
-          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
-          "amount": 35.0,
-          "currency": "USD",
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "promotion": {
-            "isPromotion": false,
-            "label": ""
-          },
-          "purchaseMethod": "direct-public",
-          "fees": [],
-          "evidence": {
-            "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
-            "observedAt": "2026-08-21",
-            "source": "zen-planner",
-            "method": "public-zen-planner-plan-card",
-            "rawLabel": "Gym membership — Day Pass — Unlimited classes — $35",
-            "contentHash": "2fa96eabbf50e45ebe5f2a6822922f3ad84ef933de9613f2d97ed5aea8bbb838",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-operator-catalog",
-            "sourceProductId": "31BA285B-131D-463D-B677-7CEE45FB58B7",
-            "conflictFlags": []
-          }
         }
       ],
       "costContextOffers": [],
@@ -13930,6 +13081,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -13984,6 +13138,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -14030,6 +13187,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -14076,6 +13236,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -14130,6 +13293,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -14184,6 +13350,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15457,6 +14626,9 @@
       "planOffers": [
         {
           "sourceProductId": "0fecaf2095da45079bdabe75f51f3f61",
+          "sourceProductAliases": [
+            "millberry-senior-membership"
+          ],
           "name": "Millberry Senior Membership $101/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15504,6 +14676,9 @@
         },
         {
           "sourceProductId": "57803960596f4276b62fbcaacf141349",
+          "sourceProductAliases": [
+            "dual-site-senior-membership"
+          ],
           "name": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Both operator locations",
@@ -15551,6 +14726,9 @@
         },
         {
           "sourceProductId": "8b2886ae23a3495aa48b44e11dd6ac52",
+          "sourceProductAliases": [
+            "bakar-general-public-membership"
+          ],
           "name": "Bakar General Public Membership $144/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15596,6 +14774,9 @@
         },
         {
           "sourceProductId": "ba5aaedde74d48bda22e0de78ab24bc6",
+          "sourceProductAliases": [
+            "millberry-general-public-membership"
+          ],
           "name": "Millberry General Public Membership $129/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15641,6 +14822,9 @@
         },
         {
           "sourceProductId": "d2ba1f48cf1443ad8bf74cee2e613d98",
+          "sourceProductAliases": [
+            "bakar-senior-membership"
+          ],
           "name": "Bakar Senior Membership $110/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15688,6 +14872,9 @@
         },
         {
           "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+          "sourceProductAliases": [
+            "dual-site-general-public-membership-mp"
+          ],
           "name": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Both operator locations",
@@ -15788,6 +14975,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15842,6 +15032,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15888,6 +15081,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15934,6 +15130,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -15988,6 +15187,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -16042,6 +15244,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -16621,188 +15826,6 @@
       "approvedCatalogBaseline": {
         "included": true,
         "planOfferCount": 0,
-        "dropInOfferCount": 0,
-        "costContextOfferCount": 0,
-        "catalogCompleteness": null
-      }
-    },
-    {
-      "gymId": "osm-way-24460896",
-      "gymName": "Bay Club Gateway",
-      "canonicalAddress": "370 drumm st",
-      "operatorId": "bay-club",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://join.bayclubs.com/shared/membership-builder",
-        "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "bcg-executive-north-monthly",
-          "name": "Executive Club North Bay",
-          "accessScope": "San Francisco, Marin, and East Bay market access including Gateway",
-          "scopeType": "multi-location",
-          "amount": 350,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 300,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "bcg-club-west-gold-monthly",
-          "name": "Club West Gold",
-          "accessScope": "All Bay Club locations except named exclusions",
-          "scopeType": "multi-location",
-          "amount": 465,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 2500,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
-          "name": "Executive Club North Bay $350/month; home club BCG; current initiation $300; standard initiation $1000",
-          "productType": "membership",
-          "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 350.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": "Join by August 31, 2026 and receive initiation fee savings!"
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 300.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true,
-              "standardAmount": 1000.0,
-              "promotionApplied": true,
-              "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Executive Club North Bay $350/month; home club BCG; current initiation $300; standard initiation $1000",
-            "contentHash": "b9360fd0daf3753ab162774c7d4731ee9dbfc8b1b43cf420f463508e23283a83",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
-          "name": "Club West Gold $465/month; home club BCG; current initiation $2500",
-          "productType": "membership",
-          "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 465.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 2500.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ],
-          "bestValueLabel": true,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCG",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Club West Gold $465/month; home club BCG; current initiation $2500",
-            "contentHash": "120d089323f47164e845a7666e45c8d9c4e875ec5ff9e3486fd21638480531a0",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "costContextOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
-      },
-      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 350.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "osm-way-24460896:plan:bcg-executive-north-monthly",
-        "catalogStatus": {
-          "plans": {
-            "status": "source-catalog",
-            "reason": "Reviewed source offers are retained before deterministic selection."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
-          }
-        }
-      },
-      "approvedCatalogBaseline": {
-        "included": true,
-        "planOfferCount": 2,
         "dropInOfferCount": 0,
         "costContextOfferCount": 0,
         "catalogCompleteness": null
@@ -18824,255 +17847,6 @@
       }
     },
     {
-      "gymId": "web-1018f0171ffa8e",
-      "gymName": "Bay Club San Francisco",
-      "canonicalAddress": "150 greenwich st",
-      "operatorId": "bay-club",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://join.bayclubs.com/shared/membership-builder",
-        "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "bcsf-executive-north-monthly",
-          "name": "Executive Club North Bay",
-          "accessScope": "San Francisco, Marin, and East Bay market access including Bay Club San Francisco",
-          "scopeType": "multi-location",
-          "amount": 350,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 300,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "bcsf-executive-south-monthly",
-          "name": "Executive Club South Bay",
-          "accessScope": "South Bay, San Francisco, and East Bay campus access",
-          "scopeType": "multi-location",
-          "amount": 395,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 400,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "bcsf-club-west-gold-monthly",
-          "name": "Club West Gold",
-          "accessScope": "All Bay Club locations except named exclusions",
-          "scopeType": "multi-location",
-          "amount": 465,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 2500,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
-          "name": "Executive Club North Bay $350/month; home club BCSF; current initiation $300; standard initiation $1000",
-          "productType": "membership",
-          "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 350.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": "Join by August 31, 2026 and receive initiation fee savings!"
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 300.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true,
-              "standardAmount": 1000.0,
-              "promotionApplied": true,
-              "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Executive Club North Bay $350/month; home club BCSF; current initiation $300; standard initiation $1000",
-            "contentHash": "3ede02f524532087f51460794c989180b1b7784bf20e38fac41215fe16229141",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
-          "name": "Executive Club South Bay $395/month; home club BCSF; current initiation $400; standard initiation $1000",
-          "productType": "membership",
-          "accessScope": "Executive Club South Bay is our premiere membership for fitness, group exercise, aquatics, pickleball, family - and more! - with full access to Santa Clara, Redwood Shores, and Courtside locations, as well as access to San Francisco campus and East Bay campus. Our entry-level membership for racquet sports offers 3-day advanced booking for pickleball at all South Bay locations and 3-day advanced booking for squash at select clubs; tennis is complimentary at Santa Clara, Pleasanton, and Fremont (court fees apply at South San Francisco; tennis access not included at Redwood Shores and Courtside). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 395.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": "Join by August 31, 2026 and receive initiation fee savings!"
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 400.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true,
-              "standardAmount": 1000.0,
-              "promotionApplied": true,
-              "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Executive Club South Bay $395/month; home club BCSF; current initiation $400; standard initiation $1000",
-            "contentHash": "489b34cf83f80d04034c3a1e5063fa43673bac14579cb07bf1ae8533480f47b2",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
-          "name": "Club West Gold $465/month; home club BCSF; current initiation $2500",
-          "productType": "membership",
-          "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 465.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 2500.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ],
-          "bestValueLabel": true,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCSF",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Club West Gold $465/month; home club BCSF; current initiation $2500",
-            "contentHash": "8670e592f9439d94992f4a3bbdbbb2981140a1070e670395b94c5fd7869e6d71",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "costContextOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
-      },
-      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 350.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "web-1018f0171ffa8e:plan:bcsf-executive-north-monthly",
-        "catalogStatus": {
-          "plans": {
-            "status": "source-catalog",
-            "reason": "Reviewed source offers are retained before deterministic selection."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
-          }
-        }
-      },
-      "approvedCatalogBaseline": {
-        "included": true,
-        "planOfferCount": 3,
-        "dropInOfferCount": 0,
-        "costContextOfferCount": 0,
-        "catalogCompleteness": null
-      }
-    },
-    {
       "gymId": "web-27e606755f1ba8",
       "gymName": "Federal Fitness Center - San Francisco",
       "canonicalAddress": "450 golden gate ave",
@@ -19276,6 +18050,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -19330,6 +18107,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -19376,6 +18156,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -19422,6 +18205,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -19476,6 +18262,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -19530,6 +18319,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -20568,6 +19360,9 @@
       "planOffers": [
         {
           "sourceProductId": "0fecaf2095da45079bdabe75f51f3f61",
+          "sourceProductAliases": [
+            "millberry-senior-membership"
+          ],
           "name": "Millberry Senior Membership $101/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -20615,6 +19410,9 @@
         },
         {
           "sourceProductId": "57803960596f4276b62fbcaacf141349",
+          "sourceProductAliases": [
+            "dual-site-senior-membership"
+          ],
           "name": "Dual Site Senior Membership $130/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Both operator locations",
@@ -20662,6 +19460,9 @@
         },
         {
           "sourceProductId": "8b2886ae23a3495aa48b44e11dd6ac52",
+          "sourceProductAliases": [
+            "bakar-general-public-membership"
+          ],
           "name": "Bakar General Public Membership $144/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -20707,6 +19508,9 @@
         },
         {
           "sourceProductId": "ba5aaedde74d48bda22e0de78ab24bc6",
+          "sourceProductAliases": [
+            "millberry-general-public-membership"
+          ],
           "name": "Millberry General Public Membership $129/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -20752,6 +19556,9 @@
         },
         {
           "sourceProductId": "d2ba1f48cf1443ad8bf74cee2e613d98",
+          "sourceProductAliases": [
+            "bakar-senior-membership"
+          ],
           "name": "Bakar Senior Membership $110/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -20799,6 +19606,9 @@
         },
         {
           "sourceProductId": "ed141d9d2ab64783b10d1fd5cedf690f",
+          "sourceProductAliases": [
+            "dual-site-general-public-membership-mp"
+          ],
           "name": "Dual Site General Public Membership_MP $170/month; Enrollment Fee $100",
           "productType": "membership",
           "accessScope": "Both operator locations",
@@ -21407,6 +20217,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -21461,6 +20274,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -21507,6 +20323,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -21553,6 +20372,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -21607,6 +20429,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -21661,6 +20486,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -22103,6 +20931,9 @@
       "planOffers": [
         {
           "sourceProductId": "597762",
+          "sourceProductAliases": [
+            "soulcycle-starter-1-classes"
+          ],
           "name": "SoulCycle Starter 1 Classes — 1 New Rider Take your first ride at SOUL at a reduced rate. New Rider 1 Class $25 Let's Ride SOULCYCLE New Rider $25 Dollars Expir",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22144,6 +20975,9 @@
         },
         {
           "sourceProductId": "634444",
+          "sourceProductAliases": [
+            "soulcycle-student-1-classes"
+          ],
           "name": "SoulCycle Student 1 Classes — 1 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for ",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22187,6 +21021,9 @@
         },
         {
           "sourceProductId": "596483",
+          "sourceProductAliases": [
+            "soulcycle-starter-3-classes"
+          ],
           "name": "SoulCycle Starter 3 Classes — 3 SOULCYCLE Starter After your first class, keep riding with The Starter Pack —three classes at a special price, just for you!* *O",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22228,6 +21065,9 @@
         },
         {
           "sourceProductId": "654004",
+          "sourceProductAliases": [
+            "soulcycle-starter-unlimited"
+          ],
           "name": "SoulCycle Starter Unlimited — ∞ Unlimited Starter San Francisco Ride once a day for 2 weeks with a special introductory price. Includes a $15 no show fee. SOULC",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22269,6 +21109,9 @@
         },
         {
           "sourceProductId": "652214",
+          "sourceProductAliases": [
+            "soul-renew-4"
+          ],
           "name": "Soul Renew 4 — 4 4 Classes $127 Let's Ride Soul Renew SF $127 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22310,6 +21153,9 @@
         },
         {
           "sourceProductId": "634445",
+          "sourceProductAliases": [
+            "soulcycle-student-5-classes"
+          ],
           "name": "SoulCycle Student 5 Classes — 5 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible for ",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22353,6 +21199,9 @@
         },
         {
           "sourceProductId": "596479",
+          "sourceProductAliases": [
+            "soulcycle-5-classes"
+          ],
           "name": "SoulCycle 5 Classes — 5 SOULCYCLE 5 Classes $185 Let's Ride SOULCYCLE 5 Classes $185 Dollars Expires in 45 days",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22394,6 +21243,9 @@
         },
         {
           "sourceProductId": "652215",
+          "sourceProductAliases": [
+            "soul-renew-8"
+          ],
           "name": "Soul Renew 8 — 8 8 Classes $245 Let's Ride Soul Renew SF $245 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22435,6 +21287,9 @@
         },
         {
           "sourceProductId": "634446",
+          "sourceProductAliases": [
+            "soulcycle-student-10-classes"
+          ],
           "name": "SoulCycle Student 10 Classes — 10 SOULCYCLE Student Undergraduate or graduate students enrolled in a US degree granting college or university may be eligible fo",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22478,6 +21333,9 @@
         },
         {
           "sourceProductId": "652216",
+          "sourceProductAliases": [
+            "soul-renew-12"
+          ],
           "name": "Soul Renew 12 — 12 12 Classes $355 Let's Ride Soul Renew SF $355 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22519,6 +21377,9 @@
         },
         {
           "sourceProductId": "596480",
+          "sourceProductAliases": [
+            "soulcycle-10-classes"
+          ],
           "name": "SoulCycle 10 Classes — 10 SOULCYCLE 10 Classes $365 Let's Ride SOULCYCLE 10 Classes $365 Dollars Expires in 3 months",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22560,6 +21421,9 @@
         },
         {
           "sourceProductId": "652217",
+          "sourceProductAliases": [
+            "soul-renew-16"
+          ],
           "name": "Soul Renew 16 — 16 16 Classes $456 Let's Ride Soul Renew SF $456 Dollars This membership is a recurring payment and expires 30 days from purchase date.",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22601,6 +21465,9 @@
         },
         {
           "sourceProductId": "596481",
+          "sourceProductAliases": [
+            "soulcycle-20-classes"
+          ],
           "name": "SoulCycle 20 Classes — 20 SOULCYCLE 20 Classes $710 Let's Ride SOULCYCLE 20 Classes $710 Dollars Expires in 9 months",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22642,6 +21509,9 @@
         },
         {
           "sourceProductId": "596482",
+          "sourceProductAliases": [
+            "soulcycle-30-classes"
+          ],
           "name": "SoulCycle 30 Classes — 30 SOULCYCLE 30 Classes $1,020 Let's Ride SOULCYCLE 30 Classes $1,020 Dollars Expires in 12 months",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22683,6 +21553,9 @@
         },
         {
           "sourceProductId": "596484",
+          "sourceProductAliases": [
+            "soulcycle-50-classes"
+          ],
           "name": "SoulCycle 50 Classes — 50 SuperSoul Allows riders to reserve classes in advance of sign-ups. Includes full concierge service and priority on waitlists. Learn mo",
           "productType": "class-membership",
           "accessScope": "San Francisco SoulCycle market",
@@ -22726,6 +21599,9 @@
       "dropInOffers": [
         {
           "sourceProductId": "596478",
+          "sourceProductAliases": [
+            "single-class"
+          ],
           "name": "Single Class — 1 SOULCYCLE 1 Class $38 Let's Ride SOULCYCLE 1 Class $38 Dollars Expires in 30 days",
           "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
           "amount": 38.0,
@@ -25966,322 +24842,6 @@
       }
     },
     {
-      "gymId": "web-a8dd7473a48e9c",
-      "gymName": "Bay Club Financial District",
-      "canonicalAddress": "555 california st",
-      "operatorId": "bay-club",
-      "reviewStatus": "pending",
-      "publicationEligible": false,
-      "sourceUrls": [
-        "https://join.bayclubs.com/shared/membership-builder",
-        "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD"
-      ],
-      "planOffers": [
-        {
-          "sourceProductId": "bcfd-single-site-monthly",
-          "name": "Single Site",
-          "accessScope": "Full Financial District access plus specified off-peak Bay Club San Francisco access",
-          "scopeType": "single-location",
-          "amount": 284,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 100,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "bcfd-executive-north-monthly",
-          "name": "Executive Club North Bay",
-          "accessScope": "San Francisco, Marin, and East Bay market access",
-          "scopeType": "multi-location",
-          "amount": 350,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 300,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "bcfd-executive-south-monthly",
-          "name": "Executive Club South Bay",
-          "accessScope": "South Bay, San Francisco, and East Bay campus access",
-          "scopeType": "multi-location",
-          "amount": 395,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 400,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "bcfd-club-west-gold-monthly",
-          "name": "Club West Gold",
-          "accessScope": "All Bay Club locations except named exclusions",
-          "scopeType": "multi-location",
-          "amount": 465,
-          "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": [
-            {
-              "type": "initiation",
-              "amount": 2500,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ]
-        },
-        {
-          "sourceProductId": "88a5f2b2-a3d1-49d9-3aba-08def76b4fa5",
-          "name": "Single Site $284/month; home club BCFD; current initiation $100; standard initiation $300",
-          "productType": "membership",
-          "accessScope": "Perfect for those working in the Financial District of San Francisco, our single-site membership offers full access to Bay Club Financial District and off-peak access to Bay Club San Francisco (Monday-Thursday after 7pm, Friday after 2pm and anytime weekends) and includes fitness amenities and group exercise programs designed to enhance your active lifestyle.",
-          "scopeType": "single-location",
-          "amount": 284.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": "Join by August 31, 2026 and receive initiation fee savings!"
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 100.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true,
-              "standardAmount": 300.0,
-              "promotionApplied": true,
-              "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Single Site $284/month; home club BCFD; current initiation $100; standard initiation $300",
-            "contentHash": "48ef30e3f5d68c115e8757ae75b51cd56c9bf18f59ba7cf9d485d9d91d19c762",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "88a5f2b2-a3d1-49d9-3aba-08def76b4fa5",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
-          "name": "Executive Club North Bay $350/month; home club BCFD; current initiation $300; standard initiation $1000",
-          "productType": "membership",
-          "accessScope": "Our premier fitness membership in the North Bay unlocks access to our San Francisco, Marin, and East Bay markets, featuring spacious athletics clubs, sports resorts, and two 18-hole golf courses. This membership offers 3-day advanced booking for all sports. Enjoy complimentary pickleball and squash at participating locations; tennis fees apply at Gateway and South San Francisco, Fremont, and Pleasanton (tennis is complimentary at Rolling Hills), with walk-on tennis access at Fremont and Pleasanton. Pay-to-play golf at StoneTree Golf Club and Crow Canyon Country Club. Take advantage of off-peak access to Bay Club Ross Valley (before 9am and after 5pm Monday-Thursday, after 2pm Friday-Sunday through Labor Day 2026). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 350.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": "Join by August 31, 2026 and receive initiation fee savings!"
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 300.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true,
-              "standardAmount": 1000.0,
-              "promotionApplied": true,
-              "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Executive Club North Bay $350/month; home club BCFD; current initiation $300; standard initiation $1000",
-            "contentHash": "ac5b7f47e841272c217594493effaf0e1e5e0c97dc33c36fe24ab3f51b17e37b",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "8468edf1-eb56-4b0c-3ab6-08def76b4fa5",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
-          "name": "Executive Club South Bay $395/month; home club BCFD; current initiation $400; standard initiation $1000",
-          "productType": "membership",
-          "accessScope": "Executive Club South Bay is our premiere membership for fitness, group exercise, aquatics, pickleball, family - and more! - with full access to Santa Clara, Redwood Shores, and Courtside locations, as well as access to San Francisco campus and East Bay campus. Our entry-level membership for racquet sports offers 3-day advanced booking for pickleball at all South Bay locations and 3-day advanced booking for squash at select clubs; tennis is complimentary at Santa Clara, Pleasanton, and Fremont (court fees apply at South San Francisco; tennis access not included at Redwood Shores and Courtside). 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 395.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": "Join by August 31, 2026 and receive initiation fee savings!"
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 400.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true,
-              "standardAmount": 1000.0,
-              "promotionApplied": true,
-              "promotionLabel": "Join by August 31, 2026 and receive initiation fee savings!"
-            }
-          ],
-          "bestValueLabel": false,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Executive Club South Bay $395/month; home club BCFD; current initiation $400; standard initiation $1000",
-            "contentHash": "04ca2edbe3ed2975439d341b0594f2178647ef0ca48c7ddf6155c3579a725147",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "ed407a60-707d-4ae0-3ab8-08def76b4fa5",
-            "conflictFlags": []
-          }
-        },
-        {
-          "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
-          "name": "Club West Gold $465/month; home club BCFD; current initiation $2500",
-          "productType": "membership",
-          "accessScope": "Club West Gold unlocks full access to all Bay Club locations (excluding Manhattan Country Club and Griffin Club). Members can take advantage of a 4-day advanced booking window for all Sports with complimentary Racquet Sports at all locations (excluding PRO Club, Harbor Square Athletic Club, Manhattan country Club, and Griffin Club) and pay-to-play golf access with 10% off greens fees. 2 complimentary childcare hours per day per child on the membership at participating locations. Exclusive member pricing at Renaissance Walnut Creek hotel.",
-          "scopeType": "multi-location",
-          "amount": 465.0,
-          "currency": "USD",
-          "billingInterval": "month",
-          "intervalCount": 1,
-          "commitmentType": "month-to-month",
-          "promotion": {
-            "isPromotion": false,
-            "label": "",
-            "context": ""
-          },
-          "eligibility": {
-            "type": "standard-adult",
-            "restrictions": []
-          },
-          "availability": "available",
-          "purchaseMethod": "direct-public",
-          "fees": [
-            {
-              "type": "initiation",
-              "name": "Initiation Fee",
-              "amount": 2500.0,
-              "currency": "USD",
-              "cadence": "one-time",
-              "mandatory": true
-            }
-          ],
-          "bestValueLabel": true,
-          "evidence": {
-            "url": "https://oms-sales-api.bayclubs.io/api/1.0/pricing/shared/calculate?clubCode=BCFD",
-            "observedAt": "2026-08-21",
-            "source": "bay-club-public-api",
-            "method": "public-bay-club-membership-calculator",
-            "rawLabel": "Club West Gold $465/month; home club BCFD; current initiation $2500",
-            "contentHash": "8d7c77b5345323c622c66dbfb88c28ad181c1f57853f58ed7e2df81ed64853ea",
-            "evidenceTier": "official-public",
-            "exactLocationMatch": "exact-location",
-            "sourceProductId": "0d40d7c5-0836-44a8-3ab1-08def76b4fa5",
-            "conflictFlags": []
-          }
-        }
-      ],
-      "dropInOffers": [],
-      "costContextOffers": [],
-      "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
-      },
-      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
-      "conflicts": [],
-      "reviewChecklist": {
-        "exactLocation": false,
-        "standardAdultEligibility": false,
-        "planCardAssociation": false,
-        "feesLinkedToEachPlan": false,
-        "promotionsMarked": false
-      },
-      "currentPublished": {
-        "monthlyPrice": 284.0,
-        "dayPassPrice": null,
-        "selectedPlanId": "web-a8dd7473a48e9c:plan:bcfd-single-site-monthly",
-        "catalogStatus": {
-          "plans": {
-            "status": "source-catalog",
-            "reason": "Reviewed source offers are retained before deterministic selection."
-          },
-          "dropIns": {
-            "status": "none",
-            "reason": "No ordinary public single-visit or single-class catalog was verified."
-          }
-        }
-      },
-      "approvedCatalogBaseline": {
-        "included": true,
-        "planOfferCount": 4,
-        "dropInOfferCount": 0,
-        "costContextOfferCount": 0,
-        "catalogCompleteness": null
-      }
-    },
-    {
       "gymId": "web-abd8e24f4af4d8",
       "gymName": "Dogpatch YMCA at Crane Cove",
       "canonicalAddress": "701 illinois st",
@@ -26878,6 +25438,9 @@
       "planOffers": [
         {
           "sourceProductId": "364260e12ea94538b5d4499ed356a8fc",
+          "sourceProductAliases": [
+            "premier-massage-gym"
+          ],
           "name": "Premier Massage + Gym $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -26932,6 +25495,9 @@
         },
         {
           "sourceProductId": "7301d4e290184005b71868d99fbf9707",
+          "sourceProductAliases": [
+            "premier"
+          ],
           "name": "Premier 6 Month Term $137/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -26978,6 +25544,9 @@
         },
         {
           "sourceProductId": "78efafa87260496cbc842607918d10ce",
+          "sourceProductAliases": [
+            "basic"
+          ],
           "name": "Basic 6 Month Term $117/month; Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -27024,6 +25593,9 @@
         },
         {
           "sourceProductId": "c7e1c8f657c4472185cf2e3c92a1c91e",
+          "sourceProductAliases": [
+            "basic-wellness"
+          ],
           "name": "Basic Wellness $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -27078,6 +25650,9 @@
         },
         {
           "sourceProductId": "d1e53f419f094b8e9f211dbe9e95fa04",
+          "sourceProductAliases": [
+            "basic-massage-gym"
+          ],
           "name": "Basic Massage + Gym $117/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -27132,6 +25707,9 @@
         },
         {
           "sourceProductId": "e130a80c8f54416eb6ab3781761bbf73",
+          "sourceProductAliases": [
+            "premier-wellness"
+          ],
           "name": "Premier Wellness $137/month; Enrollment Fee $99, Annual Fee $49",
           "productType": "membership",
           "accessScope": "Named home location",
@@ -29928,6 +28506,36 @@
       "status": "unchanged-approved"
     },
     {
+      "gymId": "osm-way-24460896",
+      "gymName": "Bay Club Gateway",
+      "sourceUrls": [
+        "https://join.bayclubs.com/shared/membership-builder"
+      ],
+      "planOfferCount": 2,
+      "dropInOfferCount": 0,
+      "costContextOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "web-1018f0171ffa8e",
+      "gymName": "Bay Club San Francisco",
+      "sourceUrls": [
+        "https://join.bayclubs.com/shared/membership-builder"
+      ],
+      "planOfferCount": 3,
+      "dropInOfferCount": 0,
+      "costContextOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
+      "status": "unchanged-approved"
+    },
+    {
       "gymId": "web-44c39e1d4144c1",
       "gymName": "Sol Hot Yoga & Movement",
       "sourceUrls": [
@@ -29954,6 +28562,21 @@
       "catalogCompleteness": {
         "plans": "complete",
         "dropIns": "complete"
+      },
+      "status": "unchanged-approved"
+    },
+    {
+      "gymId": "web-a8dd7473a48e9c",
+      "gymName": "Bay Club Financial District",
+      "sourceUrls": [
+        "https://join.bayclubs.com/shared/membership-builder"
+      ],
+      "planOfferCount": 4,
+      "dropInOfferCount": 0,
+      "costContextOfferCount": 0,
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
       },
       "status": "unchanged-approved"
     },

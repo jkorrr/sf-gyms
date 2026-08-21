@@ -1218,6 +1218,210 @@ def mariana_tek_product_card_candidates(
     }]
 
 
+def bookee_product_card_candidates(
+    card_text: str,
+    product_name: str,
+    displayed_price: str,
+    source_url: str,
+    service_group_id: str,
+    location_label: str = "",
+    section_label: str = "",
+) -> list[dict[str, Any]]:
+    """Reconstruct one bounded public Bookee product card.
+
+    Bookee exposes a stable service-group attribute, but that identifier is
+    shared by sibling products. The source ID therefore combines the group
+    with the visible product label and is explicitly marked synthetic. The
+    renderer supplies the dedicated heading and price sibling separately so
+    descriptions, add-on rates, and neighboring cards cannot become prices.
+    """
+
+    if platform_for_url(source_url) != "bookee":
+        return []
+    group_id = text(service_group_id)
+    if not re.fullmatch(r"\d{1,12}", group_id):
+        return []
+    name = " ".join(text(product_name).split())
+    if not 2 <= len(name) <= 180 or GIFT_CARD_RE.search(name):
+        return []
+    compact_price = " ".join(text(displayed_price).split())
+    amount_match = re.fullmatch(
+        r"\$\s*((?:\d{1,3}(?:,\d{3})+|\d{1,6})(?:\.\d{1,2})?)"
+        r"(?:\s*/\s*(month|week|year|visit|class|session))?",
+        compact_price,
+        re.IGNORECASE,
+    )
+    if not amount_match:
+        return []
+    amount = float(amount_match.group(1).replace(",", ""))
+    if not 0 < amount <= 25_000:
+        return []
+
+    lines = [" ".join(line.split()) for line in text(card_text).splitlines() if " ".join(line.split())]
+    if not lines or len(lines) > 160:
+        return []
+    summary = " ".join(lines[:8])
+    section = " ".join(text(section_label).split())[:160]
+    combined = " ".join((section, name, summary, " ".join(lines[8:])))
+    price_cadence = text(amount_match.group(2)).casefold()
+    recurring = price_cadence in {"month", "week", "year"} or bool(
+        re.search(r"\bsubscription\b.{0,80}\brenews?\b", summary, re.IGNORECASE)
+    )
+    promotion = bool(PROMOTION_RE.search(f"{section} {name}"))
+    practice_only = bool(re.search(r"\bopen studio\b", name, re.IGNORECASE))
+    event_only = bool(re.search(r"\b(?:part(?:y|ies)|rentals?|events?)\b", f"{section} {name}", re.IGNORECASE))
+    trainer_required = bool(TRAINER_REQUIRED_RE.search(name))
+    restricted = RESTRICTED_RE.search(name)
+
+    allowance_match = re.search(
+        r"\b(?P<count>\d{1,3})\s*x?\s*(?:classes?|credits?|sessions?|open studio)\b",
+        f"{name} {summary}",
+        re.IGNORECASE,
+    )
+    allowance_count = int(allowance_match.group("count")) if allowance_match else None
+    unlimited = bool(
+        re.search(r"\bunlimited\b", name, re.IGNORECASE)
+        or any(line.casefold() == "unlimited" for line in lines[:8])
+    )
+    drop_in = bool(DROP_IN_RE.search(name))
+    pack = bool(re.search(r"\b(?:pack|credits?)\b", f"{section} {name} {summary}", re.IGNORECASE))
+
+    if event_only or trainer_required:
+        cadence, product_type = "one-time", "service"
+    elif recurring:
+        cadence, product_type = price_cadence or "month", "monthly"
+    elif allowance_count == 1 and (drop_in or practice_only):
+        cadence, product_type = "visit", "drop-in"
+    elif pack or allowance_count is not None or unlimited:
+        cadence, product_type = "one-time", "class-pack"
+    else:
+        cadence, product_type = "one-time", "service"
+
+    if unlimited:
+        allowance = {
+            "count": None,
+            "period": cadence if recurring else "purchase",
+            "unlimited": True,
+        }
+    elif allowance_count is not None:
+        allowance = {
+            "count": allowance_count,
+            "period": "visit" if product_type == "drop-in" else cadence if recurring else "purchase",
+            "unlimited": False,
+        }
+    else:
+        allowance = None
+
+    term_match = re.search(
+        r"\b(?P<months>3|6|12)\s*(?:m\b|months?(?:\s+commitment)?)",
+        f"{section} {name}",
+        re.IGNORECASE,
+    )
+    minimum_months = int(term_match.group("months")) if term_match else None
+    if recurring and minimum_months:
+        commitment_value = {
+            "type": "fixed-term", "minimumMonths": minimum_months, "minimumDays": None,
+            "rawLabel": term_match.group(0),
+        }
+    elif recurring and re.search(r"\b(?:month[ -]to[ -]month|cancel any\s*time|no commitment)\b", combined, re.IGNORECASE):
+        commitment_value = {
+            "type": "month-to-month", "minimumMonths": None, "minimumDays": None,
+            "rawLabel": "Month-to-month",
+        }
+    else:
+        commitment_value = {
+            "type": "unknown" if recurring else "none", "minimumMonths": None,
+            "minimumDays": None, "rawLabel": "",
+        }
+
+    if promotion:
+        eligibility_type, restrictions = "new-client", ["Promotional or introductory product"]
+    elif restricted:
+        eligibility_type, restrictions = "restricted", [restricted.group(0)]
+    elif trainer_required:
+        eligibility_type, restrictions = "trainer-required", ["Trainer-led product"]
+    elif practice_only:
+        eligibility_type, restrictions = "practice-only", ["Open-practice access; no ordinary instructed class"]
+    elif event_only:
+        eligibility_type, restrictions = "special-event", ["Private event or facility rental"]
+    else:
+        eligibility_type, restrictions = "standard-adult", []
+
+    slug = re.sub(r"[^a-z0-9]+", "-", name.casefold()).strip("-")
+    if not slug:
+        return []
+    aliases = [slug]
+    number_words = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 11: "eleven", 12: "twelve",
+    }
+    if recurring and allowance_count is not None:
+        semantic = f"{number_words.get(allowance_count, allowance_count)}-monthly"
+        aliases.append(semantic)
+        if minimum_months:
+            aliases.append(f"{semantic}-{minimum_months}m")
+    if recurring and unlimited:
+        aliases.append("unlimited-monthly")
+        if minimum_months:
+            aliases.append(f"unlimited-monthly-{minimum_months}m")
+    if product_type == "drop-in" and not practice_only:
+        aliases.append("class-drop-in")
+    if practice_only and product_type == "drop-in":
+        aliases.append("open-studio-drop-in")
+    if practice_only and recurring and allowance_count is not None:
+        aliases.append(f"open-studio-{number_words.get(allowance_count, allowance_count)}-monthly")
+    if promotion and allowance_count is not None and not unlimited:
+        aliases.append(f"intro-{number_words.get(allowance_count, allowance_count)}")
+    if promotion and unlimited and re.search(r"\b2[ -]?week\b", name, re.IGNORECASE):
+        aliases.append("intro-unlimited-two-week")
+    if product_type == "class-pack" and allowance_count is not None and not promotion:
+        aliases.append(f"{number_words.get(allowance_count, allowance_count)}-class-pack")
+
+    location = " ".join(text(location_label).split())[:120]
+    if allowance and allowance.get("unlimited"):
+        access_scope = f"Unlimited {'classes' if not practice_only else 'practice sessions'} per {cadence}"
+    elif allowance and allowance.get("count") is not None and recurring:
+        access_scope = f"{allowance['count']} {'practice sessions' if practice_only else 'classes'} per {cadence}"
+    elif product_type == "drop-in":
+        access_scope = "One ordinary class"
+    else:
+        access_scope = name
+    raw_label = " — ".join(filter(None, (
+        section, name, f"USD {amount:g} per {cadence}", access_scope if access_scope != name else "",
+        commitment_value.get("rawLabel"), location,
+    )))
+    return [{
+        "sourceProductId": f"{group_id}-{slug}",
+        "sourceProductAliases": list(dict.fromkeys(alias for alias in aliases if alias)),
+        "sourceProductIdAuthority": "synthetic-label",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": access_scope,
+        "scopeType": "single-location",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": (section or name) if promotion else ""},
+        "eligibility": {"type": eligibility_type, "restrictions": restrictions},
+        "commitment": commitment_value,
+        "fees": [],
+        "locations": [location] if location else [],
+        "ordinaryUse": eligibility_type == "standard-adult" and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-bookee-product-card",
+        "adapter": "bookee",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location" if location else "candidate",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
 def wix_purchase_card_candidates(
     card_text: str,
     source_url: str,

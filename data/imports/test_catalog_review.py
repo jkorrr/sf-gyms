@@ -143,6 +143,60 @@ class CatalogReviewTests(unittest.TestCase):
         self.assertEqual(result["_meta"]["proposalCount"], 0)
         self.assertEqual(result["_meta"]["unchangedApprovedCount"], 1)
 
+    def test_synthetic_product_alias_matches_reviewed_catalog_id(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One"}]}
+        approved = {"approvals": [{
+            "gymId": "gym-1",
+            "planOffers": [{
+                "sourceProductId": "four-monthly-3m", "name": "Four monthly", "amount": 149,
+                "billingInterval": "month",
+            }],
+            "dropInOffers": [],
+        }]}
+        observation = {
+            "gymId": "gym-1", "amount": 149, "rawLabel": "4 classes monthly",
+            "sourceProductId": "7800-monthly-membership-4x-classes-3m",
+            "sourceProductAliases": ["monthly-membership-4x-classes-3m", "four-monthly-3m"],
+            "productType": "monthly", "cadence": "month",
+            "method": "rendered-bookee-product-card", "sourceUrl": "https://gym.onbookee.com/pricing/r/1/loc/2",
+        }
+
+        result = build_review(
+            fixture, [{"generatedAt": "2026-08-21", "observations": [observation]}],
+            "2026-08-21", approved,
+        )
+
+        self.assertEqual(result["_meta"]["proposalCount"], 0)
+        self.assertEqual(result["_meta"]["unchangedApprovedCount"], 1)
+
+    def test_synthetic_alias_matching_two_reviewed_products_fails_closed(self):
+        fixture = {"gyms": [{"id": "gym-1", "name": "Gym One"}]}
+        approved = {"approvals": [{
+            "gymId": "gym-1",
+            "planOffers": [
+                {"sourceProductId": "four-monthly-3m", "name": "Four 3m", "amount": 149, "billingInterval": "month"},
+                {"sourceProductId": "four-monthly-12m", "name": "Four 12m", "amount": 139, "billingInterval": "month"},
+            ],
+            "dropInOffers": [],
+        }]}
+        observation = {
+            "gymId": "gym-1", "amount": 149, "rawLabel": "Ambiguous four classes",
+            "sourceProductId": "synthetic-four-monthly",
+            "sourceProductAliases": ["four-monthly-3m", "four-monthly-12m"],
+            "productType": "monthly", "cadence": "month",
+            "method": "rendered-bookee-product-card", "sourceUrl": "https://gym.onbookee.com/pricing/r/1/loc/2",
+        }
+
+        result = build_review(
+            fixture, [{"generatedAt": "2026-08-21", "observations": [observation]}],
+            "2026-08-21", approved,
+        )
+
+        self.assertEqual(
+            result["proposals"][0]["conflicts"][0]["type"],
+            "approved-source-product-alias-conflict",
+        )
+
     def test_new_amount_conflicting_with_reviewed_product_fails_closed(self):
         fixture = {"gyms": [{"id": "gym-1", "name": "Gym One"}]}
         approved = {"approvals": [{

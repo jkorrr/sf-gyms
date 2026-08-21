@@ -1,0 +1,145 @@
+{
+  "_meta": {
+    "schemaVersion": 1,
+    "policy": "Compact review-only facts captured from an official public storefront in an interactive browser. No HTML, cookies, tokens, credentials, contact data, forms, or account state are stored."
+  },
+  "captures": [
+    {
+      "gymId": "osm-node-1364959516",
+      "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+      "catalogSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "cards": [
+        {
+          "serviceGroupId": "5484",
+          "productName": "Intro Offer: 4-Class Pack (2 WEEK EXPIRATION)",
+          "displayedPrice": "$79",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Intro Offers",
+          "cardText": "Intro Offer: 4-Class Pack (2 WEEK EXPIRATION)\n$79\n4 credit\nCredit pack\n2 weeks\nSan Francisco\nNew-studio-client intro offer."
+        },
+        {
+          "serviceGroupId": "5484",
+          "productName": "Intro Offer: 2-Week Unlimited",
+          "displayedPrice": "$139",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Intro Offers",
+          "cardText": "Intro Offer: 2-Week Unlimited\n$139\nUnlimited\nCredit pack\n2 weeks\nSan Francisco\nNew-studio-client intro offer."
+        },
+        {
+          "serviceGroupId": "12510",
+          "productName": "Monthly Membership (4x Classes, 12M)",
+          "displayedPrice": "$139/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (12 Month Commitment)",
+          "cardText": "Monthly Membership (4x Classes, 12M)\n$139/month\n4 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 12-month commitment."
+        },
+        {
+          "serviceGroupId": "12510",
+          "productName": "Monthly Membership (8x Classes, 12M)",
+          "displayedPrice": "$250/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (12 Month Commitment)",
+          "cardText": "Monthly Membership (8x Classes, 12M)\n$250/month\n8 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 12-month commitment.\nMost popular option."
+        },
+        {
+          "serviceGroupId": "12510",
+          "productName": "Monthly Membership (12x Classes, 12M)",
+          "displayedPrice": "$339/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (12 Month Commitment)",
+          "cardText": "Monthly Membership (12x Classes, 12M)\n$339/month\n12 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 12-month commitment."
+        },
+        {
+          "serviceGroupId": "12510",
+          "productName": "Unlimited Monthly Membership (12 Months)",
+          "displayedPrice": "$400/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (12 Month Commitment)",
+          "cardText": "Unlimited Monthly Membership (12 Months)\n$400/month\nUnlimited\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 12-month commitment."
+        },
+        {
+          "serviceGroupId": "7800",
+          "productName": "Monthly Membership (4x Classes, 3M)",
+          "displayedPrice": "$149/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (3 Month Commitment)",
+          "cardText": "Monthly Membership (4x Classes, 3M)\n$149/month\n4 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 3-month commitment."
+        },
+        {
+          "serviceGroupId": "7800",
+          "productName": "Monthly Membership (8x Classes, 3M)",
+          "displayedPrice": "$270/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (3 Month Commitment)",
+          "cardText": "Monthly Membership (8x Classes, 3M)\n$270/month\n8 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 3-month commitment.\nMost popular option."
+        },
+        {
+          "serviceGroupId": "7800",
+          "productName": "Monthly Membership (12x Classes, 3M)",
+          "displayedPrice": "$359/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Monthly Memberships (3 Month Commitment)",
+          "cardText": "Monthly Membership (12x Classes, 3M)\n$359/month\n12 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 3-month commitment."
+        },
+        {
+          "serviceGroupId": "5103",
+          "productName": "Drop-In Class x1",
+          "displayedPrice": "$44",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Drop-In Class Packs",
+          "cardText": "Drop-In Class x1\n$44\n1 credit\nCredit pack\n1 month\nSan Francisco\nOne ordinary weekly class."
+        },
+        {
+          "serviceGroupId": "5103",
+          "productName": "Drop-In Class x5",
+          "displayedPrice": "$205",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Drop-In Class Packs",
+          "cardText": "Drop-In Class x5\n$205\n5 credit\nCredit pack\n2 months\nSan Francisco"
+        },
+        {
+          "serviceGroupId": "5103",
+          "productName": "Drop-In Class x10",
+          "displayedPrice": "$400",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Drop-In Class Packs",
+          "cardText": "Drop-In Class x10\n$400\n10 credit\nCredit pack\n3 months\nSan Francisco"
+        },
+        {
+          "serviceGroupId": "5086",
+          "productName": "Open Studio x1",
+          "displayedPrice": "$18",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Open Studio",
+          "cardText": "Open Studio x1\n$18\n1 credit\nCredit pack\n1 month\nSan Francisco\nOpen-practice access."
+        },
+        {
+          "serviceGroupId": "5086",
+          "productName": "Monthly Training Membership (8 Open Studio, 6 M)",
+          "displayedPrice": "$100/month",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Open Studio",
+          "cardText": "Monthly Training Membership (8 Open Studio, 6 M)\n$100/month\n8 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 6-month commitment.\nOpen-practice access only."
+        },
+        {
+          "serviceGroupId": "5320",
+          "productName": "60 Min Party",
+          "displayedPrice": "$300",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Parties & Rentals",
+          "cardText": "60 Min Party\n$300\n1 credit\nCredit pack\n12 months\nSan Francisco\nPrivate party for up to 10 people."
+        },
+        {
+          "serviceGroupId": "5320",
+          "productName": "90 Min Party",
+          "displayedPrice": "$350",
+          "locationLabel": "San Francisco",
+          "sectionLabel": "Parties & Rentals",
+          "cardText": "90 Min Party\n$350\n1 credit\nCredit pack\n12 months\nSan Francisco\nPrivate party for up to 10 people."
+        }
+      ]
+    }
+  ]
+}

@@ -29,6 +29,15 @@ class RenderedCrawlerTests(unittest.TestCase):
         )
         self.assertEqual(blocker, "platform-security-check")
 
+    def test_empty_aws_waf_shell_is_access_blocker(self) -> None:
+        blocker = rendered.detect_access_blocker(
+            "Bookee",
+            "",
+            '<script src="https://example.sdk.awswaf.com/challenge.js"></script>'
+            '<script>localStorage.getItem("aws-waf-token")</script>',
+        )
+        self.assertEqual(blocker, "platform-security-check")
+
     def test_hidden_wix_captcha_code_does_not_block_visible_pricing(self) -> None:
         blocker = rendered.detect_access_blocker(
             "Plans & Pricing",
@@ -239,6 +248,22 @@ class RenderedCrawlerTests(unittest.TestCase):
             "https://benchmark.portal.approach.app/membership-type/3",
         ])
 
+    def test_bookee_public_pricing_fragment_is_preserved_but_checkout_fragment_is_not(self) -> None:
+        gym = {
+            "id": "vrv3", "name": "VRV3 Studios", "address": "520 Haight Street",
+            "websiteUrl": "https://www.vrv3studios.com/",
+            "officialUrl": "https://www.vrv3studios.com/",
+            "priceSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211",
+        }
+        targets = rendered.render_target_urls(gym, [
+            {"url": "https://www.vrv3studios.com/schedule#/pricing/buy/r/1154/loc/1211?id=28057", "status": "fetched"},
+            {"url": "https://vrv3studioscom.onbookee.com/public/forms/waiver-id", "status": "fetched"},
+        ])
+        self.assertIn("https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211", targets)
+        self.assertIn("https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211", targets)
+        self.assertNotIn("https://vrv3studioscom.onbookee.com/public/forms/waiver-id", targets)
+        self.assertNotIn("https://www.vrv3studios.com/schedule#/pricing/buy/r/1154/loc/1211?id=28057", targets)
+
     def test_same_operator_routes_must_match_a_stable_location_slug(self) -> None:
         gym = {
             "id": "bar", "name": "The Bar Method FiDi", "address": "234 Bush Street",
@@ -288,6 +313,58 @@ class RenderedCrawlerTests(unittest.TestCase):
         other = {**dom, "sourceProductId": "memberships-14789"}
         self.assertEqual(rendered.operator_product_key(api), rendered.operator_product_key(dom))
         self.assertNotEqual(rendered.operator_product_key(api), rendered.operator_product_key(other))
+
+    def test_public_browser_capture_is_validated_and_keeps_original_observation_date(self) -> None:
+        gym = {
+            "id": "vrv3", "name": "VRV3 Studios", "publicationStatus": "publish",
+            "websiteUrl": "https://www.vrv3studios.com/",
+            "officialUrl": "https://www.vrv3studios.com/",
+            "priceSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211",
+        }
+        captures = {"captures": [{
+            "gymId": "vrv3",
+            "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/r/1154/loc/1211",
+            "catalogSourceUrl": gym["priceSourceUrl"],
+            "capturedAt": "2026-08-21",
+            "cards": [{
+                "serviceGroupId": "7800",
+                "productName": "Monthly Membership (4x Classes, 3M)",
+                "displayedPrice": "$149/month",
+                "locationLabel": "San Francisco",
+                "sectionLabel": "Monthly Memberships (3 Month Commitment)",
+                "cardText": "Monthly Membership (4x Classes, 3M)\n$149/month\n4 credit\nSubscription\nRenews in 1 month\nSan Francisco\nRequires a 3-month commitment.",
+            }],
+        }]}
+
+        observations = rendered.public_browser_capture_observations(
+            {"gyms": [gym]}, captures, {"vrv3"},
+        )
+
+        self.assertEqual(len(observations), 1)
+        self.assertEqual(observations[0]["capturedAt"], "2026-08-21")
+        self.assertEqual(observations[0]["amount"], 149)
+        self.assertIn("four-monthly-3m", observations[0]["sourceProductAliases"])
+        self.assertEqual(observations[0]["method"], "captured-public-bookee-product-card")
+        self.assertRegex(observations[0]["contentHash"], r"^[0-9a-f]{64}$")
+
+    def test_public_browser_capture_rejects_unlinked_or_checkout_sources(self) -> None:
+        gym = {
+            "id": "vrv3", "name": "VRV3 Studios", "publicationStatus": "publish",
+            "websiteUrl": "https://www.vrv3studios.com/",
+            "officialUrl": "https://www.vrv3studios.com/",
+            "priceSourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211",
+        }
+        capture = {
+            "gymId": "vrv3", "capturedAt": "2026-08-21", "cards": [{}],
+            "sourceUrl": "https://vrv3studioscom.onbookee.com/pricing/buy/r/1154/loc/1211",
+            "catalogSourceUrl": "https://unlinked.example/pricing",
+        }
+        self.assertEqual(
+            rendered.public_browser_capture_observations(
+                {"gyms": [gym]}, {"captures": [capture]}, {"vrv3"},
+            ),
+            [],
+        )
 
 
 if __name__ == "__main__":
