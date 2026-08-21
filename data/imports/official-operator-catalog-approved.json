@@ -1311,6 +1311,256 @@
         ],
         "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
       }
+    },
+    {
+      "id": "benchmark-climbing-sf-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "benchmarkclimbing.com",
+      "gymIds": ["osm-node-4004802465"],
+      "sharedFields": {
+        "monthlyPrice": 99,
+        "dayPassPrice": 30,
+        "priceSource": "Benchmark Climbing official passes page and operator-linked Approach storefront",
+        "priceSourceUrl": "https://benchmark.portal.approach.app/membership-type/3",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The operator-linked public storefront lists Unlimited Membership at $99 recurring monthly for all Benchmark locations. The official passes page lists an ordinary $30 day pass, five visits for $140, and ten visits for $270; optional shoe-and-chalk rental is $5.",
+        "planOffers": [
+          {"sourceProductId":"unlimited-membership","name":"Unlimited Membership","accessScope":"Unlimited access to all Benchmark locations","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":99,"billingInterval":"month","commitmentType":"unknown","sourceUrl":"https://benchmark.portal.approach.app/membership-type/3","fees":[]},
+          {"sourceProductId":"five-day-passes","name":"5 Day Passes","productType":"class-pack","accessScope":"Five shareable climbing visits valid for one year","classAllowance":{"count":5,"period":"purchase"},"amount":140,"billingInterval":"one-time","commitmentType":"none","sourceUrl":"https://www.benchmarkclimbing.com/new-memberships-1","fees":[]},
+          {"sourceProductId":"ten-day-passes","name":"10 Day Passes","productType":"class-pack","accessScope":"Ten shareable climbing visits valid for one year","classAllowance":{"count":10,"period":"purchase"},"amount":270,"billingInterval":"one-time","commitmentType":"none","sourceUrl":"https://www.benchmarkclimbing.com/new-memberships-1","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"adult-day-pass","name":"Adult Day Pass","accessScope":"One ordinary climbing visit","amount":30,"sourceUrl":"https://www.benchmarkclimbing.com/new-memberships-1"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "federal-fitness-center-sf-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "federalfitnesscenters.com",
+      "gymIds": ["web-27e606755f1ba8"],
+      "sharedFields": {
+        "monthlyPrice": 47,
+        "dayPassPrice": 20,
+        "initiationFee": 40,
+        "priceSource": "Federal Fitness Center official membership table and operator-linked Mindbody store",
+        "priceSourceUrl": "https://www.federalfitnesscenters.com/federal-fitness-center",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "General-public, federal-contractor, and state-government access is $47/month plus a mandatory $40 one-time initiation fee. Federal-employee plans are eligibility-restricted at $40 for 450 Golden Gate only or $43 for all FFC clubs. The linked public Mindbody store lists a $20 same-day pass. The recurring commitment term is not disclosed.",
+        "planOffers": [
+          {"sourceProductId":"general-public-all-clubs","name":"General Public / Federal Contractor / State Government","accessScope":"All Federal Fitness Center clubs where general-public access is permitted","scopeType":"multi-location","amount":47,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":40,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"federal-employee-local","name":"Federal Employee — 450 Golden Gate","accessScope":"450 Golden Gate Avenue only","amount":40,"billingInterval":"month","commitmentType":"unknown","eligibility":{"type":"federal-employee","restrictions":["Federal employee eligibility required"]},"fees":[{"type":"initiation","amount":40,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"federal-employee-all-clubs","name":"Federal Employee — All FFC Clubs","accessScope":"All Federal Fitness Center clubs","scopeType":"multi-location","amount":43,"billingInterval":"month","commitmentType":"unknown","eligibility":{"type":"federal-employee","restrictions":["Federal employee eligibility required"]},"fees":[{"type":"initiation","amount":40,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"day-pass","name":"Day Pass","accessScope":"One same-day facility visit","amount":20,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=264454&stype=41"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "fit-bernal-fit-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "fit bernal fit",
+      "gymIds": ["osm-way-257161411"],
+      "sharedFields": {
+        "monthlyPrice": 77,
+        "dayPassPrice": null,
+        "enrollmentFee": 99,
+        "priceSource": "fitBERNALfit operator-owned public membership contract",
+        "priceSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The public individual Annual Membership is billed at $77 per month for 12 months with a $99 join fee after key-fob issuance. The $77 last-month prepayment is upfront dues, not a fee. Household add-on join fees are $51 for the second person and $0 for later household members; no ordinary day pass is published.",
+        "planOffers": [
+          {"sourceProductId":"annual-membership-individual","name":"Annual Membership — Individual","accessScope":"Standard individual gym membership with key-fob access","amount":77,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"upfrontDues":[{"type":"last-month-dues","amount":77,"currency":"USD"}],"fees":[{"type":"enrollment","amount":99,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "live-fit-basic-location-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "live-fit",
+      "gymIds": ["web-6123d4a1928a35","osm-node-9659815458","osm-node-4631674513","osm-node-412109978"],
+      "sharedFields": {
+        "monthlyPrice": 117,
+        "dayPassPrice": null,
+        "priceSource": "Live Fit Gym official location-specific signup cards",
+        "priceSourceUrl": "https://livefitgym.com/signup/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Basic is $117/month with access to Cole Valley, Nob Hill, Polk Street, and Hayes Valley plus unlimited classes. Massage + Gym is $207 and Wellness is $357. All public memberships require six months. The operator states that enrollment and annual-dues fees apply but does not disclose their amounts, so no fee amount is inferred.",
+        "planOffers": [
+          {"sourceProductId":"basic","name":"Basic","accessScope":"Cole Valley, Nob Hill, Polk Street, and Hayes Valley locations with unlimited classes","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":117,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"basic-massage-gym","name":"Massage + Gym","accessScope":"Basic-location gym access and unlimited classes plus monthly massage","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":207,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"basic-wellness","name":"Wellness","accessScope":"Basic-location gym access and unlimited classes plus wellness services","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":357,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "live-fit-premier-location-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "live-fit",
+      "gymIds": ["web-b1dcfdcb7b4d2a","web-2d8ab33422a507","osm-way-137602240"],
+      "sharedFields": {
+        "monthlyPrice": 137,
+        "dayPassPrice": null,
+        "priceSource": "Live Fit Gym official location-specific signup cards",
+        "priceSourceUrl": "https://livefitgym.com/signup/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Premier is $137/month with access to all eight Live Fit locations plus unlimited classes. Massage + Gym is $227 and Wellness is $377. All public memberships require six months. The operator states that enrollment and annual-dues fees apply but does not disclose their amounts, so no fee amount is inferred.",
+        "planOffers": [
+          {"sourceProductId":"premier","name":"Premier","accessScope":"All eight Live Fit Gym locations with unlimited classes","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":137,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-massage-gym","name":"Massage + Gym","accessScope":"All-location gym access and unlimited classes plus monthly massage","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":227,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-wellness","name":"Wellness","accessScope":"All-location gym access and unlimited classes plus wellness services","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":377,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "live-fit-mission-wellness-club-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "livefitgym.com",
+      "gymIds": ["osm-node-968356991"],
+      "sharedFields": {
+        "monthlyPrice": 137,
+        "dayPassPrice": null,
+        "priceSource": "Live Fit Gym official Mission signup cards",
+        "priceSourceUrl": "https://livefitgym.com/signup/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The 780 Valencia Mission location uses the Premier catalog: $137/month for all eight Live Fit locations and unlimited classes, $227 for Massage + Gym, or $377 for Wellness. All require six months. Enrollment and annual-dues fees are stated but their amounts are not public, so none is inferred.",
+        "planOffers": [
+          {"sourceProductId":"premier","name":"Premier","accessScope":"All eight Live Fit Gym locations with unlimited classes","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":137,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-massage-gym","name":"Massage + Gym","accessScope":"All-location gym access and unlimited classes plus monthly massage","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":227,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-wellness","name":"Wellness","accessScope":"All-location gym access and unlimited classes plus wellness services","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":377,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "orangetheory-pacific-heights-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "orangetheory",
+      "gymIds": ["web-dcbf7708bf2f77"],
+      "sharedFields": {
+        "monthlyPrice": 119,
+        "dayPassPrice": null,
+        "priceSource": "Orangetheory Pacific Heights official location membership cards",
+        "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Pacific Heights publishes Basic at $119/month for four classes, Elite at $199 for eight, and Premier at $269 for unlimited classes. Memberships are month-to-month with 30-day cancellation. The generic site footer's recommended $35 casual visit explicitly varies by studio and is not retained as an exact-location drop-in.",
+        "planOffers": [
+          {"sourceProductId":"basic","name":"Basic","accessScope":"Four coached classes monthly with multi-studio access","scopeType":"multi-location","classAllowance":{"count":4,"period":"month"},"amount":119,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"elite","name":"Elite","accessScope":"Eight coached classes monthly with multi-studio access","scopeType":"multi-location","classAllowance":{"count":8,"period":"month"},"amount":199,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"premier","name":"Premier","accessScope":"Unlimited coached classes with multi-studio access","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":269,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"premier-first-month","name":"Premier First-Month New-Member Offer","accessScope":"Unlimited coached classes with multi-studio access","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":209,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"new-member","restrictions":["New members only"]},"promotion":{"isPromotion":true,"label":"First-month offer"},"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "strong-friends-public-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "strongfriendsgym.com",
+      "gymIds": ["web-c745e6dbdcadb6"],
+      "sharedFields": {
+        "monthlyPrice": null,
+        "dayPassPrice": 60,
+        "priceSource": "Strong Friends official drop-in page and operator-linked PushPress product",
+        "priceSourceUrl": "https://www.strongfriendsgym.com/programs/drop-in",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Any ordinary drop-in class is $60. The official page says semi-private classes start at $43 when a client commits to membership, but it does not disclose a recurring amount, allowance, or cadence, so that statement remains non-selectable cost context.",
+        "planOffers": [],
+        "dropInOffers": [
+          {"sourceProductId":"plan_7da02367d079f9","name":"Drop-In — Any Class","accessScope":"One ordinary coached class","amount":60,"sourceUrl":"https://strongfriends.pushpress.com/landing/plans/plan_7da02367d079f9"}
+        ],
+        "costContextOffers": [
+          {"kind":"starting-price","label":"Semi-private classes start at $43 with membership commitment","amount":43,"cadence":"class","productType":"coached-class","sourceUrl":"https://www.strongfriendsgym.com/programs/drop-in","observedAt":"2026-08-21","note":"The recurring membership amount, allowance, and cadence are not disclosed."}
+        ],
+        "catalogCompleteness": {"plans":"none-observed","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "bar-method-fidi-mariana-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "barmethod.com",
+      "gymIds": ["web-e20a10174e60fa"],
+      "sharedFields": {
+        "monthlyPrice": 119,
+        "dayPassPrice": 38,
+        "priceSource": "Bar Method FiDi operator-linked public Mariana Tek buy-page catalog",
+        "priceSourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The smallest recurring plan is four classes for $119/month. Eight classes are $199 and unlimited is $259; the unlimited description currently promotes a $209 first month, which is not the ordinary rate. The ordinary drop-in is $38 and 10-, 20-, and 30-class packs are $339, $569, and $799.",
+        "planOffers": [
+          {"sourceProductId":"memberships-111342","name":"4 Classes Monthly","accessScope":"Four FiDi classes per month","scopeType":"single-location","classAllowance":{"count":4,"period":"month"},"amount":119,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"memberships-111344","name":"8 Classes Monthly","accessScope":"Eight FiDi classes per month","scopeType":"single-location","classAllowance":{"count":8,"period":"month"},"amount":199,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"memberships-109099","name":"Club Bar Unlimited","accessScope":"Unlimited classes at FiDi, Downtown, and Marina","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":259,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"memberships-132861","name":"Intro 30 Days Unlimited","productType":"class-pack","accessScope":"Thirty days of unlimited classes","classAllowance":{"unlimited":true,"period":"30 days"},"amount":74.25,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"new-client","restrictions":["Introductory client offer"]},"promotion":{"isPromotion":true,"label":"Introductory offer; regular displayed value $99"},"fees":[]},
+          {"sourceProductId":"credits-109103","name":"10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":339,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"credits-111346","name":"20 Class Pack","productType":"class-pack","classAllowance":{"count":20,"period":"purchase"},"amount":569,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"credits-111348","name":"30 Class Pack","productType":"class-pack","classAllowance":{"count":30,"period":"purchase"},"amount":799,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"credits-109105","name":"Single Class","accessScope":"One ordinary FiDi class","amount":38}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "pilates-school-geary-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "pilatesschoolsf.com",
+      "gymIds": ["web-8e0d13fb9738f9"],
+      "sharedFields": {
+        "monthlyPrice": 250,
+        "dayPassPrice": null,
+        "priceSource": "Pilates School SF official Drop-In Program pricing page",
+        "priceSourceUrl": "https://www.pilatesschoolsf.com/drop-in-pricing/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The standard individual Single Membership is $250/month for 10 classes. The former $189 compatibility value is the per-person rate for a restricted four-person shared membership, not a standard individual plan. Two- and three-person shared rates are $225 and $199 per person. The new-student three-pack is $50 and the returning-student eight-pack is $280; no ordinary single class price is published.",
+        "planOffers": [
+          {"sourceProductId":"single-membership","name":"Single Membership","accessScope":"Ten Geary Studio classes monthly plus selected Geary School reformer/tower classes","scopeType":"single-location","classAllowance":{"count":10,"period":"month"},"amount":250,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"shared-two","name":"Shared Membership — Two People","classAllowance":{"count":10,"period":"month"},"amount":225,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"shared-membership","restrictions":["Requires a two-person shared membership"]},"fees":[]},
+          {"sourceProductId":"shared-three","name":"Shared Membership — Three People","classAllowance":{"count":10,"period":"month"},"amount":199,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"shared-membership","restrictions":["Requires a three-person shared membership"]},"fees":[]},
+          {"sourceProductId":"shared-four","name":"Shared Membership — Four People","classAllowance":{"count":10,"period":"month"},"amount":189,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"shared-membership","restrictions":["Requires a four-person shared membership"]},"fees":[]},
+          {"sourceProductId":"family-membership","name":"Family Membership","classAllowance":{"count":20,"period":"month"},"amount":325,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Two adults and one child age 11+"]},"fees":[]},
+          {"sourceProductId":"intro-three","name":"New-Student 3-Class Intro Pack","productType":"class-pack","classAllowance":{"count":3,"period":"purchase"},"amount":50,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"new-student","restrictions":["New students only"]},"promotion":{"isPromotion":true,"label":"Introductory pack"},"fees":[]},
+          {"sourceProductId":"eight-class-pack","name":"8-Class Pack","productType":"class-pack","classAllowance":{"count":8,"period":"purchase"},"amount":280,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"returning-student","restrictions":["Returning students"]},"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "world-team-usa-public-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "worldteamusa.net",
+      "gymIds": ["web-76a8863d9951eb"],
+      "sharedFields": {
+        "monthlyPrice": null,
+        "dayPassPrice": 49,
+        "priceSource": "World Team USA official services catalog",
+        "priceSourceUrl": "https://www.worldteamusa.net/services",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The ordinary visiting-student day pass is $49 and requires prior martial-arts experience. New or inexperienced students use a $79 introduction lesson. The official one-time catalog also lists a $285 30-day unlimited trial, a $105 seven-day online/Muay Thai trial, and a $399 six-week bootcamp; no ongoing recurring membership amount is public.",
+        "planOffers": [
+          {"sourceProductId":"introduction-lesson","name":"Introduction Lesson","productType":"onboarding","classAllowance":{"count":1,"period":"purchase"},"amount":79,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"onboarding","restrictions":["For new or inexperienced students"]},"fees":[]},
+          {"sourceProductId":"thirty-day-trial","name":"30-Day Unlimited Trial","productType":"class-pack","classAllowance":{"unlimited":true,"period":"30 days"},"amount":285,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"new-student","restrictions":["Trial offer"]},"promotion":{"isPromotion":true,"label":"30-day trial"},"fees":[]},
+          {"sourceProductId":"online-seven-day-trial","name":"7-Day Online / Muay Thai & Fitness Trial","productType":"class-pack","classAllowance":{"unlimited":true,"period":"7 days"},"amount":105,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"online-or-trial","restrictions":["Trial or online-access product"]},"promotion":{"isPromotion":true,"label":"7-day trial"},"fees":[]},
+          {"sourceProductId":"six-week-bootcamp","name":"6-Week Bootcamp","productType":"class-pack","classAllowance":{"count":null,"period":"6 weeks","disclosed":false},"amount":399,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"day-pass","name":"Day Pass","accessScope":"One class for a visiting student with martial-arts experience","amount":49,"eligibility":{"type":"standard-adult","restrictions":["Prior martial-arts experience required"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
     }
   ]
 }

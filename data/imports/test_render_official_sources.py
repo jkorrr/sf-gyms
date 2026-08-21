@@ -41,6 +41,13 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertFalse(rendered.is_safe_public_tab_label("Join now"))
         self.assertFalse(rendered.is_safe_public_tab_label("Create account"))
 
+    def test_public_tab_links_cannot_navigate_off_the_exact_location_page(self) -> None:
+        current = "https://operator.example/locations/sf#pricing"
+        self.assertTrue(rendered.safe_public_tab_href(current, "#memberships"))
+        self.assertTrue(rendered.safe_public_tab_href(current, ""))
+        self.assertFalse(rendered.safe_public_tab_href(current, "/memberships"))
+        self.assertFalse(rendered.safe_public_tab_href(current, "https://operator.example/pricing"))
+
     def test_crunch_render_prefers_attached_promotion_over_detached_summary_amount(self) -> None:
         candidates = [
             {"amount": 80.75, "productType": "monthly", "promotion": {"isPromotion": False}},
@@ -65,12 +72,13 @@ class RenderedCrawlerTests(unittest.TestCase):
             [{"gymId": "keep", "url": "https://keep.example"}, {"gymId": "replace", "url": "https://old.example"}],
             [{"gymId": "keep", "amount": 10}, {"gymId": "replace", "amount": 20}],
             [{"gymId": "replace", "url": "https://new.example"}],
-            [{"gymId": "replace", "amount": 30}],
+            [{"gymId": "replace", "amount": 30}, {"gymId": "replace", "amount": 30}],
             {"replace"},
         )
         self.assertEqual({item["gymId"] for item in attempts}, {"keep", "replace"})
         self.assertEqual({item["url"] for item in attempts}, {"https://keep.example", "https://new.example"})
         self.assertEqual({item["amount"] for item in observations}, {10, 30})
+        self.assertEqual(len(observations), 2)
 
     def test_cross_domain_navigation_still_requires_approved_booking_host(self) -> None:
         self.assertTrue(rendered.allowed_network_response("https://operator.example", "https://tenant.pushpress.com/landing/plans"))
@@ -103,6 +111,47 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertEqual({item["websiteUrl"] for item in candidates}, {
             "https://studio.example/pricing", "https://momence.com/studio/memberships",
         })
+
+    def test_price_source_and_same_operator_research_pages_are_render_targets(self) -> None:
+        gym = {
+            "id": "studio", "name": "Studio", "address": "1414 Van Ness Avenue, San Francisco, CA",
+            "websiteUrl": "https://studio.example/", "officialUrl": "https://studio.example/location/sf",
+            "priceSourceUrl": "https://studio.example/pricing#plans",
+        }
+        attempts = [
+            {"url": "https://studio.example/memberships", "status": "fetched"},
+            {"url": "https://studio.example/about", "status": "fetched"},
+            {"url": "https://benchmark.portal.approach.app/membership-type/3", "status": "fetched"},
+        ]
+        self.assertEqual(rendered.render_target_urls(gym, attempts), [
+            "https://studio.example/",
+            "https://studio.example/location/sf",
+            "https://studio.example/pricing",
+            "https://studio.example/memberships",
+            "https://benchmark.portal.approach.app/membership-type/3",
+        ])
+
+    def test_same_operator_routes_must_match_a_stable_location_slug(self) -> None:
+        gym = {
+            "id": "bar", "name": "The Bar Method FiDi", "address": "234 Bush Street",
+            "websiteUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+            "officialUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+            "priceSourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+        }
+        attempts = [
+            {"url": "https://barmethod.com/locations/san-francisco-fidi/buy/", "status": "fetched"},
+            {"url": "https://barmethod.com/locations/san-francisco-downtown/buy/", "status": "fetched"},
+        ]
+        targets = rendered.render_target_urls(gym, attempts)
+        self.assertIn("https://barmethod.com/locations/san-francisco-fidi/buy/", targets)
+        self.assertNotIn("https://barmethod.com/locations/san-francisco-downtown/buy/", targets)
+
+    def test_approach_location_selector_prefers_exact_street(self) -> None:
+        gym = {"name": "Benchmark Climbing", "address": "1414 Van Ness Avenue, San Francisco, CA 94109"}
+        sf = rendered.score_location_label(gym, "San Francisco — 1414 Van Ness Ave")
+        berkeley = rendered.score_location_label(gym, "Berkeley — 1607 Shattuck Ave")
+        self.assertGreaterEqual(sf, 8)
+        self.assertGreater(sf, berkeley)
 
 
 if __name__ == "__main__":

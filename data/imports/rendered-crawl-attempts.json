@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
+  "mode": "full",
   "attempts": [
     {
       "gymId": "osm-node-10047742013",
@@ -2180,17 +2180,28 @@
     {
       "gymId": "osm-node-4004802465",
       "name": "Benchmark Climbing",
+      "url": "https://benchmark.portal.approach.app/membership-type/3",
+      "attemptedAt": "2026-08-21",
+      "status": "robots-disallowed",
+      "robotsStatus": "robots-http-403",
+      "candidateCount": 0,
+      "requiresReview": false
+    },
+    {
+      "gymId": "osm-node-4004802465",
+      "name": "Benchmark Climbing",
       "url": "https://www.benchmarkclimbing.com/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "87a54c32fa9634565ef180c61c0ae332865f64b55f5399466c37cf957e24713a",
+      "contentHash": "5adb8f88538c236ed5fbf700f0b6c0709e7262f4aa1dd02960af4d3f2ee84e1c",
       "networkEvidenceHashes": [
         "f1ea07a1e51a389c8de07120ae5c2e432e9dd8f4fbd6f92489f185b0523a3fd4"
       ],
       "clickedPublicTabs": [],
       "candidateCount": 1,
       "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
@@ -5316,16 +5327,15 @@
       "gymId": "web-dcbf7708bf2f77",
       "name": "Orangetheory Fitness San Francisco Pacific Heights",
       "url": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "b7b4104063aa61beb1cecea5ed619997b6a641b0d0d9d99b850d989a807fe30c",
+      "contentHash": "8b0a903b5136f87d4f2edae4ef577f8a20f563f74996bfcdace790d7b037eb14",
       "networkEvidenceHashes": [],
-      "clickedPublicTabs": [
-        "Memberships"
-      ],
-      "candidateCount": 0,
-      "requiresReview": false,
+      "clickedPublicTabs": [],
+      "candidateCount": 3,
+      "requiresReview": true,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
     },
@@ -5333,16 +5343,67 @@
       "gymId": "web-e20a10174e60fa",
       "name": "The Bar Method San Francisco - FiDi",
       "url": "https://barmethod.com/locations/san-francisco-fidi/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "2b972562196b8e39d53e0c2eac6b7c62b376041b9867e1457cea2510ba64637f",
+      "contentHash": "fda2518a3418b37d6d9f3ad741960901c359f8a92cfbb692070818120fa40a91",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,
       "requiresReview": false,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "name": "The Bar Method San Francisco - FiDi",
+      "url": "https://barmethod.com/locations/san-francisco-fidi/buy/",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "7b02702589ec876a2f0c35f5156043266e8e6f0b9d10af151a0cd61fe5018ae2",
+      "networkEvidenceHashes": [
+        "21835b622f00741b6be236935b1c4bcec22d427514c75d96265f462f0466c07d",
+        "f10f7a1cac90a7a8d699f91e9d41f464a71f6a6a4ffcc511367adb0a04473fe7"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 0,
+      "requiresReview": false,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "name": "The Bar Method San Francisco - FiDi",
+      "url": "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "f64054a8ab9b2defc05d75afe8d795fa17f601f9527dfcef545945b2866bb518",
+      "networkEvidenceHashes": [
+        "1cf3c959f8590d30764d063ea7581236e8745d85ca8af6c9fd30f09cd572f24c",
+        "21835b622f00741b6be236935b1c4bcec22d427514c75d96265f462f0466c07d",
+        "eda653d9f16e8b08e6923ab5e73254f4d10c6993fe259fd8a301323f4a6ba1dd",
+        "f10f7a1cac90a7a8d699f91e9d41f464a71f6a6a4ffcc511367adb0a04473fe7"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 14,
+      "requiresReview": true,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "name": "The Bar Method San Francisco - FiDi",
+      "url": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "attemptedAt": "2026-08-21",
+      "status": "robots-disallowed",
+      "robotsStatus": "checked",
+      "candidateCount": 0,
+      "requiresReview": false
     },
     {
       "gymId": "web-e220d3accf950e",

@@ -17,7 +17,7 @@ from collections import defaultdict
 from datetime import UTC, datetime
 from pathlib import Path
 from typing import Any
-from urllib.parse import urljoin, urlparse
+from urllib.parse import urldefrag, urljoin, urlparse
 
 import crawl_official_sources as static_crawler
 
@@ -31,6 +31,10 @@ MAX_JSON_BYTES = 4_000_000
 PUBLIC_TAB_LABELS = {"membership", "memberships", "package", "packages", "pricing", "rates", "passes"}
 PRICE_CARD_SELECTOR = "article, [role='listitem'], [class*='price' i], [class*='plan' i], [class*='membership' i], [class*='package' i]"
 ACCESS_BLOCK_COOLDOWN_DAYS = 28
+RENDER_RESEARCH_PATH_RE = re.compile(
+    r"/(?:pricing|prices|pricespolicies|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join)(?:/|$|[?#])",
+    re.IGNORECASE,
+)
 
 
 def text(value: Any) -> str:
@@ -60,6 +64,39 @@ def allowed_network_response(operator_url: str, response_url: str) -> bool:
 
 def is_safe_public_tab_label(label: str) -> bool:
     return " ".join(text(label).casefold().split()) in PUBLIC_TAB_LABELS
+
+
+def safe_public_tab_href(current_url: str, href: str) -> bool:
+    """Allow in-page public tabs, never let a navigation label change pages."""
+
+    if not text(href):
+        return True
+    try:
+        current = urldefrag(current_url)[0]
+        target = urldefrag(urljoin(current_url, href))[0]
+    except ValueError:
+        return False
+    return bool(current and target and current == target)
+
+
+def score_location_label(gym: dict[str, Any], label: str) -> int:
+    """Score a public location selector without inventing geospatial matches."""
+
+    candidate = " ".join(re.findall(r"[a-z0-9]+", text(label).casefold()))
+    if not candidate:
+        return 0
+    address = " ".join(re.findall(r"[a-z0-9]+", text(gym.get("address")).casefold()))
+    name = " ".join(re.findall(r"[a-z0-9]+", text(gym.get("name")).casefold()))
+    address_tokens = [token for token in address.split() if len(token) >= 3 or token.isdigit()]
+    name_tokens = [token for token in name.split() if len(token) >= 4 and token not in {"fitness", "studio", "climbing", "training"}]
+    score = sum(2 for token in address_tokens if token in candidate)
+    score += sum(1 for token in name_tokens if token in candidate)
+    street_number = next((token for token in address_tokens if token.isdigit()), "")
+    if street_number and street_number in candidate:
+        score += 8
+    if "san francisco" in candidate:
+        score += 4
+    return score
 
 
 def detect_access_blocker(title: str, visible_text: str, html: str = "") -> str:
@@ -112,6 +149,51 @@ def access_block_is_current(attempted_at: str, as_of: str, cooldown_days: int = 
     return 0 <= (current - attempted).days < cooldown_days
 
 
+def render_target_urls(gym: dict[str, Any], attempts: list[dict[str, Any]]) -> list[str]:
+    """Return reviewed operator and storefront targets for rendered recovery."""
+
+    seeds = [
+        text(gym.get("websiteUrl")),
+        text(gym.get("officialUrl")),
+        text(gym.get("priceSourceUrl")),
+    ]
+    operator_hosts = {host(value) for value in seeds if static_crawler.is_public_http_url(value)}
+    official_path = urlparse(text(gym.get("officialUrl"))).path.casefold()
+    location_slugs = [
+        segment
+        for segment in official_path.split("/")
+        if len(segment) >= 4
+        and segment not in {"location", "locations", "pricing", "prices", "membership", "memberships", "schedule", "san-francisco"}
+    ]
+    stable_location_slug = max(location_slugs, key=len, default="")
+    values = list(seeds)
+    for attempt in attempts:
+        attempt_url = text(attempt.get("url"))
+        if text(attempt.get("status")) in {"robots-disallowed", "host-backoff-after-429"}:
+            continue
+        is_platform = bool(static_crawler.platform_adapters.platform_for_url(attempt_url))
+        parsed = urlparse(attempt_url) if static_crawler.is_public_http_url(attempt_url) else None
+        is_operator_research = bool(
+            parsed
+            and host(attempt_url) in operator_hosts
+            and RENDER_RESEARCH_PATH_RE.search(parsed.path + ("?" + parsed.query if parsed.query else ""))
+            and (not stable_location_slug or stable_location_slug in parsed.path.casefold())
+        )
+        if is_platform or is_operator_research:
+            values.append(attempt_url)
+    result: list[str] = []
+    seen: set[str] = set()
+    for value in values:
+        if not static_crawler.is_public_http_url(value):
+            continue
+        normalized_url = urldefrag(value)[0]
+        if normalized_url in seen:
+            continue
+        seen.add(normalized_url)
+        result.append(normalized_url)
+    return result[:12]
+
+
 def candidate_gyms(
     document: dict[str, Any],
     attempts_document: dict[str, Any],
@@ -152,14 +234,7 @@ def candidate_gyms(
     expanded: list[dict[str, Any]] = []
     seen: set[tuple[str, str]] = set()
     for gym in candidates:
-        render_urls = [text(gym.get("websiteUrl"))]
-        for attempt in attempts_by_gym.get(text(gym.get("id")), []):
-            attempt_url = text(attempt.get("url"))
-            if (
-                static_crawler.platform_adapters.platform_for_url(attempt_url)
-                and text(attempt.get("status")) not in {"robots-disallowed", "host-backoff-after-429"}
-            ):
-                render_urls.append(attempt_url)
+        render_urls = render_target_urls(gym, attempts_by_gym.get(text(gym.get("id")), []))
         for render_url in render_urls:
             key = (text(gym.get("id")), render_url)
             if not render_url or key in seen or key in blocked_render_keys:
@@ -217,8 +292,11 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         except (UnicodeDecodeError, json.JSONDecodeError):
             return
         network_hashes.append(hashlib.sha256(body).hexdigest())
-        network_candidates.extend(static_crawler.structured_candidates([payload], response_url, "rendered-public-json"))
-        network_candidates.extend(static_crawler.platform_adapters.extract_candidates(parsed, response_url))
+        platform_candidates, _nested = static_crawler.public_platform_json_candidates(parsed, response_url)
+        if platform_candidates:
+            network_candidates.extend(platform_candidates)
+        else:
+            network_candidates.extend(static_crawler.structured_candidates([payload], response_url, "rendered-public-json"))
 
     page.on("response", capture_response)
     status = "rendered"
@@ -235,17 +313,35 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         # Crunch hydrates regular rates and plan-linked fee tables after its
         # summary prices. Waiting for that operator-owned DOM prevents the
         # early summary amounts from being mistaken for complete plan cards.
-        page.wait_for_timeout(3000 if host(url).endswith("crunch.com") else 1500)
+        dynamic_platform = static_crawler.platform_name(url) in {"approach", "mariana-tek", "xponential-member-app"}
+        page.wait_for_timeout(4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com")) else 1500)
+        if static_crawler.platform_name(url) == "approach":
+            choices: list[tuple[int, Any]] = []
+            for button in page.locator("button").all()[:100]:
+                try:
+                    if button.is_visible():
+                        choices.append((score_location_label(gym, button.inner_text(timeout=300)), button))
+                except Exception:
+                    continue
+            best_score, best_button = max(choices, key=lambda item: item[0], default=(0, None))
+            if best_button is not None and best_score >= 8:
+                best_button.click(timeout=1000)
+                page.wait_for_timeout(300)
+                for save in page.locator("button").all()[:100]:
+                    try:
+                        if re.fullmatch(r"\s*Save\s*", save.inner_text(timeout=300), re.IGNORECASE) and save.is_visible() and save.is_enabled():
+                            save.click(timeout=1000)
+                            page.wait_for_timeout(1000)
+                            break
+                    except Exception:
+                        continue
         for locator in page.locator("button, [role='tab'], a").all()[:150]:
             try:
                 label = " ".join(locator.inner_text(timeout=300).split())
                 if is_safe_public_tab_label(label) and locator.is_visible():
                     href = text(locator.get_attribute("href"))
-                    target_url = urljoin(page.url, href) if href else ""
-                    if target_url and host(target_url) != host(page.url):
-                        destination_allowed, _destination_robots = static_crawler.robots_allowed(target_url, timeout_ms / 1000)
-                        if not destination_allowed:
-                            continue
+                    if not safe_public_tab_href(page.url, href):
+                        continue
                     locator.click(timeout=1000)
                     page.wait_for_timeout(500)
                     clicked_tabs.append(label)
@@ -343,10 +439,21 @@ def merge_incremental_results(
     }
     attempts_by_key.update({(text(item.get("gymId")), text(item.get("url"))): item for item in new_attempts})
     attempts = sorted(attempts_by_key.values(), key=lambda item: (text(item.get("gymId")), text(item.get("url"))))
-    observations = [
+    combined_observations = [
         item for item in existing_observations
         if text(item.get("gymId")) not in processed_gym_ids
     ] + new_observations
+    observations: list[dict[str, Any]] = []
+    observation_keys: set[tuple[Any, ...]] = set()
+    for item in combined_observations:
+        key = (
+            text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("sourceProductId")),
+            float(item.get("amount", 0) or 0), text(item.get("productType")), text(item.get("rawLabel")),
+        )
+        if key in observation_keys:
+            continue
+        observation_keys.add(key)
+        observations.append(item)
     observations.sort(
         key=lambda item: (
             text(item.get("gymId")), text(item.get("sourceUrl")),
