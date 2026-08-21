@@ -22,7 +22,7 @@
     "costCoverage": {
       "generatedAt": "2026-08-21",
       "report": "data/imports/cost-coverage-report.json",
-      "estimatorVersion": "sf-bay-area-v4-calibrated",
+      "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
       "selectionRuleVersion": "neutral-basic-v2",
       "verifiedPricesRemainSeparateFromEstimates": true,
       "reportedPriceVersion": "reported-cost-v1",
@@ -11426,7 +11426,7 @@
         "kids martial arts",
         "matted training area"
       ],
-      "description": "Charles Gracie Academy Richmond District is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include Brazilian jiu-jitsu, adult martial arts, kids martial arts.",
+      "description": "Charles Gracie Academy Richmond District is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include Brazilian jiu-jitsu, adult martial arts, kids martial arts.",
       "hours": "Access is during adult and youth martial-arts classes shown on the current official schedule; no separate open-gym hours are published.",
       "websiteUrl": "https://www.graciesanfrancisco.com/",
       "sourceName": "OpenStreetMap",
@@ -11499,11 +11499,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires direct contact to disclose location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires direct contact to disclose location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -20068,7 +20081,7 @@
       "longitude": -122.3946534,
       "monthlyPrice": null,
       "dayPassPrice": null,
-      "freshness": "unknown",
+      "freshness": "verified",
       "isOpen247": false,
       "amenities": [
         "yoga",
@@ -20134,7 +20147,29 @@
           "reason": "Alternative public plans have not been reconstructed from the source catalog."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "package-price",
+          "label": "Three Class Pass",
+          "low": 40.0,
+          "high": 40.0,
+          "currency": "USD",
+          "cadence": "3-class pass",
+          "productType": "class-pack",
+          "sourceUrl": "https://www.divineyogastudiosf.com/book-now",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": [
+            "official-operating-status-conflict"
+          ],
+          "note": "The amount is public, but the facility's current operating status is disputed; do not treat it as a selectable current drop-in.",
+          "selectable": false,
+          "normalizedMonthlyLow": null,
+          "normalizedMonthlyHigh": null,
+          "id": "osm-node-10869882845:cost-context:a430758c7da1"
+        }
+      ],
       "selectionReason": "",
       "planValidationErrors": [],
       "catalogStatus": {
@@ -20174,7 +20209,28 @@
           "status": "listed",
           "reason": ""
         }
-      }
+      },
+      "priceSource": "Divine Yoga Studio official booking page",
+      "priceSourceUrl": "https://www.divineyogastudiosf.com/book-now",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current official booking page at 406 Brannan publishes a three-class pass for $40, while the official pricing-plan page says no plans are available and the municipal business record reports an end date. The package is retained only as official cost context until the operating-status conflict is resolved.",
+      "costContextOffers": [
+        {
+          "kind": "package-price",
+          "label": "Three Class Pass",
+          "amount": 40,
+          "cadence": "3-class pass",
+          "productType": "class-pack",
+          "sourceUrl": "https://www.divineyogastudiosf.com/book-now",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": [
+            "official-operating-status-conflict"
+          ],
+          "note": "The amount is public, but the facility's current operating status is disputed; do not treat it as a selectable current drop-in."
+        }
+      ]
     },
     {
       "id": "osm-node-4057014702",
@@ -23002,7 +23058,7 @@
         "self-defense",
         "matted training area"
       ],
-      "description": "Evolution Martial Arts - San Francisco is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include taekwondo, adult martial arts, kids martial arts.",
+      "description": "Evolution Martial Arts - San Francisco is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include taekwondo, adult martial arts, kids martial arts.",
       "hours": "Mon-Thu 2:00pm-8:00pm; Fri 2:00pm-7:00pm; Sat 9:00am-2:00pm; Sun closed. Class times within those hours vary by program.",
       "websiteUrl": "https://evolution-ma.com/",
       "sourceName": "OpenStreetMap",
@@ -23075,11 +23131,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -27399,7 +27468,7 @@
         "kids, teens, and adult programs",
         "women's kickboxing and self-defense"
       ],
-      "description": "Five Animals Choy Lay Fut Kung Fu is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include martial_arts, Choy Lay Fut forms and drills, kung fu.",
+      "description": "Five Animals Choy Lay Fut Kung Fu is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include martial_arts, Choy Lay Fut forms and drills, kung fu.",
       "hours": "Class schedule effective 2026-03-01: Mon approximately 4:15pm-7:30pm; Tue approximately 4:15pm-7:30pm; Wed approximately 4:00pm-7:45pm; Thu approximately 4:15pm-7:45pm; selected second and fourth Fridays; Sat 10:00am-2:00pm; Sun no classes",
       "websiteUrl": "https://www.fiveanimalskungfu-sf.com/",
       "sourceName": "OpenStreetMap",
@@ -27637,11 +27706,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires direct contact to disclose location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires direct contact to disclose location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -31671,7 +31753,7 @@
         "Muay Thai",
         "flexible make-up classes"
       ],
-      "description": "Hapkido USA is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include martial_arts, beginner, intermediate, advanced, and family Hapkido, Brazilian jiu-jitsu.",
+      "description": "Hapkido USA is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include martial_arts, beginner, intermediate, advanced, and family Hapkido, Brazilian jiu-jitsu.",
       "hours": "Class starts: Mon/Wed 4:00pm-9:00pm; Tue/Thu 4:00pm-8:00pm; Fri 4:00pm-6:00pm; Sat 10:00am-12:00pm; Sun no classes",
       "websiteUrl": "https://www.hapkidousa.com/",
       "sourceName": "OpenStreetMap",
@@ -31744,11 +31826,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -33505,7 +33600,7 @@
         "personal training",
         "small-group private coaching for 3-5 athletes"
       ],
-      "description": "Invincible Barbell is a coached strength and conditioning gym in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include fitness, Wheelchair access, Olympic weightlifting.",
+      "description": "Invincible Barbell is a coached strength and conditioning gym in San Francisco. No exact recurring price is public; the validated estimate is about $220 per month. Listed features include fitness, Wheelchair access, Olympic weightlifting.",
       "hours": "Mon-Thu 6:30am-9:00pm; Fri 6:30am-8:00pm; Sat-Sun 10:00am-5:00pm",
       "websiteUrl": "https://www.invinciblebarbell.com/",
       "sourceName": "OpenStreetMap",
@@ -33578,11 +33673,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 220.0,
+        "low": 100.0,
+        "high": 315.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: crossfit-strength|class-membership|independent",
+        "sampleSize": 9,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.1667,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -36683,7 +36791,7 @@
       "amenities": [
         "Kenpo karate instruction"
       ],
-      "description": "Lama's Kenpo Karate is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include Kenpo karate instruction.",
+      "description": "Lama's Kenpo Karate is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include Kenpo karate instruction.",
       "hours": "Hours not published in readable form on the current official member portal.",
       "websiteUrl": "https://www.lamaskenpokarate.com/",
       "sourceName": "OpenStreetMap",
@@ -36756,11 +36864,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -46337,7 +46458,7 @@
         "karate",
         "self-defense"
       ],
-      "description": "One Martial Arts is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include martial_arts, adult martial arts, kids martial arts.",
+      "description": "One Martial Arts is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include martial_arts, adult martial arts, kids martial arts.",
       "hours": "Access is during scheduled martial-arts classes; the current timetable is disclosed only after a required contact form, so fixed hours were not collected.",
       "websiteUrl": "https://onemartialarts.com/",
       "sourceName": "OpenStreetMap",
@@ -46492,11 +46613,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -46738,7 +46872,7 @@
         "youth classes",
         "conditioning"
       ],
-      "description": "Pacific Wushu is a martial arts or boxing martial-arts school in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include Wushu, Tai Chi, adult classes.",
+      "description": "Pacific Wushu is a martial arts or boxing martial-arts school in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include Wushu, Tai Chi, adult classes.",
       "hours": "Access is during scheduled adult and youth Wushu, Tai Chi, and conditioning classes shown on the official class calendar; there are no published open-gym hours.",
       "websiteUrl": "https://www.pacificwushu.com/",
       "sourceName": "OpenStreetMap",
@@ -46811,11 +46945,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires a personal-information form before disclosing location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -51647,7 +51794,7 @@
         "youth fencing",
         "fencing camps"
       ],
-      "description": "San Francisco Fencers' Club is a martial arts or boxing fitness studio in San Francisco. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include fencing, adult foil, youth fencing.",
+      "description": "San Francisco Fencers' Club is a martial arts or boxing fitness studio in San Francisco. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include fencing, adult foil, youth fencing.",
       "hours": "Class schedule: Tue 5:00pm-8:30pm; Wed 4:00pm-6:30pm; Thu 4:30pm-6:00pm; Sat 10:00am-3:30pm across separate classes",
       "websiteUrl": "https://sffencers.com/",
       "sourceName": "OpenStreetMap",
@@ -51830,11 +51977,24 @@
       "initiationFee": null,
       "processingFee": null,
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires direct contact to disclose location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires direct contact to disclose location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -52360,7 +52520,7 @@
       },
       "priceSource": "Sisters in Motion official home, discovery, and terms pages",
       "priceSourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
-      "priceObservedAt": "2026-08-19",
+      "priceObservedAt": "2026-08-21",
       "priceNote": "The live terms page contains two contradictory policy blocks, including different early-cancellation fees and only one $220/every-four-weeks statement. Current neutral membership pricing therefore fails closed. The $29 discovery and $199 four-week-unlimited products are time-limited introductory promotions and remain unselected.",
       "planOffers": [
         {
@@ -52455,11 +52615,11 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
-            "observedAt": "2026-08-19",
+            "observedAt": "2026-08-21",
             "source": "Sisters in Motion official home, discovery, and terms pages",
             "method": "reviewed-official-observation",
             "rawLabel": "Discovery Package",
-            "contentHash": "6b99cfd43da19b3510abc415eb65439ad843f21af0e71571b3fe4b18023bd084",
+            "contentHash": "abcf72fa327635a646c4c87101c81f728d223417f07c97535c2d7e4bc62fe5c6",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "",
@@ -52513,11 +52673,11 @@
           "upfrontDues": [],
           "evidence": {
             "url": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
-            "observedAt": "2026-08-19",
+            "observedAt": "2026-08-21",
             "source": "Sisters in Motion official home, discovery, and terms pages",
             "method": "reviewed-official-observation",
             "rawLabel": "Four Weeks Unlimited",
-            "contentHash": "85bb3a7512f55d4a5596cc405c640cc78f809250a24c359b45a8a5e5f0366386",
+            "contentHash": "77eba16af5cca7544e8b89451e7a490f492e47b1ee025d08f37eb6e88bbc599f",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "",
@@ -52547,7 +52707,30 @@
           "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
-      "costContext": [],
+      "costContext": [
+        {
+          "kind": "conflicting-price",
+          "label": "One current terms block: month-to-month membership after the minimum term",
+          "low": 220.0,
+          "high": 220.0,
+          "currency": "USD",
+          "cadence": "4 weeks",
+          "productType": "class-membership",
+          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": [
+            "duplicate-contradictory-live-terms",
+            "early-cancellation-fee-conflict"
+          ],
+          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms.",
+          "selectable": false,
+          "normalizedMonthlyLow": 238.33,
+          "normalizedMonthlyHigh": 238.33,
+          "id": "osm-node-3986912499:cost-context:ea154870892c"
+        }
+      ],
       "selectionReason": "",
       "planValidationErrors": [
         "Current official sources contain an unresolved price conflict."
@@ -52589,7 +52772,27 @@
           "status": "listed",
           "reason": ""
         }
-      }
+      },
+      "costContextOffers": [
+        {
+          "kind": "conflicting-price",
+          "label": "One current terms block: month-to-month membership after the minimum term",
+          "amount": 220,
+          "cadence": "4 weeks",
+          "normalizedMonthlyLow": 238.33,
+          "normalizedMonthlyHigh": 238.33,
+          "productType": "class-membership",
+          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": [
+            "duplicate-contradictory-live-terms",
+            "early-cancellation-fee-conflict"
+          ],
+          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms."
+        }
+      ]
     },
     {
       "id": "web-0b96f513d9f804",
@@ -63543,7 +63746,7 @@
         "self-defense",
         "private lessons"
       ],
-      "description": "Zanshin Dojo is a martial arts or boxing martial-arts school in Cole Valley / Haight-Ashbury. Current consumer pricing is not publicly disclosed without additional access or direct contact. Listed features include Adult karate; kids karate; Little Ninjas; self-defense; free trial class; uniform included in offer, adult karate, kids karate.",
+      "description": "Zanshin Dojo is a martial arts or boxing martial-arts school in Cole Valley / Haight-Ashbury. No exact recurring price is public; the validated estimate is about $225 per month. Listed features include Adult karate; kids karate; Little Ninjas; self-defense; free trial class; uniform included in offer, adult karate, kids karate.",
       "hours": "Access is during adult and youth karate classes shown on the official image-based schedule and during separately booked private lessons; there are no open-gym hours.",
       "websiteUrl": "https://sfgoju.com/",
       "sourceName": "Zanshin Dojo official site",
@@ -63702,11 +63905,24 @@
         }
       },
       "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The operator requires direct contact to disclose location pricing.",
-      "pricingStatus": "gated",
-      "monthlyPriceBlocker": "The operator requires direct contact to disclose location pricing.",
-      "dayPassPriceBlocker": "The operator does not publish an ordinary unrestricted single-visit price without contact, a form, or account access.",
+      "estimatedMonthly": {
+        "point": 225.0,
+        "low": 195.0,
+        "high": 250.0,
+        "currency": "USD",
+        "confidence": "medium",
+        "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
+        "sampleSize": 8,
+        "generatedAt": "2026-08-21",
+        "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+        "rangeMethod": "cross-validated-80-percent-residual-interval",
+        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationRangeCoverage": 1.0
+      },
+      "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
+      "pricingStatus": "estimated",
+      "monthlyPriceBlocker": "No verified recurring price was published; the displayed monthly amount is a separately labeled validated estimate.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",

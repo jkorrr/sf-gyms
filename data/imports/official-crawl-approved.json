@@ -433,6 +433,30 @@
       "priceNote": "Official current ranges are $150–$250 per one-on-one session, $85–$95 per semi-private session after required foundational one-on-one training, and $165–$250 for manual therapy. No endpoint is stored as an exact price because the coach determines the amount."
     },
     {
+      "gymId": "osm-node-10869882845",
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "priceSource": "Divine Yoga Studio official booking page",
+      "priceSourceUrl": "https://www.divineyogastudiosf.com/book-now",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current official booking page at 406 Brannan publishes a three-class pass for $40, while the official pricing-plan page says no plans are available and the municipal business record reports an end date. The package is retained only as official cost context until the operating-status conflict is resolved.",
+      "costContextOffers": [
+        {
+          "kind": "package-price",
+          "label": "Three Class Pass",
+          "amount": 40,
+          "cadence": "3-class pass",
+          "productType": "class-pack",
+          "sourceUrl": "https://www.divineyogastudiosf.com/book-now",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": ["official-operating-status-conflict"],
+          "note": "The amount is public, but the facility's current operating status is disputed; do not treat it as a selectable current drop-in."
+        }
+      ]
+    },
+    {
       "gymId": "osm-node-10874914159",
       "monthlyPrice": 209,
       "dayPassPrice": 36,
@@ -3451,8 +3475,25 @@
       "officialPriceConflict": true,
       "priceSource": "Sisters in Motion official home, discovery, and terms pages",
       "priceSourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
-      "priceObservedAt": "2026-08-19",
+      "priceObservedAt": "2026-08-21",
       "priceNote": "The live terms page contains two contradictory policy blocks, including different early-cancellation fees and only one $220/every-four-weeks statement. Current neutral membership pricing therefore fails closed. The $29 discovery and $199 four-week-unlimited products are time-limited introductory promotions and remain unselected.",
+      "costContextOffers": [
+        {
+          "kind": "conflicting-price",
+          "label": "One current terms block: month-to-month membership after the minimum term",
+          "amount": 220,
+          "cadence": "4 weeks",
+          "normalizedMonthlyLow": 238.33,
+          "normalizedMonthlyHigh": 238.33,
+          "productType": "class-membership",
+          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "observedAt": "2026-08-21",
+          "evidenceTier": "official-public",
+          "exactLocationMatch": "exact-location",
+          "conflictFlags": ["duplicate-contradictory-live-terms", "early-cancellation-fee-conflict"],
+          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms."
+        }
+      ],
       "planOffers": [
         {
           "sourceProductId": "discovery-package",

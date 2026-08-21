@@ -145,11 +145,20 @@ class CostCoverageTests(unittest.TestCase):
         self.assertIsNone(published["monthlyPrice"])
         self.assertIsNone(published["selectedPlanId"])
 
-    def test_contact_gated_price_is_explicit_and_never_estimated(self) -> None:
+    def test_contact_gated_price_can_use_validated_estimate_without_leaking_into_verified_field(self) -> None:
         priced = [gym(f"pilates-{index}", f"Example Pilates {index}", price) for index, price in enumerate((100, 105, 110, 115, 120, 125, 130, 135))]
         target = gym("gated", "Contact Only Pilates", None, pricingAccess="contact-required")
         document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [*priced, target]}, "2026-08-17")
         published = next(item for item in document["gyms"] if item["id"] == "gated")
+        self.assertEqual(published["pricingStatus"], "estimated")
+        self.assertEqual(published["estimatedMonthly"]["point"], 120)
+        self.assertIsNone(published["monthlyPrice"])
+        self.assertIn("requires direct contact", published["pricingBlocker"])
+
+    def test_contact_gated_price_stays_gated_without_validated_cohort(self) -> None:
+        target = gym("gated", "Contact Only Pilates", None, pricingAccess="contact-required")
+        document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [target]}, "2026-08-17")
+        published = document["gyms"][0]
         self.assertEqual(published["pricingStatus"], "gated")
         self.assertIsNone(published["estimatedMonthly"])
         self.assertIsNone(published["monthlyPrice"])
@@ -162,6 +171,21 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(published["pricingStatus"], "gated")
         self.assertIsNone(published["estimatedMonthly"])
         self.assertTrue(report["publicationChecks"]["noEstimateOnGatedOrUnavailable"])
+
+    def test_contact_gate_does_not_override_unavailable_estimate_exclusions(self) -> None:
+        priced = [gym(f"pilates-{index}", f"Example Pilates {index}", price) for index, price in enumerate((100, 105, 110, 115, 120, 125, 130, 135))]
+        target = gym(
+            "coming-contact",
+            "Coming Soon Contact Pilates",
+            None,
+            recordStatus="coming_soon",
+            pricingAccess="contact-required",
+        )
+        document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [*priced, target]}, "2026-08-17")
+        published = next(item for item in document["gyms"] if item["id"] == "coming-contact")
+        self.assertEqual(published["pricingStatus"], "gated")
+        self.assertIsNone(published["estimatedMonthly"])
+        self.assertTrue(report["publicationChecks"]["noEstimateOnRestrictedConflictedOrUnavailable"])
 
     def test_estimate_requires_minimum_comparable_sample(self) -> None:
         target = gym("target", "Unpriced Martial Arts", None)
@@ -509,6 +533,34 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(result["costContext"][0]["low"], 150)
         self.assertEqual(result["costContext"][0]["high"], 250)
         self.assertFalse(result["costContext"][0]["selectable"])
+        self.assertTrue(report["publicationChecks"]["costContextNeverLeaksIntoVerifiedFields"])
+
+    def test_explicit_conflicting_context_preserves_warning_and_normalizes_four_week_cadence(self) -> None:
+        value = gym(
+            "conflicting-context",
+            "Conflicting Context Studio",
+            None,
+            pricingAccess="official-price-conflict",
+            costContextOffers=[{
+                "kind": "conflicting-price",
+                "label": "One current terms block",
+                "amount": 220,
+                "cadence": "4 weeks",
+                "productType": "class-membership",
+                "sourceUrl": "https://example.com/terms",
+                "observedAt": "2026-08-21",
+                "conflictFlags": ["duplicate-contradictory-terms"],
+                "note": "Do not select while the live terms conflict remains.",
+            }],
+        )
+        document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-21")
+        result = document["gyms"][0]
+        context = result["costContext"][0]
+        self.assertEqual(result["pricingStatus"], "unresolved")
+        self.assertIsNone(result["monthlyPrice"])
+        self.assertEqual(context["kind"], "conflicting-price")
+        self.assertEqual(context["normalizedMonthlyLow"], 238.33)
+        self.assertEqual(context["conflictFlags"], ["duplicate-contradictory-terms"])
         self.assertTrue(report["publicationChecks"]["costContextNeverLeaksIntoVerifiedFields"])
 
     def test_selected_only_catalog_does_not_invent_typical_or_highest_access(self) -> None:

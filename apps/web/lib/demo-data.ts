@@ -132,7 +132,12 @@ export type CostContext = {
   productType: string;
   sourceUrl: string;
   observedAt: string;
-  evidenceTier: "official-public";
+  evidenceTier: "official-public" | string;
+  exactLocationMatch?: string;
+  conflictFlags?: string[];
+  note?: string;
+  normalizedMonthlyLow?: number | null;
+  normalizedMonthlyHigh?: number | null;
   selectable: false;
 };
 

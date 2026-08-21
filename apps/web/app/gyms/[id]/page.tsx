@@ -2,7 +2,7 @@ import GymDetailActions from "../../../components/GymDetailActions";
 import GymExperienceReports from "../../../components/GymExperienceReports";
 import { basePath } from "../../../lib/config";
 import { demoGyms, venueTypeLabels } from "../../../lib/demo-data";
-import { getGymById, monthlyCostText, priceFreshnessText, priceText, pricingStatusText, safeExternalUrl } from "../../../lib/gym-detail";
+import { costContextText, getGymById, monthlyCostText, priceFreshnessText, priceText, pricingStatusText, safeExternalUrl } from "../../../lib/gym-detail";
 import { reviewLocationId } from "../../../lib/experience-reports";
 import { notFound } from "next/navigation";
 
@@ -101,8 +101,12 @@ export default async function GymPage({ params }: GymPageProps) {
             </div>}
             {(gym.costContext ?? []).length > 0 && <div className="estimate-explainer reported-explainer">
               <strong>Officially published cost context</strong>
-              {(gym.costContext ?? []).map((context) => <span key={context.id}>{context.label || context.productType}: {context.low === context.high ? `from $${context.low.toFixed(2)}` : `$${context.low.toFixed(2)}–$${context.high.toFixed(2)}`}{context.cadence !== "unknown" ? ` per ${context.cadence}` : ""}</span>)}
-              <span>Ranges and starting prices are informative only and are not treated as exact selectable plans.</span>
+              {(gym.costContext ?? []).map((context) => <span key={context.id}>
+                {context.label || context.productType}: {costContextText(context, 2)}
+                {context.normalizedMonthlyLow !== null && context.normalizedMonthlyLow !== undefined && context.cadence !== "month" && <> · about ${context.normalizedMonthlyLow.toFixed(2)}–${(context.normalizedMonthlyHigh ?? context.normalizedMonthlyLow).toFixed(2)}/month normalized</>}
+                {context.note ? ` · ${context.note}` : ""}
+              </span>)}
+              <span>These figures are informative only and are not treated as exact selectable plans.</span>
             </div>}
             {selectedPlan && <p className="detail-muted">
               <strong>{selectedPlan.name}</strong>{selectedPlan.accessScope ? ` — ${selectedPlan.accessScope}` : ""}

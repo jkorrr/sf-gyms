@@ -38,7 +38,7 @@ PUBLIC_DISCOVERY_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "public-source-
 MANUAL_SOURCE_SEARCH_PATH = ROOT / "data" / "imports" / "manual-source-search.json"
 REPORTED_EVIDENCE_AUDIT_PATH = ROOT / "data" / "imports" / "reported-evidence-audit.json"
 OFFICIAL_COMPARABLES_PATH = ROOT / "data" / "imports" / "official-comparable-prices.json"
-ESTIMATOR_VERSION = "sf-bay-area-v4-calibrated"
+ESTIMATOR_VERSION = "sf-bay-area-v5-withheld-price-calibrated"
 SELECTION_RULE_VERSION = "neutral-basic-v2"
 REPORTED_PRICE_VERSION = "reported-cost-v1"
 REPORTED_MAX_AGE_DAYS = 548
@@ -733,6 +733,17 @@ COST_START_RE = re.compile(
 )
 
 
+def normalized_cost_context_monthly(value: float, cadence: str) -> float | None:
+    normalized_cadence = normalized(cadence)
+    if normalized_cadence in {"month", "monthly", "per month"}:
+        return round(value, 2)
+    if normalized_cadence in {"4 weeks", "four weeks", "28 days", "every 4 weeks", "every four weeks"}:
+        return round(value * 13 / 12, 2)
+    if normalized_cadence in {"week", "weekly", "per week"}:
+        return round(value * 52 / 12, 2)
+    return None
+
+
 def build_cost_context(gym: dict[str, Any], plans: list[dict[str, Any]]) -> list[dict[str, Any]]:
     """Retain official ranges/starting prices without promoting them to exact plans."""
 
@@ -745,15 +756,29 @@ def build_cost_context(gym: dict[str, Any], plans: list[dict[str, Any]]) -> list
         high = item.get("high", low)
         if low is None or high is None:
             continue
-        contexts.append({
+        cadence = text(item.get("cadence")) or "unknown"
+        context = {
             "kind": text(item.get("kind")) or ("range" if float(high) != float(low) else "starting-price"),
             "label": text(item.get("label")) or text(item.get("name")) or "Official cost context",
             "low": float(low), "high": float(high), "currency": text(item.get("currency")) or "USD",
-            "cadence": text(item.get("cadence")) or "unknown", "productType": text(item.get("productType")) or "service",
+            "cadence": cadence, "productType": text(item.get("productType")) or "service",
             "sourceUrl": text(item.get("sourceUrl")) or text(gym.get("priceSourceUrl")) or text(gym.get("officialUrl")),
             "observedAt": text(item.get("observedAt")) or text(gym.get("priceObservedAt")),
-            "evidenceTier": "official-public", "selectable": False,
-        })
+            "evidenceTier": text(item.get("evidenceTier")) or "official-public",
+            "exactLocationMatch": text(item.get("exactLocationMatch")) or "exact-location",
+            "conflictFlags": list(item.get("conflictFlags") or []),
+            "note": text(item.get("note")),
+            "selectable": False,
+        }
+        normalized_low = item.get("normalizedMonthlyLow")
+        normalized_high = item.get("normalizedMonthlyHigh")
+        context["normalizedMonthlyLow"] = (
+            float(normalized_low) if normalized_low is not None else normalized_cost_context_monthly(float(low), cadence)
+        )
+        context["normalizedMonthlyHigh"] = (
+            float(normalized_high) if normalized_high is not None else normalized_cost_context_monthly(float(high), cadence)
+        )
+        contexts.append(context)
     for plan in plans:
         amount = (plan.get("billing") or {}).get("amount")
         label = text(plan.get("name"))
@@ -1376,6 +1401,33 @@ def estimate_passes_modality_validation(
     return error is not None and error <= maximum_error and range_coverage is not None and range_coverage >= 0.75
 
 
+def estimate_is_publishable(gym: dict[str, Any], estimate: dict[str, Any] | None) -> bool:
+    """Allow estimates for withheld prices, never for unavailable or disputed access.
+
+    A contact/form/account gate describes how an otherwise ordinary consumer
+    facility withholds its exact amount.  It is not itself evidence that the
+    facility is restricted.  The estimate remains separate from verified
+    compatibility fields and still has to pass the cohort gates before this
+    policy check runs.
+    """
+
+    if estimate is None:
+        return False
+    if gym.get("publicationStatus") == "review-hold" or gym.get("planValidationErrors"):
+        return False
+    if normalized(gym.get("pricingAccess")) in {"official status conflict", "official price conflict"}:
+        return False
+    if normalized(gym.get("recordStatus")) in {"closed", "coming soon", "conflict", "presale", "status review"}:
+        return False
+    if normalized(gym.get("accessAvailability")) in {"waitlist", "enrollment paused", "members only", "presale"}:
+        return False
+    if gym.get("accessModel") in {"free-public", "restricted", "not-applicable"}:
+        return False
+    if gym.get("entityKind") not in {"gym", "studio", "martial-arts"}:
+        return False
+    return True
+
+
 def blocker_for(gym: dict[str, Any]) -> str:
     if gym.get("recordStatus") == "coming_soon":
         return "Location is not open yet and does not publish a neutral ongoing price."
@@ -1897,13 +1949,21 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
             gym["pricingBlocker"] = "The operator confirmed a current standard-adult price privately; no reproducible public checkout price is available."
             continue
         if not held_or_invalid and gym.get("pricingAccess") in {"account-required", "contact-required", "form-required"}:
-            gym["pricingStatus"] = "gated"
-            gym["estimatedMonthly"] = None
-            gym["pricingBlocker"] = {
+            exact_price_blocker = {
                 "account-required": "The operator discloses location pricing only after authentication or account creation.",
                 "contact-required": "The operator requires direct contact to disclose location pricing.",
                 "form-required": "The operator requires a personal-information form before disclosing location pricing.",
             }[gym["pricingAccess"]]
+            if estimate_is_publishable(gym, estimate):
+                gym["pricingStatus"] = "estimated"
+                gym["estimatedMonthly"] = estimate
+                gym["pricingBlocker"] = exact_price_blocker + " A separately labeled, cross-validated cohort estimate is available."
+            else:
+                gym["pricingStatus"] = "gated"
+                gym["estimatedMonthly"] = None
+                gym["pricingBlocker"] = exact_price_blocker
+                if estimate_rejected:
+                    gym["pricingBlocker"] += " The comparable modality failed cross-validated error or uncertainty-range requirements."
             continue
         if held_or_invalid:
             gym["pricingStatus"] = "unresolved"
@@ -2267,6 +2327,15 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 if gym.get("pricingStatus") in {"gated", "not-applicable"}
                 or gym.get("recordStatus") == "coming_soon"
                 or gym.get("accessAvailability") in {"waitlist", "enrollment-paused", "members-only"}
+            ),
+            "noEstimateOnRestrictedConflictedOrUnavailable": all(
+                gym.get("estimatedMonthly") is None
+                for gym in gyms
+                if gym.get("accessModel") in {"free-public", "restricted", "not-applicable"}
+                or gym.get("entityKind") not in {"gym", "studio", "martial-arts"}
+                or normalized(gym.get("pricingAccess")) in {"official status conflict", "official price conflict"}
+                or normalized(gym.get("recordStatus")) in {"closed", "coming soon", "conflict", "presale", "status review"}
+                or normalized(gym.get("accessAvailability")) in {"waitlist", "enrollment paused", "members only", "presale"}
             ),
             "reportedPricesRemainOutOfVerifiedFields": all(gym.get("monthlyPrice") is None for gym in gyms if gym.get("pricingStatus") == "reported"),
             "operatorConfirmedPricesRemainOutOfVerifiedFields": all(
