@@ -25,6 +25,12 @@ RESTRICTED_RE = re.compile(r"\b(?:student|resident|employee|senior|youth|militar
 DROP_IN_RE = re.compile(r"\b(?:drop[ -]?in|single (?:class|visit|session)|day pass)\b", re.IGNORECASE)
 FEE_RE = re.compile(r"\b(?:annual|enrollment|enrolment|initiation|activation|processing|setup|join)\s+fee\b", re.IGNORECASE)
 BEST_VALUE_RE = re.compile(r"\b(?:best value|most popular|recommended)\b", re.IGNORECASE)
+GIFT_CARD_RE = re.compile(r"\b(?:email\s+)?gift\s+card\b", re.IGNORECASE)
+TRAINER_REQUIRED_RE = re.compile(
+    r"\b(?:privates?|semi-private|duet|one[ -]on[ -]one|1[ -]on[ -]1|personal training)\b",
+    re.IGNORECASE,
+)
+SPECIAL_CLASS_RE = re.compile(r"\b(?:charity|fundraiser|special event)\b", re.IGNORECASE)
 PRODUCT_SEMANTIC_RE = re.compile(
     r"\b(?:membership|plan|package|class|session|visit|pass|drop[ -]?in|unlimited|monthly|"
     r"weekly|week|private|semi-private|training|open gym|autopay|recurring)\b",
@@ -252,6 +258,8 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
         amount = amount_from(node)
         if not label or amount is None or amount <= 0 or amount > 10_000:
             continue
+        if GIFT_CARD_RE.search(label):
+            continue
         if not has_product_semantics(node, label):
             continue
         if FEE_RE.search(label) and not re.search(r"\b(?:membership|plan|package|class|session)\b", label, re.IGNORECASE):
@@ -267,6 +275,8 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
             cadence = "visit"
         elif recurring:
             product_type = "monthly"
+        elif allowance or re.search(r"\b(?:pack|package)\b", label, re.IGNORECASE):
+            product_type = "class-pack"
         else:
             product_type = "offer"
         key = (product_id or label.casefold(), amount, product_type)
@@ -274,6 +284,23 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
             continue
         seen.add(key)
         restricted = None if re.search(r"\bnew (?:client|member|student)\b", label, re.IGNORECASE) else RESTRICTED_RE.search(label)
+        trainer_required = TRAINER_REQUIRED_RE.search(label)
+        special_class = SPECIAL_CLASS_RE.search(label)
+        if trainer_required:
+            eligibility_type = "trainer-required"
+            restrictions = ["Trainer-required service"]
+        elif special_class:
+            eligibility_type = "special-class"
+            restrictions = ["Special-purpose class"]
+        elif restricted:
+            eligibility_type = "restricted"
+            restrictions = [restricted.group(0)]
+        elif is_promotion:
+            eligibility_type = "new-client"
+            restrictions = ["Promotional or introductory product"]
+        else:
+            eligibility_type = "standard-adult"
+            restrictions = []
         location_ids = node.get("locationIds") or node.get("locations") or node.get("studioIds") or []
         if not isinstance(location_ids, list):
             location_ids = [location_ids]
@@ -288,14 +315,15 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
             "classAllowance": allowance,
             "promotion": {"isPromotion": is_promotion, "label": label if is_promotion else ""},
             "eligibility": {
-                "type": "restricted" if restricted else ("new-client" if is_promotion else "standard-adult"),
-                "restrictions": [restricted.group(0)] if restricted else (["Promotional or introductory product"] if is_promotion else []),
+                "type": eligibility_type,
+                "restrictions": restrictions,
             },
             "commitment": commitment(node, label, recurring),
             "fees": fees_from(node),
             "locations": [text(value) for value in location_ids if text(value)],
             "bestValueLabel": bool(BEST_VALUE_RE.search(label) or first(node, ("isPopular", "mostPopular", "recommended")) is True),
             "purchaseMethod": "direct-public",
+            "ordinaryUse": not is_promotion and not restricted and not trainer_required and not special_class,
             "method": f"public-{platform}-json",
             "adapter": platform,
             "evidenceTier": "official-public",
@@ -1070,6 +1098,121 @@ def pushpress_plan_detail_candidates(
         "adapter": "pushpress",
         "evidenceTier": "official-public",
         "exactLocationMatch": "operator-storefront",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
+def mariana_tek_product_card_candidates(
+    card_text: str,
+    product_name: str,
+    displayed_price: str,
+    source_url: str,
+    source_product_id: str,
+    location_label: str = "",
+) -> list[dict[str, Any]]:
+    """Reconstruct one public Mariana Tek product card.
+
+    The renderer supplies the heading, dedicated price node, and stable DOM
+    product ID separately. This excludes per-class math, add-on prices, and
+    neighboring-card totals from the plan amount.
+    """
+
+    if platform_for_url(source_url) != "mariana-tek":
+        return []
+    product_id = text(source_product_id)
+    if not re.fullmatch(r"(?:memberships|credits)-\d{2,12}", product_id, re.IGNORECASE):
+        return []
+    name = " ".join(text(product_name).split())
+    if not name or len(name) > 140 or re.search(r"\b(?:email\s+)?gift\s+card\b", name, re.IGNORECASE):
+        return []
+    amount_match = re.fullmatch(
+        r"\s*\$\s*((?:\d{1,3}(?:,\d{3})+|\d{1,6})(?:\s*\.\s*\d{1,2})?)\s*",
+        text(displayed_price),
+    )
+    if not amount_match:
+        return []
+    amount = float(re.sub(r"[\s,]", "", amount_match.group(1)))
+    if not 0 < amount <= 25_000:
+        return []
+
+    combined = " ".join(f"{name} {card_text}".split())
+    header = text(card_text).split(product_name, 1)[0]
+    promotion = bool(PROMOTION_RE.search(f"{header} {name}"))
+    membership = product_id.casefold().startswith("memberships-")
+    unlimited = bool(re.search(r"\bunlimited\b", combined, re.IGNORECASE))
+    monthly = re.search(r"\b(?P<count>\d{1,3})\s*x\s*/?\s*month\b", name, re.IGNORECASE)
+    pack = re.search(r"\b(?P<count>\d{1,3})[ -]class\s+pack\b", name, re.IGNORECASE)
+    single = bool(
+        DROP_IN_RE.search(name)
+        or re.search(r"\bfirst\s+(?:class|visit|session)\b", name, re.IGNORECASE)
+    )
+    annual = membership and bool(re.search(r"\bannual\b|\bper\s+year\b", combined, re.IGNORECASE))
+
+    if membership and monthly:
+        cadence = "month"
+        product_type = "monthly"
+        allowance = {"count": float(monthly.group("count")), "period": "month", "unlimited": False}
+    elif membership and annual and unlimited:
+        cadence = "year"
+        product_type = "monthly"
+        allowance = {"count": None, "period": "year", "unlimited": True}
+    elif not membership and single:
+        cadence = "visit"
+        product_type = "drop-in"
+        allowance = {"count": 1.0, "period": "visit", "unlimited": False}
+    elif not membership and pack:
+        cadence = "one-time"
+        product_type = "class-pack"
+        allowance = {"count": float(pack.group("count")), "period": "purchase", "unlimited": False}
+    else:
+        return []
+
+    eligibility_type = "new-client" if promotion else "standard-adult"
+    location = " ".join(text(location_label).split())[:120]
+    raw_label = " — ".join(filter(None, (name, f"USD {amount:g}", location)))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductIdAuthority": "operator-widget",
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": product_type,
+        "accessScope": (
+            "Unlimited classes per year"
+            if unlimited and annual
+            else f"{int(allowance['count'])} classes per month"
+            if membership
+            else "One ordinary class"
+            if product_type == "drop-in"
+            else name
+        ),
+        "scopeType": "single-location",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": name if promotion else ""},
+        "eligibility": {
+            "type": eligibility_type,
+            "restrictions": ["Promotional or introductory product"] if promotion else [],
+        },
+        "commitment": {
+            "type": "none" if cadence in {"visit", "one-time"} else "unknown",
+            "minimumMonths": None,
+            "minimumDays": None,
+            "rawLabel": "",
+        },
+        "fees": [],
+        "locations": [location] if location else [],
+        "ordinaryUse": not promotion and product_type in {"monthly", "drop-in"},
+        "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-mariana-tek-product-card",
+        "adapter": "mariana-tek",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location" if location else "candidate",
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]

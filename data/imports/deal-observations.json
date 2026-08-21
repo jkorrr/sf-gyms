@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
+  "mode": "full",
   "deals": [
     {
       "id": "f3c4cb1e60d3d20611c5",
@@ -207,6 +207,22 @@
       "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/478137",
       "capturedAt": "2026-08-21",
       "contentHash": "e942510a432c9d7d2ed065f297819218b6c5446aab2cee81b7fba168964db2c2",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
+      "id": "cda0a80707f6399f1dc4",
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "amount": 20.0,
+      "currency": "USD",
+      "productType": "drop-in",
+      "cadence": "visit",
+      "label": "INTRO DEAL! First Class",
+      "expiresAt": null,
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "capturedAt": "2026-08-21",
+      "contentHash": "62f748fedd00b4106cb47be6f5e532c0f0fc0dae17b3c9322ccf2f2e31d2bb62",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
     },

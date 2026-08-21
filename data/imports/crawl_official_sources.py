@@ -44,7 +44,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v26"
+PARSER_VERSION = "selected-plan-catalog-v27"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -2470,8 +2470,13 @@ def mariana_buy_page_candidates(payload: dict[str, Any], source_url: str) -> lis
             user_segment = text(attributes.get("User Segment")).casefold()
             usage_limit = numeric(attributes.get("Usage Interval Limit"))
             credit_quantity = numeric(attributes.get("Credit Quantity"))
+            name = normalized_label(text(product.get("name")))
+            if platform_adapters.GIFT_CARD_RE.search(name):
+                continue
+            trainer_required = platform_adapters.TRAINER_REQUIRED_RE.search(name)
+            special_class = platform_adapters.SPECIAL_CLASS_RE.search(name)
             if product_kind == "memberships":
-                product_type = "monthly" if interval_code in {"MO", "WK"} else "offer"
+                product_type = "monthly" if interval_code in {"MO", "WK", "YR"} else "offer"
                 allowance = (
                     {"count": usage_limit, "period": cadence_map.get(interval_code, "month")}
                     if usage_limit is not None
@@ -2483,13 +2488,38 @@ def mariana_buy_page_candidates(payload: dict[str, Any], source_url: str) -> lis
                     "minimumMonths": interval_length if interval_code == "MO" else (12 * interval_length if interval_code == "YR" else None),
                 }
             else:
-                product_type = "drop-in" if credit_quantity == 1 and not is_intro else "offer"
-                allowance = {"count": credit_quantity, "period": "purchase"} if credit_quantity is not None else None
+                product_type = (
+                    "drop-in" if credit_quantity == 1
+                    else "class-pack" if credit_quantity is not None and credit_quantity > 1
+                    else "offer"
+                )
+                allowance = (
+                    {
+                        "count": credit_quantity,
+                        "period": "visit" if product_type == "drop-in" else "purchase",
+                    }
+                    if credit_quantity is not None else None
+                )
                 cadence = "visit" if product_type == "drop-in" else "one-time"
                 commitment = {"type": "none", "minimumMonths": None}
-            name = normalized_label(text(product.get("name")))
+            if is_intro:
+                eligibility_type = "new-client"
+                restrictions = [user_segment or "intro offer"]
+            elif trainer_required:
+                eligibility_type = "trainer-required"
+                restrictions = ["Trainer-required service"]
+            elif special_class:
+                eligibility_type = "special-class"
+                restrictions = ["Special-purpose class"]
+            elif user_segment not in {"", "everyone"}:
+                eligibility_type = "restricted"
+                restrictions = [user_segment]
+            else:
+                eligibility_type = "standard-adult"
+                restrictions = []
             candidates.append({
                 "sourceProductId": text(product.get("id")),
+                "sourceProductIdAuthority": "operator-widget",
                 "amount": amount,
                 "currency": text(product.get("currency_code")) or "USD",
                 "rawLabel": name,
@@ -2499,11 +2529,12 @@ def mariana_buy_page_candidates(payload: dict[str, Any], source_url: str) -> lis
                 "classAllowance": allowance,
                 "promotion": {"isPromotion": is_intro, "label": name if is_intro else ""},
                 "eligibility": {
-                    "type": "standard-adult" if user_segment in {"", "everyone"} and not is_intro else "new-client",
-                    "restrictions": [] if user_segment in {"", "everyone"} and not is_intro else [user_segment or "intro offer"],
+                    "type": eligibility_type,
+                    "restrictions": restrictions,
                 },
                 "commitment": commitment,
                 "locations": [text(value) for value in product.get("locations", [])],
+                "ordinaryUse": not is_intro and not trainer_required and not special_class,
                 "method": "public-mariana-buy-page-api",
                 "adapter": "mariana-tek",
                 "evidenceTier": "official-public",

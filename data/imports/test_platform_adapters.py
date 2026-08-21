@@ -25,6 +25,22 @@ class PlatformAdapterTests(unittest.TestCase):
                 self.assertEqual(candidates[0]["evidenceTier"], "official-public")
                 self.assertFalse(candidates[0]["autoPublishEligible"])
 
+    def test_generic_platform_json_excludes_gifts_and_marks_nonstandard_services(self) -> None:
+        payload = {"products": [
+            {"id": "gift-1", "name": "10-Class Pack Email Gift Card", "price": 320},
+            {"id": "private-1", "name": "Private Session", "price": 150, "creditCount": 1},
+            {"id": "charity-1", "name": "Charity Class", "price": 30, "creditCount": 1},
+            {"id": "pack-1", "name": "10-Class Pack", "price": 300, "creditCount": 10},
+        ]}
+        candidates = adapters.extract_candidates(payload, "https://tenant.marianatek.com/api/catalog")
+        self.assertEqual({item["sourceProductId"] for item in candidates}, {"private-1", "charity-1", "pack-1"})
+        by_id = {item["sourceProductId"]: item for item in candidates}
+        self.assertEqual(by_id["private-1"]["eligibility"]["type"], "trainer-required")
+        self.assertFalse(by_id["private-1"]["ordinaryUse"])
+        self.assertEqual(by_id["charity-1"]["eligibility"]["type"], "special-class")
+        self.assertFalse(by_id["charity-1"]["ordinaryUse"])
+        self.assertEqual(by_id["pack-1"]["productType"], "class-pack")
+
     def test_cents_prices_and_four_week_cadence_are_preserved(self) -> None:
         fixture = self.fixtures["momence"]
         candidate = adapters.extract_candidates(fixture["payload"], fixture["url"])[0]
@@ -237,6 +253,46 @@ class PlatformAdapterTests(unittest.TestCase):
             "count": 1.0, "period": "visit", "unlimited": False,
         })
         self.assertEqual(candidate["commitment"]["type"], "none")
+
+    def test_mariana_tek_card_uses_dedicated_price_not_per_class_math(self) -> None:
+        fixture = self.rendered_fixtures["marianaTekMonthly"]
+        candidates = adapters.mariana_tek_product_card_candidates(
+            fixture["cardText"], fixture["productName"], fixture["displayedPrice"],
+            fixture["url"], fixture["sourceProductId"], fixture["locationLabel"],
+        )
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual(candidate["sourceProductId"], "memberships-14787")
+        self.assertEqual(candidate["amount"], 118)
+        self.assertEqual(candidate["cadence"], "month")
+        self.assertEqual(candidate["classAllowance"]["count"], 4)
+        self.assertFalse(candidate["promotion"]["isPromotion"])
+
+    def test_mariana_tek_intro_and_gift_cards_do_not_become_ordinary_plans(self) -> None:
+        fixture = self.rendered_fixtures["marianaTekIntro"]
+        intro = adapters.mariana_tek_product_card_candidates(
+            fixture["cardText"], fixture["productName"], fixture["displayedPrice"],
+            fixture["url"], fixture["sourceProductId"], fixture["locationLabel"],
+        )[0]
+        self.assertEqual(intro["productType"], "drop-in")
+        self.assertTrue(intro["promotion"]["isPromotion"])
+        self.assertEqual(
+            adapters.mariana_tek_product_card_candidates(
+                "Drop-In Single Class Email Gift Card\n$38\n.00",
+                "Drop-In Single Class Email Gift Card",
+                "$38\n.00",
+                "https://tenant.marianaiframes.com/iframe/buy/48717",
+                "credits-14779",
+                "Castro",
+            ),
+            [],
+        )
+        pack_fixture = self.rendered_fixtures["marianaTekClassPack"]
+        pack = adapters.mariana_tek_product_card_candidates(
+            pack_fixture["cardText"], pack_fixture["productName"], pack_fixture["displayedPrice"],
+            pack_fixture["url"], pack_fixture["sourceProductId"], pack_fixture["locationLabel"],
+        )[0]
+        self.assertFalse(pack["promotion"]["isPromotion"])
 
     def test_wix_purchase_card_recovers_stable_product_and_monthly_terms(self) -> None:
         fixture = self.rendered_fixtures["wixMonthlyMembership"]

@@ -3438,6 +3438,16 @@
           "url": "https://thecoremvmt.com/location/castro/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://thecoremvmt.com/pricing",
+          "status": "rendered",
+          "candidateCount": 14
+        },
+        {
+          "url": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+          "status": "robots-disallowed",
+          "candidateCount": 0
         }
       ]
     },

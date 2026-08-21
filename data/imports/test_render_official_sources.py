@@ -254,12 +254,40 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertIn("https://barmethod.com/locations/san-francisco-fidi/buy/", targets)
         self.assertNotIn("https://barmethod.com/locations/san-francisco-downtown/buy/", targets)
 
+    def test_same_operator_global_pricing_route_is_rendered_for_location_page(self) -> None:
+        gym = {
+            "id": "core", "name": "CORE MVMT - Castro", "address": "2349 Market Street",
+            "websiteUrl": "https://thecoremvmt.com/location/castro/",
+            "officialUrl": "https://thecoremvmt.com/location/castro/",
+            "priceSourceUrl": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+        }
+        attempts = [
+            {"url": "https://thecoremvmt.com/pricing", "status": "fetched"},
+            {"url": "https://thecoremvmt.com/location/downtown/buy/", "status": "fetched"},
+        ]
+        targets = rendered.render_target_urls(gym, attempts)
+        self.assertIn("https://thecoremvmt.com/pricing", targets)
+        self.assertNotIn("https://thecoremvmt.com/location/downtown/buy/", targets)
+
     def test_approach_location_selector_prefers_exact_street(self) -> None:
         gym = {"name": "Benchmark Climbing", "address": "1414 Van Ness Avenue, San Francisco, CA 94109"}
         sf = rendered.score_location_label(gym, "San Francisco — 1414 Van Ness Ave")
         berkeley = rendered.score_location_label(gym, "Berkeley — 1607 Shattuck Ave")
         self.assertGreaterEqual(sf, 8)
         self.assertGreater(sf, berkeley)
+
+    def test_operator_product_key_collapses_api_and_dom_variants(self) -> None:
+        api = {
+            "sourceUrl": "https://tenant.marianatek.com/api/customer/v1/buy-page",
+            "sourceProductId": "memberships-14787", "amount": 118,
+        }
+        dom = {
+            "sourceUrl": "https://tenant.marianaiframes.com/iframe/buy/48717",
+            "sourceProductId": "memberships-14787", "amount": 118,
+        }
+        other = {**dom, "sourceProductId": "memberships-14789"}
+        self.assertEqual(rendered.operator_product_key(api), rendered.operator_product_key(dom))
+        self.assertNotEqual(rendered.operator_product_key(api), rendered.operator_product_key(other))
 
 
 if __name__ == "__main__":

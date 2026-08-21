@@ -40,6 +40,10 @@ RENDER_RESEARCH_PATH_RE = re.compile(
     r"/(?:pricing|prices|pricespolicies|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join)(?:/|$|[?#])",
     re.IGNORECASE,
 )
+GLOBAL_RESEARCH_PATH_RE = re.compile(
+    r"^/(?:pricing|prices|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join)/?$",
+    re.IGNORECASE,
+)
 
 
 def text(value: Any) -> str:
@@ -241,7 +245,11 @@ def render_target_urls(gym: dict[str, Any], attempts: list[dict[str, Any]]) -> l
             parsed
             and host(attempt_url) in operator_hosts
             and RENDER_RESEARCH_PATH_RE.search(parsed.path + ("?" + parsed.query if parsed.query else ""))
-            and (not stable_location_slug or stable_location_slug in parsed.path.casefold())
+            and (
+                not stable_location_slug
+                or stable_location_slug in parsed.path.casefold()
+                or GLOBAL_RESEARCH_PATH_RE.fullmatch(parsed.path)
+            )
         )
         if is_platform or is_operator_research:
             values.append(attempt_url)
@@ -342,6 +350,20 @@ def rendered_observation(
     }
     observation["catalogSourceUrl"] = text(candidate.get("catalogSourceUrl")) or catalog_source_url
     return observation
+
+
+def operator_product_key(candidate: dict[str, Any]) -> tuple[str, str, float] | None:
+    """Identify one stable public platform product across API and DOM views."""
+
+    product_id = text(candidate.get("sourceProductId"))
+    platform = static_crawler.platform_adapters.platform_for_url(text(candidate.get("sourceUrl")))
+    try:
+        amount = float(candidate.get("amount"))
+    except (TypeError, ValueError):
+        return None
+    if not product_id or not platform or amount <= 0:
+        return None
+    return platform, product_id, amount
 
 
 def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms: int) -> tuple[dict[str, Any], list[dict[str, Any]]]:
@@ -478,6 +500,31 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         page.wait_for_timeout(
             4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com", "solidcore.co")) else 1500
         )
+        if not dynamic_platform:
+            # Operator pages often mount a public booking iframe after their
+            # own scripts load. Wait only for an attached public price card;
+            # never navigate directly to or interact with checkout.
+            frame_deadline = time.monotonic() + min(10, max(2, timeout_ms / 1000 / 3))
+            while time.monotonic() < frame_deadline:
+                ready = False
+                for frame in page.frames:
+                    frame_url = text(frame.url)
+                    if (
+                        frame == page.main_frame
+                        or not allowed_network_response(url, frame_url)
+                        or not static_crawler.platform_adapters.platform_for_url(frame_url)
+                    ):
+                        continue
+                    try:
+                        if "$" in frame.locator("body").inner_text(timeout=300):
+                            ready = True
+                            break
+                    except Exception:
+                        continue
+                if ready:
+                    adapter_metrics["publicPlatformFrameReady"] = 1
+                    break
+                page.wait_for_timeout(500)
         if static_crawler.platform_name(url) == "approach":
             choices: list[tuple[int, Any]] = []
             for button in page.locator("button").all()[:100]:
@@ -863,7 +910,43 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                 frame_text = frame.locator("body").inner_text(timeout=1500)
             except Exception:
                 continue
-            if frame_text.strip():
+            frame_platform = static_crawler.platform_adapters.platform_for_url(text(frame.url))
+            frame_candidates: list[dict[str, Any]] = []
+            if frame_platform == "mariana-tek":
+                location_label = ""
+                try:
+                    heading = frame.locator("h1").first
+                    if heading.is_visible():
+                        location_label = " ".join(heading.inner_text(timeout=500).split())
+                except Exception:
+                    pass
+                cards = frame.locator(
+                    "button[id^='memberships-'], button[id^='credits-']"
+                ).all()[:150]
+                adapter_metrics["marianaTekProductCardCount"] = len(cards)
+                for card in cards:
+                    try:
+                        if not card.is_visible():
+                            continue
+                        name = card.locator("h3").first.inner_text(timeout=500)
+                        price = card.locator("[data-test-div='product-price']").first.inner_text(timeout=500)
+                        frame_candidates.extend(
+                            static_crawler.platform_adapters.mariana_tek_product_card_candidates(
+                                card.inner_text(timeout=500),
+                                name,
+                                price,
+                                text(frame.url),
+                                text(card.get_attribute("id")),
+                                location_label,
+                            )
+                        )
+                    except Exception:
+                        continue
+                adapter_metrics["marianaTekCandidateCount"] = len(frame_candidates)
+                platform_card_candidates.extend(frame_candidates)
+            # Once a bounded platform adapter succeeds, do not also feed the
+            # entire multi-plan frame to generic dollar extraction.
+            if frame_text.strip() and not frame_candidates:
                 visible_sources.append((text(frame.url), frame_text))
         html = page.content()
         access_blocker = detect_access_blocker(page_title, visible, html)
@@ -894,6 +977,19 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             candidate["cardAssociationHash"] = hashlib.sha256(card_text.encode("utf-8")).hexdigest()
             dom_candidates.append(candidate)
     dom_candidates = remove_unattached_crunch_promotions(dom_candidates, url)
+    bounded_product_keys = {
+        key for candidate in platform_card_candidates
+        if (key := operator_product_key(candidate)) is not None
+    }
+    if bounded_product_keys:
+        original_network_count = len(network_candidates)
+        network_candidates = [
+            candidate for candidate in network_candidates
+            if operator_product_key(candidate) not in bounded_product_keys
+        ]
+        superseded = original_network_count - len(network_candidates)
+        if superseded:
+            adapter_metrics["networkProductCandidatesSupersededByCards"] = superseded
     observations = network_candidates + platform_card_candidates + dom_candidates
     deduplicated: list[dict[str, Any]] = []
     seen: set[tuple[Any, ...]] = set()

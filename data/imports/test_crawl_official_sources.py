@@ -1384,6 +1384,34 @@ Credit pack
         self.assertEqual(offers[3]["productType"], "drop-in")
         self.assertTrue(all(not offer["autoPublishEligible"] for offer in offers))
 
+    def test_mariana_buy_page_excludes_gifts_and_marks_nonstandard_services(self) -> None:
+        payload = {"buy_page_sections": [{"product_listings": [
+            {"id": "emailcreditgiftcard-1", "name": "Class Email Gift Card", "price": 38,
+             "product_type": "credits", "product_display_attributes": []},
+            {"id": "credits-private", "name": "10 Privates", "price": 1300,
+             "product_type": "credits", "product_display_attributes": [
+                 {"name": "Credit Quantity", "value": "10"},
+             ]},
+            {"id": "credits-charity", "name": "Charity Class", "price": 30,
+             "product_type": "credits", "product_display_attributes": [
+                 {"name": "Credit Quantity", "value": "1"},
+             ]},
+            {"id": "credits-pack", "name": "10-Class Pack", "price": 300,
+             "product_type": "credits", "product_display_attributes": [
+                 {"name": "Credit Quantity", "value": "10"},
+             ]},
+        ]}]}
+        offers = crawler.mariana_buy_page_candidates(
+            payload, "https://tenant.marianatek.com/api/customer/v1/locations/1/buy-page",
+        )
+        self.assertEqual({offer["sourceProductId"] for offer in offers}, {
+            "credits-private", "credits-charity", "credits-pack",
+        })
+        by_id = {offer["sourceProductId"]: offer for offer in offers}
+        self.assertEqual(by_id["credits-private"]["eligibility"]["type"], "trainer-required")
+        self.assertEqual(by_id["credits-charity"]["eligibility"]["type"], "special-class")
+        self.assertEqual(by_id["credits-pack"]["productType"], "class-pack")
+
     def test_discovers_xponential_catalog_and_plan_linked_fee(self) -> None:
         html = '<div data-endpoint-domain="https://members.clubpilates.com" data-endpoint="/api/v2/locations/clubpilates-soma-ca/schedule_entries"></div>'
         _offers, stores, _digest = crawler.parse_page({"html": html, "url": "https://www.clubpilates.com/location/soma"})

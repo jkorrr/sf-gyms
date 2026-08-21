@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
+  "mode": "full",
   "observations": [
     {
       "gymId": "osm-node-10047742013",
@@ -2448,6 +2448,676 @@
       "sourceUrl": "https://nicepilates.studio/price-list-%2F-purchase",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://nicepilates.studio/price-list-%2F-purchase"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14750",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "INTRO DEAL! First Class",
+      "amount": 20.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "One ordinary class",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "INTRO DEAL! First Class"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "INTRO DEAL! First Class — USD 20 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14722",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Drop-In Single Class",
+      "amount": 38.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "One ordinary class",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Drop-In Single Class — USD 38 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-14787",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "4x/Month",
+      "amount": 118.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "4 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "4x/Month — USD 118 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14726",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "5-Class Pack",
+      "amount": 175.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "5-Class Pack",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "5-Class Pack — USD 175 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-14789",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "8x/Month",
+      "amount": 188.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "8 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "8x/Month — USD 188 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-14791",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "12x/Month",
+      "amount": 222.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "12 classes per month",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 12.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "12x/Month — USD 222 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14730",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "10-Class Pack",
+      "amount": 320.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "10-Class Pack",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "10-Class Pack — USD 320 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14734",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "20-Class Pack",
+      "amount": 580.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "20-Class Pack",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "20-Class Pack — USD 580 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14738",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "40-Class Pack",
+      "amount": 1110.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "40-Class Pack",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": 40.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "40-Class Pack — USD 1110 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-14692",
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "MVMT Annual Unlimited Membership",
+      "amount": 3333.0,
+      "currency": "USD",
+      "cadence": "year",
+      "billingInterval": "year",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Unlimited classes per year",
+      "scopeType": "single-location",
+      "classAllowance": {
+        "count": null,
+        "period": "year",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null,
+        "minimumDays": null,
+        "rawLabel": ""
+      },
+      "fees": [],
+      "locations": [
+        "Castro"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "MVMT Annual Unlimited Membership — USD 3333 — Castro",
+      "method": "rendered-mariana-tek-product-card",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14769",
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 30.0,
+      "currency": "USD",
+      "rawLabel": "Charity Class",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "special-class",
+        "restrictions": [
+          "Special-purpose class"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "48717"
+      ],
+      "ordinaryUse": false,
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14779",
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "Private Session",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-required service"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "48717"
+      ],
+      "ordinaryUse": false,
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14855",
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 200.0,
+      "currency": "USD",
+      "rawLabel": "Duet",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-required service"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "48717"
+      ],
+      "ordinaryUse": false,
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "gymName": "CORE MVMT - Castro",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-14777",
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 1300.0,
+      "currency": "USD",
+      "rawLabel": "10 Privates",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "trainer-required",
+        "restrictions": [
+          "Trainer-required service"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "48717"
+      ],
+      "ordinaryUse": false,
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://thecoremvmt.com/pricing"
     },
     {
       "gymId": "osm-node-12152934880",

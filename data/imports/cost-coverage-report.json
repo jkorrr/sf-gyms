@@ -656,7 +656,7 @@
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1874,
+    "requestCount": 1876,
     "statusCounts": {
       "access-blocked": 70,
       "fetched": 1034,
@@ -669,8 +669,8 @@
       "network-error": 41,
       "not-modified": 209,
       "render-error": 5,
-      "rendered": 307,
-      "robots-disallowed": 75
+      "rendered": 308,
+      "robots-disallowed": 76
     },
     "staticAccessBlockedRequests": 70,
     "staticAccessBlockerCounts": {
@@ -679,12 +679,12 @@
       "platform-security-check": 51
     },
     "selectedPlanPriceAuditStatusCounts": {
-      "matched-within-threshold": 130,
-      "selected-plan-not-observed": 26
+      "matched-within-threshold": 131,
+      "selected-plan-not-observed": 25
     },
-    "reviewCandidatePages": 486,
+    "reviewCandidatePages": 487,
     "linkedStorefrontRequests": 1206,
-    "renderedRequests": 380,
+    "renderedRequests": 382,
     "renderedAccessBlockedRequests": 54,
     "renderedAccessBlockerCounts": {
       "captcha-required": 3,

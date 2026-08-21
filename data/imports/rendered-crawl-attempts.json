@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
+  "mode": "full",
   "attempts": [
     {
       "gymId": "osm-node-10047742013",
@@ -1035,16 +1035,54 @@
       "gymId": "osm-node-11701513373",
       "name": "CORE MVMT - Castro",
       "url": "https://thecoremvmt.com/location/castro/",
-      "attemptedAt": "2026-08-20",
+      "attemptedAt": "2026-08-21",
       "status": "rendered",
       "robotsStatus": "checked",
-      "contentHash": "9e9490d160e797947b9bc9c1b515e11ceef736080ba7e015a389df8d21b9484b",
+      "contentHash": "49af73f2d1c01df70eb266c633db51e87fd73f4642696f527114534f5eb3daae",
       "networkEvidenceHashes": [],
       "clickedPublicTabs": [],
       "candidateCount": 0,
       "requiresReview": false,
+      "accessBlocker": "",
       "error": "",
       "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication."
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "name": "CORE MVMT - Castro",
+      "url": "https://thecoremvmt.com/pricing",
+      "attemptedAt": "2026-08-21",
+      "status": "rendered",
+      "robotsStatus": "checked",
+      "contentHash": "56a7e5f05e5bb70207a290ddcbcb2257f8f35c858200b7f92551ac5d46940406",
+      "networkEvidenceHashes": [
+        "0eedeac15aa7eee5cf2106d7e954220f1ad049e18dad64609ccf7bed3a18d139",
+        "85bdcb52c3f74a822c7251d32070ef1e4bef4b0c6f9864919c5780cece5da231",
+        "ed232295d60eda8ad0efbf0ebc5ce076287cd969adb28671c1d5ed04c9aac266",
+        "ee9c175efe2d5dd4f3c3464dfdd531753721f92449a231528b885ed09006957a"
+      ],
+      "clickedPublicTabs": [],
+      "candidateCount": 14,
+      "requiresReview": true,
+      "accessBlocker": "",
+      "error": "",
+      "policy": "Review candidates only; no forms, authentication, contact data, or automatic publication.",
+      "adapterMetrics": {
+        "publicPlatformFrameReady": 1,
+        "marianaTekProductCardCount": 14,
+        "marianaTekCandidateCount": 10,
+        "networkProductCandidatesSupersededByCards": 10
+      }
+    },
+    {
+      "gymId": "osm-node-11701513373",
+      "name": "CORE MVMT - Castro",
+      "url": "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page",
+      "attemptedAt": "2026-08-21",
+      "status": "robots-disallowed",
+      "robotsStatus": "checked",
+      "candidateCount": 0,
+      "requiresReview": false
     },
     {
       "gymId": "osm-node-11777394274",

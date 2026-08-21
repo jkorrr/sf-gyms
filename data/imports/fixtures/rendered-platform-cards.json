@@ -38,6 +38,30 @@
     "cardText": "drop in\n$32.50\n•\n1 session",
     "detailText": "drop in\nPrice\n$32.50\nBilling frequency\nOne time\nSessions\n1\nSelect"
   },
+  "marianaTekMonthly": {
+    "url": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+    "sourceProductId": "memberships-14787",
+    "productName": "4x/Month",
+    "displayedPrice": "$118\n.00",
+    "locationLabel": "Castro",
+    "cardText": "$29.50/CLASS + $20 ADDITIONAL CLASSES\n4x/Month\n$118\n.00\n4\nper\nmonth\nPerfect for those easing into a regular routine."
+  },
+  "marianaTekIntro": {
+    "url": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+    "sourceProductId": "credits-14750",
+    "productName": "INTRO DEAL! First Class",
+    "displayedPrice": "$20\n.00",
+    "locationLabel": "Castro",
+    "cardText": "FIRST-TIME GUESTS ONLY\nINTRO DEAL! First Class\n$20\n.00\n1\nclass"
+  },
+  "marianaTekClassPack": {
+    "url": "https://thecoremvmt.marianaiframes.com/iframe/buy/48717",
+    "sourceProductId": "credits-14738",
+    "productName": "40-Class Pack",
+    "displayedPrice": "$1,110\n.00",
+    "locationLabel": "Castro",
+    "cardText": "40-Class Pack\n$1,110\n.00\n40\nclasses\nDeepen your practice and save."
+  },
   "wixMonthlyMembership": {
     "url": "https://www.musclebeachsf.com/plans-pricing-1",
     "purchaseHref": "https://clients.mindbodyonline.com/classic/ws?studioid=31391&stype=40&prodid=113",
