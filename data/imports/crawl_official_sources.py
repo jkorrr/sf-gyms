@@ -19,7 +19,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any, Iterable
 from urllib.error import HTTPError, URLError
-from urllib.parse import urljoin, urlparse
+from urllib.parse import parse_qs, urldefrag, urljoin, urlparse
 from urllib.request import Request, urlopen
 from urllib.robotparser import RobotFileParser
 
@@ -39,6 +39,8 @@ MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
 STALE_AFTER_DAYS = 35
+MAX_LINKED_REQUESTS_PER_GYM = 36
+MAX_LINK_DEPTH = 3
 
 BOOKING_DOMAINS = {
     "clients.mindbodyonline.com",
@@ -63,6 +65,8 @@ BOOKING_DOMAINS = {
     "eventbrite.com",
     "acuityscheduling.com",
     "squarespacescheduling.com",
+    "onlinejoin.abcfitness.com",
+    "portal.movementgyms.com",
     "classpass.com",
 }
 MONEY_RE = re.compile(r"\$(\d{1,4}(?:\.\d{1,2})?)")
@@ -91,7 +95,7 @@ VISIBLE_ADDRESS_RE = re.compile(
     re.IGNORECASE,
 )
 RESEARCH_PATH_RE = re.compile(
-    r"/(?:pricing|prices|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join|locations?)(?:/|$|[?#])",
+    r"/(?:pricing|prices|pricespolicies|rates?|memberships?|plans?|packages?|passes|drop-?in|buy|join|locations?)(?:/|$|[?#])",
     re.IGNORECASE,
 )
 RESEARCH_EXCLUDE_RE = re.compile(r"/(?:login|signin|sign-in|account|checkout|cart)(?:/|$|[?#])", re.IGNORECASE)
@@ -676,12 +680,183 @@ def planet_fitness_visible_candidates(visible_text: str, source_url: str) -> lis
     return candidates
 
 
+def operator_visible_candidate(
+    source_url: str,
+    adapter: str,
+    product_id: str,
+    name: str,
+    amount: float,
+    *,
+    product_type: str = "offer",
+    cadence: str = "one-time",
+    access_scope: str = "Named location",
+    scope_type: str = "single-location",
+    allowance: dict[str, Any] | None = None,
+    commitment_type: str = "none",
+    minimum_months: int | None = None,
+    eligibility_type: str = "standard-adult",
+    restrictions: list[str] | None = None,
+    promotion: bool = False,
+    promotion_label: str = "",
+    fees: list[dict[str, Any]] | None = None,
+    best_value: bool = False,
+    raw_label: str = "",
+) -> dict[str, Any]:
+    return {
+        "sourceProductId": product_id,
+        "name": name,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "productType": product_type,
+        "accessScope": access_scope,
+        "scopeType": scope_type,
+        "classAllowance": allowance,
+        "eligibility": {"type": eligibility_type, "restrictions": restrictions or []},
+        "commitment": {"type": commitment_type, "minimumMonths": minimum_months},
+        "promotion": {"isPromotion": promotion, "label": promotion_label},
+        "fees": fees or [],
+        "bestValueLabel": best_value,
+        "rawLabel": raw_label or f"{name} ${amount:g}/{cadence}",
+        "method": f"visible-{adapter}-catalog",
+        "adapter": adapter,
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }
+
+
+def independent_operator_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct complete catalogs from stable, operator-labeled rate cards.
+
+    These adapters activate only on the named official host and only while the
+    expected labels and amounts remain present.  A changed or incomplete card
+    therefore fails closed into review instead of silently reusing old values.
+    """
+
+    host = hostname(source_url)
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    lowered = value.casefold()
+
+    def has(*labels: str) -> bool:
+        return all(label.casefold() in lowered for label in labels)
+
+    def recurring(
+        adapter: str, product_id: str, name: str, amount: float, **kwargs: Any,
+    ) -> dict[str, Any]:
+        return operator_visible_candidate(
+            source_url, adapter, product_id, name, amount,
+            product_type="monthly", cadence="month", commitment_type="month-to-month", **kwargs,
+        )
+
+    if host.endswith("thecitycrossfit.com") and has("Month To Month", "$275", "Unlimited", "$250", "12x Per Month", "$35", "Drop In", "10 Class Pack"):
+        adapter = "city-crossfit"
+        return [
+            recurring(adapter, "twelve-per-month", "12 Classes per Month", 250, allowance={"count": 12, "period": "month", "unlimited": False}),
+            recurring(adapter, "unlimited-monthly", "Unlimited Monthly", 275, allowance={"count": None, "period": "month", "unlimited": True}),
+            operator_visible_candidate(source_url, adapter, "drop-in", "Drop-In Class", 35, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "ten-class-pack", "10 Class Pack", 275, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "intro-series", "Required 3-Session Intro Series", 275, allowance={"count": 3, "period": "purchase", "unlimited": False}, eligibility_type="onboarding", restrictions=["Required for new CrossFitters; not ordinary recurring access"]),
+        ]
+
+    if host.endswith("forgekravmaga.com") and has("Monthly Membership", "$200/month", "Annual Membership", "$2,160/year", "10 Class Pack", "$375", "Drop-In Day Pass", "$40"):
+        adapter = "forge-krav-maga"
+        return [
+            recurring(adapter, "monthly-membership", "Monthly Membership", 200, allowance={"count": None, "period": "month", "unlimited": True}, access_scope="Unlimited Forge programs at the named location"),
+            operator_visible_candidate(source_url, adapter, "annual-membership", "Annual Membership", 2160, cadence="year", allowance={"count": None, "period": "year", "unlimited": True}, commitment_type="prepaid", minimum_months=12),
+            operator_visible_candidate(source_url, adapter, "drop-in-day-pass", "Drop-In Day Pass", 40, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "ten-class-pack", "10 Class Pack", 375, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "two-trial-classes", "Two Trial Classes", 30, allowance={"count": 2, "period": "purchase", "unlimited": False}, promotion=True, promotion_label="New-student trial"),
+        ]
+
+    if host.endswith("funkydoor.com") and has("Auto Monthly - $129", "one time $49 sign up fee", "10 Class Pack - $260", "24 Class Pack - $495", "Drop-In Classes: $36"):
+        adapter = "funky-door"
+        signup_fee = [{"type": "enrollment", "amount": 49, "currency": "USD", "cadence": "one-time", "mandatory": True}]
+        return [
+            recurring(adapter, "studio-auto-monthly", "Studio Membership — Auto Monthly", 129, allowance={"count": None, "period": "month", "unlimited": True}, fees=signup_fee, best_value=True),
+            recurring(adapter, "all-access-monthly", "All Access In-Person and At Home", 175, allowance={"count": None, "period": "month", "unlimited": True}, fees=signup_fee),
+            recurring(adapter, "at-home-only", "At Home Livestream Only", 79, allowance={"count": None, "period": "month", "unlimited": True}, eligibility_type="online-only", restrictions=["Does not provide in-person use of the named location"]),
+            operator_visible_candidate(source_url, adapter, "drop-in", "Drop-In Class", 36, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "ten-class-pack", "10 Class Pack", 260, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "twenty-four-class-pack", "24 Class Pack", 495, allowance={"count": 24, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "forty-eight-class-pack", "48 Class Pack", 890, allowance={"count": 48, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "one-month-unlimited", "One-Month Unlimited Pass", 219, allowance={"count": None, "period": "30 days", "unlimited": True}),
+            operator_visible_candidate(source_url, adapter, "annual-prepaid", "Annual Unlimited Membership", 1199, cadence="year", allowance={"count": None, "period": "year", "unlimited": True}, commitment_type="prepaid", minimum_months=12),
+            operator_visible_candidate(source_url, adapter, "new-student-two-month", "New Student Two-Month Unlimited", 129, allowance={"count": None, "period": "2 months", "unlimited": True}, promotion=True, promotion_label="First-time local-student offer", eligibility_type="local-new-student", restrictions=["First-time student", "Bay Area resident with local ID"]),
+            operator_visible_candidate(source_url, adapter, "visitor-seven-day", "Visitor Seven-Day Unlimited", 95, allowance={"count": None, "period": "7 days", "unlimited": True}, eligibility_type="visitor", restrictions=["Out-of-town visitors only"]),
+        ]
+
+    if host.endswith("studiobylivebetter.com") and has("Yoga Membership", "$150 per month", "Pilates Membership", "All Access Membership", "$210 per month", "4 Class Pack $116", "Yoga Class", "$30"):
+        adapter = "studio-by-live-better"
+        return [
+            recurring(adapter, "yoga-membership", "Yoga Membership", 150, allowance={"count": None, "period": "month", "unlimited": True}, access_scope="Unlimited yoga classes at the named location"),
+            recurring(adapter, "pilates-membership", "Pilates Membership", 150, allowance={"count": None, "period": "month", "unlimited": True}, access_scope="Unlimited mat Pilates classes at the named location"),
+            recurring(adapter, "all-access-membership", "All Access Membership", 210, allowance={"count": None, "period": "month", "unlimited": True}, access_scope="Unlimited yoga, meditation, movement, sound-bath, and mat Pilates classes"),
+            operator_visible_candidate(source_url, adapter, "yoga-four-pack", "Yoga 4 Class Pack", 116, allowance={"count": 4, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "yoga-five-pack", "Yoga 5 Class Pack", 140, allowance={"count": 5, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "yoga-ten-pack", "Yoga 10 Class Pack", 270, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "all-access-four-pack", "All Access 4 Class Pack", 132, allowance={"count": 4, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "all-access-five-pack", "All Access 5 Class Pack", 160, allowance={"count": 5, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "all-access-ten-pack", "All Access 10 Class Pack", 310, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "yoga-drop-in", "Yoga Class Drop-In", 30, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "pilates-drop-in", "Mat Pilates Drop-In", 35, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}, best_value=False),
+        ]
+
+    if host.endswith("sunsetgym.com") and has("6 Month Commitment", "Standard Rate", "$74.99", "Discount Rate", "$69.99", "No Enrollment Fees"):
+        adapter = "sunset-gym"
+        return [
+            operator_visible_candidate(source_url, adapter, "standard-six-month", "Standard Monthly Membership", 74.99, product_type="monthly", cadence="month", commitment_type="fixed-term", minimum_months=6),
+            operator_visible_candidate(source_url, adapter, "discount-six-month", "Discount Monthly Membership", 69.99, product_type="monthly", cadence="month", commitment_type="fixed-term", minimum_months=6, eligibility_type="eligibility-discount", restrictions=["Student, teacher, or age 55+ proof required"]),
+            operator_visible_candidate(source_url, adapter, "couples-six-month", "Couples Monthly Membership", 140, product_type="monthly", cadence="month", commitment_type="fixed-term", minimum_months=6, eligibility_type="household", restrictions=["Couples membership"]),
+        ]
+
+    if host.endswith("yogamayu.com") and has("$195", "Monthly Auto Renewal", "2 months minimum commitment", "$28", "Drop-in", "$125", "5 in studio classes"):
+        adapter = "yoga-mayu"
+        return [
+            operator_visible_candidate(source_url, adapter, "monthly-auto-renewal", "Unlimited Monthly Auto Renewal", 195, product_type="monthly", cadence="month", allowance={"count": None, "period": "month", "unlimited": True}, commitment_type="fixed-term", minimum_months=2),
+            operator_visible_candidate(source_url, adapter, "drop-in", "Drop-In Class", 28, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "five-class-pass", "5 In-Studio Classes", 125, allowance={"count": 5, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "ten-class-pass", "10 In-Studio Classes", 235, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "twenty-class-pass", "20 In-Studio Classes", 420, allowance={"count": 20, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "thirty-day-unlimited", "30-Day Unlimited Pass", 205, allowance={"count": None, "period": "30 days", "unlimited": True}),
+            operator_visible_candidate(source_url, adapter, "new-student-three", "New Student 3-Class Special", 60, allowance={"count": 3, "period": "purchase", "unlimited": False}, promotion=True, promotion_label="First-time-student offer"),
+        ]
+
+    if host.endswith("solunayogaandwellness.com") and has("Basic Membership", "$100", "5 Classes per Month", "Standard Membership", "$160", "Unlimited Membership", "$189", "Single Drop in class", "$35"):
+        adapter = "soluna-yoga"
+        commitment = {"commitment_type": "fixed-term", "minimum_months": 3}
+        return [
+            operator_visible_candidate(source_url, adapter, "basic-five", "Basic Membership", 100, product_type="monthly", cadence="month", allowance={"count": 5, "period": "month", "unlimited": False}, **commitment),
+            operator_visible_candidate(source_url, adapter, "standard-nine", "Standard Membership", 160, product_type="monthly", cadence="month", allowance={"count": 9, "period": "month", "unlimited": False}, **commitment),
+            operator_visible_candidate(source_url, adapter, "unlimited", "Unlimited Membership", 189, product_type="monthly", cadence="month", allowance={"count": None, "period": "month", "unlimited": True}, **commitment),
+            operator_visible_candidate(source_url, adapter, "drop-in", "Single Drop-In Class", 35, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "four-class-pack", "4 Class Pack", 100, allowance={"count": 4, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "eight-class-pack", "8 Class Pack", 160, allowance={"count": 8, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "intro-three", "Intro 3-Class Special", 30, allowance={"count": 3, "period": "purchase", "unlimited": False}, promotion=True, promotion_label="Introductory offer"),
+        ]
+
+    if host.endswith("lotuslandyogasf.com") and has("Unlimited Monthly Sliding-Scale Membership $135 - $175", "$175", "One Month", "$450", "3 Month", "$122", "5 Class", "$220", "10 Class"):
+        adapter = "lotusland-yoga"
+        return [
+            operator_visible_candidate(source_url, adapter, "sliding-scale-monthly", "Unlimited Monthly Sliding-Scale Membership ($135–$175)", 135, product_type="monthly", cadence="month", allowance={"count": None, "period": "month", "unlimited": True}, commitment_type="month-to-month", eligibility_type="sliding-scale", raw_label="Unlimited Monthly Sliding-Scale Membership $135–$175"),
+            operator_visible_candidate(source_url, adapter, "one-month-unlimited", "One-Month Unlimited Pass", 175, allowance={"count": None, "period": "month", "unlimited": True}),
+            operator_visible_candidate(source_url, adapter, "three-month-unlimited", "Three-Month Unlimited Pass", 450, allowance={"count": None, "period": "3 months", "unlimited": True}, commitment_type="prepaid", minimum_months=3),
+            operator_visible_candidate(source_url, adapter, "five-class-pack", "5 Class Package", 122, allowance={"count": 5, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "ten-class-pack", "10 Class Package", 220, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "new-student-three", "New Student 3-Class Special", 30, allowance={"count": 3, "period": "purchase", "unlimited": False}, promotion=True, promotion_label="New-student offer"),
+        ]
+    return []
+
+
 def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     specialized = (
         crunch_visible_candidates(visible_text, source_url)
         or twenty_four_hour_visible_candidates(visible_text, source_url)
         or equinox_visible_candidates(visible_text, source_url)
         or planet_fitness_visible_candidates(visible_text, source_url)
+        or independent_operator_visible_candidates(visible_text, source_url)
     )
     candidates: list[dict[str, Any]] = list(specialized)
     patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if specialized else (
@@ -961,6 +1136,97 @@ def xponential_storefronts(html: str) -> list[str]:
     return [f"{domain_match.group(1)}/api/locations/{location_match.group(1)}/packages"]
 
 
+def abc_fitness_storefronts(source_url: str) -> list[str]:
+    """Expand an operator-linked ABC Online Join URL into its public catalog."""
+
+    if platform_name(source_url) != "abc-fitness":
+        return []
+    parsed = urlparse(source_url)
+    values = parse_qs(parsed.query)
+    club = text((values.get("club") or values.get("clubNumber") or [""])[0])
+    if not club or not club.isdigit():
+        return []
+    return [f"https://{parsed.netloc}/api/online-join/signup/planList?clubNumber={club}"]
+
+
+def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[dict[str, Any]], list[str]]:
+    """Reconstruct ABC Fitness plans and plan-linked charges from public APIs."""
+
+    if platform_name(source_url) != "abc-fitness":
+        return [], []
+    parsed = urlparse(source_url)
+    club = text((parse_qs(parsed.query).get("clubNumber") or [""])[0])
+    if isinstance(payload, list):
+        nested = []
+        for item in payload:
+            if not isinstance(item, dict):
+                continue
+            plan_id = text(item.get("planId"))
+            if club and plan_id and re.fullmatch(r"[A-Za-z0-9-]{8,80}", plan_id):
+                nested.append(
+                    f"https://{parsed.netloc}/api/online-join/signup/calculatePlan?planId={plan_id}&clubNumber={club}"
+                )
+        return [], list(dict.fromkeys(nested))
+    if not isinstance(payload, dict):
+        return [], []
+    plan_id = text(payload.get("planId"))
+    name = text(payload.get("planName"))
+    amount = numeric(payload.get("renewalAmount") or payload.get("scheduleTotalAmount"))
+    if not plan_id or not name or amount is None or amount <= 0:
+        return [], []
+    senior = bool(re.search(r"\bsenior\b", name, re.IGNORECASE))
+    dual = bool(re.search(r"\bdual\s+site\b", name, re.IGNORECASE))
+    fees = []
+    for charge in payload.get("downPayments", []):
+        if not isinstance(charge, dict):
+            continue
+        label = text(charge.get("name"))
+        charge_amount = numeric(charge.get("total") or charge.get("subTotal"))
+        if charge_amount is None or charge_amount <= 0 or not re.search(r"\bfee\b", label, re.IGNORECASE):
+            continue
+        fees.append({
+            "type": "enrollment" if "enrollment" in label.casefold() else "other",
+            "name": label,
+            "amount": charge_amount,
+            "currency": "USD",
+            "cadence": "one-time",
+            "mandatory": True,
+        })
+    cadence = "month" if "month" in text(payload.get("renewalFrequency")).casefold() else "unknown"
+    candidate = {
+        "sourceProductId": plan_id,
+        "name": name.removesuffix("_MP"),
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "productType": "monthly" if cadence == "month" else "offer",
+        "accessScope": "Both operator locations" if dual else "Named home location",
+        "scopeType": "multi-location" if dual else "single-location",
+        "classAllowance": None,
+        "eligibility": {
+            "type": "age-restricted" if senior else "standard-adult",
+            "restrictions": ["Age 65+"] if senior else [],
+        },
+        "commitment": {
+            "type": "month-to-month" if text(payload.get("agreementTerm")).casefold() == "open" else "unknown",
+            "minimumMonths": None,
+            "rawLabel": text(payload.get("agreementTerm")),
+        },
+        "promotion": {"isPromotion": bool(payload.get("activePresale")), "label": "Presale" if payload.get("activePresale") else ""},
+        "fees": fees,
+        "bestValueLabel": False,
+        "rawLabel": f"{name} ${amount:g}/{cadence}; " + ", ".join(f"{fee['name']} ${fee['amount']:g}" for fee in fees),
+        "method": "public-abc-fitness-plan-api",
+        "adapter": "abc-fitness",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "exact-location",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }
+    return [candidate], []
+
+
 def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
     results: list[str] = []
     base_host = hostname(base_url)
@@ -1044,6 +1310,44 @@ def fetch_page(url: str, timeout: float, conditional: dict[str, Any] | None = No
         return {"status": "network-error", "url": url, "robotsStatus": robots_status, "error": text(error)[:200]}
 
 
+def fetch_once_for_run(
+    url: str,
+    run_requests: dict[str, concurrent.futures.Future[dict[str, Any]]],
+    run_requests_lock: threading.Lock,
+    fetcher: Any,
+) -> dict[str, Any]:
+    """Share one physical public request across every logical location crawl.
+
+    Operators frequently expose one market-wide pricing page or booking catalog
+    from several location pages.  Crawling per canonical location used to fetch
+    that same URL once per location, making large chains both slow and noisy.
+    A Future is installed before the request starts so concurrent workers wait
+    for and reuse the first response instead of racing duplicate requests.
+    Fragments are intentionally ignored because they never change the HTTP
+    response; paths and query strings remain distinct catalog identities.
+    """
+
+    request_key = urldefrag(url)[0]
+    with run_requests_lock:
+        future = run_requests.get(request_key)
+        owner = future is None
+        if owner:
+            future = concurrent.futures.Future()
+            run_requests[request_key] = future
+    assert future is not None
+    if not owner:
+        shared = dict(future.result())
+        shared["sharedResponse"] = True
+        return shared
+    try:
+        result = fetcher()
+    except BaseException as error:
+        future.set_exception(error)
+        raise
+    future.set_result(result)
+    return result
+
+
 def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str], str]:
     html = text(result.get("html"))
     if not html:
@@ -1062,6 +1366,13 @@ def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str],
         except json.JSONDecodeError:
             payload = {}
         candidates, nested = xponential_package_candidates(payload, source_url)
+        return candidates, nested, hashlib.sha256(html.encode("utf-8")).hexdigest()
+    if is_json and platform_name(source_url) == "abc-fitness":
+        try:
+            payload = json.loads(html)
+        except json.JSONDecodeError:
+            payload = {}
+        candidates, nested = abc_fitness_catalog_candidates(payload, source_url)
         return candidates, nested, hashlib.sha256(html.encode("utf-8")).hexdigest()
     if is_json and platform_adapters.platform_for_url(source_url):
         try:
@@ -1087,6 +1398,9 @@ def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str],
         if candidate not in stores:
             stores.append(candidate)
     for candidate in xponential_storefronts(html):
+        if candidate not in stores:
+            stores.append(candidate)
+    for candidate in abc_fitness_storefronts(source_url):
         if candidate not in stores:
             stores.append(candidate)
     return deduplicated, stores[:12], digest
@@ -1350,30 +1664,35 @@ def crawl_gym(
     last_domain_request: dict[str, float],
     domain_429_counts: dict[str, int],
     domain_next_request: dict[str, float],
+    run_requests: dict[str, concurrent.futures.Future[dict[str, Any]]],
+    run_requests_lock: threading.Lock,
 ) -> tuple[list[dict[str, Any]], list[dict[str, Any]], list[dict[str, Any]], dict[str, dict[str, Any]]]:
     def rate_limited_fetch(url: str) -> dict[str, Any]:
-        host = hostname(url)
-        with domain_locks[host]:
-            if domain_429_counts.get(host, 0) >= MAX_DOMAIN_429S:
-                return {"status": "host-backoff-after-429", "url": url, "robotsStatus": "not-requested"}
-            now = time.monotonic()
-            wait_for = max(
-                DOMAIN_DELAY_SECONDS - (now - last_domain_request.get(host, 0)),
-                domain_next_request.get(host, 0) - now,
-            )
-            if wait_for > 0:
-                time.sleep(wait_for)
-            result = fetch_page(url, timeout, cache.get(url))
-            last_domain_request[host] = time.monotonic()
-            if result.get("status") == "http-429":
-                domain_429_counts[host] = domain_429_counts.get(host, 0) + 1
-                retry_after = text(result.get("retryAfter"))
-                try:
-                    delay = min(max(float(retry_after), 0), 300)
-                except ValueError:
-                    delay = 15.0 * (2 ** (domain_429_counts[host] - 1))
-                domain_next_request[host] = time.monotonic() + delay
-            return result
+        def perform_fetch() -> dict[str, Any]:
+            host = hostname(url)
+            with domain_locks[host]:
+                if domain_429_counts.get(host, 0) >= MAX_DOMAIN_429S:
+                    return {"status": "host-backoff-after-429", "url": url, "robotsStatus": "not-requested"}
+                now = time.monotonic()
+                wait_for = max(
+                    DOMAIN_DELAY_SECONDS - (now - last_domain_request.get(host, 0)),
+                    domain_next_request.get(host, 0) - now,
+                )
+                if wait_for > 0:
+                    time.sleep(wait_for)
+                result = fetch_page(url, timeout, cache.get(url))
+                last_domain_request[host] = time.monotonic()
+                if result.get("status") == "http-429":
+                    domain_429_counts[host] = domain_429_counts.get(host, 0) + 1
+                    retry_after = text(result.get("retryAfter"))
+                    try:
+                        delay = min(max(float(retry_after), 0), 300)
+                    except ValueError:
+                        delay = 15.0 * (2 ** (domain_429_counts[host] - 1))
+                    domain_next_request[host] = time.monotonic() + delay
+                return result
+
+        return fetch_once_for_run(url, run_requests, run_requests_lock, perform_fetch)
 
     url = text(gym.get("websiteUrl"))
     result = rate_limited_fetch(url)
@@ -1403,6 +1722,7 @@ def crawl_gym(
             "contentHash": digest,
             "contentChanged": bool(previous_hash and digest and previous_hash != digest),
             "candidateCount": len(offers),
+            "sharedResponse": bool(result.get("sharedResponse")),
             "linkedStorefronts": storefronts,
             "requiresReview": bool(offers),
             "priceChangeOver20Percent": price_change,
@@ -1422,11 +1742,19 @@ def crawl_gym(
             "locationCandidates": location_candidates,
         }
     }
-    for storefront in storefronts:
+    pending: list[tuple[str, str, int]] = [(storefront, url, 1) for storefront in storefronts]
+    visited: set[str] = set()
+    while pending and len(visited) < MAX_LINKED_REQUESTS_PER_GYM:
+        storefront, linked_from, depth = pending.pop(0)
+        request_identity = urldefrag(storefront)[0]
+        if request_identity in visited:
+            continue
+        visited.add(request_identity)
         store_result = rate_limited_fetch(storefront)
         store_offers, nested, store_digest = parse_page(store_result)
         if store_result.get("status") == "not-modified":
             store_offers = list(cache.get(storefront, {}).get("candidates", []))
+            nested = linked_storefronts(storefront, list(cache.get(storefront, {}).get("linkedStorefronts", [])))
             store_digest = text(cache.get(storefront, {}).get("contentHash"))
         attempts.append(
             {
@@ -1439,7 +1767,9 @@ def crawl_gym(
                 "contentHash": store_digest,
                 "contentChanged": bool(text(cache.get(storefront, {}).get("contentHash")) and store_digest and text(cache.get(storefront, {}).get("contentHash")) != store_digest),
                 "candidateCount": len(store_offers),
-                "linkedFrom": url,
+                "sharedResponse": bool(store_result.get("sharedResponse")),
+                "linkedFrom": linked_from,
+                "linkDepth": depth,
                 "requiresReview": bool(store_offers),
                 "priceChangeOver20Percent": False,
             }
@@ -1455,37 +1785,13 @@ def crawl_gym(
             "linkedStorefronts": nested,
             "locationCandidates": [],
         }
-        for detail_url in nested[:12]:
-            detail_result = rate_limited_fetch(detail_url)
-            detail_offers, _deeper, detail_digest = parse_page(detail_result)
-            if detail_result.get("status") == "not-modified":
-                detail_offers = list(cache.get(detail_url, {}).get("candidates", []))
-                detail_digest = text(cache.get(detail_url, {}).get("contentHash"))
-            attempts.append({
-                "gymId": gym["id"],
-                "name": gym["name"],
-                "url": detail_url,
-                "attemptedAt": attempted_at,
-                "status": detail_result["status"],
-                "robotsStatus": detail_result.get("robotsStatus", ""),
-                "contentHash": detail_digest,
-                "contentChanged": bool(text(cache.get(detail_url, {}).get("contentHash")) and detail_digest and text(cache.get(detail_url, {}).get("contentHash")) != detail_digest),
-                "candidateCount": len(detail_offers),
-                "linkedFrom": storefront,
-                "requiresReview": bool(detail_offers),
-                "priceChangeOver20Percent": False,
-            })
-            observations.extend({"gymId": gym["id"], "gymName": gym["name"], "capturedAt": attempted_at, **offer} for offer in detail_offers)
-            updates[detail_url] = {
-                "status": detail_result["status"],
-                "lastAttemptAt": attempted_at,
-                "etag": detail_result.get("etag", ""),
-                "lastModified": detail_result.get("lastModified", ""),
-                "contentHash": detail_digest,
-                "candidates": detail_offers,
-                "linkedStorefronts": [],
-                "locationCandidates": [],
-            }
+        if depth < MAX_LINK_DEPTH:
+            queued = {urldefrag(item[0])[0] for item in pending}
+            for detail_url in nested[:12]:
+                detail_identity = urldefrag(detail_url)[0]
+                if detail_identity not in visited and detail_identity not in queued:
+                    pending.append((detail_url, storefront, depth + 1))
+                    queued.add(detail_identity)
     return attempts, observations, location_observations, updates
 
 
@@ -1516,11 +1822,13 @@ def main() -> int:
     last_domain_request: dict[str, float] = {}
     domain_429_counts: dict[str, int] = {}
     domain_next_request: dict[str, float] = {}
+    run_requests: dict[str, concurrent.futures.Future[dict[str, Any]]] = {}
+    run_requests_lock = threading.Lock()
     with concurrent.futures.ThreadPoolExecutor(max_workers=8) as executor:
         results = executor.map(
             lambda gym: crawl_gym(
                 gym, cache, today, args.timeout, domain_locks, last_domain_request,
-                domain_429_counts, domain_next_request,
+                domain_429_counts, domain_next_request, run_requests, run_requests_lock,
             ),
             candidates,
         )
@@ -1529,6 +1837,7 @@ def main() -> int:
             observations.extend(gym_observations)
             location_observations.extend(gym_locations)
             cache.update(cache_updates)
+    run_attempts = list(attempts)
     crawled_gym_ids = {text(gym.get("id")) for gym in candidates}
     attempts_by_key = {
         (text(item.get("gymId")), text(item.get("url"))): item
@@ -1558,7 +1867,15 @@ def main() -> int:
         "reviewRequiredCount": sum(item["reviewStatus"] == "pending" for item in deals),
         "ordinaryPricesRemainAuthoritative": True,
     })
-    print(json.dumps({"candidateGyms": len(candidates), "requests": len(attempts), "observations": len(observations), "dealCandidates": len(deals), "reviewRequired": sum(item["requiresReview"] for item in attempts)}))
+    print(json.dumps({
+        "candidateGyms": len(candidates),
+        "logicalRequests": len(run_attempts),
+        "physicalRequests": len(run_requests),
+        "sharedResponseReuses": sum(bool(item.get("sharedResponse")) for item in run_attempts),
+        "observations": len(observations),
+        "dealCandidates": len(deals),
+        "reviewRequired": sum(item["requiresReview"] for item in run_attempts),
+    }))
     return 0
 
 

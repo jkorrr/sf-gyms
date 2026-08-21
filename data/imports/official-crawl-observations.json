@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20",
+  "generatedAt": "2026-08-21",
   "observations": [
     {
       "gymId": "osm-node-10047742013",
@@ -695,6 +695,279 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "767px) { } Class Packages $35 – Drop In",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "767px) { } Class Packages $35 – Drop In",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "767px) { } Class Packages $35 – Drop In",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "h: 767px) { } Month To Month $275 – Unlimited $250 – 12x Per Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "h: 767px) { } Month To Month $275 – Unlimited $250 – 12x Per Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "h: 767px) { } Month To Month $275 – Unlimited $250 – 12x Per Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "{ } Class Packages $35 – Drop In $275",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "{ } Class Packages $35 – Drop In $275",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-13905876759",
+      "gymName": "City CrossFit",
+      "capturedAt": "2026-08-21",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "{ } Class Packages $35 – Drop In $275",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.thecitycrossfit.com/memberships",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "osm-node-2167144976",
       "gymName": "Crunch Fitness Polk Street",
       "capturedAt": "2026-08-20",
@@ -1155,7 +1428,7 @@
     {
       "gymId": "osm-node-3674255652",
       "gymName": "Sunset Gym",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 20.0,
       "currency": "USD",
       "rawLabel": "ds Membership No Enrollment Fees, All Access, 2 Floors of Fitness, Towel Service Included Day Pass $20.00",
@@ -1176,6 +1449,66 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://sunsetgym.com/memberships/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-3674255652",
+      "gymName": "Sunset Gym",
+      "capturedAt": "2026-08-21",
+      "amount": 20.0,
+      "currency": "USD",
+      "rawLabel": "ds Membership No Enrollment Fees, All Access, 2 Floors of Fitness, Towel Service Included Day Pass $20.00",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://sunsetgym.com/memberships/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-3674255652",
+      "gymName": "Sunset Gym",
+      "capturedAt": "2026-08-21",
+      "amount": 20.0,
+      "currency": "USD",
+      "rawLabel": "ds Membership No Enrollment Fees, All Access, 2 Floors of Fitness, Towel Service Included Day Pass $20.00",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://sunsetgym.com/memberships/",
       "autoPublishEligible": false
     },
@@ -1534,6 +1867,207 @@
       "method": "visible-text-candidate",
       "adapter": "operator-site",
       "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/van-ness-sport",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "gymName": "Yoga Mayu",
+      "capturedAt": "2026-08-21",
+      "amount": 28.0,
+      "currency": "USD",
+      "rawLabel": "; } } $60 New Student Special 3 Classes • 2 Weeks FIRST TIME STUDENTS ONLY BUY IT $28 Drop-in",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "restricted",
+        "restrictions": [
+          "Student"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "gymName": "Yoga Mayu",
+      "capturedAt": "2026-08-21",
+      "amount": 28.0,
+      "currency": "USD",
+      "rawLabel": "; } } $60 New Student Special 3 Classes • 2 Weeks FIRST TIME STUDENTS ONLY BUY IT $28 Drop-in",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "restricted",
+        "restrictions": [
+          "Student"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "gymName": "Yoga Mayu",
+      "capturedAt": "2026-08-21",
+      "amount": 28.0,
+      "currency": "USD",
+      "rawLabel": "; } } $60 New Student Special 3 Classes • 2 Weeks FIRST TIME STUDENTS ONLY BUY IT $28 Drop-in",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "restricted",
+        "restrictions": [
+          "Student"
+        ]
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "gymName": "Yoga Mayu",
+      "capturedAt": "2026-08-21",
+      "amount": 195.0,
+      "currency": "USD",
+      "rawLabel": "--button-font-size-value: 1; } } $205 Unlimited classes EXPIRES 30 DAYS (one class / day) BUY IT $195 Unlimited classes MONTHLY",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "gymName": "Yoga Mayu",
+      "capturedAt": "2026-08-21",
+      "amount": 195.0,
+      "currency": "USD",
+      "rawLabel": "--button-font-size-value: 1; } } $205 Unlimited classes EXPIRES 30 DAYS (one class / day) BUY IT $195 Unlimited classes MONTHLY",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "gymName": "Yoga Mayu",
+      "capturedAt": "2026-08-21",
+      "amount": 195.0,
+      "currency": "USD",
+      "rawLabel": "--button-font-size-value: 1; } } $205 Unlimited classes EXPIRES 30 DAYS (one class / day) BUY IT $195 Unlimited classes MONTHLY",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
       "autoPublishEligible": false
     },
     {
@@ -2723,6 +3257,180 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "amount": 19.0,
+      "currency": "USD",
+      "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "amount": 19.0,
+      "currency": "USD",
+      "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "amount": 47.0,
+      "currency": "USD",
+      "rawLabel": "for members, $47/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "amount": 47.0,
+      "currency": "USD",
+      "rawLabel": "for members, $47/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "amount": 75.0,
+      "currency": "USD",
+      "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-996696401",
+      "gymName": "Bakar Fitness Center at UCSF Mission Bay",
+      "capturedAt": "2026-08-21",
+      "amount": 75.0,
+      "currency": "USD",
+      "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "osm-way-113283290",
       "gymName": "Mission Cliffs",
       "capturedAt": "2026-08-20",
@@ -2916,7 +3624,7 @@
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 24.0,
       "currency": "USD",
       "rawLabel": "(under 13): $24 Student day pass",
@@ -2939,13 +3647,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 24.0,
       "currency": "USD",
       "rawLabel": "Child day pass (under 13): $24",
@@ -2966,13 +3676,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 25.0,
       "currency": "USD",
       "rawLabel": "l membership with unlimited climbing, yoga, and fitness all for less than the cost of two day passes! No commitment required. start a trial today get $25",
@@ -2997,13 +3709,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 25.0,
       "currency": "USD",
       "rawLabel": "rvices Nationwide access to all Movement Gyms Community Spaces & Free WiFi *Member referral credit limited to $25/month",
@@ -3024,13 +3738,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 29.0,
       "currency": "USD",
       "rawLabel": "Student day pass (M-F before 5 pm with ID): $29",
@@ -3053,13 +3769,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 33.0,
       "currency": "USD",
       "rawLabel": "erships Family memberships Short-term memberships join now Passes + Rental Gear Day pass: $33 Child day pass",
@@ -3080,13 +3798,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 33.0,
       "currency": "USD",
       "rawLabel": "idual memberships Family memberships Short-term memberships join now Passes + Rental Gear Day pass: $33",
@@ -3107,13 +3827,15 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
     {
       "gymId": "osm-way-24334661",
       "gymName": "Movement San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 115.0,
       "currency": "USD",
       "rawLabel": ". join now Member Pricing Standard membership rates start at $115/month",
@@ -3134,6 +3856,8 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://movementgyms.com/san-francisco/",
       "autoPublishEligible": false
     },
@@ -3303,6 +4027,412 @@
       "method": "visible-text-candidate",
       "adapter": "operator-site",
       "sourceUrl": "https://www.crunch.com/locations/chestnut",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 40.0,
+      "currency": "USD",
+      "rawLabel": "r $30 Total #block-yui_3_17_2_1_1739157723596_2369 { --sqs-block-content-flex: 1; } Drop In Day Pass for $40",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 40.0,
+      "currency": "USD",
+      "rawLabel": "r $30 Total #block-yui_3_17_2_1_1739157723596_2369 { --sqs-block-content-flex: 1; } Drop In Day Pass for $40",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 40.0,
+      "currency": "USD",
+      "rawLabel": "} Class Packs (flexible training) Drop-In Day Pass — $40",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 40.0,
+      "currency": "USD",
+      "rawLabel": "} Class Packs (flexible training) Drop-In Day Pass — $40",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 200.0,
+      "currency": "USD",
+      "rawLabel": "} Memberships (best value) Monthly Membership — $200/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 200.0,
+      "currency": "USD",
+      "rawLabel": "} Memberships (best value) Monthly Membership — $200/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 375.0,
+      "currency": "USD",
+      "rawLabel": "Class Packs (flexible training) Drop-In Day Pass — $40 Train for a day without a membership. 10 Class Pack — $375 Best if you want to train consistently but don’t want a monthly",
+      "cadence": "month",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 375.0,
+      "currency": "USD",
+      "rawLabel": "Class Packs (flexible training) Drop-In Day Pass — $40 Train for a day without a membership. 10 Class Pack — $375 Best if you want to train consistently but don’t want a monthly",
+      "cadence": "month",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 375.0,
+      "currency": "USD",
+      "rawLabel": "Drop In Day Pass for $40 #block-e92ad72a6aeda424bd24 { --sqs-block-content-flex: 1; } 10 Class Pack for $375 #block-63acac05cee43b628a98 { --sqs-block-content-flex: 1; } Monthly",
+      "cadence": "month",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-06bc58a9a5ca84",
+      "gymName": "Forge Krav Maga",
+      "capturedAt": "2026-08-21",
+      "amount": 375.0,
+      "currency": "USD",
+      "rawLabel": "Drop In Day Pass for $40 #block-e92ad72a6aeda424bd24 { --sqs-block-content-flex: 1; } 10 Class Pack for $375 #block-63acac05cee43b628a98 { --sqs-block-content-flex: 1; } Monthly",
+      "cadence": "month",
+      "productType": "drop-in",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.forgekravmaga.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-0c3933dd5d019f",
+      "gymName": "Studio By Live Better",
+      "capturedAt": "2026-08-21",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "@media screen and (max-width: 767px) { } $150 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-0c3933dd5d019f",
+      "gymName": "Studio By Live Better",
+      "capturedAt": "2026-08-21",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "@media screen and (max-width: 767px) { } $150 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-0c3933dd5d019f",
+      "gymName": "Studio By Live Better",
+      "capturedAt": "2026-08-21",
+      "amount": 210.0,
+      "currency": "USD",
+      "rawLabel": "@media screen and (max-width: 767px) { } $210 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.studiobylivebetter.com/pricing",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-0c3933dd5d019f",
+      "gymName": "Studio By Live Better",
+      "capturedAt": "2026-08-21",
+      "amount": 210.0,
+      "currency": "USD",
+      "rawLabel": "@media screen and (max-width: 767px) { } $210 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://www.studiobylivebetter.com/pricing",
       "autoPublishEligible": false
     },
     {
@@ -4033,6 +5163,93 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "amount": 19.0,
+      "currency": "USD",
+      "rawLabel": "rval Training, Circuit Training, and Functional Training. More information about the program . Locker Rental: $19/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "amount": 47.0,
+      "currency": "USD",
+      "rawLabel": "for members, $47/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-4289bb94baeda1",
+      "gymName": "Millberry Fitness Center at UCSF Parnassus",
+      "capturedAt": "2026-08-21",
+      "amount": 75.0,
+      "currency": "USD",
+      "rawLabel": "tarted, contact us anytime at joey.convento@ucsf.edu or fernando.hernandez@ucsf.edu . Membership Bundles F45: $75/month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitness-and-recreation/membership",
+      "autoPublishEligible": false
+    },
+    {
       "gymId": "web-4aaec1680acf72",
       "gymName": "24 Hour Fitness Potrero Sport",
       "capturedAt": "2026-08-20",
@@ -4619,7 +5836,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 36.0,
       "currency": "USD",
       "rawLabel": "-b27a26e47ca0f0d16930 .sqs-block-alignment-wrapper { align-items: center; } } Drop-In Classes: $36",
@@ -4646,7 +5863,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 36.0,
       "currency": "USD",
       "rawLabel": "6930 .sqs-block-alignment-wrapper { align-items: center; } } Drop-In Classes: $36 WE LOVE DROP-IN",
@@ -4673,7 +5890,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 79.0,
       "currency": "USD",
       "rawLabel": "} } Unlimited At Home Livestream Classes $79/Month",
@@ -4704,7 +5921,7 @@
     {
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 175.0,
       "currency": "USD",
       "rawLabel": "} } Unlimited In-Person and At Home Classes $175/Month",
@@ -5025,7 +6242,7 @@
     {
       "gymId": "web-e20a10174e60fa",
       "gymName": "The Bar Method San Francisco - FiDi",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 6.0,
       "currency": "USD",
       "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
@@ -5050,13 +6267,180 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
       "autoPublishEligible": false
     },
     {
       "gymId": "web-e20a10174e60fa",
       "gymName": "The Bar Method San Francisco - FiDi",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "amount": 6.0,
+      "currency": "USD",
+      "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 6.0,
+      "currency": "USD",
+      "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 6.0,
+      "currency": "USD",
+      "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 6.0,
+      "currency": "USD",
+      "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 6.0,
+      "currency": "USD",
+      "rawLabel": "to Expect Classes & Benefits Learn More Start Today View Schedule Which package works best for you? As low as $6 per class Club Bar Unlimited Look and feel your best with unlimited monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
       "amount": 115.0,
       "currency": "USD",
       "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
@@ -5077,13 +6461,160 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
       "autoPublishEligible": false
     },
     {
       "gymId": "web-e20a10174e60fa",
       "gymName": "The Bar Method San Francisco - FiDi",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "amount": 115.0,
+      "currency": "USD",
+      "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 115.0,
+      "currency": "USD",
+      "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 115.0,
+      "currency": "USD",
+      "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 115.0,
+      "currency": "USD",
+      "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 115.0,
+      "currency": "USD",
+      "rawLabel": "rre fix Balance your schedule with variety Transform your mind, body and spirit * Some restrictions may apply $115/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
       "amount": 185.0,
       "currency": "USD",
       "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
@@ -5104,6 +6635,153 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 185.0,
+      "currency": "USD",
+      "rawLabel": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "asses Enjoy the most perks and build your barre community First month only $99* * Some restrictions may apply $185/Month"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/",
       "autoPublishEligible": false
     },
