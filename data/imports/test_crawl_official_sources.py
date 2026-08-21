@@ -14,6 +14,33 @@ import crawl_official_sources as crawler
 
 
 class OfficialCrawlerTests(unittest.TestCase):
+    def test_persisted_artifacts_redact_transient_query_state(self) -> None:
+        source = (
+            "https://portal.example/graphql?planId=42&sessionId=secret-session"
+            "&access_token=secret-token&location=sf"
+        )
+
+        self.assertTrue(crawler.url_has_sensitive_query(source))
+        self.assertEqual(
+            crawler.redact_persisted_url(source),
+            "https://portal.example/graphql?planId=42&location=sf",
+        )
+        self.assertEqual(
+            crawler.sanitize_persisted_value({"url": source})["url"],
+            "https://portal.example/graphql?planId=42&location=sf",
+        )
+
+    def test_persisted_cache_drops_transient_requests_and_discovery_links(self) -> None:
+        stable = "https://portal.example/location/pricing"
+        transient = "https://portal.example/graphql?sessionId=secret-session&planId=42"
+        persisted = crawler.cache_for_persistence({
+            stable: {"linkedStorefronts": [transient, "https://portal.example/plans"]},
+            transient: {"candidates": [{"amount": 99}]},
+        })
+
+        self.assertNotIn(transient, persisted)
+        self.assertEqual(persisted[stable]["linkedStorefronts"], ["https://portal.example/plans"])
+
     def test_decodes_standard_http_content_encodings(self) -> None:
         payload = b"<html><body>Mighty Monthly Pass $360/month</body></html>"
         self.assertEqual(crawler.decode_response_body(crawler.brotli.compress(payload), "br"), payload)
@@ -1139,6 +1166,81 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(audit["matchMethod"], "source-product-alias")
         self.assertEqual(audit["candidateNormalizedMonthly"], 128.85)
 
+    def test_acuity_page_reconstructs_public_catalog_without_other_inline_state(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "acuity-business-page.html"
+        source = "https://joltathleticsappts.as.me/schedule/f0d1f69e"
+
+        offers, stores, digest = crawler.parse_page({
+            "html": fixture.read_text(encoding="utf-8"),
+            "url": source,
+            "contentType": "text/html",
+        })
+
+        self.assertEqual(stores, [])
+        self.assertTrue(digest)
+        self.assertEqual(len(offers), 5)
+        membership = next(item for item in offers if item["sourceProductId"] == "2236280")
+        adult = next(item for item in offers if item["sourceProductId"] == "94915269")
+        youth = next(item for item in offers if item["sourceProductId"] == "94915270")
+        starter = next(item for item in offers if item["sourceProductId"] == "2236999")
+        self.assertEqual((membership["name"], membership["amount"], membership["cadence"]), (
+            "Unlimited Fitness Membership", 250, "month",
+        ))
+        self.assertTrue(membership["classAllowance"]["unlimited"])
+        self.assertEqual((adult["amount"], adult["productType"], adult["ordinaryUse"]), (50, "drop-in", True))
+        self.assertEqual(youth["eligibility"]["type"], "youth")
+        self.assertTrue(starter["promotion"]["isPromotion"])
+        serialized = json.dumps(offers)
+        self.assertNotIn("CLIENT_INFO", serialized)
+        self.assertNotIn("OTHER_INLINE_STATE", serialized)
+
+    def test_acuity_selected_product_id_matches_jolt_monthly_price(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "acuity-business-page.html"
+        source = "https://joltathleticsappts.as.me/schedule/f0d1f69e"
+        offers = crawler.acuity_embedded_business_candidates(fixture.read_text(encoding="utf-8"), source)
+        gym = {
+            "id": "jolt",
+            "monthlyPrice": 250,
+            "priceSourceUrl": "https://joltathleticsappts.as.me/",
+            "selectedPlanId": "jolt:plan:2236280",
+            "plans": [{
+                "id": "jolt:plan:2236280",
+                "sourceProductId": "2236280",
+                "name": "Unlimited Fitness Membership",
+                "classAllowance": {"count": None, "period": "month", "unlimited": True, "disclosed": True},
+                "billing": {"amount": 250, "normalizedMonthly": 250},
+                "commitment": {"type": "unknown", "minimumMonths": None},
+                "evidence": {"url": "https://joltathleticsappts.as.me/"},
+            }],
+        }
+
+        audit = crawler.audit_selected_plan_price(gym, [{"gymId": "jolt", **item} for item in offers])
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "source-product-id")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 250)
+
+    def test_momence_page_discovers_and_parses_public_membership_api(self) -> None:
+        page = "https://momence.com/NICE-Pilates/membership/The-Work/776365"
+        api = "https://momence.com/_api/primary/plugin/memberships/776365"
+        fixture = Path(__file__).with_name("fixtures") / "momence-membership.json"
+        payload = fixture.read_text(encoding="utf-8")
+
+        self.assertEqual(crawler.momence_membership_api_route(page), api)
+        self.assertEqual(crawler.momence_membership_api_route("https://momence.com/m/776365"), api)
+        self.assertEqual(crawler.momence_membership_api_route("https://example.com/m/776365"), "")
+        offers, nested, digest = crawler.parse_page({
+            "html": payload,
+            "url": api,
+            "contentType": "application/json",
+        })
+
+        self.assertEqual(nested, [])
+        self.assertTrue(digest)
+        self.assertEqual(len(offers), 1)
+        self.assertEqual((offers[0]["sourceProductId"], offers[0]["amount"]), ("776365", 375))
+        self.assertEqual(offers[0]["commitment"], {"type": "fixed-term", "minimumMonths": 3})
+
     def test_abc_fitness_catalog_expands_plan_list_and_plan_linked_fee(self) -> None:
         join_url = "https://onlinejoin.abcfitness.com/signup/plan?club=31627&planId=general"
         self.assertEqual(
@@ -1946,6 +2048,28 @@ CLUB INFO"""
             [{"gymId": "gym-1", "url": "https://gym.example", "status": "fetched"}],
         )
         self.assertEqual(replaced, [replacement])
+
+    def test_observation_merge_collapses_redirect_duplicates_and_prefers_booking_provenance(self) -> None:
+        common = {
+            "gymId": "gym-1",
+            "capturedAt": "2026-08-21",
+            "sourceUrl": "https://studio.as.me/schedule/public",
+            "sourceProductId": "plan-1",
+            "productType": "monthly",
+            "amount": 99,
+            "rawLabel": "Basic Membership — USD 99",
+        }
+        operator_path = {**common, "catalogSourceUrl": "https://operator.example/pricing"}
+        booking_path = {**common, "catalogSourceUrl": "https://studio.as.me/"}
+
+        merged = crawler.merge_crawl_observations(
+            [],
+            [operator_path, booking_path],
+            {"gym-1"},
+            [{"gymId": "gym-1", "url": "https://operator.example/pricing", "status": "fetched"}],
+        )
+
+        self.assertEqual(merged, [booking_path])
 
     def test_muscle_beach_catalog_separates_visits_and_household_plan(self) -> None:
         offers = crawler.visible_candidates(

@@ -387,7 +387,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
         # summary prices. Waiting for that operator-owned DOM prevents the
         # early summary amounts from being mistaken for complete plan cards.
         platform = static_crawler.platform_name(url)
-        dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "jane"}
+        dynamic_platform = platform in {"approach", "mariana-tek", "xponential-member-app", "mindbody", "momence", "jane"}
         page.wait_for_timeout(
             4000 if dynamic_platform or host(url).endswith(("crunch.com", "orangetheory.com", "solidcore.co")) else 1500
         )
@@ -511,6 +511,19 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
                         )
                 except Exception:
                     pass
+        if platform == "momence":
+            try:
+                momence_visible = page.locator("body").inner_text(timeout=timeout_ms)
+                page_title = page.title()
+                platform_card_candidates.extend(
+                    static_crawler.platform_adapters.momence_membership_card_candidates(
+                        momence_visible,
+                        page.url,
+                        page_title,
+                    )
+                )
+            except Exception:
+                pass
         if platform == "jane":
             for service in page.locator("a[href*='/treatment/']").all()[:200]:
                 try:

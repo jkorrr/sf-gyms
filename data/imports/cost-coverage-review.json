@@ -1878,7 +1878,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F12%2F2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "http-403",
           "candidateCount": 0
         },
@@ -2084,7 +2084,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://marianatek.com/?ref_noscript",
+          "url": "https://marianatek.com/?ref_noscript=",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -2099,7 +2099,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://www.marianatek.com/?ref_noscript#content",
+          "url": "https://www.marianatek.com/?ref_noscript=#content",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -2296,6 +2296,11 @@
           "url": "https://bodyrok.com/studio/haight/",
           "status": "rendered",
           "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=23335&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
         }
       ]
     },
@@ -2389,6 +2394,11 @@
         {
           "url": "https://bodyrok.com/studio/marina/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=23335&stype=41",
+          "status": "access-blocked",
           "candidateCount": 0
         }
       ]
@@ -4660,22 +4670,22 @@
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=FF21F6C4%2DF366%2D4F07%2D9ED8%2D3E94A18FB7D1",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=FF21F6C4-F366-4F07-9ED8-3E94A18FB7D1",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026%2D07%2D21&view=MONTH",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-07-21&view=MONTH",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026%2D09%2D21&view=MONTH",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-09-21&view=MONTH",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -4685,12 +4695,12 @@
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3A86F67F07%2DD2DF%2D4362%2DA247%2D9E36F6F6AFCE",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3A86F67F07-D2DF-4362-A247-9E36F6F6AFCE",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
         {
-          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3AA3C7AFC1%2D5134%2D41BD%2DB841%2DAAC7DC88C7CE",
+          "url": "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3AA3C7AFC1-5134-41BD-B841-AAC7DC88C7CE",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -6046,12 +6056,12 @@
           "candidateCount": 0
         },
         {
-          "url": "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=73ED29A7%2DD296%2D42FE%2D92DE%2D13EC850CAB6B",
+          "url": "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=73ED29A7-D296-42FE-92DE-13EC850CAB6B",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
         {
-          "url": "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=7ACEA035%2D33BD%2D42E4%2DB8E4%2D4F37406EAF0D",
+          "url": "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=7ACEA035-33BD-42E4-B8E4-4F37406EAF0D",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -6066,7 +6076,7 @@
           "candidateCount": 4
         },
         {
-          "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+          "url": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
           "status": "fetched",
           "candidateCount": 4
         },
@@ -8021,12 +8031,22 @@
       "crawlAttempts": [
         {
           "url": "https://joltathleticsappts.as.me/",
-          "status": "fetched",
-          "candidateCount": 0
+          "status": "network-error",
+          "candidateCount": 35
+        },
+        {
+          "url": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+          "status": "network-error",
+          "candidateCount": 35
         },
         {
           "url": "https://www.joltathletics.com/",
-          "status": "fetched",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.joltathletics.com/faq",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
@@ -10614,7 +10634,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F15%2F2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "access-blocked",
           "candidateCount": 0
         },
@@ -10629,7 +10649,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -10654,7 +10674,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank",
           "status": "http-403",
           "candidateCount": 0
         },
@@ -11122,7 +11142,7 @@
           "candidateCount": 9
         },
         {
-          "url": "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sessionId=U2Vzc2lvbjplOGZlNTI2Zjk3OGJhMGI0MGNiN2I2YmI5NjAxYzYyOA%3D%3D&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21",
+          "url": "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21",
           "status": "fetched",
           "candidateCount": 1
         },
@@ -11605,7 +11625,7 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-11384826394:plan:momence-309951",
+      "selectedPlanId": "osm-node-11384826394:plan:776365",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -11623,51 +11643,181 @@
       "crawlAttempts": [
         {
           "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-3-Private-Sessions/478137",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135",
-          "status": "fetched",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/297392",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/309944",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/309945",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/309946",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/309947",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/309948",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/309949",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/314177",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/314181",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/478135",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/478137",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/_api/primary/plugin/memberships/776365",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/gcc/41948",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/297392",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/309944",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/309945",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/309946",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/309947",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/309948",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/309949",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/314177",
+          "status": "network-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://momence.com/m/314181",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/m/478137",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/m/776365",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://momence.com/u/NICE-Pilates",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://nicepilates.studio/",
-          "status": "fetched",
+          "status": "network-error",
           "candidateCount": 0
         },
         {
           "url": "https://nicepilates.studio/price-list-%2F-purchase",
-          "status": "not-modified",
+          "status": "network-error",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-3-Private-Sessions/478137",
+          "status": "rendered",
           "candidateCount": 1
         },
         {
           "url": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 1
         },
         {
           "url": "https://momence.com/m/478137",
           "status": "rendered",
+          "candidateCount": 1
+        },
+        {
+          "url": "https://momence.com/m/776365",
+          "status": "rendered",
+          "candidateCount": 4
+        },
+        {
+          "url": "https://momence.com/u/NICE-Pilates",
+          "status": "rendered",
           "candidateCount": 0
         },
         {
-          "url": "https://momence.com/sign-in",
+          "url": "https://nicepilates.studio/",
           "status": "rendered",
           "candidateCount": 0
         },
@@ -12589,7 +12739,7 @@
           "candidateCount": 6
         },
         {
-          "url": "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73&",
+          "url": "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -13117,7 +13267,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://momence.com/m/45705 ",
+          "url": "https://momence.com/m/45705",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -14447,7 +14597,7 @@
           "candidateCount": 0
         },
         {
-          "url": "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True",
+          "url": "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True",
           "status": "robots-disallowed",
           "candidateCount": 0
         },
@@ -16117,6 +16267,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://yogaflowsf.com/membership/",
           "status": "robots-disallowed",
           "candidateCount": 0
@@ -16164,6 +16319,11 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
           "url": "https://yogaflowsf.com/membership/",
           "status": "robots-disallowed",
           "candidateCount": 0
@@ -16208,6 +16368,11 @@
         {
           "url": "https://yogaflowsf.com/membership/",
           "status": "robots-disallowed",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -16310,7 +16475,7 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
-          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "fetched",
           "candidateCount": 0
         },
@@ -16427,7 +16592,7 @@
       "sourceAttemptBlocker": "",
       "crawlAttempts": [
         {
-          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "url": "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
           "status": "fetched",
           "candidateCount": 0
         },

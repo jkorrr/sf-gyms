@@ -1655,7 +1655,7 @@
     "candidates": [],
     "linkedStorefronts": [
       "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-7&sView=day&sLoc=0",
-      "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F12%2F2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-8&sTG=8&sVT=9&sView=day&sLoc=0"
     ],
     "locationCandidates": [
@@ -1684,7 +1684,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
+  "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F12%2F2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
     "status": "http-403",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -1736,7 +1736,7 @@
     "contentHash": "7811d0c0d078b6ccbd3318efda250def60971a856eac89590f82a1cb2c2c9755",
     "candidates": [],
     "linkedStorefronts": [
-      "https://marianatek.com/?ref_noscript"
+      "https://marianatek.com/?ref_noscript="
     ],
     "locationCandidates": [
       {
@@ -1767,7 +1767,7 @@
       }
     ]
   },
-  "https://marianatek.com/?ref_noscript": {
+  "https://marianatek.com/?ref_noscript=": {
     "status": "fetched",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -1775,7 +1775,7 @@
     "contentHash": "6f1e597931c28b3fde5655a60bf7bb98d934856120973d2a33f01cd531b3d3ed",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.marianatek.com/?ref_noscript#content",
+      "https://www.marianatek.com/?ref_noscript=#content",
       "https://www.marianatek.com/book-a-demo/",
       "https://www.marianatek.com",
       "https://www.marianatek.com/pilates-studio-software/",
@@ -11828,11 +11828,11 @@
     "contentHash": "3022211bef9c52e1019b85d0392317f78ba2c8508d04b6c92f850a1367948015",
     "candidates": [],
     "linkedStorefronts": [
-      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
     ],
     "locationCandidates": []
   },
-  "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True": {
+  "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True": {
     "status": "robots-disallowed",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -11937,7 +11937,7 @@
       "https://barmethod.com/locations/san-francisco-fidi/buy/",
       "https://barmethod.com/locations/san-francisco-fidi/schedule/",
       "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154",
-      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
     ],
     "locationCandidates": [
       {
@@ -13374,24 +13374,34 @@
     "locationCandidates": []
   },
   "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "c84111b32e120411ee0ae8029bfefec1d49b13383f9003dd3db94e0ac323f708",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "cf01e273160e34fe879580647cbf98d3c51f42567936c87e0665c7936cccb516",
     "candidates": [],
-    "linkedStorefronts": [],
-    "locationCandidates": []
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/478135"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-3-Private-Sessions/478137": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "7bd2d71eaff75287693a37c4b050ad9c275d7b8b92fb64367ad5deaaa017b16b",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "f6ad129a5f0303e5b6653c153328aa4890f5589cbc05908fb64ccbd32c89c32f",
     "candidates": [],
-    "linkedStorefronts": [],
-    "locationCandidates": []
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/478137"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://clients.mindbodyonline.com/classic/ws?prodId=687&sTG=22&studioid=5134&stype=41": {
     "status": "http-403",
@@ -13682,7 +13692,7 @@
     "linkedStorefronts": [
       "https://members.purebarre.com",
       "https://www.purebarre.com/location/san-francisco-west-portal-ca#schedule",
-      "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73&",
+      "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73",
       "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/packages"
     ],
     "locationCandidates": [
@@ -14268,7 +14278,7 @@
     "candidates": [],
     "linkedStorefronts": [
       "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-7&sView=day&sLoc=0",
-      "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F12%2F2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-8&sTG=8&sVT=9&sView=day&sLoc=0",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=672",
       "https://clients.mindbodyonline.com/classic/mainclass?fl=true&tabID=7"
@@ -14323,7 +14333,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://www.marianatek.com/?ref_noscript#content": {
+  "https://www.marianatek.com/?ref_noscript=#content": {
     "status": "fetched",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -14331,7 +14341,7 @@
     "contentHash": "6f1e597931c28b3fde5655a60bf7bb98d934856120973d2a33f01cd531b3d3ed",
     "candidates": [],
     "linkedStorefronts": [
-      "https://www.marianatek.com/?ref_noscript#content",
+      "https://www.marianatek.com/?ref_noscript=#content",
       "https://www.marianatek.com/book-a-demo/",
       "https://www.marianatek.com",
       "https://www.marianatek.com/pilates-studio-software/",
@@ -15602,7 +15612,7 @@
     "contentHash": "1947718e68c4259ef2cbe813aab29c9b7e69c48dd1997e3c50810eb12cc505a3",
     "candidates": [],
     "linkedStorefronts": [
-      "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership"
+      "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership"
     ],
     "locationCandidates": [
       {
@@ -15630,7 +15640,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership": {
+  "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership": {
     "status": "fetched",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -15679,7 +15689,7 @@
         "adapter": "zen-planner",
         "evidenceTier": "official-public",
         "exactLocationMatch": "exact-operator-catalog",
-        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
         "autoPublishEligible": false
       },
       {
@@ -15721,7 +15731,7 @@
         "adapter": "zen-planner",
         "evidenceTier": "official-public",
         "exactLocationMatch": "exact-operator-catalog",
-        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
         "autoPublishEligible": false
       },
       {
@@ -15763,7 +15773,7 @@
         "adapter": "zen-planner",
         "evidenceTier": "official-public",
         "exactLocationMatch": "exact-operator-catalog",
-        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
         "autoPublishEligible": false
       },
       {
@@ -15805,7 +15815,7 @@
         "adapter": "zen-planner",
         "evidenceTier": "official-public",
         "exactLocationMatch": "exact-operator-catalog",
-        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+        "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
         "autoPublishEligible": false
       }
     ],
@@ -15844,8 +15854,8 @@
       "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm",
       "https://fitnessurbano.sites.zenplanner.com/index.cfm",
       "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=",
-      "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=7ACEA035%2D33BD%2D42E4%2DB8E4%2D4F37406EAF0D",
-      "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=73ED29A7%2DD296%2D42FE%2D92DE%2D13EC850CAB6B"
+      "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=7ACEA035-33BD-42E4-B8E4-4F37406EAF0D",
+      "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=73ED29A7-D296-42FE-92DE-13EC850CAB6B"
     ],
     "locationCandidates": []
   },
@@ -16287,13 +16297,16 @@
     ]
   },
   "https://www.joltathletics.com/": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
-    "etag": "W/\"2851e11aacae25511867af2d0c901073--gzip\"",
+    "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
     "contentHash": "1afe72dac47181eb62943febbd71f56864d3d79ced388f972295e8c6d58351b1",
     "candidates": [],
     "linkedStorefronts": [
+      "https://www.joltathletics.com/faq",
       "https://joltathleticsappts.as.me/"
     ],
     "locationCandidates": [
@@ -16323,17 +16336,1578 @@
         "contentHash": "42804385a4468496325ac111b524fe5bfab0a2a9038ef1c01dd7405e5a16e724",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://joltathleticsappts.as.me/": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "055f533c9330a987c2af760b5ab22a7b42890c61763f6c621a6ef81ab65abe3c",
-    "candidates": [],
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "67255af3de9a64c2afdfe48ede5f686d4a2157d33e73b0218129bfb9eabcfe95",
+    "candidates": [
+      {
+        "sourceProductId": "2236292",
+        "sourceProductAliases": [
+          "12x-figure-skating-off-ice-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "12x Figure Skating Off-Ice Credits",
+        "amount": 450.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "Figure Skating Off-Ice Credits @ 25% discounted rate",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "12x Figure Skating Off-Ice Credits"
+        },
+        "eligibility": {
+          "type": "new-client",
+          "restrictions": [
+            "Promotional or introductory product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "12x Figure Skating Off-Ice Credits — USD 450 — Figure Skating Off-Ice Credits @ 25% discounted rate",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236291",
+        "sourceProductAliases": [
+          "6x-figure-skating-off-ice-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "6x Figure Skating Off-Ice Credits",
+        "amount": 270.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "Figure Skating Off-Ice Credits @ 10% discounted rate",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "6x Figure Skating Off-Ice Credits"
+        },
+        "eligibility": {
+          "type": "new-client",
+          "restrictions": [
+            "Promotional or introductory product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "6x Figure Skating Off-Ice Credits — USD 270 — Figure Skating Off-Ice Credits @ 10% discounted rate",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2171096",
+        "sourceProductAliases": [
+          "6x-shooting-clinic-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "6x Shooting Clinic Credits",
+        "amount": 375.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "12 Credits for shooting clinics @ a 10% discounted rate. Credits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 12.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "6x Shooting Clinic Credits — USD 375 — 12 Credits for shooting clinics @ a 10% discounted rate. Credits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236301",
+        "sourceProductAliases": [
+          "6x-stickhandling-class-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "6x Stickhandling Class Credits",
+        "amount": 270.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "6x Credits for stickhandling class @ a 10% discounted rate\nOr\nRedemption value of $300.\nCredits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "6x Stickhandling Class Credits — USD 270 — 6x Credits for stickhandling class @ a 10% discounted rate\nOr\nRedemption value of $300.\nCredits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236089",
+        "sourceProductAliases": [
+          "12x-shooting-clinic-credit"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "12x Shooting Clinic Credit",
+        "amount": 630.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "12 Credits for Shooting Clinics @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 12.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "12x Shooting Clinic Credit — USD 630 — 12 Credits for Shooting Clinics @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236303",
+        "sourceProductAliases": [
+          "12x-stickhandling-class-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "12x Stickhandling Class Credits",
+        "amount": 450.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "12x Credits for stickhandling class @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "12x Stickhandling Class Credits — USD 450 — 12x Credits for stickhandling class @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2235696",
+        "sourceProductAliases": [
+          "all-access-hockey-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "All-Access Hockey Membership",
+        "amount": 385.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Have the flexibility to join in during all of our fitness and hockey offerings.\nIf you plan on making Jolt your training destination for at least 3x a week, this membership is meant for you or your athlete.\n\nMembership Benefits:\n- Unlimited age appropriate workout sessions.\n- Unlimited stickhandling classes.\n- Unlimited Shooting Clinic credits\n- Open gym access\n- 10 Hour Shooting lane credits per month, subject to availability.\n- 2 Hockey or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.\nPlease only sign up for classes you mean to attend. Unexcused absences will get three warnings.\nFamilies with more than one account can use the same code to sign up multiple participants as long as the account holds multiple subscriptions.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "All-Access Hockey Membership — USD 385 — $385.00 per month — Have the flexibility to join in during all of our fitness and hockey offerings.\nIf you plan on making Jolt your training destination for at least 3x a week, this membership is meant for you or your athlete.\n\nMembership Benefits:\n- Unlimited age appropriate workout sessions.\n- Unlimited stickhandling classes.\n- Unlimited Shooting Clinic credits\n- Open gym access\n- 10 Hour Shooting lane credits per month, subject to availability.\n- 2 Hoc",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236281",
+        "sourceProductAliases": [
+          "all-access-figure-skating-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "All-Access Figure Skating Membership",
+        "amount": 295.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Use for general Jolt Figure Skating curriculum, excluding invite only classes.\n\nMembership benefits:\n- Unlimited age appropriate strength and conditioning blocks\n- Unlimited general figure skating off-ice classes of an appropriate level. [Excludes invite-only classes]\n- Open gym access\n- 2 Figure Skating or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nOpen gym access- please yield equipment for classes.\nMembership charged as monthly subscription.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "All-Access Figure Skating Membership — USD 295 — $295.00 per month — Use for general Jolt Figure Skating curriculum, excluding invite only classes.\n\nMembership benefits:\n- Unlimited age appropriate strength and conditioning blocks\n- Unlimited general figure skating off-ice classes of an appropriate level. [Excludes invite-only classes]\n- Open gym access\n- 2 Figure Skating or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nOpen gym access- ",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236280",
+        "sourceProductAliases": [
+          "unlimited-fitness-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Unlimited Fitness Membership",
+        "amount": 250.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Have the flexibility to join in during all of our fitness blocks with a preconstructed class program.\n\nMembership Benefits:\n- Unlimited general fitness and athletic training sessions\n- Open gym usage\n- 2 Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Unlimited Fitness Membership — USD 250 — $250.00 per month — Have the flexibility to join in during all of our fitness blocks with a preconstructed class program.\n\nMembership Benefits:\n- Unlimited general fitness and athletic training sessions\n- Open gym usage\n- 2 Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972072",
+        "sourceProductAliases": [
+          "youth-rota-9-12"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Rota 9-12",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Athletic Development",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Rota 9-12 — USD 50 — Athletic Development",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94970495",
+        "sourceProductAliases": [
+          "youth-sbs-c-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth SBS&C 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Athletic Development",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth SBS&C 13+ — USD 50 — Athletic Development",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972021",
+        "sourceProductAliases": [
+          "youth-rota-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Rota 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Athletic Development",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Rota 13+ — USD 50 — Athletic Development",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972041",
+        "sourceProductAliases": [
+          "youth-introoly-14"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth IntroOly 14+",
+        "amount": 65.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth IntroOly 14+ — USD 65 — Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972099",
+        "sourceProductAliases": [
+          "adult-introoly"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult IntroOly",
+        "amount": 65.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult IntroOly — USD 65 — Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914988",
+        "sourceProductAliases": [
+          "youth-intro-to-off-ice"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Intro to Off-Ice",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Figure Skating Off-Ice",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "Youth Intro to Off-Ice"
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Intro to Off-Ice — USD 50 — Figure Skating Off-Ice",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914997",
+        "sourceProductAliases": [
+          "adult-intro-to-off-ice"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Intro to Off-Ice",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Figure Skating Off-Ice",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "Adult Intro to Off-Ice"
+        },
+        "eligibility": {
+          "type": "new-client",
+          "restrictions": [
+            "Promotional or introductory product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Intro to Off-Ice — USD 50 — Figure Skating Off-Ice",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914736",
+        "sourceProductAliases": [
+          "youth-ltt-5-8"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth LTT 5-8",
+        "amount": 37.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth LTT 5-8 — USD 37 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914801",
+        "sourceProductAliases": [
+          "youth-gs-c-9-17"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth GS&C 9-17",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth GS&C 9-17 — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94915269",
+        "sourceProductAliases": [
+          "adult-gs-c"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult GS&C",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult GS&C — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94917534",
+        "sourceProductAliases": [
+          "youth-hiit-9-12"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth HIIT 9-12",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth HIIT 9-12 — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94978392",
+        "sourceProductAliases": [
+          "youth-hiit-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth HIIT 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth HIIT 13+ — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94917547",
+        "sourceProductAliases": [
+          "adult-hiit"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult HIIT",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult HIIT — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94917480",
+        "sourceProductAliases": [
+          "adult-imob"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult IMOB",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult IMOB — USD 50 — Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94971893",
+        "sourceProductAliases": [
+          "youth-imob-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth IMOB 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth IMOB 13+ — USD 50 — Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90303905",
+        "sourceProductAliases": [
+          "youth-beginner-novice-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Beginner/Novice Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Beginner/Novice Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90303760",
+        "sourceProductAliases": [
+          "youth-intermediate-advanced-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Intermediate/Advanced Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Intermediate/Advanced Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90302516",
+        "sourceProductAliases": [
+          "adult-beginner-novice-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Beginner/Novice Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Beginner/Novice Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94979211",
+        "sourceProductAliases": [
+          "adult-mixed-skill-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Mixed Skill Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Mixed Skill Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90308568",
+        "sourceProductAliases": [
+          "adult-intermediate-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Intermediate Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Intermediate Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "84507969",
+        "sourceProductAliases": [
+          "shooting-lane-booking"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Shooting Lane Booking",
+        "amount": 25.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "You just needed a place to rip those! We got you covered!\n\nLane allows up to 2 shooters at a time.",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Shooting Lane Booking — USD 25 — You just needed a place to rip those! We got you covered!\n\nLane allows up to 2 shooters at a time.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94890910",
+        "sourceProductAliases": [
+          "youth-beginner-novice-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Beginner/Novice Stick Skills",
+        "amount": 37.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General age group is 6-10 but skill level will be prioritize over age group.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Beginner/Novice Stick Skills — USD 37 — General age group is 6-10 but skill level will be prioritize over age group.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891036",
+        "sourceProductAliases": [
+          "youth-intermediate-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Intermediate Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General age group is 9-14 but skill level will be prioritize over age group.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Intermediate Stick Skills — USD 50 — General age group is 9-14 but skill level will be prioritize over age group.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891076",
+        "sourceProductAliases": [
+          "youth-advanced-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Advanced Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General age group is 13+ but skill level will be prioritize over age group.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Advanced Stick Skills — USD 50 — General age group is 13+ but skill level will be prioritize over age group.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891294",
+        "sourceProductAliases": [
+          "adult-beginner-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Beginner Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Stickhandling Classes",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Beginner Stick Skills — USD 50 — Stickhandling Classes",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891315",
+        "sourceProductAliases": [
+          "adult-mix-level-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Mix Level Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Stickhandling Classes",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Mix Level Stick Skills — USD 50 — Stickhandling Classes",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      }
+    ],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://www.sfll.org/Default.aspx?tabid=1713651": {
     "status": "fetched",
@@ -17021,14 +18595,14 @@
     ],
     "linkedStorefronts": [
       "https://www.mightypilates.com/faq/",
-      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F15%2F2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=5727345",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5744896&stype=-7&sView=week&sLoc=2",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5743201&stype=-7&sView=week&sLoc=1",
-      "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
-      "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=5748750",
       "https://clients.mindbodyonline.com/classic/ws?studioid=289199&stype=-7&sView=week&sLoc=1",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733789"
@@ -17062,7 +18636,7 @@
       }
     ]
   },
-  "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
+  "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F15%2F2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
     "status": "access-blocked",
     "accessBlocker": "identity-session-reset-required",
     "lastAttemptAt": "2026-08-21",
@@ -17312,10 +18886,12 @@
     ]
   },
   "https://nicepilates.studio/price-list-%2F-purchase": {
-    "status": "not-modified",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
-    "etag": "",
+    "etag": "9d891bb71b9bbf48513421df7211d4ac",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
     "contentHash": "9a63541d41e7eddcb6cc366fb6f77cf7205cef627551c1250fd5cad95516586e",
     "candidates": [
       {
@@ -17339,25 +18915,43 @@
         },
         "method": "visible-text-candidate",
         "adapter": "operator-site",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
         "sourceUrl": "https://nicepilates.studio/price-list-%2F-purchase",
         "autoPublishEligible": false
       }
     ],
     "linkedStorefronts": [
       "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135",
-      "https://momence.com/m/478137"
+      "https://momence.com/m/478137",
+      "https://momence.com/m/309944",
+      "https://momence.com/m/309945",
+      "https://momence.com/m/297392",
+      "https://momence.com/m/309946",
+      "https://momence.com/gcc/41948",
+      "https://momence.com/m/309947",
+      "https://momence.com/m/309948",
+      "https://momence.com/m/309949",
+      "https://momence.com/m/314181",
+      "https://momence.com/m/314177"
     ],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/m/478137": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "c5711d688231ffaf4129eb60b73313d416b4da4374b6a4db783276cb0d63335b",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "0f550dbf5a80f59adf1591f969edee8d535d3132e076cebd7ec4828a6dbbf357",
     "candidates": [],
-    "linkedStorefronts": [],
-    "locationCandidates": []
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/478137"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://sfrecpark.org/facilities/facility/details/Joe-DiMaggio-Playground-249": {
     "status": "fetched",
@@ -17967,8 +19561,8 @@
       "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Apparel",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift+Card",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training+Equipment",
       "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
       "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
       "https://risecombatsf.sites.zenplanner.com/prospect.cfm",
@@ -18270,7 +19864,7 @@
     ],
     "linkedStorefronts": [
       "https://momence.com/Sanchez-Street-Studios/membership/Large-Group-3-Class-Intro-Special/44016",
-      "https://momence.com/m/45705 ",
+      "https://momence.com/m/45705",
       "https://momence.com/m/44132"
     ],
     "locationCandidates": [
@@ -18299,7 +19893,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://momence.com/m/45705 ": {
+  "https://momence.com/m/45705": {
     "status": "fetched",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -19473,7 +21067,7 @@
       "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=178",
       "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=40&prodId=179",
       "https://clients.mindbodyonline.com/classic/ws?studioid=556770&stype=42",
-      "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=556770&sessionChecked=true"
     ],
     "locationCandidates": [
@@ -19741,7 +21335,7 @@
       "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=179",
       "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=40&prodId=180",
       "https://clients.mindbodyonline.com/classic/ws?studioid=286632&stype=42",
-      "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=556770&sessionChecked=true"
     ],
     "locationCandidates": [
@@ -21080,7 +22674,7 @@
     "linkedStorefronts": [
       "https://barmethod.com/locations/san-francisco-fidi/buy/#cs-content",
       "https://barmethod.com/locations/san-francisco-fidi/",
-      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
     ],
     "locationCandidates": []
   },
@@ -21094,7 +22688,7 @@
     "linkedStorefronts": [
       "https://barmethod.com/locations/san-francisco-fidi/schedule/#cs-content",
       "https://barmethod.com/locations/san-francisco-fidi/",
-      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
     ],
     "locationCandidates": []
   },
@@ -21108,7 +22702,7 @@
     "linkedStorefronts": [
       "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154#cs-content",
       "https://barmethod.com/locations/san-francisco-fidi/",
-      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https://stream.barmethod.com/authorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
+      "https://barmethod.marianatek.com/o/authorize?response_type=code&client_id=QV635fnGpYfnu4cSSINEQtLssgjnSRILLVEQhYB9&redirect_uri=https%3A%2F%2Fstream.barmethod.com%2Fauthorize&state=userLogin&code_challenge=challenge&code_challenge_method=plain&prompt=True"
     ],
     "locationCandidates": []
   },
@@ -25709,7 +27303,7 @@
     "contentHash": "7811d0c0d078b6ccbd3318efda250def60971a856eac89590f82a1cb2c2c9755",
     "candidates": [],
     "linkedStorefronts": [
-      "https://marianatek.com/?ref_noscript"
+      "https://marianatek.com/?ref_noscript="
     ],
     "locationCandidates": [
       {
@@ -25748,7 +27342,7 @@
     "contentHash": "7811d0c0d078b6ccbd3318efda250def60971a856eac89590f82a1cb2c2c9755",
     "candidates": [],
     "linkedStorefronts": [
-      "https://marianatek.com/?ref_noscript"
+      "https://marianatek.com/?ref_noscript="
     ],
     "locationCandidates": [
       {
@@ -25787,7 +27381,7 @@
     "contentHash": "7811d0c0d078b6ccbd3318efda250def60971a856eac89590f82a1cb2c2c9755",
     "candidates": [],
     "linkedStorefronts": [
-      "https://marianatek.com/?ref_noscript"
+      "https://marianatek.com/?ref_noscript="
     ],
     "locationCandidates": [
       {
@@ -32038,8 +33632,8 @@
       "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Apparel",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift+Card",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training+Equipment",
       "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
       "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
       "https://risecombatsf.sites.zenplanner.com/prospect.cfm",
@@ -32047,7 +33641,7 @@
     ],
     "locationCandidates": []
   },
-  "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card": {
+  "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift+Card": {
     "status": "fetched",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -32061,8 +33655,8 @@
       "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Apparel",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift+Card",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training+Equipment",
       "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
       "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
       "https://risecombatsf.sites.zenplanner.com/prospect.cfm",
@@ -32070,7 +33664,7 @@
     ],
     "locationCandidates": []
   },
-  "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment": {
+  "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training+Equipment": {
     "status": "fetched",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -32084,8 +33678,8 @@
       "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Apparel",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift+Card",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training+Equipment",
       "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
       "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
       "https://risecombatsf.sites.zenplanner.com/prospect.cfm",
@@ -32149,8 +33743,8 @@
       "https://risecombatsf.sites.zenplanner.com/sign-up-now.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm",
       "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Apparel",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift%20Card",
-      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training%20Equipment",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Gift+Card",
+      "https://risecombatsf.sites.zenplanner.com/retail.cfm?Category=Training+Equipment",
       "https://risecombatsf.sites.zenplanner.com/page.cfm?sectionId=54EC8AC8-2E12-4165-932D-F7F018BD0F53",
       "https://risecombatsf.sites.zenplanner.com/freeTrial.cfm",
       "https://risecombatsf.sites.zenplanner.com/prospect.cfm"
@@ -37093,7 +38687,7 @@
     ],
     "linkedStorefronts": [
       "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-7&sView=day&sLoc=0",
-      "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1"
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F12%2F2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1"
     ],
     "locationCandidates": [
       {
@@ -40983,16 +42577,16 @@
     "linkedStorefronts": [
       "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm",
       "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
-      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026%2D07%2D21&view=MONTH",
-      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026%2D09%2D21&view=MONTH",
+      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-07-21&view=MONTH",
+      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-09-21&view=MONTH",
       "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=",
-      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3A86F67F07%2DD2DF%2D4362%2DA247%2D9E36F6F6AFCE",
-      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3AA3C7AFC1%2D5134%2D41BD%2DB841%2DAAC7DC88C7CE",
+      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3A86F67F07-D2DF-4362-A247-9E36F6F6AFCE",
+      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3AA3C7AFC1-5134-41BD-B841-AAC7DC88C7CE",
       "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=FREETRIAL",
       "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=DROPIN",
       "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=EVENT",
-      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=",
-      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=FF21F6C4%2DF366%2D4F07%2D9ED8%2D3E94A18FB7D1"
+      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=",
+      "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=FF21F6C4-F366-4F07-9ED8-3E94A18FB7D1"
     ],
     "locationCandidates": []
   },
@@ -41046,7 +42640,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026%2D07%2D21&view=MONTH": {
+  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-07-21&view=MONTH": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -41058,7 +42652,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026%2D09%2D21&view=MONTH": {
+  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-09-21&view=MONTH": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -41082,7 +42676,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3A86F67F07%2DD2DF%2D4362%2DA247%2D9E36F6F6AFCE": {
+  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3A86F67F07-D2DF-4362-A247-9E36F6F6AFCE": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -41094,7 +42688,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3AA3C7AFC1%2D5134%2D41BD%2DB841%2DAAC7DC88C7CE": {
+  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?date=2026-08-21&calendarType=APPOINTMENTGROUP%3AA3C7AFC1-5134-41BD-B841-AAC7DC88C7CE": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -42118,7 +43712,7 @@
     "contentHash": "f8a0bf59f6bd25ff837b6e77feaa6f028281941172f5eddf87a34fdfb813b955",
     "candidates": [],
     "linkedStorefronts": [
-      "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership"
+      "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership"
     ],
     "locationCandidates": [
       {
@@ -42440,7 +44034,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=7ACEA035%2D33BD%2D42E4%2DB8E4%2D4F37406EAF0D": {
+  "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=7ACEA035-33BD-42E4-B8E4-4F37406EAF0D": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -42452,7 +44046,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=73ED29A7%2DD296%2D42FE%2D92DE%2D13EC850CAB6B": {
+  "https://fitnessurbano.sites.zenplanner.com/scheduler-calendar.cfm?appointmentTemplateId=38A3C3F6-954B-4A48-A9B8-56CE77AAA82B&locationId=73ED29A7-D296-42FE-92DE-13EC850CAB6B": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -43496,7 +45090,7 @@
       "https://status.wellnessliving.com/",
       "https://www.wellnessliving.com/support-center/",
       "https://community.wellnessliving.com/",
-      "https://www.wellnessliving.com/wp-login.php?saml_sso&r=https%3A%2F%2Fwww.wellnessliving.com%2Fprivacy-policy%2F",
+      "https://www.wellnessliving.com/wp-login.php?saml_sso=&r=https%3A%2F%2Fwww.wellnessliving.com%2Fprivacy-policy%2F",
       "https://www.wellnessliving.com/request-demo-form/",
       "https://www.wellnessliving.com/wp-login.php?action=logout&redirect_to=https%3A%2F%2Fwww.wellnessliving.com%2Fprivacy-policy%2F&_wpnonce=6c3c1b1135",
       "https://www.wellnessliving.com/privacy-policy/#interpretation-and-definitions",
@@ -43546,7 +45140,7 @@
       "https://status.wellnessliving.com/",
       "https://www.wellnessliving.com/support-center/",
       "https://community.wellnessliving.com/",
-      "https://www.wellnessliving.com/wp-login.php?saml_sso&r=https%3A%2F%2Fwww.wellnessliving.com%2Fterms-of-use%2F",
+      "https://www.wellnessliving.com/wp-login.php?saml_sso=&r=https%3A%2F%2Fwww.wellnessliving.com%2Fterms-of-use%2F",
       "https://www.wellnessliving.com/request-demo-form/",
       "https://www.wellnessliving.com/wp-login.php?action=logout&redirect_to=https%3A%2F%2Fwww.wellnessliving.com%2Fterms-of-use%2F&_wpnonce=6c3c1b1135",
       "https://www.wellnessliving.com/",
@@ -45816,7 +47410,6 @@
     "contentHash": "e2d03d37e728bd135f682b8430142bec2aeef63addaf4a993c3ccd0241272865",
     "candidates": [],
     "linkedStorefronts": [
-      "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sessionId=U2Vzc2lvbjplOGZlNTI2Zjk3OGJhMGI0MGNiN2I2YmI5NjAxYzYyOA%3D%3D&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21",
       "https://portal.movementgyms.com/san-francisco/memberships/annual-prepaid-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
       "https://portal.movementgyms.com/san-francisco/memberships/30-day-short-term-membership",
@@ -46791,10 +48384,12 @@
     ]
   },
   "https://nicepilates.studio/": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "575a335e5353a00944238fa82ca2d1f2",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
     "contentHash": "55715d6e9a01133b2108fa9f8156a2b6fb7f48454ce1bfb65c5b55114d97214c",
     "candidates": [],
     "linkedStorefronts": [
@@ -46843,27 +48438,36 @@
         "contentHash": "b7f55c27fc061869c8601e2bdc510f17156128b5bb8b9c5805b7414ee477fe26",
         "autoPublishEligible": false
       }
-    ]
+    ],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/m/776365": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
-    "contentHash": "cd3c4e3ae09d1ac435350a43e6173730231ac0bf2d5f0f05096dcaad5ceeea93",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "4b028214233ee406f8cc664a8358127595630579e34b7baefc033ccad6daa3c1",
     "candidates": [],
-    "linkedStorefronts": [],
-    "locationCandidates": []
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/776365"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://momence.com/u/NICE-Pilates": {
-    "status": "fetched",
+    "status": "network-error",
+    "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
     "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
     "contentHash": "8b40cdcf037edd05db31a8dac6850182ae734a0bfe4f1425a395d8fc09e32c58",
     "candidates": [],
     "linkedStorefronts": [],
-    "locationCandidates": []
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
   },
   "https://onemartialarts.com/san-francisco/": {
     "status": "fetched",
@@ -50089,7 +51693,7 @@
       "https://status.wellnessliving.com/",
       "https://www.wellnessliving.com/support-center/",
       "https://community.wellnessliving.com/",
-      "https://www.wellnessliving.com/wp-login.php?saml_sso&r=https%3A%2F%2Fwww.wellnessliving.com%2Fprivacy-policy%2F",
+      "https://www.wellnessliving.com/wp-login.php?saml_sso=&r=https%3A%2F%2Fwww.wellnessliving.com%2Fprivacy-policy%2F",
       "https://www.wellnessliving.com/request-demo-form/",
       "https://www.wellnessliving.com/wp-login.php?action=logout&redirect_to=https%3A%2F%2Fwww.wellnessliving.com%2Fprivacy-policy%2F&_wpnonce=6c3c1b1135",
       "https://www.wellnessliving.com/privacy-policy/#interpretation-and-definitions",
@@ -50139,7 +51743,7 @@
       "https://status.wellnessliving.com/",
       "https://www.wellnessliving.com/support-center/",
       "https://community.wellnessliving.com/",
-      "https://www.wellnessliving.com/wp-login.php?saml_sso&r=https%3A%2F%2Fwww.wellnessliving.com%2Fterms-of-use%2F",
+      "https://www.wellnessliving.com/wp-login.php?saml_sso=&r=https%3A%2F%2Fwww.wellnessliving.com%2Fterms-of-use%2F",
       "https://www.wellnessliving.com/request-demo-form/",
       "https://www.wellnessliving.com/wp-login.php?action=logout&redirect_to=https%3A%2F%2Fwww.wellnessliving.com%2Fterms-of-use%2F&_wpnonce=6c3c1b1135",
       "https://www.wellnessliving.com/",
@@ -53792,7 +55396,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2f22%2f2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
+  "https://clients.mindbodyonline.com/ASP/su1.asp?studioid=286632&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=1%2F22%2F2024&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1": {
     "status": "fetched",
     "lastAttemptAt": "2026-08-21",
     "etag": "",
@@ -57613,14 +59217,14 @@
       }
     ],
     "linkedStorefronts": [
-      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f15%2f2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+      "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733830&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F15%2F2023&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5747197&stype=-7&sView=week&sLoc=1",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5744727&stype=-7&sView=week&sLoc=1",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=5727345",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5744896&stype=-7&sView=week&sLoc=2",
       "https://clients.mindbodyonline.com/classic/ws?studioid=5743201&stype=-7&sView=week&sLoc=1",
-      "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
-      "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank",
+      "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=5748750",
       "https://clients.mindbodyonline.com/classic/ws?studioid=289199&stype=-7&sView=week&sLoc=1",
       "https://clients.mindbodyonline.com/classic/mainclass?studioid=5733789",
@@ -57668,7 +59272,7 @@
     ],
     "locationCandidates": []
   },
-  "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank": {
+  "https://clients.mindbodyonline.com/classic/ws?studioid=9185&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank": {
     "status": "http-403",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -57680,7 +59284,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0%20target=blank": {
+  "https://clients.mindbodyonline.com/classic/ws?studioid=5741057&stype=-7&sTG=24&sView=week&sLoc=0+target%3Dblank": {
     "status": "fetched",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -57962,7 +59566,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=": {
+  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -57974,7 +59578,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?&locationId=FF21F6C4%2DF366%2D4F07%2D9ED8%2D3E94A18FB7D1": {
+  "https://empirejiujitsuca.sites.zenplanner.com/calendar.cfm?locationId=FF21F6C4-F366-4F07-9ED8-3E94A18FB7D1": {
     "status": "robots-disallowed",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -58255,7 +59859,7 @@
     "linkedStorefronts": [],
     "locationCandidates": []
   },
-  "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73&": {
+  "https://members.purebarre.com/simple-checkout?location=san-francisco-west-portal-ca&offer_id=30-off-your-first-month-9250586d-0df9-435b-adf9-f1b80ef75a73": {
     "status": "fetched",
     "accessBlocker": "",
     "lastAttemptAt": "2026-08-21",
@@ -58621,72 +60225,6 @@
         "evidenceTier": "official-public",
         "exactLocationMatch": "candidate",
         "sourceUrl": "https://members.purebarre.com/api/locations/purebarre-san-francisco-west-portal-ca/package_details/6e8ef8c1-c085-4e38-b57e-f9624bd5fa07",
-        "autoPublishEligible": false
-      }
-    ],
-    "linkedStorefronts": [],
-    "locationCandidates": []
-  },
-  "https://portal.movementgyms.com/graphql-public?sfGymPreview=1&billingInterval=MONTHLY&billingType=RECURRING&clientVersion=1.3.723&enrollmentTypeId=RW5yb2xsbWVudFR5cGU6NDE0NTYyODU%3D&enrollmentTypeName=Primary+Member&facilityId=RmFjaWxpdHk6MTAwMDAwODY%3D&locationSlug=san-francisco&planId=UGxhbjo0MTQ1NjI5Mg%3D%3D&planName=Monthly+Recurring+Membership&sessionId=U2Vzc2lvbjplOGZlNTI2Zjk3OGJhMGI0MGNiN2I2YmI5NjAxYzYyOA%3D%3D&sourcePath=%2Fsan-francisco%2Fmemberships%2Fmonthly-membership&startDate=2026-08-21": {
-    "status": "fetched",
-    "accessBlocker": "",
-    "lastAttemptAt": "2026-08-21",
-    "etag": "",
-    "lastModified": "",
-    "parserVersion": "selected-plan-catalog-v20",
-    "contentHash": "9fdd2e4de5af6672ee4607df0bfd0d55cdef9f1a0ff5f7286dcf9c98c5fbaa44",
-    "candidates": [
-      {
-        "sourceProductId": "UGxhbjo0MTQ1NjI5Mg==",
-        "sourceProductAliases": [
-          "monthly-primary",
-          "monthly-recurring-membership",
-          "monthly-membership"
-        ],
-        "sourceProductIdAuthority": "operator-widget",
-        "name": "Monthly Recurring Membership",
-        "amount": 115.0,
-        "currency": "USD",
-        "cadence": "month",
-        "billingInterval": "month",
-        "intervalCount": 1,
-        "productType": "monthly",
-        "accessScope": "Unlimited climbing, yoga, and fitness access across Movement locations",
-        "scopeType": "multi-location",
-        "classAllowance": {
-          "count": null,
-          "period": "month",
-          "unlimited": true
-        },
-        "eligibility": {
-          "type": "standard-adult",
-          "restrictions": []
-        },
-        "commitment": {
-          "type": "unknown",
-          "minimumMonths": null
-        },
-        "promotion": {
-          "isPromotion": false,
-          "label": ""
-        },
-        "fees": [
-          {
-            "type": "initiation",
-            "name": "Initiation Fee- Individual",
-            "amount": 59.0,
-            "currency": "USD",
-            "cadence": "one-time",
-            "mandatory": true
-          }
-        ],
-        "bestValueLabel": false,
-        "rawLabel": "Monthly Recurring Membership — Monthly Dues $115/month; Initiation Fee- Individual $59",
-        "method": "public-redpoint-preview-query",
-        "adapter": "redpoint",
-        "evidenceTier": "official-public",
-        "exactLocationMatch": "exact-location",
-        "sourceUrl": "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
         "autoPublishEligible": false
       }
     ],
@@ -59535,5 +61073,1981 @@
         "autoPublishEligible": false
       }
     ]
+  },
+  "https://www.joltathletics.com/faq": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "2dd49a8cc3a8b8ecf5304fbe14ae77131f0ac93835764133129180915993d67f",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://www.joltathletics.com/faq#page",
+      "https://joltathleticsappts.as.me/",
+      "https://joltathleticsappts.as.me/schedule/f0d1f69e"
+    ],
+    "locationCandidates": [
+      {
+        "name": "",
+        "address": "",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.joltathletics.com/faq",
+        "method": "json-ld-location",
+        "rawLabel": "| | []",
+        "contentHash": "05c555deb28243492c4d9ce287e2dc1b08a1d540d446656fa3bde269f729ae2e",
+        "autoPublishEligible": false
+      },
+      {
+        "name": "",
+        "address": "1245 Howard St",
+        "latitude": null,
+        "longitude": null,
+        "hours": [],
+        "amenities": [],
+        "sourceUrl": "https://www.joltathletics.com/faq",
+        "method": "visible-address-candidate",
+        "rawLabel": "Visible address: 1245 Howard St",
+        "contentHash": "42804385a4468496325ac111b524fe5bfab0a2a9038ef1c01dd7405e5a16e724",
+        "autoPublishEligible": false
+      }
+    ],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://joltathleticsappts.as.me/schedule/f0d1f69e": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "3c2b00fe370ee688e80ef72dde18b20d3ef5f4ba9e3a40811a92695cb034a7c3",
+    "candidates": [
+      {
+        "sourceProductId": "2236292",
+        "sourceProductAliases": [
+          "12x-figure-skating-off-ice-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "12x Figure Skating Off-Ice Credits",
+        "amount": 450.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "Figure Skating Off-Ice Credits @ 25% discounted rate",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "12x Figure Skating Off-Ice Credits"
+        },
+        "eligibility": {
+          "type": "new-client",
+          "restrictions": [
+            "Promotional or introductory product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "12x Figure Skating Off-Ice Credits — USD 450 — Figure Skating Off-Ice Credits @ 25% discounted rate",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236291",
+        "sourceProductAliases": [
+          "6x-figure-skating-off-ice-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "6x Figure Skating Off-Ice Credits",
+        "amount": 270.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "Figure Skating Off-Ice Credits @ 10% discounted rate",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": true,
+          "label": "6x Figure Skating Off-Ice Credits"
+        },
+        "eligibility": {
+          "type": "new-client",
+          "restrictions": [
+            "Promotional or introductory product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "6x Figure Skating Off-Ice Credits — USD 270 — Figure Skating Off-Ice Credits @ 10% discounted rate",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2171096",
+        "sourceProductAliases": [
+          "6x-shooting-clinic-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "6x Shooting Clinic Credits",
+        "amount": 375.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "12 Credits for shooting clinics @ a 10% discounted rate. Credits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 12.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "6x Shooting Clinic Credits — USD 375 — 12 Credits for shooting clinics @ a 10% discounted rate. Credits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236301",
+        "sourceProductAliases": [
+          "6x-stickhandling-class-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "6x Stickhandling Class Credits",
+        "amount": 270.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "6x Credits for stickhandling class @ a 10% discounted rate\nOr\nRedemption value of $300.\nCredits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "6x Stickhandling Class Credits — USD 270 — 6x Credits for stickhandling class @ a 10% discounted rate\nOr\nRedemption value of $300.\nCredits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236089",
+        "sourceProductAliases": [
+          "12x-shooting-clinic-credit"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "12x Shooting Clinic Credit",
+        "amount": 630.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "class-pack",
+        "accessScope": "12 Credits for Shooting Clinics @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 12.0,
+          "period": "purchase",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "12x Shooting Clinic Credit — USD 630 — 12 Credits for Shooting Clinics @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236303",
+        "sourceProductAliases": [
+          "12x-stickhandling-class-credits"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "12x Stickhandling Class Credits",
+        "amount": 450.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "12x Credits for stickhandling class @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "12x Stickhandling Class Credits — USD 450 — 12x Credits for stickhandling class @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2235696",
+        "sourceProductAliases": [
+          "all-access-hockey-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "All-Access Hockey Membership",
+        "amount": 385.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Have the flexibility to join in during all of our fitness and hockey offerings.\nIf you plan on making Jolt your training destination for at least 3x a week, this membership is meant for you or your athlete.\n\nMembership Benefits:\n- Unlimited age appropriate workout sessions.\n- Unlimited stickhandling classes.\n- Unlimited Shooting Clinic credits\n- Open gym access\n- 10 Hour Shooting lane credits per month, subject to availability.\n- 2 Hockey or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.\nPlease only sign up for classes you mean to attend. Unexcused absences will get three warnings.\nFamilies with more than one account can use the same code to sign up multiple participants as long as the account holds multiple subscriptions.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "All-Access Hockey Membership — USD 385 — $385.00 per month — Have the flexibility to join in during all of our fitness and hockey offerings.\nIf you plan on making Jolt your training destination for at least 3x a week, this membership is meant for you or your athlete.\n\nMembership Benefits:\n- Unlimited age appropriate workout sessions.\n- Unlimited stickhandling classes.\n- Unlimited Shooting Clinic credits\n- Open gym access\n- 10 Hour Shooting lane credits per month, subject to availability.\n- 2 Hoc",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236281",
+        "sourceProductAliases": [
+          "all-access-figure-skating-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "All-Access Figure Skating Membership",
+        "amount": 295.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Use for general Jolt Figure Skating curriculum, excluding invite only classes.\n\nMembership benefits:\n- Unlimited age appropriate strength and conditioning blocks\n- Unlimited general figure skating off-ice classes of an appropriate level. [Excludes invite-only classes]\n- Open gym access\n- 2 Figure Skating or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nOpen gym access- please yield equipment for classes.\nMembership charged as monthly subscription.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "All-Access Figure Skating Membership — USD 295 — $295.00 per month — Use for general Jolt Figure Skating curriculum, excluding invite only classes.\n\nMembership benefits:\n- Unlimited age appropriate strength and conditioning blocks\n- Unlimited general figure skating off-ice classes of an appropriate level. [Excludes invite-only classes]\n- Open gym access\n- 2 Figure Skating or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nOpen gym access- ",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "2236280",
+        "sourceProductAliases": [
+          "unlimited-fitness-membership"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Unlimited Fitness Membership",
+        "amount": 250.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "Have the flexibility to join in during all of our fitness blocks with a preconstructed class program.\n\nMembership Benefits:\n- Unlimited general fitness and athletic training sessions\n- Open gym usage\n- 2 Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": null,
+          "period": "month",
+          "unlimited": true
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "unknown",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Unlimited Fitness Membership — USD 250 — $250.00 per month — Have the flexibility to join in during all of our fitness blocks with a preconstructed class program.\n\nMembership Benefits:\n- Unlimited general fitness and athletic training sessions\n- Open gym usage\n- 2 Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972072",
+        "sourceProductAliases": [
+          "youth-rota-9-12"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Rota 9-12",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Athletic Development",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Rota 9-12 — USD 50 — Athletic Development",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94970495",
+        "sourceProductAliases": [
+          "youth-sbs-c-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth SBS&C 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Athletic Development",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth SBS&C 13+ — USD 50 — Athletic Development",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972021",
+        "sourceProductAliases": [
+          "youth-rota-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Rota 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Athletic Development",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Rota 13+ — USD 50 — Athletic Development",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972041",
+        "sourceProductAliases": [
+          "youth-introoly-14"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth IntroOly 14+",
+        "amount": 65.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth IntroOly 14+ — USD 65 — Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94972099",
+        "sourceProductAliases": [
+          "adult-introoly"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult IntroOly",
+        "amount": 65.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult IntroOly — USD 65 — Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914988",
+        "sourceProductAliases": [
+          "youth-intro-to-off-ice"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Intro to Off-Ice",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Figure Skating Off-Ice",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "Youth Intro to Off-Ice"
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Intro to Off-Ice — USD 50 — Figure Skating Off-Ice",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914997",
+        "sourceProductAliases": [
+          "adult-intro-to-off-ice"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Intro to Off-Ice",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Figure Skating Off-Ice",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": true,
+          "label": "Adult Intro to Off-Ice"
+        },
+        "eligibility": {
+          "type": "new-client",
+          "restrictions": [
+            "Promotional or introductory product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Intro to Off-Ice — USD 50 — Figure Skating Off-Ice",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914736",
+        "sourceProductAliases": [
+          "youth-ltt-5-8"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth LTT 5-8",
+        "amount": 37.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth LTT 5-8 — USD 37 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94914801",
+        "sourceProductAliases": [
+          "youth-gs-c-9-17"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth GS&C 9-17",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth GS&C 9-17 — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94915269",
+        "sourceProductAliases": [
+          "adult-gs-c"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult GS&C",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult GS&C — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94917534",
+        "sourceProductAliases": [
+          "youth-hiit-9-12"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth HIIT 9-12",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth HIIT 9-12 — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94978392",
+        "sourceProductAliases": [
+          "youth-hiit-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth HIIT 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth HIIT 13+ — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94917547",
+        "sourceProductAliases": [
+          "adult-hiit"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult HIIT",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General Fitness",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult HIIT — USD 50 — General Fitness",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94917480",
+        "sourceProductAliases": [
+          "adult-imob"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult IMOB",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult IMOB — USD 50 — Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94971893",
+        "sourceProductAliases": [
+          "youth-imob-13"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth IMOB 13+",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth IMOB 13+ — USD 50 — Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90303905",
+        "sourceProductAliases": [
+          "youth-beginner-novice-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Beginner/Novice Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Beginner/Novice Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90303760",
+        "sourceProductAliases": [
+          "youth-intermediate-advanced-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Intermediate/Advanced Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Intermediate/Advanced Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90302516",
+        "sourceProductAliases": [
+          "adult-beginner-novice-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Beginner/Novice Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Beginner/Novice Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94979211",
+        "sourceProductAliases": [
+          "adult-mixed-skill-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Mixed Skill Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Mixed Skill Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "90308568",
+        "sourceProductAliases": [
+          "adult-intermediate-shooting-clinic"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Intermediate Shooting Clinic",
+        "amount": 70.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Shooting Clinics",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Intermediate Shooting Clinic — USD 70 — Shooting Clinics",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "84507969",
+        "sourceProductAliases": [
+          "shooting-lane-booking"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Shooting Lane Booking",
+        "amount": 25.0,
+        "currency": "USD",
+        "cadence": "one-time",
+        "billingInterval": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "accessScope": "You just needed a place to rip those! We got you covered!\n\nLane allows up to 2 shooters at a time.",
+        "scopeType": "operator-storefront",
+        "classAllowance": null,
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Shooting Lane Booking — USD 25 — You just needed a place to rip those! We got you covered!\n\nLane allows up to 2 shooters at a time.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94890910",
+        "sourceProductAliases": [
+          "youth-beginner-novice-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Beginner/Novice Stick Skills",
+        "amount": 37.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General age group is 6-10 but skill level will be prioritize over age group.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Beginner/Novice Stick Skills — USD 37 — General age group is 6-10 but skill level will be prioritize over age group.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891036",
+        "sourceProductAliases": [
+          "youth-intermediate-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Intermediate Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General age group is 9-14 but skill level will be prioritize over age group.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Intermediate Stick Skills — USD 50 — General age group is 9-14 but skill level will be prioritize over age group.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891076",
+        "sourceProductAliases": [
+          "youth-advanced-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Youth Advanced Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "General age group is 13+ but skill level will be prioritize over age group.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "youth",
+          "restrictions": [
+            "Youth product"
+          ]
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": false,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Youth Advanced Stick Skills — USD 50 — General age group is 13+ but skill level will be prioritize over age group.",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891294",
+        "sourceProductAliases": [
+          "adult-beginner-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Beginner Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Stickhandling Classes",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Beginner Stick Skills — USD 50 — Stickhandling Classes",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      },
+      {
+        "sourceProductId": "94891315",
+        "sourceProductAliases": [
+          "adult-mix-level-stick-skills"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "Adult Mix Level Stick Skills",
+        "amount": 50.0,
+        "currency": "USD",
+        "cadence": "visit",
+        "billingInterval": "visit",
+        "intervalCount": 1,
+        "productType": "drop-in",
+        "accessScope": "Stickhandling Classes",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 1.0,
+          "period": "visit",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "none",
+          "minimumMonths": null
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "Adult Mix Level Stick Skills — USD 50 — Stickhandling Classes",
+        "method": "public-acuity-embedded-business",
+        "adapter": "acuity",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/309944": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "3ebe9cfce36a987a9a6957aa5084abbcdbe695c74625dd1e5138ffa24a8acfe5",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/309944"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/309945": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "2065d26ab7ad0448d470397576273b5ecb8f00be6af42aa5b892a9090585c038",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/309945"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/297392": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "338aa29b70643207649585e0be2f99849643019284db8cd5845f00da26599ddb",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/297392"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/309946": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "fb7e1f459bf85782b212f08a276ae055bc2672b2ef4e36c4559141fcc1c234e4",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/309946"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/gcc/41948": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "ecad87b96b081bac316bb300c57891f7807843fcaff3ac71c7219983abf0e8f9",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/309947": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "5da3bcb5dff0d51976a92e7b3f2273d788525fe51ebd93c00b4370a9cab3f8da",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/309947"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/309948": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "0780b0a3c2ced132f3d0821be4a09bb1e0fbb125a327e19b738f2e65eeea0066",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/309948"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/309949": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "af68de57e71b78cd399104e2478664d46fec3659d20e4c3d162af527cb519cb3",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/309949"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/314181": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "0983401f7337cdfe46d16351afb14871150aa63a94592d361ac8618815874897",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/314181"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/m/314177": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "d9d0fd033c544ee8e6c40d52bcdd6251d2f0d29f33b00006e3d43c950ce80e06",
+    "candidates": [],
+    "linkedStorefronts": [
+      "https://momence.com/_api/primary/plugin/memberships/314177"
+    ],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/478135": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"4da3-d5rRkOLTd/GHj3DDUex4y5Y38BM\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "bfa84158361b216ab21b9d95c7b60538ebfa914ff86d63b4cbc5d21dfbc8262a",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/478137": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"4bc6-5xJDrxISD4hZlmzrdojhZx7t3tI\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "9c4007033f0e75987020a42052f442c63daef04f09680418b54a22e47584aa61",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/309944": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"4933-QVH/YNCk/0lLAOKuJwquFr/FA2Y\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "72b0668d5b616e12f93ebe70889c36df20fd1dbe61d869965f7bb7bd27e98767",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/309945": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"4936-Rc/Tph05w+6XFnHWlArFKjibfbE\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "0c69c781eaf33bdb4115bff9265073b9f8379f83145abb928564da91d0a0f351",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/297392": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"49b0-NEjBn4D1OGMh/6SXYfSWdNsbVIE\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "5567e0b8c85aa4948c939b284b7ba6539aef3a511bae0ba4d9638575512febe1",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/309946": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"493a-zVbSBQHJqQTmLyyvPQjl48fKyHU\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "7db3c200a35437cfcea188c3bc1a70c17ca1ec2315c2725f1a272b6497757eca",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/309947": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"4954-5zyPUyvRHRTQ8sSFtkSGqQIW4Yg\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "612c2c0a5850ed228bd0717d644f6a7b3052675d6a622b621c151f5995ae6dcc",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/309948": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"4953-5WyQhXQKZt2le+1OW0WQ8IqSpLc\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "aeb7a0c4d273ffe60502ae6f5894a313e9389efd053652f9c0c684d5dc798a47",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/309949": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"499d-GfdaJTiKSCV0yHoFmHmAsqqrHZ8\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "8d4ef4cc578bfa358d9d67ff8d28aa472442ee1367ffce6ad388263973c5e441",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/314181": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"49fa-i7Y6OOMP/oumQSAxel6a14rv/f0\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "6de0f08d6ad8b6ebfaf96fdeedfafebeb5983ff48c5d2730a371c46dca4f0dd7",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/314177": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"49a7-xh3o/VOViGUZ+yBObH7Hk5ImSD8\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "cc04c96f5cdd69f05cbbdf4ac564ea72b0bb59d4621c1ebb282747d811ff9be5",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/_api/primary/plugin/memberships/776365": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "W/\"5be9-9V1Ie0sTLbUzMMd/IyieE/D8DgE\"",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v23",
+    "contentHash": "3cc39e21917cd623b5c4ac144d05dda6a9b4d200f2d5105e9a1c6c78a343fc81",
+    "candidates": [
+      {
+        "sourceProductId": "776365",
+        "sourceProductAliases": [
+          "the-work",
+          "momence-776365"
+        ],
+        "sourceProductIdAuthority": "operator-widget",
+        "name": "The Work",
+        "amount": 375.0,
+        "currency": "USD",
+        "cadence": "month",
+        "billingInterval": "month",
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": "A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+        "scopeType": "operator-storefront",
+        "classAllowance": {
+          "count": 12.0,
+          "period": "month",
+          "unlimited": false
+        },
+        "promotion": {
+          "isPromotion": false,
+          "label": ""
+        },
+        "eligibility": {
+          "type": "standard-adult",
+          "restrictions": []
+        },
+        "commitment": {
+          "type": "fixed-term",
+          "minimumMonths": 3
+        },
+        "fees": [],
+        "ordinaryUse": true,
+        "bestValueLabel": false,
+        "purchaseMethod": "direct-public",
+        "rawLabel": "The Work — USD 375 every 1 months — 3 minimum renewals — A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+        "method": "public-momence-membership-api",
+        "adapter": "momence",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/776365",
+        "autoPublishEligible": false
+      }
+    ],
+    "linkedStorefronts": [],
+    "locationCandidates": [],
+    "lastSuccessfulAt": "2026-08-21"
+  },
+  "https://momence.com/NICE-Pilates/membership/The-Work/776365": {
+    "status": "network-error",
+    "accessBlocker": "",
+    "lastAttemptAt": "2026-08-21",
+    "etag": "",
+    "lastModified": "",
+    "parserVersion": "selected-plan-catalog-v24",
+    "contentHash": "",
+    "candidates": [],
+    "linkedStorefronts": [],
+    "locationCandidates": []
   }
 }

@@ -44,7 +44,7 @@ DEAL_REPORT_PATH = ROOT / "data" / "imports" / "deal-report.json"
 RENDERED_OBSERVATIONS_PATH = ROOT / "data" / "imports" / "rendered-crawl-observations.json"
 OPERATOR_DOCUMENT_CANDIDATES_PATH = ROOT / "data" / "imports" / "operator-document-candidates.json"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
-PARSER_VERSION = "selected-plan-catalog-v21"
+PARSER_VERSION = "selected-plan-catalog-v24"
 MAX_RESPONSE_BYTES = 4_000_000
 DOMAIN_DELAY_SECONDS = 1.5
 MAX_DOMAIN_429S = 2
@@ -54,6 +54,22 @@ MAX_LINK_DEPTH = 3
 MAX_OPERATOR_LINK_DEPTH = 2
 MAX_OPERATOR_REQUESTS_PER_GYM = 12
 MAX_REVIEWED_SEED_URLS = 8
+SENSITIVE_PERSISTED_QUERY_PARAMS = frozenset({
+    "access_token",
+    "authorization",
+    "client_secret",
+    "code",
+    "cookie",
+    "csrf",
+    "csrf_token",
+    "password",
+    "refresh_token",
+    "secret",
+    "session",
+    "session_id",
+    "sessionid",
+    "token",
+})
 
 BOOKING_DOMAINS = {
     "clients.mindbodyonline.com",
@@ -159,6 +175,15 @@ SOULCYCLE_HOSTS = {"soul-cycle.com", "www.soul-cycle.com"}
 SOULCYCLE_SERIES_PATH = "/series/"
 SOULCYCLE_SERIES_API_RE = re.compile(
     r"^/series/json/(?P<region_id>\d{1,4})/?$",
+    re.IGNORECASE,
+)
+ACUITY_BUSINESS_ASSIGN_RE = re.compile(r"\bvar\s+BUSINESS\s*=\s*", re.IGNORECASE)
+MOMENCE_MEMBERSHIP_PAGE_RE = re.compile(
+    r"^/(?:m|[^/]+/membership/[^/]+)/(\d{1,12})/?$",
+    re.IGNORECASE,
+)
+MOMENCE_MEMBERSHIP_API_RE = re.compile(
+    r"^/_api/primary/plugin/memberships/(\d{1,12})/?$",
     re.IGNORECASE,
 )
 
@@ -299,6 +324,76 @@ class SoulCyclePackParser(HTMLParser):
 
 def text(value: Any) -> str:
     return str(value).strip() if value is not None else ""
+
+
+def url_has_sensitive_query(value: Any) -> bool:
+    """Return whether an HTTP URL contains transient credential-like state."""
+
+    url = text(value)
+    if not url:
+        return False
+    try:
+        parsed = urlparse(url)
+    except ValueError:
+        return False
+    if parsed.scheme.casefold() not in {"http", "https"}:
+        return False
+    return any(
+        key.casefold() in SENSITIVE_PERSISTED_QUERY_PARAMS
+        for key, _value in parse_qsl(parsed.query, keep_blank_values=True)
+    )
+
+
+def redact_persisted_url(value: Any) -> str:
+    """Remove session/token query parameters from committed audit URLs."""
+
+    url = text(value)
+    if not url:
+        return ""
+    if not url_has_sensitive_query(url):
+        return url
+    try:
+        parsed = urlparse(url)
+    except ValueError:
+        return url
+    if parsed.scheme.casefold() not in {"http", "https"} or not parsed.query:
+        return url
+    retained = [
+        (key, item)
+        for key, item in parse_qsl(parsed.query, keep_blank_values=True)
+        if key.casefold() not in SENSITIVE_PERSISTED_QUERY_PARAMS
+    ]
+    return parsed._replace(query=urlencode(retained, doseq=True)).geturl()
+
+
+def sanitize_persisted_value(value: Any) -> Any:
+    """Recursively redact transient query state without retaining raw secrets."""
+
+    if isinstance(value, dict):
+        return {key: sanitize_persisted_value(item) for key, item in value.items()}
+    if isinstance(value, list):
+        return [sanitize_persisted_value(item) for item in value]
+    if isinstance(value, str) and value.casefold().startswith(("http://", "https://")):
+        return redact_persisted_url(value)
+    return value
+
+
+def cache_for_persistence(cache: dict[str, Any]) -> dict[str, Any]:
+    """Drop transient request entries and links before committing crawl cache."""
+
+    persisted: dict[str, Any] = {}
+    for url, entry in cache.items():
+        if url_has_sensitive_query(url):
+            continue
+        cleaned = sanitize_persisted_value(entry)
+        if isinstance(entry, dict) and isinstance(entry.get("linkedStorefronts"), list):
+            cleaned["linkedStorefronts"] = [
+                redact_persisted_url(item)
+                for item in entry["linkedStorefronts"]
+                if not url_has_sensitive_query(item)
+            ]
+        persisted[redact_persisted_url(url)] = cleaned
+    return persisted
 
 
 def normalized_label(value: str) -> str:
@@ -3233,6 +3328,58 @@ def soulcycle_series_candidates(payload: Any, source_url: str) -> list[dict[str,
     return deduplicate_candidates(candidates)
 
 
+def acuity_embedded_business_candidates(html: str, source_url: str) -> list[dict[str, Any]]:
+    """Parse only Acuity's public ``BUSINESS`` bootstrap object.
+
+    The surrounding inline script also contains session and CAPTCHA variables.
+    Using ``JSONDecoder.raw_decode`` at the reviewed assignment boundary keeps
+    those values out of observations and committed cache artifacts.
+    """
+
+    if platform_adapters.platform_for_url(source_url) != "acuity" or not text(html):
+        return []
+    decoder = json.JSONDecoder()
+    for match in ACUITY_BUSINESS_ASSIGN_RE.finditer(html):
+        remainder = html[match.end():].lstrip()
+        if not remainder.startswith("{"):
+            continue
+        try:
+            payload, _end = decoder.raw_decode(remainder)
+        except json.JSONDecodeError:
+            continue
+        candidates = platform_adapters.acuity_business_candidates(payload, source_url)
+        if candidates:
+            return candidates
+    return []
+
+
+def momence_membership_api_route(source_url: str) -> str:
+    """Derive Momence's anonymous read-only membership endpoint."""
+
+    try:
+        parsed = urlparse(text(source_url))
+    except ValueError:
+        return ""
+    if parsed.scheme.casefold() != "https" or parsed.netloc.casefold() not in {"momence.com", "www.momence.com"}:
+        return ""
+    match = MOMENCE_MEMBERSHIP_PAGE_RE.fullmatch(unquote(parsed.path))
+    if not match:
+        return ""
+    return f"https://momence.com/_api/primary/plugin/memberships/{match.group(1)}"
+
+
+def is_momence_membership_api_url(source_url: str) -> bool:
+    try:
+        parsed = urlparse(text(source_url))
+    except ValueError:
+        return False
+    return bool(
+        parsed.scheme.casefold() == "https"
+        and parsed.netloc.casefold() in {"momence.com", "www.momence.com"}
+        and MOMENCE_MEMBERSHIP_API_RE.fullmatch(parsed.path)
+    )
+
+
 def public_platform_json_candidates(
     payload: Any,
     source_url: str,
@@ -3252,6 +3399,8 @@ def public_platform_json_candidates(
         return bay_club_public_api_candidates(payload, source_url, gym)
     if is_soulcycle_series_api_url(source_url):
         return soulcycle_series_candidates(payload, source_url), []
+    if is_momence_membership_api_url(source_url):
+        return platform_adapters.momence_membership_api_candidates(payload, source_url), []
     platform = platform_name(source_url)
     if platform == "mariana-tek":
         return mariana_buy_page_candidates(payload if isinstance(payload, dict) else {}, source_url), []
@@ -4320,12 +4469,16 @@ def parse_page(
     candidates.extend(visible_page_candidates)
     candidates.extend(bounded_candidates)
     candidates.extend(embedded_operator_candidates(html, source_url))
+    candidates.extend(acuity_embedded_business_candidates(html, source_url))
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
     stores: list[str] = []
     stores.extend(equinox_membership_catalog_routes(parser.hydration_json, source_url))
     stores.extend(bay_club_catalog_routes(source_url, gym))
     stores.extend(soulcycle_series_catalog_routes(html, source_url, gym))
+    momence_api = momence_membership_api_route(source_url)
+    if momence_api:
+        stores.append(momence_api)
     redpoint_preview = redpoint_preview_route(html, source_url)
     if redpoint_preview:
         stores.append(redpoint_preview)
@@ -4595,6 +4748,28 @@ def merge_crawl_observations(
         if text(item.get("gymId")) not in crawled_gym_ids
         or text(item.get("gymId")) in retain_ids
     ] + current
+    # A reviewed operator page and its explicit priceSourceUrl can both lead
+    # to the same redirected booking page. Preserve that provenance in the
+    # attempt log, but keep only one semantic product observation so catalog
+    # counts and deal candidates do not double. Prefer the discovery path on
+    # the same booking host as the evidence itself.
+    deduplicated: dict[str, dict[str, Any]] = {}
+    for item in combined:
+        identity = json.dumps(
+            {key: value for key, value in item.items() if key != "catalogSourceUrl"},
+            sort_keys=True,
+            ensure_ascii=False,
+            separators=(",", ":"),
+        )
+        incumbent = deduplicated.get(identity)
+        if incumbent is None:
+            deduplicated[identity] = item
+            continue
+        item_same_host = hostname(text(item.get("catalogSourceUrl"))) == hostname(text(item.get("sourceUrl")))
+        incumbent_same_host = hostname(text(incumbent.get("catalogSourceUrl"))) == hostname(text(incumbent.get("sourceUrl")))
+        if item_same_host and not incumbent_same_host:
+            deduplicated[identity] = item
+    combined = list(deduplicated.values())
     combined.sort(
         key=lambda item: (
             text(item.get("gymId")), text(item.get("sourceUrl")), text(item.get("kind")),
@@ -5457,11 +5632,11 @@ def main() -> int:
             if DEAL_OBSERVATIONS_PATH.exists()
             else {"deals": []}
         )
-        save_json(ATTEMPTS_PATH, {
+        save_json(ATTEMPTS_PATH, sanitize_persisted_value({
             "generatedAt": text(existing_attempts_document.get("generatedAt")) or today.date().isoformat(),
             "mode": text(existing_attempts_document.get("mode")) or args.mode,
             "attempts": attempts,
-        })
+        }))
         print(json.dumps({
             "candidateGyms": 0,
             "logicalRequests": 0,
@@ -5479,10 +5654,16 @@ def main() -> int:
         crawled_gym_ids,
         run_attempts,
     )
-    save_json(CACHE_PATH, cache)
-    save_json(ATTEMPTS_PATH, {"generatedAt": today.date().isoformat(), "mode": args.mode, "attempts": attempts})
-    save_json(OBSERVATIONS_PATH, {"generatedAt": today.date().isoformat(), "observations": observations})
-    save_json(LOCATION_OBSERVATIONS_PATH, {"generatedAt": today.date().isoformat(), "observations": location_observations})
+    save_json(CACHE_PATH, cache_for_persistence(cache))
+    save_json(ATTEMPTS_PATH, sanitize_persisted_value({
+        "generatedAt": today.date().isoformat(), "mode": args.mode, "attempts": attempts,
+    }))
+    save_json(OBSERVATIONS_PATH, sanitize_persisted_value({
+        "generatedAt": today.date().isoformat(), "observations": observations,
+    }))
+    save_json(LOCATION_OBSERVATIONS_PATH, sanitize_persisted_value({
+        "generatedAt": today.date().isoformat(), "observations": location_observations,
+    }))
     eligible_deal_ids = {
         text(gym.get("id")) for gym in document.get("gyms", []) if deal_eligible_gym(gym)
     }
@@ -5490,7 +5671,9 @@ def main() -> int:
         observations + load_rendered_deal_observations(),
         eligible_deal_ids,
     )
-    save_json(DEAL_OBSERVATIONS_PATH, {"generatedAt": today.date().isoformat(), "mode": args.mode, "deals": deals})
+    save_json(DEAL_OBSERVATIONS_PATH, sanitize_persisted_value({
+        "generatedAt": today.date().isoformat(), "mode": args.mode, "deals": deals,
+    }))
     save_json(DEAL_REPORT_PATH, {
         "generatedAt": today.date().isoformat(),
         "mode": args.mode,

@@ -1,0 +1,20 @@
+{
+  "id": 776365,
+  "type": "subscription",
+  "subscriptionType": "absolute",
+  "name": "The Work",
+  "hostName": "NICE Pilates",
+  "price": 375,
+  "duration": 1,
+  "durationUnit": "months",
+  "freeTrial": false,
+  "paidTrialAmount": 0,
+  "numberOfEvents": null,
+  "autoRenew": true,
+  "description": "A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+  "currency": "usd",
+  "minimumAutoRenews": 3,
+  "joiningFeeInCurrency": null,
+  "hasAccessRestrictions": false,
+  "isRestrictedByAge": false
+}

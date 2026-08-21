@@ -74,6 +74,51 @@ class PlatformAdapterTests(unittest.TestCase):
         candidate = adapters.extract_candidates(fixture["payload"], fixture["url"])[0]
         self.assertEqual(candidate["amount"], 129)
 
+    def test_acuity_business_catalog_keeps_subscriptions_and_class_restrictions(self) -> None:
+        payload = {
+            "ownerKey": "public-owner",
+            "name": "Public Fitness Studio",
+            "currencyAbbreviation": "USD",
+            "products": {"Memberships": [{
+                "id": 10,
+                "title": "Unlimited Fitness Membership",
+                "description": "Unlimited fitness classes and open gym.",
+                "price": 250,
+                "isSubscription": True,
+                "subscriptionTermsText": "$250.00 per month",
+            }]},
+            "appointmentTypes": {"General Fitness": [{
+                "id": 20,
+                "name": "Adult Strength Class",
+                "active": True,
+                "price": "50.00",
+                "type": "class",
+                "private": False,
+                "classSize": 10,
+            }, {
+                "id": 21,
+                "name": "Youth Strength Class",
+                "active": True,
+                "price": "45.00",
+                "type": "class",
+                "private": False,
+                "classSize": 10,
+            }]},
+        }
+
+        candidates = adapters.acuity_business_candidates(payload, "https://studio.as.me/schedule/public-owner")
+
+        membership = next(item for item in candidates if item["sourceProductId"] == "10")
+        adult = next(item for item in candidates if item["sourceProductId"] == "20")
+        youth = next(item for item in candidates if item["sourceProductId"] == "21")
+        self.assertEqual((membership["amount"], membership["cadence"], membership["productType"]), (250, "month", "monthly"))
+        self.assertTrue(membership["classAllowance"]["unlimited"])
+        self.assertEqual((adult["productType"], adult["ordinaryUse"]), ("drop-in", True))
+        self.assertEqual(youth["eligibility"], {"type": "youth", "restrictions": ["Youth product"]})
+        self.assertFalse(youth["ordinaryUse"])
+        self.assertTrue(all(item["method"] == "public-acuity-embedded-business" for item in candidates))
+        self.assertEqual(adapters.acuity_business_candidates(payload, "https://example.com/schedule"), [])
+
     def test_jane_personal_training_card_is_exact_but_trainer_required(self) -> None:
         fixture = self.rendered_fixtures["janePersonalTraining"]
         candidates = adapters.jane_service_card_candidates(
@@ -118,6 +163,41 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertEqual(candidates[0]["commitment"]["type"], "month-to-month")
         self.assertEqual(candidates[0]["fees"], [])
         self.assertFalse(candidates[0]["autoPublishEligible"])
+
+    def test_momence_membership_uses_base_price_not_card_checkout_total(self) -> None:
+        fixture = self.rendered_fixtures["momenceMembership"]
+
+        candidates = adapters.momence_membership_card_candidates(
+            fixture["visibleText"], fixture["url"], fixture["pageTitle"],
+        )
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["sourceProductId"], candidate["name"]), ("776365", "The Work"))
+        self.assertEqual((candidate["amount"], candidate["cadence"]), (375, "month"))
+        self.assertEqual(candidate["classAllowance"], {"count": 12.0, "period": "month", "unlimited": False})
+        self.assertEqual(candidate["commitment"], {"type": "fixed-term", "minimumMonths": 3})
+        self.assertEqual(candidate["fees"], [])
+        self.assertNotIn("390.37", candidate["rawLabel"])
+        self.assertNotIn("15.37", candidate["rawLabel"])
+        self.assertFalse(candidate["autoPublishEligible"])
+
+    def test_momence_public_api_preserves_allowance_term_and_no_inferred_fee(self) -> None:
+        fixture = Path(__file__).with_name("fixtures") / "momence-membership.json"
+        payload = json.loads(fixture.read_text(encoding="utf-8"))
+        source = "https://momence.com/_api/primary/plugin/memberships/776365"
+
+        candidates = adapters.momence_membership_api_candidates(payload, source)
+
+        self.assertEqual(len(candidates), 1)
+        candidate = candidates[0]
+        self.assertEqual((candidate["sourceProductId"], candidate["name"]), ("776365", "The Work"))
+        self.assertEqual((candidate["amount"], candidate["cadence"]), (375, "month"))
+        self.assertEqual(candidate["classAllowance"], {"count": 12.0, "period": "month", "unlimited": False})
+        self.assertEqual(candidate["commitment"], {"type": "fixed-term", "minimumMonths": 3})
+        self.assertEqual(candidate["fees"], [])
+        self.assertEqual(candidate["method"], "public-momence-membership-api")
+        self.assertFalse(candidate["autoPublishEligible"])
 
 
 if __name__ == "__main__":

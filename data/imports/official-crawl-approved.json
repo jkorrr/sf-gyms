@@ -927,52 +927,53 @@
     },
     {
       "gymId": "osm-node-11384826394",
-      "monthlyPrice": 330,
-      "dayPassPrice": 40,
-      "priceSource": "NICE Pilates official price page and operator-owned Momence product",
-      "priceSourceUrl": "https://nicepilates.studio/price-list-%2F-purchase",
-      "priceObservedAt": "2026-08-19",
-      "priceNote": "The official price list and operator-owned Momence product agree on a recurring ten-visit monthly subscription at $330; unused visits may roll for one month. Older home-page copy referring to up to twelve classes conflicts with the current named product allowance, so the product page controls. The standard drop-in is $40.",
+      "monthlyPrice": 375,
+      "dayPassPrice": 42,
+      "priceSource": "NICE Pilates official price list and public Momence membership API",
+      "priceSourceUrl": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current operator-linked Momence product is The Work at $375 per month for up to twelve in-person classes, unlimited on-demand access, and unlimited InBody scans. Its public API and contract specify a three-consecutive-month minimum for memberships beginning on or after August 12, 2026; unused credits may roll through one future cycle. The official price list now shows a $42 standard drop-in. Card checkout adds an optional $15.37 processing charge while ACH displays $0, so no mandatory fee is recorded.",
       "planOffers": [
         {
-          "sourceProductId": "momence-309951",
-          "name": "Monthly Subscription",
-          "accessScope": "Ten group classes monthly at NICE Pilates",
-          "classAllowance": 10,
-          "amount": 330,
+          "sourceProductId": "776365",
+          "name": "The Work",
+          "accessScope": "Up to twelve in-person classes monthly, unlimited on-demand access, and unlimited InBody scans at NICE Pilates",
+          "classAllowance": 12,
+          "amount": 375,
           "billingInterval": "month",
-          "commitmentType": "unknown",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
           "fees": []
         },
         {
           "sourceProductId": "three-pack",
-          "name": "Three-Class Pack",
+          "name": "Flow: Three-Class Pack",
           "productType": "class-pack",
           "accessScope": "Three non-recurring group classes",
           "classAllowance": 3,
-          "amount": 105,
+          "amount": 110,
           "billingInterval": "one-time",
           "commitmentType": "none",
           "fees": []
         },
         {
           "sourceProductId": "five-pack",
-          "name": "Five-Class Pack",
+          "name": "NICE Gives Back Five-Class Pack",
           "productType": "class-pack",
           "accessScope": "Five non-recurring group classes",
           "classAllowance": 5,
-          "amount": 175,
+          "amount": 183,
           "billingInterval": "one-time",
           "commitmentType": "none",
           "fees": []
         },
         {
           "sourceProductId": "fifteen-pack",
-          "name": "Fifteen-Class Pack",
+          "name": "Breath: Fifteen-Class Pack",
           "productType": "class-pack",
           "accessScope": "Fifteen non-recurring group classes",
           "classAllowance": 15,
-          "amount": 510,
+          "amount": 535,
           "billingInterval": "one-time",
           "commitmentType": "none",
           "fees": []
@@ -996,8 +997,8 @@
       "dropInOffers": [
         {
           "sourceProductId": "drop-in",
-          "name": "Drop-In",
-          "amount": 40
+          "name": "Single Class Drop-In",
+          "amount": 42
         }
       ]
     },

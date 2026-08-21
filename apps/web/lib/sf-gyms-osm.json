@@ -67675,8 +67675,8 @@
       "gymType": "Fitness centre",
       "latitude": 37.7804022,
       "longitude": -122.4738295,
-      "monthlyPrice": 330.0,
-      "dayPassPrice": 40.0,
+      "monthlyPrice": 375.0,
+      "dayPassPrice": 42.0,
       "freshness": "verified",
       "isOpen247": false,
       "amenities": [
@@ -67690,7 +67690,7 @@
         "gentle and clinical-modification Pilates",
         "prenatal Pilates"
       ],
-      "description": "NICE Pilates is a Pilates, Lagree, or barre fitness studio in San Francisco. The selected official recurring plan is $330.00 per month. Listed features include Classical Pilates on classical multi-apparatus equipment, classes with a maximum of five participants, 50-minute classes.",
+      "description": "NICE Pilates is a Pilates, Lagree, or barre fitness studio in San Francisco. The selected official recurring plan is $375.00 per month. Listed features include Classical Pilates on classical multi-apparatus equipment, classes with a maximum of five participants, 50-minute classes.",
       "hours": "Weekly class schedule varies; private appointments are scheduled separately.",
       "websiteUrl": "https://nicepilates.studio/price-list-%2F-purchase",
       "sourceName": "OpenStreetMap",
@@ -67719,50 +67719,51 @@
           "method": "reviewed-json-ld-location"
         }
       ],
-      "priceSource": "NICE Pilates official price page and operator-owned Momence product",
-      "priceSourceUrl": "https://nicepilates.studio/price-list-%2F-purchase",
-      "priceObservedAt": "2026-08-19",
-      "priceNote": "The official price list and operator-owned Momence product agree on a recurring ten-visit monthly subscription at $330; unused visits may roll for one month. Older home-page copy referring to up to twelve classes conflicts with the current named product allowance, so the product page controls. The standard drop-in is $40.",
+      "priceSource": "NICE Pilates official price list and public Momence membership API",
+      "priceSourceUrl": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current operator-linked Momence product is The Work at $375 per month for up to twelve in-person classes, unlimited on-demand access, and unlimited InBody scans. Its public API and contract specify a three-consecutive-month minimum for memberships beginning on or after August 12, 2026; unused credits may roll through one future cycle. The official price list now shows a $42 standard drop-in. Card checkout adds an optional $15.37 processing charge while ACH displays $0, so no mandatory fee is recorded.",
       "planOffers": [
         {
-          "sourceProductId": "momence-309951",
-          "name": "Monthly Subscription",
-          "accessScope": "Ten group classes monthly at NICE Pilates",
-          "classAllowance": 10,
-          "amount": 330,
+          "sourceProductId": "776365",
+          "name": "The Work",
+          "accessScope": "Up to twelve in-person classes monthly, unlimited on-demand access, and unlimited InBody scans at NICE Pilates",
+          "classAllowance": 12,
+          "amount": 375,
           "billingInterval": "month",
-          "commitmentType": "unknown",
+          "commitmentType": "minimum-term",
+          "minimumCommitmentMonths": 3,
           "fees": []
         },
         {
           "sourceProductId": "three-pack",
-          "name": "Three-Class Pack",
+          "name": "Flow: Three-Class Pack",
           "productType": "class-pack",
           "accessScope": "Three non-recurring group classes",
           "classAllowance": 3,
-          "amount": 105,
+          "amount": 110,
           "billingInterval": "one-time",
           "commitmentType": "none",
           "fees": []
         },
         {
           "sourceProductId": "five-pack",
-          "name": "Five-Class Pack",
+          "name": "NICE Gives Back Five-Class Pack",
           "productType": "class-pack",
           "accessScope": "Five non-recurring group classes",
           "classAllowance": 5,
-          "amount": 175,
+          "amount": 183,
           "billingInterval": "one-time",
           "commitmentType": "none",
           "fees": []
         },
         {
           "sourceProductId": "fifteen-pack",
-          "name": "Fifteen-Class Pack",
+          "name": "Breath: Fifteen-Class Pack",
           "productType": "class-pack",
           "accessScope": "Fifteen non-recurring group classes",
           "classAllowance": 15,
-          "amount": 510,
+          "amount": 535,
           "billingInterval": "one-time",
           "commitmentType": "none",
           "fees": []
@@ -67786,8 +67787,8 @@
       "dropInOffers": [
         {
           "sourceProductId": "drop-in",
-          "name": "Drop-In",
-          "amount": 40
+          "name": "Single Class Drop-In",
+          "amount": 42
         }
       ],
       "priceReports": [],
@@ -67801,31 +67802,31 @@
       "selectionRuleVersion": "neutral-basic-v2",
       "plans": [
         {
-          "id": "osm-node-11384826394:plan:momence-309951",
-          "sourceProductId": "momence-309951",
-          "name": "Monthly Subscription",
+          "id": "osm-node-11384826394:plan:776365",
+          "sourceProductId": "776365",
+          "name": "The Work",
           "productType": "class-membership",
-          "accessScope": "Ten group classes monthly at NICE Pilates",
+          "accessScope": "Up to twelve in-person classes monthly, unlimited on-demand access, and unlimited InBody scans at NICE Pilates",
           "scopeType": "single-location",
           "classAllowance": {
-            "count": 10.0,
+            "count": 12.0,
             "period": "month",
             "unlimited": false,
             "disclosed": true
           },
           "billing": {
-            "amount": 330.0,
+            "amount": 375.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
             "interval": "month",
             "intervalCount": 1,
-            "normalizedMonthly": 330.0,
+            "normalizedMonthly": 375.0,
             "normalizationFormula": "amount"
           },
           "commitment": {
-            "type": "unknown",
-            "minimumMonths": null,
+            "type": "minimum-term",
+            "minimumMonths": 3,
             "minimumDays": null,
             "rawLabel": ""
           },
@@ -67844,24 +67845,24 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://nicepilates.studio/price-list-%2F-purchase",
-            "observedAt": "2026-08-19",
-            "source": "NICE Pilates official price page and operator-owned Momence product",
+            "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+            "observedAt": "2026-08-21",
+            "source": "NICE Pilates official price list and public Momence membership API",
             "method": "reviewed-official-observation",
-            "rawLabel": "Monthly Subscription",
-            "contentHash": "c2b2f2a0437d63b96b490e704983960e0043a9950ba4fdea147640d0c59f168c",
+            "rawLabel": "The Work",
+            "contentHash": "03c28236284f5d71e6cfa68a137e34111eabae67b7ccc08ce3b88850c7b93c9d",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "momence-309951",
+            "sourceProductId": "776365",
             "conflictFlags": []
           },
           "selected": true,
-          "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month. The source did not publish a commitment term."
+          "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month. No month-to-month plan was available, so the shortest public commitment was used."
         },
         {
           "id": "osm-node-11384826394:plan:three-pack",
           "sourceProductId": "three-pack",
-          "name": "Three-Class Pack",
+          "name": "Flow: Three-Class Pack",
           "productType": "class-pack",
           "accessScope": "Three non-recurring group classes",
           "scopeType": "single-location",
@@ -67872,7 +67873,7 @@
             "disclosed": true
           },
           "billing": {
-            "amount": 105.0,
+            "amount": 110.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
@@ -67902,12 +67903,12 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://nicepilates.studio/price-list-%2F-purchase",
-            "observedAt": "2026-08-19",
-            "source": "NICE Pilates official price page and operator-owned Momence product",
+            "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+            "observedAt": "2026-08-21",
+            "source": "NICE Pilates official price list and public Momence membership API",
             "method": "reviewed-official-observation",
-            "rawLabel": "Three-Class Pack",
-            "contentHash": "b4a76305c08dcaffeae718330c798a53e206525bb6c3100953b76e898694b652",
+            "rawLabel": "Flow: Three-Class Pack",
+            "contentHash": "54426452bac80938bef090725d41ab1d47a8c9ae41e95d0dc43943ebc4723ec7",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "three-pack",
@@ -67919,7 +67920,7 @@
         {
           "id": "osm-node-11384826394:plan:five-pack",
           "sourceProductId": "five-pack",
-          "name": "Five-Class Pack",
+          "name": "NICE Gives Back Five-Class Pack",
           "productType": "class-pack",
           "accessScope": "Five non-recurring group classes",
           "scopeType": "single-location",
@@ -67930,7 +67931,7 @@
             "disclosed": true
           },
           "billing": {
-            "amount": 175.0,
+            "amount": 183.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
@@ -67960,12 +67961,12 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://nicepilates.studio/price-list-%2F-purchase",
-            "observedAt": "2026-08-19",
-            "source": "NICE Pilates official price page and operator-owned Momence product",
+            "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+            "observedAt": "2026-08-21",
+            "source": "NICE Pilates official price list and public Momence membership API",
             "method": "reviewed-official-observation",
-            "rawLabel": "Five-Class Pack",
-            "contentHash": "2dbfddd971f83a533a457d74e33df38eeb29d245f56c28806790c61952f8fe62",
+            "rawLabel": "NICE Gives Back Five-Class Pack",
+            "contentHash": "450e28d243bd5e6cb9ff29b490cb2a22242858401db009bc6fe128b6210fe897",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "five-pack",
@@ -67977,7 +67978,7 @@
         {
           "id": "osm-node-11384826394:plan:fifteen-pack",
           "sourceProductId": "fifteen-pack",
-          "name": "Fifteen-Class Pack",
+          "name": "Breath: Fifteen-Class Pack",
           "productType": "class-pack",
           "accessScope": "Fifteen non-recurring group classes",
           "scopeType": "single-location",
@@ -67988,7 +67989,7 @@
             "disclosed": true
           },
           "billing": {
-            "amount": 510.0,
+            "amount": 535.0,
             "amountLow": null,
             "amountHigh": null,
             "currency": "USD",
@@ -68018,12 +68019,12 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://nicepilates.studio/price-list-%2F-purchase",
-            "observedAt": "2026-08-19",
-            "source": "NICE Pilates official price page and operator-owned Momence product",
+            "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+            "observedAt": "2026-08-21",
+            "source": "NICE Pilates official price list and public Momence membership API",
             "method": "reviewed-official-observation",
-            "rawLabel": "Fifteen-Class Pack",
-            "contentHash": "be5a0df0046f27f874d797648a32db007ded79d42671201e2f22d9b52d61b82a",
+            "rawLabel": "Breath: Fifteen-Class Pack",
+            "contentHash": "397277cc4e8f67de5fbc77cab6ef05d3572b0f830ab3fb80c57ac0958d07d605",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "fifteen-pack",
@@ -68076,12 +68077,12 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://nicepilates.studio/price-list-%2F-purchase",
-            "observedAt": "2026-08-19",
-            "source": "NICE Pilates official price page and operator-owned Momence product",
+            "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+            "observedAt": "2026-08-21",
+            "source": "NICE Pilates official price list and public Momence membership API",
             "method": "reviewed-official-observation",
             "rawLabel": "Intro Five-Class Pack",
-            "contentHash": "d4e493a5989da0116107a2d0711cc07dfe48cd7223e02700d420fda9abbcc17a",
+            "contentHash": "cffd91862f81c9148444d73de6755375296088031a5cee313fd56f4cad8835a0",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "intro-five",
@@ -68095,10 +68096,10 @@
         {
           "id": "osm-node-11384826394:drop-in:drop-in",
           "sourceProductId": "drop-in",
-          "name": "Drop-In",
+          "name": "Single Class Drop-In",
           "productType": "drop-in",
           "accessScope": "Single unrestricted visit or class",
-          "amount": 40.0,
+          "amount": 42.0,
           "amountLow": null,
           "amountHigh": null,
           "currency": "USD",
@@ -68115,12 +68116,12 @@
           "purchaseMethod": "direct-public",
           "ordinaryUse": true,
           "evidence": {
-            "url": "https://nicepilates.studio/price-list-%2F-purchase",
-            "observedAt": "2026-08-19",
-            "source": "NICE Pilates official price page and operator-owned Momence product",
+            "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+            "observedAt": "2026-08-21",
+            "source": "NICE Pilates official price list and public Momence membership API",
             "method": "reviewed-official-observation",
-            "rawLabel": "Drop-In",
-            "contentHash": "ff6e950505a3133828c4582597ad40736c52046fb234c8aafad910556c21ee87",
+            "rawLabel": "Single Class Drop-In",
+            "contentHash": "6fea5e0b04c77e7bb76ea3ac2930caa5c200505a32e79bcd222c230bb96ad40a",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "drop-in",
@@ -68130,10 +68131,10 @@
           "selectionReason": "Selected the ordinary unrestricted single visit or class."
         }
       ],
-      "selectedPlanId": "osm-node-11384826394:plan:momence-309951",
+      "selectedPlanId": "osm-node-11384826394:plan:776365",
       "selectedDropInId": "osm-node-11384826394:drop-in:drop-in",
-      "typicalPlanId": "osm-node-11384826394:plan:momence-309951",
-      "highestAccessPlanId": "osm-node-11384826394:plan:momence-309951",
+      "typicalPlanId": "osm-node-11384826394:plan:776365",
+      "highestAccessPlanId": "osm-node-11384826394:plan:776365",
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
@@ -68150,7 +68151,7 @@
         }
       },
       "costContext": [],
-      "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month. The source did not publish a commitment term.",
+      "selectionReason": "Selected the smallest eligible recurring class allowance of at least four classes per month. No month-to-month plan was available, so the shortest public commitment was used.",
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {

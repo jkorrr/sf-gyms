@@ -1878,7 +1878,229 @@
     {
       "gymId": "osm-node-11384826394",
       "gymName": "NICE Pilates",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
+      "amount": 375.0,
+      "currency": "USD",
+      "rawLabel": "NICE Pilates English Sign in Hosted by NICE Pilates The Work Renews every month Price $375.00 Under a contract 3 renewals required Description A monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://momence.com/m/776365"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "776365",
+      "sourceProductAliases": [
+        "the-work",
+        "momence-776365"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "The Work",
+      "amount": 375.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 12.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "The Work — USD 375 every month — 3 renewals required — A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+      "method": "rendered-momence-membership",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://momence.com/m/776365"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "478135",
+      "amount": 99.0,
+      "currency": "usd",
+      "rawLabel": "New Client Special: 5 Nourishing Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "New Client Special: 5 Nourishing Classes"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "public-momence-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/478135",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-5-Nourishing-Classes/478135"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "478137",
+      "amount": 175.0,
+      "currency": "usd",
+      "rawLabel": "New Client Special: 3 Private Sessions",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "New Client Special: 3 Private Sessions"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "public-momence-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/478137",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://momence.com/NICE-Pilates/membership/New-Client-Special%3A-3-Private-Sessions/478137"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "776365",
+      "amount": 375.0,
+      "currency": "usd",
+      "rawLabel": "The Work",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [],
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "public-momence-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/776365",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://momence.com/m/776365"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "776365",
+      "amount": 375.0,
+      "currency": "USD",
+      "rawLabel": "The Work",
+      "cadence": "",
+      "productType": "offer",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "public-platform-json",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/776365",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://momence.com/m/776365"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
       "amount": 42.0,
       "currency": "USD",
       "rawLabel": "ages expire 5 months from purchase unless otherwise noted . Transferable, non-refundable Single Class Drop-In $42",
@@ -1902,7 +2124,8 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://nicepilates.studio/price-list-%2F-purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://nicepilates.studio/price-list-%2F-purchase"
     },
     {
       "gymId": "osm-node-12152934880",

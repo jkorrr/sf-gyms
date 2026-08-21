@@ -126,96 +126,9 @@
       "gymId": "osm-node-10054566861",
       "gymName": "MX3 Fitness - Mission",
       "capturedAt": "2026-08-21",
-      "amount": 109.0,
-      "currency": "USD",
-      "rawLabel": "ht (Waller St) Get on the wait list for this location. Step 3. Purchase Your Monthly Membership Open Gym Only $109.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10054566861",
-      "gymName": "MX3 Fitness - Mission",
-      "capturedAt": "2026-08-21",
       "amount": 129.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10054566861",
-      "gymName": "MX3 Fitness - Mission",
-      "capturedAt": "2026-08-21",
-      "amount": 129.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10054566861",
-      "gymName": "MX3 Fitness - Mission",
-      "capturedAt": "2026-08-21",
-      "amount": 159.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 3X Per Week $159.00 / month",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": null,
@@ -300,35 +213,6 @@
       "gymId": "osm-node-10054566861",
       "gymName": "MX3 Fitness - Mission",
       "capturedAt": "2026-08-21",
-      "amount": 189.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 5x Per Week $189.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10054566861",
-      "gymName": "MX3 Fitness - Mission",
-      "capturedAt": "2026-08-21",
       "amount": 219.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
@@ -353,59 +237,6 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://mx3fitness.com/monthly-signup",
       "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10054566861",
-      "gymName": "MX3 Fitness - Mission",
-      "capturedAt": "2026-08-21",
-      "amount": 219.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10054566861",
-      "gymName": "MX3 Fitness - Mission",
-      "capturedAt": "2026-08-21",
-      "kind": "starting-price",
-      "low": 109.0,
-      "high": 109.0,
-      "currency": "USD",
-      "rawLabel": "Our base memberships start at $109",
-      "cadence": "unknown",
-      "productType": "cost-context",
-      "contextProductType": "service",
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "method": "visible-cost-context",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false,
-      "selectable": false
     },
     {
       "gymId": "osm-node-10054566861",
@@ -608,96 +439,9 @@
       "gymId": "osm-node-10198521798",
       "gymName": "MX3 Fitness - Castro",
       "capturedAt": "2026-08-21",
-      "amount": 109.0,
-      "currency": "USD",
-      "rawLabel": "ht (Waller St) Get on the wait list for this location. Step 3. Purchase Your Monthly Membership Open Gym Only $109.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10198521798",
-      "gymName": "MX3 Fitness - Castro",
-      "capturedAt": "2026-08-21",
       "amount": 129.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10198521798",
-      "gymName": "MX3 Fitness - Castro",
-      "capturedAt": "2026-08-21",
-      "amount": 129.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10198521798",
-      "gymName": "MX3 Fitness - Castro",
-      "capturedAt": "2026-08-21",
-      "amount": 159.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 3X Per Week $159.00 / month",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": null,
@@ -782,35 +526,6 @@
       "gymId": "osm-node-10198521798",
       "gymName": "MX3 Fitness - Castro",
       "capturedAt": "2026-08-21",
-      "amount": 189.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 5x Per Week $189.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10198521798",
-      "gymName": "MX3 Fitness - Castro",
-      "capturedAt": "2026-08-21",
       "amount": 219.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
@@ -835,59 +550,6 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://mx3fitness.com/monthly-signup",
       "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10198521798",
-      "gymName": "MX3 Fitness - Castro",
-      "capturedAt": "2026-08-21",
-      "amount": 219.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-10198521798",
-      "gymName": "MX3 Fitness - Castro",
-      "capturedAt": "2026-08-21",
-      "kind": "starting-price",
-      "low": 109.0,
-      "high": 109.0,
-      "currency": "USD",
-      "rawLabel": "Our base memberships start at $109",
-      "cadence": "unknown",
-      "productType": "cost-context",
-      "contextProductType": "service",
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "method": "visible-cost-context",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false,
-      "selectable": false
     },
     {
       "gymId": "osm-node-10198521798",
@@ -1759,68 +1421,6 @@
       "gymId": "osm-node-11017139804",
       "gymName": "Custom Fit",
       "capturedAt": "2026-08-21",
-      "amount": 240.0,
-      "currency": "USD",
-      "rawLabel": "a & cold plunge. Unlimited Group Classes: Access to a variety of fitness classes. Membership Options Tier 1 : $240 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://customfitsf.com/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-11017139804",
-      "gymName": "Custom Fit",
-      "capturedAt": "2026-08-21",
-      "amount": 370.0,
-      "currency": "USD",
-      "rawLabel": "es - 5 Recovery Room sessions per month (2 week booking window) - 20-minute Dietitian consultation ‍ Tier 2 : $370 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://customfitsf.com/",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-11017139804",
-      "gymName": "Custom Fit",
-      "capturedAt": "2026-08-21",
       "amount": 370.0,
       "currency": "USD",
       "rawLabel": "es - 5 Recovery Room sessions per month (2 week booking window) - 20-minute Dietitian consultation ‍ Tier 2 : $370 / month",
@@ -2325,6 +1925,1702 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "84507969",
+      "sourceProductAliases": [
+        "shooting-lane-booking"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Shooting Lane Booking",
+      "amount": 25.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "accessScope": "You just needed a place to rip those! We got you covered!\n\nLane allows up to 2 shooters at a time.",
+      "scopeType": "operator-storefront",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Shooting Lane Booking — USD 25 — You just needed a place to rip those! We got you covered!\n\nLane allows up to 2 shooters at a time.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94890910",
+      "sourceProductAliases": [
+        "youth-beginner-novice-stick-skills"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Beginner/Novice Stick Skills",
+      "amount": 37.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General age group is 6-10 but skill level will be prioritize over age group.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Beginner/Novice Stick Skills — USD 37 — General age group is 6-10 but skill level will be prioritize over age group.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94914736",
+      "sourceProductAliases": [
+        "youth-ltt-5-8"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth LTT 5-8",
+      "amount": 37.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General Fitness",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth LTT 5-8 — USD 37 — General Fitness",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94891294",
+      "sourceProductAliases": [
+        "adult-beginner-stick-skills"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Beginner Stick Skills",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Stickhandling Classes",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult Beginner Stick Skills — USD 50 — Stickhandling Classes",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94915269",
+      "sourceProductAliases": [
+        "adult-gs-c"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult GS&C",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General Fitness",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult GS&C — USD 50 — General Fitness",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94917547",
+      "sourceProductAliases": [
+        "adult-hiit"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult HIIT",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General Fitness",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult HIIT — USD 50 — General Fitness",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94917480",
+      "sourceProductAliases": [
+        "adult-imob"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult IMOB",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult IMOB — USD 50 — Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94914997",
+      "sourceProductAliases": [
+        "adult-intro-to-off-ice"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Intro to Off-Ice",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Figure Skating Off-Ice",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "Adult Intro to Off-Ice"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult Intro to Off-Ice — USD 50 — Figure Skating Off-Ice",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94891315",
+      "sourceProductAliases": [
+        "adult-mix-level-stick-skills"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Mix Level Stick Skills",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Stickhandling Classes",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult Mix Level Stick Skills — USD 50 — Stickhandling Classes",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94891076",
+      "sourceProductAliases": [
+        "youth-advanced-stick-skills"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Advanced Stick Skills",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General age group is 13+ but skill level will be prioritize over age group.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Advanced Stick Skills — USD 50 — General age group is 13+ but skill level will be prioritize over age group.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94914801",
+      "sourceProductAliases": [
+        "youth-gs-c-9-17"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth GS&C 9-17",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General Fitness",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth GS&C 9-17 — USD 50 — General Fitness",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94978392",
+      "sourceProductAliases": [
+        "youth-hiit-13"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth HIIT 13+",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General Fitness",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth HIIT 13+ — USD 50 — General Fitness",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94917534",
+      "sourceProductAliases": [
+        "youth-hiit-9-12"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth HIIT 9-12",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General Fitness",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth HIIT 9-12 — USD 50 — General Fitness",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94971893",
+      "sourceProductAliases": [
+        "youth-imob-13"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth IMOB 13+",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth IMOB 13+ — USD 50 — Not quite ready for the grueling training of strength and conditioning? This would be the perfect lead up!",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94891036",
+      "sourceProductAliases": [
+        "youth-intermediate-stick-skills"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Intermediate Stick Skills",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "General age group is 9-14 but skill level will be prioritize over age group.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Intermediate Stick Skills — USD 50 — General age group is 9-14 but skill level will be prioritize over age group.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94914988",
+      "sourceProductAliases": [
+        "youth-intro-to-off-ice"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Intro to Off-Ice",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Figure Skating Off-Ice",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "Youth Intro to Off-Ice"
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Intro to Off-Ice — USD 50 — Figure Skating Off-Ice",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94972021",
+      "sourceProductAliases": [
+        "youth-rota-13"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Rota 13+",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Athletic Development",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Rota 13+ — USD 50 — Athletic Development",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94972072",
+      "sourceProductAliases": [
+        "youth-rota-9-12"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Rota 9-12",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Athletic Development",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Rota 9-12 — USD 50 — Athletic Development",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94970495",
+      "sourceProductAliases": [
+        "youth-sbs-c-13"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth SBS&C 13+",
+      "amount": 50.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Athletic Development",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth SBS&C 13+ — USD 50 — Athletic Development",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94972099",
+      "sourceProductAliases": [
+        "adult-introoly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult IntroOly",
+      "amount": 65.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult IntroOly — USD 65 — Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94972041",
+      "sourceProductAliases": [
+        "youth-introoly-14"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth IntroOly 14+",
+      "amount": 65.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth IntroOly 14+ — USD 65 — Must have prior barbell lifting experience. NOT FOR BEGINNER LIFTERS!",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "90302516",
+      "sourceProductAliases": [
+        "adult-beginner-novice-shooting-clinic"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Beginner/Novice Shooting Clinic",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Shooting Clinics",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult Beginner/Novice Shooting Clinic — USD 70 — Shooting Clinics",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "90308568",
+      "sourceProductAliases": [
+        "adult-intermediate-shooting-clinic"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Intermediate Shooting Clinic",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Shooting Clinics",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult Intermediate Shooting Clinic — USD 70 — Shooting Clinics",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "94979211",
+      "sourceProductAliases": [
+        "adult-mixed-skill-shooting-clinic"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Adult Mixed Skill Shooting Clinic",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Shooting Clinics",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Adult Mixed Skill Shooting Clinic — USD 70 — Shooting Clinics",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "90303905",
+      "sourceProductAliases": [
+        "youth-beginner-novice-shooting-clinic"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Beginner/Novice Shooting Clinic",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Shooting Clinics",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Beginner/Novice Shooting Clinic — USD 70 — Shooting Clinics",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "90303760",
+      "sourceProductAliases": [
+        "youth-intermediate-advanced-shooting-clinic"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Youth Intermediate/Advanced Shooting Clinic",
+      "amount": 70.0,
+      "currency": "USD",
+      "cadence": "visit",
+      "billingInterval": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "accessScope": "Shooting Clinics",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "youth",
+        "restrictions": [
+          "Youth product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Youth Intermediate/Advanced Shooting Clinic — USD 70 — Shooting Clinics",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236280",
+      "sourceProductAliases": [
+        "unlimited-fitness-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "Unlimited Fitness Membership",
+      "amount": 250.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Have the flexibility to join in during all of our fitness blocks with a preconstructed class program.\n\nMembership Benefits:\n- Unlimited general fitness and athletic training sessions\n- Open gym usage\n- 2 Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "Unlimited Fitness Membership — USD 250 — $250.00 per month — Have the flexibility to join in during all of our fitness blocks with a preconstructed class program.\n\nMembership Benefits:\n- Unlimited general fitness and athletic training sessions\n- Open gym usage\n- 2 Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236291",
+      "sourceProductAliases": [
+        "6x-figure-skating-off-ice-credits"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "6x Figure Skating Off-Ice Credits",
+      "amount": 270.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "accessScope": "Figure Skating Off-Ice Credits @ 10% discounted rate",
+      "scopeType": "operator-storefront",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "6x Figure Skating Off-Ice Credits"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "6x Figure Skating Off-Ice Credits — USD 270 — Figure Skating Off-Ice Credits @ 10% discounted rate",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236301",
+      "sourceProductAliases": [
+        "6x-stickhandling-class-credits"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "6x Stickhandling Class Credits",
+      "amount": 270.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "accessScope": "6x Credits for stickhandling class @ a 10% discounted rate\nOr\nRedemption value of $300.\nCredits expire 90 days from date of purchase.",
+      "scopeType": "operator-storefront",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "6x Stickhandling Class Credits — USD 270 — 6x Credits for stickhandling class @ a 10% discounted rate\nOr\nRedemption value of $300.\nCredits expire 90 days from date of purchase.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236281",
+      "sourceProductAliases": [
+        "all-access-figure-skating-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "All-Access Figure Skating Membership",
+      "amount": 295.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Use for general Jolt Figure Skating curriculum, excluding invite only classes.\n\nMembership benefits:\n- Unlimited age appropriate strength and conditioning blocks\n- Unlimited general figure skating off-ice classes of an appropriate level. [Excludes invite-only classes]\n- Open gym access\n- 2 Figure Skating or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nOpen gym access- please yield equipment for classes.\nMembership charged as monthly subscription.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "All-Access Figure Skating Membership — USD 295 — $295.00 per month — Use for general Jolt Figure Skating curriculum, excluding invite only classes.\n\nMembership benefits:\n- Unlimited age appropriate strength and conditioning blocks\n- Unlimited general figure skating off-ice classes of an appropriate level. [Excludes invite-only classes]\n- Open gym access\n- 2 Figure Skating or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nOpen gym access- ",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2171096",
+      "sourceProductAliases": [
+        "6x-shooting-clinic-credits"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "6x Shooting Clinic Credits",
+      "amount": 375.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "12 Credits for shooting clinics @ a 10% discounted rate. Credits expire 90 days from date of purchase.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 12.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "6x Shooting Clinic Credits — USD 375 — 12 Credits for shooting clinics @ a 10% discounted rate. Credits expire 90 days from date of purchase.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2235696",
+      "sourceProductAliases": [
+        "all-access-hockey-membership"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "All-Access Hockey Membership",
+      "amount": 385.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "Have the flexibility to join in during all of our fitness and hockey offerings.\nIf you plan on making Jolt your training destination for at least 3x a week, this membership is meant for you or your athlete.\n\nMembership Benefits:\n- Unlimited age appropriate workout sessions.\n- Unlimited stickhandling classes.\n- Unlimited Shooting Clinic credits\n- Open gym access\n- 10 Hour Shooting lane credits per month, subject to availability.\n- 2 Hockey or Fitness Buddy Passes. Check FAQ for rules on Buddy Pass usage.\n\nCheck facility schedule for class times.\nMembership charged as monthly subscription.\nPlease only sign up for classes you mean to attend. Unexcused absences will get three warnings.\nFamilies with more than one account can use the same code to sign up multiple participants as long as the account holds multiple subscriptions.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "All-Access Hockey Membership — USD 385 — $385.00 per month — Have the flexibility to join in during all of our fitness and hockey offerings.\nIf you plan on making Jolt your training destination for at least 3x a week, this membership is meant for you or your athlete.\n\nMembership Benefits:\n- Unlimited age appropriate workout sessions.\n- Unlimited stickhandling classes.\n- Unlimited Shooting Clinic credits\n- Open gym access\n- 10 Hour Shooting lane credits per month, subject to availability.\n- 2 Hoc",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236292",
+      "sourceProductAliases": [
+        "12x-figure-skating-off-ice-credits"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "12x Figure Skating Off-Ice Credits",
+      "amount": 450.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "accessScope": "Figure Skating Off-Ice Credits @ 25% discounted rate",
+      "scopeType": "operator-storefront",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "12x Figure Skating Off-Ice Credits"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or introductory product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "12x Figure Skating Off-Ice Credits — USD 450 — Figure Skating Off-Ice Credits @ 25% discounted rate",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236303",
+      "sourceProductAliases": [
+        "12x-stickhandling-class-credits"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "12x Stickhandling Class Credits",
+      "amount": 450.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "accessScope": "12x Credits for stickhandling class @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+      "scopeType": "operator-storefront",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "12x Stickhandling Class Credits — USD 450 — 12x Credits for stickhandling class @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "gymName": "Jolt Athletics",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "2236089",
+      "sourceProductAliases": [
+        "12x-shooting-clinic-credit"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "12x Shooting Clinic Credit",
+      "amount": 630.0,
+      "currency": "USD",
+      "cadence": "one-time",
+      "billingInterval": "one-time",
+      "intervalCount": 1,
+      "productType": "class-pack",
+      "accessScope": "12 Credits for Shooting Clinics @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 12.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "12x Shooting Clinic Credit — USD 630 — 12 Credits for Shooting Clinics @ a 25% discounted rate. Credits expire 90 days from date of purchase.",
+      "method": "public-acuity-embedded-business",
+      "adapter": "acuity",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://joltathleticsappts.as.me/schedule/f0d1f69e",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://joltathleticsappts.as.me/"
+    },
+    {
       "gymId": "osm-node-11198894699",
       "gymName": "Gymworx",
       "capturedAt": "2026-08-21",
@@ -2418,6 +3714,55 @@
       "gymId": "osm-node-11384826394",
       "gymName": "NICE Pilates",
       "capturedAt": "2026-08-21",
+      "sourceProductId": "776365",
+      "sourceProductAliases": [
+        "the-work",
+        "momence-776365"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "name": "The Work",
+      "amount": 375.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "accessScope": "A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+      "scopeType": "operator-storefront",
+      "classAllowance": {
+        "count": 12.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "rawLabel": "The Work — USD 375 every 1 months — 3 minimum renewals — A monthly subscription to NICE Pilates. Take up to 12 in-person classes, unlimited on-demand, and unlimited InBody scans with this membership.",
+      "method": "public-momence-membership-api",
+      "adapter": "momence",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "operator-storefront",
+      "sourceUrl": "https://momence.com/_api/primary/plugin/memberships/776365",
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://nicepilates.studio/"
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "gymName": "NICE Pilates",
+      "capturedAt": "2026-08-21",
       "amount": 42.0,
       "currency": "USD",
       "rawLabel": "kages expire 5 months from purchase unless otherwise noted . Transferable, non-refundable Single Class Drop-In $42",
@@ -2438,8 +3783,11 @@
       },
       "method": "visible-text-candidate",
       "adapter": "operator-site",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
       "sourceUrl": "https://nicepilates.studio/price-list-%2F-purchase",
-      "autoPublishEligible": false
+      "autoPublishEligible": false,
+      "catalogSourceUrl": "https://nicepilates.studio/price-list-%2F-purchase"
     },
     {
       "gymId": "osm-node-12044095332",
@@ -5208,96 +6556,9 @@
       "gymId": "osm-node-2484293076",
       "gymName": "MX3 Fitness - Lower Haight",
       "capturedAt": "2026-08-21",
-      "amount": 109.0,
-      "currency": "USD",
-      "rawLabel": "ht (Waller St) Get on the wait list for this location. Step 3. Purchase Your Monthly Membership Open Gym Only $109.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2484293076",
-      "gymName": "MX3 Fitness - Lower Haight",
-      "capturedAt": "2026-08-21",
       "amount": 129.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2484293076",
-      "gymName": "MX3 Fitness - Lower Haight",
-      "capturedAt": "2026-08-21",
-      "amount": 129.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2484293076",
-      "gymName": "MX3 Fitness - Lower Haight",
-      "capturedAt": "2026-08-21",
-      "amount": 159.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 3X Per Week $159.00 / month",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": null,
@@ -5382,35 +6643,6 @@
       "gymId": "osm-node-2484293076",
       "gymName": "MX3 Fitness - Lower Haight",
       "capturedAt": "2026-08-21",
-      "amount": 189.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 5x Per Week $189.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2484293076",
-      "gymName": "MX3 Fitness - Lower Haight",
-      "capturedAt": "2026-08-21",
       "amount": 219.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
@@ -5435,59 +6667,6 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://mx3fitness.com/monthly-signup",
       "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2484293076",
-      "gymName": "MX3 Fitness - Lower Haight",
-      "capturedAt": "2026-08-21",
-      "amount": 219.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-2484293076",
-      "gymName": "MX3 Fitness - Lower Haight",
-      "capturedAt": "2026-08-21",
-      "kind": "starting-price",
-      "low": 109.0,
-      "high": 109.0,
-      "currency": "USD",
-      "rawLabel": "Our base memberships start at $109",
-      "cadence": "unknown",
-      "productType": "cost-context",
-      "contextProductType": "service",
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "method": "visible-cost-context",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false,
-      "selectable": false
     },
     {
       "gymId": "osm-node-2484293076",
@@ -12804,96 +13983,9 @@
       "gymId": "osm-node-6471124711",
       "gymName": "MX3 Fitness - Noe Valley",
       "capturedAt": "2026-08-21",
-      "amount": 109.0,
-      "currency": "USD",
-      "rawLabel": "ht (Waller St) Get on the wait list for this location. Step 3. Purchase Your Monthly Membership Open Gym Only $109.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-6471124711",
-      "gymName": "MX3 Fitness - Noe Valley",
-      "capturedAt": "2026-08-21",
       "amount": 129.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-6471124711",
-      "gymName": "MX3 Fitness - Noe Valley",
-      "capturedAt": "2026-08-21",
-      "amount": 129.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 1x Per Week $129.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-6471124711",
-      "gymName": "MX3 Fitness - Noe Valley",
-      "capturedAt": "2026-08-21",
-      "amount": 159.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 3X Per Week $159.00 / month",
       "cadence": "month",
       "productType": "monthly",
       "classAllowance": null,
@@ -12978,35 +14070,6 @@
       "gymId": "osm-node-6471124711",
       "gymName": "MX3 Fitness - Noe Valley",
       "capturedAt": "2026-08-21",
-      "amount": 189.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 5x Per Week $189.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-6471124711",
-      "gymName": "MX3 Fitness - Noe Valley",
-      "capturedAt": "2026-08-21",
       "amount": 219.0,
       "currency": "USD",
       "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
@@ -13031,59 +14094,6 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://mx3fitness.com/monthly-signup",
       "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-6471124711",
-      "gymName": "MX3 Fitness - Noe Valley",
-      "capturedAt": "2026-08-21",
-      "amount": 219.0,
-      "currency": "USD",
-      "rawLabel": "+$75 setup 7X Per Week $219.00 / month",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-6471124711",
-      "gymName": "MX3 Fitness - Noe Valley",
-      "capturedAt": "2026-08-21",
-      "kind": "starting-price",
-      "low": 109.0,
-      "high": 109.0,
-      "currency": "USD",
-      "rawLabel": "Our base memberships start at $109",
-      "cadence": "unknown",
-      "productType": "cost-context",
-      "contextProductType": "service",
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "method": "visible-cost-context",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://mx3fitness.com/monthly-signup",
-      "autoPublishEligible": false,
-      "selectable": false
     },
     {
       "gymId": "osm-node-6471124711",
@@ -15814,7 +16824,7 @@
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
       "exactLocationMatch": "exact-operator-catalog",
-      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
@@ -15861,7 +16871,7 @@
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
       "exactLocationMatch": "exact-operator-catalog",
-      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
@@ -15907,7 +16917,7 @@
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
       "exactLocationMatch": "exact-operator-catalog",
-      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
@@ -15953,7 +16963,7 @@
       "adapter": "zen-planner",
       "evidenceTier": "official-public",
       "exactLocationMatch": "exact-operator-catalog",
-      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym%20membership",
+      "sourceUrl": "https://fitnessurbano.sites.zenplanner.com/sign-up-now.cfm?category=Gym+membership",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://fitnessurbano.com/gym-memberships/"
     },
@@ -38305,64 +39315,6 @@
       "capturedAt": "2026-08-21",
       "amount": 36.0,
       "currency": "USD",
-      "rawLabel": "-b27a26e47ca0f0d16930 .sqs-block-alignment-wrapper { align-items: center; } } Drop-In Classes: $36",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "amount": 36.0,
-      "currency": "USD",
-      "rawLabel": "6930 .sqs-block-alignment-wrapper { align-items: center; } } Drop-In Classes: $36 WE LOVE DROP-IN",
-      "cadence": "visit",
-      "productType": "drop-in",
-      "classAllowance": null,
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "operator-site",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "amount": 36.0,
-      "currency": "USD",
       "rawLabel": "6930 .sqs-block-alignment-wrapper { align-items: center; } } Drop-In Classes: $36 WE LOVE DROP-IN",
       "cadence": "visit",
       "productType": "drop-in",
@@ -38419,88 +39371,6 @@
       "fees": [],
       "bestValueLabel": false,
       "rawLabel": "Drop-In Class $36/visit",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "drop-in",
-      "name": "Drop-In Class",
-      "amount": 36,
-      "currency": "USD",
-      "cadence": "visit",
-      "billingInterval": "visit",
-      "productType": "drop-in",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": 1,
-        "period": "visit",
-        "unlimited": false
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "Drop-In Class $36/visit",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "at-home-only",
-      "name": "At Home Livestream Only",
-      "amount": 79,
-      "currency": "USD",
-      "cadence": "month",
-      "billingInterval": "month",
-      "productType": "monthly",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "online-only",
-        "restrictions": [
-          "Does not provide in-person use of the named location"
-        ]
-      },
-      "commitment": {
-        "type": "month-to-month",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "At Home Livestream Only $79/month",
       "method": "visible-funky-door-catalog",
       "adapter": "funky-door",
       "evidenceTier": "official-public",
@@ -38596,48 +39466,6 @@
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
       "capturedAt": "2026-08-21",
-      "sourceProductId": "visitor-seven-day",
-      "name": "Visitor Seven-Day Unlimited",
-      "amount": 95,
-      "currency": "USD",
-      "cadence": "one-time",
-      "billingInterval": "one-time",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "7 days",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "visitor",
-        "restrictions": [
-          "Out-of-town visitors only"
-        ]
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "Visitor Seven-Day Unlimited $95/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
       "sourceProductId": "new-student-two-month",
       "name": "New Student Two-Month Unlimited",
       "amount": 129,
@@ -38670,97 +39498,6 @@
       "fees": [],
       "bestValueLabel": false,
       "rawLabel": "New Student Two-Month Unlimited $129/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "new-student-two-month",
-      "name": "New Student Two-Month Unlimited",
-      "amount": 129,
-      "currency": "USD",
-      "cadence": "one-time",
-      "billingInterval": "one-time",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "2 months",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "local-new-student",
-        "restrictions": [
-          "First-time student",
-          "Bay Area resident with local ID"
-        ]
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": true,
-        "label": "First-time local-student offer"
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "New Student Two-Month Unlimited $129/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "studio-auto-monthly",
-      "name": "Studio Membership — Auto Monthly",
-      "amount": 129,
-      "currency": "USD",
-      "cadence": "month",
-      "billingInterval": "month",
-      "productType": "monthly",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "month-to-month",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [
-        {
-          "type": "enrollment",
-          "amount": 49,
-          "currency": "USD",
-          "cadence": "one-time",
-          "mandatory": true
-        }
-      ],
-      "bestValueLabel": true,
-      "rawLabel": "Studio Membership — Auto Monthly $129/month",
       "method": "visible-funky-door-catalog",
       "adapter": "funky-door",
       "evidenceTier": "official-public",
@@ -38868,54 +39605,6 @@
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
       "capturedAt": "2026-08-21",
-      "sourceProductId": "all-access-monthly",
-      "name": "All Access In-Person and At Home",
-      "amount": 175,
-      "currency": "USD",
-      "cadence": "month",
-      "billingInterval": "month",
-      "productType": "monthly",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "month-to-month",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [
-        {
-          "type": "enrollment",
-          "amount": 49,
-          "currency": "USD",
-          "cadence": "one-time",
-          "mandatory": true
-        }
-      ],
-      "bestValueLabel": false,
-      "rawLabel": "All Access In-Person and At Home $175/month",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
       "sourceProductId": "one-month-unlimited",
       "name": "One-Month Unlimited Pass",
       "amount": 219,
@@ -38945,86 +39634,6 @@
       "fees": [],
       "bestValueLabel": false,
       "rawLabel": "One-Month Unlimited Pass $219/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "one-month-unlimited",
-      "name": "One-Month Unlimited Pass",
-      "amount": 219,
-      "currency": "USD",
-      "cadence": "one-time",
-      "billingInterval": "one-time",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "30 days",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "One-Month Unlimited Pass $219/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "ten-class-pack",
-      "name": "10 Class Pack",
-      "amount": 260,
-      "currency": "USD",
-      "cadence": "one-time",
-      "billingInterval": "one-time",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": 10,
-        "period": "purchase",
-        "unlimited": false
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "10 Class Pack $260/one-time",
       "method": "visible-funky-door-catalog",
       "adapter": "funky-door",
       "evidenceTier": "official-public",
@@ -39116,46 +39725,6 @@
       "gymId": "web-a3d8ded3014a16",
       "gymName": "Funky Door Yoga San Francisco",
       "capturedAt": "2026-08-21",
-      "sourceProductId": "twenty-four-class-pack",
-      "name": "24 Class Pack",
-      "amount": 495,
-      "currency": "USD",
-      "cadence": "one-time",
-      "billingInterval": "one-time",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": 24,
-        "period": "purchase",
-        "unlimited": false
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "24 Class Pack $495/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
       "sourceProductId": "forty-eight-class-pack",
       "name": "48 Class Pack",
       "amount": 890,
@@ -39185,86 +39754,6 @@
       "fees": [],
       "bestValueLabel": false,
       "rawLabel": "48 Class Pack $890/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "forty-eight-class-pack",
-      "name": "48 Class Pack",
-      "amount": 890,
-      "currency": "USD",
-      "cadence": "one-time",
-      "billingInterval": "one-time",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": 48,
-        "period": "purchase",
-        "unlimited": false
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "none",
-        "minimumMonths": null
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "48 Class Pack $890/one-time",
-      "method": "visible-funky-door-catalog",
-      "adapter": "funky-door",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "exact-location",
-      "sourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "web-a3d8ded3014a16",
-      "gymName": "Funky Door Yoga San Francisco",
-      "capturedAt": "2026-08-21",
-      "sourceProductId": "annual-prepaid",
-      "name": "Annual Unlimited Membership",
-      "amount": 1199,
-      "currency": "USD",
-      "cadence": "year",
-      "billingInterval": "year",
-      "productType": "offer",
-      "accessScope": "Named location",
-      "scopeType": "single-location",
-      "classAllowance": {
-        "count": null,
-        "period": "year",
-        "unlimited": true
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "prepaid",
-        "minimumMonths": 12
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "fees": [],
-      "bestValueLabel": false,
-      "rawLabel": "Annual Unlimited Membership $1199/year",
       "method": "visible-funky-door-catalog",
       "adapter": "funky-door",
       "evidenceTier": "official-public",

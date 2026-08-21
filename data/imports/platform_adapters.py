@@ -306,6 +306,411 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
     return candidates
 
 
+def acuity_business_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct Acuity's public catalog and class products.
+
+    Public Acuity/Squarespace Scheduling pages embed one bounded ``BUSINESS``
+    object before the application boots.  It contains the same products and
+    appointment types rendered by the unauthenticated storefront, including
+    stable IDs and subscription terms.  This adapter deliberately consumes
+    only that object; session state, account data, checkout state, CAPTCHA
+    keys, and unrelated inline variables never enter the research fixture.
+    """
+
+    if platform_for_url(source_url) != "acuity" or not isinstance(payload, dict):
+        return []
+    if not text(payload.get("ownerKey")) or not text(payload.get("name")):
+        return []
+
+    currency = text(payload.get("currencyAbbreviation")) or "USD"
+    candidates: list[dict[str, Any]] = []
+    seen: set[tuple[str, float, str]] = set()
+
+    def append_candidate(
+        node: dict[str, Any],
+        title: str,
+        amount: float,
+        product_type: str,
+        cadence: str,
+        allowance: dict[str, Any] | None,
+        recurring: bool,
+        description: str,
+        eligibility_type: str,
+        restrictions: list[str],
+        promotion: bool,
+        ordinary_use: bool,
+    ) -> None:
+        product_id = text(node.get("id"))
+        if not product_id or not title or not 0 < amount <= 10_000:
+            return
+        key = (product_id, amount, product_type)
+        if key in seen:
+            return
+        seen.add(key)
+        terms = text(node.get("subscriptionTermsText"))
+        semantic = " ".join(value for value in (title, terms) if value)
+        alias = re.sub(r"[^a-z0-9]+", "-", title.casefold()).strip("-")
+        raw_parts = [title, f"{currency} {amount:g}", terms, description]
+        candidates.append({
+            "sourceProductId": product_id,
+            "sourceProductAliases": [alias] if alias else [],
+            "sourceProductIdAuthority": "operator-widget",
+            "name": title,
+            "amount": amount,
+            "currency": currency,
+            "cadence": cadence,
+            "billingInterval": cadence,
+            "intervalCount": 1,
+            "productType": product_type,
+            "accessScope": description or title,
+            "scopeType": "operator-storefront",
+            "classAllowance": allowance,
+            "promotion": {"isPromotion": promotion, "label": title if promotion else ""},
+            "eligibility": {"type": eligibility_type, "restrictions": restrictions},
+            "commitment": commitment(node, semantic, recurring),
+            "fees": [],
+            "ordinaryUse": ordinary_use,
+            "bestValueLabel": bool(BEST_VALUE_RE.search(title)),
+            "purchaseMethod": "direct-public",
+            "rawLabel": " — ".join(value for value in raw_parts if value)[:500],
+            "method": "public-acuity-embedded-business",
+            "adapter": "acuity",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "operator-storefront",
+            "sourceUrl": source_url,
+            "autoPublishEligible": False,
+        })
+
+    catalog = payload.get("catalog")
+    product_collections: list[Any] = []
+    if isinstance(catalog, dict):
+        product_collections.append(catalog.get("products", []))
+    product_collections.append(payload.get("products", []))
+    products: list[Any] = []
+    for collection in product_collections:
+        if isinstance(collection, list):
+            products.extend(collection)
+        elif isinstance(collection, dict):
+            for values in collection.values():
+                if isinstance(values, list):
+                    products.extend(values)
+    for product in products:
+        if not isinstance(product, dict):
+            continue
+        title = text(product.get("title"))
+        description = text(product.get("description"))
+        amount = amount_from(product)
+        if not title or amount is None:
+            continue
+        terms = text(product.get("subscriptionTermsText"))
+        recurring = product.get("isSubscription") is True or bool(
+            re.search(r"\bper\s+(?:week|month|year)\b", terms, re.IGNORECASE)
+        )
+        cadence, _interval_count = cadence_from(product, f"{title} {terms}")
+        if recurring and cadence == "one-time":
+            cadence = "month"
+        semantic = f"{title} {description}"
+        allowance = class_allowance(product, semantic, cadence)
+        promotion = bool(PROMOTION_RE.search(title))
+        restriction = RESTRICTED_RE.search(title)
+        eligibility_type = "restricted" if restriction else ("new-client" if promotion else "standard-adult")
+        restrictions = (
+            [restriction.group(0)]
+            if restriction
+            else (["Promotional or introductory product"] if promotion else [])
+        )
+        if recurring:
+            product_type = "monthly"
+        elif (allowance or {}).get("count") == 1:
+            product_type, cadence = "drop-in", "visit"
+        elif allowance or re.search(r"\b(?:pack|package)\b", title, re.IGNORECASE):
+            product_type = "class-pack"
+        else:
+            product_type = "offer"
+        append_candidate(
+            product, title, amount, product_type, cadence, allowance, recurring,
+            description, eligibility_type, restrictions, promotion,
+            recurring and not promotion and not restriction,
+        )
+
+    appointment_types = payload.get("appointmentTypes")
+    if isinstance(appointment_types, dict):
+        for category, values in appointment_types.items():
+            if not isinstance(values, list):
+                continue
+            for appointment in values:
+                if not isinstance(appointment, dict) or appointment.get("active") is False:
+                    continue
+                title = text(appointment.get("name"))
+                description = text(appointment.get("description"))
+                amount = amount_from(appointment)
+                if not title or amount is None:
+                    continue
+                combined = f"{category} {title} {description}"
+                promotion = bool(PROMOTION_RE.search(title))
+                youth = re.search(r"\b(?:youth|kids?|child(?:ren)?)\b", combined, re.IGNORECASE)
+                restricted = re.search(r"\b(?:invite only|members? only|assessment required)\b", combined, re.IGNORECASE)
+                is_public_class = (
+                    text(appointment.get("type")).casefold() == "class"
+                    and appointment.get("private") is not True
+                    and (number(appointment.get("classSize")) or 0) > 1
+                )
+                standard_adult = bool(
+                    re.search(r"\badult\b|\bgeneral fitness\b", combined, re.IGNORECASE)
+                    and not youth
+                    and not restricted
+                )
+                if youth:
+                    eligibility_type, restrictions = "youth", ["Youth product"]
+                elif restricted:
+                    eligibility_type, restrictions = "restricted", [restricted.group(0)]
+                elif promotion:
+                    eligibility_type, restrictions = "new-client", ["Promotional or introductory product"]
+                else:
+                    eligibility_type, restrictions = "standard-adult", []
+                append_candidate(
+                    appointment,
+                    title,
+                    amount,
+                    "drop-in" if is_public_class else "offer",
+                    "visit" if is_public_class else "one-time",
+                    {"count": 1.0, "period": "visit", "unlimited": False} if is_public_class else None,
+                    False,
+                    description or text(category),
+                    eligibility_type,
+                    restrictions,
+                    promotion,
+                    is_public_class and standard_adult and not promotion,
+                )
+
+    return candidates
+
+
+def momence_membership_card_candidates(
+    visible_text: str,
+    source_url: str,
+    page_title: str = "",
+) -> list[dict[str, Any]]:
+    """Extract one bounded recurring product from a public Momence page.
+
+    Momence's checkout shell renders the base recurring price above optional
+    card-processing arithmetic and contact fields.  The adapter reads only the
+    product header, cadence, contract count, and description; it never treats
+    the checkout total or optional card fee as membership dues.
+    """
+
+    if platform_for_url(source_url) != "momence":
+        return []
+    try:
+        parsed = urlparse(source_url)
+    except ValueError:
+        return []
+    product_match = re.search(r"/(?:membership/[^/]+|m)/(\d{1,12})(?:/|$)", parsed.path, re.IGNORECASE)
+    if not product_match:
+        return []
+    body = text(visible_text).replace("\r", "")
+    if not body or not re.search(r"\bRenews every\b", body, re.IGNORECASE):
+        return []
+    amount_match = re.search(
+        r"(?:^|\n)Price\s*(?:\n|\s)+\$\s*(\d{1,6}(?:\.\d{1,2})?)\b",
+        body,
+        re.IGNORECASE,
+    )
+    cadence_match = re.search(
+        r"\bRenews every\s+(month|week|2 weeks|4 weeks|28 days|year)\b",
+        body,
+        re.IGNORECASE,
+    )
+    if not amount_match or not cadence_match:
+        return []
+    amount = float(amount_match.group(1))
+    if not 0 < amount <= 10_000:
+        return []
+    cadence = cadence_match.group(1).casefold()
+    title = text(page_title).split(" - ", 1)[0].strip()
+    if not title or title.casefold() in {"momence", "membership"}:
+        lines = [line.strip() for line in body.splitlines() if line.strip()]
+        renew_index = next((index for index, line in enumerate(lines) if line.casefold().startswith("renews every")), -1)
+        title = lines[renew_index - 1] if renew_index > 0 else "Momence Membership"
+    description_match = re.search(
+        r"(?:^|\n)Description\s*(?:\n|\s)+(?P<description>.*?)(?=\n\s*Purchase Now\b|\n\s*Contact Details\b|$)",
+        body,
+        re.IGNORECASE | re.DOTALL,
+    )
+    description = " ".join(text(description_match.group("description") if description_match else "").split())
+    semantic = f"{title} {description}"
+    in_person_allowance = re.search(
+        r"\b(?:up to\s+)?(\d{1,3})\s+in-person classes\b",
+        semantic,
+        re.IGNORECASE,
+    )
+    allowance = (
+        {"count": float(in_person_allowance.group(1)), "period": cadence, "unlimited": False}
+        if in_person_allowance
+        else class_allowance({}, semantic, cadence)
+    )
+    renewals_match = re.search(r"\b(\d{1,3})\s+renewals? required\b", body, re.IGNORECASE)
+    minimum_months = int(renewals_match.group(1)) if renewals_match and cadence == "month" else None
+    promotion = bool(PROMOTION_RE.search(title))
+    restriction = RESTRICTED_RE.search(title)
+    eligibility_type = "restricted" if restriction else ("new-client" if promotion else "standard-adult")
+    restrictions = (
+        [restriction.group(0)]
+        if restriction
+        else (["Promotional or introductory product"] if promotion else [])
+    )
+    product_id = product_match.group(1)
+    alias = re.sub(r"[^a-z0-9]+", "-", title.casefold()).strip("-")
+    raw_label = " — ".join(filter(None, (
+        title,
+        f"USD {amount:g} every {cadence}",
+        f"{minimum_months} renewals required" if minimum_months else "",
+        description,
+    )))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductAliases": list(dict.fromkeys(filter(None, (alias, f"momence-{product_id}")))),
+        "sourceProductIdAuthority": "operator-widget",
+        "name": title,
+        "amount": amount,
+        "currency": "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": 1,
+        "productType": "monthly",
+        "accessScope": description or title,
+        "scopeType": "operator-storefront",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": title if promotion else ""},
+        "eligibility": {"type": eligibility_type, "restrictions": restrictions},
+        "commitment": {
+            "type": "fixed-term" if minimum_months else "unknown",
+            "minimumMonths": minimum_months,
+        },
+        "fees": [],
+        "ordinaryUse": not promotion and not restriction,
+        "bestValueLabel": bool(BEST_VALUE_RE.search(title)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "rendered-momence-membership",
+        "adapter": "momence",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
+def momence_membership_api_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct one exact recurring product from Momence's public API."""
+
+    if platform_for_url(source_url) != "momence" or not isinstance(payload, dict):
+        return []
+    route = re.search(r"/_api/primary/plugin/memberships/(\d{1,12})(?:/|$)", urlparse(source_url).path, re.IGNORECASE)
+    product_id = text(payload.get("id"))
+    if not route or route.group(1) != product_id or text(payload.get("type")).casefold() != "subscription":
+        return []
+    title = text(payload.get("name"))
+    description = " ".join(text(payload.get("description")).split())
+    amount = amount_from(payload)
+    if not title or amount is None or not 0 < amount <= 10_000:
+        return []
+    duration = max(1, int(number(payload.get("duration")) or 1))
+    unit = text(payload.get("durationUnit")).casefold()
+    if unit.startswith("month"):
+        cadence, interval_count = "month", duration
+    elif unit.startswith("week") and duration in {2, 4}:
+        cadence, interval_count = f"{duration} weeks", 1
+    elif unit.startswith("week"):
+        cadence, interval_count = "week", duration
+    elif unit.startswith("day") and duration == 28:
+        cadence, interval_count = "4 weeks", 1
+    elif unit.startswith("year"):
+        cadence, interval_count = "year", duration
+    else:
+        return []
+    in_person_allowance = re.search(
+        r"\b(?:up to\s+)?(\d{1,3})\s+in-person classes\b",
+        description,
+        re.IGNORECASE,
+    )
+    event_count = number(payload.get("numberOfEvents"))
+    allowance_count = float(in_person_allowance.group(1)) if in_person_allowance else event_count
+    allowance = (
+        {"count": allowance_count, "period": cadence, "unlimited": False}
+        if allowance_count is not None
+        else class_allowance({}, f"{title} {description}", cadence)
+    )
+    minimum_renewals = int(number(payload.get("minimumAutoRenews")) or 0)
+    minimum_months = minimum_renewals * duration if minimum_renewals and unit.startswith("month") else None
+    promotion = bool(PROMOTION_RE.search(title) or payload.get("freeTrial") is True or number(payload.get("paidTrialAmount")) not in {None, 0})
+    restrictions: list[str] = []
+    eligibility_type = "new-client" if promotion else "standard-adult"
+    if payload.get("hasAccessRestrictions") is True:
+        eligibility_type = "restricted"
+        restrictions.append("Operator access restrictions apply")
+    if payload.get("isRestrictedByAge") is True:
+        eligibility_type = "restricted"
+        minimum_age = number(payload.get("minEligibleAge"))
+        maximum_age = number(payload.get("maxEligibleAge"))
+        restrictions.append(
+            "Age restriction"
+            + (f" {int(minimum_age)}+" if minimum_age is not None and maximum_age is None else "")
+        )
+    if promotion:
+        restrictions.append("Promotional or introductory product")
+    joining_fee = number(payload.get("joiningFeeInCurrency"))
+    fees = []
+    if joining_fee is not None and joining_fee > 0:
+        fees.append({
+            "type": "enrollment",
+            "name": "Joining fee",
+            "amount": joining_fee,
+            "currency": text(payload.get("currency")).upper() or "USD",
+            "cadence": "one-time",
+            "mandatory": True,
+        })
+    alias = re.sub(r"[^a-z0-9]+", "-", title.casefold()).strip("-")
+    raw_label = " — ".join(filter(None, (
+        title,
+        f"{text(payload.get('currency')).upper() or 'USD'} {amount:g} every {duration} {unit}",
+        f"{minimum_renewals} minimum renewals" if minimum_renewals else "",
+        description,
+    )))
+    return [{
+        "sourceProductId": product_id,
+        "sourceProductAliases": list(dict.fromkeys(filter(None, (alias, f"momence-{product_id}")))),
+        "sourceProductIdAuthority": "operator-widget",
+        "name": title,
+        "amount": amount,
+        "currency": text(payload.get("currency")).upper() or "USD",
+        "cadence": cadence,
+        "billingInterval": cadence,
+        "intervalCount": interval_count,
+        "productType": "monthly",
+        "accessScope": description or title,
+        "scopeType": "operator-storefront",
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": title if promotion else ""},
+        "eligibility": {"type": eligibility_type, "restrictions": restrictions},
+        "commitment": {
+            "type": "fixed-term" if minimum_renewals else "unknown",
+            "minimumMonths": minimum_months,
+        },
+        "fees": fees,
+        "ordinaryUse": not promotion and eligibility_type == "standard-adult",
+        "bestValueLabel": bool(BEST_VALUE_RE.search(title)),
+        "purchaseMethod": "direct-public",
+        "rawLabel": raw_label[:500],
+        "method": "public-momence-membership-api",
+        "adapter": "momence",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "operator-storefront",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
 def jane_service_card_candidates(card_text: str, source_url: str, href: str = "") -> list[dict[str, Any]]:
     """Extract exact fitness-service prices from a public Jane appointment card.
 
