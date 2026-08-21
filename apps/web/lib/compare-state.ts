@@ -3,12 +3,38 @@ import { DEFAULT_COMPARISON_ASSUMPTIONS } from "./gym-value";
 
 export const COMPARE_IDS_KEY = "sf-gyms:compare";
 export const COMPARE_ASSUMPTIONS_KEY = "sf-gyms:compare-assumptions:v1";
-export const ALLOWED_MONTHS = [1, 3, 6, 12, 24] as const;
+export const ALLOWED_MONTHS = [1, 2, 3, 6, 12, 24] as const;
+export type CompareSlotId = string | null;
 
 type StorageLike = Pick<Storage, "getItem" | "setItem" | "removeItem">;
 
 export function sanitizeCompareIds(ids: string[], validIds: Set<string>): string[] {
   return Array.from(new Set(ids.filter((id) => validIds.has(id)))).slice(0, 3);
+}
+
+export function createCompareSlots(ids: string[] = []): CompareSlotId[] {
+  return [ids[0] ?? null, ids[1] ?? null, ids[2] ?? null];
+}
+
+export function compactCompareSlots(slots: CompareSlotId[]): string[] {
+  return slots.filter((id): id is string => Boolean(id)).slice(0, 3);
+}
+
+export function setCompareSlot(slots: CompareSlotId[], slotIndex: number, id: string): CompareSlotId[] {
+  const current = createCompareSlots(compactCompareSlots(slots));
+  slots.slice(0, 3).forEach((slotId, index) => { current[index] = slotId; });
+  if (slotIndex < 0 || slotIndex > 2) return current;
+  if (current.some((selectedId, index) => selectedId === id && index !== slotIndex)) return current;
+  current[slotIndex] = id;
+  return current;
+}
+
+export function removeCompareSlot(slots: CompareSlotId[], slotIndex: number): CompareSlotId[] {
+  const current = createCompareSlots();
+  slots.slice(0, 3).forEach((slotId, index) => { current[index] = slotId; });
+  if (slotIndex < 0 || slotIndex > 2) return current;
+  current[slotIndex] = null;
+  return current;
 }
 
 export function readCompareIds(storage: StorageLike, validIds: Set<string>): string[] {
@@ -93,4 +119,3 @@ export function buildComparisonParams(ids: string[], assumptions: ComparisonAssu
   }
   return params;
 }
-

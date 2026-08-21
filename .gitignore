@@ -34,3 +34,5 @@ out/
 .supabase/
 *.log
 coverage.xml
+apps/web/public/maplibre-gl-worker.mjs
+apps/web/public/maplibre-gl-shared.mjs

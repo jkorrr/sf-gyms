@@ -18,7 +18,7 @@ export default function CompareTray({ gyms, compareIds, onRemove }: CompareTrayP
     <aside className="compare-tray" aria-label="Gym comparison tray">
       <div className="compare-tray-title"><strong>Compare</strong><span>{compareIds.length}/3 gyms</span></div>
       <div className="compare-tray-slots">
-        {selected.map((gym) => <span className="compare-tray-chip" key={gym.id}>
+        {selected.map((gym) => <span className="compare-tray-chip" key={gym.id} title={`${gym.name} · ${gym.neighborhood}`}>
           <span>{gym.name}</span>
           <button type="button" onClick={() => onRemove(gym.id)} aria-label={`Remove ${gym.name} from comparison`}>×</button>
         </span>)}
@@ -28,4 +28,3 @@ export default function CompareTray({ gyms, compareIds, onRemove }: CompareTrayP
     </aside>
   );
 }
-

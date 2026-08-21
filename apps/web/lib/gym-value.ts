@@ -5,7 +5,7 @@ export type SortOrder = "best_match" | "first_year_cost" | "monthly" | "day_pass
 
 export type ComparisonAssumptions = {
   visitsPerWeek: number;
-  months: 1 | 3 | 6 | 12 | 24;
+  months: 1 | 2 | 3 | 6 | 12 | 24;
   origin: GeoPoint | null;
 };
 
@@ -171,4 +171,3 @@ export function rankGyms(
 
   return rows.map((row, index) => ({ ...row, rank: index + 1, why: whyRanked(row, options.sortOrder) }));
 }
-

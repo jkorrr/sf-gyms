@@ -1,6 +1,6 @@
 import { describe, expect, it } from "vitest";
 
-import { buildComparisonParams, parseComparisonParams, sanitizeCompareIds } from "./compare-state";
+import { buildComparisonParams, compactCompareSlots, createCompareSlots, parseComparisonParams, removeCompareSlot, sanitizeCompareIds, setCompareSlot } from "./compare-state";
 
 describe("comparison URL state", () => {
   const validIds = new Set(["a", "b", "c", "d"]);
@@ -26,5 +26,20 @@ describe("comparison URL state", () => {
     expect(params.get("lat")).toBe("37.756");
     expect(params.get("lng")).toBe("-122.401");
   });
-});
 
+  it("appends and replaces a specific comparison slot without changing order", () => {
+    expect(setCompareSlot(createCompareSlots(["a"]), 1, "b")).toEqual(["a", "b", null]);
+    expect(setCompareSlot(createCompareSlots(["a", "b", "c"]), 1, "d")).toEqual(["a", "d", "c"]);
+  });
+
+  it("keeps every chooser independent while compacting persisted ids", () => {
+    const thirdOnly = setCompareSlot(createCompareSlots(), 2, "c");
+    expect(thirdOnly).toEqual([null, null, "c"]);
+    expect(compactCompareSlots(thirdOnly)).toEqual(["c"]);
+    expect(removeCompareSlot(["a", "b", "c"], 1)).toEqual(["a", null, "c"]);
+  });
+
+  it("rejects duplicate selections across slots", () => {
+    expect(setCompareSlot(createCompareSlots(["a", "b"]), 1, "a")).toEqual(["a", "b", null]);
+  });
+});
