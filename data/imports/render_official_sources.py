@@ -81,6 +81,28 @@ def detect_access_blocker(title: str, visible_text: str, html: str = "") -> str:
     return ""
 
 
+def remove_unattached_crunch_promotions(candidates: list[dict[str, Any]], source_url: str) -> list[dict[str, Any]]:
+    """Prefer complete Crunch card candidates over detached summary dues."""
+
+    if not host(source_url).endswith("crunch.com"):
+        return candidates
+    attached_promotion_amounts = {
+        float(candidate.get("amount") or 0)
+        for candidate in candidates
+        if text(candidate.get("sourceProductId")).endswith("-current-offer")
+        and (candidate.get("promotion") or {}).get("isPromotion")
+    }
+    if not attached_promotion_amounts:
+        return candidates
+    return [
+        candidate
+        for candidate in candidates
+        if candidate.get("sourceProductId")
+        or candidate.get("productType") != "monthly"
+        or float(candidate.get("amount") or 0) not in attached_promotion_amounts
+    ]
+
+
 def access_block_is_current(attempted_at: str, as_of: str, cooldown_days: int = ACCESS_BLOCK_COOLDOWN_DAYS) -> bool:
     try:
         attempted = datetime.fromisoformat(text(attempted_at)[:10]).date()
@@ -210,7 +232,10 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
     page_title = ""
     try:
         page.goto(url, wait_until="commit", timeout=timeout_ms)
-        page.wait_for_timeout(1500)
+        # Crunch hydrates regular rates and plan-linked fee tables after its
+        # summary prices. Waiting for that operator-owned DOM prevents the
+        # early summary amounts from being mistaken for complete plan cards.
+        page.wait_for_timeout(3000 if host(url).endswith("crunch.com") else 1500)
         for locator in page.locator("button, [role='tab'], a").all()[:150]:
             try:
                 label = " ".join(locator.inner_text(timeout=300).split())
@@ -270,6 +295,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             candidate["method"] = "rendered-visible-plan-card"
             candidate["cardAssociationHash"] = hashlib.sha256(card_text.encode("utf-8")).hexdigest()
             dom_candidates.append(candidate)
+    dom_candidates = remove_unattached_crunch_promotions(dom_candidates, url)
     observations = network_candidates + dom_candidates
     deduplicated: list[dict[str, Any]] = []
     seen: set[tuple[Any, ...]] = set()

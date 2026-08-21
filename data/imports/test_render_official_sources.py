@@ -41,6 +41,25 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertFalse(rendered.is_safe_public_tab_label("Join now"))
         self.assertFalse(rendered.is_safe_public_tab_label("Create account"))
 
+    def test_crunch_render_prefers_attached_promotion_over_detached_summary_amount(self) -> None:
+        candidates = [
+            {"amount": 80.75, "productType": "monthly", "promotion": {"isPromotion": False}},
+            {
+                "sourceProductId": "one-crunch-current-offer", "amount": 80.75,
+                "productType": "monthly", "promotion": {"isPromotion": True},
+            },
+            {
+                "sourceProductId": "one-crunch-regular", "amount": 95,
+                "productType": "monthly", "promotion": {"isPromotion": False},
+            },
+        ]
+        filtered = rendered.remove_unattached_crunch_promotions(
+            candidates, "https://www.crunch.com/locations/chestnut"
+        )
+        self.assertEqual([candidate.get("sourceProductId") for candidate in filtered], [
+            "one-crunch-current-offer", "one-crunch-regular",
+        ])
+
     def test_incremental_results_replace_only_processed_gym_evidence(self) -> None:
         attempts, observations = rendered.merge_incremental_results(
             [{"gymId": "keep", "url": "https://keep.example"}, {"gymId": "replace", "url": "https://old.example"}],
