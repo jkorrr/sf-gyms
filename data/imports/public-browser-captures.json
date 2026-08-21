@@ -140,6 +140,105 @@
           "cardText": "90 Min Party\n$350\n1 credit\nCredit pack\n12 months\nSan Francisco\nPrivate party for up to 10 people."
         }
       ]
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
+      "contractCards": [
+        {
+          "productId": "104",
+          "productName": "4 Class Monthly Membership",
+          "contractText": "4 Class Monthly Membership\n4 in-studio classes each month at your selected Yoga Flow SF location\n$100.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+        },
+        {
+          "productId": "105",
+          "productName": "8 Class Monthly Membership",
+          "contractText": "8 Class Monthly Membership\n8 in-studio classes each month at your selected Yoga Flow SF location\n$175.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+        },
+        {
+          "productId": "103",
+          "productName": "Unlimited Membership - All Studios",
+          "contractText": "Unlimited Membership - All Studios\nUnlimited in-studio classes at all Yoga Flow SF locations\n$99 First Month for new members\nThen $210/month\n$210.00 every month\nNo minimum commitment; cancel anytime."
+        }
+      ],
+      "purchaseRows": [
+        {"categoryLabel":"Classes","productId":"102267","cardText":"New Student 2-Week Unlimited Trial - Noe\n$59.00"},
+        {"categoryLabel":"Classes","productId":"100002","cardText":"In-Studio Drop-In - Noe\n$35.00"},
+        {"categoryLabel":"Classes","productId":"100003","cardText":"5 Class Pack\n$150.00"},
+        {"categoryLabel":"Classes","productId":"100004","cardText":"10 Class Pack\n$275.00"},
+        {"categoryLabel":"Classes","productId":"100005","cardText":"20 Class Pack\n$500.00"},
+        {"categoryLabel":"Classes","productId":"100033","cardText":"One Month | Noe Studio (Does Not Renew)\n$240.00"}
+      ]
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112",
+      "contractCards": [
+        {
+          "productId": "104",
+          "productName": "4 Class Monthly Membership",
+          "contractText": "4 Class Monthly Membership\n4 in-studio classes each month at your selected Yoga Flow SF location\n$100.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+        },
+        {
+          "productId": "105",
+          "productName": "8 Class Monthly Membership",
+          "contractText": "8 Class Monthly Membership\n8 in-studio classes each month at your selected Yoga Flow SF location\n$175.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+        },
+        {
+          "productId": "103",
+          "productName": "Unlimited Membership - All Studios",
+          "contractText": "Unlimited Membership - All Studios\nUnlimited in-studio classes at all Yoga Flow SF locations\n$99 First Month for new members\nThen $210/month\n$210.00 every month\nNo minimum commitment; cancel anytime."
+        }
+      ],
+      "purchaseRows": [
+        {"categoryLabel":"Classes","productId":"103256","cardText":"New Student 2-Week Unlimited Trial - Ocean\n$59.00"},
+        {"categoryLabel":"Classes","productId":"100002","cardText":"In-Studio Drop-In - Ocean\n$35.00"},
+        {"categoryLabel":"Classes","productId":"100003","cardText":"5 Class Pack\n$150.00"},
+        {"categoryLabel":"Classes","productId":"100004","cardText":"10 Class Pack\n$275.00"},
+        {"categoryLabel":"Classes","productId":"100005","cardText":"20 Class Pack\n$500.00"},
+        {"categoryLabel":"Classes","productId":"100006","cardText":"One Month | Ocean Studio (Does Not Renew)\n$240.00"}
+      ]
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123",
+      "contractCards": [
+        {
+          "productId": "104",
+          "productName": "4 Class Monthly Membership",
+          "contractText": "4 Class Monthly Membership\n4 in-studio classes each month at your selected Yoga Flow SF location\n$100.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+        },
+        {
+          "productId": "105",
+          "productName": "8 Class Monthly Membership",
+          "contractText": "8 Class Monthly Membership\n8 in-studio classes each month at your selected Yoga Flow SF location\n$175.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+        },
+        {
+          "productId": "103",
+          "productName": "Unlimited Membership - All Studios",
+          "contractText": "Unlimited Membership - All Studios\nUnlimited in-studio classes at all Yoga Flow SF locations\n$99 First Month for new members\nThen $210/month\n$210.00 every month\nNo minimum commitment; cancel anytime."
+        }
+      ],
+      "purchaseRows": [
+        {"categoryLabel":"Classes","productId":"102234","cardText":"New Student 2-Week Unlimited Trial - Union\n$59.00"},
+        {"categoryLabel":"Classes","productId":"100002","cardText":"In-Studio Drop-In - Union\n$35.00"},
+        {"categoryLabel":"Classes","productId":"100003","cardText":"5 Class Pack\n$150.00"},
+        {"categoryLabel":"Classes","productId":"100004","cardText":"10 Class Pack\n$275.00"},
+        {"categoryLabel":"Classes","productId":"100005","cardText":"20 Class Pack\n$500.00"},
+        {"categoryLabel":"Classes","productId":"100006","cardText":"One Month | Union Studio (Does Not Renew)\n$240.00"}
+      ]
     }
   ]
 }

@@ -11639,7 +11639,9 @@
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -11743,7 +11745,9 @@
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
@@ -16533,12 +16537,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
-          "status": "access-blocked",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://yogaflowsf.com/membership/",
-          "status": "robots-disallowed",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -16585,12 +16589,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
-          "status": "access-blocked",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://yogaflowsf.com/membership/",
-          "status": "robots-disallowed",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -16637,12 +16641,12 @@
         },
         {
           "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
-          "status": "access-blocked",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
           "url": "https://yogaflowsf.com/membership/",
-          "status": "robots-disallowed",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]

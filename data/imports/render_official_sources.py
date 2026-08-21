@@ -119,6 +119,12 @@ def safe_mindbody_contract_href(current_url: str, href: str) -> bool:
     )
 
 
+def is_safe_mindbody_contract_link_label(label: str) -> bool:
+    """Allow only the public recurring-plan tab, never cart/account actions."""
+
+    return " ".join(text(label).casefold().split()) in {"contracts", "monthly memberships"}
+
+
 def safe_public_tab_href(current_url: str, href: str) -> bool:
     """Allow in-page public tabs, never let a navigation label change pages."""
 
@@ -403,45 +409,107 @@ def public_browser_capture_observations(
         source_url = text(capture.get("sourceUrl"))
         catalog_source_url = text(capture.get("catalogSourceUrl"))
         captured_at = text(capture.get("capturedAt"))
-        if (
+        platform = static_crawler.platform_name(source_url)
+        invalid_common = (
             gym_id not in processed_gym_ids
             or not gym
             or gym.get("publicationStatus") != "publish"
-            or static_crawler.platform_name(source_url) != "bookee"
-            or not re.search(r"/pricing/r/\d{1,12}/loc/\d{1,12}/?$", urlparse(source_url).path, re.IGNORECASE)
             or catalog_source_url not in {
                 text(gym.get("priceSourceUrl")), text(gym.get("officialUrl")), text(gym.get("websiteUrl")),
             }
             or not allowed_network_response(catalog_source_url, source_url)
             or not re.fullmatch(r"\d{4}-\d{2}-\d{2}", captured_at)
-        ):
+        )
+        if invalid_common:
             continue
-        cards = capture.get("cards")
-        if not isinstance(cards, list) or not 1 <= len(cards) <= 150:
-            continue
-        for card in cards:
-            if not isinstance(card, dict):
+        if platform == "bookee":
+            if not re.search(r"/pricing/r/\d{1,12}/loc/\d{1,12}/?$", urlparse(source_url).path, re.IGNORECASE):
                 continue
-            compact_card = {
-                key: text(card.get(key))
-                for key in (
-                    "serviceGroupId", "productName", "displayedPrice", "locationLabel",
-                    "sectionLabel", "cardText",
+            cards = capture.get("cards")
+            if not isinstance(cards, list) or not 1 <= len(cards) <= 150:
+                continue
+            for card in cards:
+                if not isinstance(card, dict):
+                    continue
+                compact_card = {
+                    key: text(card.get(key))
+                    for key in (
+                        "serviceGroupId", "productName", "displayedPrice", "locationLabel",
+                        "sectionLabel", "cardText",
+                    )
+                }
+                digest = hashlib.sha256(
+                    json.dumps(compact_card, sort_keys=True, ensure_ascii=False).encode("utf-8")
+                ).hexdigest()
+                candidates = static_crawler.platform_adapters.bookee_product_card_candidates(
+                    compact_card["cardText"], compact_card["productName"], compact_card["displayedPrice"],
+                    source_url, compact_card["serviceGroupId"], compact_card["locationLabel"],
+                    compact_card["sectionLabel"],
                 )
-            }
-            digest = hashlib.sha256(
-                json.dumps(compact_card, sort_keys=True, ensure_ascii=False).encode("utf-8")
-            ).hexdigest()
-            candidates = static_crawler.platform_adapters.bookee_product_card_candidates(
-                compact_card["cardText"], compact_card["productName"], compact_card["displayedPrice"],
-                source_url, compact_card["serviceGroupId"], compact_card["locationLabel"],
-                compact_card["sectionLabel"],
-            )
-            for candidate in candidates:
-                candidate["method"] = "captured-public-bookee-product-card"
-                candidate["contentHash"] = digest
-                candidate["cardAssociationHash"] = digest
-                observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
+                for candidate in candidates:
+                    candidate["method"] = "captured-public-bookee-product-card"
+                    candidate["contentHash"] = digest
+                    candidate["cardAssociationHash"] = digest
+                    observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
+        elif platform == "mindbody":
+            parsed_source = urlparse(source_url)
+            query = parse_qs(parsed_source.query)
+            if (
+                parsed_source.path.casefold() != "/classic/ws"
+                or not re.fullmatch(r"\d{1,12}", (query.get("studioid") or [""])[0])
+                or (query.get("stype") or [""])[0] != "41"
+                or set(query) - {"studioid", "stype"}
+            ):
+                continue
+            location_label = " ".join(text(capture.get("locationLabel")).split())[:160]
+            contracts = capture.get("contractCards")
+            rows = capture.get("purchaseRows")
+            if not isinstance(contracts, list) or not isinstance(rows, list):
+                continue
+            if len(contracts) > 80 or len(rows) > 150 or (not contracts and not rows):
+                continue
+            for card in contracts:
+                if not isinstance(card, dict):
+                    continue
+                compact_card = {
+                    key: text(card.get(key))
+                    for key in ("productId", "productName", "contractText")
+                }
+                if len(compact_card["contractText"]) > 2_500:
+                    continue
+                digest = hashlib.sha256(
+                    json.dumps(compact_card, sort_keys=True, ensure_ascii=False).encode("utf-8")
+                ).hexdigest()
+                candidates = static_crawler.platform_adapters.mindbody_contract_candidates(
+                    compact_card["productName"], compact_card["contractText"], source_url,
+                    compact_card["productId"], location_label,
+                )
+                for candidate in candidates:
+                    candidate["method"] = "captured-public-mindbody-contract"
+                    candidate["contentHash"] = digest
+                    candidate["cardAssociationHash"] = digest
+                    observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
+            for row in rows:
+                if not isinstance(row, dict):
+                    continue
+                compact_row = {
+                    key: text(row.get(key))
+                    for key in ("categoryLabel", "productId", "cardText")
+                }
+                if len(compact_row["cardText"]) > 1_500:
+                    continue
+                digest = hashlib.sha256(
+                    json.dumps(compact_row, sort_keys=True, ensure_ascii=False).encode("utf-8")
+                ).hexdigest()
+                candidates = static_crawler.platform_adapters.mindbody_purchase_item_candidates(
+                    compact_row["categoryLabel"], compact_row["cardText"], source_url,
+                    compact_row["productId"], location_label,
+                )
+                for candidate in candidates:
+                    candidate["method"] = "captured-public-mindbody-purchase-item"
+                    candidate["contentHash"] = digest
+                    candidate["cardAssociationHash"] = digest
+                    observations.append(rendered_observation(gym, candidate, captured_at, catalog_source_url))
     return observations
 
 
@@ -759,7 +827,7 @@ def render_gym(browser: Any, gym: dict[str, Any], attempted_at: str, timeout_ms:
             contract_href = ""
             for link in page.locator("a").all()[:100]:
                 try:
-                    if " ".join(link.inner_text(timeout=300).split()).casefold() != "contracts":
+                    if not is_safe_mindbody_contract_link_label(link.inner_text(timeout=300)):
                         continue
                     href = text(link.get_attribute("href"))
                     if safe_mindbody_contract_href(page.url, href):

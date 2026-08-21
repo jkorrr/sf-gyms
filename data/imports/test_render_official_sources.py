@@ -121,6 +121,10 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertTrue(rendered.safe_mindbody_contract_href(current, "/asp/main_shop.asp?pMode=0&tabID=3"))
         self.assertFalse(rendered.safe_mindbody_contract_href(current, "/asp/main_shop.asp?pMode=4&tabID=3"))
         self.assertFalse(rendered.safe_mindbody_contract_href(current, "https://example.com/asp/main_shop.asp?pMode=0"))
+        self.assertTrue(rendered.is_safe_mindbody_contract_link_label("Contracts"))
+        self.assertTrue(rendered.is_safe_mindbody_contract_link_label("Monthly Memberships"))
+        self.assertFalse(rendered.is_safe_mindbody_contract_link_label("Cart"))
+        self.assertFalse(rendered.is_safe_mindbody_contract_link_label("Account"))
 
     def test_public_tab_links_cannot_navigate_off_the_exact_location_page(self) -> None:
         current = "https://operator.example/locations/sf#pricing"
@@ -362,6 +366,61 @@ class RenderedCrawlerTests(unittest.TestCase):
         self.assertEqual(
             rendered.public_browser_capture_observations(
                 {"gyms": [gym]}, {"captures": [capture]}, {"vrv3"},
+            ),
+            [],
+        )
+
+    def test_mindbody_public_browser_capture_reconstructs_contract_and_drop_in(self) -> None:
+        gym = {
+            "id": "yoga-flow-noe", "name": "Yoga Flow Noe", "publicationStatus": "publish",
+            "websiteUrl": "https://yogaflowsf.com/noe/",
+            "officialUrl": "https://yogaflowsf.com/noe/",
+            "priceSourceUrl": "https://yogaflowsf.com/membership/",
+        }
+        source_url = "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41"
+        captures = {"captures": [{
+            "gymId": gym["id"], "sourceUrl": source_url,
+            "catalogSourceUrl": gym["priceSourceUrl"], "capturedAt": "2026-08-21",
+            "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
+            "contractCards": [{
+                "productId": "104", "productName": "4 Class Monthly Membership",
+                "contractText": "4 Class Monthly Membership\n4 in-studio classes each month at the selected studio\n$100.00 every month\nMonth-to-month commitment; cancel anytime.",
+            }],
+            "purchaseRows": [{
+                "categoryLabel": "Classes", "productId": "100002",
+                "cardText": "In-Studio Drop-In - Noe\n$35.00",
+            }],
+        }]}
+
+        observations = rendered.public_browser_capture_observations(
+            {"gyms": [gym]}, captures, {gym["id"]},
+        )
+
+        self.assertEqual(len(observations), 2)
+        by_method = {item["method"]: item for item in observations}
+        contract = by_method["captured-public-mindbody-contract"]
+        drop_in = by_method["captured-public-mindbody-purchase-item"]
+        self.assertEqual((contract["amount"], contract["classAllowance"]["count"]), (100, 4))
+        self.assertIn("membership-4", contract["sourceProductAliases"])
+        self.assertEqual((drop_in["amount"], drop_in["cadence"]), (35, "visit"))
+        self.assertIn("noe-drop-in", drop_in["sourceProductAliases"])
+        self.assertEqual(contract["capturedAt"], "2026-08-21")
+
+    def test_mindbody_public_browser_capture_rejects_checkout_query(self) -> None:
+        gym = {
+            "id": "yoga-flow-noe", "name": "Yoga Flow Noe", "publicationStatus": "publish",
+            "websiteUrl": "https://yogaflowsf.com/noe/",
+            "officialUrl": "https://yogaflowsf.com/noe/",
+            "priceSourceUrl": "https://yogaflowsf.com/membership/",
+        }
+        capture = {
+            "gymId": gym["id"], "capturedAt": "2026-08-21", "locationLabel": "Noe",
+            "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41&prodid=104",
+            "catalogSourceUrl": gym["priceSourceUrl"], "contractCards": [{}], "purchaseRows": [],
+        }
+        self.assertEqual(
+            rendered.public_browser_capture_observations(
+                {"gyms": [gym]}, {"captures": [capture]}, {gym["id"]},
             ),
             [],
         )

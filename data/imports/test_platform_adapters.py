@@ -269,6 +269,63 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertEqual(candidates[0]["fees"], [])
         self.assertFalse(candidates[0]["autoPublishEligible"])
 
+    def test_mindbody_yoga_flow_contract_recovers_allowance_scope_and_stable_aliases(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyYogaFlowContract"]
+        candidate = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"],
+            fixture["sourceProductId"], fixture["locationLabel"],
+        )[0]
+
+        self.assertEqual((candidate["sourceProductId"], candidate["amount"]), ("104", 100))
+        self.assertEqual(candidate["classAllowance"], {
+            "count": 4, "period": "month", "unlimited": False,
+        })
+        self.assertEqual(candidate["scopeType"], "single-location")
+        self.assertIn("membership-4", candidate["sourceProductAliases"])
+        self.assertIn("four-monthly", candidate["sourceProductAliases"])
+        self.assertFalse(candidate["promotion"]["isPromotion"])
+        self.assertTrue(candidate["ordinaryUse"])
+        self.assertEqual(candidate["exactLocationMatch"], "exact-location")
+
+    def test_mindbody_first_month_offer_does_not_contaminate_ongoing_plan(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyYogaFlowUnlimitedIntro"]
+        candidates = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"],
+            fixture["sourceProductId"], fixture["locationLabel"],
+        )
+
+        self.assertEqual(len(candidates), 2)
+        ongoing, intro = candidates
+        self.assertEqual((ongoing["amount"], ongoing["scopeType"]), (210, "multi-location"))
+        self.assertFalse(ongoing["promotion"]["isPromotion"])
+        self.assertTrue(ongoing["ordinaryUse"])
+        self.assertEqual((intro["amount"], intro["sourceProductId"]), (99, "103-first-month"))
+        self.assertTrue(intro["promotion"]["isPromotion"])
+        self.assertEqual(intro["eligibility"]["type"], "new-client")
+        self.assertFalse(intro["ordinaryUse"])
+
+    def test_mindbody_class_rows_distinguish_drop_in_from_pack(self) -> None:
+        drop_fixture = self.rendered_fixtures["mindbodyYogaFlowDropInRow"]
+        pack_fixture = self.rendered_fixtures["mindbodyYogaFlowPackRow"]
+        drop_in = adapters.mindbody_purchase_item_candidates(
+            drop_fixture["categoryLabel"], drop_fixture["cardText"], drop_fixture["url"],
+            drop_fixture["sourceProductId"], drop_fixture["locationLabel"],
+        )[0]
+        pack = adapters.mindbody_purchase_item_candidates(
+            pack_fixture["categoryLabel"], pack_fixture["cardText"], pack_fixture["url"],
+            pack_fixture["sourceProductId"], pack_fixture["locationLabel"],
+        )[0]
+
+        self.assertEqual((drop_in["productType"], drop_in["cadence"]), ("drop-in", "visit"))
+        self.assertEqual(drop_in["classAllowance"], {
+            "count": 1.0, "period": "visit", "unlimited": False,
+        })
+        self.assertIn("noe-drop-in", drop_in["sourceProductAliases"])
+        self.assertTrue(drop_in["ordinaryUse"])
+        self.assertEqual(pack["productType"], "drop-in")
+        self.assertIn("noe-five-pack", pack["sourceProductAliases"])
+        self.assertFalse(pack["ordinaryUse"])
+
     def test_momence_membership_uses_base_price_not_card_checkout_total(self) -> None:
         fixture = self.rendered_fixtures["momenceMembership"]
 

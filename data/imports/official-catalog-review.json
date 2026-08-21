@@ -2,7 +2,7 @@
   "_meta": {
     "generatedAt": "2026-08-21",
     "methodology": "Grouped review-only public product/card observations. Loose dollar text is rejected. No proposal is a verified price until independently approved.",
-    "proposalCount": 94,
+    "proposalCount": 97,
     "unchangedApprovedCount": 19,
     "rejectedUnattachedObservationCount": 822
   },
@@ -9345,6 +9345,434 @@
           "dropIns": {
             "status": "none",
             "reason": "No ordinary public single-visit or single-class catalog was verified."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": false,
+        "planOfferCount": 0,
+        "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "canonicalAddress": "4049 24th st",
+      "operatorId": "yogaflowsf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "103-first-month",
+          "sourceProductAliases": [
+            "membership-unlimited-first-month",
+            "unlimited-monthly-first-month"
+          ],
+          "name": "Unlimited Membership - All Studios",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes across all studios",
+          "scopeType": "multi-location",
+          "amount": 99.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": true,
+            "label": "First month only; ongoing rate $210"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "First-month introductory offer"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "Unlimited Membership - All Studios",
+            "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103-first-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "104",
+          "sourceProductAliases": [
+            "membership-4",
+            "four-monthly"
+          ],
+          "name": "4 Class Monthly Membership",
+          "productType": "class-membership",
+          "accessScope": "4 classes per month at the selected studio",
+          "scopeType": "single-location",
+          "amount": 100.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4.0,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "4 Class Monthly Membership",
+            "contentHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "104",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "105",
+          "sourceProductAliases": [
+            "membership-8",
+            "eight-monthly"
+          ],
+          "name": "8 Class Monthly Membership",
+          "productType": "class-membership",
+          "accessScope": "8 classes per month at the selected studio",
+          "scopeType": "single-location",
+          "amount": 175.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 8.0,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "8 Class Monthly Membership",
+            "contentHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "105",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "103",
+          "sourceProductAliases": [
+            "membership-unlimited",
+            "unlimited-monthly"
+          ],
+          "name": "Unlimited Membership - All Studios",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes across all studios",
+          "scopeType": "multi-location",
+          "amount": 210.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "Unlimited Membership - All Studios",
+            "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "100002",
+          "sourceProductAliases": [
+            "class-drop-in",
+            "noe-drop-in"
+          ],
+          "name": "In-Studio Drop-In - Noe",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 35.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "In-Studio Drop-In - Noe",
+            "contentHash": "2e1a78cf5cd9c0d0f02bbd2bc725c5d39b7d5031de75ec7592296d3ec48cae5d",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100002",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "102267",
+          "sourceProductAliases": [
+            "noe-new-student-two-week"
+          ],
+          "name": "New Student 2-Week Unlimited Trial - Noe",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 59.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Promotional or seasonal product"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Classes New Student 2-Week Unlimited Trial - Noe"
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "New Student 2-Week Unlimited Trial - Noe",
+            "contentHash": "546451b0918b36026bba7c66a73a884fe557b0b499c3fad93e7e76f09c1731f8",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "102267",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100003",
+          "sourceProductAliases": [
+            "noe-five-pack"
+          ],
+          "name": "5 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 150.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "5 Class Pack",
+            "contentHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100003",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100033",
+          "sourceProductAliases": [
+            "noe-one-month-nonrenewing"
+          ],
+          "name": "One Month | Noe Studio (Does Not Renew)",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 240.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "One Month | Noe Studio (Does Not Renew)",
+            "contentHash": "d9d593858f42769c3eee3a57181d53dd78815b9ce0d7ccd8afe4602a29b5fa89",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100033",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100004",
+          "sourceProductAliases": [
+            "noe-ten-pack"
+          ],
+          "name": "10 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 275.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "10 Class Pack",
+            "contentHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100004",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100005",
+          "sourceProductAliases": [
+            "noe-twenty-pack"
+          ],
+          "name": "20 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 500.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "20 Class Pack",
+            "contentHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100005",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 100.0,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "osm-node-6471124709:plan:membership-4",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
           }
         }
       },
@@ -23826,6 +24254,434 @@
       }
     },
     {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "canonicalAddress": "1892 union st",
+      "operatorId": "yogaflowsf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "103-first-month",
+          "sourceProductAliases": [
+            "membership-unlimited-first-month",
+            "unlimited-monthly-first-month"
+          ],
+          "name": "Unlimited Membership - All Studios",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes across all studios",
+          "scopeType": "multi-location",
+          "amount": 99.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": true,
+            "label": "First month only; ongoing rate $210"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "First-month introductory offer"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "Unlimited Membership - All Studios",
+            "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103-first-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "104",
+          "sourceProductAliases": [
+            "membership-4",
+            "four-monthly"
+          ],
+          "name": "4 Class Monthly Membership",
+          "productType": "class-membership",
+          "accessScope": "4 classes per month at the selected studio",
+          "scopeType": "single-location",
+          "amount": 100.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4.0,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "4 Class Monthly Membership",
+            "contentHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "104",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "105",
+          "sourceProductAliases": [
+            "membership-8",
+            "eight-monthly"
+          ],
+          "name": "8 Class Monthly Membership",
+          "productType": "class-membership",
+          "accessScope": "8 classes per month at the selected studio",
+          "scopeType": "single-location",
+          "amount": 175.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 8.0,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "8 Class Monthly Membership",
+            "contentHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "105",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "103",
+          "sourceProductAliases": [
+            "membership-unlimited",
+            "unlimited-monthly"
+          ],
+          "name": "Unlimited Membership - All Studios",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes across all studios",
+          "scopeType": "multi-location",
+          "amount": 210.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "Unlimited Membership - All Studios",
+            "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "100002",
+          "sourceProductAliases": [
+            "class-drop-in",
+            "union-drop-in"
+          ],
+          "name": "In-Studio Drop-In - Union",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 35.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "In-Studio Drop-In - Union",
+            "contentHash": "34edbd22ef49cfe7dacd69abaad5ecc833ba0973e154dc8729047fbb52692427",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100002",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "102234",
+          "sourceProductAliases": [
+            "union-new-student-two-week"
+          ],
+          "name": "New Student 2-Week Unlimited Trial - Union",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 59.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Promotional or seasonal product"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Classes New Student 2-Week Unlimited Trial - Union"
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "New Student 2-Week Unlimited Trial - Union",
+            "contentHash": "3210886ae80aa2a7c3f27f8dda857f319e94a7c44aebc3f07b59036f25e2a131",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "102234",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100003",
+          "sourceProductAliases": [
+            "union-five-pack"
+          ],
+          "name": "5 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 150.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "5 Class Pack",
+            "contentHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100003",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100006",
+          "sourceProductAliases": [
+            "union-one-month-nonrenewing"
+          ],
+          "name": "One Month | Union Studio (Does Not Renew)",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 240.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "One Month | Union Studio (Does Not Renew)",
+            "contentHash": "f95cdf4567f0fb7a4b170af82015fdce40f676c1598de5560dfac12437e76f2f",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100006",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100004",
+          "sourceProductAliases": [
+            "union-ten-pack"
+          ],
+          "name": "10 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 275.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "10 Class Pack",
+            "contentHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100004",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100005",
+          "sourceProductAliases": [
+            "union-twenty-pack"
+          ],
+          "name": "20 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 500.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "20 Class Pack",
+            "contentHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100005",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 100.0,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "web-982849bdb030ca:plan:membership-4",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": false,
+        "planOfferCount": 0,
+        "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
       "gymId": "web-99a718d670cb34",
       "gymName": "Crunch Fitness Union Street",
       "canonicalAddress": "1725 union st",
@@ -26266,6 +27122,434 @@
       "approvedCatalogBaseline": {
         "included": true,
         "planOfferCount": 3,
+        "dropInOfferCount": 0,
+        "costContextOfferCount": 0,
+        "catalogCompleteness": null
+      }
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "canonicalAddress": "385 ashton ave",
+      "operatorId": "yogaflowsf.com",
+      "reviewStatus": "pending",
+      "publicationEligible": false,
+      "sourceUrls": [
+        "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41"
+      ],
+      "planOffers": [
+        {
+          "sourceProductId": "103-first-month",
+          "sourceProductAliases": [
+            "membership-unlimited-first-month",
+            "unlimited-monthly-first-month"
+          ],
+          "name": "Unlimited Membership - All Studios",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes across all studios",
+          "scopeType": "multi-location",
+          "amount": 99.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": true,
+            "label": "First month only; ongoing rate $210"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "First-month introductory offer"
+            ]
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "Unlimited Membership - All Studios",
+            "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103-first-month",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "104",
+          "sourceProductAliases": [
+            "membership-4",
+            "four-monthly"
+          ],
+          "name": "4 Class Monthly Membership",
+          "productType": "class-membership",
+          "accessScope": "4 classes per month at the selected studio",
+          "scopeType": "single-location",
+          "amount": 100.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 4.0,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "4 Class Monthly Membership",
+            "contentHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "104",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "105",
+          "sourceProductAliases": [
+            "membership-8",
+            "eight-monthly"
+          ],
+          "name": "8 Class Monthly Membership",
+          "productType": "class-membership",
+          "accessScope": "8 classes per month at the selected studio",
+          "scopeType": "single-location",
+          "amount": 175.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": 8.0,
+            "period": "month",
+            "unlimited": false
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "8 Class Monthly Membership",
+            "contentHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "105",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "103",
+          "sourceProductAliases": [
+            "membership-unlimited",
+            "unlimited-monthly"
+          ],
+          "name": "Unlimited Membership - All Studios",
+          "productType": "class-membership",
+          "accessScope": "Unlimited classes across all studios",
+          "scopeType": "multi-location",
+          "amount": 210.0,
+          "currency": "USD",
+          "billingInterval": "month",
+          "intervalCount": 1,
+          "classAllowance": {
+            "count": null,
+            "period": "month",
+            "unlimited": true
+          },
+          "commitmentType": "month-to-month",
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "bestValueLabel": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-contract",
+            "rawLabel": "Unlimited Membership - All Studios",
+            "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "100002",
+          "sourceProductAliases": [
+            "class-drop-in",
+            "ocean-drop-in"
+          ],
+          "name": "In-Studio Drop-In - Ocean",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 35.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "In-Studio Drop-In - Ocean",
+            "contentHash": "b0ed193c9648c932bc25ee76661c601eb6e28f11d6dc8415597ad1c6fe17e36d",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100002",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "103256",
+          "sourceProductAliases": [
+            "ocean-new-student-two-week"
+          ],
+          "name": "New Student 2-Week Unlimited Trial - Ocean",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 59.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Promotional or seasonal product"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Classes New Student 2-Week Unlimited Trial - Ocean"
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "New Student 2-Week Unlimited Trial - Ocean",
+            "contentHash": "311c663b1e3bb0afcd5d6b1ce8e34b03d73e0cfd22f270dda3f3fb95b8dfbf91",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "103256",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100003",
+          "sourceProductAliases": [
+            "ocean-five-pack"
+          ],
+          "name": "5 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 150.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "5 Class Pack",
+            "contentHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100003",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100006",
+          "sourceProductAliases": [
+            "ocean-one-month-nonrenewing"
+          ],
+          "name": "One Month | Ocean Studio (Does Not Renew)",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 240.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "One Month | Ocean Studio (Does Not Renew)",
+            "contentHash": "15405b695f516f83e3d1dea2889ca94ecd2b3b0ac647b823c57dd9148b56a4c2",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100006",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100004",
+          "sourceProductAliases": [
+            "ocean-ten-pack"
+          ],
+          "name": "10 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 275.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "10 Class Pack",
+            "contentHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100004",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "100005",
+          "sourceProductAliases": [
+            "ocean-twenty-pack"
+          ],
+          "name": "20 Class Pack",
+          "accessScope": "One ordinary visit or class; scope must be confirmed during review.",
+          "amount": 500.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "standard-adult",
+            "restrictions": []
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "purchaseMethod": "direct-public",
+          "fees": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+            "observedAt": "2026-08-21",
+            "source": "mindbody",
+            "method": "captured-public-mindbody-purchase-item",
+            "rawLabel": "20 Class Pack",
+            "contentHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "100005",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "costContextOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "partial"
+      },
+      "catalogCompletenessReason": "The proposal retains the previously reviewed baseline and adds newly observed attached offers. A reviewer must explicitly confirm that the source exposed every current product before marking either catalog complete.",
+      "conflicts": [],
+      "reviewChecklist": {
+        "exactLocation": false,
+        "standardAdultEligibility": false,
+        "planCardAssociation": false,
+        "feesLinkedToEachPlan": false,
+        "promotionsMarked": false
+      },
+      "currentPublished": {
+        "monthlyPrice": 100.0,
+        "dayPassPrice": 35.0,
+        "selectedPlanId": "web-c8031adb1f022c:plan:membership-4",
+        "catalogStatus": {
+          "plans": {
+            "status": "source-catalog",
+            "reason": "Reviewed source offers are retained before deterministic selection."
+          },
+          "dropIns": {
+            "status": "source-catalog",
+            "reason": "Reviewed public visit or class offers are retained before deterministic selection."
+          }
+        }
+      },
+      "approvedCatalogBaseline": {
+        "included": false,
+        "planOfferCount": 0,
         "dropInOfferCount": 0,
         "costContextOfferCount": 0,
         "catalogCompleteness": null

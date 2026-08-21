@@ -9680,6 +9680,531 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100002",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "noe-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "In-Studio Drop-In - Noe",
+      "categoryLabel": "Classes",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "In-Studio Drop-In - Noe",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "2e1a78cf5cd9c0d0f02bbd2bc725c5d39b7d5031de75ec7592296d3ec48cae5d",
+      "cardAssociationHash": "2e1a78cf5cd9c0d0f02bbd2bc725c5d39b7d5031de75ec7592296d3ec48cae5d",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "102267",
+      "sourceProductAliases": [
+        "noe-new-student-two-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 59.0,
+      "currency": "USD",
+      "rawLabel": "New Student 2-Week Unlimited Trial - Noe",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "New Student 2-Week Unlimited Trial - Noe",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Classes New Student 2-Week Unlimited Trial - Noe"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or seasonal product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "546451b0918b36026bba7c66a73a884fe557b0b499c3fad93e7e76f09c1731f8",
+      "cardAssociationHash": "546451b0918b36026bba7c66a73a884fe557b0b499c3fad93e7e76f09c1731f8",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103-first-month",
+      "sourceProductAliases": [
+        "membership-unlimited-first-month",
+        "unlimited-monthly-first-month"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 99.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Membership - All Studios",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes across all studios",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "First month only; ongoing rate $210"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "First-month introductory offer"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "cardAssociationHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "104",
+      "sourceProductAliases": [
+        "membership-4",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 100.0,
+      "currency": "USD",
+      "rawLabel": "4 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "4 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+      "cardAssociationHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100003",
+      "sourceProductAliases": [
+        "noe-five-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "5 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "5 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+      "cardAssociationHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "105",
+      "sourceProductAliases": [
+        "membership-8",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 175.0,
+      "currency": "USD",
+      "rawLabel": "8 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "8 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+      "cardAssociationHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103",
+      "sourceProductAliases": [
+        "membership-unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 210.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Membership - All Studios",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes across all studios",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "cardAssociationHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100033",
+      "sourceProductAliases": [
+        "noe-one-month-nonrenewing"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 240.0,
+      "currency": "USD",
+      "rawLabel": "One Month | Noe Studio (Does Not Renew)",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": null,
+      "accessScope": "One Month | Noe Studio (Does Not Renew)",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d9d593858f42769c3eee3a57181d53dd78815b9ce0d7ccd8afe4602a29b5fa89",
+      "cardAssociationHash": "d9d593858f42769c3eee3a57181d53dd78815b9ce0d7ccd8afe4602a29b5fa89",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100004",
+      "sourceProductAliases": [
+        "noe-ten-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "10 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+      "cardAssociationHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "osm-node-6471124709",
+      "gymName": "Yoga Flow",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100005",
+      "sourceProductAliases": [
+        "noe-twenty-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 500.0,
+      "currency": "USD",
+      "rawLabel": "20 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "20 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+      "cardAssociationHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
       "gymId": "osm-node-6471401829",
       "gymName": "YuBalance Inner Sunset",
       "capturedAt": "2026-08-21",
@@ -16240,6 +16765,531 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100002",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "union-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "In-Studio Drop-In - Union",
+      "categoryLabel": "Classes",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "In-Studio Drop-In - Union",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "34edbd22ef49cfe7dacd69abaad5ecc833ba0973e154dc8729047fbb52692427",
+      "cardAssociationHash": "34edbd22ef49cfe7dacd69abaad5ecc833ba0973e154dc8729047fbb52692427",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "102234",
+      "sourceProductAliases": [
+        "union-new-student-two-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 59.0,
+      "currency": "USD",
+      "rawLabel": "New Student 2-Week Unlimited Trial - Union",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "New Student 2-Week Unlimited Trial - Union",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Classes New Student 2-Week Unlimited Trial - Union"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or seasonal product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "3210886ae80aa2a7c3f27f8dda857f319e94a7c44aebc3f07b59036f25e2a131",
+      "cardAssociationHash": "3210886ae80aa2a7c3f27f8dda857f319e94a7c44aebc3f07b59036f25e2a131",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103-first-month",
+      "sourceProductAliases": [
+        "membership-unlimited-first-month",
+        "unlimited-monthly-first-month"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 99.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Membership - All Studios",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes across all studios",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "First month only; ongoing rate $210"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "First-month introductory offer"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "cardAssociationHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "104",
+      "sourceProductAliases": [
+        "membership-4",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 100.0,
+      "currency": "USD",
+      "rawLabel": "4 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "4 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+      "cardAssociationHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100003",
+      "sourceProductAliases": [
+        "union-five-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "5 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "5 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+      "cardAssociationHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "105",
+      "sourceProductAliases": [
+        "membership-8",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 175.0,
+      "currency": "USD",
+      "rawLabel": "8 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "8 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+      "cardAssociationHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103",
+      "sourceProductAliases": [
+        "membership-unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 210.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Membership - All Studios",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes across all studios",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "cardAssociationHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100006",
+      "sourceProductAliases": [
+        "union-one-month-nonrenewing"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 240.0,
+      "currency": "USD",
+      "rawLabel": "One Month | Union Studio (Does Not Renew)",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": null,
+      "accessScope": "One Month | Union Studio (Does Not Renew)",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "f95cdf4567f0fb7a4b170af82015fdce40f676c1598de5560dfac12437e76f2f",
+      "cardAssociationHash": "f95cdf4567f0fb7a4b170af82015fdce40f676c1598de5560dfac12437e76f2f",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100004",
+      "sourceProductAliases": [
+        "union-ten-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "10 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+      "cardAssociationHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-982849bdb030ca",
+      "gymName": "Yoga Flow SF Union St",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100005",
+      "sourceProductAliases": [
+        "union-twenty-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 500.0,
+      "currency": "USD",
+      "rawLabel": "20 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "20 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Union | 1892 Union Street, San Francisco, CA 94123"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+      "cardAssociationHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
       "gymId": "web-99a718d670cb34",
       "gymName": "Crunch Fitness Union Street",
       "capturedAt": "2026-08-21",
@@ -18299,6 +19349,531 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.crossfitsouthpark.com/membership",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100002",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "ocean-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "In-Studio Drop-In - Ocean",
+      "categoryLabel": "Classes",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "In-Studio Drop-In - Ocean",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "b0ed193c9648c932bc25ee76661c601eb6e28f11d6dc8415597ad1c6fe17e36d",
+      "cardAssociationHash": "b0ed193c9648c932bc25ee76661c601eb6e28f11d6dc8415597ad1c6fe17e36d",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103256",
+      "sourceProductAliases": [
+        "ocean-new-student-two-week"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 59.0,
+      "currency": "USD",
+      "rawLabel": "New Student 2-Week Unlimited Trial - Ocean",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "New Student 2-Week Unlimited Trial - Ocean",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Classes New Student 2-Week Unlimited Trial - Ocean"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or seasonal product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "311c663b1e3bb0afcd5d6b1ce8e34b03d73e0cfd22f270dda3f3fb95b8dfbf91",
+      "cardAssociationHash": "311c663b1e3bb0afcd5d6b1ce8e34b03d73e0cfd22f270dda3f3fb95b8dfbf91",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103-first-month",
+      "sourceProductAliases": [
+        "membership-unlimited-first-month",
+        "unlimited-monthly-first-month"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 99.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Membership - All Studios",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes across all studios",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "First month only; ongoing rate $210"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "First-month introductory offer"
+        ]
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "cardAssociationHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "104",
+      "sourceProductAliases": [
+        "membership-4",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 100.0,
+      "currency": "USD",
+      "rawLabel": "4 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "4 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+      "cardAssociationHash": "03f1726536cc2020d3dbe7621c641730eaad4764f412979062b5829e5de0f16e",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100003",
+      "sourceProductAliases": [
+        "ocean-five-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "5 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "5 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+      "cardAssociationHash": "99db955ac3775e9c53cacec953507307825b6605259d6d19ece54ed2fc764c97",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "105",
+      "sourceProductAliases": [
+        "membership-8",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 175.0,
+      "currency": "USD",
+      "rawLabel": "8 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "8 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+      "cardAssociationHash": "d10d72a7bcd54ada38acf4ece9a91e254af8dabac8867a41d07fa04ad3ec948c",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "103",
+      "sourceProductAliases": [
+        "membership-unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 210.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Membership - All Studios",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes across all studios",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "cardAssociationHash": "a4584c0aae0a2eb7488734960a3c2940a2d5bb65e3e044957bc478fed30baffd",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100006",
+      "sourceProductAliases": [
+        "ocean-one-month-nonrenewing"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 240.0,
+      "currency": "USD",
+      "rawLabel": "One Month | Ocean Studio (Does Not Renew)",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": null,
+      "accessScope": "One Month | Ocean Studio (Does Not Renew)",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "15405b695f516f83e3d1dea2889ca94ecd2b3b0ac647b823c57dd9148b56a4c2",
+      "cardAssociationHash": "15405b695f516f83e3d1dea2889ca94ecd2b3b0ac647b823c57dd9148b56a4c2",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100004",
+      "sourceProductAliases": [
+        "ocean-ten-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "10 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+      "cardAssociationHash": "fafed932c9fb71f416ddf77fec27e5e28fcc5fdfd5e61d80d77e4ee4de496c10",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
+    },
+    {
+      "gymId": "web-c8031adb1f022c",
+      "gymName": "Yoga Flow SF Ocean Ave",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "100005",
+      "sourceProductAliases": [
+        "ocean-twenty-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 500.0,
+      "currency": "USD",
+      "rawLabel": "20 Class Pack",
+      "categoryLabel": "Classes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "20 Class Pack",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Yoga Flow SF - Ocean | 385 Ashton Avenue, San Francisco, CA 94112"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+      "cardAssociationHash": "0def50ae7d58739498a7dc8c2616394020e4d7188e2aeb7f7fc4406b13f5ab98",
+      "catalogSourceUrl": "https://yogaflowsf.com/membership/"
     },
     {
       "gymId": "web-ca39a334f29594",

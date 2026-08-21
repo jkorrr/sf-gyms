@@ -168,7 +168,7 @@ def class_allowance(node: dict[str, Any], label: str, cadence: str) -> dict[str,
         return {"count": None, "period": cadence if cadence != "one-time" else "month", "unlimited": True}
     value = number(first(node, ALLOWANCE_KEYS))
     if value is None:
-        match = re.search(r"\b(\d{1,3})\s*(?:classes?|visits?|sessions?|credits?)\b", label, re.IGNORECASE)
+        match = re.search(r"\b(\d{1,3})\s*(?:class(?:es)?|visits?|sessions?|credits?)\b", label, re.IGNORECASE)
         value = float(match.group(1)) if match else None
     if value is None:
         return None
@@ -797,6 +797,7 @@ def mindbody_purchase_item_candidates(
     card_text: str,
     source_url: str,
     source_product_id: str = "",
+    location_label: str = "",
 ) -> list[dict[str, Any]]:
     """Extract a product associated with its price from a rendered Mindbody row."""
 
@@ -825,19 +826,57 @@ def mindbody_purchase_item_candidates(
     promotion = bool(PROMOTION_RE.search(combined))
     online_only = bool(re.search(r"\bvirtual\b", combined, re.IGNORECASE))
     drop_in = bool(DROP_IN_RE.search(combined))
+    class_catalog = bool(re.search(r"\bclass(?:es)?\b", category_label, re.IGNORECASE))
+    ordinary_drop_in = drop_in and not re.search(
+        r"\b(?:pack|trial|unlimited|one month|private|workshop|training)\b",
+        label,
+        re.IGNORECASE,
+    )
+    if ordinary_drop_in and allowance is None:
+        allowance = {"count": 1.0, "period": "visit", "unlimited": False}
     commitment_value = commitment({}, combined, recurring)
     if duration_match and not recurring:
         commitment_value = {"type": "fixed-term", "minimumMonths": int(duration_match.group(1))}
+    location = " ".join(text(location_label).split())[:160]
+    location_key = ""
+    location_match = re.search(
+        r"(?:\s[-–—|]\s)(?P<location>[A-Za-z][A-Za-z ]{1,40}?)(?:\s+Studio)?(?:\s*[|,]|$)",
+        f"{label} | {location}",
+        re.IGNORECASE,
+    )
+    if location_match:
+        location_key = re.sub(r"[^a-z0-9]+", "-", location_match.group("location").casefold()).strip("-")
+    aliases: list[str] = []
+    number_words = {
+        1: "one", 2: "two", 3: "three", 4: "four", 5: "five", 6: "six",
+        7: "seven", 8: "eight", 9: "nine", 10: "ten", 20: "twenty",
+    }
+    pack_match = re.search(r"\b(?P<count>\d{1,3})[ -]class\s+pack\b", label, re.IGNORECASE)
+    if ordinary_drop_in:
+        aliases.append("class-drop-in")
+        if location_key:
+            aliases.append(f"{location_key}-drop-in")
+    elif pack_match and location_key:
+        count = int(pack_match.group("count"))
+        aliases.append(f"{location_key}-{number_words.get(count, count)}-pack")
+    elif re.search(r"\bone month\b", label, re.IGNORECASE) and location_key:
+        aliases.append(f"{location_key}-one-month-nonrenewing")
+    elif re.search(r"\bnew student\b.{0,30}\b2[ -]?week\b", label, re.IGNORECASE) and location_key:
+        aliases.append(f"{location_key}-new-student-two-week")
     return [{
         "sourceProductId": text(source_product_id),
+        "sourceProductAliases": aliases,
+        "sourceProductIdAuthority": "operator-widget" if text(source_product_id) else "",
         "amount": amount,
         "currency": "USD",
         "rawLabel": label[:220],
         "categoryLabel": " ".join(text(category_label).split())[:160],
-        "cadence": "visit" if drop_in else cadence,
+        "cadence": "visit" if ordinary_drop_in else cadence,
         "intervalCount": interval_count,
-        "productType": "drop-in" if drop_in else ("monthly" if recurring else "offer"),
+        "productType": "drop-in" if ordinary_drop_in or (class_catalog and not recurring) else ("monthly" if recurring else "offer"),
         "classAllowance": allowance,
+        "accessScope": label,
+        "scopeType": "single-location" if location else None,
         "promotion": {"isPromotion": promotion, "label": combined if promotion else ""},
         "eligibility": {
             "type": "online-only" if online_only else ("new-client" if promotion else "standard-adult"),
@@ -845,13 +884,14 @@ def mindbody_purchase_item_candidates(
         },
         "commitment": commitment_value,
         "fees": [],
-        "locations": [],
+        "locations": [location] if location else [],
+        "ordinaryUse": ordinary_drop_in and not promotion,
         "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
         "purchaseMethod": "direct-public",
         "method": "rendered-mindbody-purchase-item",
         "adapter": "mindbody",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "exact-location" if location else "candidate",
         "sourceUrl": source_url,
         "autoPublishEligible": False,
     }]
@@ -862,6 +902,7 @@ def mindbody_contract_candidates(
     contract_text: str,
     source_url: str,
     source_product_id: str = "",
+    location_label: str = "",
 ) -> list[dict[str, Any]]:
     """Extract a recurring plan from one publicly visible Mindbody contract.
 
@@ -887,7 +928,7 @@ def mindbody_contract_candidates(
     cadence = recurring_match.group("cadence").casefold()
     cadence = "4 weeks" if cadence in {"four weeks", "4 weeks"} else cadence
     combined = " ".join(f"{label} {contract_text}".split())
-    promotion = bool(PROMOTION_RE.search(combined))
+    label_promotion = bool(PROMOTION_RE.search(label))
     fees: list[dict[str, Any]] = []
     fee_re = re.compile(
         r"(?P<label>(?:annual|enroll?ment|initiation|activation|processing|setup)\s+fee)"
@@ -906,9 +947,29 @@ def mindbody_contract_candidates(
             "cadence": "year" if "annual" in match.group("label").casefold() else "one-time",
             "mandatory": True,
         })
-    eligibility_type = "new-client" if promotion else "standard-adult"
-    return [{
+    allowance = class_allowance({}, label, cadence)
+    unlimited = bool(re.search(r"\bunlimited\b", label, re.IGNORECASE))
+    multi_location = bool(re.search(r"\b(?:all studios|all locations)\b", combined, re.IGNORECASE))
+    location = " ".join(text(location_label).split())[:160]
+    aliases: list[str] = []
+    allowance_count = allowance.get("count") if isinstance(allowance, dict) else None
+    number_words = {4: "four", 8: "eight", 12: "twelve"}
+    if allowance_count is not None and float(allowance_count).is_integer():
+        count = int(allowance_count)
+        aliases.extend([f"membership-{count}", f"{number_words.get(count, count)}-monthly"])
+    if unlimited:
+        aliases.extend(["membership-unlimited", "unlimited-monthly"])
+    if unlimited:
+        access_scope = "Unlimited classes across all studios" if multi_location else "Unlimited classes at the selected studio"
+    elif allowance_count is not None:
+        access_scope = f"{int(allowance_count)} classes per month at the selected studio"
+    else:
+        access_scope = label
+    eligibility_type = "new-client" if label_promotion else "standard-adult"
+    base_candidate = {
         "sourceProductId": text(source_product_id),
+        "sourceProductAliases": aliases,
+        "sourceProductIdAuthority": "operator-widget" if text(source_product_id) else "",
         "amount": amount,
         "currency": "USD",
         "rawLabel": label[:220],
@@ -916,25 +977,50 @@ def mindbody_contract_candidates(
         "cadence": cadence,
         "intervalCount": 1,
         "productType": "monthly" if cadence in {"month", "4 weeks", "week"} else "offer",
-        "classAllowance": class_allowance({}, label, cadence),
-        "accessScope": label,
-        "promotion": {"isPromotion": promotion, "label": label if promotion else ""},
+        "classAllowance": allowance,
+        "accessScope": access_scope,
+        "scopeType": "multi-location" if multi_location else "single-location",
+        "promotion": {"isPromotion": label_promotion, "label": label if label_promotion else ""},
         "eligibility": {
             "type": eligibility_type,
-            "restrictions": ["Promotional contract"] if promotion else [],
+            "restrictions": ["Promotional contract"] if label_promotion else [],
         },
         "commitment": commitment({}, combined, True),
         "fees": fees,
-        "locations": [],
+        "locations": [location] if location else [],
+        "ordinaryUse": not label_promotion,
         "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
         "purchaseMethod": "direct-public",
         "method": "rendered-mindbody-contract",
         "adapter": "mindbody",
         "evidenceTier": "official-public",
-        "exactLocationMatch": "candidate",
+        "exactLocationMatch": "exact-location" if location else "candidate",
         "sourceUrl": source_url,
         "autoPublishEligible": False,
-    }]
+    }
+    candidates = [base_candidate]
+    first_month_match = re.search(
+        r"(?:start your )?first month(?:\s+for\s+just)?\s*\$\s*(?P<after>\d{1,5}(?:\.\d{1,2})?)"
+        r"|\$\s*(?P<before>\d{1,5}(?:\.\d{1,2})?)\s+first month",
+        contract_text,
+        re.IGNORECASE,
+    )
+    if first_month_match and re.search(r"\b(?:new|introductory)\b", contract_text, re.IGNORECASE):
+        first_amount = float(first_month_match.group("after") or first_month_match.group("before"))
+        if 0 < first_amount <= 10_000 and first_amount != amount:
+            promo_aliases = [f"{alias}-first-month" for alias in aliases]
+            if unlimited:
+                promo_aliases.append("membership-unlimited-first-month")
+            candidates.append({
+                **base_candidate,
+                "sourceProductId": f"{text(source_product_id)}-first-month" if text(source_product_id) else "",
+                "sourceProductAliases": list(dict.fromkeys(promo_aliases)),
+                "amount": first_amount,
+                "promotion": {"isPromotion": True, "label": f"First month only; ongoing rate ${amount:g}"},
+                "eligibility": {"type": "new-client", "restrictions": ["First-month introductory offer"]},
+                "ordinaryUse": False,
+            })
+    return candidates
 
 
 def pushpress_plan_detail_candidates(

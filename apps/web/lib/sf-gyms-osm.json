@@ -47886,6 +47886,8 @@
       "initiationFee": null,
       "processingFee": null,
       "billingIntervalPrice": null,
+      "planName": "Monthly Membership Unlimited",
+      "planScope": "Unlimited in-person classes plus livestream access",
       "priceSource": "HAUM Studios",
       "priceSourceUrl": "https://www.haumstudios.com/buy-classes",
       "priceNote": "The complete official catalog now lists a $219 monthly unlimited plan with no commitment, $119 four-class and $169 six-class plans with three-month commitments, a $189 unlimited three-month plan, $114 livestream-only monthly access, class packs, and a $39 ordinary in-person drop-in. The deterministic basic-plan rule selects the current no-commitment $219 plan; no mandatory fee is disclosed.",
@@ -47896,6 +47898,7 @@
       "operatorId": "haumsf.com",
       "canonicalAddress": "780 stanyan st",
       "publicationStatus": "publish",
+      "commitmentType": "month-to-month",
       "planOffers": [
         {
           "sourceProductId": "monthly-unlimited-livestream",
@@ -48034,6 +48037,10 @@
           "amount": 39
         }
       ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -48646,13 +48653,6 @@
           "status": "not-published",
           "reason": "The operator did not expose a stable public location identifier."
         }
-      },
-      "planName": "Monthly Membership Unlimited",
-      "planScope": "Unlimited in-person classes plus livestream access",
-      "commitmentType": "month-to-month",
-      "catalogCompleteness": {
-        "plans": "complete",
-        "dropIns": "complete"
       }
     },
     {
@@ -48689,6 +48689,8 @@
       "enrollmentFee": null,
       "initiationFee": null,
       "processingFee": null,
+      "planName": "Monthly Membership Unlimited",
+      "planScope": "Unlimited in-person classes plus livestream access",
       "billingIntervalPrice": null,
       "officialUrl": "https://www.haumstudios.com/",
       "operatorLocationId": "",
@@ -48697,6 +48699,7 @@
       "canonicalAddress": "2973 16th st",
       "sourceAliases": [],
       "publicationStatus": "publish",
+      "commitmentType": "month-to-month",
       "planOffers": [
         {
           "sourceProductId": "monthly-unlimited-livestream",
@@ -48835,6 +48838,10 @@
           "amount": 39
         }
       ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -49447,13 +49454,6 @@
           "status": "not-published",
           "reason": "The operator did not expose a stable public location identifier."
         }
-      },
-      "planName": "Monthly Membership Unlimited",
-      "planScope": "Unlimited in-person classes plus livestream access",
-      "commitmentType": "month-to-month",
-      "catalogCompleteness": {
-        "plans": "complete",
-        "dropIns": "complete"
       }
     },
     {
@@ -66508,7 +66508,9 @@
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -67870,7 +67872,9 @@
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [],
+      "planValidationErrors": [
+        "A source price exists but no eligible recurring plan can be selected."
+      ],
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -95337,7 +95341,7 @@
       "importedAt": "2026-08-17T00:39:44Z",
       "priceSource": "Yoga Flow SF official memberships and Noe Valley Mindbody catalog",
       "priceSourceUrl": "https://yogaflowsf.com/membership/",
-      "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Noe Valley public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+      "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes and $175 for 8 classes at the selected home studio, plus $210 unlimited across all three studios. The unlimited plan's $99 first month is promotional. The Noe Valley public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
       "priceObservedAt": "2026-08-21",
       "officialUrl": "https://yogaflowsf.com/membership/",
       "operatorLocationId": "",
@@ -95350,8 +95354,8 @@
         {
           "sourceProductId": "membership-4",
           "name": "4 Classes Monthly",
-          "accessScope": "Four classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Four classes per month at Yoga Flow Noe Valley",
+          "scopeType": "single-location",
           "classAllowance": 4,
           "amount": 100,
           "billingInterval": "month",
@@ -95361,8 +95365,8 @@
         {
           "sourceProductId": "membership-8",
           "name": "8 Classes Monthly",
-          "accessScope": "Eight classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Eight classes per month at Yoga Flow Noe Valley",
+          "scopeType": "single-location",
           "classAllowance": 8,
           "amount": 175,
           "billingInterval": "month",
@@ -95470,8 +95474,8 @@
           "sourceProductId": "membership-4",
           "name": "4 Classes Monthly",
           "productType": "class-membership",
-          "accessScope": "Four classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Four classes per month at Yoga Flow Noe Valley",
+          "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
             "period": "month",
@@ -95528,8 +95532,8 @@
           "sourceProductId": "membership-8",
           "name": "8 Classes Monthly",
           "productType": "class-membership",
-          "accessScope": "Eight classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Eight classes per month at Yoga Flow Noe Valley",
+          "scopeType": "single-location",
           "classAllowance": {
             "count": 8.0,
             "period": "month",
@@ -96011,7 +96015,7 @@
       "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Yoga Flow SF official memberships and Ocean Avenue Mindbody catalog",
       "priceSourceUrl": "https://yogaflowsf.com/membership/",
-      "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Ocean Avenue public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+      "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes and $175 for 8 classes at the selected home studio, plus $210 unlimited across all three studios. The unlimited plan's $99 first month is promotional. The Ocean Avenue public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
@@ -96029,8 +96033,8 @@
         {
           "sourceProductId": "membership-4",
           "name": "4 Classes Monthly",
-          "accessScope": "Four classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Four classes per month at Yoga Flow Ocean Avenue",
+          "scopeType": "single-location",
           "classAllowance": 4,
           "amount": 100,
           "billingInterval": "month",
@@ -96040,8 +96044,8 @@
         {
           "sourceProductId": "membership-8",
           "name": "8 Classes Monthly",
-          "accessScope": "Eight classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Eight classes per month at Yoga Flow Ocean Avenue",
+          "scopeType": "single-location",
           "classAllowance": 8,
           "amount": 175,
           "billingInterval": "month",
@@ -96149,8 +96153,8 @@
           "sourceProductId": "membership-4",
           "name": "4 Classes Monthly",
           "productType": "class-membership",
-          "accessScope": "Four classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Four classes per month at Yoga Flow Ocean Avenue",
+          "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
             "period": "month",
@@ -96207,8 +96211,8 @@
           "sourceProductId": "membership-8",
           "name": "8 Classes Monthly",
           "productType": "class-membership",
-          "accessScope": "Eight classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Eight classes per month at Yoga Flow Ocean Avenue",
+          "scopeType": "single-location",
           "classAllowance": {
             "count": 8.0,
             "period": "month",
@@ -96685,7 +96689,7 @@
       "importedAt": "2026-08-21T00:00:00Z",
       "priceSource": "Yoga Flow SF official memberships and Union Street Mindbody catalog",
       "priceSourceUrl": "https://yogaflowsf.com/membership/",
-      "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Union Street public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+      "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes and $175 for 8 classes at the selected home studio, plus $210 unlimited across all three studios. The unlimited plan's $99 first month is promotional. The Union Street public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
       "priceObservedAt": "2026-08-21",
       "annualFee": null,
       "enrollmentFee": null,
@@ -96703,8 +96707,8 @@
         {
           "sourceProductId": "membership-4",
           "name": "4 Classes Monthly",
-          "accessScope": "Four classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Four classes per month at Yoga Flow Union Street",
+          "scopeType": "single-location",
           "classAllowance": 4,
           "amount": 100,
           "billingInterval": "month",
@@ -96714,8 +96718,8 @@
         {
           "sourceProductId": "membership-8",
           "name": "8 Classes Monthly",
-          "accessScope": "Eight classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Eight classes per month at Yoga Flow Union Street",
+          "scopeType": "single-location",
           "classAllowance": 8,
           "amount": 175,
           "billingInterval": "month",
@@ -96823,8 +96827,8 @@
           "sourceProductId": "membership-4",
           "name": "4 Classes Monthly",
           "productType": "class-membership",
-          "accessScope": "Four classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Four classes per month at Yoga Flow Union Street",
+          "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
             "period": "month",
@@ -96881,8 +96885,8 @@
           "sourceProductId": "membership-8",
           "name": "8 Classes Monthly",
           "productType": "class-membership",
-          "accessScope": "Eight classes per month across all three Yoga Flow SF studios",
-          "scopeType": "multi-location",
+          "accessScope": "Eight classes per month at Yoga Flow Union Street",
+          "scopeType": "single-location",
           "classAllowance": {
             "count": 8.0,
             "period": "month",

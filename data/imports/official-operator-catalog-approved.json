@@ -502,10 +502,10 @@
         "priceSource": "Yoga Flow SF official memberships and Noe Valley Mindbody catalog",
         "priceSourceUrl": "https://yogaflowsf.com/membership/",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Noe Valley public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes and $175 for 8 classes at the selected home studio, plus $210 unlimited across all three studios. The unlimited plan's $99 first month is promotional. The Noe Valley public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
         "planOffers": [
-          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
-          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month at Yoga Flow Noe Valley","scopeType":"single-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month at Yoga Flow Noe Valley","scopeType":"single-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
           {"sourceProductId":"membership-unlimited","name":"Unlimited Monthly","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
           {"sourceProductId":"membership-unlimited-first-month","name":"Unlimited — First Month Offer","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"First month only; ongoing rate $210"},"fees":[]}
         ],
@@ -531,10 +531,10 @@
         "priceSource": "Yoga Flow SF official memberships and Ocean Avenue Mindbody catalog",
         "priceSourceUrl": "https://yogaflowsf.com/membership/",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Ocean Avenue public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes and $175 for 8 classes at the selected home studio, plus $210 unlimited across all three studios. The unlimited plan's $99 first month is promotional. The Ocean Avenue public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
         "planOffers": [
-          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
-          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month at Yoga Flow Ocean Avenue","scopeType":"single-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month at Yoga Flow Ocean Avenue","scopeType":"single-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
           {"sourceProductId":"membership-unlimited","name":"Unlimited Monthly","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
           {"sourceProductId":"membership-unlimited-first-month","name":"Unlimited — First Month Offer","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"First month only; ongoing rate $210"},"fees":[]}
         ],
@@ -560,10 +560,10 @@
         "priceSource": "Yoga Flow SF official memberships and Union Street Mindbody catalog",
         "priceSourceUrl": "https://yogaflowsf.com/membership/",
         "priceObservedAt": "2026-08-21",
-        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Union Street public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes and $175 for 8 classes at the selected home studio, plus $210 unlimited across all three studios. The unlimited plan's $99 first month is promotional. The Union Street public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
         "planOffers": [
-          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
-          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month at Yoga Flow Union Street","scopeType":"single-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month at Yoga Flow Union Street","scopeType":"single-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
           {"sourceProductId":"membership-unlimited","name":"Unlimited Monthly","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
           {"sourceProductId":"membership-unlimited-first-month","name":"Unlimited — First Month Offer","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"First month only; ongoing rate $210"},"fees":[]}
         ],

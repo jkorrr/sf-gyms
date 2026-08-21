@@ -21,6 +21,34 @@
     "contractLabel": "Gym/Sim Access Membership",
     "contractText": "Gym/Sim Access Membership $300.00\nSimulator Pass $0.00\nTotal $300.00\nGym/Sim Access Membership\n$300.00 every month\nContract Starts: 8/21/2026\nAuto renews on: (Month-to-month commitment)\nBy clicking below, you agree to pay $300.00 (plus any tax) each monthly renewal term."
   },
+  "mindbodyYogaFlowContract": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+    "sourceProductId": "104",
+    "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
+    "contractLabel": "4 Class Monthly Membership",
+    "contractText": "4 Class Monthly Membership\n4 in-studio classes each month at your selected Yoga Flow SF location\n$100.00 every month\nAuto renews monthly; month-to-month commitment; cancel anytime."
+  },
+  "mindbodyYogaFlowUnlimitedIntro": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+    "sourceProductId": "103",
+    "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
+    "contractLabel": "Unlimited Membership - All Studios",
+    "contractText": "Unlimited Membership - All Studios\nUnlimited in-studio classes at all Yoga Flow SF locations\n$99 First Month for new members\nThen $210/month\n$210.00 every month\nNo minimum commitment; cancel anytime."
+  },
+  "mindbodyYogaFlowDropInRow": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+    "categoryLabel": "Classes",
+    "sourceProductId": "100002",
+    "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
+    "cardText": "In-Studio Drop-In - Noe\n$35.00"
+  },
+  "mindbodyYogaFlowPackRow": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
+    "categoryLabel": "Classes",
+    "sourceProductId": "100003",
+    "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
+    "cardText": "5 Class Pack\n$150.00"
+  },
   "momenceMembership": {
     "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
     "pageTitle": "The Work - NICE Pilates",
