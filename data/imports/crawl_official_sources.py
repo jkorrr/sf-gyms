@@ -67,6 +67,7 @@ BOOKING_DOMAINS = {
     "squarespacescheduling.com",
     "onlinejoin.abcfitness.com",
     "portal.movementgyms.com",
+    "portal.approach.app",
     "classpass.com",
 }
 MONEY_RE = re.compile(r"\$(\d{1,4}(?:\.\d{1,2})?)")
@@ -728,6 +729,98 @@ def operator_visible_candidate(
     }
 
 
+def orangetheory_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Reconstruct exact-location Orangetheory membership cards.
+
+    Studio pages also render a generic footer amount for a casual visit and
+    may retain hidden promotion templates.  This adapter requires the three
+    named recurring tiers and associates only an amount carrying a monthly
+    cadence inside its visible tier segment.
+    """
+
+    host = hostname(source_url)
+    if not (host == "orangetheory.com" or host.endswith(".orangetheory.com")):
+        return []
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    if not all(re.search(rf"\b{name}\b", value, re.IGNORECASE) for name in ("Premier", "Elite", "Basic")):
+        return []
+    commitment = "month-to-month" if re.search(r"month[ -]to[ -]month|30[ -]day cancellation", value, re.IGNORECASE) else "unknown"
+    allowances = {
+        "premier": {"count": None, "period": "month", "unlimited": True},
+        "elite": {"count": 8, "period": "month", "unlimited": False},
+        "basic": {"count": 4, "period": "month", "unlimited": False},
+    }
+    candidates: list[dict[str, Any]] = []
+    seen: set[str] = set()
+    card_re = re.compile(
+        r"\b(?P<name>Premier|Elite|Basic)\b(?P<body>.{0,700}?)(?=\b(?:Premier|Elite|Basic)\b|$)",
+        re.IGNORECASE,
+    )
+    for card in card_re.finditer(value):
+        key = card.group("name").casefold()
+        if key in seen:
+            continue
+        body = card.group("body")
+        amounts = list(re.finditer(r"\$\s*(\d{1,4}(?:\.\d{1,2})?)\s*(?:/\s*mo(?:nth)?|per\s+month|monthly)", body, re.IGNORECASE))
+        ordinary = []
+        for amount_match in amounts:
+            context = body[max(0, amount_match.start() - 100):amount_match.end()]
+            if not re.search(r"first month|new member|intro|limited time|promo", context, re.IGNORECASE):
+                ordinary.append(amount_match)
+        selected = (ordinary or amounts)[0] if (ordinary or amounts) else None
+        if selected is None:
+            continue
+        amount = float(selected.group(1))
+        if not 0 < amount <= 2_000:
+            continue
+        seen.add(key)
+        display = card.group("name").capitalize()
+        candidates.append(operator_visible_candidate(
+            source_url,
+            "orangetheory-tier-cards",
+            key,
+            display,
+            amount,
+            product_type="monthly",
+            cadence="month",
+            access_scope="Recurring coached Orangetheory classes with multi-studio access",
+            scope_type="multi-location",
+            allowance=allowances[key],
+            commitment_type=commitment,
+            raw_label=f"{display} ${amount:g}/month",
+        ))
+    return candidates if {item["sourceProductId"] for item in candidates} == {"premier", "elite", "basic"} else []
+
+
+def approach_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
+    """Extract public products rendered by an Approach location storefront."""
+
+    if platform_name(source_url) != "approach":
+        return []
+    value = re.sub(r"\s+", " ", visible_text).strip()
+    membership = re.search(
+        r"\bUnlimited Membership\b.{0,260}?\$\s*(?P<amount>\d{1,4}(?:\.\d{1,2})?).{0,70}?\b(?:month|monthly|recurring)\b",
+        value,
+        re.IGNORECASE,
+    )
+    if not membership:
+        return []
+    amount = float(membership.group("amount"))
+    return [operator_visible_candidate(
+        source_url,
+        "approach",
+        "unlimited-membership",
+        "Unlimited Membership",
+        amount,
+        product_type="monthly",
+        cadence="month",
+        access_scope="Unlimited access to all operator locations",
+        scope_type="multi-location",
+        allowance={"count": None, "period": "month", "unlimited": True},
+        commitment_type="unknown",
+    )]
+
+
 def independent_operator_visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any]]:
     """Reconstruct complete catalogs from stable, operator-labeled rate cards.
 
@@ -746,10 +839,84 @@ def independent_operator_visible_candidates(visible_text: str, source_url: str) 
     def recurring(
         adapter: str, product_id: str, name: str, amount: float, **kwargs: Any,
     ) -> dict[str, Any]:
+        commitment_type = text(kwargs.pop("commitment_type", "month-to-month")) or "month-to-month"
         return operator_visible_candidate(
             source_url, adapter, product_id, name, amount,
-            product_type="monthly", cadence="month", commitment_type="month-to-month", **kwargs,
+            product_type="monthly", cadence="month", commitment_type=commitment_type, **kwargs,
         )
+
+    if host.endswith("benchmarkclimbing.com") and has("Day Pass", "$30", "5 Day Passes", "$140", "10 Day Passes", "$270"):
+        adapter = "benchmark-climbing"
+        return [
+            operator_visible_candidate(source_url, adapter, "adult-day-pass", "Adult Day Pass", 30, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "five-day-passes", "5 Day Passes", 140, allowance={"count": 5, "period": "purchase", "unlimited": False}),
+            operator_visible_candidate(source_url, adapter, "ten-day-passes", "10 Day Passes", 270, allowance={"count": 10, "period": "purchase", "unlimited": False}),
+        ]
+
+    if host.endswith("federalfitnesscenters.com") and has("General Public", "$47", "$40", "Initiation"):
+        adapter = "federal-fitness-center"
+        initiation = [{"type": "initiation", "amount": 40, "currency": "USD", "cadence": "one-time", "mandatory": True}]
+        offers = [
+            recurring(adapter, "general-public-all-clubs", "General Public / Federal Contractor / State Government", 47, access_scope="All Federal Fitness Center clubs where general-public access is permitted", scope_type="multi-location", commitment_type="unknown", fees=initiation),
+            recurring(adapter, "federal-employee-local", "Federal Employee — 450 Golden Gate", 40, access_scope="450 Golden Gate Avenue only", eligibility_type="federal-employee", restrictions=["Federal employee eligibility required"], commitment_type="unknown", fees=initiation),
+            recurring(adapter, "federal-employee-all-clubs", "Federal Employee — All FFC Clubs", 43, access_scope="All Federal Fitness Center clubs", scope_type="multi-location", eligibility_type="federal-employee", restrictions=["Federal employee eligibility required"], commitment_type="unknown", fees=initiation),
+        ]
+        if has("Day Pass", "$20"):
+            offers.append(operator_visible_candidate(source_url, adapter, "day-pass", "Day Pass", 20, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}))
+        return offers
+
+    if host.endswith("clubs.healthclubsystems.com") and has("Annual Membership", "Monthly Dues", "$77", "12"):
+        adapter = "fit-bernal-fit"
+        return [operator_visible_candidate(
+            source_url,
+            adapter,
+            "annual-membership-individual",
+            "Annual Membership — Individual",
+            77,
+            product_type="monthly",
+            cadence="month",
+            access_scope="Standard individual gym membership with key-fob access",
+            commitment_type="fixed-term",
+            minimum_months=12,
+            fees=[{"type": "enrollment", "amount": 99, "currency": "USD", "cadence": "one-time", "mandatory": True}],
+            raw_label="Annual Membership; $77 monthly dues; 12-month term; $99 individual join fee",
+        )]
+
+    if host.endswith("pilatesschoolsf.com") and has("Single Membership", "$250", "10 classes"):
+        adapter = "pilates-school-geary"
+        return [
+            recurring(adapter, "single-membership", "Single Membership", 250, allowance={"count": 10, "period": "month", "unlimited": False}, access_scope="10 Geary Studio classes monthly plus selected Geary School reformer/tower classes"),
+            recurring(adapter, "shared-two", "Shared Membership — Two People", 225, allowance={"count": 10, "period": "month", "unlimited": False}, eligibility_type="shared-membership", restrictions=["Requires a two-person shared membership"]),
+            recurring(adapter, "shared-three", "Shared Membership — Three People", 199, allowance={"count": 10, "period": "month", "unlimited": False}, eligibility_type="shared-membership", restrictions=["Requires a three-person shared membership"]),
+            recurring(adapter, "shared-four", "Shared Membership — Four People", 189, allowance={"count": 10, "period": "month", "unlimited": False}, eligibility_type="shared-membership", restrictions=["Requires a four-person shared membership"]),
+            operator_visible_candidate(source_url, adapter, "intro-three", "New-Student 3-Class Intro Pack", 50, allowance={"count": 3, "period": "purchase", "unlimited": False}, promotion=True, promotion_label="New-student introductory pack", eligibility_type="new-student", restrictions=["New students only"]),
+            operator_visible_candidate(source_url, adapter, "eight-class-pack", "8-Class Pack", 280, allowance={"count": 8, "period": "purchase", "unlimited": False}),
+        ]
+
+    if host.endswith("strongfriendsgym.com") and has("Drop-In", "$60"):
+        return [operator_visible_candidate(source_url, "strong-friends", "drop-in", "Drop-In — Any Class", 60, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False})]
+
+    if host.endswith("worldteamusa.net") and has("Day Pass", "$49", "Introduction Lesson", "$79", "30 Day Trial", "$285"):
+        adapter = "world-team-usa"
+        return [
+            operator_visible_candidate(source_url, adapter, "day-pass", "Day Pass", 49, product_type="drop-in", cadence="visit", allowance={"count": 1, "period": "visit", "unlimited": False}, restrictions=["Prior martial-arts experience required"]),
+            operator_visible_candidate(source_url, adapter, "introduction-lesson", "Introduction Lesson", 79, allowance={"count": 1, "period": "purchase", "unlimited": False}, eligibility_type="onboarding", restrictions=["For new or inexperienced students"]),
+            operator_visible_candidate(source_url, adapter, "thirty-day-trial", "30-Day Unlimited Trial", 285, allowance={"count": None, "period": "30 days", "unlimited": True}, promotion=True, promotion_label="30-day trial", eligibility_type="new-student", restrictions=["Trial offer"]),
+            operator_visible_candidate(source_url, adapter, "online-seven-day-trial", "7-Day Online / Muay Thai & Fitness Trial", 105, allowance={"count": None, "period": "7 days", "unlimited": True}, promotion=True, promotion_label="7-day trial", eligibility_type="online-or-trial", restrictions=["Trial or online access product"]),
+            operator_visible_candidate(source_url, adapter, "six-week-bootcamp", "6-Week Bootcamp", 399, allowance={"count": None, "period": "6 weeks", "unlimited": False}),
+        ]
+
+    if host.endswith("livefitgym.com") and has("Basic", "$117", "Premier", "$137", "Massage + Gym", "$207", "$227", "Wellness", "$357", "$377"):
+        adapter = "live-fit-signup"
+        term = {"commitment_type": "fixed-term", "minimum_months": 6}
+        return [
+            operator_visible_candidate(source_url, adapter, "basic", "Basic", 117, product_type="monthly", cadence="month", access_scope="Cole Valley, Nob Hill, Polk Street, and Hayes Valley locations", scope_type="multi-location", allowance={"count": None, "period": "month", "unlimited": True}, **term),
+            operator_visible_candidate(source_url, adapter, "basic-massage-gym", "Massage + Gym — Basic Locations", 207, product_type="monthly", cadence="month", access_scope="Basic-location gym access plus monthly massage", scope_type="multi-location", allowance={"count": None, "period": "month", "unlimited": True}, **term),
+            operator_visible_candidate(source_url, adapter, "basic-wellness", "Wellness — Basic Locations", 357, product_type="monthly", cadence="month", access_scope="Basic-location gym access plus wellness services", scope_type="multi-location", allowance={"count": None, "period": "month", "unlimited": True}, **term),
+            operator_visible_candidate(source_url, adapter, "premier", "Premier", 137, product_type="monthly", cadence="month", access_scope="All eight Live Fit Gym locations", scope_type="multi-location", allowance={"count": None, "period": "month", "unlimited": True}, **term),
+            operator_visible_candidate(source_url, adapter, "premier-massage-gym", "Massage + Gym — Premier Locations", 227, product_type="monthly", cadence="month", access_scope="All-location gym access plus monthly massage", scope_type="multi-location", allowance={"count": None, "period": "month", "unlimited": True}, **term),
+            operator_visible_candidate(source_url, adapter, "premier-wellness", "Wellness — Premier Locations", 377, product_type="monthly", cadence="month", access_scope="All-location gym access plus wellness services", scope_type="multi-location", allowance={"count": None, "period": "month", "unlimited": True}, **term),
+        ]
 
     if host.endswith("thecitycrossfit.com") and has("Month To Month", "$275", "Unlimited", "$250", "12x Per Month", "$35", "Drop In", "10 Class Pack"):
         adapter = "city-crossfit"
@@ -856,10 +1023,13 @@ def visible_candidates(visible_text: str, source_url: str) -> list[dict[str, Any
         or twenty_four_hour_visible_candidates(visible_text, source_url)
         or equinox_visible_candidates(visible_text, source_url)
         or planet_fitness_visible_candidates(visible_text, source_url)
+        or orangetheory_visible_candidates(visible_text, source_url)
+        or approach_visible_candidates(visible_text, source_url)
         or independent_operator_visible_candidates(visible_text, source_url)
     )
     candidates: list[dict[str, Any]] = list(specialized)
-    patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if specialized else (
+    requires_complete_card_adapter = hostname(source_url).endswith("orangetheory.com")
+    patterns = (("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)) if specialized or requires_complete_card_adapter else (
         ("monthly", MONTHLY_RE), ("drop-in", DROP_IN_AFTER_RE), ("drop-in", DROP_IN_BEFORE_RE)
     )
     for kind, pattern in patterns:
@@ -1227,6 +1397,29 @@ def abc_fitness_catalog_candidates(payload: Any, source_url: str) -> tuple[list[
     return [candidate], []
 
 
+def public_platform_json_candidates(payload: Any, source_url: str) -> tuple[list[dict[str, Any]], list[str]]:
+    """Route captured public JSON through the most semantic platform adapter.
+
+    The generic graph walker remains a fallback, but must not replace an
+    adapter that understands billing intervals, location scope, or plan-linked
+    fees.  Both the static and rendered crawlers use this single dispatcher so
+    JavaScript hydration cannot silently lose catalog semantics.
+    """
+
+    platform = platform_name(source_url)
+    if platform == "mariana-tek":
+        return mariana_buy_page_candidates(payload if isinstance(payload, dict) else {}, source_url), []
+    if platform == "xponential-member-app":
+        return xponential_package_candidates(payload if isinstance(payload, dict) else {}, source_url)
+    if platform == "abc-fitness":
+        return abc_fitness_catalog_candidates(payload, source_url)
+    if platform_adapters.platform_for_url(source_url):
+        candidates = platform_adapters.extract_candidates(payload, source_url)
+        candidates.extend(structured_candidates([json.dumps(payload)], source_url, "public-platform-json"))
+        return deduplicate_candidates(candidates), []
+    return [], []
+
+
 def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
     results: list[str] = []
     base_host = hostname(base_url)
@@ -1354,34 +1547,13 @@ def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str],
         return [], [], ""
     source_url = text(result.get("url"))
     is_json = "json" in text(result.get("contentType")).casefold()
-    if is_json and platform_name(source_url) == "mariana-tek":
-        try:
-            payload = json.loads(html)
-        except json.JSONDecodeError:
-            payload = {}
-        return mariana_buy_page_candidates(payload, source_url), [], hashlib.sha256(html.encode("utf-8")).hexdigest()
-    if is_json and platform_name(source_url) == "xponential-member-app":
-        try:
-            payload = json.loads(html)
-        except json.JSONDecodeError:
-            payload = {}
-        candidates, nested = xponential_package_candidates(payload, source_url)
-        return candidates, nested, hashlib.sha256(html.encode("utf-8")).hexdigest()
-    if is_json and platform_name(source_url) == "abc-fitness":
-        try:
-            payload = json.loads(html)
-        except json.JSONDecodeError:
-            payload = {}
-        candidates, nested = abc_fitness_catalog_candidates(payload, source_url)
-        return candidates, nested, hashlib.sha256(html.encode("utf-8")).hexdigest()
     if is_json and platform_adapters.platform_for_url(source_url):
         try:
             payload = json.loads(html)
         except json.JSONDecodeError:
             payload = {}
-        candidates = platform_adapters.extract_candidates(payload, source_url)
-        candidates.extend(structured_candidates([html], source_url, "public-platform-json"))
-        return deduplicate_candidates(candidates), [], hashlib.sha256(html.encode("utf-8")).hexdigest()
+        candidates, nested = public_platform_json_candidates(payload, source_url)
+        return candidates, nested, hashlib.sha256(html.encode("utf-8")).hexdigest()
     parser = PageParser()
     try:
         parser.feed(html)

@@ -9,10 +9,10 @@
     "gated": 16,
     "not-applicable": 15,
     "operator-confirmed": 0,
-    "pay-per-visit": 25,
+    "pay-per-visit": 24,
     "reported": 0,
     "unresolved": 6,
-    "verified": 154
+    "verified": 155
   },
   "suppressedAliasCount": 107,
   "suppressedAliases": [
@@ -577,11 +577,11 @@
     "public-recreation": 38,
     "studio": 106
   },
-  "verifiedMonthlyCount": 154,
-  "verifiedDayPassCount": 121,
+  "verifiedMonthlyCount": 155,
+  "verifiedDayPassCount": 122,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 135,
-  "approvedOperatorCatalogLocationsApplied": 67,
+  "approvedOperatorCatalogLocationsApplied": 83,
   "operatorConfirmedObservationsApplied": 0,
   "operatorConfirmedMonthlyCount": 0,
   "approvedDealsApplied": 11,
@@ -592,7 +592,7 @@
   "reportedMonthlyCount": 0,
   "estimatedMonthlyCount": 10,
   "approvedExternalComparableCount": 1,
-  "officialCostContextListingCount": 16,
+  "officialCostContextListingCount": 15,
   "fieldCoverage": {
     "specificDescriptionCount": 248,
     "officialUrlCount": 246,
@@ -603,18 +603,18 @@
     "hoursNotApplicableCount": 0,
     "amenitiesListedCount": 245,
     "operatorLocationIdCount": 124,
-    "sourcePlanCatalogCount": 167,
+    "sourcePlanCatalogCount": 182,
     "sourcePlanFragmentCount": 0,
-    "selectedOnlyPlanCatalogCount": 13,
-    "noPlanCatalogCount": 68,
-    "sourceDropInCatalogCount": 124,
+    "selectedOnlyPlanCatalogCount": 0,
+    "noPlanCatalogCount": 66,
+    "sourceDropInCatalogCount": 129,
     "sourceDropInFragmentCount": 0,
-    "selectedOnlyDropInCatalogCount": 4,
-    "noDropInCatalogCount": 120,
-    "selectedUnknownCommitmentCount": 56,
-    "selectedUndisclosedClassAllowanceCount": 7,
-    "typicalPlanSelectedCount": 141,
-    "highestAccessPlanSelectedCount": 141,
+    "selectedOnlyDropInCatalogCount": 0,
+    "noDropInCatalogCount": 119,
+    "selectedUnknownCommitmentCount": 47,
+    "selectedUndisclosedClassAllowanceCount": 6,
+    "typicalPlanSelectedCount": 155,
+    "highestAccessPlanSelectedCount": 155,
     "bestValuePlanSelectedCount": 12,
     "explicitMonthlyPriceStateCount": 248,
     "explicitDayPassPriceStateCount": 248,
@@ -636,208 +636,20 @@
   "officialPageExtractionQueue": 0,
   "catalogReconstructionQueue": {
     "publiclyPricedCommercialListings": 169,
-    "reconstructedRelevantCatalogListings": 153,
-    "reconstructedRelevantCatalogCoverage": 0.9053,
+    "reconstructedRelevantCatalogListings": 169,
+    "reconstructedRelevantCatalogCoverage": 1.0,
     "targetCoverage": 0.9,
     "targetMet": true,
-    "priorityPlatformCounts": {
-      "generic-official": 13,
-      "mariana-tek": 1,
-      "mindbody": 1,
-      "wellnessliving": 1
-    },
-    "priorityRecords": [
-      {
-        "id": "osm-node-4004802465",
-        "name": "Benchmark Climbing",
-        "operatorId": "benchmarkclimbing.com",
-        "platforms": [],
-        "monthlyPrice": null,
-        "dayPassPrice": 30.0,
-        "planCatalogStatus": "none",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.benchmarkclimbing.com/new-memberships-1"
-      },
-      {
-        "id": "web-27e606755f1ba8",
-        "name": "Federal Fitness Center - San Francisco",
-        "operatorId": "federalfitnesscenters.com",
-        "platforms": [
-          "mindbody"
-        ],
-        "monthlyPrice": 47.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.federalfitnesscenters.com/federal-fitness-center"
-      },
-      {
-        "id": "osm-way-257161411",
-        "name": "fitBERNALfit",
-        "operatorId": "fit bernal fit",
-        "platforms": [],
-        "monthlyPrice": 77.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a"
-      },
-      {
-        "id": "web-6123d4a1928a35",
-        "name": "Live Fit Gym Cole Valley",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 117.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "web-b1dcfdcb7b4d2a",
-        "name": "Live Fit Gym Fairmont Hotel",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 137.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "osm-node-9659815458",
-        "name": "Live Fit Gym Hayes Valley",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 117.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "web-2d8ab33422a507",
-        "name": "Live Fit Gym Inner Richmond",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 137.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "osm-node-4631674513",
-        "name": "Live Fit Gym Nob Hill",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 117.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "osm-node-412109978",
-        "name": "Live Fit Gym Polk Street",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 117.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "osm-way-137602240",
-        "name": "Live Fit Gym The Castro",
-        "operatorId": "live-fit",
-        "platforms": [],
-        "monthlyPrice": 137.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "osm-node-968356991",
-        "name": "LiveFitGym Wellness Club",
-        "operatorId": "livefitgym.com",
-        "platforms": [],
-        "monthlyPrice": 137.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://livefitgym.com/signup-old/"
-      },
-      {
-        "id": "web-dcbf7708bf2f77",
-        "name": "Orangetheory Fitness San Francisco Pacific Heights",
-        "operatorId": "orangetheory",
-        "platforms": [],
-        "monthlyPrice": 119.0,
-        "dayPassPrice": 35.0,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150"
-      },
-      {
-        "id": "web-c745e6dbdcadb6",
-        "name": "Strong Friends",
-        "operatorId": "strongfriendsgym.com",
-        "platforms": [],
-        "monthlyPrice": null,
-        "dayPassPrice": 60.0,
-        "planCatalogStatus": "none",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.strongfriendsgym.com/programs/drop-in"
-      },
-      {
-        "id": "web-e20a10174e60fa",
-        "name": "The Bar Method San Francisco - FiDi",
-        "operatorId": "barmethod.com",
-        "platforms": [
-          "mariana-tek"
-        ],
-        "monthlyPrice": 115.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://barmethod.com/locations/san-francisco-fidi/"
-      },
-      {
-        "id": "web-8e0d13fb9738f9",
-        "name": "The Pilates School SF - Geary Studio",
-        "operatorId": "pilatesschoolsf.com",
-        "platforms": [
-          "wellnessliving"
-        ],
-        "monthlyPrice": 189.0,
-        "dayPassPrice": null,
-        "planCatalogStatus": "selected-only",
-        "dropInCatalogStatus": "none",
-        "priceSourceUrl": "https://www.pilatesschoolsf.com/programs-pricing/"
-      },
-      {
-        "id": "web-76a8863d9951eb",
-        "name": "World Team USA",
-        "operatorId": "worldteamusa.net",
-        "platforms": [],
-        "monthlyPrice": null,
-        "dayPassPrice": 49.0,
-        "planCatalogStatus": "none",
-        "dropInCatalogStatus": "selected-only",
-        "priceSourceUrl": "https://www.worldteamusa.net/services"
-      }
-    ],
+    "priorityPlatformCounts": {},
+    "priorityRecords": [],
     "sourceFragmentPlanCatalogs": 0,
-    "selectedOnlyPlanCatalogs": 13,
+    "selectedOnlyPlanCatalogs": 0,
     "sourceFragmentDropInCatalogs": 0,
-    "selectedOnlyDropInCatalogs": 4
+    "selectedOnlyDropInCatalogs": 0
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 773,
+    "requestCount": 777,
     "statusCounts": {
       "access-blocked": 33,
       "fetched": 355,
@@ -847,12 +659,12 @@
       "network-error": 4,
       "not-modified": 29,
       "render-error": 4,
-      "rendered": 265,
-      "robots-disallowed": 39
+      "rendered": 267,
+      "robots-disallowed": 41
     },
-    "reviewCandidatePages": 163,
+    "reviewCandidatePages": 165,
     "linkedStorefrontRequests": 172,
-    "renderedRequests": 314,
+    "renderedRequests": 318,
     "renderedAccessBlockedRequests": 33,
     "renderedAccessBlockerCounts": {
       "captcha-required": 3,
@@ -886,9 +698,9 @@
       "rangeCoverage": 0.8889
     },
     "independent-gym": {
-      "sampleSize": 6,
-      "medianAbsolutePercentageError": 0.7462,
-      "rangeCoverage": 0.5
+      "sampleSize": 7,
+      "medianAbsolutePercentageError": 0.4583,
+      "rangeCoverage": 0.5714
     },
     "pilates-lagree-barre": {
       "sampleSize": 10,
@@ -911,9 +723,9 @@
       "rangeCoverage": 0.7692
     },
     "overall": {
-      "sampleSize": 70,
+      "sampleSize": 71,
       "medianAbsolutePercentageError": 0.124,
-      "rangeCoverage": 0.8571
+      "rangeCoverage": 0.8592
     }
   },
   "withheldEstimateModalities": {

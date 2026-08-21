@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "weekly",
+  "mode": "full",
   "observations": [
     {
       "gymId": "osm-node-10047742013",
@@ -3693,105 +3693,6 @@
       "capturedAt": "2026-08-20",
       "amount": 99.0,
       "currency": "USD",
-      "rawLabel": "TACTPRICING LOGIN SIGNUP BACK TO SPORTS Pricing Monthly Gym Membership Ongoing Unlimited Cardio, Open Gym $99.00 / MONTH",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "gymdesk",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-3542720509",
-      "gymName": "Back to Sports Fitness and Therapy",
-      "capturedAt": "2026-08-20",
-      "amount": 99.0,
-      "currency": "USD",
-      "rawLabel": "TACTPRICING LOGIN SIGNUP BACK TO SPORTS Pricing Monthly Gym Membership Ongoing Unlimited Cardio, Open Gym $99.00 / MONTH",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "gymdesk",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-3542720509",
-      "gymName": "Back to Sports Fitness and Therapy",
-      "capturedAt": "2026-08-20",
-      "amount": 99.0,
-      "currency": "USD",
-      "rawLabel": "TACTPRICING LOGIN SIGNUP BACK TO SPORTS Pricing Monthly Gym Membership Ongoing Unlimited Cardio, Open Gym $99.00 / MONTH",
-      "cadence": "month",
-      "productType": "monthly",
-      "classAllowance": {
-        "count": null,
-        "period": "month",
-        "unlimited": true
-      },
-      "promotion": {
-        "isPromotion": false,
-        "label": ""
-      },
-      "eligibility": {
-        "type": "standard-adult",
-        "restrictions": []
-      },
-      "commitment": {
-        "type": "unknown",
-        "minimumMonths": null
-      },
-      "method": "visible-text-candidate",
-      "adapter": "gymdesk",
-      "evidenceTier": "official-public",
-      "exactLocationMatch": "candidate",
-      "sourceUrl": "https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing",
-      "autoPublishEligible": false
-    },
-    {
-      "gymId": "osm-node-3542720509",
-      "gymName": "Back to Sports Fitness and Therapy",
-      "capturedAt": "2026-08-20",
-      "amount": 99.0,
-      "currency": "USD",
       "rawLabel": "ty. Enjoy your own private functional training station—no waiting, just efficient workouts on your schedule. $99/month",
       "cadence": "month",
       "productType": "monthly",
@@ -4089,7 +3990,7 @@
     {
       "gymId": "osm-node-4004802465",
       "gymName": "Benchmark Climbing",
-      "capturedAt": "2026-08-20",
+      "capturedAt": "2026-08-21",
       "amount": 30.0,
       "currency": "USD",
       "rawLabel": "your first billing cycle + free rental shoes. That’s two weeks of unlimited climbing for $30 — yep, the cost of a single day pass",
@@ -12862,6 +12763,621 @@
       "evidenceTier": "official-public",
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://www.trainflagship.com/membership-sf",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-dcbf7708bf2f77",
+      "gymName": "Orangetheory Fitness San Francisco Pacific Heights",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "basic",
+      "name": "Basic",
+      "amount": 119.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Recurring coached Orangetheory classes with multi-studio access",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": 4,
+        "period": "month",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Basic $119/month",
+      "method": "rendered-visible-plan-card",
+      "adapter": "orangetheory-tier-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "autoPublishEligible": false,
+      "cardAssociationHash": "0ea9f463cc241b0e549ed47ad8edfab5866cca16a3de5043be346c153cb5983d"
+    },
+    {
+      "gymId": "web-dcbf7708bf2f77",
+      "gymName": "Orangetheory Fitness San Francisco Pacific Heights",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "elite",
+      "name": "Elite",
+      "amount": 199.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Recurring coached Orangetheory classes with multi-studio access",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": 8,
+        "period": "month",
+        "unlimited": false
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Elite $199/month",
+      "method": "rendered-visible-plan-card",
+      "adapter": "orangetheory-tier-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "autoPublishEligible": false,
+      "cardAssociationHash": "0ea9f463cc241b0e549ed47ad8edfab5866cca16a3de5043be346c153cb5983d"
+    },
+    {
+      "gymId": "web-dcbf7708bf2f77",
+      "gymName": "Orangetheory Fitness San Francisco Pacific Heights",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "premier",
+      "name": "Premier",
+      "amount": 269.0,
+      "currency": "USD",
+      "cadence": "month",
+      "billingInterval": "month",
+      "productType": "monthly",
+      "accessScope": "Recurring coached Orangetheory classes with multi-studio access",
+      "scopeType": "multi-location",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "fees": [],
+      "bestValueLabel": false,
+      "rawLabel": "Premier $269/month",
+      "method": "rendered-visible-plan-card",
+      "adapter": "orangetheory-tier-cards",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+      "autoPublishEligible": false,
+      "cardAssociationHash": "0ea9f463cc241b0e549ed47ad8edfab5866cca16a3de5043be346c153cb5983d"
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "co (FIDI) $119 .00 4 per month Monthly recurring payment with 4 classes. Class Packages Drop In | 1 Class | San Francisco (FIDI) $38",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianaiframes.com/iframe/buy/49114",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "ecurring payment with 4 classes. Class Packages Drop In | 1 Class | San Francisco (FIDI) $38 .00 1 class Drop in",
+      "cadence": "visit",
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianaiframes.com/iframe/buy/49114",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 119.0,
+      "currency": "USD",
+      "rawLabel": "Monthly recurring payment with 8 classes. Club Bar | 4 Classes | San Francisco (FIDI) $119 .00 4 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianaiframes.com/iframe/buy/49114",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 199.0,
+      "currency": "USD",
+      "rawLabel": "... Club Bar | 8 Classes | San Francisco (FIDI) $199 .00 8 per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianaiframes.com/iframe/buy/49114",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 209.0,
+      "currency": "USD",
+      "rawLabel": "New members receive your first month membership for $209. Use code 1STMONTHDISCOUNT at checkout. Monthly",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": null,
+      "promotion": {
+        "isPromotion": true,
+        "label": "New members receive your first month membership for $209. Use code 1STMONTHDISCOUNT at checkout. Monthly"
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianaiframes.com/iframe/buy/49114",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "amount": 259.0,
+      "currency": "USD",
+      "rawLabel": "Club Bar Monthly Memberships CLUB BAR MONTHLY UNLIMITED MEMBERSHIP Club Bar Unlimited | San Francisco (FIDI) $259 .00 unlimited per month",
+      "cadence": "month",
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "unknown",
+        "minimumMonths": null
+      },
+      "method": "visible-text-candidate",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianaiframes.com/iframe/buy/49114",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-109105",
+      "amount": 38.0,
+      "currency": "USD",
+      "rawLabel": "Drop In | 1 Class | San Francisco (FIDI)",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-132861",
+      "amount": 74.25,
+      "currency": "USD",
+      "rawLabel": "25th Anniversary New Client Special | 30 Days Unlimited | San Francisco (FIDI)",
+      "cadence": "day",
+      "intervalCount": 30,
+      "productType": "offer",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": true,
+        "label": "25th Anniversary New Client Special | 30 Days Unlimited | San Francisco (FIDI)"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "first_timers"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": null
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-111342",
+      "amount": 119.0,
+      "currency": "USD",
+      "rawLabel": "Club Bar | 4 Classes | San Francisco (FIDI)",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-111344",
+      "amount": 199.0,
+      "currency": "USD",
+      "rawLabel": "Club Bar | 8 Classes | San Francisco (FIDI)",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "memberships-109099",
+      "amount": 259.0,
+      "currency": "USD",
+      "rawLabel": "Club Bar Unlimited | San Francisco (FIDI)",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": 1
+      },
+      "locations": [
+        "48780",
+        "48788",
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-109103",
+      "amount": 339.0,
+      "currency": "USD",
+      "rawLabel": "Class Package | 10 Classes | San Francisco (FIDI)",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-111346",
+      "amount": 569.0,
+      "currency": "USD",
+      "rawLabel": "Class Package | 20 Classes | San Francisco (FIDI)",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+      "autoPublishEligible": false
+    },
+    {
+      "gymId": "web-e20a10174e60fa",
+      "gymName": "The Bar Method San Francisco - FiDi",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "credits-111348",
+      "amount": 799.0,
+      "currency": "USD",
+      "rawLabel": "Class Package | 30 Classes | San Francisco (FIDI)",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 30.0,
+        "period": "purchase"
+      },
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "locations": [
+        "49114"
+      ],
+      "method": "public-mariana-buy-page-api",
+      "adapter": "mariana-tek",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "candidate",
+      "sourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
       "autoPublishEligible": false
     },
     {

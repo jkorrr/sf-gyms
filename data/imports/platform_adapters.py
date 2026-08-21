@@ -54,6 +54,7 @@ PROFILES = (
     PlatformProfile("eventbrite", ("eventbrite.com",)),
     PlatformProfile("abc-fitness", ("onlinejoin.abcfitness.com",)),
     PlatformProfile("redpoint", ("portal.movementgyms.com",)),
+    PlatformProfile("approach", ("portal.approach.app",)),
 )
 
 NAME_KEYS = ("name", "title", "label", "productName", "packageName", "membershipName", "serviceName")

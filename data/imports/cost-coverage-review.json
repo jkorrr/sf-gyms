@@ -1202,22 +1202,22 @@
       "websiteUrl": "https://www.benchmarkclimbing.com/",
       "entityKind": "gym",
       "modality": "independent-gym",
-      "pricingStatus": "pay-per-visit",
-      "pricingBlocker": "An official unrestricted visit or class price is available, but no eligible recurring membership was verified.",
+      "pricingStatus": "verified",
+      "pricingBlocker": "",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": null,
+      "selectedPlanId": "osm-node-4004802465:plan:unlimited-membership",
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -1229,6 +1229,11 @@
           "url": "https://www.benchmarkclimbing.com/",
           "status": "fetched",
           "candidateCount": 1
+        },
+        {
+          "url": "https://benchmark.portal.approach.app/membership-type/3",
+          "status": "robots-disallowed",
+          "candidateCount": 0
         },
         {
           "url": "https://www.benchmarkclimbing.com/",
@@ -4071,15 +4076,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-27e606755f1ba8:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-27e606755f1ba8:plan:general-public-all-clubs",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -4123,11 +4128,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-257161411:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-257161411:plan:annual-membership-individual",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6463,11 +6468,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-6123d4a1928a35:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-6123d4a1928a35:plan:basic",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6547,11 +6552,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-b1dcfdcb7b4d2a:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-b1dcfdcb7b4d2a:plan:premier",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6589,11 +6594,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-9659815458:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-9659815458:plan:basic",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6631,11 +6636,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-2d8ab33422a507:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-2d8ab33422a507:plan:premier",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6673,11 +6678,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-4631674513:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-4631674513:plan:basic",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6715,11 +6720,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-412109978:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-412109978:plan:basic",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6757,11 +6762,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-way-137602240:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-way-137602240:plan:premier",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -6799,11 +6804,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-968356991:plan:legacy-reviewed-selected",
+      "selectedPlanId": "osm-node-968356991:plan:premier",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -8187,15 +8192,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-dcbf7708bf2f77:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-dcbf7708bf2f77:plan:basic",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -8241,7 +8246,7 @@
         {
           "url": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
           "status": "rendered",
-          "candidateCount": 0
+          "candidateCount": 3
         }
       ]
     },
@@ -9967,8 +9972,8 @@
           "reason": "No public recurring or package catalog was verified."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10259,15 +10264,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-e20a10174e60fa:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-e20a10174e60fa:plan:memberships-111342",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10338,6 +10343,21 @@
         {
           "url": "https://barmethod.com/locations/san-francisco-fidi/",
           "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/buy/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://barmethod.com/locations/san-francisco-fidi/buy/?_mt=%2Fbuy%2F49114%3FactiveProduct%3Dmemberships-127154",
+          "status": "rendered",
+          "candidateCount": 14
+        },
+        {
+          "url": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+          "status": "robots-disallowed",
           "candidateCount": 0
         }
       ]
@@ -10482,11 +10502,11 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "web-8e0d13fb9738f9:plan:legacy-reviewed-selected",
+      "selectedPlanId": "web-8e0d13fb9738f9:plan:single-membership",
       "catalogStatus": {
         "plans": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
           "status": "none",
@@ -10876,12 +10896,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "selected-only",
-          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",

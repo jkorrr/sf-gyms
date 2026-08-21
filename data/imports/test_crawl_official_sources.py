@@ -82,6 +82,7 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(crawler.platform_name("https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing"), "gymdesk")
         self.assertEqual(crawler.platform_name("https://onlinejoin.abcfitness.com/signup/plan?club=1"), "abc-fitness")
         self.assertEqual(crawler.platform_name("https://portal.movementgyms.com/san-francisco/memberships/monthly-membership"), "redpoint")
+        self.assertEqual(crawler.platform_name("https://benchmark.portal.approach.app/membership-type/3"), "approach")
         self.assertEqual(crawler.platform_name("https://example.com/pricing"), "operator-site")
 
     def test_abc_fitness_catalog_expands_plan_list_and_plan_linked_fee(self) -> None:
@@ -238,6 +239,15 @@ Processing Fee $49.95 $39.95 $49.95 $39.95 $49.95 $39.95 Subtotal"""
         self.assertTrue(all(offer["method"] == "visible-crunch-plan-card" for offer in offers))
         self.assertTrue(all(not offer["autoPublishEligible"] for offer in offers))
 
+    def test_rendered_platform_dispatch_preserves_mariana_semantics(self) -> None:
+        fixture = json.loads((Path(__file__).parent / "fixtures" / "mariana-buy-page.json").read_text(encoding="utf-8"))
+        offers, nested = crawler.public_platform_json_candidates(
+            fixture, "https://thecoremvmt.marianatek.com/api/customer/v1/locations/48717/buy-page"
+        )
+        self.assertEqual(nested, [])
+        self.assertEqual([offer["amount"] for offer in offers], [118, 3333, 20, 38])
+        self.assertEqual(offers[0]["method"], "public-mariana-buy-page-api")
+
     def test_24_hour_matrix_preserves_variants_and_selectable_silver(self) -> None:
         visible = """Offer on select monthly memberships. $69.99 Annual Fee required.
 Monthly
@@ -304,6 +314,75 @@ CLUB INFO"""
         classic = next(item for item in offers if item["sourceProductId"] == "classic")
         self.assertEqual(classic["commitment"], {"type": "fixed-term", "minimumMonths": 12})
         self.assertEqual(classic["fees"][0]["amount"], 1)
+
+    def test_orangetheory_cards_ignore_first_month_promotion_and_generic_visit_context(self) -> None:
+        visible = """Premier $269 / month Unlimited classes. New members first month $209 / month.
+Elite $199 / month 8 classes per month. Basic $119 / month 4 classes per month.
+Month-to-month with 30-day cancellation. Recommended casual visit is $35 and varies by studio."""
+        offers = crawler.visible_candidates(
+            visible, "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150"
+        )
+        self.assertEqual([(item["sourceProductId"], item["amount"]) for item in offers], [
+            ("premier", 269), ("elite", 199), ("basic", 119),
+        ])
+        self.assertTrue(all(item["commitment"]["type"] == "month-to-month" for item in offers))
+        self.assertFalse(any(item["amount"] == 35 for item in offers))
+        partial_card = crawler.visible_candidates(
+            "Elite $199 /mo. Price per class $24.88 8 Classes Monthly",
+            "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+        )
+        self.assertEqual(partial_card, [])
+
+    def test_approach_storefront_recovers_unlimited_membership(self) -> None:
+        offers = crawler.visible_candidates(
+            "Unlimited Membership $99 recurring monthly. Unlimited access to all Benchmark locations.",
+            "https://benchmark.portal.approach.app/membership-type/3",
+        )
+        self.assertEqual(len(offers), 1)
+        self.assertEqual((offers[0]["amount"], offers[0]["productType"]), (99, "monthly"))
+        self.assertTrue(offers[0]["classAllowance"]["unlimited"])
+
+    def test_remaining_operator_cards_preserve_terms_fees_and_restrictions(self) -> None:
+        federal = crawler.independent_operator_visible_candidates(
+            "General Public $47 monthly. Federal Employee $40. All Clubs $43. $40 Initiation Fee. Day Pass $20.",
+            "https://www.federalfitnesscenters.com/federal-fitness-center",
+        )
+        self.assertEqual(next(item for item in federal if item["sourceProductId"] == "general-public-all-clubs")["fees"][0]["amount"], 40)
+        self.assertEqual(next(item for item in federal if item["sourceProductId"] == "day-pass")["amount"], 20)
+
+        bernal = crawler.independent_operator_visible_candidates(
+            "Annual Membership Monthly Dues $77 Term 12 months $99 individual join fee",
+            "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
+        )
+        self.assertEqual((bernal[0]["commitment"]["minimumMonths"], bernal[0]["fees"][0]["amount"]), (12, 99))
+
+        pilates = crawler.independent_operator_visible_candidates(
+            "Single Membership $250 10 classes. Shared 2 $225 Shared 3 $199 Shared 4 $189. 3 class intro $50. 8 class pack $280.",
+            "https://www.pilatesschoolsf.com/drop-in-pricing/",
+        )
+        self.assertEqual(next(item for item in pilates if item["sourceProductId"] == "single-membership")["amount"], 250)
+        self.assertEqual(next(item for item in pilates if item["sourceProductId"] == "shared-four")["eligibility"]["type"], "shared-membership")
+
+    def test_live_fit_and_pay_per_visit_catalogs_are_reconstructed(self) -> None:
+        live_fit = crawler.independent_operator_visible_candidates(
+            "Basic $117 Massage + Gym $207 Wellness $357 Premier $137 Massage + Gym $227 Wellness $377",
+            "https://livefitgym.com/signup/",
+        )
+        self.assertEqual(len(live_fit), 6)
+        self.assertTrue(all(item["commitment"]["minimumMonths"] == 6 for item in live_fit))
+
+        strong = crawler.independent_operator_visible_candidates(
+            "Drop-In any class $60. Semi-private classes start at $43 with membership.",
+            "https://www.strongfriendsgym.com/programs/drop-in",
+        )
+        self.assertEqual([(item["productType"], item["amount"]) for item in strong], [("drop-in", 60)])
+
+        world = crawler.independent_operator_visible_candidates(
+            "Day Pass $49 Introduction Lesson $79 30 Day Trial $285 7 Day Trial Online $105 6 Week Bootcamp $399",
+            "https://www.worldteamusa.net/services",
+        )
+        self.assertEqual(next(item for item in world if item["sourceProductId"] == "day-pass")["amount"], 49)
+        self.assertTrue(next(item for item in world if item["sourceProductId"] == "thirty-day-trial")["promotion"]["isPromotion"])
 
     def test_independent_operator_cards_reconstruct_city_and_forge_catalogs(self) -> None:
         city = crawler.independent_operator_visible_candidates(
