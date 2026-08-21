@@ -1,539 +1,91 @@
 {
   "_meta": {
-    "researchDate": "2026-08-17",
-    "worker": "public-pricing-research-agent-b",
-    "zipContext": "94107",
-    "targetNeighborhoods": [
-      "Potrero Hill",
-      "Mission",
-      "Dogpatch",
-      "SOMA",
-      "Bernal Heights",
-      "South Beach",
-      "Mission Bay",
-      "East Cut",
-      "adjacent neighborhoods"
-    ],
-    "methodology": "Reviewed publicly accessible official operator pages only: membership pages, pricing pages, booking/product pages, FAQs, location pages, and official rate pages. No personal email, phone number, account creation, lead form submission, employer discount, or sales-contact flow was used. monthlyPrice is the lowest clearly published ongoing monthly recurring in-person membership only when the source made it safe to compare. annualFee, enrollmentFee, initiationFee, and setupFee are recorded separately when shown. dayPassPrice is a single class, single workout, day pass, or drop-in only when explicit. Limited-time, intro, student, family, paid-in-full, resident, and promotional rates are preserved in notes but not used as the primary monthly price.",
-    "limitations": [
-      "Some official pages hide live rates behind JavaScript booking widgets, account creation, location-specific quote forms, or sales inquiry flows.",
-      "Several boutique studios publish intro offers and class packs more clearly than ongoing monthly memberships; those were not forced into monthlyPrice.",
-      "Published monthly pricing may exclude taxes, processing fees, freeze fees, late fees, equipment rentals, or commitment-length terms unless the official page names them.",
-      "Prices and mandatory fees can change without notice; verify with the operator before publishing user-facing recommendations."
-    ],
-    "sources": [
-      {
-        "sourceName": "CrossFit Potrero Hill official pricing",
-        "url": "https://crossfitpotrerohill.com/membership/"
-      },
-      {
-        "sourceName": "CrossFit South Park official pricing",
-        "url": "https://www.crossfitsouthpark.com/membership"
-      },
-      {
-        "sourceName": "17 Reasons Athletic Club official pricing",
-        "url": "https://17reasonsathleticclub.com/membership"
-      },
-      {
-        "sourceName": "Mission Cliffs official memberships and day passes",
-        "url": "https://touchstoneclimbing.com/mission-cliffs/membership-and-passes/"
-      },
-      {
-        "sourceName": "Dogpatch Boulders official memberships and day passes",
-        "url": "https://touchstoneclimbing.com/dogpatch-boulders/membership-and-passes/"
-      },
-      {
-        "sourceName": "MX3 Fitness official monthly signup",
-        "url": "https://mx3fitness.com/monthly-signup"
-      },
-      {
-        "sourceName": "MX3 Fitness official gym credits",
-        "url": "https://mx3fitness.com/gym-credits"
-      },
-      {
-        "sourceName": "HIT Fit SF official purchase page",
-        "url": "https://www.hitfitsf.com/purchase"
-      },
-      {
-        "sourceName": "Yoga Mayu official pricing",
-        "url": "https://www.yogamayu.com/pricing"
-      },
-      {
-        "sourceName": "Mission Yoga official classes",
-        "url": "https://newmissionyoga.com/mission-yoga-classes/"
-      },
-      {
-        "sourceName": "Ritual Hot Yoga official pricing",
-        "url": "https://www.ritualhotyoga.com/san-francisco-soma-pricing"
-      },
-      {
-        "sourceName": "LuxFit official pricing",
-        "url": "https://luxfitsf.com/pricing/"
-      },
-      {
-        "sourceName": "UCSF Fitness & Recreation membership rates",
-        "url": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership/membership-rates"
-      },
-      {
-        "sourceName": "DIAKADI official facility details",
-        "url": "https://www.diakadi.life/general-info-details"
-      },
-      {
-        "sourceName": "DIAKADI official get started page",
-        "url": "https://www.diakadi.life/get-started"
-      },
-      {
-        "sourceName": "Iron & Mettle official memberships",
-        "url": "https://ironandmettlesf.com/memberships/"
-      },
-      {
-        "sourceName": "FITNESS SF official pricing",
-        "url": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available"
-      },
-      {
-        "sourceName": "FITNESS SF official guest passes",
-        "url": "https://help.fitnesssf.com/hc/en-us/articles/4406345185175-Does-FITNESS-SF-offer-guest-passes"
-      },
-      {
-        "sourceName": "YMCA of San Francisco membership rates",
-        "url": "https://www.ymcasf.org/join"
-      }
-    ]
+    "researchDate": "2026-08-19",
+    "worker": "public-facility-and-same-address-recovery",
+    "methodology": "Reviewed current official San Francisco Recreation and Parks facility pages and the current Fitness2Function operator site. Individual outdoor apparatus nodes are represented by four parent public facilities. No forms, accounts, authentication, contact data, or payment data were used.",
+    "recordCount": 5
   },
   "gyms": [
     {
-      "name": "CrossFit Potrero Hill",
-      "address": "175 De Haro Street, San Francisco, CA 94103",
-      "neighborhood": "Potrero Hill",
-      "gymType": "CrossFit and strength gym",
-      "websiteUrl": "https://crossfitpotrerohill.com/",
-      "priceSourceUrl": "https://crossfitpotrerohill.com/membership/",
-      "monthlyPrice": 219,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
-      "dayPassPrice": 35,
-      "priceNote": "Official membership page lists two-location month-to-month memberships at $219/month for 2 classes/week, $259/month for 3 classes/week, and $299/month unlimited. Visitor drop-in is $35. Paid-in-advance discounts are noted but not used as the primary monthly rate.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "CrossFit classes",
-        "strength training",
-        "coaching"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "CrossFit Potrero Hill",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "CrossFit South Park",
-      "address": "361 Brannan Street, San Francisco, CA 94107",
-      "neighborhood": "South Beach",
-      "gymType": "CrossFit and strength gym",
-      "websiteUrl": "https://www.crossfitsouthpark.com/",
-      "priceSourceUrl": "https://www.crossfitsouthpark.com/membership",
-      "monthlyPrice": 219,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
-      "dayPassPrice": 35,
-      "priceNote": "Official membership page lists two-location month-to-month memberships at $219/month for 2 classes/week, $259/month for 3 classes/week, and $299/month unlimited. Visitor drop-in is $35 through CrossFit Potrero Hill's shared drop-in page. Paid-in-advance discounts are noted but not used as the primary monthly rate.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "CrossFit classes",
-        "strength training",
-        "coaching"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "CrossFit South Park",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "17 Reasons Athletic Club",
-      "address": "1920 Bryant Street, San Francisco, CA 94110",
-      "neighborhood": "Mission",
-      "gymType": "independent strength and fitness gym",
-      "websiteUrl": "https://17reasonsathleticclub.com/",
-      "priceSourceUrl": "https://17reasonsathleticclub.com/membership",
-      "monthlyPrice": 125,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
-      "dayPassPrice": null,
-      "priceNote": "Official membership page lists monthly options at $125 for 5 classes, $170 for 9 classes, and $195 unlimited. A 7-class pack is mentioned, but the reviewed public page did not expose a regular single-class or day-pass price.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "free weights",
-        "strength equipment",
-        "cardio",
-        "independent gym"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "17 Reasons Athletic Club",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "Mission Cliffs",
-      "address": "2295 Harrison Street, San Francisco, CA 94110",
-      "neighborhood": "Mission",
-      "gymType": "climbing gym and fitness facility",
-      "websiteUrl": "https://touchstoneclimbing.com/mission-cliffs/",
-      "priceSourceUrl": "https://touchstoneclimbing.com/mission-cliffs/membership-and-passes/",
-      "monthlyPrice": 112,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found on the reviewed public memberships page.",
-      "initiationFee": 100,
-      "initiationFeeNote": "Official Touchstone memberships page lists a $100 initiation fee for standard monthly memberships.",
-      "dayPassPrice": 30,
-      "priceNote": "Official Touchstone page lists standard membership at $112/month, a $100 initiation fee, day pass at $30 before 3:00 PM Monday-Friday excluding holidays, and $35 after 3:00 PM. Student, child, senior, family, and prepaid rates are eligibility or commitment variants and not used as the main monthly price.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "roped climbing",
-        "bouldering",
-        "fitness equipment",
-        "yoga and fitness classes"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "Touchstone Climbing",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "Dogpatch Boulders",
-      "address": "2573 3rd Street, San Francisco, CA 94107",
-      "neighborhood": "Dogpatch",
-      "gymType": "bouldering gym and fitness facility",
-      "websiteUrl": "https://touchstoneclimbing.com/dogpatch-boulders/",
-      "priceSourceUrl": "https://touchstoneclimbing.com/dogpatch-boulders/membership-and-passes/",
-      "monthlyPrice": 112,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found on the reviewed public memberships page.",
-      "initiationFee": 100,
-      "initiationFeeNote": "Official Touchstone memberships page lists a $100 initiation fee for standard monthly memberships.",
-      "dayPassPrice": 30,
-      "priceNote": "Official Touchstone page lists standard membership at $112/month, a $100 initiation fee, day pass at $30 before 3:00 PM Monday-Friday excluding holidays, and $35 after 3:00 PM. Student, child, senior, family, and prepaid rates are eligibility or commitment variants and not used as the main monthly price.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "bouldering",
-        "training area",
-        "fitness classes"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "Touchstone Climbing",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "MX3 Fitness - Mission",
-      "address": "3166 16th Street, San Francisco, CA 94103",
-      "neighborhood": "Mission",
-      "gymType": "small-group personal training and open gym",
-      "websiteUrl": "https://mx3fitness.com/gym-near-me",
-      "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
-      "monthlyPrice": 149,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public monthly signup page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public monthly signup page.",
-      "dayPassPrice": 30,
-      "priceNote": "Official monthly signup page lists Open Gym membership at $149/month. Official gym credits page lists a single open-gym credit at $30. Higher personal-training memberships are listed separately and not used as the base gym membership rate.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "open gym",
-        "personal training",
-        "strength training"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "MX3 Fitness",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "HIT Fit SF",
-      "address": "1150 Sutter Street, San Francisco, CA 94109",
-      "neighborhood": "Lower Nob Hill",
-      "gymType": "boxing, HIIT, and strength studio",
-      "websiteUrl": "https://www.hitfitsf.com/",
-      "priceSourceUrl": "https://www.hitfitsf.com/purchase",
-      "monthlyPrice": 199,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public purchase page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public purchase page.",
-      "dayPassPrice": 35,
-      "priceNote": "Official purchase page lists unlimited classes at $199/month and a single class at $35. Introductory offers and class packs are not used as the main recurring rate.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "boxing",
-        "HIIT",
-        "strength classes"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "HIT Fit SF",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "Yoga Mayu",
-      "address": "1501 20th Street, San Francisco, CA 94107",
-      "neighborhood": "Potrero Hill",
-      "gymType": "yoga studio",
-      "websiteUrl": "https://www.yogamayu.com/",
-      "priceSourceUrl": "https://www.yogamayu.com/pricing",
-      "monthlyPrice": 165,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
-      "dayPassPrice": 30,
-      "priceNote": "Official pricing page lists unlimited monthly membership at $165/month and drop-in at $30. Intro offers and class packs are recorded as alternatives only.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "yoga classes",
-        "workshops"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "Yoga Mayu",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "Mission Yoga",
-      "address": "2390 Mission Street, Suite 200, San Francisco, CA 94110",
-      "neighborhood": "Mission",
-      "gymType": "yoga studio",
-      "websiteUrl": "https://newmissionyoga.com/",
-      "priceSourceUrl": "https://newmissionyoga.com/mission-yoga-classes/",
+      "name": "Golden Gate Park Fitness Course",
+      "address": "Golden Gate Park, San Francisco, CA 94122",
+      "neighborhood": "Golden Gate Park",
+      "gymType": "Public park outdoor fitness course",
+      "websiteUrl": "https://sfrecpark.org/770/Golden-Gate-Park",
       "monthlyPrice": null,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found in the reviewed public classes page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found in the reviewed public classes page.",
-      "dayPassPrice": 30,
-      "priceNote": "Official classes page exposes a single-class/drop-in price of $30 and class packs. A clearly ongoing monthly membership rate was not found on the public page.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "yoga classes"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "Mission Yoga",
-      "evidenceQuality": "medium"
-    },
-    {
-      "name": "Ritual Hot Yoga - SoMa",
-      "address": "57 Langton Street, San Francisco, CA 94103",
-      "neighborhood": "SOMA",
-      "gymType": "hot yoga studio",
-      "websiteUrl": "https://www.ritualhotyoga.com/",
-      "priceSourceUrl": "https://www.ritualhotyoga.com/san-francisco-soma-pricing",
-      "monthlyPrice": 179,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found on the reviewed public San Francisco SoMa pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public San Francisco SoMa pricing page.",
-      "dayPassPrice": 37,
-      "priceNote": "Official SoMa pricing page lists monthly unlimited at $179/month and a single class at $37. Intro and package pricing are not used as the primary monthly comparator.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "hot yoga",
-        "showers",
-        "towel service"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "Ritual Hot Yoga",
+      "dayPassPrice": null,
+      "priceNote": "Free public park fitness course. Individual exercise stations are retained as source evidence rather than published as separate gyms.",
+      "amenities": ["outdoor fitness course", "walking and running paths", "public park recreation"],
+      "hours": "Daily 5:00am-midnight",
+      "latitude": 37.7666313,
+      "longitude": -122.4938945,
+      "sourceName": "San Francisco Recreation and Parks",
       "evidenceQuality": "high"
     },
     {
-      "name": "LuxFit - Mission Rock",
-      "address": "1201 3rd Street, San Francisco, CA 94158",
-      "neighborhood": "Mission Bay",
-      "gymType": "outdoor and small-group strength gym",
-      "websiteUrl": "https://luxfitsf.com/",
-      "priceSourceUrl": "https://luxfitsf.com/pricing/",
-      "monthlyPrice": 149,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
-      "dayPassPrice": 35,
-      "priceNote": "Official pricing page lists Core Access at $149/month and a drop-in at $35. Higher memberships with additional classes or personal training are not used as the base monthly rate.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "outdoor gym",
-        "strength training",
-        "small-group training"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "LuxFit",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "LuxFit - East Cut",
-      "address": "250 Main Street, San Francisco, CA 94105",
-      "neighborhood": "East Cut",
-      "gymType": "outdoor and small-group strength gym",
-      "websiteUrl": "https://luxfitsf.com/",
-      "priceSourceUrl": "https://luxfitsf.com/pricing/",
-      "monthlyPrice": 149,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public pricing page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public pricing page.",
-      "dayPassPrice": 35,
-      "priceNote": "Official pricing page lists Core Access at $149/month and a drop-in at $35. Price appears to be brand-level for the reviewed LuxFit locations; verify location-specific availability before publication.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "outdoor gym",
-        "strength training",
-        "small-group training"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "LuxFit",
-      "evidenceQuality": "medium"
-    },
-    {
-      "name": "UCSF Bakar Fitness & Recreation Center",
-      "address": "1675 Owens Street, San Francisco, CA 94158",
-      "neighborhood": "Mission Bay",
-      "gymType": "university recreation and fitness center",
-      "websiteUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation",
-      "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership/membership-rates",
-      "monthlyPrice": 98,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found on the reviewed public membership-rates page.",
-      "initiationFee": 25,
-      "initiationFeeNote": "Official membership-rates page lists a $25 initiation fee for community members.",
-      "dayPassPrice": 25,
-      "priceNote": "Official rates page lists community monthly membership at $98 and guest pass at $25. UCSF student, faculty, staff, affiliate, senior, and family rates are eligibility-based and not used as the main public comparator.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "fitness center",
-        "pool",
-        "group exercise",
-        "recreation facilities"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "UCSF Fitness & Recreation",
-      "evidenceQuality": "high"
-    },
-    {
-      "name": "DIAKADI",
-      "address": "290 Division Street, San Francisco, CA 94103",
-      "neighborhood": "SOMA",
-      "gymType": "personal training and independent trainer facility",
-      "websiteUrl": "https://www.diakadi.life/",
-      "priceSourceUrl": "https://www.diakadi.life/general-info-details",
+      "name": "Mountain Lake Park Fitness Circuit",
+      "address": "12th Avenue and Lake Street, San Francisco, CA 94118",
+      "neighborhood": "Presidio Heights",
+      "gymType": "Public park outdoor fitness circuit",
+      "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189",
       "monthlyPrice": null,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found on the reviewed public facility details and get-started pages.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public facility details and get-started pages.",
       "dayPassPrice": null,
-      "priceNote": "Official public pages describe trainer matching, facility details, and getting started, but reviewed pages did not expose a comparable public monthly membership or drop-in gym price. Pricing likely depends on trainer/package selection.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "personal training",
-        "independent trainers",
-        "strength equipment"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "DIAKADI",
-      "evidenceQuality": "low"
-    },
-    {
-      "name": "Iron & Mettle",
-      "address": "3769 24th Street, San Francisco, CA 94114",
-      "neighborhood": "Noe Valley",
-      "gymType": "strength and personal training gym",
-      "websiteUrl": "https://ironandmettlesf.com/",
-      "priceSourceUrl": "https://ironandmettlesf.com/memberships/",
-      "monthlyPrice": 229,
-      "annualFee": null,
-      "annualFeeNote": "No separate mandatory annual fee found on the reviewed public memberships page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public memberships page.",
-      "dayPassPrice": null,
-      "priceNote": "Official memberships page lists starting monthly membership at $229/month. The reviewed page did not expose a regular public day pass. Included as an adjacent-neighborhood strength gym because public price was clear.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "strength training",
-        "personal training",
-        "small-group training"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "Iron & Mettle",
-      "evidenceQuality": "medium"
-    },
-    {
-      "name": "FITNESS SF - SOMA",
-      "address": "1001 Brannan Street, San Francisco, CA 94103",
-      "neighborhood": "SOMA",
-      "gymType": "full-service fitness club",
-      "websiteUrl": "https://www.fitnesssf.com/",
-      "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
-      "monthlyPrice": 129.95,
-      "annualFee": null,
-      "annualFeeNote": "Official help center article did not list an annual fee for All-Gym Access.",
-      "initiationFee": null,
-      "initiationFeeNote": "Official help center article lists upfront prorated first month plus full last month, not a separate initiation fee.",
-      "dayPassPrice": 35,
-      "priceNote": "Official help center lists All-Gym Access membership at $129.95/month and upfront prorated first month plus full last month. FITNESS SF help page lists guest pass options including a 1-day pass at $35. Published rates may vary by location, term, or promotion.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "free weights",
-        "cardio",
-        "strength equipment",
-        "group fitness"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "FITNESS SF",
+      "priceNote": "Free public built-in fitness circuit. Individual exercise stations are retained as source evidence rather than published as separate gyms.",
+      "amenities": ["outdoor fitness circuit", "walking and jogging", "basketball half-court", "four tennis courts", "playground", "picnic area", "restrooms", "accessible parking"],
+      "hours": "Daily 5:00am-midnight",
+      "latitude": 37.7869804,
+      "longitude": -122.468058,
+      "sourceName": "San Francisco Recreation and Parks",
       "evidenceQuality": "high"
     },
     {
-      "name": "FITNESS SF - Transbay",
-      "address": "425 Mission Street, San Francisco, CA 94105",
-      "neighborhood": "East Cut",
-      "gymType": "full-service fitness club",
-      "websiteUrl": "https://www.fitnesssf.com/",
-      "priceSourceUrl": "https://www.fitnesssf.com/pricing",
-      "monthlyPrice": 129.95,
-      "annualFee": null,
-      "annualFeeNote": "Official help center says FITNESS SF has no annual fees.",
-      "initiationFee": null,
-      "initiationFeeNote": "Official help center says FITNESS SF has no enrollment, processing, or initiation fees. Upfront costs include prorated first month plus full last month.",
-      "dayPassPrice": 35,
-      "priceNote": "Official help center lists All-Gym Access membership at $129.95/month and a 1-day San Francisco All Gym Access pass at $35. Published rates may vary by location, term, or promotion.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "free weights",
-        "cardio",
-        "strength equipment",
-        "group fitness"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "FITNESS SF",
+      "name": "Marina Green Park Fitness Area",
+      "address": "Marina Boulevard and Fillmore Street, San Francisco, CA 94123",
+      "neighborhood": "Marina District",
+      "gymType": "Public park parcourse and outdoor fitness area",
+      "websiteUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor",
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "priceNote": "Free public parcourse workout stations around Marina Green. Exact station hours are not separately published.",
+      "amenities": ["parcourse workout stations", "grass recreation area", "walking and running route", "restrooms", "street parking"],
+      "hours": "Hours not separately published",
+      "latitude": 37.8038042,
+      "longitude": -122.429979,
+      "sourceName": "San Francisco Recreation and Parks",
       "evidenceQuality": "high"
     },
     {
-      "name": "Embarcadero YMCA",
-      "address": "169 Steuart Street, San Francisco, CA 94105",
-      "neighborhood": "South Beach",
-      "gymType": "community fitness center",
-      "websiteUrl": "https://www.ymcasf.org/locations/embarcadero-ymca",
-      "priceSourceUrl": "https://www.ymcasf.org/join",
-      "monthlyPrice": 103,
-      "annualFee": null,
-      "annualFeeNote": "No separate annual fee found on the reviewed public membership rates page.",
-      "initiationFee": null,
-      "initiationFeeNote": "No separate initiation or enrollment fee found on the reviewed public membership rates page.",
+      "name": "Sunset Dunes Park Outdoor Fitness",
+      "address": "Great Highway between Lincoln Way and Sloat Boulevard, San Francisco, CA 94122",
+      "neighborhood": "Outer Sunset",
+      "gymType": "Public park outdoor fitness area",
+      "websiteUrl": "https://sfrecpark.org/1555/Sunset-Dunes",
+      "monthlyPrice": null,
       "dayPassPrice": null,
-      "priceNote": "Official YMCA of San Francisco join page lists adult membership at $103/month. Youth, young adult, senior, family, branch-specific, financial assistance, and promo rates were not used as the main adult monthly comparator.",
-      "priceObservedAt": "2026-08-17",
-      "amenities": [
-        "fitness center",
-        "group exercise",
-        "community programs"
-      ],
-      "hours": "Not audited in this pricing pass",
-      "sourceName": "YMCA of San Francisco",
-      "evidenceQuality": "medium"
+      "priceNote": "Free public outdoor fitness area. The exact hours of the park equipment are not separately published.",
+      "amenities": ["outdoor fitness equipment", "walking and cycling route", "skate space", "bike skills area", "water fountains", "bike parking", "temporary restroom"],
+      "hours": "Hours not separately published",
+      "latitude": 37.7645889,
+      "longitude": -122.50754,
+      "sourceName": "San Francisco Recreation and Parks",
+      "evidenceQuality": "high"
+    },
+    {
+      "name": "Fitness2Function",
+      "address": "2636 Ocean Avenue, San Francisco, CA 94132",
+      "neighborhood": "Lakeside",
+      "gymType": "Pilates and personal training studio",
+      "websiteUrl": "https://fitness2function.com/",
+      "priceSourceUrl": "https://fitness2function.com/",
+      "monthlyPrice": null,
+      "dayPassPrice": 70,
+      "priceNote": "The official rate card lists a $70 single 50-minute group session, ten group sessions for $650, a $130 single private session, and ten private sessions for $1,200. No recurring membership, mandatory fee, or package expiry is published. Fitness2Function remains distinct from the co-located Classical Pilates Studio identity.",
+      "amenities": ["Pilates group sessions", "private training", "50-minute sessions"],
+      "hours": "By appointment",
+      "latitude": 37.7320741,
+      "longitude": -122.473774,
+      "sourceName": "Fitness2Function",
+      "evidenceQuality": "high"
     }
   ]
 }

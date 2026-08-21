@@ -1,0 +1,30 @@
+{
+  "package": {
+    "credit_count": 4,
+    "id": "d2e5e3c4-a338-4ca5-93bd-ae7eb290968f",
+    "name": "4 Class Membership",
+    "package_type": "membership",
+    "clubready_id": "419569",
+    "clubready_plan_id": "631173",
+    "payment_count": 3,
+    "is_membership": true,
+    "is_recurring": true,
+    "is_unlimited": false,
+    "is_first_timer_booking": false,
+    "interval": "month",
+    "interval_count": 1,
+    "description": "4 classes per month. 3-month minimum agreement. Auto-renews monthly.",
+    "price": {"formatted": "$129.00", "numeric": 129.0, "currency_code": "USD"}
+  },
+  "plan": {
+    "today_subtotal": {"formatted": "$278.00", "numeric": 278.0, "currency_code": "USD"},
+    "payments": [
+      {"payment_type": "installment", "subtotal": {"numeric": 129.0, "currency_code": "USD"}},
+      {"payment_type": "installment", "subtotal": {"numeric": 129.0, "currency_code": "USD"}},
+      {"payment_type": "installment", "subtotal": {"numeric": 129.0, "currency_code": "USD"}}
+    ],
+    "fees": [
+      {"payment_type": "fee", "name": "Enrollment Fee", "subtotal": {"formatted": "$149.00", "numeric": 149.0, "currency_code": "USD"}}
+    ]
+  }
+}

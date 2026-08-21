@@ -1,0 +1,772 @@
+{
+  "generatedAt": "2026-08-21",
+  "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
+  "selectionRuleVersion": "neutral-basic-v2",
+  "totalListings": 248,
+  "pricingStatusCounts": {
+    "estimated": 10,
+    "free": 22,
+    "gated": 16,
+    "not-applicable": 15,
+    "operator-confirmed": 0,
+    "pay-per-visit": 24,
+    "reported": 0,
+    "unresolved": 6,
+    "verified": 155
+  },
+  "suppressedAliasCount": 107,
+  "suppressedAliases": [
+    {
+      "id": "osm-node-392204795",
+      "reason": "Incomplete-address alias overlapping the official Sutter-Montgomery club.",
+      "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca"
+    },
+    {
+      "id": "osm-node-4613901103",
+      "reason": "No corresponding current San Francisco club in the official locator.",
+      "sourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca"
+    },
+    {
+      "id": "osm-node-1206893699",
+      "reason": "Official locator marks 417 Montgomery temporarily closed for relocation to 141 Kearny.",
+      "sourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/"
+    },
+    {
+      "id": "web-2eb77e8e14996c",
+      "reason": "Researched alias for 417 Montgomery, which the official locator marks temporarily closed for relocation to 141 Kearny.",
+      "sourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca/"
+    },
+    {
+      "id": "osm-node-5136124421",
+      "reason": "Incomplete-address alias at the official Union Street club coordinates.",
+      "sourceUrl": "https://www.crunch.com/locations/union-street"
+    },
+    {
+      "id": "osm-node-14077434881",
+      "reason": "Incomplete-address alias at the official Mid Market club coordinates.",
+      "sourceUrl": "https://www.fitnesssf.com/locations"
+    },
+    {
+      "id": "osm-relation-16437206",
+      "reason": "Incomplete-address alias for the official Transbay club.",
+      "sourceUrl": "https://www.fitnesssf.com/location/sf-transbay"
+    },
+    {
+      "id": "osm-node-8722619583",
+      "reason": "Incomplete-address alias at the official Pine Street club coordinates.",
+      "sourceUrl": "https://www.equinox.com/clubs/northern-california"
+    },
+    {
+      "id": "osm-node-2341083525",
+      "reason": "Incomplete-address alias at the official Union Street club coordinates.",
+      "sourceUrl": "https://www.equinox.com/clubs/northern-california"
+    },
+    {
+      "id": "osm-node-11254215578",
+      "reason": "Legacy Orangetheory location absent from the current official SF location set.",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations"
+    },
+    {
+      "id": "osm-node-10131461286",
+      "reason": "Legacy Orangetheory location absent from the current official SF location set.",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations"
+    },
+    {
+      "id": "osm-node-11279968189",
+      "reason": "Incomplete-address alias overlapping F45 City Center SF.",
+      "sourceUrl": "https://f45training.com/studio/citycentersf/"
+    },
+    {
+      "id": "osm-node-10090042978",
+      "reason": "Incomplete-address alias overlapping Barry's Marina.",
+      "sourceUrl": "https://www.barrys.com/studio/san-francisco-marina"
+    },
+    {
+      "id": "osm-node-5251308681",
+      "reason": "Incomplete-address alias overlapping SoulCycle Union Street.",
+      "sourceUrl": "https://www.soul-cycle.com/studios/ca-sanfrancisco-unionstreet/"
+    },
+    {
+      "id": "osm-way-263347521",
+      "reason": "Rumble's current official finder does not expose an active San Francisco studio.",
+      "sourceUrl": "https://www.rumbleboxinggym.com/location-signature"
+    },
+    {
+      "id": "osm-node-2996292603",
+      "reason": "OSM alias duplicates the researched Pure Barre Noe Valley listing at the same address.",
+      "sourceUrl": "https://www.purebarre.com/location/san-francisco-noe-valley-ca"
+    },
+    {
+      "id": "osm-node-4349256209",
+      "reason": "OSM alias duplicates the researched Purusha Yoga & Pilates listing at the same address.",
+      "sourceUrl": "https://www.purushayoga.org/"
+    },
+    {
+      "id": "osm-node-12569789803",
+      "reason": "OSM alias duplicates the researched Love Story Yoga Valencia listing at the same address.",
+      "sourceUrl": "https://lovestoryyoga.com/"
+    },
+    {
+      "id": "osm-node-3315887614",
+      "reason": "The operator's current pricing page says its physical San Francisco location has permanently closed and only virtual services remain.",
+      "sourceUrl": "https://www.sf-iron.com/pricing"
+    },
+    {
+      "id": "osm-node-497304176",
+      "reason": "The Valencia Street Muscle location closed in 2014 and is not a current consumer gym.",
+      "sourceUrl": "https://www.cappstreetcrap.com/more-changes-for-valencia-street-longtime-gym/"
+    },
+    {
+      "id": "osm-node-5840675565",
+      "reason": "OSM alias duplicates the researched Live Fit Gym Inner Richmond listing at 403 Arguello Boulevard.",
+      "sourceUrl": "https://livefitgym.com/locations/"
+    },
+    {
+      "id": "osm-node-3790822677",
+      "reason": "OSM alias duplicates the researched Live Fit Gym Cole Valley listing at 957 Cole Street.",
+      "sourceUrl": "https://livefitgym.com/locations/"
+    },
+    {
+      "id": "osm-way-261142907",
+      "reason": "The exact-location DataSF registration ended in 2024 and a current public directory marks this Uforia Studios location closed; no current operator enrollment page remains.",
+      "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data"
+    },
+    {
+      "id": "web-0701b04c78c76f",
+      "reason": "Official-research alias duplicates the stable OSM CrossFit Alinea listing at the same current address and operator URL.",
+      "sourceUrl": "https://www.crossfitalinea.com/"
+    },
+    {
+      "id": "web-865e385061a6e4",
+      "reason": "Reviewed duplicate Chinatown YMCA records share the same operator and exact address.",
+      "sourceUrl": "https://www.ymcasf.org/locations/chinatown-ymca"
+    },
+    {
+      "id": "web-0bddc278597205",
+      "reason": "Official Evolve Pilates research record matches the stable OSM location at the exact address.",
+      "sourceUrl": "https://www.evolvestronger.com/"
+    },
+    {
+      "id": "web-5bb1dc70e6be8f",
+      "reason": "Official Flagship Mission Bay research record matches the stable OSM location at 201 King Street.",
+      "sourceUrl": "https://www.trainflagship.com/membership-sf"
+    },
+    {
+      "id": "web-38b781fe26e1b4",
+      "reason": "Official Flagship Castro record matches the stable OSM location coordinates; retain the exact official address.",
+      "sourceUrl": "https://www.trainflagship.com/"
+    },
+    {
+      "id": "web-732bcfc12da917",
+      "reason": "Official Live Fit Hayes Valley record matches the stable OSM location at 301 Fell Street.",
+      "sourceUrl": "https://livefitgym.com/locations/"
+    },
+    {
+      "id": "web-d34b520e613785",
+      "reason": "Official Live Fit Mission record matches the stable OSM location at 780 Valencia Street.",
+      "sourceUrl": "https://livefitgym.com/locations/"
+    },
+    {
+      "id": "web-1a41b4840aac85",
+      "reason": "Official Lotusland Yoga record matches the stable OSM location at 1360 Valencia Street.",
+      "sourceUrl": "https://lotuslandyogasf.com/"
+    },
+    {
+      "id": "web-9f71a061a7a9bc",
+      "reason": "Official MX3 Noe Valley record matches the stable OSM location at 4045 24th Street.",
+      "sourceUrl": "https://mx3fitness.com/"
+    },
+    {
+      "id": "web-0a2585fb887434",
+      "reason": "Official MX3 Lower Haight record matches the stable OSM location at 520 Waller Street.",
+      "sourceUrl": "https://mx3fitness.com/"
+    },
+    {
+      "id": "web-26e56c51255445",
+      "reason": "Official Richmond District YMCA record matches the stable OSM location at 360 18th Avenue.",
+      "sourceUrl": "https://www.ymcasf.org/locations/richmond-district-ymca"
+    },
+    {
+      "id": "web-c918742306b9ec",
+      "reason": "Official Embarcadero YMCA record matches the stable OSM location at 169 Steuart Street.",
+      "sourceUrl": "https://www.ymcasf.org/locations/embarcadero-ymca"
+    },
+    {
+      "id": "web-f141f189045511",
+      "reason": "Official Stonestown YMCA record matches the stable OSM location at 333 Eucalyptus Drive.",
+      "sourceUrl": "https://www.ymcasf.org/locations/stonestown-family-ymca"
+    },
+    {
+      "id": "osm-way-364222310",
+      "reason": "Duplicate Upper Noe Recreation Center geometry; retain the record with the exact 295 Day Street address.",
+      "sourceUrl": "https://sfrecpark.org/Facilities/Facility/Details/Upper-Noe-Recreation-Center-219"
+    },
+    {
+      "id": "web-af8c0bcc212030",
+      "reason": "Official Bakar Fitness Center record matches the stable OSM location at 1675 Owens Street.",
+      "sourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/locations/bakar-fitness-center"
+    },
+    {
+      "id": "web-118d20c83f7f36",
+      "reason": "Official MX3 Castro record matches the stable OSM location at 2336 Market Street.",
+      "sourceUrl": "https://mx3fitness.com/"
+    },
+    {
+      "id": "osm-way-1107106610",
+      "reason": "Duplicate Mission Dolores Park fitness-area geometry; publish one park facility record.",
+      "sourceUrl": "https://www.openstreetmap.org/way/1107106606"
+    },
+    {
+      "id": "web-ce5c5ffa4da2b2",
+      "reason": "Official HAUM Haight-Ashbury record matches the stable OSM location at 780 Stanyan Street; the operator changed domains.",
+      "sourceUrl": "https://www.haumstudios.com/buy-classes"
+    },
+    {
+      "id": "osm-node-586709251",
+      "reason": "Reviewed replacement-business decision: the current official Castro Fitness source occupies the exact 2275 Market Street location; retain the new operator as a distinct canonical record and suppress the stale Alex Fitness alias.",
+      "sourceUrl": "https://castro-fitness.com/"
+    },
+    {
+      "id": "osm-node-10609148147",
+      "reason": "The operator's official website states that United Barbell closed on June 26, 2026 after 16 years in SoMa.",
+      "sourceUrl": "https://www.unitedbarbell.com/"
+    },
+    {
+      "id": "osm-node-13189660932",
+      "reason": "Reviewed typo alias at the official LuxFit SF Hayes Valley coordinates; retain the named official record at 432 Octavia Street.",
+      "sourceUrl": "https://www.luxfitsf.com/services/open-gym"
+    },
+    {
+      "id": "osm-node-13574072411",
+      "reason": "Incomplete-name alias at the official Orangetheory Pacific Heights coordinates; retain the official 1633 Fillmore Street record.",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150"
+    },
+    {
+      "id": "osm-node-12440345642",
+      "reason": "The current official Synergy site lists only its Marina and Sacramento Street studios; the public registry marks the OSM node's former 1217 Polk Street location closed in 2023.",
+      "sourceUrl": "https://synergyfitnessstudio.com/"
+    },
+    {
+      "id": "osm-way-1119503894",
+      "reason": "The current Krav Maga Institute contact page lists only its Santa Clara headquarters. The former San Francisco operation changed operators and branding, so the stale KMI identity must not be merged into the replacement business.",
+      "sourceUrl": "https://www.kravmagainstitute.com/contact-us/"
+    },
+    {
+      "id": "osm-node-4611606987",
+      "reason": "The former San Francisco LaLanne Fitness operation ended in 2017; CrossFit Potrero Hill's contemporaneous operator announcement says LaLanne moved its focus to the East Bay and transferred its San Francisco athletes.",
+      "sourceUrl": "https://crossfitpotrerohill.com/wod-thursday-may-4-2/"
+    },
+    {
+      "id": "osm-node-10538306968",
+      "reason": "The Embarcadero Wheel House location is reported permanently closed, its public business registration ended in 2023, and no current operator enrollment page remains.",
+      "sourceUrl": "https://incentfit.com/capabilities/discounts/San-Francisco-CA/Wheel-House-1-Embarcadero-Ctr-R1213/"
+    },
+    {
+      "id": "osm-node-2340010642",
+      "reason": "The operator returned to San Francisco with its current FiDi studio in 2025; the official locator exposes that site but no current Marina studio, so this legacy incomplete-address Marina record is stale.",
+      "sourceUrl": "https://barmethod.com/locations/san-francisco-fidi/"
+    },
+    {
+      "id": "osm-node-4270584674",
+      "reason": "The operator's current official directory lists its Bay Area location in Daly City and no San Francisco school; the 261 South Van Ness record is a stale former location.",
+      "sourceUrl": "https://www.10thplanetjj.com/Locations/"
+    },
+    {
+      "id": "osm-node-3833169025",
+      "reason": "The current official Fitness 19 directory lists San Bruno and other California clubs but no San Francisco club; this addressless San Francisco record is stale or noncanonical.",
+      "sourceUrl": "https://www.fitness19.com/centers/"
+    },
+    {
+      "id": "osm-node-10806697932",
+      "reason": "The current official Row House location search exposes no standalone San Francisco studio and the operator directory no longer contains the former Mission Bay location.",
+      "sourceUrl": "https://www.therowhouse.com/location-search"
+    },
+    {
+      "id": "osm-node-6471102057",
+      "reason": "The current official Iron + Mettle site identifies its sole gym at 3769 24th Street and does not list a separate annex. A current April 2026 neighborhood publication identifies 3920B 24th Street as Routier Leather Goods, confirming that the OSM annex record is stale.",
+      "sourceUrl": "https://www.ironandmettlefitness.com/"
+    },
+    {
+      "id": "osm-node-10553806544",
+      "reason": "Polk Street Boxing Gym closed this location in 2015 and continued as HIT Fit at 1150 Sutter Street. A current property listing describes 1436 Polk as the previous boxing-gym space, so the legacy location must not publish as a separate gym.",
+      "sourceUrl": "https://www.blatteisrealty.com/properties/all-properties/1436-polk-street-san-francisco-ca-94109"
+    },
+    {
+      "id": "osm-node-5735236442",
+      "reason": "Current January 2026 neighborhood business reporting confirms Pilates Heights closed and did not plan to reopen; no current official schedule or storefront remains.",
+      "sourceUrl": "https://bernalconnect.com/synced-pilates-with-avenne-redefining-health-and-wellness-in-bernal-heights/"
+    },
+    {
+      "id": "osm-node-4637222973",
+      "reason": "Bernal Yoga's former domain is now unrelated content and its former 908 Cortland location is the current fitBERNALfit facility according to the replacement operator's official page.",
+      "sourceUrl": "https://fitlocalfit.com/Locations/Bernal-Heights/Gym"
+    },
+    {
+      "id": "osm-node-2819256103",
+      "reason": "The official SF business registry marks the Academy of Tae Kwon Do location ended and administratively closed in 2019; current registrations at 988/998 Oak belong to other businesses.",
+      "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json"
+    },
+    {
+      "id": "osm-node-5180870606",
+      "reason": "The official SF business registry marks Ever Strong SF at 218 Fillmore ended in 2019; a different current business has occupied the address since 2020.",
+      "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json"
+    },
+    {
+      "id": "osm-node-2714942367",
+      "reason": "The official SFSU project page says West Campus Green closed for redevelopment in 2023 and is no longer a recreation facility.",
+      "sourceUrl": "https://cpdc.sfsu.edu/wcg"
+    },
+    {
+      "id": "osm-node-4754013404",
+      "reason": "Moxie Yoga was officially consolidated and rebranded into Folk Yoga + Fitness; the former Moxie business registration ended in 2022.",
+      "sourceUrl": "https://folksf.com/marketing-manager/"
+    },
+    {
+      "id": "osm-way-276587703",
+      "reason": "The official SF business registry marks Northern Tiger Kenpo at 1319 20th Avenue ended and administratively closed in 2022; the current official occupant is a preschool.",
+      "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json"
+    },
+    {
+      "id": "osm-node-10553760194",
+      "reason": "California Martial Arts is an OSM spelling alias for the exact-address California Martial Athletics canonical record at 1217 Polk.",
+      "sourceUrl": "https://www.cmasf.com/about"
+    },
+    {
+      "id": "osm-node-585968188",
+      "reason": "Reviewed fail-closed decision: the name-only 2009 OSM identity maps to a residential address and has no current business registry, operator site, or exact-name public trace.",
+      "sourceUrl": "https://api.openstreetmap.org/api/0.6/node/585968188/history.json"
+    },
+    {
+      "id": "osm-node-2537352227",
+      "reason": "The official SF registration at 150 Lombard ended in 2015; the current same-suite operator is a distinct business and cannot be merged by address.",
+      "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json"
+    },
+    {
+      "id": "osm-node-4069447292",
+      "reason": "The official SF registration for Parkside Pilates ended in 2017 and no current operator site or registration remains.",
+      "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json"
+    },
+    {
+      "id": "osm-node-5613323269",
+      "reason": "The official SF registration for World Class Boxing ended in 2014 and no current operator evidence remains at the Mission Street address.",
+      "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json"
+    },
+    {
+      "id": "osm-node-10538306970",
+      "reason": "The current official studioDetails payload marks Orangetheory Financial District permanently closed; generic coming-soon template copy and stale product data are not treated as current.",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-0454"
+    },
+    {
+      "id": "osm-node-10874914162",
+      "reason": "The current official studioDetails payload marks Orangetheory Mission Bay permanently closed; generic coming-soon template copy and stale product data are not treated as current.",
+      "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-0455"
+    },
+    {
+      "id": "osm-way-981481297",
+      "reason": "Point Bonita is absent from the current YMCA branch locator, is outside San Francisco, and the National Park Service describes it as an outdoor-education and retreat facility rather than an ordinary consumer gym.",
+      "sourceUrl": "https://www.nps.gov/places/000/point-bonita-ymca.htm"
+    },
+    {
+      "id": "osm-node-4238377195",
+      "reason": "Reviewed stale-alias decision: the OSM identity was created in 2016 and received no later name verification; the current 2026 SF business registry contains no Classical Pilates Studio DBA at 2636 Ocean, while Fitness2Function has been continuously registered there since 2013 and now publishes the exact-address official studio and rate card. Retain Fitness2Function as the canonical consumer listing and preserve Classical Pilates Studio only as a source alias.",
+      "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data"
+    },
+    {
+      "id": "web-9cd1abdefbbb83",
+      "reason": "This building wellness center is not a generally purchasable public gym and is restricted to eligible building users and guests.",
+      "sourceUrl": "https://activewellnesscenter.com/guest/"
+    },
+    {
+      "id": "osm-node-4022645782",
+      "reason": "The official operator is a performing dance company, not a generally purchasable consumer gym location.",
+      "sourceUrl": "https://www.lilycaidance.org/"
+    },
+    {
+      "id": "osm-way-634526276",
+      "reason": "Mashouf Wellness Center is a university campus recreation facility with eligibility-controlled access rather than an ordinary public gym listing.",
+      "sourceUrl": "https://campusrec.sfsu.edu/mashouf-wellness-center"
+    },
+    {
+      "id": "osm-way-273590287",
+      "reason": "War Memorial Gymnasium is a university athletics venue with controlled campus access, not an ordinary consumer fitness business.",
+      "sourceUrl": "https://myusf.usfca.edu/public-safety-transportation/clery-report/campus-security-access"
+    },
+    {
+      "id": "osm-node-11021366849",
+      "reason": "The official operator is a physical-therapy clinic requiring clinical or trainer-led services, not an ordinary gym membership or drop-in facility.",
+      "sourceUrl": "https://motusclinic.com"
+    },
+    {
+      "id": "osm-node-10744098187",
+      "reason": "The official operator provides trainer-led services rather than ordinary consumer gym-floor or class access.",
+      "sourceUrl": "https://www.sessionstrainingcenter.com/"
+    },
+    {
+      "id": "osm-node-2713442479",
+      "reason": "SF State restricts this instructional gymnasium to Kinesiology classes and Athletics; it is not a consumer facility.",
+      "sourceUrl": "https://kin.sfsu.edu/lockerroom"
+    },
+    {
+      "id": "osm-way-288978321",
+      "reason": "This is a restricted police training and armorer facility, not a consumer fitness listing.",
+      "sourceUrl": "https://www.sanfranciscopolice.org/your-sfpd/policies/general-orders/10-02"
+    },
+    {
+      "id": "osm-node-3969590469",
+      "reason": "The current official operator describes an event and movement space rather than a generally purchasable consumer gym membership.",
+      "sourceUrl": "https://tantarasf.com/"
+    },
+    {
+      "id": "osm-node-1450184240",
+      "reason": "This gym is a component of the federal Treasure Island Job Corps campus and is restricted to program participants and staff.",
+      "sourceUrl": "https://treasureisland.jobcorps.gov/"
+    },
+    {
+      "id": "osm-node-10733903069",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000320",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000317",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000321",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000313",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000324",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000334",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000316",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-10733903065",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000328",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000325",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-10733903068",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000322",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000331",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-10733903067",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-6636000333",
+      "reason": "Individual Golden Gate Park exercise-course apparatus; publish the parent park fitness-course listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park"
+    },
+    {
+      "id": "osm-node-11038336709",
+      "reason": "Individual Mountain Lake Park fitness-circuit apparatus; publish the parent park listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189"
+    },
+    {
+      "id": "osm-node-4190906588",
+      "reason": "Individual Mountain Lake Park fitness-circuit apparatus; publish the parent park listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189"
+    },
+    {
+      "id": "osm-node-11009320684",
+      "reason": "Individual Mountain Lake Park fitness-circuit apparatus; publish the parent park listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189"
+    },
+    {
+      "id": "osm-node-11009320687",
+      "reason": "Individual Mountain Lake Park fitness-circuit apparatus; publish the parent park listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189"
+    },
+    {
+      "id": "osm-node-11038336710",
+      "reason": "Individual Mountain Lake Park fitness-circuit apparatus; publish the parent park listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189"
+    },
+    {
+      "id": "osm-node-11009320686",
+      "reason": "Individual Mountain Lake Park fitness-circuit apparatus; publish the parent park listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189"
+    },
+    {
+      "id": "osm-node-2653231297",
+      "reason": "Individual Marina Green parcourse component; publish the parent public fitness-area listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor"
+    },
+    {
+      "id": "osm-way-478789263",
+      "reason": "Individual Marina Green parcourse component; publish the parent public fitness-area listing instead of a separate gym page.",
+      "sourceUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor"
+    },
+    {
+      "id": "osm-node-5359937504",
+      "reason": "Individual Sunset Dunes exercise component; publish the parent public outdoor-fitness listing instead of a separate gym page.",
+      "sourceUrl": "https://sfrecpark.org/1555/Sunset-Dunes"
+    },
+    {
+      "id": "osm-node-9354883876",
+      "reason": "The current official HIT Fit directory lists only the 2345 Harrison Street location and describes Nob Hill as former history; retain the active Mission location rather than publishing the stale 1150 Sutter alias.",
+      "sourceUrl": "https://www.hitfitsf.com/"
+    }
+  ],
+  "identityIntegrity": {
+    "duplicates": [],
+    "distinctCoLocations": [
+      {
+        "operatorId": "sfrecpark.org",
+        "canonicalAddress": "1900 geary blvd",
+        "gymIds": [
+          "osm-node-5270986784",
+          "osm-way-545151976"
+        ],
+        "operatorLocationIds": [
+          "hamilton-pool-215",
+          "hamilton-recreation-center-93"
+        ]
+      }
+    ]
+  },
+  "auditedListingInputs": 355,
+  "entityKindCounts": {
+    "gym": 87,
+    "martial-arts": 16,
+    "non-consumer": 1,
+    "public-recreation": 38,
+    "studio": 106
+  },
+  "verifiedMonthlyCount": 155,
+  "verifiedDayPassCount": 122,
+  "staleVerifiedCount": 0,
+  "approvedCrawlObservationsApplied": 135,
+  "approvedOperatorCatalogLocationsApplied": 83,
+  "operatorConfirmedObservationsApplied": 0,
+  "operatorConfirmedMonthlyCount": 0,
+  "approvedDealsApplied": 11,
+  "activeDealCount": 11,
+  "approvedSourceDiscoveriesApplied": 244,
+  "approvedLocationMetadataApplied": 20,
+  "reportedEvidenceCount": 1,
+  "reportedMonthlyCount": 0,
+  "estimatedMonthlyCount": 10,
+  "approvedExternalComparableCount": 1,
+  "officialCostContextListingCount": 15,
+  "fieldCoverage": {
+    "specificDescriptionCount": 248,
+    "officialUrlCount": 246,
+    "hoursListedCount": 242,
+    "exactHoursCount": 106,
+    "accessScheduleSemanticsCount": 111,
+    "hoursUnpublishedCount": 6,
+    "hoursNotApplicableCount": 0,
+    "amenitiesListedCount": 245,
+    "operatorLocationIdCount": 124,
+    "sourcePlanCatalogCount": 182,
+    "sourcePlanFragmentCount": 0,
+    "selectedOnlyPlanCatalogCount": 0,
+    "noPlanCatalogCount": 66,
+    "sourceDropInCatalogCount": 129,
+    "sourceDropInFragmentCount": 0,
+    "selectedOnlyDropInCatalogCount": 0,
+    "noDropInCatalogCount": 119,
+    "selectedUnknownCommitmentCount": 47,
+    "selectedUndisclosedClassAllowanceCount": 6,
+    "typicalPlanSelectedCount": 155,
+    "highestAccessPlanSelectedCount": 155,
+    "bestValuePlanSelectedCount": 12,
+    "explicitMonthlyPriceStateCount": 248,
+    "explicitDayPassPriceStateCount": 248,
+    "metadataGapStatusCount": 248
+  },
+  "commercialListings": 183,
+  "commercialAttemptedSourceListings": 183,
+  "commercialAttemptedSourceCoverage": 1.0,
+  "commercialUnattemptedSourceListings": [],
+  "commercialExactAddressListings": 183,
+  "commercialExactAddressCoverage": 1.0,
+  "actionableCommercialListings": 180,
+  "actionableCommercialCoverage": 0.9836,
+  "meaningfulCostCommercialListings": 183,
+  "meaningfulCostCommercialCoverage": 1.0,
+  "officialSiteUnresolvedCount": 2,
+  "officialPagePresentCount": 246,
+  "officialSiteDiscoveryQueue": 0,
+  "officialPageExtractionQueue": 0,
+  "catalogReconstructionQueue": {
+    "publiclyPricedCommercialListings": 169,
+    "reconstructedRelevantCatalogListings": 169,
+    "reconstructedRelevantCatalogCoverage": 1.0,
+    "targetCoverage": 0.9,
+    "targetMet": true,
+    "priorityPlatformCounts": {},
+    "priorityRecords": [],
+    "sourceFragmentPlanCatalogs": 0,
+    "selectedOnlyPlanCatalogs": 0,
+    "sourceFragmentDropInCatalogs": 0,
+    "selectedOnlyDropInCatalogs": 0
+  },
+  "crawlSummary": {
+    "attemptedGyms": 288,
+    "requestCount": 777,
+    "statusCounts": {
+      "access-blocked": 33,
+      "fetched": 355,
+      "http-403": 21,
+      "http-404": 8,
+      "http-429": 15,
+      "network-error": 4,
+      "not-modified": 29,
+      "render-error": 4,
+      "rendered": 267,
+      "robots-disallowed": 41
+    },
+    "reviewCandidatePages": 165,
+    "linkedStorefrontRequests": 172,
+    "renderedRequests": 318,
+    "renderedAccessBlockedRequests": 33,
+    "renderedAccessBlockerCounts": {
+      "captcha-required": 3,
+      "platform-security-check": 30
+    },
+    "priceChangeFlags": 29
+  },
+  "publicSourceDiscoverySummary": {
+    "attemptedListings": 3,
+    "requests": 6,
+    "dispositionCounts": {
+      "strong-match-review": 1,
+      "possible-replacement-review": 2,
+      "ambiguous-match-review": 0,
+      "no-match": 0
+    }
+  },
+  "reportedEvidenceAudit": {
+    "reportsChecked": 1,
+    "requiresReview": 1
+  },
+  "estimatorValidation": {
+    "budget-full-service": {
+      "sampleSize": 30,
+      "medianAbsolutePercentageError": 0.011,
+      "rangeCoverage": 0.9667
+    },
+    "crossfit-strength": {
+      "sampleSize": 9,
+      "medianAbsolutePercentageError": 0.1667,
+      "rangeCoverage": 0.8889
+    },
+    "independent-gym": {
+      "sampleSize": 7,
+      "medianAbsolutePercentageError": 0.4583,
+      "rangeCoverage": 0.5714
+    },
+    "pilates-lagree-barre": {
+      "sampleSize": 10,
+      "medianAbsolutePercentageError": 0.124,
+      "rangeCoverage": 0.9
+    },
+    "premium-club": {
+      "sampleSize": 1,
+      "medianAbsolutePercentageError": 0.2162,
+      "rangeCoverage": 0.0
+    },
+    "public-recreation": {
+      "sampleSize": 1,
+      "medianAbsolutePercentageError": 0.011,
+      "rangeCoverage": 1.0
+    },
+    "yoga": {
+      "sampleSize": 13,
+      "medianAbsolutePercentageError": 0.2222,
+      "rangeCoverage": 0.7692
+    },
+    "overall": {
+      "sampleSize": 71,
+      "medianAbsolutePercentageError": 0.124,
+      "rangeCoverage": 0.8592
+    }
+  },
+  "withheldEstimateModalities": {
+    "yoga": {
+      "sampleSize": 13,
+      "medianAbsolutePercentageError": 0.2222,
+      "rangeCoverage": 0.7692
+    }
+  },
+  "publicationChecks": {
+    "allClassified": true,
+    "allHavePricingStatus": true,
+    "noEstimateInVerifiedField": true,
+    "noEstimateOnGatedOrUnavailable": true,
+    "noEstimateOnRestrictedConflictedOrUnavailable": true,
+    "reportedPricesRemainOutOfVerifiedFields": true,
+    "operatorConfirmedPricesRemainOutOfVerifiedFields": true,
+    "dealsNeverReplaceOrdinaryPrices": true,
+    "suppressedAliasesHaveReasons": true,
+    "verifiedPlansResolve": true,
+    "compatibilityPricesMatchSelections": true,
+    "noPublicLowConfidenceEstimates": true,
+    "publishedEstimatesPassModalityValidation": true,
+    "zeroIdentityReviewHolds": true,
+    "zeroUnreviewedSameOperatorExactAddressDuplicates": true,
+    "noOfficialPriceConflictsPublished": true,
+    "noGenericDescriptions": true,
+    "allNullMonthlyPricesHaveReasons": true,
+    "allNullDayPassPricesHaveReasons": true,
+    "allMetadataGapsHaveStates": true,
+    "allCatalogCompletenessStatesExplicit": true,
+    "costContextNeverLeaksIntoVerifiedFields": true
+  },
+  "releaseGates": {
+    "everyCommercialListingHasAttemptedSourceLog": true,
+    "commercialActionableCoverageAtLeast90Percent": true,
+    "commercialMeaningfulCostCoverageAtLeast97Percent": true,
+    "commercialExactAddressCoverageAtLeast95Percent": true,
+    "commercialCatalogCoverageAtLeast90Percent": true,
+    "zeroUnreviewedSameOperatorExactAddressDuplicates": true,
+    "overallEstimatorMedianErrorAtMost15Percent": true,
+    "overallEstimatorRangeCoverageAtLeast75Percent": true
+  }
+}

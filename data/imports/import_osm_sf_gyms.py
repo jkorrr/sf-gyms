@@ -16,8 +16,6 @@ from typing import Any
 from urllib.parse import urlencode
 from urllib.request import Request, urlopen
 
-from classify_venue import classify_venue
-
 ROOT = Path(__file__).resolve().parents[2]
 OVERPASS_URL = "https://overpass-api.de/api/interpreter"
 SF_BBOX = "37.70,-122.53,37.84,-122.35"
@@ -154,7 +152,7 @@ def normalize(
         (override for override in price_overrides if re.search(text(override.get("match")), name, re.IGNORECASE)),
         {},
     )
-    record = {
+    return {
         "id": f"osm-{osm_type}-{osm_id}",
         "name": name,
         "neighborhood": neighborhood_from_tags(tags, latitude, longitude),
@@ -163,12 +161,6 @@ def normalize(
         "latitude": round(latitude, 7),
         "longitude": round(longitude, 7),
         "monthlyPrice": price.get("monthlyPrice"),
-        "annualFee": price.get("annualFee"),
-        "annualFeeNote": price.get("annualFeeNote", ""),
-        "enrollmentFee": price.get("enrollmentFee"),
-        "enrollmentFeeNote": price.get("enrollmentFeeNote", ""),
-        "initiationFee": price.get("initiationFee"),
-        "initiationFeeNote": price.get("initiationFeeNote", ""),
         "dayPassPrice": price.get("dayPassPrice"),
         "freshness": "verified" if price else "unknown",
         "isOpen247": is_open_247,
@@ -185,8 +177,6 @@ def normalize(
         "priceNote": price.get("priceNote", ""),
         "priceObservedAt": price.get("priceObservedAt", ""),
     }
-    record["venueType"] = classify_venue(record)
-    return record
 
 
 def fetch_elements() -> tuple[list[dict[str, Any]], str]:
@@ -212,7 +202,6 @@ def write_outputs(gyms: list[dict[str, Any]], imported_at: str) -> None:
             "boundingBox": SF_BBOX,
             "importedAt": imported_at,
             "license": "ODbL 1.0",
-            "venueTaxonomyVersion": 1,
             "notes": "Named OSM-tagged fitness facilities in the San Francisco bounding box; coverage is not exhaustive.",
         },
         "gyms": gyms,

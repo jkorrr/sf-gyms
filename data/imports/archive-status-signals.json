@@ -1,0 +1,132 @@
+{
+  "_meta": {
+    "generatedAt": "2026-08-20",
+    "policy": "Historical status/identity leads only; archive captures can never verify current pricing.",
+    "targetCount": 9,
+    "signalCount": 4,
+    "errorCount": 12
+  },
+  "signals": [
+    {
+      "gymId": "osm-node-10869882845",
+      "url": "https://www.divineyogastudiosf.com/",
+      "currentFetchStatus": "http-404",
+      "wayback": null,
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "osm-node-2537352227",
+      "url": "https://bayareastrengthandnutrition.com/",
+      "currentFetchStatus": "network-error",
+      "wayback": null,
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "osm-node-3801395450",
+      "url": "https://haumsf.com/haight-ashbury-studio/",
+      "currentFetchStatus": "http-404",
+      "wayback": {
+        "captureTimestamp": "20240117084559",
+        "capturedUrl": "https://haumsf.com/haight-ashbury-studio/",
+        "status": "200",
+        "contentDigest": "6CCT5WVO4EJ74YAYJKPVD5HG5NUO2ERM"
+      },
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "osm-node-4101104064",
+      "url": "https://sffencers.com/",
+      "currentFetchStatus": "network-error",
+      "wayback": null,
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "osm-node-6177260821",
+      "url": "https://pop-sf.com/",
+      "currentFetchStatus": "network-error",
+      "wayback": {
+        "captureTimestamp": "20240117032040",
+        "capturedUrl": "https://pop-sf.com/",
+        "status": "200",
+        "contentDigest": "H4JHX3ONUFTOGCWNK3RPOG362IVSCGTD"
+      },
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "osm-node-9354883876",
+      "url": "https://hitfitsf.com/nobhill/",
+      "currentFetchStatus": "http-404",
+      "wayback": {
+        "captureTimestamp": "20240117033114",
+        "capturedUrl": "https://hitfitsf.com/nobhill/",
+        "status": "200",
+        "contentDigest": "YE243NBQYVZ5YJGF4ES3O2B65BLDI6FJ"
+      },
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "osm-way-248782086",
+      "url": "https://www.churchof8wheels.com/",
+      "currentFetchStatus": "network-error",
+      "wayback": {
+        "captureTimestamp": "20240102193800",
+        "capturedUrl": "http://www.churchof8wheels.com/",
+        "status": "200",
+        "contentDigest": "JSOMMIT2MIP3ZNUMZAR275LTVLZR5AO6"
+      },
+      "commonCrawl": {
+        "captureTimestamp": "20260713070400",
+        "capturedUrl": "http://www.churchof8wheels.com/",
+        "status": "200",
+        "contentDigest": "PXNAWGATB7YAIULR6CDXST2PN56J2AEW",
+        "indexFilename": "crawl-data/CC-MAIN-2026-30/segments/1783663951636.54/warc/CC-MAIN-20260713053705-20260713083705-00202.warc.gz"
+      },
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "web-abd8e24f4af4d8",
+      "url": "https://www.ymcasf.org/location/dogpatch-ymca-at-crane-cove/",
+      "currentFetchStatus": "http-404",
+      "wayback": null,
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    },
+    {
+      "gymId": "web-d335e6ba867d00",
+      "url": "https://www.ymcasf.org/locations/shih-yu-lang-central-ymca",
+      "currentFetchStatus": "http-404",
+      "wayback": null,
+      "commonCrawl": null,
+      "reviewStatus": "pending",
+      "currentPriceEvidenceEligible": false
+    }
+  ],
+  "errors": [
+    "wayback:osm-node-10869882845:TimeoutError",
+    "common-crawl:osm-node-10869882845:HTTPError",
+    "common-crawl:osm-node-2537352227:HTTPError",
+    "common-crawl:osm-node-3801395450:HTTPError",
+    "wayback:osm-node-4101104064:TimeoutError",
+    "common-crawl:osm-node-4101104064:HTTPError",
+    "common-crawl:osm-node-6177260821:HTTPError",
+    "common-crawl:osm-node-9354883876:HTTPError",
+    "wayback:web-abd8e24f4af4d8:TimeoutError",
+    "common-crawl:web-abd8e24f4af4d8:HTTPError",
+    "wayback:web-d335e6ba867d00:TimeoutError",
+    "common-crawl:web-d335e6ba867d00:HTTPError"
+  ]
+}

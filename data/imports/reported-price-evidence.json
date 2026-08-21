@@ -1,0 +1,25 @@
+{
+  "_meta": {
+    "policy": "Store only structured, paraphrased cost claims from free public sources. Monthly summaries require two independent exact-location reports no older than 18 months. Reports never populate monthlyPrice or dayPassPrice.",
+    "version": "reported-cost-v1"
+  },
+  "reports": [
+    {
+      "id": "crossfit-alinea-dropin-2026-04",
+      "gymId": "osm-node-3485460052",
+      "productType": "drop-in",
+      "amount": 25,
+      "currency": "USD",
+      "cadence": "visit",
+      "publishedAt": "2026-04-15",
+      "capturedAt": "2026-08-18",
+      "sourceUrl": "https://note.com/midoriilo/n/n0e58db9035f6",
+      "sourcePublisher": "Independent traveler report",
+      "sourceType": "first-person-report",
+      "identityMatch": "exact-location",
+      "eligibility": "standard-adult",
+      "reviewStatus": "pending-corroboration",
+      "evidenceLabel": "A recent visitor reported a $25 drop-in at the current CrossFit Alinea location."
+    }
+  ]
+}

@@ -69,6 +69,12 @@ button { cursor: pointer; }
 .freshness { display: inline-flex; align-items: center; gap: .35rem; margin-top: .8rem; color: var(--muted); font-size: .73rem; }
 .freshness::before { content: ""; width: .45rem; height: .45rem; border-radius: 999px; background: var(--sage); }
 .freshness.stale::before { background: #c9985f; }
+.cost-status { display: inline-flex; align-items: center; width: fit-content; gap: .35rem; padding: .3rem .55rem; border-radius: 999px; background: #edf3ef; color: #355346; font-family: var(--mono-font); font-size: .68rem; font-weight: 800; text-transform: uppercase; letter-spacing: .04em; }
+.cost-status-estimated { background: #fff1d9; color: #7a5120; }
+.cost-status-reported { background: #e9e3f8; color: #59417e; }
+.cost-status-free { background: #e6f5ea; color: #27623b; }
+.cost-status-pay-per-visit { background: #e7f1f6; color: #28566f; }
+.cost-status-not-applicable, .cost-status-gated, .cost-status-unresolved { background: #f0eeee; color: #6b6262; }
 .map-panel { position: relative; min-height: 650px; background: var(--sky); overflow: hidden; }
 .map-shell { position: absolute; inset: 0; }
 .map-shell .real-map { position: absolute !important; inset: 0; width: 100%; height: 100% !important; background: var(--sky); }
@@ -159,6 +165,9 @@ button { cursor: pointer; }
 .detail-price-extras > div { display: flex; flex-direction: column; gap: .2rem; min-width: 8.5rem; padding: .65rem .75rem; border: 1px solid var(--line); border-radius: 13px; background: rgba(255, 255, 255, .68); }
 .detail-price-extras span { color: var(--muted); font-size: .68rem; }
 .detail-price-extras strong { font-size: .9rem; }
+.estimate-explainer { display: flex; flex-direction: column; gap: .3rem; margin-top: .8rem; padding: .9rem; border: 1px solid #e7d4ad; border-radius: 14px; background: #fff8e9; }
+.reported-explainer { border-color: #d9ccec; background: #f7f3fc; }
+.estimate-explainer span { color: var(--muted); font-family: var(--mono-font); font-size: .72rem; }
 .detail-muted { color: var(--muted); line-height: 1.55; }
 .detail-source-link { color: #4f8262; font-size: .82rem; font-weight: 800; }
 .detail-amenities { display: flex; flex-wrap: wrap; gap: .5rem; }

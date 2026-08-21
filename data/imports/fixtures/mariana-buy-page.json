@@ -1,0 +1,80 @@
+{
+  "id": "39344",
+  "name": "Castro Buy Page",
+  "buy_page_sections": [
+    {
+      "id": "602",
+      "name": "Memberships",
+      "product_listings": [
+        {
+          "id": "memberships-14787",
+          "name": "4x/Month",
+          "price": 118.0,
+          "currency_code": "USD",
+          "product_type": "memberships",
+          "is_in_stock": true,
+          "locations": [48717],
+          "product_display_attributes": [
+            {"name": "Payment Interval", "value": "MO"},
+            {"name": "Payment Interval Length", "value": "1"},
+            {"name": "Renewal Limit", "value": null},
+            {"name": "Usage Interval Limit", "value": "4"},
+            {"name": "Intro Offer", "value": "False"},
+            {"name": "User Segment", "value": "everyone"}
+          ]
+        },
+        {
+          "id": "memberships-14692",
+          "name": "MVMT Annual Unlimited Membership",
+          "price": 3333.0,
+          "currency_code": "USD",
+          "product_type": "memberships",
+          "is_in_stock": true,
+          "locations": [48717],
+          "product_display_attributes": [
+            {"name": "Payment Interval", "value": "YR"},
+            {"name": "Payment Interval Length", "value": "1"},
+            {"name": "Renewal Limit", "value": "1"},
+            {"name": "Usage Interval Limit", "value": null},
+            {"name": "Intro Offer", "value": "False"},
+            {"name": "User Segment", "value": "everyone"}
+          ]
+        }
+      ]
+    },
+    {
+      "id": "634",
+      "name": "Class Packs",
+      "product_listings": [
+        {
+          "id": "credits-14750",
+          "name": "INTRO DEAL! First Class",
+          "price": 20.0,
+          "currency_code": "USD",
+          "product_type": "credits",
+          "is_in_stock": true,
+          "locations": [48717],
+          "product_display_attributes": [
+            {"name": "Credit Quantity", "value": "1"},
+            {"name": "Intro Offer", "value": "True"},
+            {"name": "User Segment", "value": "first_timers"}
+          ]
+        },
+        {
+          "id": "credits-14722",
+          "name": "Drop-In Single Class",
+          "price": 38.0,
+          "currency_code": "USD",
+          "product_type": "credits",
+          "is_in_stock": true,
+          "locations": [48717],
+          "product_display_attributes": [
+            {"name": "Credit Quantity", "value": "1"},
+            {"name": "Intro Offer", "value": "False"},
+            {"name": "User Segment", "value": "everyone"}
+          ]
+        }
+      ]
+    }
+  ]
+}

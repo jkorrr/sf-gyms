@@ -2,8 +2,6 @@
   {
     "match": "^Planet Fitness$",
     "monthlyPrice": 15,
-    "annualFee": 49,
-    "annualFeeNote": "The Classic plan lists a $49 annual fee in addition to monthly dues.",
     "dayPassPrice": null,
     "priceSource": "Planet Fitness San Francisco (Lakeshore) membership page",
     "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
@@ -22,33 +20,11 @@
   {
     "match": "^City Sports Club$",
     "monthlyPrice": 34.99,
-    "annualFee": 69,
-    "annualFeeNote": "The published Classic plan lists a $69 annual fee.",
     "dayPassPrice": null,
     "priceSource": "City Sports Club San Francisco membership rate page",
     "priceSourceUrl": "https://citysportsfitness.com/Pages/MembershipSignUpRate.aspx?id=wead5DoGQM1uFv9DRrzRyg%3D%3D",
     "priceNote": "Classic multi-club state-of-enrollment plan; $69 annual fee and taxes may apply.",
     "priceObservedAt": "2026-08-16"
-  },
-  {
-    "match": "^Planet Fitness(?:$| - | San Francisco)",
-    "annualFee": 49,
-    "annualFeeNote": "The published San Francisco offers list a $49 annual fee."
-  },
-  {
-    "match": "^California Martial Athletics$",
-    "enrollmentFee": 50,
-    "enrollmentFeeNote": "The official month-to-month offer lists a $50 enrollment fee."
-  },
-  {
-    "match": "^Hit Fit SF$",
-    "enrollmentFee": 75,
-    "enrollmentFeeNote": "The official purchase page lists a $75 club joining fee."
-  },
-  {
-    "match": "^JCCSF Fitness Center$",
-    "enrollmentFee": 200,
-    "enrollmentFeeNote": "The regular Adult Full Access rate lists a $200 enrollment fee; temporary promotions may waive it."
   },
   {
     "match": "^Fitness SF($| SOMA$)",

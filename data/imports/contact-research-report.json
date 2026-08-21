@@ -1,0 +1,133 @@
+{
+  "generatedAt": "2026-08-21",
+  "currentCandidateGymCount": 26,
+  "candidateGymsScanned": 26,
+  "candidateGymsPendingScan": 0,
+  "pendingScanGymIds": [],
+  "staleManifestRecordCount": 0,
+  "candidatePricingStatusCounts": {
+    "estimated": 10,
+    "gated": 12,
+    "unresolved": 4
+  },
+  "estimatedReplacementCandidates": 10,
+  "recordStatusCounts": {
+    "no-form-found": 10,
+    "render-error": 1,
+    "robots-disallowed": 1,
+    "scanned": 14
+  },
+  "formsFound": 41,
+  "eligibleFormCount": 12,
+  "eligibleGymCount": 7,
+  "blockedFormCount": 29,
+  "blockerCounts": {
+    "account-or-authentication-form": 3,
+    "captcha-or-human-challenge": 2,
+    "external-action-requires-separate-approval": 1,
+    "no-email-field": 15,
+    "not-a-pricing-inquiry-form": 22,
+    "prohibited-sensitive-field": 3,
+    "unknown-required-field": 8
+  },
+  "eligibleForms": [
+    {
+      "gymId": "osm-node-3204993502",
+      "gymName": "Church Fitness",
+      "domain": "churchfitness-sf.com",
+      "actionDomain": "churchfitness-sf.com",
+      "formId": "cfd41bf5045d3716514c",
+      "termsHash": "3e92d9ef2ed25aec632bda732b15f2637cd21ec744b075241189a777fabd5451"
+    },
+    {
+      "gymId": "osm-node-13737433654",
+      "gymName": "DeSisto Strength Training",
+      "domain": "www.desistostrengthtraining.com",
+      "actionDomain": "www.desistostrengthtraining.com",
+      "formId": "ce45c5556d5dc3afeb30",
+      "termsHash": "77ee29fbe18946619ee794ed06a9ab644467f51facd69ace9f01dc731b9a76b6"
+    },
+    {
+      "gymId": "osm-node-4069447294",
+      "gymName": "Hapkido USA",
+      "domain": "www.hapkidousa.com",
+      "actionDomain": "www.hapkidousa.com",
+      "formId": "f72dd687212e7c61428b",
+      "termsHash": "f1338d2f286920ecf9a7379e879de4f2d783f1250f6b9be2ff2f902e2caaab95"
+    },
+    {
+      "gymId": "osm-node-4069447294",
+      "gymName": "Hapkido USA",
+      "domain": "www.hapkidousa.com",
+      "actionDomain": "www.hapkidousa.com",
+      "formId": "ff84a934750e15ce63a0",
+      "termsHash": "af08999a57ece4e6223aa01f5578f8bd28348de195b6132b5a7fca8a1136c996"
+    },
+    {
+      "gymId": "osm-way-283457626",
+      "gymName": "One Martial Arts",
+      "domain": "onemartialarts.com",
+      "actionDomain": "onemartialarts.com",
+      "formId": "932774ef224f8081c733",
+      "termsHash": "194769f5d7bd682914c34f4e2ee5792048c0be1becd65d0fc0b21a4d33d59aff"
+    },
+    {
+      "gymId": "osm-way-283457626",
+      "gymName": "One Martial Arts",
+      "domain": "onemartialarts.com",
+      "actionDomain": "onemartialarts.com",
+      "formId": "e1b7bd06e70eae0022ca",
+      "termsHash": "baf560ec3c828aaca876dbf0fcb8a6a32e432ffa9338efa18480ca2ed929238d"
+    },
+    {
+      "gymId": "osm-way-283457626",
+      "gymName": "One Martial Arts",
+      "domain": "onemartialarts.com",
+      "actionDomain": "onemartialarts.com",
+      "formId": "fcd8a667f962dac4de92",
+      "termsHash": "5519766a7a65f5ce2f5fb658c9a06d8b6f0d0a16240b121afcfae819406cc30e"
+    },
+    {
+      "gymId": "osm-way-283457626",
+      "gymName": "One Martial Arts",
+      "domain": "onemartialarts.com",
+      "actionDomain": "onemartialarts.com",
+      "formId": "b7196f2012ab8892999e",
+      "termsHash": "159b1e60edfd08b29bc394b928dc0605896f80b2fafdb2ec5ba1b16667332056"
+    },
+    {
+      "gymId": "osm-way-283457626",
+      "gymName": "One Martial Arts",
+      "domain": "onemartialarts.com",
+      "actionDomain": "onemartialarts.com",
+      "formId": "896c39f1a3bd11528263",
+      "termsHash": "eeb81f7a9cf267ac401eaddfa5ed2ff91fba78826ec96a74d2d06bb3f69418ff"
+    },
+    {
+      "gymId": "osm-node-4891328528",
+      "gymName": "Pacific Wushu",
+      "domain": "www.pacificwushu.com",
+      "actionDomain": "www.pacificwushu.com",
+      "formId": "361eb3242183f8fb887b",
+      "termsHash": "cc2af0d6af064fd615a059588085318227de7956e048b6eece2c5eed3a71fd8b"
+    },
+    {
+      "gymId": "osm-way-264527987",
+      "gymName": "Sabrofit",
+      "domain": "sabrofit.com",
+      "actionDomain": "sabrofit.com",
+      "formId": "0a1985466a31337e81aa",
+      "termsHash": "7c1175ca31c4bdd6846ac2686caf2319be252fcf49769ea2a8f17c04c12f9dc2"
+    },
+    {
+      "gymId": "web-a1af705ba3b80c",
+      "gymName": "Zanshin Dojo",
+      "domain": "sfgoju.com",
+      "actionDomain": "sfgoju.com",
+      "formId": "6628bb8ec32543317118",
+      "termsHash": "819459c7016fbd1e39c7d65480311c2eac57a468edd0c2fdb6b3a672a29acd40"
+    }
+  ],
+  "submissionPolicy": "No submission without an exact local domain/action-domain and terms-hash approval.",
+  "outreachGoal": "Replace estimates and unresolved/gated states with reviewed operator-confirmed facts where operators voluntarily reply."
+}

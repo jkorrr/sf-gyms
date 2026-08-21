@@ -1,0 +1,1499 @@
+{
+  "_meta": {
+    "methodology": "Reviewed free-source discoveries. Entries may correct identity, status, address, access, and operator URLs, but cannot publish a price by themselves.",
+    "observedAt": "2026-08-19"
+  },
+  "discoveries": [
+    {
+      "gymId": "osm-node-3674255652",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://sunsetgym.com/memberships/",
+      "websiteUrl": "https://sunsetgym.com/memberships/",
+      "recordStatus": "open",
+      "observedAt": "2026-08-18",
+      "note": "Official membership page confirms the location, hours, membership options, and day pass."
+    },
+    {
+      "gymId": "osm-node-3204993502",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://churchfitness-sf.com/",
+      "websiteUrl": "https://churchfitness-sf.com/",
+      "recordStatus": "open",
+      "accessAvailability": "waitlist",
+      "hours": "Daily 5:00am-10:00pm",
+      "observedAt": "2026-08-18",
+      "note": "Official site says the gym is open but is not currently enrolling new members."
+    },
+    {
+      "gymId": "osm-node-3485460052",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.crossfitalinea.com/",
+      "websiteUrl": "https://www.crossfitalinea.com/",
+      "name": "CrossFit Alinea",
+      "address": "674 South Van Ness Avenue, San Francisco, CA 94110",
+      "recordStatus": "open",
+      "hours": "Mon-Fri 6:30am-7:30pm; Sat 8:30am-12:00pm; Sun closed",
+      "amenities": ["CrossFit", "weightlifting", "Hyrox", "private coaching"],
+      "observedAt": "2026-08-18",
+      "note": "Current official site supplies the relocated address, programs, hours, and contact details; public recurring pricing remains undisclosed."
+    },
+    {
+      "gymId": "osm-node-3658328826",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://core40.com/sunset/",
+      "websiteUrl": "https://core40.com/sunset/",
+      "name": "CORE40 Sunset",
+      "recordStatus": "open",
+      "observedAt": "2026-08-18",
+      "note": "Official location page confirms the Sunset studio and address."
+    },
+    {
+      "gymId": "osm-node-9775741769",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.ascentathletics.com/",
+      "websiteUrl": "https://www.ascentathletics.com/pricing",
+      "recordStatus": "coming_soon",
+      "accessAvailability": "presale",
+      "amenities": ["free weights", "strength equipment", "cardio equipment"],
+      "observedAt": "2026-08-18",
+      "note": "Official site targets a Summer 2026 opening and advertises presale access without a public neutral price."
+    },
+    {
+      "gymId": "osm-node-12724420917",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.advancedwellness.com/",
+      "websiteUrl": "https://www.advancedwellness.com/",
+      "recordStatus": "open",
+      "amenities": ["personal training", "sports performance", "semi-private training"],
+      "observedAt": "2026-08-18",
+      "note": "Official operator site and operator-owned booking storefront confirm the facility and current services."
+    },
+    {
+      "gymId": "osm-node-11198894699",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://gymworx.fit/how-it-works/",
+      "websiteUrl": "https://gymworx.fit/how-it-works/",
+      "address": "1795 17th Street, San Francisco, CA 94107",
+      "recordStatus": "open",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "amenities": ["personal training", "showers", "towels"],
+      "observedAt": "2026-08-18",
+      "note": "Official site shows the current address and trainer-led access model; the old 415 De Haro address is no longer current."
+    },
+    {
+      "gymId": "osm-way-257161411",
+      "reviewStatus": "approved",
+      "sourceType": "operator-owned-storefront",
+      "sourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
+      "websiteUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
+      "name": "fitBERNALfit",
+      "recordStatus": "open",
+      "observedAt": "2026-08-18",
+      "note": "Public operator-owned contract page identifies the location, recurring dues, join fee, annual fee, and term without requiring form submission."
+    },
+    {
+      "gymId": "osm-node-4199680597",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.raisethebarfitness.net/membership",
+      "websiteUrl": "https://www.raisethebarfitness.net/",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "independent-gym",
+      "amenities": ["open gym", "personal training"],
+      "observedAt": "2026-08-19",
+      "note": "The current official membership page says a limited number of gym-only community memberships are available without required personal training. The separate training-rate page remains explicitly dated 2020 and is not current price evidence."
+    },
+    {
+      "gymId": "osm-node-10874914159",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.trainflagship.com/membership-sf",
+      "websiteUrl": "https://www.trainflagship.com/",
+      "name": "Flagship Training Mission Bay",
+      "address": "201 King Street, San Francisco, CA 94107",
+      "recordStatus": "open",
+      "amenities": ["strength training", "conditioning", "mobility", "open gym", "showers", "towel service"],
+      "observedAt": "2026-08-18",
+      "note": "Current official home, membership, FAQ, and policy pages confirm that Mission Bay is operating despite an older closed registration record in DataSF."
+    },
+    {
+      "gymId": "osm-node-4395534973",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.yogamayu.com/pricing",
+      "websiteUrl": "https://www.yogamayu.com/pricing",
+      "address": "1501 B 20th Street, San Francisco, CA 94107",
+      "recordStatus": "open",
+      "observedAt": "2026-08-18",
+      "note": "Current official site shows that Yoga Mayu moved from 2051 Harrison Street and publishes current passes and recurring membership pricing."
+    },
+    {
+      "gymId": "osm-node-10733903068",
+      "reviewStatus": "approved",
+      "sourceType": "osm-feature-classification",
+      "sourceUrl": "https://www.openstreetmap.org/node/10733903068",
+      "entityKindOverride": "outdoor-equipment",
+      "accessModelOverride": "free-public",
+      "modalityOverride": "outdoor-equipment",
+      "observedAt": "2026-08-18",
+      "note": "Named exercise-station feature, not a consumer gym."
+    },
+    {
+      "gymId": "osm-node-11038336710",
+      "reviewStatus": "approved",
+      "sourceType": "osm-feature-classification",
+      "sourceUrl": "https://www.openstreetmap.org/node/11038336710",
+      "entityKindOverride": "outdoor-equipment",
+      "accessModelOverride": "free-public",
+      "modalityOverride": "outdoor-equipment",
+      "observedAt": "2026-08-18",
+      "note": "Named exercise-station feature, not a consumer gym."
+    },
+    {
+      "gymId": "osm-node-11038336709",
+      "reviewStatus": "approved",
+      "sourceType": "osm-feature-classification",
+      "sourceUrl": "https://www.openstreetmap.org/node/11038336709",
+      "entityKindOverride": "outdoor-equipment",
+      "accessModelOverride": "free-public",
+      "modalityOverride": "outdoor-equipment",
+      "observedAt": "2026-08-18",
+      "note": "Misspelled Achilles Stretch exercise-station feature, not a consumer gym."
+    },
+    {
+      "gymId": "web-d4b58ff151c226",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.diakadi.life/general-info-details",
+      "websiteUrl": "https://www.diakadi.life/",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-18",
+      "note": "Official page states open-gym access is restricted to clients actively working with a trainer."
+    },
+    {
+      "gymId": "web-852a9696d7af62",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://ldac.fit/",
+      "websiteUrl": "https://ldac.fit/",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "independent-gym",
+      "observedAt": "2026-08-18",
+      "note": "Official page restricts access to One Letterman campus employees and says the facility is not open to the public."
+    },
+    {
+      "gymId": "osm-node-12559170747",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.ehspilates.com/pricing-and-packages",
+      "websiteUrl": "https://www.ehspilates.com/",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "pilates-lagree-barre",
+      "observedAt": "2026-08-18",
+      "note": "Official pricing identifies EHS as a Pilates equipment-class studio."
+    },
+    {
+      "gymId": "osm-node-12251148868",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://bodyrok.com/studio/fidi/",
+      "websiteUrl": "https://bodyrok.com/studio/fidi/",
+      "name": "BODYROK FiDi",
+      "address": "300 Pine Street, San Francisco, CA 94104",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current operator studio directory and FiDi page confirm this location, address, memberships, and packages."
+    },
+    {
+      "gymId": "osm-node-3379321522",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://bodyrok.com/studio/marina/",
+      "websiteUrl": "https://bodyrok.com/studio/marina/",
+      "name": "BODYROK Marina",
+      "address": "2128 Lombard Street, San Francisco, CA 94123",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current operator studio directory and Marina page confirm this location, address, memberships, and packages."
+    },
+    {
+      "gymId": "osm-node-9718392241",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://customfitsf.com/",
+      "websiteUrl": "https://customfitsf.com/",
+      "name": "Custom Fit Market Street",
+      "address": "1844 Market Street, San Francisco, CA 94102",
+      "recordStatus": "open",
+      "hours": "Mon-Fri 6:00am-8:00pm; Sat-Sun 7:00am-7:00pm",
+      "observedAt": "2026-08-19",
+      "note": "The current operator page lists 1844 Market Street as one of its three facilities and publishes operator-wide membership terms."
+    },
+    {
+      "gymId": "osm-node-12727181306",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.brightstarpilates.com/pricing",
+      "websiteUrl": "https://www.brightstarpilates.com/",
+      "address": "493 Sanchez Street, San Francisco, CA 94114",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official pricing and studio-policy pages confirm the group-class entrance, membership terms, and single-class price."
+    },
+    {
+      "gymId": "osm-node-10542243253",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.crossfitgoldengate.com/contact",
+      "websiteUrl": "https://www.crossfitgoldengate.com/",
+      "name": "CrossFit Golden Gate",
+      "address": "1946 Van Ness Avenue, San Francisco, CA 94109",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official contact page confirms the location and the official home page links a public operator-owned PushPress plans storefront."
+    },
+    {
+      "gymId": "osm-node-1516960485",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.infinitytrainingcentersf.com/",
+      "websiteUrl": "https://www.infinitytrainingcentersf.com/",
+      "address": "742 14th Street, San Francisco, CA 94114",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "drop-in",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The current official site identifies a private training studio with public single-visit access rather than a recurring consumer membership."
+    },
+    {
+      "gymId": "osm-node-5810883731",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.mightypilates.com/presidio-heights/",
+      "websiteUrl": "https://www.mightypilates.com/presidio-heights/",
+      "name": "Mighty Pilates Presidio Heights",
+      "address": "3654 Sacramento Street, San Francisco, CA 94118",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official location page confirms the Presidio Heights studio, address, recurring passes, and single-class price."
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.bayjiujitsu.com/locations",
+      "websiteUrl": "https://www.bayjiujitsu.com/locations",
+      "name": "Bay Jiu-Jitsu San Francisco",
+      "address": "1628 Post Street, San Francisco, CA 94115",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official location directory confirms the San Francisco school and exact address; recurring public pricing remains undisclosed."
+    },
+    {
+      "gymId": "osm-node-4022645782",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.lilycaidance.org/contact/contact.html",
+      "websiteUrl": "https://www.lilycaidance.org/",
+      "name": "Lily Cai Chinese Dance Company",
+      "address": "Fort Mason Center, Building C, Suite 353, San Francisco, CA 94123",
+      "recordStatus": "open",
+      "entityKindOverride": "non-consumer",
+      "accessModelOverride": "not-applicable",
+      "modalityOverride": "gymnastics-dance",
+      "observedAt": "2026-08-19",
+      "note": "The official contact page identifies a professional performing company and administrative studio, not a generally purchasable public gym membership."
+    },
+    {
+      "gymId": "osm-node-12152934880",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.luxfitsf.com/locations/mission-rock",
+      "websiteUrl": "https://www.luxfitsf.com/locations/mission-rock",
+      "name": "LuxFit SF Mission Rock",
+      "address": "1090 Dr Maya Angelou Lane, Suite E, San Francisco, CA 94158",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "independent-gym",
+      "observedAt": "2026-08-19",
+      "note": "The current official location page confirms Mission Rock and states that the operator's Core Access membership covers all LuxFit facilities."
+    },
+    {
+      "gymId": "osm-node-11021366849",
+      "reviewStatus": "approved",
+      "sourceType": "operator-owned-storefront",
+      "sourceUrl": "https://motusclinic.janeapp.com/locations/motus",
+      "websiteUrl": "https://motusclinic.com/",
+      "name": "Motus Physical Therapy & Performance",
+      "address": "425 2nd Street, Suite 307, San Francisco, CA 94107",
+      "recordStatus": "open",
+      "entityKindOverride": "non-consumer",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "non-consumer",
+      "observedAt": "2026-08-19",
+      "note": "The operator-owned appointment storefront identifies a physical-therapy clinic inside Avid; it is not an ordinary public gym membership."
+    },
+    {
+      "gymId": "osm-way-34313547",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.ymcasf.org/location/embarcadero-ymca/treasure-island-community-ymca/",
+      "websiteUrl": "https://www.ymcasf.org/location/embarcadero-ymca/treasure-island-community-ymca/",
+      "name": "Treasure Island Community YMCA",
+      "address": "749 9th Street, San Francisco, CA 94130",
+      "recordStatus": "open",
+      "entityKindOverride": "public-recreation",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "public-recreation",
+      "observedAt": "2026-08-19",
+      "note": "The official branch page describes this site as a school-age youth center with after-school programming, not a standard adult fitness membership facility."
+    },
+    {
+      "gymId": "osm-node-9953947674",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.ymcasf.org/location/presidio-community-ymca/letterman-pool-gym/",
+      "websiteUrl": "https://www.ymcasf.org/location/presidio-community-ymca/letterman-pool-gym/",
+      "name": "Presidio Community YMCA Letterman Pool & Gym",
+      "address": "1151 Gorgas Avenue, San Francisco, CA 94129",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "budget-full-service",
+      "observedAt": "2026-08-19",
+      "note": "The current official annex page confirms the Letterman pool, gym, hours, and exact address under Presidio Community YMCA membership access."
+    },
+    {
+      "gymId": "osm-node-6815206679",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://bodyrok.com/studio/haight/",
+      "websiteUrl": "https://bodyrok.com/studio/haight/",
+      "name": "BODYROK Haight",
+      "address": "1529 Haight Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official studio page confirms the Haight location, exact address, full recurring membership catalog, and public class packages."
+    },
+    {
+      "gymId": "osm-node-10276089929",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://core40.com/nob-hill/",
+      "websiteUrl": "https://core40.com/nob-hill/",
+      "name": "CORE40 Nob Hill",
+      "address": "1390 Larkin Street, San Francisco, CA 94109",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official location page confirms the Nob Hill studio; the operator-wide public classes page and terms supply the neutral recurring plans and commitments."
+    },
+    {
+      "gymId": "osm-node-3658328826",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://core40.com/get-classes/",
+      "websiteUrl": "https://core40.com/sunset/",
+      "name": "CORE40 Sunset",
+      "address": "827 Irving Street, San Francisco, CA 94122",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The official location, public classes, and terms pages together confirm the Sunset studio and operator-wide recurring plans and commitments."
+    },
+    {
+      "gymId": "osm-node-11384826394",
+      "reviewStatus": "approved",
+      "sourceType": "operator-owned-storefront",
+      "sourceUrl": "https://momence.com/m/309951",
+      "websiteUrl": "https://nicepilates.studio/price-list-%2F-purchase",
+      "name": "NICE Pilates",
+      "address": "5059 Geary Boulevard, San Francisco, CA 94118",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The official price page and linked operator-owned Momence product agree on the current recurring product amount and ten-class allowance."
+    },
+    {
+      "gymId": "osm-node-6177260821",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://pop-sf.com/rates.html",
+      "websiteUrl": "https://pop-sf.com/rates.html",
+      "name": "Pilates on Page",
+      "address": "10 Page Street, San Francisco, CA 94102",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "pilates-lagree-barre",
+      "observedAt": "2026-08-19",
+      "note": "The official rate card offers single classes and prepaid packs but no recurring monthly membership."
+    },
+    {
+      "gymId": "web-70ca27f287a58c",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://pilatesaddiction.com/location/sf-king-street",
+      "websiteUrl": "https://pilatesaddiction.com/location/sf-king-street",
+      "name": "Pilates Addiction SF King Street",
+      "address": "272 King Street, San Francisco, CA 94107",
+      "recordStatus": "coming_soon",
+      "accessAvailability": "presale",
+      "observedAt": "2026-08-19",
+      "note": "The official location page still labels the San Francisco studio as coming soon and publishes founding promotions only; no neutral active membership may be selected."
+    },
+    {
+      "gymId": "osm-node-3622501398",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.purebarre.com/location/san-francisco-west-portal-ca",
+      "websiteUrl": "https://www.purebarre.com/location/san-francisco-west-portal-ca",
+      "name": "Pure Barre San Francisco — West Portal",
+      "address": "162 West Portal Avenue, San Francisco, CA 94127",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official operator page confirms the West Portal studio and team. Its join flow exposes a first-month promotion, not a neutral standard membership amount."
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.bijayoga.com/our-teachers",
+      "websiteUrl": "https://www.bijayoga.com/",
+      "name": "Bija Yoga",
+      "address": "1348 9th Avenue, San Francisco, CA 94122",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "A current operator page publishes recurring memberships and a standard single class; a first-time offer is kept promotional."
+    },
+    {
+      "gymId": "osm-node-12337829335",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.tinyhavenyogasf.com/classes",
+      "websiteUrl": "https://www.tinyhavenyogasf.com/classes",
+      "name": "Tiny Haven Yoga",
+      "address": "211 Hugo Street, San Francisco, CA 94122",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "yoga",
+      "observedAt": "2026-08-19",
+      "note": "The official class page sells public single visits and a prepaid four-class pack, but no recurring membership."
+    },
+    {
+      "gymId": "osm-node-10047742013",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://astayoga.com/rates",
+      "websiteUrl": "https://astayoga.com/rates",
+      "name": "Asta Yoga",
+      "address": "417 14th Street, San Francisco, CA 94103",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official rate page distinguishes the neutral month-to-month membership, a lower three-month-commitment plan, non-renewing passes, and the new-student offer."
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
+      "websiteUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
+      "name": "Hot Yoga Plus Seacliff",
+      "address": "5644 Geary Boulevard, San Francisco, CA 94121",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current official Seacliff rate card supplies recurring autopay terms, non-recurring passes, and the standard drop-in."
+    },
+    {
+      "gymId": "osm-node-13507740638",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.bilikyoga.com/book-online",
+      "websiteUrl": "https://www.bilikyoga.com/",
+      "name": "Bilik Yoga Shala",
+      "address": "1515 Waller Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "yoga",
+      "observedAt": "2026-08-19",
+      "note": "The official site corrects the OSM spelling and publishes public single-class booking but no recurring membership."
+    },
+    {
+      "gymId": "osm-node-3485460052",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.crossfitalinea.com/memberships",
+      "websiteUrl": "https://www.crossfitalinea.com/",
+      "name": "CrossFit Alinea",
+      "address": "674 South Van Ness Avenue, San Francisco, CA 94110",
+      "recordStatus": "open",
+      "observedAt": "2026-08-19",
+      "note": "The current membership and drop-in pages publish all neutral recurring options and identify the single-class visit as restricted to experienced CrossFit athletes."
+    },
+    {
+      "gymId": "osm-node-13737433654",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.desistostrengthtraining.com/faqs/",
+      "websiteUrl": "https://www.desistostrengthtraining.com/",
+      "name": "DeSisto Strength Training",
+      "address": "150 Lombard Street, Suite 4, San Francisco, CA 94111",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The official FAQ states that the business provides private one-on-one training by appointment and is not an open-access gym; public rates remain undisclosed."
+    },
+    {
+      "gymId": "osm-node-12724420917",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.advancedwellness.com/whats-included/semi-private-custom-workouts/",
+      "websiteUrl": "https://www.advancedwellness.com/whats-included/semi-private-custom-workouts/",
+      "name": "Advanced Wellness",
+      "address": "2940 Geary Boulevard, San Francisco, CA 94118",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The current official semi-private training page publishes all recurring four-week coached membership packages; the 523 Clement address in OSM was stale."
+    },
+    {
+      "gymId": "osm-node-8660768875",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://fitnessurbano.com/gym-memberships/",
+      "websiteUrl": "https://fitnessurbano.com/gym-memberships/",
+      "name": "Fitness Urbano",
+      "address": "80 Missouri Street, San Francisco, CA 94107",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "independent-gym",
+      "observedAt": "2026-08-19",
+      "note": "The official gym page publishes the current address, normal monthly membership, prepaid terms, and 24-hour day pass."
+    },
+    {
+      "gymId": "osm-node-360958312",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.roarsf.com/membershipspackages",
+      "websiteUrl": "https://www.roarsf.com/membershipspackages",
+      "name": "Roar Castro",
+      "address": "1500 Castro Street, San Francisco, CA 94114",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "crossfit-strength",
+      "observedAt": "2026-08-19",
+      "note": "The official site identifies a coached women-centered strength studio with no open gym and publishes complete recurring memberships and packages."
+    },
+    {
+      "gymId": "osm-node-6471401829",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.yubalance.com/sunset/",
+      "websiteUrl": "https://www.yubalance.com/sunset/",
+      "name": "YuBalance Inner Sunset",
+      "address": "447 Irving Street, San Francisco, CA 94122",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "crossfit-strength",
+      "observedAt": "2026-08-19",
+      "note": "The current official location page publishes small-group class memberships, personal training products, and the ordinary class drop-in."
+    },
+    {
+      "gymId": "osm-node-3522837919",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.yubalance.com/noe-valley/",
+      "websiteUrl": "https://www.yubalance.com/noe-valley/",
+      "name": "YuBalance Noe Valley",
+      "address": "4159 24th Street, San Francisco, CA 94114",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "crossfit-strength",
+      "observedAt": "2026-08-19",
+      "note": "The current official location page publishes small-group class memberships, personal training products, and the ordinary class drop-in."
+    },
+    {
+      "gymId": "osm-node-2637241462",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://sanchezstreetstudios.com/specials",
+      "websiteUrl": "https://sanchezstreetstudios.com/specials",
+      "name": "Sanchez Street Studios",
+      "address": "1589 Sanchez Street, San Francisco, CA 94131",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "pilates-lagree-barre",
+      "observedAt": "2026-08-19",
+      "note": "The official studio page publishes the ongoing in-person Insider's Club, its commitment, and a separate new-client promotion."
+    },
+    {
+      "gymId": "osm-node-11558519647",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.ethanrichperformance.com/services",
+      "websiteUrl": "https://www.ethanrichperformance.com/services",
+      "name": "Ethan Rich Performance",
+      "address": "290 Division Street, Floor 2, San Francisco, CA 94103",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The current official page identifies one-on-one appointment training and publishes exact four-week packages rather than an open-gym membership."
+    },
+    {
+      "gymId": "web-671ce25da68f7d",
+      "reviewStatus": "approved",
+      "sourceType": "operator-owned-storefront",
+      "sourceUrl": "https://ccsf-extension.pdx.catalog.canvaslms.com/browse/extension",
+      "websiteUrl": "https://www.ccsf.edu/academics/contract-education-and-extension-programs/fitness-center-and-pool-semester-memberships",
+      "name": "City College of San Francisco Fitness Center and Pool",
+      "address": "50 Frida Kahlo Way, San Francisco, CA 94112",
+      "recordStatus": "open",
+      "entityKindOverride": "public-recreation",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "public-recreation",
+      "observedAt": "2026-08-19",
+      "note": "The official City Extension catalog offers an adult Fall 2026 semester fitness-center and pool product; it is a public academic-term pass, not a recurring commercial gym membership."
+    },
+    {
+      "gymId": "osm-way-248782086",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "http://www.churchof8wheels.com/",
+      "websiteUrl": "http://www.churchof8wheels.com/",
+      "name": "Church of 8 Wheels",
+      "address": "554 Fillmore Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "entityKindOverride": "public-recreation",
+      "accessModelOverride": "drop-in",
+      "modalityOverride": "public-recreation",
+      "observedAt": "2026-08-19",
+      "note": "This is a public roller-skating venue with session admission, not an open-gym membership. The OSM record carrying this identity had been classified as a gym."
+    },
+    {
+      "gymId": "osm-way-25309187",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://sfrecpark.org/Facilities/Facility/Details/Lisa-and-Douglas-Goldman-Tennis-Center-420",
+      "websiteUrl": "https://www.lifetimeactivities.com/san-francisco/",
+      "name": "Lisa and Douglas Goldman Tennis Center",
+      "address": "Nancy Pelosi Drive and Bowling Green Drive, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "entityKindOverride": "public-recreation",
+      "accessModelOverride": "drop-in",
+      "modalityOverride": "public-recreation",
+      "observedAt": "2026-08-19",
+      "note": "The official park and operator pages identify a public reservation-based tennis and pickleball facility rather than a gym membership."
+    },
+    {
+      "gymId": "osm-way-634526276",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://campusrec.sfsu.edu/Memberships",
+      "websiteUrl": "https://campusrec.sfsu.edu/Memberships",
+      "name": "Mashouf Wellness Center",
+      "address": "755 Font Boulevard, San Francisco, CA 94132",
+      "recordStatus": "open",
+      "entityKindOverride": "non-consumer",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "non-consumer",
+      "observedAt": "2026-08-19",
+      "note": "Official membership rules limit ordinary facility access to SF State students, staff, alumni-association members, and sponsored adults; it is not a standard public consumer gym."
+    },
+    {
+      "gymId": "osm-way-273590287",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://myusf.usfca.edu/public-safety-transportation/clery-report/campus-security-access",
+      "websiteUrl": "https://myusf.usfca.edu/public-safety-transportation/clery-report/campus-security-access",
+      "name": "University of San Francisco War Memorial Gymnasium",
+      "address": "2335 Golden Gate Avenue, San Francisco, CA 94118",
+      "recordStatus": "open",
+      "entityKindOverride": "non-consumer",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "non-consumer",
+      "observedAt": "2026-08-19",
+      "note": "The official university access page identifies an institutional athletics and events venue, not a purchasable public fitness membership."
+    },
+    {
+      "gymId": "osm-way-288325533",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.swimlpb.com/",
+      "websiteUrl": "https://www.swimlpb.com/",
+      "name": "La Petite Baleen San Francisco",
+      "address": "933 Mason Street, San Francisco, CA 94129",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "gymnastics-dance",
+      "observedAt": "2026-08-19",
+      "note": "The official operator directory confirms a swim school selling scheduled lessons, including adult lessons, rather than open gym-floor access."
+    },
+    {
+      "gymId": "osm-node-10869882844",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.jbodyworks.com/3-ways-to-train",
+      "websiteUrl": "https://www.jbodyworks.com/3-ways-to-train",
+      "name": "JBodyworks",
+      "address": "425 2nd Street, San Francisco, CA 94107",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The official service page identifies appointment-based personal and semi-private training with coach-dependent price ranges, not an open-gym membership."
+    },
+    {
+      "gymId": "osm-node-6424602096",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://regularexercise.net/",
+      "websiteUrl": "https://regularexercise.net/",
+      "name": "Regular Exercise",
+      "address": "1401 Clement Street, San Francisco, CA 94118",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The official site describes a by-appointment personal-training and therapy collective with practitioner-dependent fee ranges, not an ordinary membership gym."
+    },
+    {
+      "gymId": "osm-way-264527987",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://sabrofit.com/training",
+      "websiteUrl": "https://sabrofit.com/training",
+      "name": "Sabrofit",
+      "address": "784 Stanyan Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The official operator page says the facility has one trainer and provides private appointment training; its published rate only says prices start at $210 per hour."
+    },
+    {
+      "gymId": "osm-node-13910165495",
+      "reviewStatus": "approved",
+      "sourceType": "official-document",
+      "sourceUrl": "https://solgym.com/documents/SolGymBrochure2.qxd.pdf",
+      "websiteUrl": "https://solgym.com/",
+      "name": "Sol Gym",
+      "address": "2838 Diamond Street, San Francisco, CA 94131",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "observedAt": "2026-08-19",
+      "note": "The recent official brochure states that all workouts require a personal trainer, the gym opens by appointment, and there are no monthly fees or memberships."
+    },
+    {
+      "gymId": "osm-node-3674255661",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.moonandstars.studio/",
+      "websiteUrl": "https://www.moonandstars.studio/",
+      "name": "Moon and Stars Studio",
+      "address": "1262 9th Avenue, San Francisco, CA 94122",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "pilates-lagree-barre",
+      "observedAt": "2026-08-19",
+      "note": "The official site identifies an active Pilates, yoga, and movement studio; its public schedule does not expose a neutral rate card."
+    },
+    {
+      "gymId": "osm-node-11777394274",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://mukundastudio.com/",
+      "websiteUrl": "https://mukundastudio.com/",
+      "name": "Mukunda Studio",
+      "address": "1228 Folsom Street, San Francisco, CA 94103",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "yoga",
+      "observedAt": "2026-08-19",
+      "note": "The current official footer, schedule, and rate card identify an active in-person studio at 1228 Folsom. Current in-person products are class packs and drop-ins; the separate membership page contains stale reopening-era livestream copy."
+    },
+    {
+      "gymId": "osm-node-11777394338",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.bhaktisf.com/",
+      "websiteUrl": "https://www.bhaktisf.com/",
+      "name": "Bhakti SF",
+      "address": "3250 17th Street, San Francisco, CA 94110",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "yoga",
+      "observedAt": "2026-08-19",
+      "note": "The current official site identifies a relocated yoga and spiritual center; the 1227 Folsom OSM address was stale."
+    },
+    {
+      "gymId": "osm-node-6499455087",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://empirejiujitsuca.sites.zenplanner.com/sign-up-now.cfm",
+      "websiteUrl": "https://www.empirebjj.com/",
+      "name": "Empire Jiu Jitsu",
+      "address": "2356 Mission Street, San Francisco, CA 94110",
+      "recordStatus": "open",
+      "pricingAccess": "public-booking-widget",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "observedAt": "2026-08-19",
+      "note": "The official site links a public Zen Planner catalog and upcoming class enrollment pages that expose recurring memberships, the class pack, and ordinary drop-in without login."
+    },
+    {
+      "gymId": "osm-node-4069447302",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.fiveanimalskungfu-sf.com/",
+      "websiteUrl": "https://www.fiveanimalskungfu-sf.com/",
+      "name": "Five Animals Choy Lay Fut Kung Fu",
+      "address": "2408 19th Avenue, San Francisco, CA 94116",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "observedAt": "2026-08-19",
+      "note": "The official school site confirms adult classes at this address. It publishes only a free trial and a first-year promotion, not a neutral ongoing standard-adult price."
+    },
+    {
+      "gymId": "osm-way-283457626",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://onemartialarts.com/",
+      "websiteUrl": "https://onemartialarts.com/",
+      "name": "One Martial Arts",
+      "address": "850 Taraval Street, San Francisco, CA 94116",
+      "recordStatus": "open",
+      "pricingAccess": "form-required",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "observedAt": "2026-08-19",
+      "note": "The current official site confirms the Taraval school and programs but does not expose neutral standard-adult pricing."
+    },
+    {
+      "gymId": "osm-node-2786114658",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://evolution-ma.com/",
+      "websiteUrl": "https://evolution-ma.com/",
+      "name": "Evolution Martial Arts - San Francisco",
+      "address": "1201 Church Street, San Francisco, CA 94114",
+      "recordStatus": "open",
+      "pricingAccess": "form-required",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "observedAt": "2026-08-19",
+      "note": "The official operator site confirms current adult programs and the Evolution title at this address. Jaime's Martial Arts is retained only as a legacy source alias. Schedule and tuition require a personal-contact form."
+    },
+    {
+      "gymId": "osm-node-4891328528",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.pacificwushu.com/",
+      "websiteUrl": "https://www.pacificwushu.com/",
+      "name": "Pacific Wushu",
+      "address": "33 Vicente Street, San Francisco, CA 94127",
+      "recordStatus": "open",
+      "pricingAccess": "form-required",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "observedAt": "2026-08-19",
+      "note": "The official school site confirms the Vicente Street location and adult programs. Its contact page says current introduction classes and tuition are disclosed through direct contact rather than a public rate card."
+    },
+    {
+      "gymId": "web-a1af705ba3b80c",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://sfgoju.com/",
+      "websiteUrl": "https://sfgoju.com/",
+      "name": "Zanshin Dojo",
+      "address": "640 Stanyan Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "observedAt": "2026-08-19",
+      "note": "The official dojo site confirms adult classes at the current address. Its $99 first-month-with-uniform offer and free trial are promotions and cannot establish the neutral ongoing price."
+    },
+    {
+      "gymId": "osm-node-10917024236",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.clubpilates.com/location/soma",
+      "websiteUrl": "https://www.clubpilates.com/location/soma",
+      "officialUrl": "https://www.clubpilates.com/location/soma",
+      "operatorLocationId": "clubpilates-soma-ca",
+      "name": "Club Pilates SOMA",
+      "address": "635 8th Street, San Francisco, CA 94103",
+      "recordStatus": "open",
+      "pricingAccess": "public-api",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "pilates-lagree-barre",
+      "observedAt": "2026-08-19",
+      "note": "The official location page exposes the SOMA member-app slug. Its operator-owned public packages and package-detail APIs publish the complete current catalog, commitment, and selected plan's enrollment fee without an account or personal information."
+    },
+    {
+      "gymId": "osm-node-6615295110",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://citysportsfitness.com/pages/clubhome.aspx?clubid=914",
+      "websiteUrl": "https://citysportsfitness.com/pages/clubhome.aspx?clubid=914",
+      "name": "City Sports Club San Francisco - 20th Avenue",
+      "address": "3201 20th Avenue, San Francisco, CA 94132",
+      "recordStatus": "open",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "budget-full-service",
+      "amenities": ["free weights", "cardio equipment", "group fitness", "indoor pool", "sauna", "whirlpool", "basketball", "Pilates studio"],
+      "observedAt": "2026-08-19",
+      "note": "The official club page and public join flow confirm the exact location, current hours, amenities, and direct-purchase membership options."
+    },
+    {
+      "gymId": "osm-node-8867020483",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.stretchlab.com/location/soma",
+      "websiteUrl": "https://www.stretchlab.com/location/soma",
+      "officialUrl": "https://www.stretchlab.com/location/soma",
+      "operatorLocationId": "stretchlab-soma",
+      "name": "StretchLab SOMA",
+      "address": "875 Brannan Street, San Francisco, CA 94103",
+      "recordStatus": "open",
+      "pricingAccess": "public-api",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "assisted-stretch",
+      "observedAt": "2026-08-19",
+      "note": "The official location page exposes its member-app slug. The operator-owned public packages API publishes exact current memberships, commitments, packages, and nonmember single sessions without authentication."
+    },
+    {
+      "gymId": "osm-way-276880820",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.americangymnasticsclub.com/programs/",
+      "websiteUrl": "https://www.americangymnasticsclub.com/",
+      "name": "American Gymnastics Club — Judah",
+      "address": "2520 Judah Street, San Francisco, CA 94122",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "gymnastics-dance",
+      "observedAt": "2026-08-19",
+      "note": "The official program catalog limits instruction to ages 18 months through 18 years. This is a youth gymnastics school, not a standard-adult fitness membership."
+    },
+    {
+      "gymId": "osm-way-287871312",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.americangymnasticsclub.com/programs/",
+      "websiteUrl": "https://www.americangymnasticsclub.com/",
+      "name": "American Gymnastics Club — Bayshore",
+      "address": "390 Bayshore Boulevard, San Francisco, CA 94124",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "gymnastics-dance",
+      "observedAt": "2026-08-19",
+      "note": "The official program catalog limits instruction to ages 18 months through 18 years. This is a youth gymnastics school, not a standard-adult fitness membership."
+    },
+    {
+      "gymId": "osm-node-13163731721",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.nmotionfitness.com/plans-pricing",
+      "websiteUrl": "https://www.nmotionfitness.com/",
+      "name": "N Motion Fitness",
+      "address": "2081 Hayes Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "personal-training",
+      "amenities": ["small-group classes", "personal training", "TRX"],
+      "observedAt": "2026-08-19",
+      "note": "The current official storefront describes a women-focused small-group and private-training studio. Public class products are fixed-duration packs rather than auto-renewing memberships."
+    },
+    {
+      "gymId": "osm-node-1364959516",
+      "reviewStatus": "approved",
+      "sourceType": "official-booking-widget",
+      "sourceUrl": "https://www.vrv3studios.com/schedule#/pricing/r/1154/loc/1211",
+      "websiteUrl": "https://www.vrv3studios.com/",
+      "name": "VRV3 Studios",
+      "address": "520 Haight Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "gymnastics-dance",
+      "amenities": ["pole", "aerial", "dance", "open studio", "mats", "towels", "changing rooms"],
+      "observedAt": "2026-08-19",
+      "note": "The public operator-owned embedded StudioYou storefront exposes current recurring memberships, commitments, packs, and drop-ins without an account or personal information."
+    },
+    {
+      "gymId": "osm-node-11166132566",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://joltathleticsappts.as.me/",
+      "websiteUrl": "https://www.joltathletics.com/",
+      "officialUrl": "https://www.joltathletics.com/",
+      "operatorLocationId": "howard-street",
+      "name": "Jolt Athletics",
+      "address": "1245 Howard Street, San Francisco, CA 94103",
+      "recordStatus": "open",
+      "pricingAccess": "public-booking-widget",
+      "entityKindOverride": "gym",
+      "accessModelOverride": "membership",
+      "modalityOverride": "athletic-training",
+      "observedAt": "2026-08-19",
+      "note": "The current official site identifies 1245 Howard Street as the relocated facility and links a public Acuity storefront whose hydration data exposes adult fitness memberships and ordinary adult single classes without login."
+    },
+    {
+      "gymId": "osm-node-12132354827",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.performforgolf.com/how-it-works",
+      "websiteUrl": "https://www.performforgolf.com/locations",
+      "officialUrl": "https://www.performforgolf.com/locations",
+      "operatorLocationId": "hayes-valley-san-francisco",
+      "name": "Perform for Golf — Hayes Valley",
+      "address": "1700 Market Street, San Francisco, CA 94102",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "amenities": ["golf performance training", "golf simulator", "open gym", "personal training"],
+      "observedAt": "2026-08-19",
+      "note": "The official locator confirms the Hayes Valley facility and appointment-only hours. The operator describes auto-monthly 4-, 6-, 8-, 10-, and 12-session memberships but discloses amounts only after a consultation."
+    },
+    {
+      "gymId": "osm-node-10859142546",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.performforlifesf.com/personal-training",
+      "websiteUrl": "https://www.performforlifesf.com/",
+      "officialUrl": "https://www.performforlifesf.com/",
+      "operatorLocationId": "financial-district",
+      "name": "Perform for Life — Financial District",
+      "address": "650 Mission Street, San Francisco, CA 94105",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "amenities": ["personal training", "shared personal training", "chiropractic care", "recovery"],
+      "observedAt": "2026-08-19",
+      "note": "The official site confirms this current location and auto-monthly personal-training memberships, but requires contact for availability and exact plan amounts."
+    },
+    {
+      "gymId": "osm-node-3540256794",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://pilatesstorystudio.com/faq/",
+      "websiteUrl": "https://pilatesstorystudio.com/",
+      "officialUrl": "https://pilatesstorystudio.com/",
+      "operatorLocationId": "west-portal",
+      "name": "Pilates Story",
+      "address": "161 West Portal Avenue, San Francisco, CA 94127",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-pack",
+      "modalityOverride": "pilates-lagree-barre",
+      "hours": "Mon-Fri 8:30am-7:00pm; Sat 8:30am-4:00pm; Sun closed",
+      "amenities": ["classical Pilates", "private sessions", "duet sessions", "mat classes"],
+      "observedAt": "2026-08-19",
+      "note": "The current official FAQ confirms the studio's move from 183 to 161 West Portal and publishes single-session ranges. It says no drop-in scheduled classes are offered, but an ordinary mat or virtual mat lesson is $35 and discounted packs require contact."
+    },
+    {
+      "gymId": "osm-node-2815132111",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://powerplaysf.com/sessions",
+      "websiteUrl": "https://powerplaysf.com/",
+      "officialUrl": "https://powerplaysf.com/",
+      "operatorLocationId": "mission-bay",
+      "name": "PowerPlaySF",
+      "address": "1235 4th Street, San Francisco, CA 94158",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "amenities": ["semi-private training", "personal training", "Pilates", "boxing", "prenatal fitness"],
+      "observedAt": "2026-08-19",
+      "note": "The official site confirms recurring four-week memberships and says custom programs start at $600/month, but exact scope and price require a discovery call."
+    },
+    {
+      "gymId": "osm-node-7044717960",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://risecombatsf.com/",
+      "websiteUrl": "https://risecombatsf.com/",
+      "officialUrl": "https://risecombatsf.com/",
+      "operatorLocationId": "san-francisco",
+      "name": "Rise Combat Sports",
+      "address": "1118 Harrison Street, San Francisco, CA 94103",
+      "latitude": 37.7753394,
+      "longitude": -122.4069514,
+      "recordStatus": "open",
+      "entityKindOverride": "martial-arts",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "hours": "Mon-Fri 3:30pm-9:00pm; Sat 9:00am-3:00pm; Sun closed",
+      "amenities": ["Muay Thai", "boxing", "Brazilian Jiu-Jitsu", "Dutch kickboxing", "strength and conditioning", "showers"],
+      "observedAt": "2026-08-19",
+      "note": "The official site confirms the relocation from South Van Ness to 1118 Harrison and exposes current membership, class, and day-pass prices in visible rendered cards."
+    },
+    {
+      "gymId": "osm-node-10744098187",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.sessionstrainingcenter.com/",
+      "websiteUrl": "https://www.sessionstrainingcenter.com/",
+      "officialUrl": "https://www.sessionstrainingcenter.com/",
+      "operatorLocationId": "market-street",
+      "name": "Sessions Training Center",
+      "address": "1874 Market Street, San Francisco, CA 94102",
+      "recordStatus": "open",
+      "entityKindOverride": "non-consumer",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "amenities": ["private personal training", "trainer workspace", "strength equipment"],
+      "observedAt": "2026-08-19",
+      "note": "The official site describes a private trainer facility where individual independent coaches serve their own clients. It does not sell an ordinary public gym membership."
+    },
+    {
+      "gymId": "osm-node-3969590469",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://tantarasf.com/",
+      "websiteUrl": "https://tantarasf.com/",
+      "officialUrl": "https://tantarasf.com/",
+      "operatorLocationId": "north-beach-event-space",
+      "name": "Tantara SF",
+      "address": "914 Pacific Avenue, San Francisco, CA 94133",
+      "recordStatus": "open",
+      "entityKindOverride": "non-consumer",
+      "accessModelOverride": "not-applicable",
+      "modalityOverride": "event-space",
+      "hours": "Daily 6:00am-9:00pm by reservation",
+      "amenities": ["event-space rental", "yoga props", "projector", "speakers", "community lounge"],
+      "observedAt": "2026-08-19",
+      "note": "The current official site operates Tantara as a reservable studio and event space for independent teachers and facilitators, not as a direct consumer gym membership."
+    },
+    {
+      "gymId": "osm-node-11021164500",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.thefirmsf.com/memberships",
+      "websiteUrl": "https://www.thefirmsf.com/",
+      "officialUrl": "https://www.thefirmsf.com/",
+      "operatorLocationId": "cole-valley",
+      "name": "The Firm Fitness",
+      "address": "225 Frederick Street, San Francisco, CA 94117",
+      "recordStatus": "open",
+      "pricingAccess": "public-rate-card",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "personal-training",
+      "amenities": ["semi-private training", "personal training", "group fitness", "nutrition coaching"],
+      "observedAt": "2026-08-19",
+      "note": "The current official membership page publishes two recurring adult plans with exact amounts. Checkout may require contact, but the complete neutral plan amount and scope are public."
+    },
+    {
+      "gymId": "osm-node-6471124706",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://thelotusmethod.com/instudiosf/",
+      "websiteUrl": "https://thelotusmethod.com/instudiosf/",
+      "officialUrl": "https://thelotusmethod.com/instudiosf/",
+      "operatorLocationId": "noe-valley",
+      "name": "The Lotus Method — Noe Valley",
+      "address": "3989 24th Street, San Francisco, CA 94114",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "amenities": ["prenatal training", "postpartum training", "one-on-one training", "virtual classes"],
+      "observedAt": "2026-08-19",
+      "note": "The official page confirms a pre- and post-natal one-on-one training studio. Its published amounts are restricted three-month new-member prepaid plans, not an ordinary standard-adult gym membership."
+    },
+    {
+      "gymId": "osm-node-3986912499",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+      "websiteUrl": "https://www.sistersinmotionsf.com/",
+      "officialUrl": "https://www.sistersinmotionsf.com/",
+      "operatorLocationId": "san-francisco",
+      "name": "Sisters in Motion — S Factor",
+      "address": "301 8th Street, Suite 250, San Francisco, CA 94103",
+      "latitude": 37.7748422,
+      "longitude": -122.40961,
+      "recordStatus": "open",
+      "pricingAccess": "official-price-conflict",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "gymnastics-dance",
+      "amenities": ["pole dance", "embodiment classes", "open pole", "women-focused classes"],
+      "observedAt": "2026-08-19",
+      "note": "The current home describes eight classes every four weeks, but the live terms page contains contradictory duplicate cancellation/ongoing-price blocks. Promotional discovery products do not resolve the neutral ongoing plan, so pricing fails closed pending review."
+    },
+    {
+      "gymId": "osm-node-4101104064",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://sffencers.com/faq/",
+      "websiteUrl": "https://sffencers.com/",
+      "officialUrl": "https://sffencers.com/",
+      "operatorLocationId": "outer-richmond",
+      "name": "San Francisco Fencers' Club",
+      "address": "4000 Balboa Street, San Francisco, CA 94121",
+      "recordStatus": "open",
+      "pricingAccess": "contact-required",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "martial-arts-boxing",
+      "amenities": ["adult foil", "youth fencing", "fencing camps"],
+      "observedAt": "2026-08-19",
+      "note": "The official site confirms current adult classes and says classes start at $200/month, but exact adult scope, allowance, and term require direct contact."
+    },
+    {
+      "gymId": "osm-node-6373000373",
+      "reviewStatus": "approved",
+      "sourceType": "official-site",
+      "sourceUrl": "https://www.tcstrengthandfitness.com/about-us",
+      "websiteUrl": "https://www.tcstrengthandfitness.com/",
+      "officialUrl": "https://www.tcstrengthandfitness.com/",
+      "operatorLocationId": "geary-boulevard",
+      "name": "TC Strength & Fitness",
+      "address": "3545 Geary Boulevard, San Francisco, CA 94118",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "class-membership",
+      "modalityOverride": "crossfit-strength",
+      "amenities": ["functional strength", "coached classes", "personal training"],
+      "observedAt": "2026-08-19",
+      "note": "The current official operator at the exact Telegraph CrossFit address is TC Strength & Fitness. Founder and location continuity support a reviewed rebrand rather than a second active business."
+    },
+    {
+      "gymId": "osm-node-12337873692", "reviewStatus": "approved", "sourceType": "official-domain-status", "sourceUrl": "https://anthonysilvafitness.com/", "websiteUrl": "", "officialUrl": "", "recordStatus": "unknown", "pricingAccess": "official-domain-parked", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The former operator domain is currently parked and contains no current studio identity, schedule, or rate card."
+    },
+    {
+      "gymId": "osm-node-2537352227", "reviewStatus": "approved", "sourceType": "official-domain-status", "sourceUrl": "https://bayareastrengthandnutrition.com/", "websiteUrl": "", "officialUrl": "", "recordStatus": "unknown", "pricingAccess": "official-site-dns-failure", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The linked operator domain no longer resolves and no current replacement official site was verified."
+    },
+    {
+      "gymId": "osm-node-11103972677", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://bodytonicsfonline.com/rates", "websiteUrl": "https://bodytonicsfonline.com/", "officialUrl": "https://bodytonicsfonline.com/", "operatorLocationId": "bush-street", "name": "Body Tonic SF", "address": "1586 Bush Street, San Francisco, CA 94109", "recordStatus": "open", "entityKindOverride": "studio", "accessModelOverride": "class-membership", "modalityOverride": "yoga", "observedAt": "2026-08-19", "note": "The current operator rate catalog and linked Momence products confirm recurring yoga and Gravity plans at the Bush Street studio."
+    },
+    {
+      "gymId": "osm-node-10869882845", "reviewStatus": "approved", "sourceType": "official-domain-status", "sourceUrl": "https://www.divineyogastudiosf.com/", "websiteUrl": "", "officialUrl": "", "recordStatus": "unknown", "pricingAccess": "official-domain-disconnected", "entityKindOverride": "studio", "accessModelOverride": "class-membership", "modalityOverride": "yoga", "observedAt": "2026-08-19", "note": "The operator domain is disconnected from its former Wix site and no current public schedule or rate card was verified."
+    },
+    {
+      "gymId": "osm-node-13910388898", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://fitlocalfit.com/Locations/Glen-Park/Gym", "websiteUrl": "https://fitlocalfit.com/Locations/Glen-Park/Gym", "officialUrl": "https://fitlocalfit.com/Locations/Glen-Park/Gym", "operatorLocationId": "glen-park", "name": "fitGLENfit", "address": "666 Chenery Street, San Francisco, CA 94131", "recordStatus": "open", "entityKindOverride": "gym", "accessModelOverride": "membership", "modalityOverride": "budget-full-service", "observedAt": "2026-08-19", "note": "The current official location and membership pages confirm this active fitLOCALfit club and all-location membership."
+    },
+    {
+      "gymId": "osm-node-5595070837", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.invinciblebarbell.com/", "websiteUrl": "https://www.invinciblebarbell.com/", "officialUrl": "https://www.invinciblebarbell.com/", "operatorLocationId": "mission", "name": "Invincible Barbell", "address": "2310 Mission Street, San Francisco, CA 94110", "recordStatus": "open", "pricingAccess": "form-required", "entityKindOverride": "gym", "accessModelOverride": "class-membership", "modalityOverride": "crossfit-strength", "observedAt": "2026-08-19", "note": "The current official site confirms the Mission address but discloses program pricing only through a personal-information form."
+    },
+    {
+      "gymId": "osm-node-5735236443", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.lamaskenpokarate.com/", "websiteUrl": "https://www.lamaskenpokarate.com/", "officialUrl": "https://www.lamaskenpokarate.com/", "operatorLocationId": "bernal-heights", "name": "Lama's Kenpo Karate", "address": "461 Cortland Avenue, San Francisco, CA 94110", "recordStatus": "open", "pricingAccess": "form-required", "entityKindOverride": "martial-arts", "accessModelOverride": "class-membership", "modalityOverride": "martial-arts-boxing", "observedAt": "2026-08-19", "note": "The current official school site confirms this operator; the previously stored FTK domain belongs to a distinct school at 402 Cortland."
+    },
+    {
+      "gymId": "osm-node-5840675556", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://active-pilates.com/rates/", "websiteUrl": "https://active-pilates.com/", "officialUrl": "https://active-pilates.com/", "operatorLocationId": "clement-street", "name": "Active Pilates", "address": "9 Clement Street, San Francisco, CA 94118", "recordStatus": "open", "pricingAccess": "public-rate-card", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "pilates-lagree-barre", "observedAt": "2026-08-19", "note": "The live official rate card publishes group, private, and semi-private Pilates/Gyrotonic sessions; the ordinary group single session is public without an account."
+    },
+    {
+      "gymId": "osm-node-585968188", "reviewStatus": "approved", "sourceType": "osm-history", "sourceUrl": "https://api.openstreetmap.org/api/0.6/node/585968188/history.json", "websiteUrl": "", "officialUrl": "", "recordStatus": "identity-review", "pricingAccess": "no-official-site", "entityKindOverride": "non-consumer", "accessModelOverride": "not-applicable", "modalityOverride": "non-consumer", "observedAt": "2026-08-19", "note": "A legacy name-only OSM point at a residential address has no current operator or registry evidence and remains on identity review hold."
+    },
+    {
+      "gymId": "osm-node-3542720509", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://back-to-sports-fitness-and-therapy.gymdesk.com/pricing", "websiteUrl": "https://backtosports.com/", "officialUrl": "https://backtosports.com/", "operatorLocationId": "monterey-boulevard", "name": "Back to Sports Fitness and Therapy", "address": "693 Monterey Boulevard, San Francisco, CA 94127", "recordStatus": "open", "entityKindOverride": "gym", "accessModelOverride": "membership", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The official site links a public GymDesk storefront at the operator's reviewed current address."
+    },
+    {
+      "gymId": "osm-node-4238377195", "reviewStatus": "approved", "sourceType": "operator-owned-co-tenant", "sourceUrl": "https://oceanmyofascialrelease.com/office-locations", "websiteUrl": "", "officialUrl": "", "recordStatus": "open", "pricingAccess": "no-official-site", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "pilates-lagree-barre", "observedAt": "2026-08-19", "note": "A current co-tenant confirms Classical Pilates Studio is active at 2636 Ocean. Fitness2Function prices at the shared address are deliberately not attached because the operators' relationship is unresolved."
+    },
+    {
+      "gymId": "osm-node-11701513373", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://thecoremvmt.com/pricing/", "websiteUrl": "https://thecoremvmt.com/location/castro/", "officialUrl": "https://thecoremvmt.com/location/castro/", "operatorLocationId": "48717", "name": "CORE MVMT - Castro", "address": "2349 Market Street, San Francisco, CA 94114", "recordStatus": "open", "pricingAccess": "public-rendered-widget", "entityKindOverride": "studio", "accessModelOverride": "class-membership", "modalityOverride": "pilates-lagree-barre", "observedAt": "2026-08-19", "note": "The official pricing page links Mariana Tek tenant thecoremvmt and integration /buy/48717; amounts require a rendered public-widget adapter."
+    },
+    {
+      "gymId": "osm-node-10689773926", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.edensf.com/blog/reasons-women-hate-going-to-gyms", "websiteUrl": "https://www.edensf.com/", "officialUrl": "https://www.edensf.com/", "operatorLocationId": "bush-street", "name": "Eden Fitness Studio", "address": "1640 & 1650 Bush Street, San Francisco, CA 94109", "recordStatus": "open", "entityKindOverride": "gym", "accessModelOverride": "membership", "modalityOverride": "independent-gym", "observedAt": "2026-08-19", "note": "Current official pages publish the reservation-only women's facility, its no-contract membership, and the connected Bush Street addresses."
+    },
+    {
+      "gymId": "osm-way-262286607", "reviewStatus": "approved", "sourceType": "official-registry", "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json", "websiteUrl": "https://sffitlife.com/", "officialUrl": "https://sffitlife.com/", "operatorLocationId": "bay-street", "name": "Fit Life Training Studio", "address": "377 Bay Street, San Francisco, CA 94133", "recordStatus": "open", "pricingAccess": "official-site-placeholder", "entityKindOverride": "studio", "accessModelOverride": "restricted", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The active official registry identity is exact, but the current operator domain is only an updating-site placeholder with no services or rate card."
+    },
+    {
+      "gymId": "osm-node-10764775827", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.graciesanfrancisco.com/contact", "websiteUrl": "https://www.graciesanfrancisco.com/", "officialUrl": "https://www.graciesanfrancisco.com/", "operatorLocationId": "richmond-district", "name": "Charles Gracie Academy Richmond District", "address": "6300 California Street, San Francisco, CA 94121", "recordStatus": "open", "pricingAccess": "contact-required", "entityKindOverride": "martial-arts", "accessModelOverride": "class-membership", "modalityOverride": "martial-arts-boxing", "observedAt": "2026-08-19", "note": "The official school page directs all pricing questions to direct contact and exposes no public rate card."
+    },
+    {
+      "gymId": "osm-node-2713442479", "reviewStatus": "approved", "sourceType": "official-institution", "sourceUrl": "https://kin.sfsu.edu/lockerroom", "websiteUrl": "https://kin.sfsu.edu/lockerroom", "officialUrl": "https://kin.sfsu.edu/lockerroom", "operatorLocationId": "gymnasium", "name": "SF State Gymnasium", "address": "1600 Holloway Avenue, San Francisco, CA 94132", "recordStatus": "open", "entityKindOverride": "non-consumer", "accessModelOverride": "restricted", "modalityOverride": "institutional-recreation", "observedAt": "2026-08-19", "note": "The university restricts equipment loans and gym use to Kinesiology classes and Athletics with student identification."
+    },
+    {
+      "gymId": "osm-node-12439601098", "reviewStatus": "approved", "sourceType": "operator-linked-site", "sourceUrl": "https://nptest.my.canva.site/h3fitness", "websiteUrl": "https://nptest.my.canva.site/h3fitness", "officialUrl": "https://nptest.my.canva.site/h3fitness", "operatorLocationId": "h3", "name": "H3 Fitness", "address": "633 Folsom Street, H3, San Francisco, CA 94107", "recordStatus": "open", "pricingAccess": "contact-required", "entityKindOverride": "gym", "accessModelOverride": "membership", "modalityOverride": "independent-gym", "observedAt": "2026-08-19", "note": "The hybrid facility serves building tenants, direct members, and Wellhub visitors; no direct operator membership amount is public, and marketplace network prices are not substituted."
+    },
+    {
+      "gymId": "osm-node-4069447294", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.hapkidousa.com/contact/", "websiteUrl": "https://www.hapkidousa.com/", "officialUrl": "https://www.hapkidousa.com/", "operatorLocationId": "taraval", "name": "Hapkido USA", "address": "603 Taraval Street, San Francisco, CA 94116", "recordStatus": "open", "pricingAccess": "form-required", "entityKindOverride": "martial-arts", "accessModelOverride": "class-membership", "modalityOverride": "martial-arts-boxing", "observedAt": "2026-08-19", "note": "The official school requires contact for rates. Colhado BJJ is a distinct co-located operator, so its public drop-in is not attached."
+    },
+    {
+      "gymId": "osm-node-12044095332", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.hot8yoga.com/membership-pricing-norcal", "websiteUrl": "https://www.hot8yoga.com/locations", "officialUrl": "https://www.hot8yoga.com/locations", "operatorLocationId": "san-francisco-fidi", "name": "Hot 8 Yoga - San Francisco FiDi", "address": "248 Sutter Street, San Francisco, CA 94108", "recordStatus": "open", "entityKindOverride": "studio", "accessModelOverride": "class-membership", "modalityOverride": "yoga", "observedAt": "2026-08-19", "note": "The official NorCal rate card and location directory expose neutral recurring and single-class prices for the FiDi studio."
+    },
+    {
+      "gymId": "osm-node-12337873692", "reviewStatus": "approved", "sourceType": "official-registry", "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json", "websiteUrl": "", "officialUrl": "", "operatorLocationId": "stanyan-street", "name": "Anthony Silva Fitness", "address": "858 Stanyan Street, San Francisco, CA", "recordStatus": "open", "pricingAccess": "official-domain-parked", "entityKindOverride": "studio", "accessModelOverride": "restricted", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The current SF registry confirms the operator and address, but the former official domain is parked and no operator-owned public rate card or booking storefront was found."
+    },
+    {
+      "gymId": "osm-node-10869882845", "reviewStatus": "approved", "sourceType": "official-status-conflict", "sourceUrl": "https://www.divineyogastudiosf.com/appointment", "websiteUrl": "https://www.divineyogastudiosf.com/", "officialUrl": "https://www.divineyogastudiosf.com/", "operatorLocationId": "brannan-street", "name": "Divine Yoga Studio", "address": "406 Brannan Street, San Francisco, CA 94107", "recordStatus": "status-review", "pricingAccess": "official-status-conflict", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "yoga", "observedAt": "2026-08-19", "note": "The live official pages still show 406 Brannan and a three-class pass, while the current SF registry says the location ended 2026-04-03 and the official pricing page says no plans are available. Publication fails closed pending operating-status review."
+    },
+    {
+      "gymId": "osm-node-11777326257", "reviewStatus": "approved", "sourceType": "official-registry", "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json", "websiteUrl": "", "officialUrl": "", "operatorLocationId": "folsom-street", "name": "Skyefit Personal Training", "address": "864 Folsom Street, San Francisco, CA", "recordStatus": "open", "pricingAccess": "official-domain-parked", "entityKindOverride": "studio", "accessModelOverride": "restricted", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "Two current same-DBA SF registrations support the location identity, but the historical local domain is parked. A similarly named UK gym is a false match and was excluded."
+    },
+    {
+      "gymId": "osm-node-3204993502", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://churchfitness-sf.com/", "websiteUrl": "https://churchfitness-sf.com/", "officialUrl": "https://churchfitness-sf.com/", "operatorLocationId": "church-street", "name": "Church Fitness", "address": "1710 Church Street, San Francisco, CA", "recordStatus": "open", "accessAvailability": "enrollment-paused", "pricingAccess": "waitlist-required", "entityKindOverride": "gym", "accessModelOverride": "membership", "modalityOverride": "independent-gym", "observedAt": "2026-08-19", "note": "The official site confirms open-access weightlifting and cardio for members but says enrollment is closed. Its only next step is a personal-contact waitlist and no public rate is disclosed; no form was submitted."
+    },
+    {
+      "gymId": "osm-way-93703728", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/Facilities/Facility/Details/Alice-Marble-Courts-324", "websiteUrl": "https://sfrecpark.org/Facilities/Facility/Details/Alice-Marble-Courts-324", "officialUrl": "https://sfrecpark.org/Facilities/Facility/Details/Alice-Marble-Courts-324", "operatorLocationId": "alice-marble-courts-324", "name": "Alice Marble Courts", "address": "Greenwich Street & Hyde Street, San Francisco, CA 94109", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-courts", "amenities": ["four outdoor hard tennis courts", "tennis practice wall", "outdoor basketball court", "accessible courts"], "observedAt": "2026-08-19", "note": "The SF Rec and Park facility page supplies the current public identity, hours, and court inventory."
+    },
+    {
+      "gymId": "osm-way-27211224", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Beach-Chalet-Athletic-Fields-411", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Beach-Chalet-Athletic-Fields-411", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Beach-Chalet-Athletic-Fields-411", "operatorLocationId": "beach-chalet-athletic-fields-411", "name": "Beach Chalet Athletic Fields", "address": "1500 John F. Kennedy Drive, San Francisco, CA 94121", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-athletic-fields", "amenities": ["four synthetic-turf soccer pitches", "field lights", "parking", "restrooms"], "observedAt": "2026-08-19", "note": "The SF Rec and Park facility page confirms the fields, public hours, and listed amenities; permits may govern organized use."
+    },
+    {
+      "gymId": "osm-way-173103606", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Buena-Vista-Park-155", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Buena-Vista-Park-155", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Buena-Vista-Park-155", "operatorLocationId": "buena-vista-park-155", "name": "Buena Vista Park Tennis Courts", "recordStatus": "open", "hours": "Daily 6:00am-10:00pm", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-courts", "amenities": ["two outdoor tennis courts", "playground", "off-leash dog area", "restrooms"], "observedAt": "2026-08-19", "note": "The park facility page and official tennis directory confirm the parent facility and two public courts."
+    },
+    {
+      "gymId": "osm-way-89802412", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Sava-Pool-220", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Sava-Pool-220", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Sava-Pool-220", "operatorLocationId": "sava-pool-220", "name": "Sava Pool", "address": "2695 19th Avenue, San Francisco, CA 94116", "recordStatus": "open", "hours": "Program schedule: Tue 7:30am-8:30pm; Wed 6:30am-8:30pm; Thu 7:30am-7:00pm; Fri 6:30am-7:30pm; Sat 9:00am-5:00pm; access varies by program", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "public-pool", "amenities": ["25-yard eight-lane pool", "lap and family swim", "lessons and water exercise", "community room", "parking", "restrooms"], "observedAt": "2026-08-19", "note": "The current official facility page and August program schedule confirm reopening, hours by program, and an $8 standard adult admission."
+    },
+    {
+      "gymId": "osm-way-162056248", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Betty-Ann-Ong-Recreation-Center-84", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Betty-Ann-Ong-Recreation-Center-84", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Betty-Ann-Ong-Recreation-Center-84", "operatorLocationId": "betty-ann-ong-recreation-center-84", "name": "Betty Ann Ong Recreation Center", "address": "1199 Mason Street, San Francisco, CA 94108", "recordStatus": "open", "hours": "Tue-Fri 10:00am-9:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium", "weight room", "basketball and volleyball", "ping pong", "playground", "community rooms", "restrooms"], "observedAt": "2026-08-19", "note": "The current SF Rec and Park page supplies the renamed facility, address, hours, and public recreation amenities."
+    },
+    {
+      "gymId": "osm-way-288705759", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Coffman-Pool-213", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Coffman-Pool-213", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Coffman-Pool-213", "operatorLocationId": "coffman-pool-213", "name": "Coffman Pool", "address": "1701 Visitacion Avenue, San Francisco, CA 94134", "recordStatus": "open", "hours": "Program schedule: Tue 7:00am-7:00pm; Wed 9:00am-7:00pm; Thu 7:00am-7:00pm; Fri 9:00am-7:00pm; Sat 9:00am-5:00pm; access varies by program", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "public-pool", "amenities": ["33⅓-yard heated pool", "lap and family swim", "lessons and water exercise", "locker rooms", "community room", "parking", "restrooms"], "observedAt": "2026-08-19", "note": "The current official facility page and program schedule provide operating windows, program restrictions, and an $8 standard adult admission."
+    },
+    {
+      "gymId": "osm-way-162518014", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Dupont-Tennis-Courts-331", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Dupont-Tennis-Courts-331", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Dupont-Tennis-Courts-331", "operatorLocationId": "dupont-tennis-courts-331", "name": "Dupont Tennis Courts", "address": "336 31st Avenue, San Francisco, CA 94121", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-courts", "amenities": ["four reservable outdoor tennis courts", "restrooms"], "observedAt": "2026-08-19", "note": "The SF Rec and Park facility page confirms the address, park hours, and four outdoor courts."
+    },
+    {
+      "gymId": "osm-way-28283272", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Garfield-Pool-214", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Garfield-Pool-214", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Garfield-Pool-214", "operatorLocationId": "garfield-pool-214", "name": "Garfield Pool", "address": "1271 Treat Avenue, San Francisco, CA 94110", "recordStatus": "open", "hours": "Temporarily closed for annual maintenance through September 4, 2026; official reopening September 8", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "public-pool", "amenities": ["pool", "lap and recreation swim", "exercise classes", "lessons", "locker rooms", "community rooms", "restrooms"], "observedAt": "2026-08-19", "note": "The official maintenance schedule confirms the temporary closure and reopening date; recurring program hours were not published during the closure."
+    },
+    {
+      "gymId": "osm-way-109022547", "reviewStatus": "approved", "sourceType": "official-operator-directory", "sourceUrl": "https://www.sfll.org/Default.aspx?tabid=1713651", "websiteUrl": "https://www.sfll.org/Default.aspx?tabid=1713651", "officialUrl": "https://www.sfll.org/Default.aspx?tabid=1713651", "operatorLocationId": "ketcham", "name": "Ketcham Field", "address": "8th Street, Treasure Island, San Francisco, CA 94130", "recordStatus": "open", "hours": "Scheduled league and permit use only; no public walk-in hours published", "entityKindOverride": "public-recreation", "accessModelOverride": "restricted", "modalityOverride": "youth-baseball", "amenities": ["baseball field"], "observedAt": "2026-08-19", "note": "The current San Francisco Little League directory and 2026 operations pages confirm active scheduled use."
+    },
+    {
+      "gymId": "osm-way-120481450", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Kezar-Pavilion-418", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Kezar-Pavilion-418", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Kezar-Pavilion-418", "operatorLocationId": "kezar-pavilion-418", "name": "Kezar Pavilion", "address": "755 Stanyan Street, San Francisco, CA 94117", "recordStatus": "open", "hours": "Event and permit schedule only; no standing public walk-in hours published", "entityKindOverride": "public-recreation", "accessModelOverride": "restricted", "modalityOverride": "public-indoor-courts", "amenities": ["indoor gymnasium", "wood sprung floor", "basketball and court games", "2,500-person spectator capacity", "event rentals"], "observedAt": "2026-08-19", "note": "The official facility page describes a scheduled event and permit venue rather than a walk-in consumer gym."
+    },
+    {
+      "gymId": "osm-node-368174394", "reviewStatus": "approved", "sourceType": "official-institution", "sourceUrl": "https://www.usfca.edu/koret", "websiteUrl": "https://www.usfca.edu/koret", "officialUrl": "https://www.usfca.edu/koret", "operatorLocationId": "koret", "name": "Koret Health and Recreation Center", "address": "2130 Fulton Street, San Francisco, CA 94117", "recordStatus": "open", "hours": "Current official seasonal schedules conflict; confirm the active building and pool schedule before visiting", "entityKindOverride": "gym", "accessModelOverride": "drop-in", "modalityOverride": "institutional-recreation", "amenities": ["50-meter by 25-yard indoor pool", "weight rooms", "cardio equipment", "group exercise and open recreation", "locker rooms"], "observedAt": "2026-08-19", "note": "USF publishes a public adult drop-in and restricted neighborhood memberships, but two current official pages disagree on seasonal hours."
+    },
+    {
+      "gymId": "osm-way-1107106606", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mission-Dolores-Park-188", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mission-Dolores-Park-188", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mission-Dolores-Park-188", "operatorLocationId": "mission-dolores-park-188", "name": "Mission Dolores Park Recreation Facilities", "recordStatus": "open", "hours": "Daily 6:00am-10:00pm", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-park-recreation", "amenities": ["soccer and athletic field", "six tennis courts", "basketball and multi-use courts", "playground", "off-leash dog areas", "picnic area", "restrooms"], "observedAt": "2026-08-19", "note": "The SF Rec and Park parent facility page provides the public hours and recreation inventory."
+    },
+    {
+      "gymId": "osm-way-1111843035", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Mission-Playground-260", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Mission-Playground-260", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Mission-Playground-260", "operatorLocationId": "mission-playground-260", "name": "Mission Playground", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-park-recreation", "amenities": ["two tennis courts", "outdoor basketball", "blacktop soccer", "playground", "community rooms", "pool", "restrooms"], "observedAt": "2026-08-19", "note": "The official facility page supplies the parent identity, public hours, and recreation amenities."
+    },
+    {
+      "gymId": "osm-way-1107523056", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Panhandle-443", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Panhandle-443", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Panhandle-443", "operatorLocationId": "panhandle-443-nate-thurmond-court", "name": "Panhandle — Nate Thurmond Basketball Court", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-courts", "amenities": ["outdoor basketball court", "outdoor fitness equipment", "playground", "walking trails", "restrooms"], "observedAt": "2026-08-19", "note": "The official Panhandle page confirms the Nate Thurmond court as a named component of the public park."
+    },
+    {
+      "gymId": "osm-way-70948786", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/facilities/facility/details/Joe-DiMaggio-Playground-249", "websiteUrl": "https://sfrecpark.org/facilities/facility/details/Joe-DiMaggio-Playground-249", "officialUrl": "https://sfrecpark.org/facilities/facility/details/Joe-DiMaggio-Playground-249", "operatorLocationId": "joe-dimaggio-playground-249", "name": "Joe DiMaggio Playground", "address": "651 Lombard Street, San Francisco, CA 94133", "recordStatus": "open", "hours": "Clubhouse Mon-Fri 9:00am-5:00pm; Sat-Sun closed; park daily 6:00am-10:00pm", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["accessible clubhouse", "bocce and basketball", "outdoor fitness equipment", "playground", "pool and tennis", "parking", "restrooms"], "observedAt": "2026-08-19", "note": "The current official parent facility replaces the older generic North Beach Clubhouse title and supplies hours and amenities."
+    },
+    {
+      "gymId": "osm-way-70948785", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/North-Beach-Pool-218", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/North-Beach-Pool-218", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/North-Beach-Pool-218", "operatorLocationId": "north-beach-pool-218", "name": "North Beach Pool", "address": "661 Lombard Street, San Francisco, CA 94133", "recordStatus": "open", "hours": "Current official program schedule not published; confirm before visiting", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "public-pool", "amenities": ["lap pool", "recreation pool", "dry sauna", "lap and family swim", "locker rooms", "community rooms", "restrooms"], "observedAt": "2026-08-19", "note": "The current facility and maintenance pages confirm the pool remains active, but the visible program schedule has expired."
+    },
+    {
+      "gymId": "osm-way-195470156", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Palega-Rec-Center-103", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Palega-Rec-Center-103", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Palega-Rec-Center-103", "operatorLocationId": "palega-recreation-center-103", "name": "Palega Recreation Center", "recordStatus": "open", "hours": "Tue-Fri 10:00am-9:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium", "basketball and tennis", "athletic and soccer fields", "baseball", "playground", "community rooms", "restrooms"], "observedAt": "2026-08-19", "note": "The official facility page supplies current center hours and public recreation amenities."
+    },
+    {
+      "gymId": "osm-way-27393835", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Potrero-Hill-Rec-Center-275", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Potrero-Hill-Rec-Center-275", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Potrero-Hill-Rec-Center-275", "operatorLocationId": "potrero-hill-recreation-center-275", "name": "Potrero Hill Recreation Center", "address": "801 Arkansas Street, San Francisco, CA 94107", "recordStatus": "open", "hours": "Tue-Fri 10:00am-8:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium and open gym", "athletic field", "baseball and softball", "basketball and tennis", "playground", "restrooms"], "observedAt": "2026-08-19", "note": "The official facility page supports the current hours and amenities; the canonical 94107 ZIP is retained over an apparent page typo."
+    },
+    {
+      "gymId": "osm-way-85796805", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Richmond-Rec-Center-105", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Richmond-Rec-Center-105", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Richmond-Rec-Center-105", "operatorLocationId": "richmond-recreation-center-105", "name": "Richmond Recreation Center", "recordStatus": "open", "hours": "Tue-Fri 10:00am-9:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium and open gym", "basketball and volleyball", "pickleball", "ping pong", "community rooms", "parking", "restrooms"], "observedAt": "2026-08-19", "note": "The official facility page publishes the current hours, court uses, and recreation-center amenities."
+    },
+    {
+      "gymId": "osm-way-162470887", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/facilities/facility/details/South-Sunset-Playground-274", "websiteUrl": "https://www.sfrecpark.org/facilities/facility/details/South-Sunset-Playground-274", "officialUrl": "https://www.sfrecpark.org/facilities/facility/details/South-Sunset-Playground-274", "operatorLocationId": "south-sunset-playground-274", "name": "South Sunset Playground", "recordStatus": "open", "hours": "Daily 6:00am-10:00pm; field open-play hours are posted on site", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-park-recreation", "amenities": ["artificial-turf athletic field", "baseball and softball", "outdoor basketball", "tennis", "clubhouse", "playground", "restrooms"], "observedAt": "2026-08-19", "note": "The official parent facility and open-play pages supply park hours, field-use semantics, and amenities."
+    },
+    {
+      "gymId": "osm-way-28353177", "reviewStatus": "approved", "sourceType": "official-operator-directory", "sourceUrl": "https://www.sfll.org/Default.aspx?tabid=1713651", "websiteUrl": "https://www.sfll.org/Default.aspx?tabid=1713651", "officialUrl": "https://www.sfll.org/Default.aspx?tabid=1713651", "operatorLocationId": "tepper", "name": "Tepper Field", "address": "849 4th Street, San Francisco, CA 94107", "recordStatus": "open", "hours": "Scheduled league and permit use only; no public walk-in hours published", "entityKindOverride": "public-recreation", "accessModelOverride": "restricted", "modalityOverride": "youth-baseball", "amenities": ["baseball field", "scoreboard", "bleachers", "batting cages", "restrooms"], "observedAt": "2026-08-19", "note": "The current San Francisco Little League directory and 2026 field-operations pages confirm active use at this address."
+    },
+    {
+      "gymId": "osm-way-270766450", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Upper-Noe-Rec-Center-112", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Upper-Noe-Rec-Center-112", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Upper-Noe-Rec-Center-112", "operatorLocationId": "upper-noe-recreation-center-112", "name": "Upper Noe Recreation Center", "address": "295 Day Street, San Francisco, CA 94131", "recordStatus": "open", "hours": "Tue-Fri 9:00am-9:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium and open gym", "athletic and baseball fields", "basketball and pickleball", "tennis", "community rooms", "playground", "restrooms"], "observedAt": "2026-08-19", "note": "The official facility page provides the current address, operating hours, and public amenities."
+    },
+    {
+      "gymId": "web-15f187f347fb55", "reviewStatus": "approved", "sourceType": "official-government-parent-facility", "sourceUrl": "https://sfrecpark.org/770/Golden-Gate-Park", "websiteUrl": "https://sfrecpark.org/770/Golden-Gate-Park", "officialUrl": "https://sfrecpark.org/770/Golden-Gate-Park", "operatorLocationId": "golden-gate-park-fitness-course", "name": "Golden Gate Park Fitness Course", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "outdoor-fitness", "amenities": ["outdoor exercise course", "bodyweight training stations", "walking and running routes"], "observedAt": "2026-08-19", "note": "Sixteen individual OSM apparatus nodes are consolidated into this free public parent course; apparatus labels remain source aliases rather than separate gym pages."
+    },
+    {
+      "gymId": "web-e7910e360685a9", "reviewStatus": "approved", "sourceType": "official-government-parent-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Mountain-Lake-Park-189", "operatorLocationId": "mountain-lake-park-fitness-circuit", "name": "Mountain Lake Park Fitness Circuit", "recordStatus": "open", "hours": "Daily 5:00am-midnight", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "outdoor-fitness", "amenities": ["built-in outdoor fitness circuit", "walking and jogging routes", "basketball half-court", "tennis courts", "restrooms"], "observedAt": "2026-08-19", "note": "Six individual OSM exercise nodes are consolidated into the official free public parent fitness circuit."
+    },
+    {
+      "gymId": "web-dbb15601f0e4c6", "reviewStatus": "approved", "sourceType": "official-government-parent-facility", "sourceUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor", "websiteUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor", "officialUrl": "https://www.sfrecpark.org/1228/Marina-Yacht-Harbor", "operatorLocationId": "marina-green-parcourse", "name": "Marina Green Park Fitness Area", "recordStatus": "open", "hours": "Outdoor fitness-station hours are not separately published", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "outdoor-fitness", "amenities": ["parcourse workout stations", "grass recreation area", "walking and running route", "restrooms"], "observedAt": "2026-08-19", "note": "Two OSM components are consolidated into the Marina Green parent parcourse described by SF Rec and Park."
+    },
+    {
+      "gymId": "web-1714717344e6d6", "reviewStatus": "approved", "sourceType": "official-government-parent-facility", "sourceUrl": "https://sfrecpark.org/1555/Sunset-Dunes", "websiteUrl": "https://sfrecpark.org/1555/Sunset-Dunes", "officialUrl": "https://sfrecpark.org/1555/Sunset-Dunes", "operatorLocationId": "sunset-dunes-outdoor-fitness", "name": "Sunset Dunes Park Outdoor Fitness", "recordStatus": "open", "hours": "Park and equipment hours are not separately published", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "outdoor-fitness", "amenities": ["outdoor fitness equipment", "two-mile walking and biking route", "skate and bike-skills areas", "public fitness programming"], "observedAt": "2026-08-19", "note": "The individual log-jump node is consolidated into this free public parent park listing."
+    },
+    {
+      "gymId": "osm-node-417275907", "reviewStatus": "approved", "sourceType": "official-federal-facility", "sourceUrl": "https://www.nps.gov/safr/planyourvisit/things2do.htm", "websiteUrl": "https://www.nps.gov/safr/planyourvisit/things2do.htm", "officialUrl": "https://www.nps.gov/safr/planyourvisit/things2do.htm", "operatorLocationId": "aquatic-park-bocce-courts", "name": "Aquatic Park Bocce Ball Courts", "address": "West end of the Aquatic Park promenade, San Francisco, CA", "recordStatus": "open", "hours": "Court-specific hours are not published by the National Park Service", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-courts", "amenities": ["bocce courts", "waterfront promenade"], "observedAt": "2026-08-19", "note": "The NPS confirms free bocce courts at the west end of the promenade and requires no entrance pass; nearby museum or pier hours are not copied onto the courts."
+    },
+    {
+      "gymId": "osm-way-248782086", "reviewStatus": "approved", "sourceType": "official-operator-and-booking", "sourceUrl": "https://www.churchof8wheels.com/", "websiteUrl": "https://www.churchof8wheels.com/", "officialUrl": "https://www.churchof8wheels.com/", "operatorLocationId": "fillmore-street", "name": "Church of 8 Wheels", "address": "554 Fillmore Street, San Francisco, CA 94117", "recordStatus": "open", "hours": "Session schedule: Tue 6:00-7:30pm and 8:00-10:00pm; Fri 5:00-6:30pm and 7:00-11:00pm; Sat 2:30-4:00pm, 4:30-6:00pm, and 7:00-11:00pm; Sun 6:00-7:30pm and 8:00-10:00pm; Mon, Wed, and Thu closed", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "roller-skating", "amenities": ["indoor roller rink and roller disco", "all-ages and adult open-skate sessions", "optional skate rental", "lessons and private events"], "observedAt": "2026-08-19", "note": "The operator and linked public Eventbrite checkout expose session times and exact admission without an account; optional $5 skate rental remains separate."
+    },
+    {
+      "gymId": "osm-way-37180632", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Glen-Park-Rec-Center-89", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Glen-Park-Rec-Center-89", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Glen-Park-Rec-Center-89", "operatorLocationId": "glen-park-recreation-center-89", "name": "Glen Canyon Park Recreation Center", "address": "70 Elk Street, San Francisco, CA 94131", "recordStatus": "open", "hours": "Tue-Fri 10:00am-8:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["fitness room", "climbing wall", "basketball and indoor pickleball", "athletic and ball fields", "tennis", "ping pong", "playground", "restrooms"], "observedAt": "2026-08-19", "note": "Ordinary recreation-center and fitness-room access is free; the separately priced climbing program is an optional add-on and not a general admission fee."
+    },
+    {
+      "gymId": "osm-node-5270986784", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Hamilton-Pool-215", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Hamilton-Pool-215", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Hamilton-Pool-215", "operatorLocationId": "hamilton-pool-215", "name": "Hamilton Pool", "address": "1900 Geary Boulevard, entrance on Post Street, San Francisco, CA 94115", "recordStatus": "open", "hours": "Program schedule: Tue-Thu 9:00am-6:00pm; Wed and Fri also 6:30-8:30am and 6:30-8:00pm; Sat 9:00am-5:00pm; access varies by swim or lesson program", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "public-pool", "amenities": ["heated pool", "two indoor water slides", "lap and family swim", "lessons and water exercise", "locker rooms", "restrooms"], "observedAt": "2026-08-19", "note": "The official Fall 2026 schedule provides program-specific public windows and an $8 standard adult admission; closures and rentals do not become general public hours."
+    },
+    {
+      "gymId": "osm-way-545151976", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Hamilton-Rec-Center-93", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Hamilton-Rec-Center-93", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Hamilton-Rec-Center-93", "operatorLocationId": "hamilton-recreation-center-93", "name": "Hamilton Recreation Center", "address": "1900 Geary Boulevard, San Francisco, CA 94115", "recordStatus": "open", "hours": "Tue-Fri 10:00am-9:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium and open gym", "fitness room", "basketball and pickleball", "outdoor fitness equipment", "pool and tennis", "playground", "restrooms"], "observedAt": "2026-08-19", "note": "Official city pool and rental pages corroborate ZIP 94115 and resolve a conflicting ZIP in the facility header; ordinary recreation-center access is free."
+    },
+    {
+      "gymId": "osm-way-25309187", "reviewStatus": "approved", "sourceType": "official-government-operator", "sourceUrl": "https://www.lifetimeactivities.com/san-francisco/court-reservations-policies/", "websiteUrl": "https://www.lifetimeactivities.com/san-francisco/", "officialUrl": "https://www.lifetimeactivities.com/san-francisco/", "operatorLocationId": "goldman-tennis-center", "name": "Lisa and Douglas Goldman Tennis Center", "address": "Nancy Pelosi Drive and Bowling Green Drive, San Francisco, CA 94117", "recordStatus": "open", "hours": "Daily 7:00am-10:00pm", "entityKindOverride": "public-recreation", "accessModelOverride": "drop-in", "modalityOverride": "public-courts", "amenities": ["16 lighted tennis courts", "four lighted multi-use mini courts", "lighted pickleball court", "clubhouse and pro shop", "lessons and ball-machine rental", "lockers and showers for court users"], "observedAt": "2026-08-19", "note": "The delegated operator's current hours and fees effective July 1, 2026 supersede older city-page hours. The neutral selected rate is the unrestricted nonresident non-prime court-hour; resident, senior, veteran, and youth rates are retained as restricted alternatives."
+    },
+    {
+      "gymId": "osm-way-32145314", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://sfrecpark.org/Facilities/Facility/Details/St-Marys-Rec-Center-109", "websiteUrl": "https://sfrecpark.org/Facilities/Facility/Details/St-Marys-Rec-Center-109", "officialUrl": "https://sfrecpark.org/Facilities/Facility/Details/St-Marys-Rec-Center-109", "operatorLocationId": "st-marys-recreation-center-109", "name": "St. Mary's Recreation Center", "address": "95 Justin Drive, San Francisco, CA 94112", "recordStatus": "open", "hours": "Tue-Fri 10:00am-9:00pm; Sat 9:00am-5:00pm; Mon and Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "free-public", "modalityOverride": "public-recreation-center", "amenities": ["gymnasium and open gym", "indoor and outdoor basketball", "athletic and baseball fields", "tennis and volleyball", "community rooms", "playground", "restrooms"], "observedAt": "2026-08-19", "note": "The official athletic-field page corroborates the 94112 address and resolves a conflicting ZIP in the facility header; ordinary access is free."
+    },
+    {
+      "gymId": "osm-way-71209420", "reviewStatus": "approved", "sourceType": "official-government-facility", "sourceUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Tenderloin-Rec-Center-111", "websiteUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Tenderloin-Rec-Center-111", "officialUrl": "https://www.sfrecpark.org/Facilities/Facility/Details/Tenderloin-Rec-Center-111", "operatorLocationId": "tenderloin-recreation-center-111", "name": "Tenderloin Recreation Center", "address": "570 Ellis Street, San Francisco, CA 94109", "recordStatus": "open", "hours": "Mon-Wed 10:00am-7:00pm; Thu 9:00am-8:00pm; Fri 11:00am-8:00pm; Sat 9:00am-5:00pm; Sun closed", "entityKindOverride": "public-recreation", "accessModelOverride": "restricted", "modalityOverride": "youth-recreation", "amenities": ["children's recreation rooms", "outdoor basketball", "soccer pitch", "playground and nature exploration", "tricycle and scooter track", "restrooms"], "observedAt": "2026-08-19", "note": "The facility is dedicated exclusively to children and youth; adults may not enter without a child. Official rental pages corroborate ZIP 94109 over a conflicting facility-header ZIP."
+    },
+    {
+      "gymId": "osm-way-34313547", "reviewStatus": "approved", "sourceType": "official-operator-program", "sourceUrl": "https://www.ymcasf.org/location/embarcadero-ymca/treasure-island-community-ymca/", "websiteUrl": "https://www.ymcasf.org/location/embarcadero-ymca/treasure-island-community-ymca/", "officialUrl": "https://www.ymcasf.org/location/embarcadero-ymca/treasure-island-community-ymca/", "operatorLocationId": "treasure-island-community", "name": "Treasure Island Community YMCA", "address": "749 9th Street, San Francisco, CA 94130", "recordStatus": "open", "hours": "Program-specific access only; no current general public facility hours are published", "entityKindOverride": "public-recreation", "accessModelOverride": "restricted", "modalityOverride": "community-youth-programs", "amenities": ["community gymnasium", "youth team sports", "after-school and summer programs", "nutrition and arts programs", "family events"], "observedAt": "2026-08-19", "note": "The operator provides programs without charge to eligible Treasure Island residents, but participation requires residency or program approval and is not an ordinary consumer YMCA membership."
+    }
+  ]
+}

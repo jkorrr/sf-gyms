@@ -1,0 +1,7 @@
+{
+  "_meta": {
+    "methodology": "Reviewed, sanitized operator confirmations received through an approval-gated pricing request. Raw correspondence and personal information are never committed. These observations never populate verified-only compatibility prices.",
+    "reviewRequired": true
+  },
+  "approvals": []
+}

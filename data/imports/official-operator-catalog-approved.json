@@ -1,0 +1,1566 @@
+{
+  "_meta": {
+    "reviewedAt": "2026-08-21",
+    "methodology": "Human-reviewed operator or market catalogs applied only to explicit canonical location IDs after operator identity, access scope, plan-card association, cadence, promotions, and plan-linked fees were verified."
+  },
+  "approvals": [
+    {
+      "id": "fitness-sf-all-gym-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "fitness-sf",
+      "gymIds": [
+        "osm-node-2338837133",
+        "web-a298d8310b9dc9",
+        "osm-node-3881440385",
+        "web-f54e94809da91c",
+        "osm-way-25371830",
+        "web-396cf2ddf3bead"
+      ],
+      "sharedFields": {
+        "monthlyPrice": 134.95,
+        "dayPassPrice": 35,
+        "priceSource": "FITNESS SF official membership and pass help pages",
+        "priceSourceUrl": "https://help.fitnesssf.com/how-much-does-a-membership-cost-and-are-there-different-options-available",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The current All-Gym Access plan is $134.95/month and includes every open San Francisco location. FITNESS SF publishes no enrollment, sign-up, or annual fee; a full first and final month are upfront dues. The ordinary all-gym one-day pass is $35; the $30 member-hosted rate is restricted and not selected.",
+        "planOffers": [
+          {
+            "sourceProductId": "all-gym-access",
+            "name": "All-Gym Access Membership",
+            "accessScope": "All FITNESS SF locations",
+            "scopeType": "multi-location",
+            "amount": 134.95,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "upfrontDues": [
+              {"type": "first-month-dues", "amount": 134.95, "currency": "USD"},
+              {"type": "final-month-dues", "amount": 134.95, "currency": "USD"}
+            ],
+            "fees": []
+          },
+          {
+            "sourceProductId": "marin-access",
+            "name": "Marin Access Membership",
+            "accessScope": "Marin location only",
+            "scopeType": "single-location",
+            "amount": 79.95,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "eligibility": {"type": "not-this-location", "restrictions": ["Does not permit use of the named San Francisco location"]},
+            "fees": []
+          },
+          {
+            "sourceProductId": "oakland-access",
+            "name": "Oakland Access Membership",
+            "accessScope": "Oakland location only",
+            "scopeType": "single-location",
+            "amount": 49.95,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "eligibility": {"type": "not-this-location", "restrictions": ["Does not permit use of the named San Francisco location"]},
+            "fees": []
+          }
+        ],
+        "dropInOffers": [
+          {
+            "sourceProductId": "sf-all-gym-one-day",
+            "name": "San Francisco All-Gym One-Day Pass",
+            "accessScope": "One day at open FITNESS SF gyms",
+            "amount": 35,
+            "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+            "observedAt": "2026-08-21"
+          },
+          {
+            "sourceProductId": "sf-all-gym-member-guest-day",
+            "name": "Member-Hosted One-Day Pass",
+            "accessScope": "One day when visiting with a member",
+            "amount": 30,
+            "ordinaryUse": false,
+            "eligibility": {"type": "member-hosted", "restrictions": ["Requires a FITNESS SF member host"]},
+            "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+            "observedAt": "2026-08-21"
+          },
+          {
+            "sourceProductId": "sf-all-gym-seven-day",
+            "name": "San Francisco All-Gym Seven-Day Pass",
+            "accessScope": "Seven consecutive days at open FITNESS SF gyms",
+            "amount": 129,
+            "ordinaryUse": false,
+            "sourceUrl": "https://help.fitnesssf.com/do-you-offer-day-passes-or-week-passes",
+            "observedAt": "2026-08-21"
+          }
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "ymca-greater-sf-membership-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "ymca",
+      "gymIds": [
+        "web-94d9302c37678b",
+        "web-abd8e24f4af4d8",
+        "web-0509e54f1e3c89",
+        "web-e220d3accf950e",
+        "osm-way-193054131",
+        "osm-way-69020085",
+        "osm-way-286276068",
+        "osm-node-6615153559",
+        "osm-node-9953947674"
+      ],
+      "sharedFields": {
+        "monthlyPrice": 91,
+        "dayPassPrice": null,
+        "priceSource": "YMCA of Greater San Francisco official membership page",
+        "priceSourceUrl": "https://www.ymcasf.org/membership/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The standard adult membership is $91/month plus a mandatory $149 join fee and includes YMCA of Greater San Francisco fitness facilities. Age-specific, household, financial-assistance, employer, health-plan, and insurance products are retained or excluded according to their published eligibility and do not replace the standard adult selection.",
+        "planOffers": [
+          {
+            "sourceProductId": "teen",
+            "name": "Teen Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 55,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "age-restricted", "restrictions": ["Ages 13–18", "In-person signup"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "young-adult",
+            "name": "Young Adult Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 75,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "age-restricted", "restrictions": ["Ages 19–25"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "adult",
+            "name": "Adult Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 91,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "standard-adult", "restrictions": ["Published adult band is ages 26–66"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "active-older-adult",
+            "name": "Active Older Adult Membership",
+            "accessScope": "YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 85,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "age-restricted", "restrictions": ["Ages 67+"]},
+            "fees": [{"type": "enrollment", "amount": 149, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "single-adult-household-with-children",
+            "name": "Single Adult Household with Children",
+            "accessScope": "One adult and dependent children at YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 112,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "household", "restrictions": ["One adult age 19+ and dependent children under 18 in the same household"]},
+            "fees": [{"type": "enrollment", "amount": 199, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "dual-adult-household",
+            "name": "Dual Adult Household with No Children",
+            "accessScope": "Two adults at YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 152,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "household", "restrictions": ["Two adults age 19+ in the same household"]},
+            "fees": [{"type": "enrollment", "amount": 199, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          },
+          {
+            "sourceProductId": "dual-adult-household-with-children",
+            "name": "Dual Adult Household with Children",
+            "accessScope": "Two adults and dependent children at YMCA of Greater San Francisco facilities",
+            "scopeType": "multi-location",
+            "amount": 182,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "eligibility": {"type": "household", "restrictions": ["Two adults age 19+ and dependent children under 18 in the same household"]},
+            "fees": [{"type": "enrollment", "amount": 199, "currency": "USD", "cadence": "one-time", "mandatory": true}]
+          }
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "none-observed"}
+      }
+    },
+    {
+      "id": "corepower-sf-market-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "corepower-yoga",
+      "gymIds": [
+        "osm-node-663533939",
+        "osm-node-10806697937",
+        "osm-node-6604031903",
+        "osm-node-9465192363",
+        "osm-node-2337759318",
+        "osm-node-4548624459"
+      ],
+      "sharedFields": {
+        "monthlyPrice": 229,
+        "dayPassPrice": 38,
+        "priceSource": "CorePower Yoga official San Francisco studio catalog",
+        "priceSourceUrl": "https://www.corepoweryoga.com/yoga-studios/ca/san-francisco/duboce",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The official San Francisco studio catalog lists All Access at $229/month with unlimited studio, live, and on-demand classes. A single studio class is $38. First-month and free-week offers are promotional and do not replace the ongoing price; location-specific intro amounts may vary. Multi-class packs are retained as one-time alternatives.",
+        "planOffers": [
+          {
+            "sourceProductId": "all-access",
+            "name": "All Access Membership",
+            "accessScope": "Unlimited CorePower studio, live, and on-demand classes",
+            "scopeType": "multi-location",
+            "classAllowance": "unlimited",
+            "amount": 229,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "fees": []
+          },
+          {
+            "sourceProductId": "intro-month-variable",
+            "name": "Intro Month Membership — Location-Specific Offer",
+            "accessScope": "Promotional first month followed by $229/month ongoing",
+            "scopeType": "multi-location",
+            "classAllowance": "unlimited",
+            "amount": null,
+            "billingInterval": "month",
+            "commitmentType": "unknown",
+            "promotion": {"isPromotion": true, "label": "First-month offer varies by studio"},
+            "fees": []
+          },
+          {
+            "sourceProductId": "five-studio-classes",
+            "name": "5 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Five classes usable at almost any CorePower studio; expires in six months",
+            "scopeType": "multi-location",
+            "classAllowance": 5,
+            "amount": 179,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "ten-studio-classes",
+            "name": "10 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Ten classes usable at almost any CorePower studio; expires in one year",
+            "scopeType": "multi-location",
+            "classAllowance": 10,
+            "amount": 319,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "twenty-studio-classes",
+            "name": "20 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Twenty classes usable at almost any CorePower studio; expires in one year",
+            "scopeType": "multi-location",
+            "classAllowance": 20,
+            "amount": 610,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "thirty-studio-classes",
+            "name": "30 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Thirty classes usable at almost any CorePower studio; expires in 18 months",
+            "scopeType": "multi-location",
+            "classAllowance": 30,
+            "amount": 900,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          },
+          {
+            "sourceProductId": "fifty-studio-classes",
+            "name": "50 Studio Classes",
+            "productType": "class-pack",
+            "accessScope": "Fifty classes usable at almost any CorePower studio; expires in 18 months",
+            "scopeType": "multi-location",
+            "classAllowance": 50,
+            "amount": 1450,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": []
+          }
+        ],
+        "dropInOffers": [
+          {
+            "sourceProductId": "single-studio-class",
+            "name": "Single Studio Class",
+            "accessScope": "One class at almost any CorePower studio; expires in 30 days",
+            "amount": 38
+          }
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "barrys-northern-california-2026-08-17",
+      "reviewStatus": "approved",
+      "operatorId": "barrys",
+      "gymIds": ["osm-node-6496142801", "osm-node-9411404744", "web-18e908eb2543ab"],
+      "sharedFields": {
+        "monthlyPrice": 260,
+        "dayPassPrice": 38,
+        "priceSource": "Barry's official Northern California pricing catalog",
+        "priceSourceUrl": "https://app.barrys.com/pricing?location=10298",
+        "priceObservedAt": "2026-08-17",
+        "priceNote": "Northern California recurring memberships are $260 for 8 classes, $365 for 12, $445 for 16, and $530 for 30 per month. The standard single class is $38. The first-timer three-pack is promotional and excluded from selection; no mandatory fee was disclosed.",
+        "planOffers": [
+          {"sourceProductId": "membership-8", "name": "8 Classes Monthly", "accessScope": "Eight Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 8, "amount": 260, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "membership-12", "name": "12 Classes Monthly", "accessScope": "Twelve Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 12, "amount": 365, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "membership-16", "name": "16 Classes Monthly", "accessScope": "Sixteen Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 16, "amount": 445, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "membership-30", "name": "30 Classes Monthly", "accessScope": "Thirty Barry's classes per month in Northern California", "scopeType": "operator-market", "classAllowance": 30, "amount": 530, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []}
+        ],
+        "dropInOffers": [
+          {"sourceProductId": "single-class", "name": "Single Class", "amount": 38},
+          {"sourceProductId": "five-class-pack", "name": "5-Class Pack", "amount": 185, "ordinaryUse": false},
+          {"sourceProductId": "ten-class-pack", "name": "10-Class Pack", "amount": 365, "ordinaryUse": false},
+          {"sourceProductId": "twenty-class-pack", "name": "20-Class Pack", "amount": 710, "ordinaryUse": false},
+          {"sourceProductId": "fifty-class-pack", "name": "50-Class Pack", "amount": 1680, "ordinaryUse": false},
+          {"sourceProductId": "first-timer-three-pack", "name": "First-Timer 3-Pack", "amount": 75, "ordinaryUse": false, "promotion": {"isPromotion": true, "label": "New-client offer"}}
+        ],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "solidcore-san-francisco-2026-08-17",
+      "reviewStatus": "approved",
+      "operatorId": "solidcore",
+      "gymIds": ["osm-node-13185224799", "web-0ed19b0a7a3073", "web-c585a394b269ab", "web-8a0d4e16015d6d"],
+      "sharedFields": {
+        "monthlyPrice": 145,
+        "dayPassPrice": 43,
+        "priceSource": "solidcore official San Francisco membership catalog",
+        "priceSourceUrl": "https://solidcore.co/membership-perks?siteId=5723396&locationId=11",
+        "priceObservedAt": "2026-08-17",
+        "priceNote": "San Francisco month-to-month memberships are $145 for 4 classes, $255 for 8, and $385 unlimited. A 12-month four-class plan is $108/month but is not selected over month-to-month access. The standard single class is $43; prices may be subject to tax and no mandatory fee was disclosed.",
+        "planOffers": [
+          {"sourceProductId": "four-month-to-month", "name": "4 Classes — Month-to-Month", "accessScope": "Four solidcore classes per month", "scopeType": "operator-market", "classAllowance": 4, "amount": 145, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "eight-month-to-month", "name": "8 Classes — Month-to-Month", "accessScope": "Eight solidcore classes per month", "scopeType": "operator-market", "classAllowance": 8, "amount": 255, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "unlimited-month-to-month", "name": "Unlimited — Month-to-Month", "accessScope": "Unlimited solidcore classes", "scopeType": "operator-market", "classAllowance": "unlimited", "amount": 385, "billingInterval": "month", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "four-twelve-month", "name": "4 Classes — 12-Month Commitment", "accessScope": "Four solidcore classes per month", "scopeType": "operator-market", "classAllowance": 4, "amount": 108, "billingInterval": "month", "commitmentType": "minimum-term", "minimumCommitmentMonths": 12, "fees": []}
+        ],
+        "dropInOffers": [{"sourceProductId": "single-class", "name": "Single Class", "amount": 43}],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "soulcycle-san-francisco-2026-08-17",
+      "reviewStatus": "approved",
+      "operatorId": "soulcycle",
+      "gymIds": ["osm-node-4001664955", "web-7935d5eb8b6a85"],
+      "sharedFields": {
+        "monthlyPrice": 128.85,
+        "dayPassPrice": 38,
+        "priceSource": "SoulCycle official San Francisco series catalog",
+        "priceSourceUrl": "https://www.soul-cycle.com/series/",
+        "priceObservedAt": "2026-08-17",
+        "priceNote": "Soul Renew bills every 30 days: $127 for 4 classes, $245 for 8, $355 for 12, and $456 for 16. The selected four-class plan normalizes to $128.85 per calendar month. The standard single class is $38; new-rider offers are promotional and no mandatory fee was disclosed.",
+        "billingInterval": "30 days",
+        "billingIntervalPrice": 127,
+        "planOffers": [
+          {"sourceProductId": "soul-renew-4", "name": "Soul Renew 4", "accessScope": "Four SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 4, "period": "30 days"}, "amount": 127, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "soul-renew-8", "name": "Soul Renew 8", "accessScope": "Eight SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 8, "period": "30 days"}, "amount": 245, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "soul-renew-12", "name": "Soul Renew 12", "accessScope": "Twelve SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 12, "period": "30 days"}, "amount": 355, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []},
+          {"sourceProductId": "soul-renew-16", "name": "Soul Renew 16", "accessScope": "Sixteen SoulCycle classes every 30 days in San Francisco", "scopeType": "operator-market", "classAllowance": {"count": 16, "period": "30 days"}, "amount": 456, "billingInterval": "30 days", "commitmentType": "month-to-month", "fees": []}
+        ],
+        "dropInOffers": [{"sourceProductId": "single-class", "name": "Single Class", "amount": 38}],
+        "catalogCompleteness": {"plans": "complete", "dropIns": "complete"}
+      }
+    },
+    {
+      "id": "crunch-chestnut-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "crunch",
+      "gymIds": ["osm-way-272700932"],
+      "sharedFields": {
+        "monthlyPrice": 95,
+        "dayPassPrice": 35,
+        "enrollmentFee": 150,
+        "processingFee": 49.95,
+        "priceSource": "Crunch official Chestnut membership cards and payment table",
+        "priceSourceUrl": "https://www.crunch.com/locations/chestnut",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The neutral One Crunch rate is $95/month, month-to-month, with a mandatory $150 enrollment fee and $49.95 processing fee. Current discounted dues and discounted upfront fees are retained as promotions. City Crunch is $110 and All Crunch is $159 at regular rates; All Crunch is operator-labeled Best Value. The standard unhosted Signature guest pass is $35.",
+        "planOffers": [
+          {"sourceProductId":"one-crunch-regular","name":"One Crunch — Regular Rate","accessScope":"Ordinary access at Crunch Chestnut","scopeType":"single-location","amount":95,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-regular","name":"City Crunch — Regular Rate","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":110,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-regular","name":"All Crunch — Regular Rate","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":159,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"one-crunch-current-offer","name":"One Crunch — Current Discounted Offer","accessScope":"Ordinary access at Crunch Chestnut","scopeType":"single-location","amount":80.75,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 15%-off offer; regular dues $95"},"fees":[{"type":"enrollment","amount":15,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-current-offer","name":"City Crunch — Current Discounted Offer","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":88,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $110"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-current-offer","name":"All Crunch — Current Discounted Offer","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":127.2,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $159"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [{"sourceProductId":"signature-guest-pass","name":"Signature Guest Pass","accessScope":"One ordinary unhosted visit at a Signature Crunch club","amount":35}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "crunch-polk-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "crunch",
+      "gymIds": ["osm-node-2167144976"],
+      "sharedFields": {
+        "monthlyPrice": 99,
+        "dayPassPrice": 35,
+        "enrollmentFee": 150,
+        "processingFee": 49.95,
+        "priceSource": "Crunch official Polk Street membership cards and payment table",
+        "priceSourceUrl": "https://www.crunch.com/locations/polk-st",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The neutral One Crunch rate is $99/month, month-to-month, with a mandatory $150 enrollment fee and $49.95 processing fee. Current discounted dues and upfront fees are retained as promotions. City Crunch is $110 and All Crunch is $159 at regular rates; All Crunch is operator-labeled Best Value. The standard unhosted Signature guest pass is $35.",
+        "planOffers": [
+          {"sourceProductId":"one-crunch-regular","name":"One Crunch — Regular Rate","accessScope":"Ordinary access at Crunch Polk Street","scopeType":"single-location","amount":99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-regular","name":"City Crunch — Regular Rate","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":110,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-regular","name":"All Crunch — Regular Rate","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":159,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"one-crunch-current-offer","name":"One Crunch — Current Discounted Offer","accessScope":"Ordinary access at Crunch Polk Street","scopeType":"single-location","amount":84.15,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 15%-off offer; regular dues $99"},"fees":[{"type":"enrollment","amount":15,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-current-offer","name":"City Crunch — Current Discounted Offer","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":88,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $110"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-current-offer","name":"All Crunch — Current Discounted Offer","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":127.2,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $159"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [{"sourceProductId":"signature-guest-pass","name":"Signature Guest Pass","accessScope":"One ordinary unhosted visit at a Signature Crunch club","amount":35}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "crunch-union-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "crunch",
+      "gymIds": ["web-99a718d670cb34"],
+      "sharedFields": {
+        "monthlyPrice": 95,
+        "dayPassPrice": 35,
+        "enrollmentFee": 150,
+        "processingFee": 49.95,
+        "priceSource": "Crunch official Union Street membership cards and payment table",
+        "priceSourceUrl": "https://www.crunch.com/locations/union-street",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The neutral One Crunch rate is $95/month, month-to-month, with a mandatory $150 enrollment fee and $49.95 processing fee. Current discounted dues and upfront fees are retained as promotions. City Crunch is $110 and All Crunch is $159 at regular rates; All Crunch is operator-labeled Best Value. The standard unhosted Signature guest pass is $35.",
+        "planOffers": [
+          {"sourceProductId":"one-crunch-regular","name":"One Crunch — Regular Rate","accessScope":"Ordinary access at Crunch Union Street","scopeType":"single-location","amount":95,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-regular","name":"City Crunch — Regular Rate","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":110,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-regular","name":"All Crunch — Regular Rate","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":159,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"one-crunch-current-offer","name":"One Crunch — Current Discounted Offer","accessScope":"Ordinary access at Crunch Union Street","scopeType":"single-location","amount":80.75,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 15%-off offer; regular dues $95"},"fees":[{"type":"enrollment","amount":15,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-current-offer","name":"City Crunch — Current Discounted Offer","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":88,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $110"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-current-offer","name":"All Crunch — Current Discounted Offer","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":127.2,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $159"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [{"sourceProductId":"signature-guest-pass","name":"Signature Guest Pass","accessScope":"One ordinary unhosted visit at a Signature Crunch club","amount":35}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "crunch-yerba-buena-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "crunch",
+      "gymIds": ["osm-node-10859142467"],
+      "sharedFields": {
+        "monthlyPrice": 90,
+        "dayPassPrice": 35,
+        "enrollmentFee": 150,
+        "processingFee": 49.95,
+        "priceSource": "Crunch official Yerba Buena membership cards and payment table",
+        "priceSourceUrl": "https://www.crunch.com/locations/yerba-buena",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The neutral One Crunch rate is $90/month, month-to-month, with a mandatory $150 enrollment fee and $49.95 processing fee. Current discounted dues and upfront fees are retained as promotions. City Crunch is $110 and All Crunch is $159 at regular rates; All Crunch is operator-labeled Best Value. The standard unhosted Signature guest pass is $35.",
+        "planOffers": [
+          {"sourceProductId":"one-crunch-regular","name":"One Crunch — Regular Rate","accessScope":"Ordinary access at Crunch Yerba Buena","scopeType":"single-location","amount":90,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-regular","name":"City Crunch — Regular Rate","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":110,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-regular","name":"All Crunch — Regular Rate","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":159,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":150,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":49.95,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"one-crunch-current-offer","name":"One Crunch — Current Discounted Offer","accessScope":"Ordinary access at Crunch Yerba Buena","scopeType":"single-location","amount":76.5,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 15%-off offer; regular dues $90"},"fees":[{"type":"enrollment","amount":15,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"city-crunch-current-offer","name":"City Crunch — Current Discounted Offer","accessScope":"California Signature Crunch club access","scopeType":"multi-location","amount":88,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $110"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"all-crunch-current-offer","name":"All Crunch — Current Discounted Offer","accessScope":"Worldwide Crunch club access","scopeType":"multi-location","amount":127.2,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"Current 20%-off offer; regular dues $159"},"fees":[{"type":"enrollment","amount":20,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"processing","amount":39.95,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [{"sourceProductId":"signature-guest-pass","name":"Signature Guest Pass","accessScope":"One ordinary unhosted visit at a Signature Crunch club","amount":35}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "yoga-flow-noe-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "yogaflowsf.com",
+      "gymIds": ["osm-node-6471124709"],
+      "sharedFields": {
+        "monthlyPrice": 100,
+        "dayPassPrice": 35,
+        "priceSource": "Yoga Flow SF official memberships and Noe Valley Mindbody catalog",
+        "priceSourceUrl": "https://yogaflowsf.com/membership/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Noe Valley public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+        "planOffers": [
+          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-unlimited","name":"Unlimited Monthly","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-unlimited-first-month","name":"Unlimited — First Month Offer","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"First month only; ongoing rate $210"},"fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"noe-drop-in","name":"In-Studio Drop-In","accessScope":"One class at Yoga Flow Noe Valley","amount":35,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"noe-five-pack","name":"5-Class Pack","amount":150,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"noe-ten-pack","name":"10-Class Pack","amount":275,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"noe-twenty-pack","name":"20-Class Pack","amount":500,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"noe-one-month-nonrenewing","name":"One Month Noe Valley Studio — Does Not Renew","amount":240,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"noe-new-student-two-week","name":"New Student Two-Week Unlimited","amount":59,"ordinaryUse":false,"promotion":{"isPromotion":true,"label":"New-student introductory offer"},"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41","observedAt":"2026-08-21"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "yoga-flow-ocean-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "yogaflowsf.com",
+      "gymIds": ["web-c8031adb1f022c"],
+      "sharedFields": {
+        "monthlyPrice": 100,
+        "dayPassPrice": 35,
+        "priceSource": "Yoga Flow SF official memberships and Ocean Avenue Mindbody catalog",
+        "priceSourceUrl": "https://yogaflowsf.com/membership/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Ocean Avenue public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+        "planOffers": [
+          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-unlimited","name":"Unlimited Monthly","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-unlimited-first-month","name":"Unlimited — First Month Offer","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"First month only; ongoing rate $210"},"fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"ocean-drop-in","name":"In-Studio Drop-In","accessScope":"One class at Yoga Flow Ocean Avenue","amount":35,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"ocean-five-pack","name":"5-Class Pack","amount":150,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"ocean-ten-pack","name":"10-Class Pack","amount":275,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"ocean-twenty-pack","name":"20-Class Pack","amount":500,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"ocean-one-month-nonrenewing","name":"One Month Ocean Avenue Studio — Does Not Renew","amount":240,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"ocean-new-student-two-week","name":"New Student Two-Week Unlimited","amount":59,"ordinaryUse":false,"promotion":{"isPromotion":true,"label":"New-student introductory offer"},"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732135&stype=41","observedAt":"2026-08-21"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "yoga-flow-union-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "yogaflowsf.com",
+      "gymIds": ["web-982849bdb030ca"],
+      "sharedFields": {
+        "monthlyPrice": 100,
+        "dayPassPrice": 35,
+        "priceSource": "Yoga Flow SF official memberships and Union Street Mindbody catalog",
+        "priceSourceUrl": "https://yogaflowsf.com/membership/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Yoga Flow SF publishes recurring plans at $100 for 4 classes, $175 for 8, and $210 unlimited per month across all three studios. The unlimited plan's $99 first month is promotional. The Union Street public Mindbody catalog lists a $35 drop-in and complete class-pack catalog; no mandatory fee is disclosed.",
+        "planOffers": [
+          {"sourceProductId":"membership-4","name":"4 Classes Monthly","accessScope":"Four classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":4,"amount":100,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-8","name":"8 Classes Monthly","accessScope":"Eight classes per month across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":8,"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-unlimited","name":"Unlimited Monthly","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"membership-unlimited-first-month","name":"Unlimited — First Month Offer","accessScope":"Unlimited classes across all three Yoga Flow SF studios","scopeType":"multi-location","classAllowance":"unlimited","amount":99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"First month only; ongoing rate $210"},"fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"union-drop-in","name":"In-Studio Drop-In","accessScope":"One class at Yoga Flow Union Street","amount":35,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"union-five-pack","name":"5-Class Pack","amount":150,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"union-ten-pack","name":"10-Class Pack","amount":275,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"union-twenty-pack","name":"20-Class Pack","amount":500,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"union-one-month-nonrenewing","name":"One Month Union Street Studio — Does Not Renew","amount":240,"ordinaryUse":false,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41","observedAt":"2026-08-21"},
+          {"sourceProductId":"union-new-student-two-week","name":"New Student Two-Week Unlimited","amount":59,"ordinaryUse":false,"promotion":{"isPromotion":true,"label":"New-student introductory offer"},"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=5732276&stype=41","observedAt":"2026-08-21"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "mx3-mission-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "mx3-fitness",
+      "gymIds": ["osm-node-10054566861"],
+      "sharedFields": {
+        "monthlyPrice": 109,
+        "dayPassPrice": 30,
+        "activationFee": 75,
+        "priceSource": "MX3 Fitness official monthly signup and gym-credit pages",
+        "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Mission's cheapest normal-use plan is Open Gym Only at $109/month plus a mandatory $75 setup fee. Reservation tiers run from one to seven visits weekly at $129-$219/month, each with the same setup fee. A one-credit pass is $30; larger credit packs are retained as alternatives and do not expire.",
+        "planOffers": [
+          {"sourceProductId":"open-gym-only","name":"Open Gym Only","accessScope":"Ordinary open-gym access at MX3 Mission","scopeType":"single-location","amount":109,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"one-reservation-weekly","name":"1x/Week Reservation Plan","accessScope":"One reserved fitness-station visit per week","scopeType":"single-location","classAllowance":{"count":1,"period":"week"},"amount":129,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"three-reservations-weekly","name":"3x/Week Reservation Plan","accessScope":"Three reserved fitness-station visits per week","scopeType":"single-location","classAllowance":{"count":3,"period":"week"},"amount":159,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"five-reservations-weekly","name":"5x/Week Reservation Plan","accessScope":"Five reserved fitness-station visits per week","scopeType":"single-location","classAllowance":{"count":5,"period":"week"},"amount":189,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"seven-reservations-weekly","name":"7x/Week Reservation Plan","accessScope":"Seven reserved fitness-station visits per week","scopeType":"single-location","classAllowance":{"count":7,"period":"week"},"amount":219,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"one-credit","name":"1 Gym Credit","accessScope":"One visit at MX3 Mission or Castro","amount":30,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"},
+          {"sourceProductId":"five-credits","name":"5 Gym Credits","amount":140,"ordinaryUse":false,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"},
+          {"sourceProductId":"ten-credits","name":"10 Gym Credits","amount":260,"ordinaryUse":false,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"},
+          {"sourceProductId":"twenty-credits","name":"20 Gym Credits","amount":480,"ordinaryUse":false,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "mx3-castro-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "mx3-fitness",
+      "gymIds": ["osm-node-10198521798"],
+      "sharedFields": {
+        "monthlyPrice": 129,
+        "dayPassPrice": 30,
+        "activationFee": 75,
+        "priceSource": "MX3 Fitness official monthly signup and gym-credit pages",
+        "priceSourceUrl": "https://mx3fitness.com/monthly-signup",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Castro is reservation-based, so the cheapest normal-use plan is one reservation weekly at $129/month plus a mandatory $75 setup fee. Higher tiers run through seven visits weekly at $219/month. Open Gym Only does not apply to Castro. A one-credit pass is $30; larger credit packs are alternatives and do not expire.",
+        "planOffers": [
+          {"sourceProductId":"one-reservation-weekly","name":"1x/Week Reservation Plan","accessScope":"One reserved fitness-station visit per week at MX3 Castro","scopeType":"single-location","classAllowance":{"count":1,"period":"week"},"amount":129,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"three-reservations-weekly","name":"3x/Week Reservation Plan","accessScope":"Three reserved fitness-station visits per week at MX3 Castro","scopeType":"single-location","classAllowance":{"count":3,"period":"week"},"amount":159,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"five-reservations-weekly","name":"5x/Week Reservation Plan","accessScope":"Five reserved fitness-station visits per week at MX3 Castro","scopeType":"single-location","classAllowance":{"count":5,"period":"week"},"amount":189,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"seven-reservations-weekly","name":"7x/Week Reservation Plan","accessScope":"Seven reserved fitness-station visits per week at MX3 Castro","scopeType":"single-location","classAllowance":{"count":7,"period":"week"},"amount":219,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"activation","amount":75,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"one-credit","name":"1 Gym Credit","accessScope":"One visit at MX3 Mission or Castro","amount":30,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"},
+          {"sourceProductId":"five-credits","name":"5 Gym Credits","amount":140,"ordinaryUse":false,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"},
+          {"sourceProductId":"ten-credits","name":"10 Gym Credits","amount":260,"ordinaryUse":false,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"},
+          {"sourceProductId":"twenty-credits","name":"20 Gym Credits","amount":480,"ordinaryUse":false,"sourceUrl":"https://mx3fitness.com/gym-credits","observedAt":"2026-08-21"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "touchstone-dogpatch-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "touchstoneclimbing.com",
+      "gymIds": ["osm-node-4057014702"],
+      "sharedFields": {
+        "monthlyPrice": 112,
+        "dayPassPrice": 35,
+        "initiationFee": 100,
+        "priceSource": "Touchstone Climbing official Dogpatch Boulders membership and passes page",
+        "priceSourceUrl": "https://touchstoneclimbing.com/dogpatch-boulders/membership-and-passes/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Individual membership is $112/month plus a mandatory $100 initiation fee and includes reciprocal Touchstone gyms, fitness, and yoga. Family products use household pricing and a $150 initiation fee. The unrestricted day pass is $35; a $30 weekday-before-3pm pass and eligibility-restricted passes are retained but not selected.",
+        "planOffers": [
+          {"sourceProductId":"individual-membership","name":"Individual Membership","accessScope":"Unlimited reciprocal access to all Touchstone gyms plus fitness and yoga","scopeType":"multi-location","amount":112,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"initiation","amount":100,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"family-one-adult","name":"Family Membership — One Adult","accessScope":"Household family membership with one adult","scopeType":"multi-location","amount":112,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Family membership household rules apply"]},"fees":[{"type":"initiation","amount":150,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"family-two-adults","name":"Family Membership — Two Adults","accessScope":"Household family membership with two adults","scopeType":"multi-location","amount":214,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Family membership household rules apply"]},"fees":[{"type":"initiation","amount":150,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"one-month-membership","name":"One-Month Membership","accessScope":"Thirty days of Touchstone gym access","scopeType":"multi-location","amount":130,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"day-pass-standard","name":"Day Pass","accessScope":"One unrestricted visit","amount":35},
+          {"sourceProductId":"day-pass-weekday-before-three","name":"Weekday Day Pass Before 3 PM","amount":30,"ordinaryUse":false,"eligibility":{"type":"time-restricted","restrictions":["Valid weekdays before 3 PM excluding holidays"]}},
+          {"sourceProductId":"day-pass-child","name":"Child Day Pass","amount":30,"ordinaryUse":false,"eligibility":{"type":"youth","restrictions":["Child rate"]}},
+          {"sourceProductId":"atc-day-pass","name":"Access to Climbing Day Pass","amount":15,"ordinaryUse":false,"eligibility":{"type":"public-assistance","restrictions":["Eligibility documentation required"]}},
+          {"sourceProductId":"ten-visit-pass","name":"10-Visit Pass","amount":300,"ordinaryUse":false}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "touchstone-mission-cliffs-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "touchstoneclimbing.com",
+      "gymIds": ["osm-way-113283290"],
+      "sharedFields": {
+        "monthlyPrice": 112,
+        "dayPassPrice": 35,
+        "initiationFee": 100,
+        "priceSource": "Touchstone Climbing official Mission Cliffs membership and passes page",
+        "priceSourceUrl": "https://touchstoneclimbing.com/mission-cliffs/membership-and-passes/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Individual membership is $112/month plus a mandatory $100 initiation fee and includes reciprocal Touchstone gyms, fitness, and yoga. Family products use household pricing and a $150 initiation fee. The unrestricted day pass is $35; a $30 weekday-before-3pm pass and eligibility-restricted passes are retained but not selected.",
+        "planOffers": [
+          {"sourceProductId":"individual-membership","name":"Individual Membership","accessScope":"Unlimited reciprocal access to all Touchstone gyms plus fitness and yoga","scopeType":"multi-location","amount":112,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"initiation","amount":100,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"family-one-adult","name":"Family Membership — One Adult","accessScope":"Household family membership with one adult","scopeType":"multi-location","amount":112,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Family membership household rules apply"]},"fees":[{"type":"initiation","amount":150,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"family-two-adults","name":"Family Membership — Two Adults","accessScope":"Household family membership with two adults","scopeType":"multi-location","amount":214,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Family membership household rules apply"]},"fees":[{"type":"initiation","amount":150,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"one-month-membership","name":"One-Month Membership","accessScope":"Thirty days of Touchstone gym access","scopeType":"multi-location","amount":130,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"day-pass-standard","name":"Day Pass","accessScope":"One unrestricted visit","amount":35},
+          {"sourceProductId":"day-pass-weekday-before-three","name":"Weekday Day Pass Before 3 PM","amount":30,"ordinaryUse":false,"eligibility":{"type":"time-restricted","restrictions":["Valid weekdays before 3 PM excluding holidays"]}},
+          {"sourceProductId":"day-pass-child","name":"Child Day Pass","amount":30,"ordinaryUse":false,"eligibility":{"type":"youth","restrictions":["Child rate"]}},
+          {"sourceProductId":"atc-day-pass","name":"Access to Climbing Day Pass","amount":15,"ordinaryUse":false,"eligibility":{"type":"public-assistance","restrictions":["Eligibility documentation required"]}},
+          {"sourceProductId":"ten-visit-pass","name":"10-Visit Pass","amount":300,"ordinaryUse":false}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "f45-city-center-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "f45",
+      "gymIds": ["web-d366aaf6dd2658"],
+      "sharedFields": {
+        "monthlyPrice": 335.83,
+        "dayPassPrice": 38,
+        "billingInterval": "2 weeks",
+        "billingIntervalPrice": 155,
+        "priceSource": "F45 Training City Center SF official Product offer graph",
+        "priceSourceUrl": "https://f45training.com/studio/citycentersf/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The only current recurring plan is unlimited at $155 every two weeks with a six-week minimum, normalized to $335.83 per calendar month. The standard drop-in is $38. Class packs, a local-resident trial, and an event-specific PEAK500 entry are retained as nonselected alternatives; no mandatory fee is disclosed.",
+        "planOffers": [{"sourceProductId":"unlimited-biweekly","name":"Unlimited Membership","accessScope":"Unlimited classes at F45 City Center SF","scopeType":"single-location","classAllowance":"unlimited","amount":155,"billingInterval":"2 weeks","commitmentType":"minimum-term","minimumCommitmentDays":42,"fees":[]}],
+        "dropInOffers": [
+          {"sourceProductId":"drop-in","name":"Drop In","amount":38},
+          {"sourceProductId":"ten-class-pack","name":"10 Classes","amount":340,"ordinaryUse":false},
+          {"sourceProductId":"twenty-class-pack","name":"20 Classes","amount":640,"ordinaryUse":false},
+          {"sourceProductId":"three-day-trial","name":"3 Day Trial","amount":25,"ordinaryUse":false,"promotion":{"isPromotion":true,"label":"Local-resident introductory trial"},"eligibility":{"type":"resident","restrictions":["Local residents only"]}},
+          {"sourceProductId":"peak500-drop-in","name":"PEAK500 Drop In","amount":35,"ordinaryUse":false,"eligibility":{"type":"event-specific","restrictions":["PEAK500 event only"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "f45-north-beach-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "f45",
+      "gymIds": ["osm-node-9966877631"],
+      "sharedFields": {
+        "monthlyPrice": 335.83,
+        "dayPassPrice": 38,
+        "billingInterval": "2 weeks",
+        "billingIntervalPrice": 155,
+        "priceSource": "F45 Training North Beach official Product offer graph",
+        "priceSourceUrl": "https://f45training.com/studio/northbeach/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The only current recurring plan is unlimited at $155 every two weeks with a six-week minimum, normalized to $335.83 per calendar month. The standard drop-in is $38. Class packs, a local-resident trial, and an event-specific PEAK500 entry are retained as nonselected alternatives; no mandatory fee is disclosed.",
+        "planOffers": [{"sourceProductId":"unlimited-biweekly","name":"Unlimited Membership","accessScope":"Unlimited classes at F45 North Beach","scopeType":"single-location","classAllowance":"unlimited","amount":155,"billingInterval":"2 weeks","commitmentType":"minimum-term","minimumCommitmentDays":42,"fees":[]}],
+        "dropInOffers": [
+          {"sourceProductId":"drop-in","name":"Drop In","amount":38},
+          {"sourceProductId":"ten-class-pack","name":"10 Classes","amount":340,"ordinaryUse":false},
+          {"sourceProductId":"twenty-class-pack","name":"20 Classes","amount":640,"ordinaryUse":false},
+          {"sourceProductId":"three-day-trial","name":"3 Day Trial","amount":25,"ordinaryUse":false,"promotion":{"isPromotion":true,"label":"Local-resident introductory trial"},"eligibility":{"type":"resident","restrictions":["Local residents only"]}},
+          {"sourceProductId":"peak500-drop-in","name":"PEAK500 Drop In","amount":35,"ordinaryUse":false,"eligibility":{"type":"event-specific","restrictions":["PEAK500 event only"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "f45-transbay-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "f45",
+      "gymIds": ["web-388dac8833bafb"],
+      "sharedFields": {
+        "monthlyPrice": 335.83,
+        "dayPassPrice": 38,
+        "billingInterval": "2 weeks",
+        "billingIntervalPrice": 155,
+        "priceSource": "F45 Training Transbay official Product offer graph",
+        "priceSourceUrl": "https://f45training.com/studio/transbay/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The current recurring plan is unlimited at $155 every two weeks with a six-week minimum, normalized to $335.83 per calendar month. The standard drop-in is $38. Transbay also publishes class packs and nonrecurring three-, six-, and twelve-month passes. The local-resident trial and PEAK500 entry are nonselected; no mandatory fee is disclosed.",
+        "planOffers": [
+          {"sourceProductId":"unlimited-biweekly","name":"Unlimited Membership","accessScope":"Unlimited classes at F45 Transbay","scopeType":"single-location","classAllowance":"unlimited","amount":155,"billingInterval":"2 weeks","commitmentType":"minimum-term","minimumCommitmentDays":42,"fees":[]},
+          {"sourceProductId":"three-month-pass","name":"3 Month Pass","accessScope":"Three months of access at F45 Transbay","scopeType":"single-location","classAllowance":"unlimited","amount":929,"billingInterval":"one-time","commitmentType":"prepaid","minimumCommitmentMonths":3,"fees":[]},
+          {"sourceProductId":"six-month-pass","name":"6 Month Pass","accessScope":"Six months of access at F45 Transbay","scopeType":"single-location","classAllowance":"unlimited","amount":1858,"billingInterval":"one-time","commitmentType":"prepaid","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"annual-pass","name":"Annual Pass","accessScope":"Twelve months of access at F45 Transbay","scopeType":"single-location","classAllowance":"unlimited","amount":3716,"billingInterval":"one-time","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"drop-in","name":"Drop In","amount":38},
+          {"sourceProductId":"gnc-five-class-pack","name":"GNC 5 Class Pack","amount":185,"ordinaryUse":false},
+          {"sourceProductId":"five-class-pack","name":"5 Classes","amount":185,"ordinaryUse":false},
+          {"sourceProductId":"ten-class-pack","name":"10 Classes","amount":340,"ordinaryUse":false},
+          {"sourceProductId":"twenty-class-pack","name":"20 Classes","amount":640,"ordinaryUse":false},
+          {"sourceProductId":"three-day-trial","name":"3 Day Trial","amount":25,"ordinaryUse":false,"promotion":{"isPromotion":true,"label":"Local-resident introductory trial"},"eligibility":{"type":"resident","restrictions":["Local residents only"]}},
+          {"sourceProductId":"peak500-drop-in","name":"PEAK500 Drop In","amount":35,"ordinaryUse":false,"eligibility":{"type":"event-specific","restrictions":["PEAK500 event only"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "24-hour-ocean-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["osm-node-8641835222"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Ocean official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/ocean-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Ocean: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives. Yearly prepaid and 12-month Platinum variants are retained but do not displace Silver.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Ocean","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":38.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":38.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":53.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":53.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":60.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":411.52,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":411.52,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":537.52,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":537.52,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "24-hour-potrero-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["web-4aaec1680acf72"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Potrero official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/potrero-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Potrero: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives. Yearly prepaid and 12-month Platinum variants are retained but do not displace Silver.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Potrero","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":34.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":34.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":49.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":49.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":56.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":299.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":299.88,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":347.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":347.88,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "24-hour-sutter-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["web-8891970863af87"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Sutter-Montgomery official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/sutter-montgomery-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Sutter-Montgomery: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives. Yearly prepaid and 12-month Platinum variants are retained but do not displace Silver.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Sutter-Montgomery","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":34.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":34.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":49.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":49.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":56.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":299.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":299.88,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":347.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":347.88,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "24-hour-van-ness-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "24-hour-fitness",
+      "gymIds": ["osm-node-417957202"],
+      "sharedFields": {
+        "monthlyPrice": 29.99,
+        "priceSource": "24 Hour Fitness Van Ness official location and public membership checkout",
+        "priceSourceUrl": "https://www.24hourfitness.com/gyms/san-francisco-ca/van-ness-sport",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Silver is the cheapest current no-commitment plan permitting ordinary cardio and weights access at Van Ness: $29.99/month plus a mandatory $69.99 annual fee and $29.99 last-month dues paid upfront. This replaces the stale $44.99 selected price. Platinum and Gold currently carry explicit $10-off labels and remain promotional alternatives.",
+        "planOffers": [
+          {"sourceProductId":"silver-monthly-no-commitment","name":"Silver Monthly","accessScope":"One-club cardio and weights access at Van Ness","scopeType":"single-location","amount":29.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":29.99,"currency":"USD"}]},
+          {"sourceProductId":"gold-monthly-no-commitment","name":"Northern California Gold Monthly","accessScope":"Northern California regional access with classes and amenities","scopeType":"multi-location","amount":34.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":34.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-no-commitment","name":"Platinum Monthly","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":49.99,"billingInterval":"month","commitmentType":"month-to-month","promotion":{"isPromotion":true,"label":"$10 off ongoing monthly dues"},"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"last-month-dues","amount":49.99,"currency":"USD"}]},
+          {"sourceProductId":"platinum-monthly-12-month","name":"Platinum Monthly — 12-Month Commitment","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":56.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"national-yearly-auto-renewal","name":"National Yearly Auto-Renewal","accessScope":"National access with classes and amenities","scopeType":"multi-location","amount":299.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":299.88,"currency":"USD"}]},
+          {"sourceProductId":"platinum-yearly-auto-renewal","name":"Platinum Yearly Auto-Renewal","accessScope":"National access with premium amenities and a buddy pass","scopeType":"multi-location","amount":347.88,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"annual","amount":69.99,"currency":"USD","cadence":"yearly","mandatory":true}],"upfrontDues":[{"type":"prepaid-dues","amount":347.88,"currency":"USD"}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-beale-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["web-e71c82ac2eb475"],
+      "sharedFields": {
+        "monthlyPrice": 242,
+        "priceSource": "Equinox Beale Street official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/bealest",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Beale Street use at $242/month. All-Access, Destination, and Destination West are retained as progressively broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Beale Street","scopeType":"single-location","amount":242,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-pine-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["web-678cd02ed5fd30"],
+      "sharedFields": {
+        "monthlyPrice": 297,
+        "priceSource": "Equinox Pine Street official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/pinest",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Pine Street use at $297/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Pine Street","scopeType":"single-location","amount":297,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-sports-club-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["osm-node-6848648284"],
+      "sharedFields": {
+        "monthlyPrice": 370,
+        "priceSource": "Equinox Sports Club San Francisco official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/sportsclubsanfrancisco",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Sports Club San Francisco requires Destination access; the cheapest current public option is $370/month. Destination West at $410/month adds the flagship West Coast clubs. No Select or All-Access card, mandatory fee, public day pass, or commitment term is disclosed on this club page.",
+        "planOffers": [
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-union-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["web-8a074bb0e133c0"],
+      "sharedFields": {
+        "monthlyPrice": 310,
+        "priceSource": "Equinox Union Street official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/unionstreet",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Union Street use at $310/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Union Street","scopeType":"single-location","amount":310,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "equinox-van-mission-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "equinox",
+      "gymIds": ["osm-node-10069564222"],
+      "sharedFields": {
+        "monthlyPrice": 280,
+        "priceSource": "Equinox Van Mission official club membership cards",
+        "priceSourceUrl": "https://www.equinox.com/clubs/northern-california/vanmission",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Select is the cheapest current public membership permitting ordinary Van Mission use at $280/month. All-Access, Destination, and Destination West are retained as broader alternatives. The operator labels All-Access Most Popular. No mandatory fee, public day pass, or commitment term is disclosed on the club cards.",
+        "planOffers": [
+          {"sourceProductId":"15","name":"Select","accessScope":"One-club access at Equinox Van Mission","scopeType":"single-location","amount":280,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2931","name":"All-Access","accessScope":"Access to 90+ Equinox clubs across North America","scopeType":"multi-location","amount":350,"billingInterval":"month","commitmentType":"unknown","fees":[],"bestValueLabel":true},
+          {"sourceProductId":"2735","name":"Destination","accessScope":"Access to 110+ Equinox clubs globally including Sports Club locations","scopeType":"multi-location","amount":370,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"2737","name":"Destination West","accessScope":"Destination access plus Equinox Century City and Santa Monica East","scopeType":"multi-location","amount":410,"billingInterval":"month","commitmentType":"unknown","fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "planet-fitness-lakeshore-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "planet-fitness",
+      "gymIds": ["web-859ef7f95053f4"],
+      "sharedFields": {
+        "monthlyPrice": 15,
+        "priceSource": "Planet Fitness Lakeshore official location membership cards",
+        "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-lakeshore-ca",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Classic is the cheapest standard no-commitment plan at $15/month with a plan-linked $49 startup fee and $49 annual fee. PF Black Card is $24.99/month with a $1 startup fee, $49 annual fee, worldwide club access, guest privileges, and the operator's Best Value label. Both current offer disclosures run through August 30; no ordinary paid day pass is published.",
+        "planOffers": [
+          {"sourceProductId":"pfx:offers:eb6c8771-8c4b-11f1-8cdc-623b4c39050c","name":"Classic","accessScope":"Unlimited access to the Lakeshore home club","scopeType":"single-location","amount":15,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":49,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"pfx:offers:7aaf7c8f-8c4c-11f1-8cdc-623b4c39050c","name":"PF Black Card","accessScope":"Any Planet Fitness club worldwide plus guest and Black Card spa benefits","scopeType":"multi-location","amount":24.99,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}],"bestValueLabel":true}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "planet-fitness-kearny-presale-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "planet-fitness",
+      "gymIds": ["web-bbf32ec975a42d"],
+      "sharedFields": {
+        "monthlyPrice": null,
+        "priceSource": "Planet Fitness San Francisco Kearny relocation official presale membership cards",
+        "priceSourceUrl": "https://www.planetfitness.com/gyms/san-francisco-ca-relocation",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The Kearny relocation is still coming soon and publishes only a pre-grand-opening sale through August 30. Classic is $15/month with a $1 startup fee, $49 annual fee, and 12-month commitment; PF Black Card is $24.99/month with a $0 startup fee, $49 annual fee, and no commitment. Both are retained as presale deals, not selected as the neutral ongoing plan for an unopened location.",
+        "planOffers": [
+          {"sourceProductId":"pfx:offers:658c81ff-7fae-11f1-a4ea-86ac2a50dfc9","name":"Classic — Pre-Grand-Opening Sale","accessScope":"Future unlimited access to the Kearny home club; temporary area-club access before opening","scopeType":"single-location","amount":15,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"availability":"presale","promotion":{"isPromotion":true,"label":"Pre-grand-opening sale","expiresAt":"2026-08-30"},"fees":[{"type":"enrollment","amount":1,"currency":"USD","cadence":"one-time","mandatory":true},{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}]},
+          {"sourceProductId":"pfx:offers:eb6696a9-7fab-11f1-84fa-aafb02b39358","name":"PF Black Card — Pre-Grand-Opening Sale","accessScope":"Any Planet Fitness club worldwide plus future Kearny home-club and Black Card benefits","scopeType":"multi-location","amount":24.99,"billingInterval":"month","commitmentType":"month-to-month","availability":"presale","promotion":{"isPromotion":true,"label":"Pre-grand-opening sale","expiresAt":"2026-08-30"},"fees":[{"type":"annual","amount":49,"currency":"USD","cadence":"yearly","mandatory":true}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "ucsf-bakar-public-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "campuslifeserviceshome.ucsf.edu",
+      "gymIds": ["osm-node-996696401"],
+      "sharedFields": {
+        "monthlyPrice": 144,
+        "dayPassPrice": 30,
+        "enrollmentFee": 200,
+        "priceSource": "UCSF membership page and operator-linked ABC Fitness public plan APIs",
+        "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Bakar General Public is $144/month for Mission Bay; Dual Site General Public is $170/month. The regular enrollment fee is $200. ABC's public checkout currently applies the operator's temporary 50%-off enrollment promotion through August 31, but the ordinary plan retains the regular fee. Senior and UCSF-affiliate alternatives are eligibility restricted. The ordinary adult day pass is $30; the $15 hosted visit requires a member.",
+        "planOffers": [
+          {"sourceProductId":"8b2886ae23a3495aa48b44e11dd6ac52","name":"Bakar General Public Membership","accessScope":"Bakar Fitness Center at Mission Bay","scopeType":"single-location","amount":144,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"ed141d9d2ab64783b10d1fd5cedf690f","name":"Dual Site General Public Membership","accessScope":"Bakar Mission Bay and Millberry Parnassus","scopeType":"multi-location","amount":170,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"3dea714b92554e319579eda0fb9453a2","name":"UCSF Affiliates","accessScope":"Bakar Mission Bay and Millberry Parnassus","scopeType":"multi-location","amount":95,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"employer","restrictions":["UCSF faculty, staff, residents, fellows, or postdocs","UCSF email required"]},"fees":[]},
+          {"sourceProductId":"d2ba1f48cf1443ad8bf74cee2e613d98","name":"Bakar Senior Membership","accessScope":"Bakar Fitness Center at Mission Bay","scopeType":"single-location","amount":110,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"age-restricted","restrictions":["Age 65+"]},"fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"57803960596f4276b62fbcaacf141349","name":"Dual Site Senior Membership","accessScope":"Bakar Mission Bay and Millberry Parnassus","scopeType":"multi-location","amount":130,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"age-restricted","restrictions":["Age 65+"]},"fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"adult-day-pass","name":"Adult Day Pass","accessScope":"One unrestricted facility visit","amount":30},
+          {"sourceProductId":"member-hosted-day-pass","name":"Member-Hosted Day Pass","amount":15,"ordinaryUse":false,"eligibility":{"type":"member-hosted","restrictions":["Must visit with a member"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "ucsf-millberry-public-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "campuslifeserviceshome.ucsf.edu",
+      "gymIds": ["web-4289bb94baeda1"],
+      "sharedFields": {
+        "monthlyPrice": 129,
+        "dayPassPrice": 30,
+        "enrollmentFee": 200,
+        "priceSource": "UCSF membership page and operator-linked ABC Fitness public plan APIs",
+        "priceSourceUrl": "https://campuslifeserviceshome.ucsf.edu/fitnessrecreation/membership",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Millberry General Public is $129/month for Parnassus; Dual Site General Public is $170/month. The regular enrollment fee is $200. ABC's public checkout currently applies the operator's temporary 50%-off enrollment promotion through August 31, but the ordinary plan retains the regular fee. Senior and UCSF-affiliate alternatives are eligibility restricted. The ordinary adult day pass is $30; the $15 hosted visit requires a member.",
+        "planOffers": [
+          {"sourceProductId":"ba5aaedde74d48bda22e0de78ab24bc6","name":"Millberry General Public Membership","accessScope":"Millberry Fitness Center at Parnassus","scopeType":"single-location","amount":129,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"ed141d9d2ab64783b10d1fd5cedf690f","name":"Dual Site General Public Membership","accessScope":"Bakar Mission Bay and Millberry Parnassus","scopeType":"multi-location","amount":170,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"3dea714b92554e319579eda0fb9453a2","name":"UCSF Affiliates","accessScope":"Bakar Mission Bay and Millberry Parnassus","scopeType":"multi-location","amount":95,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"employer","restrictions":["UCSF faculty, staff, residents, fellows, or postdocs","UCSF email required"]},"fees":[]},
+          {"sourceProductId":"0fecaf2095da45079bdabe75f51f3f61","name":"Millberry Senior Membership","accessScope":"Millberry Fitness Center at Parnassus","scopeType":"single-location","amount":101,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"age-restricted","restrictions":["Age 65+"]},"fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"57803960596f4276b62fbcaacf141349","name":"Dual Site Senior Membership","accessScope":"Bakar Mission Bay and Millberry Parnassus","scopeType":"multi-location","amount":130,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"age-restricted","restrictions":["Age 65+"]},"fees":[{"type":"enrollment","amount":200,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"adult-day-pass","name":"Adult Day Pass","accessScope":"One unrestricted facility visit","amount":30},
+          {"sourceProductId":"member-hosted-day-pass","name":"Member-Hosted Day Pass","amount":15,"ordinaryUse":false,"eligibility":{"type":"member-hosted","restrictions":["Must visit with a member"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "city-crossfit-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "thecitycrossfit.com",
+      "gymIds": ["osm-node-13905876759"],
+      "sharedFields": {
+        "monthlyPrice": 250,
+        "dayPassPrice": 35,
+        "priceSource": "City CrossFit official memberships page",
+        "priceSourceUrl": "https://www.thecitycrossfit.com/memberships",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The smallest recurring plan is 12 classes per month for $250; unlimited is $275 month-to-month. A drop-in is $35 and the 10-class pack is $275. The required $275 three-session introduction is onboarding, not ordinary access.",
+        "planOffers": [
+          {"sourceProductId":"twelve-per-month","name":"12 Classes per Month","accessScope":"12 coached CrossFit classes monthly","classAllowance":{"count":12,"period":"month"},"amount":250,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"unlimited-monthly","name":"Unlimited Monthly","accessScope":"Unlimited coached CrossFit classes","classAllowance":{"unlimited":true,"period":"month"},"amount":275,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"ten-class-pack","name":"10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":275,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"intro-series","name":"Required 3-Session Intro Series","productType":"onboarding","classAllowance":{"count":3,"period":"purchase"},"amount":275,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"onboarding","restrictions":["Required for new CrossFitters; not ordinary recurring access"]},"fees":[]}
+        ],
+        "dropInOffers": [{"sourceProductId":"drop-in","name":"Drop-In Class","amount":35}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "forge-krav-maga-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "forgekravmaga.com",
+      "gymIds": ["web-06bc58a9a5ca84"],
+      "sharedFields": {
+        "monthlyPrice": 200,
+        "dayPassPrice": 40,
+        "priceSource": "Forge Krav Maga official pricing page",
+        "priceSourceUrl": "https://www.forgekravmaga.com/pricing",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The public monthly membership is $200 with unlimited Forge programs and no enrollment fee. Annual prepay is $2,160, a 10-class pack is $375, and the ordinary drop-in day pass is $40. The two-class $30 trial is promotional.",
+        "planOffers": [
+          {"sourceProductId":"monthly-membership","name":"Monthly Membership","accessScope":"Unlimited Krav Maga, kickboxing, boxing, BJJ fundamentals, Kali, and open mat","classAllowance":{"unlimited":true,"period":"month"},"amount":200,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"annual-membership","name":"Annual Membership","accessScope":"Unlimited Forge programs","classAllowance":{"unlimited":true,"period":"year"},"amount":2160,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[]},
+          {"sourceProductId":"ten-class-pack","name":"10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":375,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"two-trial-classes","name":"Two Trial Classes","productType":"class-pack","classAllowance":{"count":2,"period":"purchase"},"amount":30,"billingInterval":"one-time","commitmentType":"none","promotion":{"isPromotion":true,"label":"New-student trial"},"fees":[]}
+        ],
+        "dropInOffers": [{"sourceProductId":"drop-in-day-pass","name":"Drop-In Day Pass","amount":40}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "funky-door-sf-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "funkydoor.com",
+      "gymIds": ["web-a3d8ded3014a16"],
+      "sharedFields": {
+        "monthlyPrice": 129,
+        "dayPassPrice": 36,
+        "enrollmentFee": 49,
+        "priceSource": "Funky Door official San Francisco pricing page",
+        "priceSourceUrl": "https://www.funkydoor.com/san-francisco-pricing",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The San Francisco studio's current Auto Monthly plan is $129 for unlimited classes plus a $49 one-time signup fee and is labeled Most Popular. All Access with livestream is $175/month; online-only is not eligible for location selection. The ordinary drop-in is $36. Packs, prepaid passes, local-intro, and visitor products are retained separately.",
+        "planOffers": [
+          {"sourceProductId":"studio-auto-monthly","name":"Studio Membership — Auto Monthly","accessScope":"Unlimited San Francisco studio classes","scopeType":"single-location","classAllowance":{"unlimited":true,"period":"month"},"amount":129,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":49,"currency":"USD","cadence":"one-time","mandatory":true}],"bestValueLabel":true},
+          {"sourceProductId":"all-access-monthly","name":"All Access In-Person and At Home","accessScope":"Unlimited San Francisco studio and livestream classes","scopeType":"single-location","classAllowance":{"unlimited":true,"period":"month"},"amount":175,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"enrollment","amount":49,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"at-home-only","name":"At Home Livestream Only","accessScope":"Livestream classes only","amount":79,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"online-only","restrictions":["Does not permit in-person use of the named location"]},"fees":[]},
+          {"sourceProductId":"ten-class-pack","name":"10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":260,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"twenty-four-class-pack","name":"24 Class Pack","productType":"class-pack","classAllowance":{"count":24,"period":"purchase"},"amount":495,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"forty-eight-class-pack","name":"48 Class Pack","productType":"class-pack","classAllowance":{"count":48,"period":"purchase"},"amount":890,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"one-month-unlimited","name":"One-Month Unlimited Pass","productType":"class-pack","classAllowance":{"unlimited":true,"period":"30 days"},"amount":219,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"annual-prepaid","name":"Annual Unlimited Membership","classAllowance":{"unlimited":true,"period":"year"},"amount":1199,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[]},
+          {"sourceProductId":"new-student-two-month","name":"New Student Two-Month Unlimited","productType":"class-pack","classAllowance":{"unlimited":true,"period":"2 months"},"amount":129,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"local-new-student","restrictions":["First-time student","Bay Area resident with local ID"]},"promotion":{"isPromotion":true,"label":"Local new-student offer"},"fees":[]},
+          {"sourceProductId":"visitor-seven-day","name":"Visitor Seven-Day Unlimited","productType":"class-pack","classAllowance":{"unlimited":true,"period":"7 days"},"amount":95,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"visitor","restrictions":["Out-of-town visitors only"]},"fees":[]}
+        ],
+        "dropInOffers": [{"sourceProductId":"drop-in","name":"Drop-In Class","amount":36}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "studio-live-better-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "studiobylivebetter.com",
+      "gymIds": ["web-0c3933dd5d019f"],
+      "sharedFields": {
+        "monthlyPrice": 150,
+        "dayPassPrice": 30,
+        "priceSource": "Studio By Live Better official pricing page",
+        "priceSourceUrl": "https://www.studiobylivebetter.com/pricing",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Yoga and Pilates each have a $150 month-to-month unlimited membership; All Access is $210. The ordinary yoga drop-in is $30, while Pilates, cardio dance, and specialty meditation are $35. Class packs and introductory passes are retained separately.",
+        "planOffers": [
+          {"sourceProductId":"yoga-membership","name":"Yoga Membership","accessScope":"Unlimited yoga classes","classAllowance":{"unlimited":true,"period":"month"},"amount":150,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"pilates-membership","name":"Pilates Membership","accessScope":"Unlimited mat Pilates classes","classAllowance":{"unlimited":true,"period":"month"},"amount":150,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"all-access-membership","name":"All Access Membership","accessScope":"Unlimited yoga, meditation, movement, sound-bath, and mat Pilates classes","classAllowance":{"unlimited":true,"period":"month"},"amount":210,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"yoga-four-pack","name":"Yoga 4 Class Pack","productType":"class-pack","classAllowance":{"count":4,"period":"purchase"},"amount":116,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"yoga-five-pack","name":"Yoga 5 Class Pack","productType":"class-pack","classAllowance":{"count":5,"period":"purchase"},"amount":140,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"yoga-ten-pack","name":"Yoga 10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":270,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"all-access-four-pack","name":"All Access 4 Class Pack","productType":"class-pack","classAllowance":{"count":4,"period":"purchase"},"amount":132,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"all-access-five-pack","name":"All Access 5 Class Pack","productType":"class-pack","classAllowance":{"count":5,"period":"purchase"},"amount":160,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"all-access-ten-pack","name":"All Access 10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":310,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"yoga-drop-in","name":"Yoga Class Drop-In","amount":30},
+          {"sourceProductId":"pilates-drop-in","name":"Mat Pilates Drop-In","amount":35,"ordinaryUse":false},
+          {"sourceProductId":"meditation-drop-in","name":"Specialty Meditation Drop-In","amount":35,"ordinaryUse":false},
+          {"sourceProductId":"dance-drop-in","name":"Cardio Dance Drop-In","amount":35,"ordinaryUse":false}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "sunset-gym-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "sunset gym",
+      "gymIds": ["osm-node-3674255652"],
+      "sharedFields": {
+        "monthlyPrice": 74.99,
+        "dayPassPrice": 20,
+        "priceSource": "Sunset Gym official membership page",
+        "priceSourceUrl": "https://sunsetgym.com/memberships/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The standard recurring membership is $74.99/month with a six-month commitment and no enrollment fee. Student, teacher, and age-55+ members may qualify for $69.99; the couples rate is $140. The ordinary day pass is $20.",
+        "planOffers": [
+          {"sourceProductId":"standard-six-month","name":"Standard Monthly Membership","accessScope":"All-access gym membership with towel service","amount":74.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"discount-six-month","name":"Discount Monthly Membership","accessScope":"All-access gym membership with towel service","amount":69.99,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"eligibility":{"type":"eligibility-discount","restrictions":["Student, teacher, or age 55+ proof required"]},"fees":[]},
+          {"sourceProductId":"couples-six-month","name":"Couples Monthly Membership","accessScope":"Two-person gym membership","amount":140,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"eligibility":{"type":"household","restrictions":["Couples membership"]},"fees":[]}
+        ],
+        "dropInOffers": [{"sourceProductId":"day-pass","name":"Day Pass","amount":20}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "movement-sf-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "movementgyms.com",
+      "gymIds": ["osm-way-24334661"],
+      "sharedFields": {
+        "monthlyPrice": 115,
+        "dayPassPrice": 33,
+        "initiationFee": 59,
+        "priceSource": "Movement official San Francisco page and operator-owned Redpoint storefront",
+        "priceSourceUrl": "https://portal.movementgyms.com/san-francisco/memberships/monthly-membership",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The standard individual membership is $115/month plus a $59 initiation fee and includes all Movement locations, climbing, yoga, and fitness. Student is $99 with proof; a two-adult household is $214. Annual prepay is $1,265, a 30-day membership is $139, and the seven-visit San Francisco/Belmont pass is $210. The ordinary day pass is $33.",
+        "planOffers": [
+          {"sourceProductId":"monthly-primary","name":"Monthly Recurring Membership — Primary Member","accessScope":"All Movement locations with unlimited climbing, yoga, and fitness","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":115,"billingInterval":"month","commitmentType":"month-to-month","fees":[{"type":"initiation","amount":59,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"monthly-household-two-adults","name":"Monthly Household — Two Adults","accessScope":"All Movement locations for two household adults","scopeType":"multi-location","amount":214,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Two household adults"]},"fees":[{"type":"initiation","amount":59,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"monthly-student","name":"Monthly Student Membership","accessScope":"All Movement locations","scopeType":"multi-location","amount":99,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"student","restrictions":["Student eligibility required"]},"fees":[{"type":"initiation","amount":59,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"annual-prepaid-individual","name":"Annual Prepaid Individual Membership","accessScope":"All Movement locations","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"year"},"amount":1265,"billingInterval":"year","commitmentType":"prepaid","minimumCommitmentMonths":12,"fees":[{"type":"initiation","amount":59,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"thirty-day-individual","name":"30-Day Short-Term Membership","productType":"class-pack","accessScope":"All Movement locations for 30 days","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"30 days"},"amount":139,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"sfo-bel-seven-visit","name":"San Francisco / Belmont 7 Visit Pass","productType":"class-pack","accessScope":"Seven shareable visits at San Francisco or Belmont","scopeType":"multi-location","classAllowance":{"count":7,"period":"purchase"},"amount":210,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"adult-day-pass","name":"Adult Day Pass","amount":33},
+          {"sourceProductId":"student-day-pass","name":"Student Day Pass","amount":29,"ordinaryUse":false,"eligibility":{"type":"student","restrictions":["Student ID","Weekdays before 5 PM"]}},
+          {"sourceProductId":"child-day-pass","name":"Child Day Pass","amount":24,"ordinaryUse":false,"eligibility":{"type":"youth","restrictions":["Under age 13"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "yoga-mayu-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "yoga mayu",
+      "gymIds": ["osm-node-4395534973"],
+      "sharedFields": {
+        "monthlyPrice": 195,
+        "dayPassPrice": 28,
+        "priceSource": "Yoga Mayu official pricing page",
+        "priceSourceUrl": "https://www.yogamayu.com/pricing",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The unlimited monthly auto-renewal is $195 with a two-month minimum and one-class-per-day limit. A nonrecurring 30-day unlimited pass is $205. The ordinary drop-in is $28; 5-, 10-, and 20-class passes and the new-student special are retained separately.",
+        "planOffers": [
+          {"sourceProductId":"monthly-auto-renewal","name":"Unlimited Monthly Auto Renewal","accessScope":"One class per day","classAllowance":{"unlimited":true,"period":"month"},"amount":195,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":2,"fees":[]},
+          {"sourceProductId":"thirty-day-unlimited","name":"30-Day Unlimited Pass","productType":"class-pack","classAllowance":{"unlimited":true,"period":"30 days"},"amount":205,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"five-class-pass","name":"5 In-Studio Classes","productType":"class-pack","classAllowance":{"count":5,"period":"purchase"},"amount":125,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"ten-class-pass","name":"10 In-Studio Classes","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":235,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"twenty-class-pass","name":"20 In-Studio Classes","productType":"class-pack","classAllowance":{"count":20,"period":"purchase"},"amount":420,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"new-student-three","name":"New Student 3-Class Special","productType":"class-pack","classAllowance":{"count":3,"period":"purchase"},"amount":60,"billingInterval":"one-time","commitmentType":"none","promotion":{"isPromotion":true,"label":"First-time-student offer"},"fees":[]}
+        ],
+        "dropInOffers": [{"sourceProductId":"drop-in","name":"Drop-In Class","amount":28}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "soluna-yoga-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "solunayogaandwellness.com",
+      "gymIds": ["osm-node-6493825931"],
+      "sharedFields": {
+        "monthlyPrice": 100,
+        "dayPassPrice": 35,
+        "priceSource": "Soluna Yoga and Wellness official membership page",
+        "priceSourceUrl": "https://www.solunayogaandwellness.com/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Basic is $100 for five classes per month, Standard is $160 for nine, and Unlimited is $189; all memberships have a three-month commitment. The ordinary drop-in is $35. Four- and eight-class packs and the three-class intro special are retained separately.",
+        "planOffers": [
+          {"sourceProductId":"basic-five","name":"Basic Membership","classAllowance":{"count":5,"period":"month"},"amount":100,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":3,"fees":[]},
+          {"sourceProductId":"standard-nine","name":"Standard Membership","classAllowance":{"count":9,"period":"month"},"amount":160,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":3,"fees":[]},
+          {"sourceProductId":"unlimited","name":"Unlimited Membership","classAllowance":{"unlimited":true,"period":"month"},"amount":189,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":3,"fees":[]},
+          {"sourceProductId":"four-class-pack","name":"4 Class Pack","productType":"class-pack","classAllowance":{"count":4,"period":"purchase"},"amount":100,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"eight-class-pack","name":"8 Class Pack","productType":"class-pack","classAllowance":{"count":8,"period":"purchase"},"amount":160,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"intro-three","name":"Intro 3-Class Special","productType":"class-pack","classAllowance":{"count":3,"period":"purchase"},"amount":30,"billingInterval":"one-time","commitmentType":"none","promotion":{"isPromotion":true,"label":"Introductory offer"},"fees":[]}
+        ],
+        "dropInOffers": [{"sourceProductId":"drop-in","name":"Single Drop-In Class","amount":35}],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "lotusland-yoga-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "lotusland-yoga",
+      "gymIds": ["osm-node-2666409791"],
+      "sharedFields": {
+        "monthlyPrice": 135,
+        "dayPassPrice": 18,
+        "priceSource": "Lotusland Yoga official Prices & Policies page",
+        "priceSourceUrl": "https://lotuslandyogasf.com/pricespolicies/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The unlimited auto-renewing membership is explicitly sliding scale at $135–$175; the compatibility price retains the publicly available $135 lower endpoint and the full range remains in the plan name and cost context. The one-month unlimited pass is $175, three months is $450, and packs are $122/5 and $220/10. Ordinary classes remain sliding scale; the existing $18–$38 official drop-in observation is retained.",
+        "planOffers": [
+          {"sourceProductId":"sliding-scale-monthly","name":"Unlimited Monthly Sliding-Scale Membership ($135–$175)","accessScope":"Unlimited in-person, virtual, and recorded classes","classAllowance":{"unlimited":true,"period":"month"},"amount":135,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"sliding-scale","restrictions":["Member selects an amount from $135 to $175"]},"fees":[]},
+          {"sourceProductId":"one-month-unlimited","name":"One-Month Unlimited Pass","productType":"class-pack","classAllowance":{"unlimited":true,"period":"month"},"amount":175,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"three-month-unlimited","name":"Three-Month Unlimited Pass","productType":"class-pack","classAllowance":{"unlimited":true,"period":"3 months"},"amount":450,"billingInterval":"one-time","commitmentType":"prepaid","minimumCommitmentMonths":3,"fees":[]},
+          {"sourceProductId":"five-class-pack","name":"5 Class Package","productType":"class-pack","classAllowance":{"count":5,"period":"purchase"},"amount":122,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"ten-class-pack","name":"10 Class Package","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":220,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"new-student-three","name":"New Student 3-Class Special","productType":"class-pack","classAllowance":{"count":3,"period":"purchase"},"amount":30,"billingInterval":"one-time","commitmentType":"none","promotion":{"isPromotion":true,"label":"New-student offer"},"fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"sliding-scale-drop-in","name":"Sliding-Scale Drop-In ($18–$38)","amount":18,"eligibility":{"type":"sliding-scale","restrictions":["Student selects an amount from $18 to $38"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "sol-hot-yoga-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "solyogasf.com",
+      "gymIds": ["web-44c39e1d4144c1"],
+      "sharedFields": {
+        "monthlyPrice": 100,
+        "dayPassPrice": 25,
+        "priceSource": "Sol Hot Yoga & Movement official membership page",
+        "priceSourceUrl": "https://www.solyogasf.com/membership",
+        "priceObservedAt": "2026-08-20",
+        "priceNote": "The current official membership page presents one ordinary recurring product—unlimited yoga for $100 monthly—and an ordinary $25 class drop-in. The catalog is complete for the public standard-adult membership and single-class products shown on that page.",
+        "planOffers": [
+          {"sourceProductId":"unlimited-yoga-monthly","name":"Unlimited Yoga Membership","accessScope":"Unlimited yoga classes for returning members at the named location","scopeType":"single-location","classAllowance":{"unlimited":true,"period":"month"},"amount":100,"billingInterval":"month","commitmentType":"unknown","eligibility":{"type":"standard-adult","restrictions":[]},"fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"class-drop-in","name":"Class Drop-In","accessScope":"One ordinary yoga or movement class at the named location","amount":25,"eligibility":{"type":"standard-adult","restrictions":[]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "benchmark-climbing-sf-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "benchmarkclimbing.com",
+      "gymIds": ["osm-node-4004802465"],
+      "sharedFields": {
+        "monthlyPrice": 99,
+        "dayPassPrice": 30,
+        "priceSource": "Benchmark Climbing official passes page and operator-linked Approach storefront",
+        "priceSourceUrl": "https://benchmark.portal.approach.app/membership-type/3",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The operator-linked public storefront lists Unlimited Membership at $99 recurring monthly for all Benchmark locations. The official passes page lists an ordinary $30 day pass, five visits for $140, and ten visits for $270; optional shoe-and-chalk rental is $5.",
+        "planOffers": [
+          {"sourceProductId":"unlimited-membership","name":"Unlimited Membership","accessScope":"Unlimited access to all Benchmark locations","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":99,"billingInterval":"month","commitmentType":"unknown","sourceUrl":"https://benchmark.portal.approach.app/membership-type/3","fees":[]},
+          {"sourceProductId":"five-day-passes","name":"5 Day Passes","productType":"class-pack","accessScope":"Five shareable climbing visits valid for one year","classAllowance":{"count":5,"period":"purchase"},"amount":140,"billingInterval":"one-time","commitmentType":"none","sourceUrl":"https://www.benchmarkclimbing.com/new-memberships-1","fees":[]},
+          {"sourceProductId":"ten-day-passes","name":"10 Day Passes","productType":"class-pack","accessScope":"Ten shareable climbing visits valid for one year","classAllowance":{"count":10,"period":"purchase"},"amount":270,"billingInterval":"one-time","commitmentType":"none","sourceUrl":"https://www.benchmarkclimbing.com/new-memberships-1","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"adult-day-pass","name":"Adult Day Pass","accessScope":"One ordinary climbing visit","amount":30,"sourceUrl":"https://www.benchmarkclimbing.com/new-memberships-1"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "federal-fitness-center-sf-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "federalfitnesscenters.com",
+      "gymIds": ["web-27e606755f1ba8"],
+      "sharedFields": {
+        "monthlyPrice": 47,
+        "dayPassPrice": 20,
+        "initiationFee": 40,
+        "priceSource": "Federal Fitness Center official membership table and operator-linked Mindbody store",
+        "priceSourceUrl": "https://www.federalfitnesscenters.com/federal-fitness-center",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "General-public, federal-contractor, and state-government access is $47/month plus a mandatory $40 one-time initiation fee. Federal-employee plans are eligibility-restricted at $40 for 450 Golden Gate only or $43 for all FFC clubs. The linked public Mindbody store lists a $20 same-day pass. The recurring commitment term is not disclosed.",
+        "planOffers": [
+          {"sourceProductId":"general-public-all-clubs","name":"General Public / Federal Contractor / State Government","accessScope":"All Federal Fitness Center clubs where general-public access is permitted","scopeType":"multi-location","amount":47,"billingInterval":"month","commitmentType":"unknown","fees":[{"type":"initiation","amount":40,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"federal-employee-local","name":"Federal Employee — 450 Golden Gate","accessScope":"450 Golden Gate Avenue only","amount":40,"billingInterval":"month","commitmentType":"unknown","eligibility":{"type":"federal-employee","restrictions":["Federal employee eligibility required"]},"fees":[{"type":"initiation","amount":40,"currency":"USD","cadence":"one-time","mandatory":true}]},
+          {"sourceProductId":"federal-employee-all-clubs","name":"Federal Employee — All FFC Clubs","accessScope":"All Federal Fitness Center clubs","scopeType":"multi-location","amount":43,"billingInterval":"month","commitmentType":"unknown","eligibility":{"type":"federal-employee","restrictions":["Federal employee eligibility required"]},"fees":[{"type":"initiation","amount":40,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"day-pass","name":"Day Pass","accessScope":"One same-day facility visit","amount":20,"sourceUrl":"https://clients.mindbodyonline.com/classic/ws?studioid=264454&stype=41"}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "fit-bernal-fit-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "fit bernal fit",
+      "gymIds": ["osm-way-257161411"],
+      "sharedFields": {
+        "monthlyPrice": 77,
+        "dayPassPrice": null,
+        "enrollmentFee": 99,
+        "priceSource": "fitBERNALfit operator-owned public membership contract",
+        "priceSourceUrl": "https://clubs.healthclubsystems.com/php/ocFN.php?mp=a",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The public individual Annual Membership is billed at $77 per month for 12 months with a $99 join fee after key-fob issuance. The $77 last-month prepayment is upfront dues, not a fee. Household add-on join fees are $51 for the second person and $0 for later household members; no ordinary day pass is published.",
+        "planOffers": [
+          {"sourceProductId":"annual-membership-individual","name":"Annual Membership — Individual","accessScope":"Standard individual gym membership with key-fob access","amount":77,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":12,"upfrontDues":[{"type":"last-month-dues","amount":77,"currency":"USD"}],"fees":[{"type":"enrollment","amount":99,"currency":"USD","cadence":"one-time","mandatory":true}]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "live-fit-basic-location-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "live-fit",
+      "gymIds": ["web-6123d4a1928a35","osm-node-9659815458","osm-node-4631674513","osm-node-412109978"],
+      "sharedFields": {
+        "monthlyPrice": 117,
+        "dayPassPrice": null,
+        "priceSource": "Live Fit Gym official location-specific signup cards",
+        "priceSourceUrl": "https://livefitgym.com/signup/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Basic is $117/month with access to Cole Valley, Nob Hill, Polk Street, and Hayes Valley plus unlimited classes. Massage + Gym is $207 and Wellness is $357. All public memberships require six months. The operator states that enrollment and annual-dues fees apply but does not disclose their amounts, so no fee amount is inferred.",
+        "planOffers": [
+          {"sourceProductId":"basic","name":"Basic","accessScope":"Cole Valley, Nob Hill, Polk Street, and Hayes Valley locations with unlimited classes","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":117,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"basic-massage-gym","name":"Massage + Gym","accessScope":"Basic-location gym access and unlimited classes plus monthly massage","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":207,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"basic-wellness","name":"Wellness","accessScope":"Basic-location gym access and unlimited classes plus wellness services","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":357,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "live-fit-premier-location-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "live-fit",
+      "gymIds": ["web-b1dcfdcb7b4d2a","web-2d8ab33422a507","osm-way-137602240"],
+      "sharedFields": {
+        "monthlyPrice": 137,
+        "dayPassPrice": null,
+        "priceSource": "Live Fit Gym official location-specific signup cards",
+        "priceSourceUrl": "https://livefitgym.com/signup/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Premier is $137/month with access to all eight Live Fit locations plus unlimited classes. Massage + Gym is $227 and Wellness is $377. All public memberships require six months. The operator states that enrollment and annual-dues fees apply but does not disclose their amounts, so no fee amount is inferred.",
+        "planOffers": [
+          {"sourceProductId":"premier","name":"Premier","accessScope":"All eight Live Fit Gym locations with unlimited classes","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":137,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-massage-gym","name":"Massage + Gym","accessScope":"All-location gym access and unlimited classes plus monthly massage","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":227,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-wellness","name":"Wellness","accessScope":"All-location gym access and unlimited classes plus wellness services","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":377,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "live-fit-mission-wellness-club-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "livefitgym.com",
+      "gymIds": ["osm-node-968356991"],
+      "sharedFields": {
+        "monthlyPrice": 137,
+        "dayPassPrice": null,
+        "priceSource": "Live Fit Gym official Mission signup cards",
+        "priceSourceUrl": "https://livefitgym.com/signup/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The 780 Valencia Mission location uses the Premier catalog: $137/month for all eight Live Fit locations and unlimited classes, $227 for Massage + Gym, or $377 for Wellness. All require six months. Enrollment and annual-dues fees are stated but their amounts are not public, so none is inferred.",
+        "planOffers": [
+          {"sourceProductId":"premier","name":"Premier","accessScope":"All eight Live Fit Gym locations with unlimited classes","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":137,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-massage-gym","name":"Massage + Gym","accessScope":"All-location gym access and unlimited classes plus monthly massage","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":227,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]},
+          {"sourceProductId":"premier-wellness","name":"Wellness","accessScope":"All-location gym access and unlimited classes plus wellness services","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":377,"billingInterval":"month","commitmentType":"fixed-term","minimumCommitmentMonths":6,"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "orangetheory-pacific-heights-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "orangetheory",
+      "gymIds": ["web-dcbf7708bf2f77"],
+      "sharedFields": {
+        "monthlyPrice": 119,
+        "dayPassPrice": null,
+        "priceSource": "Orangetheory Pacific Heights official location membership cards",
+        "priceSourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-1150",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Pacific Heights publishes Basic at $119/month for four classes, Elite at $199 for eight, and Premier at $269 for unlimited classes. Memberships are month-to-month with 30-day cancellation. The generic site footer's recommended $35 casual visit explicitly varies by studio and is not retained as an exact-location drop-in.",
+        "planOffers": [
+          {"sourceProductId":"basic","name":"Basic","accessScope":"Four coached classes monthly with multi-studio access","scopeType":"multi-location","classAllowance":{"count":4,"period":"month"},"amount":119,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"elite","name":"Elite","accessScope":"Eight coached classes monthly with multi-studio access","scopeType":"multi-location","classAllowance":{"count":8,"period":"month"},"amount":199,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"premier","name":"Premier","accessScope":"Unlimited coached classes with multi-studio access","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":269,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"premier-first-month","name":"Premier First-Month New-Member Offer","accessScope":"Unlimited coached classes with multi-studio access","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":209,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"new-member","restrictions":["New members only"]},"promotion":{"isPromotion":true,"label":"First-month offer"},"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "strong-friends-public-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "strongfriendsgym.com",
+      "gymIds": ["web-c745e6dbdcadb6"],
+      "sharedFields": {
+        "monthlyPrice": null,
+        "dayPassPrice": 60,
+        "priceSource": "Strong Friends official drop-in page and operator-linked PushPress product",
+        "priceSourceUrl": "https://www.strongfriendsgym.com/programs/drop-in",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "Any ordinary drop-in class is $60. The official page says semi-private classes start at $43 when a client commits to membership, but it does not disclose a recurring amount, allowance, or cadence, so that statement remains non-selectable cost context.",
+        "planOffers": [],
+        "dropInOffers": [
+          {"sourceProductId":"plan_7da02367d079f9","name":"Drop-In — Any Class","accessScope":"One ordinary coached class","amount":60,"sourceUrl":"https://strongfriends.pushpress.com/landing/plans/plan_7da02367d079f9"}
+        ],
+        "costContextOffers": [
+          {"kind":"starting-price","label":"Semi-private classes start at $43 with membership commitment","amount":43,"cadence":"class","productType":"coached-class","sourceUrl":"https://www.strongfriendsgym.com/programs/drop-in","observedAt":"2026-08-21","note":"The recurring membership amount, allowance, and cadence are not disclosed."}
+        ],
+        "catalogCompleteness": {"plans":"none-observed","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "bar-method-fidi-mariana-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "barmethod.com",
+      "gymIds": ["web-e20a10174e60fa"],
+      "sharedFields": {
+        "monthlyPrice": 119,
+        "dayPassPrice": 38,
+        "priceSource": "Bar Method FiDi operator-linked public Mariana Tek buy-page catalog",
+        "priceSourceUrl": "https://barmethod.marianatek.com/api/customer/v1/locations/49114/buy-page",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The smallest recurring plan is four classes for $119/month. Eight classes are $199 and unlimited is $259; the unlimited description currently promotes a $209 first month, which is not the ordinary rate. The ordinary drop-in is $38 and 10-, 20-, and 30-class packs are $339, $569, and $799.",
+        "planOffers": [
+          {"sourceProductId":"memberships-111342","name":"4 Classes Monthly","accessScope":"Four FiDi classes per month","scopeType":"single-location","classAllowance":{"count":4,"period":"month"},"amount":119,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"memberships-111344","name":"8 Classes Monthly","accessScope":"Eight FiDi classes per month","scopeType":"single-location","classAllowance":{"count":8,"period":"month"},"amount":199,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"memberships-109099","name":"Club Bar Unlimited","accessScope":"Unlimited classes at FiDi, Downtown, and Marina","scopeType":"multi-location","classAllowance":{"unlimited":true,"period":"month"},"amount":259,"billingInterval":"month","commitmentType":"unknown","fees":[]},
+          {"sourceProductId":"memberships-132861","name":"Intro 30 Days Unlimited","productType":"class-pack","accessScope":"Thirty days of unlimited classes","classAllowance":{"unlimited":true,"period":"30 days"},"amount":74.25,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"new-client","restrictions":["Introductory client offer"]},"promotion":{"isPromotion":true,"label":"Introductory offer; regular displayed value $99"},"fees":[]},
+          {"sourceProductId":"credits-109103","name":"10 Class Pack","productType":"class-pack","classAllowance":{"count":10,"period":"purchase"},"amount":339,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"credits-111346","name":"20 Class Pack","productType":"class-pack","classAllowance":{"count":20,"period":"purchase"},"amount":569,"billingInterval":"one-time","commitmentType":"none","fees":[]},
+          {"sourceProductId":"credits-111348","name":"30 Class Pack","productType":"class-pack","classAllowance":{"count":30,"period":"purchase"},"amount":799,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"credits-109105","name":"Single Class","accessScope":"One ordinary FiDi class","amount":38}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    },
+    {
+      "id": "pilates-school-geary-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "pilatesschoolsf.com",
+      "gymIds": ["web-8e0d13fb9738f9"],
+      "sharedFields": {
+        "monthlyPrice": 250,
+        "dayPassPrice": null,
+        "priceSource": "Pilates School SF official Drop-In Program pricing page",
+        "priceSourceUrl": "https://www.pilatesschoolsf.com/drop-in-pricing/",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The standard individual Single Membership is $250/month for 10 classes. The former $189 compatibility value is the per-person rate for a restricted four-person shared membership, not a standard individual plan. Two- and three-person shared rates are $225 and $199 per person. The new-student three-pack is $50 and the returning-student eight-pack is $280; no ordinary single class price is published.",
+        "planOffers": [
+          {"sourceProductId":"single-membership","name":"Single Membership","accessScope":"Ten Geary Studio classes monthly plus selected Geary School reformer/tower classes","scopeType":"single-location","classAllowance":{"count":10,"period":"month"},"amount":250,"billingInterval":"month","commitmentType":"month-to-month","fees":[]},
+          {"sourceProductId":"shared-two","name":"Shared Membership — Two People","classAllowance":{"count":10,"period":"month"},"amount":225,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"shared-membership","restrictions":["Requires a two-person shared membership"]},"fees":[]},
+          {"sourceProductId":"shared-three","name":"Shared Membership — Three People","classAllowance":{"count":10,"period":"month"},"amount":199,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"shared-membership","restrictions":["Requires a three-person shared membership"]},"fees":[]},
+          {"sourceProductId":"shared-four","name":"Shared Membership — Four People","classAllowance":{"count":10,"period":"month"},"amount":189,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"shared-membership","restrictions":["Requires a four-person shared membership"]},"fees":[]},
+          {"sourceProductId":"family-membership","name":"Family Membership","classAllowance":{"count":20,"period":"month"},"amount":325,"billingInterval":"month","commitmentType":"month-to-month","eligibility":{"type":"household","restrictions":["Two adults and one child age 11+"]},"fees":[]},
+          {"sourceProductId":"intro-three","name":"New-Student 3-Class Intro Pack","productType":"class-pack","classAllowance":{"count":3,"period":"purchase"},"amount":50,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"new-student","restrictions":["New students only"]},"promotion":{"isPromotion":true,"label":"Introductory pack"},"fees":[]},
+          {"sourceProductId":"eight-class-pack","name":"8-Class Pack","productType":"class-pack","classAllowance":{"count":8,"period":"purchase"},"amount":280,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"returning-student","restrictions":["Returning students"]},"fees":[]}
+        ],
+        "dropInOffers": [],
+        "catalogCompleteness": {"plans":"complete","dropIns":"none-observed"}
+      }
+    },
+    {
+      "id": "world-team-usa-public-catalog-2026-08-21",
+      "reviewStatus": "approved",
+      "operatorId": "worldteamusa.net",
+      "gymIds": ["web-76a8863d9951eb"],
+      "sharedFields": {
+        "monthlyPrice": null,
+        "dayPassPrice": 49,
+        "priceSource": "World Team USA official services catalog",
+        "priceSourceUrl": "https://www.worldteamusa.net/services",
+        "priceObservedAt": "2026-08-21",
+        "priceNote": "The ordinary visiting-student day pass is $49 and requires prior martial-arts experience. New or inexperienced students use a $79 introduction lesson. The official one-time catalog also lists a $285 30-day unlimited trial, a $105 seven-day online/Muay Thai trial, and a $399 six-week bootcamp; no ongoing recurring membership amount is public.",
+        "planOffers": [
+          {"sourceProductId":"introduction-lesson","name":"Introduction Lesson","productType":"onboarding","classAllowance":{"count":1,"period":"purchase"},"amount":79,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"onboarding","restrictions":["For new or inexperienced students"]},"fees":[]},
+          {"sourceProductId":"thirty-day-trial","name":"30-Day Unlimited Trial","productType":"class-pack","classAllowance":{"unlimited":true,"period":"30 days"},"amount":285,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"new-student","restrictions":["Trial offer"]},"promotion":{"isPromotion":true,"label":"30-day trial"},"fees":[]},
+          {"sourceProductId":"online-seven-day-trial","name":"7-Day Online / Muay Thai & Fitness Trial","productType":"class-pack","classAllowance":{"unlimited":true,"period":"7 days"},"amount":105,"billingInterval":"one-time","commitmentType":"none","eligibility":{"type":"online-or-trial","restrictions":["Trial or online-access product"]},"promotion":{"isPromotion":true,"label":"7-day trial"},"fees":[]},
+          {"sourceProductId":"six-week-bootcamp","name":"6-Week Bootcamp","productType":"class-pack","classAllowance":{"count":null,"period":"6 weeks","disclosed":false},"amount":399,"billingInterval":"one-time","commitmentType":"none","fees":[]}
+        ],
+        "dropInOffers": [
+          {"sourceProductId":"day-pass","name":"Day Pass","accessScope":"One class for a visiting student with martial-arts experience","amount":49,"eligibility":{"type":"standard-adult","restrictions":["Prior martial-arts experience required"]}}
+        ],
+        "catalogCompleteness": {"plans":"complete","dropIns":"complete"}
+      }
+    }
+  ]
+}

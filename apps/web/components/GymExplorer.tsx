@@ -83,6 +83,8 @@ function fromApiGym(gym: ApiGym): Gym {
 
 function freshnessLabel(gym: Gym): string {
   if (gym.priceSource) return `Official price checked ${gym.priceObservedAt ?? "recently"}`;
+  if (gym.operatorConfirmedMonthly) return `Operator confirmed ${gym.operatorConfirmedMonthly.confirmedAt}; not publicly reproducible`;
+  if (gym.reportedMonthly) return `Recent public reports checked through ${gym.reportedMonthly.newestPublishedAt}`;
   if (gym.freshness === "verified") return "Price verified recently";
   if (gym.freshness === "gym_reported") return "Price reported by gym";
   if (gym.freshness === "stale") return "Price may be out of date";
@@ -92,6 +94,50 @@ function freshnessLabel(gym: Gym): string {
 function priceLabel(value: number | null, suffix: string): string {
   if (value === 0) return `Free${suffix}`;
   return value === null ? "Not listed" : `$${value}${suffix}`;
+}
+
+function costContextLabel(context: NonNullable<Gym["costContext"]>[number]): string {
+  const amount = context.low === context.high
+    ? `$${context.low.toFixed(0)}`
+    : `$${context.low.toFixed(0)}–$${context.high.toFixed(0)}`;
+  const cadence = context.cadence && context.cadence !== "unknown" ? ` / ${context.cadence}` : "";
+  if (context.kind === "starting-price") return `From ${amount}${cadence}`;
+  if (context.kind === "conflicting-price") return `Conflicting ${amount}${cadence}`;
+  return `${amount}${cadence}`;
+}
+
+function monthlyCostLabel(gym: Gym): string {
+  if (gym.monthlyPrice !== null) return priceLabel(gym.monthlyPrice, "/mo");
+  if (gym.operatorConfirmedMonthly?.freshness === "current") return `$${gym.operatorConfirmedMonthly.normalizedMonthly.toFixed(0)}/mo`;
+  if (gym.reportedMonthly) return `~$${gym.reportedMonthly.point.toFixed(0)}/mo`;
+  if (gym.estimatedMonthly) return `~$${gym.estimatedMonthly.point.toFixed(0)}/mo`;
+  const context = gym.costContext?.[0];
+  if (context) return costContextLabel(context);
+  if (gym.pricingStatus === "free") return "Free/public";
+  if (gym.pricingStatus === "pay-per-visit") return "Pay per visit";
+  if (gym.pricingStatus === "not-applicable") return "Not applicable";
+  return "Needs confirmation";
+}
+
+function pricingStatusLabel(gym: Gym): string {
+  if (gym.costContext?.length && !gym.monthlyPrice && !gym.operatorConfirmedMonthly && !gym.reportedMonthly && !gym.estimatedMonthly) {
+    const context = gym.costContext[0];
+    if (context.kind === "conflicting-price" || context.conflictFlags?.length) return "Official conflict";
+    if (context.kind === "range" || context.kind === "starting-price") return "Official range";
+    return "Official cost";
+  }
+  const labels: Record<string, string> = {
+    verified: "Official price",
+    "operator-confirmed": "Operator confirmed",
+    reported: "Recently reported",
+    estimated: "Estimated",
+    free: "Free/public",
+    "pay-per-visit": "Pay per visit",
+    "not-applicable": "Not applicable",
+    gated: "Price gated",
+    unresolved: "Needs confirmation",
+  };
+  return labels[gym.pricingStatus ?? (gym.monthlyPrice !== null ? "verified" : "unresolved")];
 }
 
 function gymDetailHref(id: string): string {
@@ -449,7 +495,7 @@ export default function GymExplorer() {
           <div className="eyebrow">The independent SF gym guide</div>
           <h2>Find your<br /><span>iron home.</span></h2>
           <p className="hero-copy">Real equipment details, transparent prices when they are available, and a map that helps you find the right place to train.</p>
-          <div className="hero-proof"><span className="proof-dot" aria-hidden="true" />{gyms.length} local listings · free to explore</div>
+          <div className="hero-proof"><span className="proof-dot" aria-hidden="true" />{gyms.length} canonical listings · {gyms.filter((gym) => gym.monthlyPrice !== null).length} official monthly prices · {gyms.filter((gym) => gym.dayPassPrice !== null).length} official visit prices</div>
         </div>
       </section>
 

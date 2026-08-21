@@ -1,0 +1,34 @@
+{
+  "generatedAt": "2026-08-21",
+  "policy": "Reviewed exact-location official standard-adult Bay Area observations used only as estimator comparables; never as an SF location's verified price.",
+  "observations": [
+    {
+      "id": "10th-planet-daly-city-jiu-jitsu-month-to-month-2026-08",
+      "operatorKey": "10pdc.com",
+      "operatorName": "10th Planet Daly City",
+      "locationName": "10th Planet Daly City",
+      "address": "65 Washington Street, Daly City, CA 94014",
+      "entityKind": "martial-arts",
+      "modality": "martial-arts-boxing",
+      "accessModel": "class-membership",
+      "marketModel": "independent",
+      "allowanceBucket": "unlimited-or-unmetered",
+      "planName": "Unlimited Jiu Jitsu — Month to Month",
+      "accessScope": "Unlimited Jiu Jitsu classes and open gym access",
+      "amount": 225,
+      "currency": "USD",
+      "cadence": "month",
+      "normalizedMonthly": 225,
+      "commitmentType": "month-to-month",
+      "fees": [],
+      "promotion": false,
+      "restricted": false,
+      "sourceUrl": "https://10pdc.com/pricing",
+      "observedAt": "2026-08-21",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "reviewStatus": "approved",
+      "reviewNote": "The current official exact-location pricing page publishes a standard-adult month-to-month Jiu Jitsu plan at $225 with unlimited classes and open gym access. The comparator is used only for cohort calibration."
+    }
+  ]
+}

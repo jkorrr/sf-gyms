@@ -1,0 +1,54 @@
+{
+  "mindbody": {
+    "url": "https://clients.mindbodyonline.com/api/catalog",
+    "payload": {"products": [{"id": "mb-4", "name": "4 Classes Monthly", "price": 129, "billingPeriod": "month", "classesPerMonth": 4, "recurring": true, "fees": [{"name": "Enrollment Fee", "amount": 25, "mandatory": true}]}]}
+  },
+  "momence": {
+    "url": "https://momence.com/api/memberships",
+    "payload": {"memberships": [{"id": "mo-1", "title": "1x per Week", "amountCents": 11900, "billingCycle": "4 weeks", "sessionsPerMonth": 4, "isRecurring": true}]}
+  },
+  "wellnessliving": {
+    "url": "https://www.wellnessliving.com/api/packages",
+    "payload": {"packages": [{"packageId": "wl-unlimited", "packageName": "Unlimited Monthly", "price": "$199", "frequency": "monthly", "isRecurring": true, "isUnlimited": true}]}
+  },
+  "clubready": {
+    "url": "https://www.clubready.com/api/plans",
+    "payload": {"plans": [{"planId": "cr-8", "name": "8 Class Membership", "monthlyPrice": 189, "billingInterval": "month", "creditCount": 8, "autoRenew": true}]}
+  },
+  "pushpress": {
+    "url": "https://crossfit-example.pushpress.com/api/plans",
+    "payload": {"plans": [{"uuid": "pp-u", "name": "Unlimited Recurring - 2 Month Minimum", "price": 289, "interval": "4 weeks", "unlimited": true, "recurring": true, "minimumMonths": 2}]}
+  },
+  "wodify": {
+    "url": "https://example.wodify.com/api/memberships",
+    "payload": {"memberships": [{"membershipId": "wo-12", "membershipName": "12 Classes Monthly", "amount": 225, "renewalPeriod": "month", "classesPerMonth": 12, "isRecurring": true}]}
+  },
+  "zen-planner": {
+    "url": "https://example.sites.zenplanner.com/api/memberships",
+    "payload": {"memberships": [{"id": "zp-2", "name": "2x Weekly Membership", "price": 200, "frequency": "month", "creditCount": 8, "recurring": true}]}
+  },
+  "gymdesk": {
+    "url": "https://example.gymdesk.com/api/pricing",
+    "payload": {"memberships": [{"id": "gd-open", "name": "Monthly Gym Membership", "price": 99, "interval": "month", "isRecurring": true, "fees": [{"name": "Signup Fee", "price": 50}]}]}
+  },
+  "acuity": {
+    "url": "https://example.as.me/api/products",
+    "payload": {"products": [{"productId": "aq-fit", "name": "Unlimited Fitness Membership", "amount": 250, "billingInterval": "month", "recurring": true, "unlimited": true}]}
+  },
+  "bookee": {
+    "url": "https://example.onbookee.com/api/memberships",
+    "payload": {"memberships": [{"id": "bo-4", "name": "4 Class Monthly Membership", "unit_amount": 12900, "interval": "month", "credits": 4, "isRecurring": true}]}
+  },
+  "mariana-tek": {
+    "url": "https://example.marianatek.com/api/catalog",
+    "payload": {"products": [{"id": "mt-8", "name": "8 Classes Monthly Most Popular", "price": 229, "billingPeriod": "month", "creditCount": 8, "isRecurring": true, "mostPopular": true}]}
+  },
+  "eventbrite": {
+    "url": "https://www.eventbrite.com/api/events",
+    "payload": {"tickets": [{"id": "eb-open", "name": "Single All Ages Session", "price": 18.86, "creditCount": 1, "recurring": false}]}
+  },
+  "promotion": {
+    "url": "https://momence.com/api/memberships",
+    "payload": {"memberships": [{"id": "promo", "name": "New Client First Month Special", "price": 79, "billingPeriod": "month", "recurring": true}]}
+  }
+}
