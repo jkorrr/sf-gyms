@@ -76062,7 +76062,7 @@
       "priceSource": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
       "priceSourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
       "priceObservedAt": "2026-08-21",
-      "priceNote": "The current official page says ongoing in-studio membership costs about $27–$32 per class and provides eight classes every four weeks. The public Mindbody storefront currently exposes $699 three-month promotional products. A separate duplicate-terms conflict remains disclosed, but no disputed amount or promotional product is selected as the standard plan.",
+      "priceNote": "The current official page says ongoing in-studio membership costs about $27–$32 per class and provides eight classes every four weeks, equivalent to an approximate $234–$277.33 calendar-month range. The complete public in-person Mindbody catalog exposes only $699 three-month promotional memberships plus specialty visits and packs; its recurring Contracts tab contains virtual-only products. Rentals, events, virtual products, and zero-dollar existing-member benefits are outside the location comparison catalog. One ancillary pole-workshop card conflicts between its $39 label and $0 row amount and remains non-selectable. A separate duplicate-terms conflict remains disclosed, but no disputed amount or promotional product is selected as the standard plan.",
       "planOffers": [
         {
           "sourceProductId": "discovery-package",
@@ -76105,7 +76105,7 @@
           "fees": []
         },
         {
-          "sourceProductId": "mindbody-11259",
+          "sourceProductId": "11259",
           "name": "3 Month In Studio Special",
           "productType": "class-pack",
           "accessScope": "Three-month in-studio promotional term",
@@ -76123,10 +76123,12 @@
             ]
           },
           "purchaseMethod": "direct-public",
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
           "fees": []
         },
         {
-          "sourceProductId": "mindbody-11057",
+          "sourceProductId": "11057",
           "name": "3 Month Summer Embodiment Series",
           "productType": "class-pack",
           "accessScope": "Three-month seasonal embodiment series",
@@ -76144,13 +76146,266 @@
             ]
           },
           "purchaseMethod": "direct-public",
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "11253",
+          "name": "10 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Ten one-hour private sessions; expires one year after purchase",
+          "classAllowance": 10,
+          "amount": 890,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10507",
+          "name": "3 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Three one-hour private sessions; expires six months after purchase",
+          "classAllowance": 3,
+          "amount": 279,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "10324",
+          "name": "5 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Five one-hour private sessions; expires six months after purchase",
+          "classAllowance": 5,
+          "amount": 455,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "11146",
+          "name": "Yoga Trapeze 10 Pack — Non-Members",
+          "productType": "class-pack",
+          "accessScope": "Ten specialty Yoga Trapeze sessions for non-members; expires one year after purchase",
+          "classAllowance": 10,
+          "amount": 320,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze only; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
+          "fees": []
+        },
+        {
+          "sourceProductId": "11145",
+          "name": "Yoga Trapeze 5 Pack — Non-Members",
+          "productType": "class-pack",
+          "accessScope": "Five specialty Yoga Trapeze sessions for non-members; expires one year after purchase",
+          "classAllowance": 5,
+          "amount": 185,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze only; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21",
           "fees": []
         }
       ],
-      "dropInOffers": [],
+      "dropInOffers": [
+        {
+          "sourceProductId": "10794",
+          "name": "Open Pole — Non-Members",
+          "accessScope": "One uncoached open-pole practice session",
+          "amount": 20,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Open-pole practice; not an ordinary coached class"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10116",
+          "name": "One-Hour Private",
+          "accessScope": "One private instruction session",
+          "amount": 95,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11606",
+          "name": "Private Open Pole Rental — Members",
+          "accessScope": "One private open-pole rental for existing members",
+          "amount": 30,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; private rental rather than ordinary class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11607",
+          "name": "Private Open Pole Rental — Non-Members",
+          "accessScope": "One private open-pole rental for non-members",
+          "amount": 45,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Private rental rather than ordinary class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10995",
+          "name": "Lap Dance Workshop — Members",
+          "accessScope": "One specialty workshop for existing members",
+          "amount": 49,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; specialty workshop"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10996",
+          "name": "Lap Dance Workshop — Non-Members",
+          "accessScope": "One specialty workshop for non-members",
+          "amount": 69,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Specialty workshop; not ordinary recurring class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "10993",
+          "name": "Spin Pole Class — Non-Members",
+          "accessScope": "One specialty spin-pole class for non-members",
+          "amount": 25,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Specialty spin-pole class; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11141",
+          "name": "Yoga Trapeze — Members",
+          "accessScope": "One specialty Yoga Trapeze class for existing members",
+          "amount": 35,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; Yoga Trapeze specialty class"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11142",
+          "name": "Yoga Trapeze — Non-Members",
+          "accessScope": "One specialty Yoga Trapeze class for non-members",
+          "amount": 40,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze specialty class; not ordinary S Factor class access"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        },
+        {
+          "sourceProductId": "11563",
+          "name": "Pole Workshop — Non-Members (Conflicting Card)",
+          "accessScope": "One specialty pole workshop for non-members",
+          "amount": null,
+          "amountLow": 0,
+          "amountHigh": 39,
+          "ordinaryUse": false,
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "The current card label says $39 while its price row says $0; no exact amount is selected"
+            ]
+          },
+          "conflictFlags": [
+            "mindbody-card-label-and-price-row-disagree"
+          ],
+          "sourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "observedAt": "2026-08-21"
+        }
+      ],
       "catalogCompleteness": {
-        "plans": "partial",
-        "dropIns": "none-observed"
+        "plans": "complete",
+        "dropIns": "complete"
       },
       "costContextOffers": [
         {
@@ -76160,12 +76415,14 @@
           "high": 32,
           "cadence": "class",
           "productType": "class-membership",
+          "normalizedMonthlyLow": 234,
+          "normalizedMonthlyHigh": 277.33,
           "sourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
           "observedAt": "2026-08-21",
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
           "conflictFlags": [],
-          "note": "The operator describes the amount as approximate; it remains cost context rather than an exact selected recurring price."
+          "note": "The operator describes the amount as approximate. Monthly normalization uses 8 classes per four-week cycle × 13 cycles ÷ 12 months; it remains cost context rather than an exact selected recurring price."
         }
       ],
       "officialPriceConflict": false,
@@ -76304,8 +76561,8 @@
           "selectionReason": ""
         },
         {
-          "id": "osm-node-3986912499:plan:mindbody-11259",
-          "sourceProductId": "mindbody-11259",
+          "id": "osm-node-3986912499:plan:11259",
+          "sourceProductId": "11259",
           "name": "3 Month In Studio Special",
           "productType": "class-pack",
           "accessScope": "Three-month in-studio promotional term",
@@ -76349,23 +76606,23 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://www.sistersinmotionsf.com/discoverypackage",
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
             "observedAt": "2026-08-21",
             "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
             "method": "reviewed-official-observation",
             "rawLabel": "3 Month In Studio Special",
-            "contentHash": "9ac7f3e18580ea0d7712c6bb54953b99ddbdef122b2674b777a4588ffa82bdc6",
+            "contentHash": "88878aaf6b00056f177bcf5f6b0f7c70a9e945eb146315370292111e5cd79e51",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "mindbody-11259",
+            "sourceProductId": "11259",
             "conflictFlags": []
           },
           "selected": false,
           "selectionReason": ""
         },
         {
-          "id": "osm-node-3986912499:plan:mindbody-11057",
-          "sourceProductId": "mindbody-11057",
+          "id": "osm-node-3986912499:plan:11057",
+          "sourceProductId": "11057",
           "name": "3 Month Summer Embodiment Series",
           "productType": "class-pack",
           "accessScope": "Three-month seasonal embodiment series",
@@ -76409,22 +76666,715 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://www.sistersinmotionsf.com/discoverypackage",
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
             "observedAt": "2026-08-21",
             "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
             "method": "reviewed-official-observation",
             "rawLabel": "3 Month Summer Embodiment Series",
-            "contentHash": "d8ae880a6981780d107c2ccd6c0b2873f94a47b85d137a8760f37c68aff536d5",
+            "contentHash": "8ca16f04fa0e10860bdab6f3ea4a7c82e07fb76659546e8eaf21cf1198d4bb8a",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
-            "sourceProductId": "mindbody-11057",
+            "sourceProductId": "11057",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:11253",
+          "sourceProductId": "11253",
+          "name": "10 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Ten one-hour private sessions; expires one year after purchase",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 10.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 890.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "10 One-Hour Privates",
+            "contentHash": "6404e633084820cfcafefc8c85817143ef563f9348a69c10d96803064f8515dd",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11253",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:10507",
+          "sourceProductId": "10507",
+          "name": "3 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Three one-hour private sessions; expires six months after purchase",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 279.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "3 One-Hour Privates",
+            "contentHash": "528e59a4b7278e2d633f311d8ac8764a7abb2cbd0068c8a140f0f808684e3aa3",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10507",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:10324",
+          "sourceProductId": "10324",
+          "name": "5 One-Hour Privates",
+          "productType": "class-pack",
+          "accessScope": "Five one-hour private sessions; expires six months after purchase",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 455.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "5 One-Hour Privates",
+            "contentHash": "a50665c3f2c0846145783b67c6cb6884a491f27c32c496936dfc395390a7a955",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10324",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:11146",
+          "sourceProductId": "11146",
+          "name": "Yoga Trapeze 10 Pack — Non-Members",
+          "productType": "class-pack",
+          "accessScope": "Ten specialty Yoga Trapeze sessions for non-members; expires one year after purchase",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 10.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 320.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze only; not ordinary S Factor class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Yoga Trapeze 10 Pack — Non-Members",
+            "contentHash": "431a7a71671d18b4b058e82ee5e70147c1431a03a9aac4d325e6bbbf1cdae4d9",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11146",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:11145",
+          "sourceProductId": "11145",
+          "name": "Yoga Trapeze 5 Pack — Non-Members",
+          "productType": "class-pack",
+          "accessScope": "Five specialty Yoga Trapeze sessions for non-members; expires one year after purchase",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 5.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 185.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze only; not ordinary S Factor class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Yoga Trapeze 5 Pack — Non-Members",
+            "contentHash": "50c5520deb273dbf3b8bd64a4908681bc9622bb70f9d6bc099e82ebd36885812",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11145",
             "conflictFlags": []
           },
           "selected": false,
           "selectionReason": ""
         }
       ],
-      "dropIns": [],
+      "dropIns": [
+        {
+          "id": "osm-node-3986912499:drop-in:10794",
+          "sourceProductId": "10794",
+          "name": "Open Pole — Non-Members",
+          "productType": "drop-in",
+          "accessScope": "One uncoached open-pole practice session",
+          "amount": 20.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Open-pole practice; not an ordinary coached class"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Open Pole — Non-Members",
+            "contentHash": "4d03b014c3ec0de17a2e831ad4dd675eca4e0b05eb65a2f809a1dd5a21db1220",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10794",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:10116",
+          "sourceProductId": "10116",
+          "name": "One-Hour Private",
+          "productType": "drop-in",
+          "accessScope": "One private instruction session",
+          "amount": 95.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "Private instruction; not ordinary studio access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "One-Hour Private",
+            "contentHash": "0fbc9db48f0bb191de8d6359cb18ccd55e7f23bf4c95465f5319ecd10e19feed",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10116",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:11606",
+          "sourceProductId": "11606",
+          "name": "Private Open Pole Rental — Members",
+          "productType": "drop-in",
+          "accessScope": "One private open-pole rental for existing members",
+          "amount": 30.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; private rental rather than ordinary class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Private Open Pole Rental — Members",
+            "contentHash": "57623d7e06aeab665c5cd9ebbff052288c2d6a70820a1cc28579591886c41410",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11606",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:11607",
+          "sourceProductId": "11607",
+          "name": "Private Open Pole Rental — Non-Members",
+          "productType": "drop-in",
+          "accessScope": "One private open-pole rental for non-members",
+          "amount": 45.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Private rental rather than ordinary class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Private Open Pole Rental — Non-Members",
+            "contentHash": "d503a8fb4c888df594a80702bb345811d3d19fc5b17ca687e84dde187396ff4d",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11607",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:10995",
+          "sourceProductId": "10995",
+          "name": "Lap Dance Workshop — Members",
+          "productType": "drop-in",
+          "accessScope": "One specialty workshop for existing members",
+          "amount": 49.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; specialty workshop"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Lap Dance Workshop — Members",
+            "contentHash": "99d31cb5f8e09e566b2760e466017066d9bedc64bb3ebce25e631b45add61760",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10995",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:10996",
+          "sourceProductId": "10996",
+          "name": "Lap Dance Workshop — Non-Members",
+          "productType": "drop-in",
+          "accessScope": "One specialty workshop for non-members",
+          "amount": 69.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Specialty workshop; not ordinary recurring class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Lap Dance Workshop — Non-Members",
+            "contentHash": "4e891f90039b1d545db2873e440d4223a9070276fccb5e8073775056cad33881",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10996",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:10993",
+          "sourceProductId": "10993",
+          "name": "Spin Pole Class — Non-Members",
+          "productType": "drop-in",
+          "accessScope": "One specialty spin-pole class for non-members",
+          "amount": 25.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Specialty spin-pole class; not ordinary S Factor class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Spin Pole Class — Non-Members",
+            "contentHash": "45c09f84dd29107d0ba24fbfffc9ab9b613adf7c9e1de74447d5a0c195c7d046",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "10993",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:11141",
+          "sourceProductId": "11141",
+          "name": "Yoga Trapeze — Members",
+          "productType": "drop-in",
+          "accessScope": "One specialty Yoga Trapeze class for existing members",
+          "amount": 35.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "member-only",
+            "restrictions": [
+              "Existing members only; Yoga Trapeze specialty class"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Yoga Trapeze — Members",
+            "contentHash": "013701fbc1e2ad7c5e1163962db0d5a057b5497ff01bac82fb8c557a5a993440",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11141",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:11142",
+          "sourceProductId": "11142",
+          "name": "Yoga Trapeze — Non-Members",
+          "productType": "drop-in",
+          "accessScope": "One specialty Yoga Trapeze class for non-members",
+          "amount": 40.0,
+          "amountLow": null,
+          "amountHigh": null,
+          "currency": "USD",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "Yoga Trapeze specialty class; not ordinary S Factor class access"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Yoga Trapeze — Non-Members",
+            "contentHash": "b847443f0d3bae2d424204f925c28f32b58bbcc0955f8659a824a68b1e05f577",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11142",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:drop-in:11563",
+          "sourceProductId": "11563",
+          "name": "Pole Workshop — Non-Members (Conflicting Card)",
+          "productType": "drop-in",
+          "accessScope": "One specialty pole workshop for non-members",
+          "amount": null,
+          "amountLow": 0.0,
+          "amountHigh": 39.0,
+          "currency": "USD",
+          "eligibility": {
+            "type": "specialty-only",
+            "restrictions": [
+              "The current card label says $39 while its price row says $0; no exact amount is selected"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "ordinaryUse": false,
+          "evidence": {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "Pole Workshop — Non-Members (Conflicting Card)",
+            "contentHash": "3487be4b58d037b5428e8c1220dcc8d9efd4bc813ef4d30fb595b3504bc5e951",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "11563",
+            "conflictFlags": [
+              "mindbody-card-label-and-price-row-disagree"
+            ]
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
       "selectedPlanId": null,
       "selectedDropInId": null,
       "typicalPlanId": null,
@@ -76432,16 +77382,16 @@
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
         },
         "highestAccess": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
         },
         "bestValue": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
+          "status": "not-labeled-by-operator",
+          "reason": "The operator did not publicly label an eligible plan as best value or most popular."
         }
       },
       "costContext": [
@@ -76458,10 +77408,10 @@
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
           "conflictFlags": [],
-          "note": "The operator describes the amount as approximate; it remains cost context rather than an exact selected recurring price.",
+          "note": "The operator describes the amount as approximate. Monthly normalization uses 8 classes per four-week cycle × 13 cycles ÷ 12 months; it remains cost context rather than an exact selected recurring price.",
           "selectable": false,
-          "normalizedMonthlyLow": null,
-          "normalizedMonthlyHigh": null,
+          "normalizedMonthlyLow": 234.0,
+          "normalizedMonthlyHigh": 277.33,
           "id": "osm-node-3986912499:cost-context:601642d7f88e"
         }
       ],
@@ -76469,12 +77419,12 @@
       "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "annualFee": null,

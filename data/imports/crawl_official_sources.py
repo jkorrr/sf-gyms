@@ -17,6 +17,7 @@ from collections import defaultdict
 from collections.abc import Iterable
 from datetime import UTC, datetime, timedelta
 from functools import lru_cache
+from html import unescape
 from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
@@ -1721,6 +1722,26 @@ MINDBODY_EMBED_SITE_RE = re.compile(
     r"\bdata-mb-site-id\s*=\s*['\"](?P<site_id>\d{1,12})['\"]",
     re.IGNORECASE,
 )
+MINDBODY_SERVICE_SELECT_RE = re.compile(
+    r"<select\b(?=[^>]*\bname\s*=\s*['\"]?optTG\b)[^>]*>(?P<body>.*?)</select>",
+    re.IGNORECASE | re.DOTALL,
+)
+MINDBODY_SERVICE_OPTION_RE = re.compile(
+    r"<option\b(?P<attrs>[^>]*)>(?P<label>.*?)</option>",
+    re.IGNORECASE | re.DOTALL,
+)
+MINDBODY_OPTION_VALUE_RE = re.compile(
+    r"\bvalue\s*=\s*(?:['\"](?P<quoted>\d{1,12})['\"]|(?P<plain>\d{1,12})(?:\s|$))",
+    re.IGNORECASE,
+)
+MINDBODY_CATEGORY_INCLUDE_RE = re.compile(
+    r"\b(?:memberships?|packages?|classes?|passes|series|workshops?|open pole|training|access|privates?)\b",
+    re.IGNORECASE,
+)
+MINDBODY_CATEGORY_EXCLUDE_RE = re.compile(
+    r"\b(?:gift|account|login|log in|sign in|register|checkout|cart)\b",
+    re.IGNORECASE,
+)
 
 
 def mindbody_embedded_storefronts(html: str) -> list[str]:
@@ -1740,6 +1761,84 @@ def mindbody_embedded_storefronts(html: str) -> list[str]:
         if candidate not in results:
             results.append(candidate)
     return results[:4]
+
+
+def is_safe_mindbody_category_label(label: str) -> bool:
+    """Allow only public product categories, never account or checkout actions."""
+
+    value = " ".join(text(label).casefold().split())
+    return bool(
+        value
+        and value != "select item"
+        and not MINDBODY_CATEGORY_EXCLUDE_RE.search(value)
+        and MINDBODY_CATEGORY_INCLUDE_RE.search(value)
+    )
+
+
+def mindbody_public_services_route(url: str) -> str:
+    """Derive Mindbody's public Services tab from any reviewed store deep link.
+
+    Operator sites often link to a gift card, login, or one isolated product
+    while the same unauthenticated storefront exposes its complete public
+    Services catalog. The numeric business ``studioid`` is the only value
+    carried forward; product, cart, date, locale, and tracking parameters are
+    deliberately discarded.
+    """
+
+    try:
+        parsed = urlparse(text(url))
+    except ValueError:
+        return ""
+    if parsed.scheme.casefold() not in {"http", "https"} or parsed.netloc.casefold() != "clients.mindbodyonline.com":
+        return ""
+    query = {
+        key.casefold(): value
+        for key, values in parse_qs(parsed.query).items()
+        if (value := next((item for item in values if text(item)), ""))
+    }
+    site_id = text(query.get("studioid"))
+    if not re.fullmatch(r"\d{1,12}", site_id):
+        return ""
+    return (
+        "https://clients.mindbodyonline.com/ASP/main_shop.asp?"
+        + urlencode((("studioid", site_id), ("stype", "41"), ("pMode", "1")))
+    )
+
+
+def mindbody_service_category_routes(source_url: str, html: str) -> list[str]:
+    """Enumerate bounded public Services categories from Mindbody HTML.
+
+    ``optTG`` values are public catalog category IDs. Only numeric IDs from a
+    reviewed business storefront are accepted, and the result remains a
+    review-only crawl route. Membership-shaped categories are prioritized so
+    a large studio catalog cannot exhaust the per-listing request budget before
+    its most comparison-relevant offers are visited.
+    """
+
+    base = mindbody_public_services_route(source_url)
+    if not base or not text(html):
+        return []
+    categories: list[tuple[int, int, str]] = []
+    seen_values: set[str] = set()
+    ordinal = 0
+    for select_match in MINDBODY_SERVICE_SELECT_RE.finditer(html):
+        for option_match in MINDBODY_SERVICE_OPTION_RE.finditer(select_match.group("body")):
+            value_match = MINDBODY_OPTION_VALUE_RE.search(option_match.group("attrs"))
+            value = text((value_match.group("quoted") or value_match.group("plain")) if value_match else "")
+            label = " ".join(unescape(re.sub(r"<[^>]+>", " ", option_match.group("label"))).split())
+            if not value or value == "0" or value in seen_values or not is_safe_mindbody_category_label(label):
+                continue
+            seen_values.add(value)
+            lowered = label.casefold()
+            priority = 0 if "membership" in lowered or "access" in lowered else 1 if re.search(r"\b(?:package|pass|class|series)\b", lowered) else 2
+            categories.append((priority, ordinal, value))
+            ordinal += 1
+    site_id = parse_qs(urlparse(base).query)["studioid"][0]
+    return [
+        "https://clients.mindbodyonline.com/ASP/main_shop.asp?"
+        + urlencode((("studioid", site_id), ("stype", "41"), ("tg", value), ("pMode", "1")))
+        for _priority, _ordinal, value in sorted(categories)[:12]
+    ]
 
 
 def approved_booking_url(url: str) -> bool:
@@ -1906,6 +2005,25 @@ def robots_allowed(url: str, timeout: float) -> tuple[bool, str]:
         return True, "robots-unavailable"
 
 
+def static_access_blocker(url: str, html: str) -> str:
+    """Classify public shells that require a disallowed session-reset POST.
+
+    Mindbody sometimes returns HTTP 200 with an otherwise blank page whose
+    only action is ``resetSession()``. That helper submits an identity-logout
+    form before the catalog can load. The research bot never submits forms, so
+    the response must be recorded as access-blocked instead of a successful
+    empty catalog.
+    """
+
+    if platform_name(url) == "mindbody" and re.search(
+        r"\bmb\.sessionHelpers\.resetSession\s*\(\s*\)\s*;?",
+        html,
+        re.IGNORECASE,
+    ):
+        return "identity-session-reset-required"
+    return ""
+
+
 def fetch_page(url: str, timeout: float, conditional: dict[str, Any] | None = None) -> dict[str, Any]:
     allowed, robots_status = robots_allowed(url, timeout)
     if not allowed:
@@ -1925,14 +2043,16 @@ def fetch_page(url: str, timeout: float, conditional: dict[str, Any] | None = No
                 return {"status": "response-too-large", "url": response.geturl(), "robotsStatus": robots_status}
             charset = response.headers.get_content_charset() or "utf-8"
             html = body.decode(charset, errors="replace")
+            access_blocker = static_access_blocker(response.geturl(), html)
             return {
-                "status": "fetched",
+                "status": "access-blocked" if access_blocker else "fetched",
                 "url": response.geturl(),
                 "contentType": content_type,
                 "html": html,
                 "etag": response.headers.get("ETag", ""),
                 "lastModified": response.headers.get("Last-Modified", ""),
                 "robotsStatus": robots_status,
+                "accessBlocker": access_blocker,
             }
     except HTTPError as error:
         if error.code == 304:
@@ -2011,7 +2131,16 @@ def parse_page(
     candidates.extend(visible_candidates(visible, text(result.get("url"))))
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
-    stores = linked_storefronts(source_url, parser.links, gym)
+    stores: list[str] = []
+    mindbody_services = mindbody_public_services_route(source_url)
+    if mindbody_services and request_identity(mindbody_services) != request_identity(source_url):
+        stores.append(mindbody_services)
+    for candidate in mindbody_service_category_routes(source_url, html):
+        if request_identity(candidate) != request_identity(source_url) and candidate not in stores:
+            stores.append(candidate)
+    for candidate in linked_storefronts(source_url, parser.links, gym):
+        if candidate not in stores:
+            stores.append(candidate)
     for candidate in mindbody_embedded_storefronts(html):
         if candidate not in stores:
             stores.append(candidate)
@@ -2360,6 +2489,7 @@ def crawl_gym(
             "url": url,
             "attemptedAt": attempted_at,
             "status": result["status"],
+            "accessBlocker": result.get("accessBlocker", ""),
             "robotsStatus": result.get("robotsStatus", ""),
             "contentHash": digest,
             "contentChanged": bool(previous_hash and digest and previous_hash != digest),
@@ -2375,6 +2505,7 @@ def crawl_gym(
     updates = {
         url: {
             "status": result["status"],
+            "accessBlocker": result.get("accessBlocker", ""),
             "lastAttemptAt": attempted_at,
             "etag": result.get("etag", ""),
             "lastModified": result.get("lastModified", ""),
@@ -2424,6 +2555,7 @@ def crawl_gym(
                 "url": storefront,
                 "attemptedAt": attempted_at,
                 "status": store_result["status"],
+                "accessBlocker": store_result.get("accessBlocker", ""),
                 "robotsStatus": store_result.get("robotsStatus", ""),
                 "contentHash": store_digest,
                 "contentChanged": bool(text(cache.get(storefront, {}).get("contentHash")) and store_digest and text(cache.get(storefront, {}).get("contentHash")) != store_digest),
@@ -2442,6 +2574,7 @@ def crawl_gym(
         )
         updates[storefront] = {
             "status": store_result["status"],
+            "accessBlocker": store_result.get("accessBlocker", ""),
             "lastAttemptAt": attempted_at,
             "etag": store_result.get("etag", ""),
             "lastModified": store_result.get("lastModified", ""),

@@ -10,10 +10,10 @@ vendor payload.
 from __future__ import annotations
 
 import re
+from collections.abc import Iterable
 from dataclasses import dataclass
-from typing import Any, Iterable
+from typing import Any
 from urllib.parse import urlparse
-
 
 MONEY_RE = re.compile(r"\$?\s*(\d{1,6}(?:\.\d{1,2})?)")
 PROMOTION_RE = re.compile(
@@ -375,11 +375,22 @@ def mindbody_purchase_item_candidates(
         return []
     combined = f"{category_label} {label}"
     cadence, interval_count = cadence_from({}, combined)
-    recurring = cadence not in {"one-time", "visit"}
+    recurring = bool(re.search(
+        r"\b(?:monthly|auto[ -]?renew(?:s|ing)?|recurring|every\s+(?:month|four weeks|4 weeks|week|year)|"
+        r"per\s+month)\b|/\s*(?:mo|month)\b",
+        combined,
+        re.IGNORECASE,
+    ))
+    duration_match = re.search(r"\b(\d{1,2})[ -]months?\b", combined, re.IGNORECASE)
+    if not recurring:
+        cadence, interval_count = "one-time", 1
     allowance = class_allowance({}, combined, cadence)
     promotion = bool(PROMOTION_RE.search(combined))
     online_only = bool(re.search(r"\bvirtual\b", combined, re.IGNORECASE))
     drop_in = bool(DROP_IN_RE.search(combined))
+    commitment_value = commitment({}, combined, recurring)
+    if duration_match and not recurring:
+        commitment_value = {"type": "fixed-term", "minimumMonths": int(duration_match.group(1))}
     return [{
         "sourceProductId": text(source_product_id),
         "amount": amount,
@@ -395,7 +406,7 @@ def mindbody_purchase_item_candidates(
             "type": "online-only" if online_only else ("new-client" if promotion else "standard-adult"),
             "restrictions": ["Virtual product; not in-person location access"] if online_only else (["Promotional or seasonal product"] if promotion else []),
         },
-        "commitment": commitment({}, combined, recurring),
+        "commitment": commitment_value,
         "fees": [],
         "locations": [],
         "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),

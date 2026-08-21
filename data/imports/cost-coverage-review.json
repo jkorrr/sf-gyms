@@ -12337,12 +12337,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "source-fragment",
-          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -12352,7 +12352,12 @@
       "crawlAttempts": [
         {
           "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
-          "status": "fetched",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+          "status": "access-blocked",
           "candidateCount": 0
         },
         {
@@ -12366,12 +12371,22 @@
           "candidateCount": 0
         },
         {
+          "url": "https://www.sistersinmotionsf.com/faq",
+          "status": "not-modified",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.sistersinmotionsf.com/studioschedule",
           "status": "not-modified",
           "candidateCount": 0
         },
         {
           "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?catid=&classid=0&date=10%2F26%2F2023&directLink=true&justloggedin=&loc=1&lvl=&nLgIn=&optForwardingLink=&pMode=2&page=&prodGroupId=&prodid=&qParam=&sSU=&studioid=597858&stype=42&tg=&trn=0&view=&vt=",
+          "status": "access-blocked",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
           "status": "access-blocked",
           "candidateCount": 0
         },

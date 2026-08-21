@@ -828,6 +828,62 @@ Month-to-month with 30-day cancellation. Recommended casual visit is $35 and var
         html = '<healcode-widget data-site-id="116080" data-mb-site-id="not-a-business-id"></healcode-widget>'
         self.assertEqual(crawler.mindbody_embedded_storefronts(html), [])
 
+    def test_mindbody_deep_link_recovers_public_services_route(self) -> None:
+        source = (
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?"
+            "studioid=597858&stype=42&pMode=2&tg=99&utm_source=operator"
+        )
+        self.assertEqual(
+            crawler.mindbody_public_services_route(source),
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+        )
+        self.assertEqual(crawler.mindbody_public_services_route("https://example.com/?studioid=597858"), "")
+        self.assertEqual(crawler.mindbody_public_services_route("https://clients.mindbodyonline.com/store"), "")
+
+    def test_mindbody_service_categories_are_safe_prioritized_and_bounded(self) -> None:
+        source = "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&pMode=1"
+        html = """
+            <select id="optTG" name="optTG">
+              <option value="0">Select item</option>
+              <option value="8">Teacher Workshops</option>
+              <option value="67">In Studio Memberships</option>
+              <option value="41">NEW Memberships</option>
+              <option value="17">Class Packages</option>
+              <option value="99">Gift Cards</option>
+              <option value="abc">Private Training</option>
+            </select>
+        """
+        routes = crawler.mindbody_service_category_routes(source, html)
+        self.assertEqual(routes, [
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&tg=67&pMode=1",
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&tg=41&pMode=1",
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&tg=17&pMode=1",
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&tg=8&pMode=1",
+        ])
+
+    def test_mindbody_route_discovery_precedes_unrelated_storefront_links(self) -> None:
+        result = {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&pMode=2",
+            "contentType": "text/html",
+            "html": '<select name="optTG"><option value="67">In Studio Memberships</option></select>',
+        }
+        _offers, stores, _digest = crawler.parse_page(result)
+        self.assertEqual(stores[:2], [
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&pMode=1",
+            "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=41&tg=67&pMode=1",
+        ])
+
+    def test_mindbody_blank_session_reset_shell_is_access_blocked(self) -> None:
+        url = "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&pMode=1"
+        self.assertEqual(
+            crawler.static_access_blocker(
+                url,
+                '<script src="mb.sessionhelpers.js"></script><script>mb.sessionHelpers.resetSession();</script>',
+            ),
+            "identity-session-reset-required",
+        )
+        self.assertEqual(crawler.static_access_blocker("https://operator.example/pricing", "resetSession();"), "")
+
     def test_vendor_marketing_homepage_is_not_treated_as_storefront(self) -> None:
         self.assertEqual(crawler.linked_storefronts("https://example.com", ["https://www.pushpress.com/"]), [])
 

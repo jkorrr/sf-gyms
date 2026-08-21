@@ -69,10 +69,7 @@ def is_safe_public_tab_label(label: str) -> bool:
 def is_safe_mindbody_category_label(label: str) -> bool:
     """Bound selector traversal to public product categories, never account actions."""
 
-    value = " ".join(text(label).casefold().split())
-    if not value or value == "select item" or any(term in value for term in ("gift", "account", "login", "sign in")):
-        return False
-    return bool(re.search(r"\b(?:memberships?|packages?|classes?|passes|series|workshops?|open pole|training|access|privates?)\b", value))
+    return static_crawler.is_safe_mindbody_category_label(label)
 
 
 def safe_mindbody_contract_href(current_url: str, href: str) -> bool:

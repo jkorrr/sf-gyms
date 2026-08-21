@@ -878,6 +878,23 @@ class CostCoverageTests(unittest.TestCase):
         document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-20")
         self.assertEqual(document["gyms"][0]["pricingStatus"], "verified")
 
+    def test_per_class_official_range_can_retain_reviewed_monthly_normalization(self) -> None:
+        value = gym(
+            "allowance-range", "Allowance Range Studio", None,
+            costContextOffers=[{
+                "kind": "range", "label": "Eight classes every four weeks", "low": 27, "high": 32,
+                "cadence": "class", "normalizedMonthlyLow": 234, "normalizedMonthlyHigh": 277.33,
+                "sourceUrl": "https://example.com/membership", "observedAt": "2026-08-21",
+                "evidenceTier": "official-public",
+                "note": "Normalized from the reviewed class allowance, not inferred from cadence alone.",
+            }],
+        )
+        document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-21")
+        context = document["gyms"][0]["costContext"][0]
+        self.assertEqual((context["normalizedMonthlyLow"], context["normalizedMonthlyHigh"]), (234, 277.33))
+        self.assertIsNone(document["gyms"][0]["monthlyPrice"])
+        self.assertEqual(document["gyms"][0]["pricingStatus"], "official-range")
+
     def test_non_consumer_with_range_remains_not_applicable(self) -> None:
         value = gym(
             "institutional-range", "Institutional Range", None,
