@@ -21,7 +21,7 @@ from html.parser import HTMLParser
 from pathlib import Path
 from typing import Any
 from urllib.error import HTTPError, URLError
-from urllib.parse import parse_qs, urldefrag, urljoin, urlparse
+from urllib.parse import parse_qs, parse_qsl, urldefrag, urlencode, urljoin, urlparse
 from urllib.request import Request, urlopen
 from urllib.robotparser import RobotFileParser
 
@@ -45,6 +45,8 @@ MAX_DOMAIN_429S = 2
 STALE_AFTER_DAYS = 35
 MAX_LINKED_REQUESTS_PER_GYM = 36
 MAX_LINK_DEPTH = 3
+MAX_OPERATOR_LINK_DEPTH = 2
+MAX_OPERATOR_REQUESTS_PER_GYM = 12
 MAX_REVIEWED_SEED_URLS = 8
 
 BOOKING_DOMAINS = {
@@ -248,6 +250,77 @@ def platform_name(source_url: str) -> str:
         ("gymdesk.com", "gymdesk"),
     )
     return next((label for domain, label in mappings if host == domain or host.endswith(f".{domain}")), "operator-site")
+
+
+NON_SEMANTIC_QUERY_KEYS = {"_gl", "fbclid", "gclid", "lang", "language", "locale"}
+LOCATION_PATH_MARKERS = {"club", "clubs", "location", "locations", "studio", "studios", "yoga-studios"}
+LOCATION_ROUTE_TAILS = {
+    "book", "booking", "buy", "classes", "drop-in", "dropins", "join", "membership", "memberships",
+    "packages", "passes", "plans", "prices", "pricing", "rates", "schedule", "shop",
+}
+
+
+def request_identity(url: str) -> str:
+    """Return a stable request identity without presentation/tracking variants."""
+
+    normalized = urldefrag(text(url))[0]
+    parsed = urlparse(normalized)
+    query = [
+        (key, value)
+        for key, value in parse_qsl(parsed.query, keep_blank_values=True)
+        if key.casefold() not in NON_SEMANTIC_QUERY_KEYS and not key.casefold().startswith("utm_")
+    ]
+    path = parsed.path.rstrip("/") or "/"
+    return parsed._replace(
+        scheme=parsed.scheme.casefold(),
+        netloc=parsed.netloc.casefold(),
+        path=path,
+        query=urlencode(sorted(query, key=lambda item: (item[0].casefold(), item[1]))),
+        fragment="",
+    ).geturl()
+
+
+def location_route_slug(url: str) -> str | None:
+    """Extract the branch slug from an operator location-directory URL."""
+
+    segments = [segment.casefold() for segment in urlparse(url).path.split("/") if segment]
+    marker_index = next((index for index, segment in enumerate(segments) if segment in LOCATION_PATH_MARKERS), None)
+    if marker_index is None:
+        return None
+    tail = segments[marker_index + 1:]
+    while tail and tail[-1] in LOCATION_ROUTE_TAILS:
+        tail.pop()
+    return tail[-1] if tail else ""
+
+
+def operator_location_slugs(gym: dict[str, Any]) -> set[str]:
+    """Collect reviewed location slugs that may identify this exact listing."""
+
+    slugs: set[str] = set()
+    operator_location_id = re.sub(r"[^a-z0-9-]+", "-", text(gym.get("operatorLocationId")).casefold()).strip("-")
+    if operator_location_id:
+        slugs.add(operator_location_id)
+    for key in ("websiteUrl", "officialUrl"):
+        slug = location_route_slug(text(gym.get(key)))
+        if slug:
+            slugs.add(slug)
+    return slugs
+
+
+def operator_page_matches_gym(url: str, gym: dict[str, Any] | None) -> bool:
+    """Reject unrelated chain branches while retaining global pricing pages."""
+
+    if gym is None:
+        return True
+    slug = location_route_slug(url)
+    if slug is None:
+        return True
+    if not slug:
+        return False
+    reviewed_slugs = operator_location_slugs(gym)
+    if slug in reviewed_slugs:
+        return True
+    return not reviewed_slugs and slug in {"san-francisco", "sf"}
 
 
 def candidate_metadata(label: str, cadence: str) -> dict[str, Any]:
@@ -1533,8 +1606,13 @@ def public_platform_json_candidates(payload: Any, source_url: str) -> tuple[list
     return [], []
 
 
-def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
+def linked_storefronts(
+    base_url: str,
+    links: list[str],
+    gym: dict[str, Any] | None = None,
+) -> list[str]:
     results: list[str] = []
+    identities: set[str] = set()
     base_host = hostname(base_url)
     for value in links:
         candidate = urljoin(base_url, value)
@@ -1547,9 +1625,12 @@ def linked_storefronts(base_url: str, links: list[str]) -> list[str]:
             and candidate != base_url
             and RESEARCH_PATH_RE.search(urlparse(candidate).path + ("?" + urlparse(candidate).query if urlparse(candidate).query else ""))
             and not RESEARCH_EXCLUDE_RE.search(urlparse(candidate).path)
+            and operator_page_matches_gym(candidate, gym)
         )
         if approved_booking or approved_operator_page:
-            if candidate not in results:
+            identity = request_identity(candidate)
+            if identity not in identities:
+                identities.add(identity)
                 results.append(candidate)
     return results[:12]
 
@@ -1714,9 +1795,10 @@ def reviewed_seed_routes(
         source_field, url = normalized
         allowed = source_field in {"websiteUrl", "officialUrl"}
         allowed = allowed or host_key(url) in operator_hosts or approved_booking_url(url)
-        if not allowed or url in seen:
+        identity = request_identity(url)
+        if not allowed or identity in seen:
             continue
-        seen.add(url)
+        seen.add(identity)
         routes.append({"url": url, "sourceField": source_field})
         if len(routes) >= MAX_REVIEWED_SEED_URLS:
             break
@@ -1794,11 +1876,12 @@ def fetch_once_for_run(
     that same URL once per location, making large chains both slow and noisy.
     A Future is installed before the request starts so concurrent workers wait
     for and reuse the first response instead of racing duplicate requests.
-    Fragments are intentionally ignored because they never change the HTTP
-    response; paths and query strings remain distinct catalog identities.
+    Fragments, tracking parameters, and presentation-only locale parameters
+    are intentionally ignored. Product, location, and catalog query values
+    remain distinct identities.
     """
 
-    request_key = urldefrag(url)[0]
+    request_key = request_identity(url)
     with run_requests_lock:
         future = run_requests.get(request_key)
         owner = future is None
@@ -1819,7 +1902,10 @@ def fetch_once_for_run(
     return result
 
 
-def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str], str]:
+def parse_page(
+    result: dict[str, Any],
+    gym: dict[str, Any] | None = None,
+) -> tuple[list[dict[str, Any]], list[str], str]:
     html = text(result.get("html"))
     if not html:
         return [], [], ""
@@ -1843,7 +1929,7 @@ def parse_page(result: dict[str, Any]) -> tuple[list[dict[str, Any]], list[str],
     candidates.extend(visible_candidates(visible, text(result.get("url"))))
     deduplicated = deduplicate_candidates(candidates)
     digest = hashlib.sha256(html.encode("utf-8")).hexdigest()
-    stores = linked_storefronts(source_url, parser.links)
+    stores = linked_storefronts(source_url, parser.links, gym)
     for candidate in mindbody_embedded_storefronts(html):
         if candidate not in stores:
             stores.append(candidate)
@@ -2165,11 +2251,11 @@ def crawl_gym(
         return [], [], [], {}
     url = seed_routes[0]["url"]
     result = rate_limited_fetch(url)
-    offers, storefronts, digest = parse_page(result)
+    offers, storefronts, digest = parse_page(result, gym)
     location_candidates = parse_location_page(result)
     if result.get("status") == "not-modified":
         offers = list(cache.get(url, {}).get("candidates", []))
-        storefronts = linked_storefronts(url, list(cache.get(url, {}).get("linkedStorefronts", [])))
+        storefronts = linked_storefronts(url, list(cache.get(url, {}).get("linkedStorefronts", [])), gym)
         location_candidates = list(cache.get(url, {}).get("locationCandidates", []))
         digest = text(cache.get(url, {}).get("contentHash"))
     attempted_at = today.date().isoformat()
@@ -2221,19 +2307,32 @@ def crawl_gym(
         for route in seed_routes[1:]
     ]
     pending.extend((storefront, url, 1) for storefront in storefronts)
-    visited: set[str] = {urldefrag(url)[0]}
+    visited: set[str] = {request_identity(url)}
+    operator_request_count = int(platform_name(url) == "operator-site")
+    booking_request_count = int(platform_name(url) != "operator-site")
+    frontier_skip_reasons: dict[str, int] = defaultdict(int)
     while pending and len(visited) < MAX_LINKED_REQUESTS_PER_GYM:
         storefront, linked_from, depth = pending.pop(0)
-        request_identity = urldefrag(storefront)[0]
-        if request_identity in visited:
+        storefront_identity = request_identity(storefront)
+        if storefront_identity in visited:
             continue
-        visited.add(request_identity)
+        is_operator_request = platform_name(storefront) == "operator-site"
+        if is_operator_request and operator_request_count >= MAX_OPERATOR_REQUESTS_PER_GYM:
+            frontier_skip_reasons["operator-request-budget"] += 1
+            continue
+        visited.add(storefront_identity)
+        operator_request_count += int(is_operator_request)
+        booking_request_count += int(not is_operator_request)
         store_result = rate_limited_fetch(storefront)
-        store_offers, nested, store_digest = parse_page(store_result)
+        store_offers, nested, store_digest = parse_page(store_result, gym)
         store_location_candidates = parse_location_page(store_result)
         if store_result.get("status") == "not-modified":
             store_offers = list(cache.get(storefront, {}).get("candidates", []))
-            nested = linked_storefronts(storefront, list(cache.get(storefront, {}).get("linkedStorefronts", [])))
+            nested = linked_storefronts(
+                storefront,
+                list(cache.get(storefront, {}).get("linkedStorefronts", [])),
+                gym,
+            )
             store_location_candidates = list(cache.get(storefront, {}).get("locationCandidates", []))
             store_digest = text(cache.get(storefront, {}).get("contentHash"))
         attempts.append(
@@ -2270,17 +2369,24 @@ def crawl_gym(
             "locationCandidates": store_location_candidates,
         }
         if depth < MAX_LINK_DEPTH:
-            queued = {urldefrag(item[0])[0] for item in pending}
+            queued = {request_identity(item[0]) for item in pending}
             for detail_url in nested[:12]:
-                detail_identity = urldefrag(detail_url)[0]
+                child_is_operator = platform_name(detail_url) == "operator-site"
+                if child_is_operator and not operator_page_matches_gym(detail_url, gym):
+                    frontier_skip_reasons["different-location"] += 1
+                    continue
+                if child_is_operator and depth >= MAX_OPERATOR_LINK_DEPTH:
+                    frontier_skip_reasons["operator-depth"] += 1
+                    continue
+                detail_identity = request_identity(detail_url)
                 if detail_identity not in visited and detail_identity not in queued:
                     pending.append((detail_url, storefront, depth + 1))
                     queued.add(detail_identity)
-    attempts_by_identity = {urldefrag(text(item.get("url")))[0]: item for item in attempts}
+    attempts_by_identity = {request_identity(text(item.get("url"))): item for item in attempts}
     reviewed_attempts = [
-        attempts_by_identity[urldefrag(route["url"])[0]]
+        attempts_by_identity[request_identity(route["url"])]
         for route in seed_routes
-        if urldefrag(route["url"])[0] in attempts_by_identity
+        if request_identity(route["url"]) in attempts_by_identity
     ]
     terminal_gone_statuses = {"http-404", "http-410"}
     all_reviewed_seeds_gone = bool(reviewed_attempts) and len(reviewed_attempts) == len(seed_routes) and all(
@@ -2288,6 +2394,9 @@ def crawl_gym(
     )
     attempts[0]["reviewedSeedCount"] = len(seed_routes)
     attempts[0]["reviewedSeedAttemptCount"] = len(reviewed_attempts)
+    attempts[0]["operatorRequestCount"] = operator_request_count
+    attempts[0]["bookingRequestCount"] = booking_request_count
+    attempts[0]["frontierSkipReasons"] = dict(sorted(frontier_skip_reasons.items()))
     attempts[0]["allReviewedSeedsGone"] = all_reviewed_seeds_gone
     if all_reviewed_seeds_gone:
         attempts[0]["requiresReview"] = True
