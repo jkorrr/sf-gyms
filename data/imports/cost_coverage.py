@@ -422,6 +422,13 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
     evidence.setdefault("exactLocationMatch", text(offer.get("exactLocationMatch")) or "exact-location")
     evidence.setdefault("sourceProductId", source_product_id)
     evidence.setdefault("conflictFlags", offer.get("conflictFlags", []))
+    normalized_allowance = class_allowance(offer.get("classAllowance") or f"{text(offer.get('name'))} {scope}") or (
+        {"count": None, "period": "month", "unlimited": False, "disclosed": False}
+        if (text(offer.get("productType")) or ("class-membership" if access == "class-membership" else "membership")) == "class-membership"
+        else None
+    )
+    if normalized_allowance and normalized(interval) in {"one time", "one-time"}:
+        normalized_allowance["period"] = "purchase"
     return {
         "id": f"{gym['id']}:plan:{stable_part}",
         "sourceProductId": source_product_id,
@@ -433,11 +440,7 @@ def normalize_plan_offer(gym: dict[str, Any], offer: dict[str, Any], index: int,
             if any(phrase in scope.casefold() for phrase in ("all locations", "across", "multi-location", "operator locations"))
             else "single-location"
         ),
-        "classAllowance": class_allowance(offer.get("classAllowance") or f"{text(offer.get('name'))} {scope}") or (
-            {"count": None, "period": "month", "unlimited": False, "disclosed": False}
-            if (text(offer.get("productType")) or ("class-membership" if access == "class-membership" else "membership")) == "class-membership"
-            else None
-        ),
+        "classAllowance": normalized_allowance,
         "billing": {
             "amount": amount,
             "amountLow": amount_low,
@@ -920,6 +923,36 @@ def has_publishable_official_cost_context(gym: dict[str, Any]) -> bool:
     return False
 
 
+def has_publishable_official_specialized_service(gym: dict[str, Any]) -> bool:
+    """Recognize exact public trainer-led services without inventing a day pass.
+
+    Restricted appointment facilities can publish useful exact service prices,
+    but those prices must remain outside the ordinary unrestricted day-pass
+    compatibility field.
+    """
+
+    for plan in gym.get("plans", []):
+        if not isinstance(plan, dict) or (plan.get("promotion") or {}).get("isPromotion"):
+            continue
+        billing = plan.get("billing") or {}
+        evidence = plan.get("evidence") or {}
+        eligibility = normalized((plan.get("eligibility") or {}).get("type"))
+        try:
+            amount = float(billing.get("amount"))
+        except (TypeError, ValueError):
+            continue
+        if (
+            amount > 0
+            and normalized(billing.get("interval")) in {"one time", "one-time", "visit", "session"}
+            and eligibility in {"trainer required", "restricted", "appointment required"}
+            and text(evidence.get("evidenceTier")) == "official-public"
+            and text(evidence.get("url")).startswith("https://")
+            and bool(text(evidence.get("observedAt")))
+        ):
+            return True
+    return False
+
+
 def normalize_drop_in(gym: dict[str, Any], offer: dict[str, Any], index: int, access: str) -> dict[str, Any]:
     raw_amount = offer.get("amount")
     amount = float(raw_amount) if raw_amount is not None and text(raw_amount) else None
@@ -1019,6 +1052,7 @@ def apply_approved_observations(gyms: list[dict[str, Any]], document: dict[str, 
         "catalogCompleteness",
         "costContextOffers",
         "officialPriceConflict",
+        "officialTermsConflict",
     )
     for approval in document.get("approvals", []):
         gym = by_id.get(text(approval.get("gymId")))
@@ -2084,6 +2118,10 @@ def enrich_document(document: dict[str, Any], generated_at: str) -> tuple[dict[s
                 gym["pricingStatus"] = "official-range"
                 gym["estimatedMonthly"] = None
                 gym["pricingBlocker"] = "The operator publishes a current official range or starting price, but trainer, service, or eligibility choices prevent selection of one exact standard-adult scalar."
+            elif not held_or_invalid and has_publishable_official_specialized_service(gym):
+                gym["pricingStatus"] = "pay-per-visit"
+                gym["estimatedMonthly"] = None
+                gym["pricingBlocker"] = "The operator publishes an exact trainer-led appointment price, but it is not an ordinary unrestricted gym or class drop-in."
             elif gym["entityKind"] in {"gym", "studio", "martial-arts"} and gym.get("pricingAccess") in {"account-required", "contact-required", "form-required"}:
                 gym["pricingStatus"] = "gated"
                 gym["pricingBlocker"] = "Access requires a trainer, appointment, invitation, or eligibility check, and the exact consumer rate is not publicly purchasable."

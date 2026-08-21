@@ -38,8 +38,15 @@ class RenderedCrawlerTests(unittest.TestCase):
     def test_only_neutral_public_pricing_tabs_are_clickable(self) -> None:
         self.assertTrue(rendered.is_safe_public_tab_label("Memberships"))
         self.assertTrue(rendered.is_safe_public_tab_label(" Packages "))
+        self.assertTrue(rendered.is_safe_public_tab_label("Personal Training"))
         self.assertFalse(rendered.is_safe_public_tab_label("Join now"))
         self.assertFalse(rendered.is_safe_public_tab_label("Create account"))
+
+    def test_mindbody_category_selector_avoids_account_and_gift_actions(self) -> None:
+        self.assertTrue(rendered.is_safe_mindbody_category_label("In Studio Memberships"))
+        self.assertTrue(rendered.is_safe_mindbody_category_label("Open Pole"))
+        self.assertFalse(rendered.is_safe_mindbody_category_label("Select item"))
+        self.assertFalse(rendered.is_safe_mindbody_category_label("Gift Cards"))
 
     def test_public_tab_links_cannot_navigate_off_the_exact_location_page(self) -> None:
         current = "https://operator.example/locations/sf#pricing"
@@ -110,6 +117,18 @@ class RenderedCrawlerTests(unittest.TestCase):
         candidates = rendered.candidate_gyms(document, attempts, "weekly")
         self.assertEqual({item["websiteUrl"] for item in candidates}, {
             "https://studio.example/pricing", "https://momence.com/studio/memberships",
+        })
+
+    def test_restricted_facility_with_public_platform_catalog_is_rendered(self) -> None:
+        document = {"gyms": [{
+            "id": "trainer", "name": "Trainer Studio", "websiteUrl": "https://trainer.example/",
+            "officialUrl": "https://trainer.example/", "priceSourceUrl": "https://trainer.janeapp.com/",
+            "publicationStatus": "publish", "recordStatus": "open", "entityKind": "studio",
+            "accessModel": "restricted", "monthlyPrice": None,
+        }]}
+        candidates = rendered.candidate_gyms(document, {"attempts": []}, "weekly")
+        self.assertEqual({item["websiteUrl"] for item in candidates}, {
+            "https://trainer.example/", "https://trainer.janeapp.com/",
         })
 
     def test_price_source_and_same_operator_research_pages_are_render_targets(self) -> None:

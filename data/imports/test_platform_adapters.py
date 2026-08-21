@@ -8,12 +8,14 @@ import platform_adapters as adapters
 
 
 FIXTURE = Path(__file__).parent / "fixtures" / "platform-catalogs.json"
+RENDERED_FIXTURE = Path(__file__).parent / "fixtures" / "rendered-platform-cards.json"
 
 
 class PlatformAdapterTests(unittest.TestCase):
     @classmethod
     def setUpClass(cls) -> None:
         cls.fixtures = json.loads(FIXTURE.read_text(encoding="utf-8"))
+        cls.rendered_fixtures = json.loads(RENDERED_FIXTURE.read_text(encoding="utf-8"))
 
     def test_all_supported_platform_fixtures_reconstruct_a_product(self) -> None:
         for name, fixture in self.fixtures.items():
@@ -72,6 +74,35 @@ class PlatformAdapterTests(unittest.TestCase):
         fixture = self.fixtures["bookee"]
         candidate = adapters.extract_candidates(fixture["payload"], fixture["url"])[0]
         self.assertEqual(candidate["amount"], 129)
+
+    def test_jane_personal_training_card_is_exact_but_trainer_required(self) -> None:
+        fixture = self.rendered_fixtures["janePersonalTraining"]
+        candidates = adapters.jane_service_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["href"],
+        )
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual(candidates[0]["sourceProductId"], "discipline-2-treatment-3")
+        self.assertEqual(candidates[0]["amount"], 250)
+        self.assertEqual(candidates[0]["eligibility"]["type"], "trainer-required")
+        self.assertFalse(candidates[0]["autoPublishEligible"])
+
+    def test_jane_clinical_service_is_excluded_from_fitness_catalog(self) -> None:
+        fixture = self.rendered_fixtures["janeClinicalExclusion"]
+        candidates = adapters.jane_service_card_candidates(
+            fixture["cardText"], fixture["url"], fixture["href"],
+        )
+        self.assertEqual(candidates, [])
+
+    def test_mindbody_product_row_keeps_price_attached_and_marks_special(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyPromotionalMembership"]
+        candidates = adapters.mindbody_purchase_item_candidates(
+            fixture["categoryLabel"], fixture["cardText"], fixture["url"], fixture["sourceProductId"],
+        )
+        self.assertEqual(len(candidates), 1)
+        self.assertEqual(candidates[0]["sourceProductId"], "11259")
+        self.assertEqual(candidates[0]["amount"], 699)
+        self.assertTrue(candidates[0]["promotion"]["isPromotion"])
+        self.assertEqual(candidates[0]["method"], "rendered-mindbody-purchase-item")
 
 
 if __name__ == "__main__":

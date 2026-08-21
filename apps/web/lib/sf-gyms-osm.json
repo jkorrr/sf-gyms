@@ -3023,7 +3023,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 6.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -3081,7 +3081,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -3139,7 +3139,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -3593,7 +3593,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -4204,7 +4204,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -4589,119 +4589,6 @@
         "hours": {
           "status": "exact-hours",
           "reason": ""
-        },
-        "amenities": {
-          "status": "listed",
-          "reason": ""
-        },
-        "operatorLocationId": {
-          "status": "listed",
-          "reason": ""
-        }
-      }
-    },
-    {
-      "id": "osm-node-12337873692",
-      "name": "Anthony Silva Fitness",
-      "neighborhood": "San Francisco",
-      "address": "858 Stanyan Street, San Francisco, CA",
-      "gymType": "Fitness centre",
-      "latitude": 37.7665072,
-      "longitude": -122.4528379,
-      "monthlyPrice": null,
-      "dayPassPrice": null,
-      "freshness": "unknown",
-      "isOpen247": false,
-      "amenities": [
-        "fitness",
-        "Wheelchair access"
-      ],
-      "description": "Anthony Silva Fitness is a personal training fitness studio in San Francisco. Current consumer pricing still needs confirmation from public evidence. Listed features include fitness, Wheelchair access.",
-      "hours": "Hours not published; the former operator domain is parked.",
-      "websiteUrl": "",
-      "sourceName": "OpenStreetMap",
-      "sourceId": "node/12337873692",
-      "sourceUrl": "https://www.openstreetmap.org/node/12337873692",
-      "importedAt": "2026-08-17T00:39:44Z",
-      "officialUrl": "",
-      "operatorLocationId": "stanyan-street",
-      "canonicalLocationId": "osm-node-12337873692",
-      "operatorId": "anthonysilvafitness.com",
-      "canonicalAddress": "858 stanyan st",
-      "sourceAliases": [],
-      "publicationStatus": "publish",
-      "recordStatus": "open",
-      "pricingAccess": "official-domain-parked",
-      "entityKindOverride": "studio",
-      "accessModelOverride": "restricted",
-      "modalityOverride": "personal-training",
-      "discoveryEvidence": {
-        "sourceUrl": "https://anthonysilvafitness.com/",
-        "sourceType": "official-domain-status",
-        "observedAt": "2026-08-19",
-        "note": "The current city registration supports the business identity and address, but the former operator domain is parked and provides no current schedule or facility metadata."
-      },
-      "priceReports": [],
-      "reportedMonthly": null,
-      "operatorConfirmedMonthly": null,
-      "deals": [],
-      "entityKind": "studio",
-      "modality": "personal-training",
-      "operatorKey": "anthony-silva",
-      "accessModel": "restricted",
-      "selectionRuleVersion": "neutral-basic-v2",
-      "plans": [],
-      "dropIns": [],
-      "selectedPlanId": null,
-      "selectedDropInId": null,
-      "typicalPlanId": null,
-      "highestAccessPlanId": null,
-      "bestValuePlanId": null,
-      "planViewStatus": {
-        "typical": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
-        },
-        "highestAccess": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
-        },
-        "bestValue": {
-          "status": "unavailable-incomplete-catalog",
-          "reason": "Alternative public plans have not been reconstructed from the source catalog."
-        }
-      },
-      "costContext": [],
-      "selectionReason": "",
-      "planValidationErrors": [],
-      "catalogStatus": {
-        "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
-        },
-        "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
-        }
-      },
-      "annualFee": null,
-      "enrollmentFee": null,
-      "initiationFee": null,
-      "processingFee": null,
-      "activationFee": null,
-      "estimatedMonthly": null,
-      "pricingBlocker": "The business's former official domain is parked or no longer contains an operator website.",
-      "pricingStatus": "unresolved",
-      "monthlyPriceBlocker": "The business's former official domain is parked or no longer contains an operator website.",
-      "dayPassPriceBlocker": "No current ordinary unrestricted single-visit price could be verified from the available public evidence.",
-      "metadataStatus": {
-        "officialUrl": {
-          "status": "not-found",
-          "reason": "No authoritative current operator or facility page was verified."
-        },
-        "hours": {
-          "status": "not-published",
-          "reason": "The reviewed official source did not publish a current visit schedule."
         },
         "amenities": {
           "status": "listed",
@@ -5385,7 +5272,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -5719,7 +5606,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -5777,7 +5664,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -9696,7 +9583,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -9754,7 +9641,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -13170,7 +13057,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 12.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -13228,7 +13115,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -15814,7 +15701,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -15872,7 +15759,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -19253,7 +19140,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -19311,7 +19198,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -19369,7 +19256,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -19427,7 +19314,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 40.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -19485,7 +19372,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21059,7 +20946,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21117,7 +21004,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21175,7 +21062,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21233,7 +21120,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 30.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21291,7 +21178,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 50.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21721,7 +21608,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21779,7 +21666,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21837,7 +21724,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21895,7 +21782,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 30.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -21953,7 +21840,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 50.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -22374,7 +22261,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -22432,7 +22319,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -22490,7 +22377,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -22548,7 +22435,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 30.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -22606,7 +22493,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 50.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23036,7 +22923,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23094,7 +22981,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23152,7 +23039,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23210,7 +23097,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 30.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23268,7 +23155,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 50.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23695,7 +23582,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23753,7 +23640,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23811,7 +23698,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23869,7 +23756,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 30.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -23927,7 +23814,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 50.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -24362,7 +24249,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -24420,7 +24307,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -24478,7 +24365,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -24536,7 +24423,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 30.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -24594,7 +24481,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 50.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -24977,7 +24864,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -25035,7 +24922,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -25093,7 +24980,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -25151,7 +25038,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -25209,7 +25096,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -25320,7 +25207,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -30352,7 +30239,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -31695,7 +31582,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -31755,7 +31642,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -31815,7 +31702,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -32573,7 +32460,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -34562,7 +34449,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -34620,7 +34507,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 8.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -34678,7 +34565,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 12.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -36672,7 +36559,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -36730,7 +36617,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -36788,7 +36675,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -41638,7 +41525,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 6.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -41964,7 +41851,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -42022,7 +41909,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -42082,7 +41969,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -42345,7 +42232,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 2.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -42405,7 +42292,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -45856,7 +45743,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "30 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -45972,7 +45859,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "2 months",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -46033,7 +45920,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "7 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -46885,7 +46772,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -46945,7 +46832,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -49124,7 +49011,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -49876,7 +49763,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -49934,7 +49821,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -49992,7 +49879,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -50050,7 +49937,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 8.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -50108,7 +49995,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 12.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -50166,7 +50053,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -56726,7 +56613,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -56784,7 +56671,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "3 months",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -59655,7 +59542,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -61385,7 +61272,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -61443,7 +61330,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -61501,7 +61388,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 15.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -61559,7 +61446,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -62433,7 +62320,7 @@
           "scopeType": "multi-location",
           "classAllowance": {
             "count": null,
-            "period": "30 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -62887,7 +62774,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -62945,7 +62832,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -63003,7 +62890,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -63063,7 +62950,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -63123,7 +63010,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66107,7 +65994,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66165,7 +66052,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 8.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66223,7 +66110,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66281,7 +66168,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66339,7 +66226,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66806,7 +66693,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66864,7 +66751,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66922,7 +66809,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 15.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -66980,7 +66867,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -68938,6 +68825,314 @@
       }
     },
     {
+      "id": "osm-node-12337873692",
+      "name": "Peak Physio",
+      "neighborhood": "San Francisco",
+      "address": "858 Stanyan Street, San Francisco, CA 94117",
+      "gymType": "Fitness centre",
+      "latitude": 37.7665072,
+      "longitude": -122.4528379,
+      "monthlyPrice": null,
+      "dayPassPrice": null,
+      "freshness": "verified",
+      "isOpen247": false,
+      "amenities": [
+        "fitness",
+        "Wheelchair access",
+        "one-on-one personal training",
+        "physical therapy",
+        "appointment-only service"
+      ],
+      "description": "Peak Physio is a personal training fitness studio in San Francisco. It uses packages, reservations, or pay-per-visit access rather than a verified recurring membership. Listed features include fitness, Wheelchair access, one-on-one personal training.",
+      "hours": "Hours not published; the former operator domain is parked.",
+      "websiteUrl": "https://peakphysiosf.janeapp.com/",
+      "sourceName": "OpenStreetMap",
+      "sourceId": "node/12337873692",
+      "sourceUrl": "https://www.openstreetmap.org/node/12337873692",
+      "importedAt": "2026-08-17T00:39:44Z",
+      "recordStatus": "open",
+      "entityKindOverride": "studio",
+      "accessModelOverride": "restricted",
+      "modalityOverride": "personal-training",
+      "pricingAccess": "public-appointment-catalog",
+      "officialUrl": "https://peakphysiosf.janeapp.com/",
+      "operatorLocationId": "stanyan-street",
+      "canonicalLocationId": "osm-node-12337873692",
+      "operatorId": "peakphysiosf.com",
+      "canonicalAddress": "858 stanyan st",
+      "sourceAliases": [],
+      "publicationStatus": "publish",
+      "discoveryEvidence": {
+        "sourceUrl": "https://anthonysilvafitness.com/",
+        "sourceType": "official-domain-status",
+        "observedAt": "2026-08-19",
+        "note": "The current city registration supports the business identity and address, but the former operator domain is parked and provides no current schedule or facility metadata."
+      },
+      "priceSource": "Peak Physio official site and linked public Jane appointment catalog",
+      "priceSourceUrl": "https://peakphysiosf.janeapp.com/",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The exact-address current operator publishes 60-minute one-to-one personal-training evaluations and follow-ups at $250. These are exact trainer-led appointment prices, not an ordinary unrestricted gym membership or class drop-in, so compatibility prices remain null.",
+      "planOffers": [
+        {
+          "sourceProductId": "discipline-2-treatment-3",
+          "name": "Personal Training: Initial Evaluation",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training evaluation",
+          "classAllowance": 1,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/3",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Initial Evaluation — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-3",
+            "conflictFlags": []
+          }
+        },
+        {
+          "sourceProductId": "discipline-2-treatment-4",
+          "name": "Personal Training: Follow Up",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training follow-up",
+          "classAllowance": 1,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": ""
+          },
+          "fees": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/4",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Follow Up — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-4",
+            "conflictFlags": []
+          }
+        }
+      ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "none-observed"
+      },
+      "priceReports": [],
+      "reportedMonthly": null,
+      "operatorConfirmedMonthly": null,
+      "deals": [],
+      "entityKind": "studio",
+      "modality": "personal-training",
+      "operatorKey": "peakphysiosf.janeapp.com",
+      "accessModel": "restricted",
+      "selectionRuleVersion": "neutral-basic-v2",
+      "plans": [
+        {
+          "id": "osm-node-12337873692:plan:discipline-2-treatment-3",
+          "sourceProductId": "discipline-2-treatment-3",
+          "name": "Personal Training: Initial Evaluation",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training evaluation",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 250.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/3",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Initial Evaluation — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-3",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-12337873692:plan:discipline-2-treatment-4",
+          "sourceProductId": "discipline-2-treatment-4",
+          "name": "Personal Training: Follow Up",
+          "productType": "class-pack",
+          "accessScope": "One trainer-led 60-minute personal-training follow-up",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 1.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 250.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "trainer-required",
+            "restrictions": [
+              "One-to-one appointment; not an ordinary unrestricted gym or class drop-in"
+            ]
+          },
+          "promotion": {
+            "isPromotion": false,
+            "label": "",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://peakphysiosf.janeapp.com/#/discipline/2/treatment/4",
+            "observedAt": "2026-08-21",
+            "method": "rendered-jane-service-card",
+            "rawLabel": "Personal Training: Follow Up — 60 minutes — $250.00",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "discipline-2-treatment-4",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        }
+      ],
+      "dropIns": [],
+      "selectedPlanId": null,
+      "selectedDropInId": null,
+      "typicalPlanId": null,
+      "highestAccessPlanId": null,
+      "bestValuePlanId": null,
+      "planViewStatus": {
+        "typical": {
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
+        },
+        "highestAccess": {
+          "status": "not-applicable",
+          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
+        },
+        "bestValue": {
+          "status": "not-labeled-by-operator",
+          "reason": "The operator did not publicly label an eligible plan as best value or most popular."
+        }
+      },
+      "costContext": [],
+      "selectionReason": "",
+      "planValidationErrors": [],
+      "catalogStatus": {
+        "plans": {
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
+        },
+        "dropIns": {
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
+        }
+      },
+      "annualFee": null,
+      "enrollmentFee": null,
+      "initiationFee": null,
+      "processingFee": null,
+      "activationFee": null,
+      "estimatedMonthly": null,
+      "pricingBlocker": "The operator publishes an exact trainer-led appointment price, but it is not an ordinary unrestricted gym or class drop-in.",
+      "pricingStatus": "pay-per-visit",
+      "monthlyPriceBlocker": "The operator publishes an exact trainer-led appointment price, but it is not an ordinary unrestricted gym or class drop-in.",
+      "dayPassPriceBlocker": "The official source lists packages, reservations, or specialized sessions but no ordinary unrestricted single visit.",
+      "metadataStatus": {
+        "officialUrl": {
+          "status": "listed",
+          "reason": ""
+        },
+        "hours": {
+          "status": "not-published",
+          "reason": "The reviewed official source did not publish a current visit schedule."
+        },
+        "amenities": {
+          "status": "listed",
+          "reason": ""
+        },
+        "operatorLocationId": {
+          "status": "listed",
+          "reason": ""
+        }
+      }
+    },
+    {
       "id": "osm-node-12132354827",
       "name": "Perform for Golf — Hayes Valley",
       "neighborhood": "San Francisco",
@@ -69542,7 +69737,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -69600,7 +69795,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -71217,7 +71412,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -71275,7 +71470,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -72043,7 +72238,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -72101,7 +72296,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -72615,7 +72810,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -72673,7 +72868,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -72731,7 +72926,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 20.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -72789,7 +72984,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -72984,7 +73179,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -73619,7 +73814,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 3.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -73944,7 +74139,7 @@
       "canonicalAddress": "301 8th st",
       "sourceAliases": [],
       "publicationStatus": "publish",
-      "pricingAccess": "official-price-conflict",
+      "pricingAccess": "public-official-range",
       "entityKindOverride": "studio",
       "accessModelOverride": "class-membership",
       "modalityOverride": "gymnastics-dance",
@@ -73952,12 +74147,12 @@
         "sourceUrl": "https://www.sistersinmotionsf.com/studioschedule",
         "sourceType": "official-schedule",
         "observedAt": "2026-08-19",
-        "note": "The official home describes eight classes every four weeks, while the current terms page contains contradictory duplicate cancellation and ongoing-price blocks. Pricing remains unresolved pending review."
+        "note": "The official home describes eight classes every four weeks and an approximate $27–$32 per-class range. Duplicate cancellation and post-term policy blocks remain a disclosed terms conflict, but they do not invalidate the separate official range."
       },
-      "priceSource": "Sisters in Motion official home, discovery, and terms pages",
-      "priceSourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+      "priceSource": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+      "priceSourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
       "priceObservedAt": "2026-08-21",
-      "priceNote": "The live terms page contains two contradictory policy blocks, including different early-cancellation fees and only one $220/every-four-weeks statement. Current neutral membership pricing therefore fails closed. The $29 discovery and $199 four-week-unlimited products are time-limited introductory promotions and remain unselected.",
+      "priceNote": "The current official page says ongoing in-studio membership costs about $27–$32 per class and provides eight classes every four weeks. The public Mindbody storefront currently exposes $699 three-month promotional products. A separate duplicate-terms conflict remains disclosed, but no disputed amount or promotional product is selected as the standard plan.",
       "planOffers": [
         {
           "sourceProductId": "discovery-package",
@@ -73998,29 +74193,81 @@
             ]
           },
           "fees": []
+        },
+        {
+          "sourceProductId": "mindbody-11259",
+          "name": "3 Month In Studio Special",
+          "productType": "class-pack",
+          "accessScope": "Three-month in-studio promotional term",
+          "amount": 699,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": true,
+            "label": "Public Mindbody special"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Promotional product; ordinary ongoing terms are not established by this card"
+            ]
+          },
+          "purchaseMethod": "direct-public",
+          "fees": []
+        },
+        {
+          "sourceProductId": "mindbody-11057",
+          "name": "3 Month Summer Embodiment Series",
+          "productType": "class-pack",
+          "accessScope": "Three-month seasonal embodiment series",
+          "amount": 699,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "promotion": {
+            "isPromotion": true,
+            "label": "Seasonal public Mindbody product"
+          },
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Seasonal product; ordinary ongoing terms are not established by this card"
+            ]
+          },
+          "purchaseMethod": "direct-public",
+          "fees": []
         }
       ],
+      "dropInOffers": [],
+      "catalogCompleteness": {
+        "plans": "partial",
+        "dropIns": "none-observed"
+      },
       "costContextOffers": [
         {
-          "kind": "conflicting-price",
-          "label": "One current terms block: month-to-month membership after the minimum term",
-          "amount": 220,
-          "cadence": "4 weeks",
-          "normalizedMonthlyLow": 238.33,
-          "normalizedMonthlyHigh": 238.33,
+          "kind": "range",
+          "label": "Ongoing in-studio membership — approximate per-class cost",
+          "low": 27,
+          "high": 32,
+          "cadence": "class",
           "productType": "class-membership",
-          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "sourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
           "observedAt": "2026-08-21",
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
-          "conflictFlags": [
-            "duplicate-contradictory-live-terms",
-            "early-cancellation-fee-conflict"
-          ],
-          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms."
+          "conflictFlags": [],
+          "note": "The operator describes the amount as approximate; it remains cost context rather than an exact selected recurring price."
         }
       ],
-      "officialPriceConflict": true,
+      "officialPriceConflict": false,
+      "officialTermsConflict": {
+        "status": "unresolved",
+        "fields": [
+          "early-cancellation fee",
+          "post-minimum-term amount"
+        ],
+        "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+        "note": "Two live policy blocks state different early-cancellation fees; only one block states a $220 every-four-weeks post-term amount. Neither disputed value is selected."
+      },
       "priceReports": [],
       "reportedMonthly": null,
       "operatorConfirmedMonthly": null,
@@ -74072,12 +74319,12 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+            "url": "https://www.sistersinmotionsf.com/discoverypackage",
             "observedAt": "2026-08-21",
-            "source": "Sisters in Motion official home, discovery, and terms pages",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
             "method": "reviewed-official-observation",
             "rawLabel": "Discovery Package",
-            "contentHash": "abcf72fa327635a646c4c87101c81f728d223417f07c97535c2d7e4bc62fe5c6",
+            "contentHash": "4811d0cf446b141176ed8b92ed7c8b225eeed695078cc9128b906eff62a55af1",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "discovery-package",
@@ -74095,7 +74342,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -74132,15 +74379,135 @@
           "bestValueLabel": false,
           "upfrontDues": [],
           "evidence": {
-            "url": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+            "url": "https://www.sistersinmotionsf.com/discoverypackage",
             "observedAt": "2026-08-21",
-            "source": "Sisters in Motion official home, discovery, and terms pages",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
             "method": "reviewed-official-observation",
             "rawLabel": "Four Weeks Unlimited",
-            "contentHash": "77eba16af5cca7544e8b89451e7a490f492e47b1ee025d08f37eb6e88bbc599f",
+            "contentHash": "991d57b8ea7bba3c8158a205557a2eb92d0ff3661c4ce84325a76216cf455c30",
             "evidenceTier": "official-public",
             "exactLocationMatch": "exact-location",
             "sourceProductId": "four-weeks-unlimited-promo",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:mindbody-11259",
+          "sourceProductId": "mindbody-11259",
+          "name": "3 Month In Studio Special",
+          "productType": "class-pack",
+          "accessScope": "Three-month in-studio promotional term",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 699.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Promotional product; ordinary ongoing terms are not established by this card"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Public Mindbody special",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.sistersinmotionsf.com/discoverypackage",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "3 Month In Studio Special",
+            "contentHash": "9ac7f3e18580ea0d7712c6bb54953b99ddbdef122b2674b777a4588ffa82bdc6",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "mindbody-11259",
+            "conflictFlags": []
+          },
+          "selected": false,
+          "selectionReason": ""
+        },
+        {
+          "id": "osm-node-3986912499:plan:mindbody-11057",
+          "sourceProductId": "mindbody-11057",
+          "name": "3 Month Summer Embodiment Series",
+          "productType": "class-pack",
+          "accessScope": "Three-month seasonal embodiment series",
+          "scopeType": "single-location",
+          "classAllowance": {
+            "count": 3.0,
+            "period": "purchase",
+            "unlimited": false,
+            "disclosed": true
+          },
+          "billing": {
+            "amount": 699.0,
+            "amountLow": null,
+            "amountHigh": null,
+            "currency": "USD",
+            "interval": "one-time",
+            "intervalCount": 1,
+            "normalizedMonthly": null,
+            "normalizationFormula": "not applicable: one-time purchase"
+          },
+          "commitment": {
+            "type": "none",
+            "minimumMonths": null,
+            "minimumDays": null,
+            "rawLabel": ""
+          },
+          "availability": "available",
+          "purchaseMethod": "direct-public",
+          "eligibility": {
+            "type": "new-client",
+            "restrictions": [
+              "Seasonal product; ordinary ongoing terms are not established by this card"
+            ]
+          },
+          "promotion": {
+            "isPromotion": true,
+            "label": "Seasonal public Mindbody product",
+            "expiresAt": null
+          },
+          "fees": [],
+          "bestValueLabel": false,
+          "upfrontDues": [],
+          "evidence": {
+            "url": "https://www.sistersinmotionsf.com/discoverypackage",
+            "observedAt": "2026-08-21",
+            "source": "Sisters in Motion official discovery page and operator-linked public Mindbody catalog",
+            "method": "reviewed-official-observation",
+            "rawLabel": "3 Month Summer Embodiment Series",
+            "contentHash": "d8ae880a6981780d107c2ccd6c0b2873f94a47b85d137a8760f37c68aff536d5",
+            "evidenceTier": "official-public",
+            "exactLocationMatch": "exact-location",
+            "sourceProductId": "mindbody-11057",
             "conflictFlags": []
           },
           "selected": false,
@@ -74155,50 +74522,45 @@
       "bestValuePlanId": null,
       "planViewStatus": {
         "typical": {
-          "status": "not-applicable",
-          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
         },
         "highestAccess": {
-          "status": "not-applicable",
-          "reason": "No eligible standard-adult recurring plan is available in the reviewed catalog."
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
         },
         "bestValue": {
-          "status": "not-labeled-by-operator",
-          "reason": "The operator did not publicly label an eligible plan as best value or most popular."
+          "status": "unavailable-incomplete-catalog",
+          "reason": "Alternative public plans have not been reconstructed from the source catalog."
         }
       },
       "costContext": [
         {
-          "kind": "conflicting-price",
-          "label": "One current terms block: month-to-month membership after the minimum term",
-          "low": 220.0,
-          "high": 220.0,
+          "kind": "range",
+          "label": "Ongoing in-studio membership — approximate per-class cost",
+          "low": 27.0,
+          "high": 32.0,
           "currency": "USD",
-          "cadence": "4 weeks",
+          "cadence": "class",
           "productType": "class-membership",
-          "sourceUrl": "https://www.sistersinmotionsf.com/terms-and-conditions-sisters-in-motion-sf",
+          "sourceUrl": "https://www.sistersinmotionsf.com/discoverypackage",
           "observedAt": "2026-08-21",
           "evidenceTier": "official-public",
           "exactLocationMatch": "exact-location",
-          "conflictFlags": [
-            "duplicate-contradictory-live-terms",
-            "early-cancellation-fee-conflict"
-          ],
-          "note": "The amount appears in only one of two contradictory live policy blocks and is not selectable until the operator resolves the terms.",
+          "conflictFlags": [],
+          "note": "The operator describes the amount as approximate; it remains cost context rather than an exact selected recurring price.",
           "selectable": false,
-          "normalizedMonthlyLow": 238.33,
-          "normalizedMonthlyHigh": 238.33,
-          "id": "osm-node-3986912499:cost-context:ea154870892c"
+          "normalizedMonthlyLow": null,
+          "normalizedMonthlyHigh": null,
+          "id": "osm-node-3986912499:cost-context:601642d7f88e"
         }
       ],
       "selectionReason": "",
-      "planValidationErrors": [
-        "Current official sources contain an unresolved price conflict."
-      ],
+      "planValidationErrors": [],
       "catalogStatus": {
         "plans": {
-          "status": "source-catalog",
-          "reason": "Reviewed source offers are retained before deterministic selection."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -74211,10 +74573,10 @@
       "processingFee": null,
       "activationFee": null,
       "estimatedMonthly": null,
-      "pricingBlocker": "Current official pages contain conflicting price or contract terms that require review.",
-      "pricingStatus": "unresolved",
-      "monthlyPriceBlocker": "Current official pages contain conflicting price or contract terms that require review.",
-      "dayPassPriceBlocker": "No current ordinary unrestricted single-visit price could be verified from the available public evidence.",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but no single standard-adult scalar can be selected without inventing precision.",
+      "pricingStatus": "official-range",
+      "monthlyPriceBlocker": "The operator publishes a current official range or starting price, but no single standard-adult scalar can be selected without inventing precision.",
+      "dayPassPriceBlocker": "The official public source did not publish an ordinary unrestricted single visit or class price.",
       "metadataStatus": {
         "officialUrl": {
           "status": "listed",
@@ -78807,7 +79169,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -81606,7 +81968,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "30 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -82484,7 +82846,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -82544,7 +82906,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 1.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -84497,7 +84859,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -85604,7 +85966,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 4.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -85662,7 +86024,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -85720,7 +86082,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 5.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -85778,7 +86140,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": 10.0,
-            "period": "month",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": true
           },
@@ -86200,7 +86562,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "30 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -86260,7 +86622,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "7 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -86320,7 +86682,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "6 weeks",
+            "period": "purchase",
             "unlimited": false,
             "disclosed": false
           },
@@ -93222,7 +93584,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "30 days",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },
@@ -94597,7 +94959,7 @@
           "scopeType": "single-location",
           "classAllowance": {
             "count": null,
-            "period": "month",
+            "period": "purchase",
             "unlimited": true,
             "disclosed": true
           },

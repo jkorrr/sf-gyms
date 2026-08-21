@@ -444,48 +444,6 @@
       ]
     },
     {
-      "id": "osm-node-12337873692",
-      "name": "Anthony Silva Fitness",
-      "address": "858 Stanyan Street, San Francisco, CA",
-      "websiteUrl": "",
-      "entityKind": "studio",
-      "modality": "personal-training",
-      "pricingStatus": "unresolved",
-      "pricingBlocker": "The business's former official domain is parked or no longer contains an operator website.",
-      "estimatedMonthly": null,
-      "reportedMonthly": null,
-      "priceReports": [],
-      "publicationStatus": "publish",
-      "planValidationErrors": [],
-      "selectedPlanId": null,
-      "catalogStatus": {
-        "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
-        },
-        "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
-        }
-      },
-      "discoveryStatus": "needs-official-site",
-      "crawlStatus": "not-applicable",
-      "sourceAttemptStatus": "crawl-attempted",
-      "sourceAttemptBlocker": "",
-      "crawlAttempts": [
-        {
-          "url": "https://anthonysilvafitness.com",
-          "status": "fetched",
-          "candidateCount": 0
-        },
-        {
-          "url": "https://anthonysilvafitness.com",
-          "status": "rendered",
-          "candidateCount": 0
-        }
-      ]
-    },
-    {
       "id": "osm-node-417275907",
       "name": "Aquatic Park Bocce Ball Courts",
       "address": "West end of the Aquatic Park promenade, San Francisco, CA",
@@ -8426,6 +8384,48 @@
       ]
     },
     {
+      "id": "osm-node-12337873692",
+      "name": "Peak Physio",
+      "address": "858 Stanyan Street, San Francisco, CA 94117",
+      "websiteUrl": "https://peakphysiosf.janeapp.com/",
+      "entityKind": "studio",
+      "modality": "personal-training",
+      "pricingStatus": "pay-per-visit",
+      "pricingBlocker": "The operator publishes an exact trainer-led appointment price, but it is not an ordinary unrestricted gym or class drop-in.",
+      "estimatedMonthly": null,
+      "reportedMonthly": null,
+      "priceReports": [],
+      "publicationStatus": "publish",
+      "planValidationErrors": [],
+      "selectedPlanId": null,
+      "catalogStatus": {
+        "plans": {
+          "status": "source-catalog",
+          "reason": "Reviewed source offers are retained before deterministic selection."
+        },
+        "dropIns": {
+          "status": "none",
+          "reason": "No ordinary public single-visit or single-class catalog was verified."
+        }
+      },
+      "discoveryStatus": "official-page-present",
+      "crawlStatus": "attempted",
+      "sourceAttemptStatus": "crawl-attempted",
+      "sourceAttemptBlocker": "",
+      "crawlAttempts": [
+        {
+          "url": "https://anthonysilvafitness.com",
+          "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://peakphysiosf.janeapp.com/",
+          "status": "rendered",
+          "candidateCount": 2
+        }
+      ]
+    },
+    {
       "id": "osm-node-12132354827",
       "name": "Perform for Golf — Hayes Valley",
       "address": "1700 Market Street, San Francisco, CA 94102",
@@ -9362,20 +9362,18 @@
       "websiteUrl": "https://www.sistersinmotionsf.com/",
       "entityKind": "studio",
       "modality": "gymnastics-dance",
-      "pricingStatus": "unresolved",
-      "pricingBlocker": "Current official pages contain conflicting price or contract terms that require review.",
+      "pricingStatus": "official-range",
+      "pricingBlocker": "The operator publishes a current official range or starting price, but no single standard-adult scalar can be selected without inventing precision.",
       "estimatedMonthly": null,
       "reportedMonthly": null,
       "priceReports": [],
       "publicationStatus": "publish",
-      "planValidationErrors": [
-        "Current official sources contain an unresolved price conflict."
-      ],
+      "planValidationErrors": [],
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "source-catalog",
-          "reason": "Reviewed source offers are retained before deterministic selection."
+          "status": "source-fragment",
+          "reason": "Reviewed source offers are retained, but completeness of the public catalog has not been established."
         },
         "dropIns": {
           "status": "none",
@@ -9404,6 +9402,16 @@
         },
         {
           "url": "https://www.sistersinmotionsf.com/",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.sistersinmotionsf.com/discoverypackage",
+          "status": "rendered",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.sistersinmotionsf.com/studioschedule",
           "status": "rendered",
           "candidateCount": 0
         }

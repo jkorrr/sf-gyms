@@ -18,7 +18,7 @@ from urllib.parse import urlparse
 MONEY_RE = re.compile(r"\$?\s*(\d{1,6}(?:\.\d{1,2})?)")
 PROMOTION_RE = re.compile(
     r"\b(?:intro|trial|first month|first class|first visit|first session|first week|founding|presale|"
-    r"new client|new member|new student|welcome|limited time|special|save|off)\b",
+    r"new client|new member|new student|welcome|limited time|special|summer|seasonal|save|off)\b",
     re.IGNORECASE,
 )
 RESTRICTED_RE = re.compile(r"\b(?:student|resident|employee|senior|youth|military|corporate)\b", re.IGNORECASE)
@@ -49,12 +49,24 @@ PROFILES = (
     PlatformProfile("zen-planner", ("zenplanner.com",)),
     PlatformProfile("gymdesk", ("gymdesk.com",)),
     PlatformProfile("acuity", ("as.me", "acuityscheduling.com", "squarespacescheduling.com")),
+    PlatformProfile("jane", ("janeapp.com",)),
     PlatformProfile("bookee", ("onbookee.com",)),
     PlatformProfile("mariana-tek", ("marianatek.com", "marianaiframes.com")),
     PlatformProfile("eventbrite", ("eventbrite.com",)),
     PlatformProfile("abc-fitness", ("onlinejoin.abcfitness.com",)),
     PlatformProfile("redpoint", ("portal.movementgyms.com",)),
     PlatformProfile("approach", ("portal.approach.app",)),
+)
+
+FITNESS_SERVICE_RE = re.compile(
+    r"\b(?:personal training|strength training|fitness training|athletic performance|sports performance|"
+    r"conditioning|mobility training)\b",
+    re.IGNORECASE,
+)
+CLINICAL_SERVICE_RE = re.compile(
+    r"\b(?:physical therapy|physiotherapy|occupational therapy|chiropractic|acupuncture|massage therapy|"
+    r"manual therapy|telehealth)\b",
+    re.IGNORECASE,
 )
 
 NAME_KEYS = ("name", "title", "label", "productName", "packageName", "membershipName", "serviceName")
@@ -288,3 +300,110 @@ def extract_candidates(payload: Any, source_url: str) -> list[dict[str, Any]]:
             "autoPublishEligible": False,
         })
     return candidates
+
+
+def jane_service_card_candidates(card_text: str, source_url: str, href: str = "") -> list[dict[str, Any]]:
+    """Extract exact fitness-service prices from a public Jane appointment card.
+
+    Jane storefronts often mix fitness services with clinical care. Only
+    explicitly fitness-shaped services are retained, and they remain
+    trainer-required one-time review candidates rather than ordinary drop-ins.
+    """
+
+    if platform_for_url(source_url) != "jane":
+        return []
+    label_lines = [" ".join(line.split()) for line in text(card_text).splitlines() if text(line)]
+    label = next((line for line in label_lines if "$" not in line and not re.fullmatch(r"\d+\s*minutes?", line, re.IGNORECASE) and not line.casefold().startswith("offered by")), "")
+    amount_match = re.search(r"\$\s*(\d{1,4}(?:\.\d{1,2})?)", card_text)
+    duration_match = re.search(r"\b(\d{1,3})\s*minutes?\b", card_text, re.IGNORECASE)
+    if not label or not amount_match or not FITNESS_SERVICE_RE.search(label) or CLINICAL_SERVICE_RE.search(label):
+        return []
+    amount = float(amount_match.group(1))
+    if amount <= 0 or amount > 2_000:
+        return []
+    identity = re.search(r"discipline/(\d+)/treatment/(\d+)", href)
+    product_id = f"discipline-{identity.group(1)}-treatment-{identity.group(2)}" if identity else ""
+    duration = int(duration_match.group(1)) if duration_match else None
+    scope = f"One trainer-led {duration}-minute session" if duration else "One trainer-led session"
+    return [{
+        "sourceProductId": product_id,
+        "amount": amount,
+        "currency": "USD",
+        "rawLabel": label[:220],
+        "cadence": "one-time",
+        "intervalCount": 1,
+        "productType": "offer",
+        "classAllowance": {"count": 1, "period": "purchase", "unlimited": False},
+        "accessScope": scope,
+        "durationMinutes": duration,
+        "promotion": {"isPromotion": False, "label": ""},
+        "eligibility": {
+            "type": "trainer-required",
+            "restrictions": ["One-to-one appointment; not an ordinary unrestricted gym or class drop-in"],
+        },
+        "commitment": {"type": "none", "minimumMonths": None},
+        "fees": [],
+        "locations": [],
+        "bestValueLabel": False,
+        "purchaseMethod": "direct-public",
+        "method": "rendered-jane-service-card",
+        "adapter": "jane",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]
+
+
+def mindbody_purchase_item_candidates(
+    category_label: str,
+    card_text: str,
+    source_url: str,
+    source_product_id: str = "",
+) -> list[dict[str, Any]]:
+    """Extract a product associated with its price from a rendered Mindbody row."""
+
+    if platform_for_url(source_url) != "mindbody":
+        return []
+    lines = [" ".join(line.split()) for line in text(card_text).splitlines() if text(line)]
+    label = next((line for line in lines if "$" not in line), "")
+    amount_match = re.search(r"\$\s*(\d{1,5}(?:\.\d{1,2})?)", card_text)
+    if not label or not amount_match:
+        return []
+    amount = float(amount_match.group(1))
+    if amount <= 0 or amount > 10_000:
+        return []
+    combined = f"{category_label} {label}"
+    cadence, interval_count = cadence_from({}, combined)
+    recurring = cadence not in {"one-time", "visit"}
+    allowance = class_allowance({}, combined, cadence)
+    promotion = bool(PROMOTION_RE.search(combined))
+    online_only = bool(re.search(r"\bvirtual\b", combined, re.IGNORECASE))
+    drop_in = bool(DROP_IN_RE.search(combined))
+    return [{
+        "sourceProductId": text(source_product_id),
+        "amount": amount,
+        "currency": "USD",
+        "rawLabel": label[:220],
+        "categoryLabel": " ".join(text(category_label).split())[:160],
+        "cadence": "visit" if drop_in else cadence,
+        "intervalCount": interval_count,
+        "productType": "drop-in" if drop_in else ("monthly" if recurring else "offer"),
+        "classAllowance": allowance,
+        "promotion": {"isPromotion": promotion, "label": combined if promotion else ""},
+        "eligibility": {
+            "type": "online-only" if online_only else ("new-client" if promotion else "standard-adult"),
+            "restrictions": ["Virtual product; not in-person location access"] if online_only else (["Promotional or seasonal product"] if promotion else []),
+        },
+        "commitment": commitment({}, combined, recurring),
+        "fees": [],
+        "locations": [],
+        "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
+        "purchaseMethod": "direct-public",
+        "method": "rendered-mindbody-purchase-item",
+        "adapter": "mindbody",
+        "evidenceTier": "official-public",
+        "exactLocationMatch": "candidate",
+        "sourceUrl": source_url,
+        "autoPublishEligible": False,
+    }]

@@ -48,6 +48,7 @@ MAX_REVIEWED_SEED_URLS = 8
 BOOKING_DOMAINS = {
     "clients.mindbodyonline.com",
     "cart.mindbodyonline.com",
+    "janeapp.com",
     "www.clubready.com",
     "clubready.com",
     "marianatek.com",
@@ -229,6 +230,7 @@ def platform_name(source_url: str) -> str:
     host = hostname(source_url)
     mappings = (
         ("mindbodyonline.com", "mindbody"),
+        ("janeapp.com", "jane"),
         ("clubready.com", "clubready"),
         ("marianatek.com", "mariana-tek"),
         ("marianaiframes.com", "mariana-tek"),

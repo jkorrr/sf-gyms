@@ -53,6 +53,15 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(drops, [])
         self.assertIsNone(selected_drop)
 
+    def test_one_time_offer_allowance_uses_purchase_period(self) -> None:
+        value = gym("one-time", "One-Time Studio", None)
+        plan = coverage.normalize_plan_offer(value, {
+            "sourceProductId": "five-pack", "name": "Five Session Pack",
+            "productType": "class-pack", "amount": 200,
+            "billingInterval": "one-time", "classAllowance": 5,
+        }, 0, "class-pack")
+        self.assertEqual(plan["classAllowance"]["period"], "purchase")
+
     def test_operator_catalog_approval_applies_only_to_explicit_matching_targets(self) -> None:
         first = gym("first", "First Branch", 80, operatorId="example-chain")
         second = gym("second", "Second Branch", 80, operatorId="example-chain")
@@ -291,6 +300,32 @@ class CostCoverageTests(unittest.TestCase):
         document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [restricted]}, "2026-08-17")
         self.assertEqual(document["gyms"][0]["pricingStatus"], "gated")
         self.assertIn("trainer", document["gyms"][0]["pricingBlocker"])
+        self.assertEqual(report["commercialListings"], 0)
+
+    def test_restricted_exact_trainer_service_is_pay_per_visit_without_day_pass_leak(self) -> None:
+        value = gym(
+            "trainer-service", "Trainer Service", None,
+            entityKindOverride="studio", accessModelOverride="restricted",
+            priceSourceUrl="https://trainer.janeapp.com/", priceObservedAt="2026-08-21",
+            planOffers=[{
+                "sourceProductId": "discipline-2-treatment-4",
+                "name": "Personal Training: Follow Up",
+                "productType": "class-pack",
+                "accessScope": "One trainer-led 60-minute session",
+                "amount": 250,
+                "billingInterval": "one-time",
+                "commitmentType": "none",
+                "eligibility": {"type": "trainer-required", "restrictions": ["Appointment required"]},
+                "promotion": {"isPromotion": False},
+                "fees": [],
+            }],
+        )
+        document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [value]}, "2026-08-21")
+        result = document["gyms"][0]
+        self.assertEqual(result["pricingStatus"], "pay-per-visit")
+        self.assertIsNone(result["monthlyPrice"])
+        self.assertIsNone(result["dayPassPrice"])
+        self.assertIsNone(result["selectedPlanId"])
         self.assertEqual(report["commercialListings"], 0)
 
     def test_enrollment_paused_facility_is_not_in_actionable_commercial_denominator(self) -> None:

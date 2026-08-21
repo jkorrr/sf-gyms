@@ -1,0 +1,18 @@
+{
+  "janePersonalTraining": {
+    "url": "https://peakphysiosf.janeapp.com/#/personal-training",
+    "href": "#/discipline/2/treatment/3",
+    "cardText": "Personal Training: Initial Evaluation\nOffered by Julian Cisneros\n60 minutes\n$250.00"
+  },
+  "janeClinicalExclusion": {
+    "url": "https://peakphysiosf.janeapp.com/",
+    "href": "#/discipline/1/treatment/2",
+    "cardText": "Physical Therapy: Follow Up\nOffered by Julian Cisneros\n60 minutes\n$250.00"
+  },
+  "mindbodyPromotionalMembership": {
+    "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=597858&stype=40",
+    "categoryLabel": "In Studio Memberships",
+    "sourceProductId": "11259",
+    "cardText": "3 Month In Studio Special\n$699.00"
+  }
+}

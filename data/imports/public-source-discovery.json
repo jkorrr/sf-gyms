@@ -1276,13 +1276,13 @@
       "latitude": 37.7748422,
       "longitude": -122.40961,
       "recordStatus": "open",
-      "pricingAccess": "official-price-conflict",
+      "pricingAccess": "public-official-range",
       "entityKindOverride": "studio",
       "accessModelOverride": "class-membership",
       "modalityOverride": "gymnastics-dance",
       "amenities": ["pole dance", "embodiment classes", "open pole", "women-focused classes"],
       "observedAt": "2026-08-19",
-      "note": "The current home describes eight classes every four weeks, but the live terms page contains contradictory duplicate cancellation/ongoing-price blocks. Promotional discovery products do not resolve the neutral ongoing plan, so pricing fails closed pending review."
+      "note": "The current home describes eight classes every four weeks and a current official per-class range. The linked public Mindbody catalog exposes promotional term products. Duplicate cancellation-fee terms remain a policy conflict, but they do not invalidate the separately labeled official cost range."
     },
     {
       "gymId": "osm-node-4101104064",
@@ -1322,7 +1322,7 @@
       "note": "The current official operator at the exact Telegraph CrossFit address is TC Strength & Fitness. Founder and location continuity support a reviewed rebrand rather than a second active business."
     },
     {
-      "gymId": "osm-node-12337873692", "reviewStatus": "approved", "sourceType": "official-domain-status", "sourceUrl": "https://anthonysilvafitness.com/", "websiteUrl": "", "officialUrl": "", "recordStatus": "unknown", "pricingAccess": "official-domain-parked", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The former operator domain is currently parked and contains no current studio identity, schedule, or rate card."
+      "gymId": "osm-node-12337873692", "reviewStatus": "superseded", "sourceType": "official-domain-status", "sourceUrl": "https://anthonysilvafitness.com/", "websiteUrl": "", "officialUrl": "", "recordStatus": "unknown", "pricingAccess": "official-domain-parked", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "Superseded after exact-address replacement research identified the current Peak Physio operator and public booking catalog."
     },
     {
       "gymId": "osm-node-2537352227", "reviewStatus": "approved", "sourceType": "official-domain-status", "sourceUrl": "https://bayareastrengthandnutrition.com/", "websiteUrl": "", "officialUrl": "", "recordStatus": "unknown", "pricingAccess": "official-site-dns-failure", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The linked operator domain no longer resolves and no current replacement official site was verified."
@@ -1379,7 +1379,7 @@
       "gymId": "osm-node-12044095332", "reviewStatus": "approved", "sourceType": "official-site", "sourceUrl": "https://www.hot8yoga.com/membership-pricing-norcal", "websiteUrl": "https://www.hot8yoga.com/locations", "officialUrl": "https://www.hot8yoga.com/locations", "operatorLocationId": "san-francisco-fidi", "name": "Hot 8 Yoga - San Francisco FiDi", "address": "248 Sutter Street, San Francisco, CA 94108", "recordStatus": "open", "entityKindOverride": "studio", "accessModelOverride": "class-membership", "modalityOverride": "yoga", "observedAt": "2026-08-19", "note": "The official NorCal rate card and location directory expose neutral recurring and single-class prices for the FiDi studio."
     },
     {
-      "gymId": "osm-node-12337873692", "reviewStatus": "approved", "sourceType": "official-registry", "sourceUrl": "https://data.sfgov.org/resource/g8m3-pdis.json", "websiteUrl": "", "officialUrl": "", "operatorLocationId": "stanyan-street", "name": "Anthony Silva Fitness", "address": "858 Stanyan Street, San Francisco, CA", "recordStatus": "open", "pricingAccess": "official-domain-parked", "entityKindOverride": "studio", "accessModelOverride": "restricted", "modalityOverride": "personal-training", "observedAt": "2026-08-19", "note": "The current SF registry confirms the operator and address, but the former official domain is parked and no operator-owned public rate card or booking storefront was found."
+      "gymId": "osm-node-12337873692", "reviewStatus": "approved", "sourceType": "reviewed-exact-address-replacement", "sourceUrl": "https://www.peakphysiosf.com/", "websiteUrl": "https://www.peakphysiosf.com/", "officialUrl": "https://www.peakphysiosf.com/", "operatorLocationId": "stanyan-street", "name": "Peak Physio", "address": "858 Stanyan Street, San Francisco, CA 94117", "recordStatus": "open", "pricingAccess": "public-appointment-catalog", "entityKindOverride": "studio", "accessModelOverride": "restricted", "modalityOverride": "personal-training", "amenities": ["one-on-one personal training", "physical therapy", "appointment-only service"], "observedAt": "2026-08-21", "note": "The current operator site and linked public Jane storefront match the exact address and telephone. Public trainer-led services are exact appointment prices, not ordinary unrestricted gym or class drop-ins."
     },
     {
       "gymId": "osm-node-10869882845", "reviewStatus": "approved", "sourceType": "official-status-conflict", "sourceUrl": "https://www.divineyogastudiosf.com/appointment", "websiteUrl": "https://www.divineyogastudiosf.com/", "officialUrl": "https://www.divineyogastudiosf.com/", "operatorLocationId": "brannan-street", "name": "Divine Yoga Studio", "address": "406 Brannan Street, San Francisco, CA 94107", "recordStatus": "status-review", "pricingAccess": "official-status-conflict", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "yoga", "observedAt": "2026-08-19", "note": "The live official pages still show 406 Brannan and a three-class pass, while the current SF registry says the location ended 2026-04-03 and the official pricing page says no plans are available. Publication fails closed pending operating-status review."
