@@ -326,6 +326,49 @@ class PlatformAdapterTests(unittest.TestCase):
         self.assertIn("noe-five-pack", pack["sourceProductAliases"])
         self.assertFalse(pack["ordinaryUse"])
 
+    def test_mindbody_annual_renewal_term_parses_plural_months(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyBijaAnnualRenewal"]
+        candidate = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"],
+            fixture["sourceProductId"], fixture["locationLabel"],
+        )[0]
+
+        self.assertEqual((candidate["amount"], candidate["classAllowance"]["count"]), (129, 4))
+        self.assertEqual(candidate["commitment"], {"type": "fixed-term", "minimumMonths": 12})
+        self.assertEqual(candidate["eligibility"]["type"], "standard-adult")
+
+    def test_mindbody_explicit_minimum_beats_platform_billing_horizon(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyHotYogaMinimumTerm"]
+        candidate = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"],
+            fixture["sourceProductId"], fixture["locationLabel"],
+        )[0]
+
+        self.assertEqual(candidate["commitment"], {"type": "fixed-term", "minimumMonths": 3})
+        self.assertIn("monthly-autopay", candidate["sourceProductAliases"])
+
+    def test_mindbody_explicit_month_to_month_beats_renewal_cycle(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyBayCasualMonthToMonth"]
+        candidate = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"],
+            fixture["sourceProductId"], fixture["locationLabel"],
+        )[0]
+
+        self.assertEqual(candidate["commitment"], {"type": "month-to-month", "minimumMonths": None})
+        self.assertEqual(candidate["classAllowance"]["count"], 5)
+        self.assertEqual(candidate["scopeType"], "multi-location")
+        self.assertTrue(candidate["ordinaryUse"])
+
+    def test_mindbody_couples_plan_is_not_standard_adult(self) -> None:
+        fixture = self.rendered_fixtures["mindbodyBijaCouplesPlan"]
+        candidate = adapters.mindbody_contract_candidates(
+            fixture["contractLabel"], fixture["contractText"], fixture["url"],
+            fixture["sourceProductId"], fixture["locationLabel"],
+        )[0]
+
+        self.assertEqual(candidate["eligibility"]["type"], "couples-only")
+        self.assertFalse(candidate["ordinaryUse"])
+
     def test_momence_membership_uses_base_price_not_card_checkout_total(self) -> None:
         fixture = self.rendered_fixtures["momenceMembership"]
 

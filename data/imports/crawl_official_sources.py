@@ -3833,13 +3833,22 @@ def reviewed_seed_routes(
         source_field, url = normalized
         allowed = source_field in {"websiteUrl", "officialUrl"}
         allowed = allowed or matches_operator_host(url) or approved_booking_url(url)
-        identity = request_identity(url)
-        if not allowed or identity in seen:
+        if not allowed:
             continue
-        seen.add(identity)
-        routes.append({"url": url, "sourceField": source_field})
-        if len(routes) >= MAX_REVIEWED_SEED_URLS:
-            break
+        derived_services = mindbody_public_services_route(url)
+        prioritized = (
+            [(f"{source_field}.mindbodyServices", derived_services), (source_field, url)]
+            if derived_services and request_identity(derived_services) != request_identity(url)
+            else [(source_field, url)]
+        )
+        for route_field, route_url in prioritized:
+            identity = request_identity(route_url)
+            if identity in seen:
+                continue
+            seen.add(identity)
+            routes.append({"url": route_url, "sourceField": route_field})
+            if len(routes) >= MAX_REVIEWED_SEED_URLS:
+                return routes
     return routes
 
 

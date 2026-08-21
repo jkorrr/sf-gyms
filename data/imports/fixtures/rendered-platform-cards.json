@@ -49,6 +49,34 @@
     "locationLabel": "Yoga Flow SF - Noe | 4049 24th Street, San Francisco, CA 94114",
     "cardText": "5 Class Pack\n$150.00"
   },
+  "mindbodyBijaAnnualRenewal": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+    "sourceProductId": "102",
+    "locationLabel": "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122",
+    "contractLabel": "4 class Monthly Membership",
+    "contractText": "4-Class Monthly Membership\n4 classes each month\n$129.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+  },
+  "mindbodyHotYogaMinimumTerm": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+    "sourceProductId": "",
+    "locationLabel": "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121",
+    "contractLabel": "Auto Pay $149 Monthly",
+    "contractText": "Hot Yoga Plus Seacliff Monthly Unlimited Auto-Pay\n3 month minimum commitment required; can be cancelled anytime after 3 months.\nAuto Pay Monthly Unlimited $149.00\n$149.00 every month for 99 months\nMONTH-to-MONTH Unlimited Class Auto-Pay."
+  },
+  "mindbodyBayCasualMonthToMonth": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+    "sourceProductId": "190",
+    "locationLabel": "Bay Jiu-Jitsu | 1628 Post Street, San Francisco, CA 94115",
+    "contractLabel": "Adults: Casual Membership (5 classes per month)",
+    "contractText": "Adults: Casual Membership (5 classes per month)\nUp to 5 classes per month at any Bay Jiu-Jitsu location\n$150.00 every month for 12 months\nThis contract is in force on a month-to-month basis and automatically renews for successive monthly terms."
+  },
+  "mindbodyBijaCouplesPlan": {
+    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+    "sourceProductId": "108",
+    "locationLabel": "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122",
+    "contractLabel": "Couples and Family Monthly Pass",
+    "contractText": "Couples Unlimited Monthly Membership\n$429.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+  },
   "momenceMembership": {
     "url": "https://momence.com/NICE-Pilates/membership/The-Work/776365",
     "pageTitle": "The Work - NICE Pilates",

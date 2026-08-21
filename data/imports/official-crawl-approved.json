@@ -1966,69 +1966,157 @@
     },
     {
       "gymId": "osm-node-12300049959",
-      "monthlyPrice": 120,
+      "monthlyPrice": 129,
       "dayPassPrice": 35,
-      "priceSource": "Bija Yoga official membership listing",
-      "priceSourceUrl": "https://www.bijayoga.com/our-teachers",
-      "priceObservedAt": "2026-08-19",
-      "priceNote": "The operator page currently publishes four recurring membership tiers. The smallest standard recurring allowance is four classes monthly for $120; the first-time two-week offer was excluded. The ordinary single class is $35.",
+      "priceSource": "Bija Yoga public Mindbody catalog",
+      "priceSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current public Mindbody catalog replaces the older rate card. It lists four standard recurring tiers plus one couples/family tier, each billed monthly on a 12-month renewal term. The neutral plan is four classes monthly for $129. The ordinary drop-in is $35; the $25 first-time drop-in is promotional.",
       "planOffers": [
         {
-          "sourceProductId": "four-monthly",
-          "name": "Four-Class Membership",
+          "sourceProductId": "102",
+          "name": "4 Class Monthly Membership",
           "accessScope": "Four classes monthly at Bija Yoga",
+          "scopeType": "single-location",
           "classAllowance": 4,
-          "amount": 120,
+          "amount": 129,
           "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": []
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
         },
         {
-          "sourceProductId": "eight-monthly",
-          "name": "Eight-Class Membership",
+          "sourceProductId": "104",
+          "name": "8 Class Monthly Membership",
           "accessScope": "Eight classes monthly at Bija Yoga",
+          "scopeType": "single-location",
           "classAllowance": 8,
-          "amount": 185,
+          "amount": 189,
           "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": []
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
         },
         {
-          "sourceProductId": "unlimited",
-          "name": "Unlimited Membership",
+          "sourceProductId": "106",
+          "name": "Unlimited Monthly Membership",
           "accessScope": "Unlimited classes at Bija Yoga",
+          "scopeType": "single-location",
           "classAllowance": "unlimited",
-          "amount": 225,
+          "amount": 239,
           "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": []
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
         },
         {
-          "sourceProductId": "premium",
-          "name": "Premium Membership",
+          "sourceProductId": "107",
+          "name": "Premuim Monthly Membership",
           "accessScope": "Premium recurring studio access",
-          "amount": 265,
+          "scopeType": "single-location",
+          "amount": 289,
           "billingInterval": "month",
-          "commitmentType": "unknown",
-          "fees": []
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+        },
+        {
+          "sourceProductId": "108",
+          "name": "Couples and Family Monthly Pass",
+          "accessScope": "Unlimited recurring access for a couple or family",
+          "scopeType": "single-location",
+          "classAllowance": "unlimited",
+          "amount": 429,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "eligibility": {
+            "type": "couples-only",
+            "restrictions": [
+              "Couples, family, or household plan; not an individual standard-adult plan"
+            ]
+          },
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+        },
+        {
+          "sourceProductId": "five-class-pass",
+          "name": "5 Class Pass",
+          "productType": "class-pack",
+          "accessScope": "Five classes at Bija Yoga",
+          "scopeType": "single-location",
+          "classAllowance": 5,
+          "amount": 155,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+        },
+        {
+          "sourceProductId": "ten-class-pass",
+          "name": "10 Class Pass",
+          "productType": "class-pack",
+          "accessScope": "Ten classes at Bija Yoga",
+          "scopeType": "single-location",
+          "classAllowance": 10,
+          "amount": 300,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+        },
+        {
+          "sourceProductId": "twenty-class-pass",
+          "name": "20 Class Pass",
+          "productType": "class-pack",
+          "accessScope": "Twenty classes at Bija Yoga",
+          "scopeType": "single-location",
+          "classAllowance": 20,
+          "amount": 550,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
         }
       ],
       "dropInOffers": [
         {
-          "sourceProductId": "first-two-weeks",
-          "name": "First Two Weeks",
-          "amount": 50,
+          "sourceProductId": "first-time-drop-in",
+          "name": "1st Time Drop in",
+          "amount": 25,
           "promotion": {
             "isPromotion": true,
-            "label": "First-time visitor offer"
-          }
+            "label": "First-time visitor drop-in"
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
         },
         {
           "sourceProductId": "single-class",
-          "name": "Single Class",
-          "amount": 35
+          "name": "Regular Drop in",
+          "amount": 35,
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+        },
+        {
+          "sourceProductId": "senior-90-minute-drop-in",
+          "name": "90-Minute Senior Drop-In",
+          "amount": 32,
+          "eligibility": {
+            "type": "age-restricted",
+            "restrictions": [
+              "Senior eligibility required"
+            ]
+          },
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
         }
-      ]
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      }
     },
     {
       "gymId": "osm-node-12337829335",
@@ -5512,37 +5600,101 @@
     },
     {
       "gymId": "osm-node-6693646146",
-      "monthlyPrice": 240,
-      "priceSource": "Bay Jiu-Jitsu official adult program page",
-      "priceSourceUrl": "https://www.bayjiujitsu.com/adults",
-      "priceObservedAt": "2026-08-19",
-      "priceNote": "The current official adult-program page identifies the exact 1628 Post Street location and publishes unlimited adult classes and training at $240 per month. The local-student intro offer and non-recurring class pack are retained but excluded from recurring-plan selection.",
+      "monthlyPrice": 150,
+      "dayPassPrice": 40,
+      "priceSource": "Bay Jiu-Jitsu official pricing page and public Mindbody catalog",
+      "priceSourceUrl": "https://www.bayjiujitsu.com/pricing",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current operator pricing page and public Mindbody catalog replace the older $240 unlimited-only observation. Standard adult recurring tiers are $150 for 5 classes, $200 for 10 classes, and $250 unlimited per month. The deterministic neutral plan is the $150 five-class month-to-month membership. A separate annual unlimited commitment is $200/month with first and last month due upfront. The ordinary adult day pass is $40.",
       "planOffers": [
         {
-          "sourceProductId": "adult-unlimited-monthly",
-          "name": "Adult Unlimited Membership",
-          "accessScope": "Unlimited adult Jiu-Jitsu classes and training at Bay Jiu-Jitsu San Francisco",
-          "scopeType": "single-location",
-          "classAllowance": "unlimited",
-          "amount": 240,
+          "sourceProductId": "190",
+          "name": "Adults: Casual Membership (5 classes per month)",
+          "accessScope": "Up to five adult Jiu-Jitsu classes per month at either operator location",
+          "scopeType": "multi-location",
+          "classAllowance": 5,
+          "amount": 150,
           "billingInterval": "month",
           "commitmentType": "month-to-month",
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=40&prodid=190"
         },
         {
-          "sourceProductId": "adult-ten-class-pack",
-          "name": "Adult Ten-Class Pack",
-          "productType": "class-pack",
-          "accessScope": "Ten non-recurring adult Jiu-Jitsu classes",
+          "sourceProductId": "178",
+          "name": "Adults: Basic Membership (10 classes per month)",
+          "accessScope": "Up to ten adult Jiu-Jitsu classes per month at either operator location",
+          "scopeType": "multi-location",
           "classAllowance": 10,
-          "amount": 260,
+          "amount": 200,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=40&prodid=178"
+        },
+        {
+          "sourceProductId": "137",
+          "name": "Adults: Unlimited Monthly",
+          "accessScope": "Unlimited adult Jiu-Jitsu classes, open gyms, and open mats at all operator locations",
+          "scopeType": "multi-location",
+          "classAllowance": "unlimited",
+          "amount": 250,
+          "billingInterval": "month",
+          "commitmentType": "month-to-month",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=40&prodid=137"
+        },
+        {
+          "sourceProductId": "179",
+          "name": "Adults: 12-Month Membership (Unlimited)",
+          "accessScope": "Unlimited adult Jiu-Jitsu classes at all operator locations",
+          "scopeType": "multi-location",
+          "classAllowance": "unlimited",
+          "amount": 200,
+          "billingInterval": "month",
+          "commitmentType": "fixed-term",
+          "minimumCommitmentMonths": 12,
+          "upfrontDues": [
+            {
+              "type": "first-month-dues",
+              "amount": 200,
+              "currency": "USD"
+            },
+            {
+              "type": "last-month-dues",
+              "amount": 200,
+              "currency": "USD"
+            }
+          ],
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=40&prodid=179"
+        },
+        {
+          "sourceProductId": "10891",
+          "name": "Adults: One Month of Classes",
+          "productType": "class-pack",
+          "accessScope": "One non-recurring month of unlimited adult classes",
+          "classAllowance": "unlimited",
+          "amount": 275,
           "billingInterval": "one-time",
           "commitmentType": "none",
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41&sTG=22&prodId=10891"
         },
         {
-          "sourceProductId": "local-student-intro-three",
-          "name": "New Local Student Intro",
+          "sourceProductId": "10406",
+          "name": "Adults: 1 Week of Unlimited Classes",
+          "productType": "class-pack",
+          "accessScope": "One non-recurring week of unlimited adult classes",
+          "classAllowance": "unlimited",
+          "amount": 100,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41&sTG=22&prodId=10406"
+        },
+        {
+          "sourceProductId": "10976",
+          "name": "Adults: 3 Class Pack Intro",
           "productType": "class-pack",
           "accessScope": "Three introductory adult classes for a new local student",
           "classAllowance": 3,
@@ -5553,9 +5705,23 @@
             "isPromotion": true,
             "label": "New-local-student introductory offer"
           },
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41&sTG=68&prodId=10976"
         }
-      ]
+      ],
+      "dropInOffers": [
+        {
+          "sourceProductId": "10108",
+          "name": "Adults: Day Pass",
+          "accessScope": "Unlimited adult classes for one day",
+          "amount": 40,
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41&sTG=22&prodId=10108"
+        }
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      }
     },
     {
       "gymId": "osm-node-6815206679",
@@ -5643,21 +5809,23 @@
       "gymId": "osm-node-6829148264",
       "monthlyPrice": 149,
       "dayPassPrice": 30,
-      "priceSource": "Hot Yoga Plus Seacliff official rates page",
+      "priceSource": "Hot Yoga Plus Seacliff official rates page and public Mindbody catalog",
       "priceSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
-      "priceObservedAt": "2026-08-19",
-      "priceNote": "The current official rate card lists standard unlimited autopay at $149/month with a three-month minimum. One-month and annual prepaid passes, the intro special, and a higher cross-studio plan were excluded. The ordinary drop-in is $30.",
+      "priceObservedAt": "2026-08-21",
+      "priceNote": "The current official rate card and public Mindbody catalog confirm standard unlimited autopay at $149/month with a three-month minimum. Mindbody's 99-month display is a platform billing horizon; the operator contract explicitly permits cancellation after the initial three months. One-month, one-week, class-card, annual-prepaid, intro, and higher cross-studio offers are retained but excluded from neutral recurring-plan selection. The ordinary drop-in is $30.",
       "planOffers": [
         {
-          "sourceProductId": "monthly-autopay",
+          "sourceProductId": "131",
           "name": "Monthly Auto Pay",
           "accessScope": "Unlimited classes at Hot Yoga Plus Seacliff",
+          "scopeType": "single-location",
           "classAllowance": "unlimited",
           "amount": 149,
           "billingInterval": "month",
           "commitmentType": "minimum-term",
           "minimumCommitmentMonths": 3,
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
         },
         {
           "sourceProductId": "cross-studio-autopay",
@@ -5669,7 +5837,8 @@
           "billingInterval": "month",
           "commitmentType": "minimum-term",
           "minimumCommitmentMonths": 3,
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
         },
         {
           "sourceProductId": "one-month-unlimited",
@@ -5678,9 +5847,46 @@
           "accessScope": "Non-recurring month of unlimited classes",
           "classAllowance": "unlimited",
           "amount": 190,
-          "billingInterval": "month",
+          "billingInterval": "one-time",
           "commitmentType": "none",
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
+        },
+        {
+          "sourceProductId": "visitor-week",
+          "name": "1 Week Visitor Unlimited Use",
+          "productType": "class-pack",
+          "accessScope": "One non-recurring week of unlimited classes",
+          "classAllowance": "unlimited",
+          "amount": 75,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
+        },
+        {
+          "sourceProductId": "ten-class-card",
+          "name": "10 Class Card",
+          "productType": "class-pack",
+          "accessScope": "Ten classes at Hot Yoga Plus Seacliff",
+          "classAllowance": 10,
+          "amount": 250,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
+        },
+        {
+          "sourceProductId": "twenty-five-class-card",
+          "name": "25 Class Card",
+          "productType": "class-pack",
+          "accessScope": "Twenty-five classes at Hot Yoga Plus Seacliff",
+          "classAllowance": 25,
+          "amount": 525,
+          "billingInterval": "one-time",
+          "commitmentType": "none",
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
         },
         {
           "sourceProductId": "annual-prepay",
@@ -5692,7 +5898,8 @@
           "billingInterval": "year",
           "commitmentType": "fixed-term",
           "minimumCommitmentMonths": 12,
-          "fees": []
+          "fees": [],
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
         }
       ],
       "dropInOffers": [
@@ -5703,14 +5910,20 @@
           "promotion": {
             "isPromotion": true,
             "label": "New-student introductory offer"
-          }
+          },
+          "sourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
         },
         {
           "sourceProductId": "drop-in",
           "name": "Drop-In",
-          "amount": 30
+          "amount": 30,
+          "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41"
         }
-      ]
+      ],
+      "catalogCompleteness": {
+        "plans": "complete",
+        "dropIns": "complete"
+      }
     },
     {
       "gymId": "osm-node-7044717960",

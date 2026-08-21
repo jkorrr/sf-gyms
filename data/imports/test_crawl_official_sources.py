@@ -128,6 +128,57 @@ class OfficialCrawlerTests(unittest.TestCase):
             ],
         )
 
+    def test_reviewed_mindbody_seed_prioritizes_normalized_public_services(self) -> None:
+        gym = {
+            "websiteUrl": "https://operator.example/location/sf",
+            "officialUrl": "https://operator.example/location/sf",
+            "priceSourceUrl": (
+                "https://clients.mindbodyonline.com/classic/ws?"
+                "studioid=672&stype=40&prodid=102&utm_source=operator"
+            ),
+        }
+
+        routes = crawler.reviewed_seed_routes(gym)
+
+        self.assertEqual(routes, [
+            {"url": "https://operator.example/location/sf", "sourceField": "websiteUrl"},
+            {
+                "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=672&stype=41&pMode=1",
+                "sourceField": "priceSourceUrl.mindbodyServices",
+            },
+            {
+                "url": (
+                    "https://clients.mindbodyonline.com/classic/ws?"
+                    "studioid=672&stype=40&prodid=102&utm_source=operator"
+                ),
+                "sourceField": "priceSourceUrl",
+            },
+        ])
+
+    def test_reviewed_mindbody_services_seed_is_not_starved_at_route_cap(self) -> None:
+        gym = {
+            "websiteUrl": "https://operator.example/",
+            "officialUrl": "https://operator.example/location/sf",
+            "priceSourceUrl": "https://operator.example/pricing",
+            "plans": [
+                {"evidence": {"url": f"https://operator.example/catalog/{index}"}}
+                for index in range(1, 5)
+            ] + [{
+                "evidence": {
+                    "url": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=40&prodid=190",
+                },
+            }],
+        }
+
+        routes = crawler.reviewed_seed_routes(gym)
+
+        self.assertEqual(len(routes), crawler.MAX_REVIEWED_SEED_URLS)
+        self.assertEqual(routes[-1], {
+            "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=102787&stype=41&pMode=1",
+            "sourceField": "plans.evidence.url.mindbodyServices",
+        })
+        self.assertFalse(any("prodid=190" in item["url"] for item in routes))
+
     def test_reviewed_seed_routes_allow_reviewed_operator_subdomains_only(self) -> None:
         gym = {
             "websiteUrl": "https://www.operator.example/location/sf",

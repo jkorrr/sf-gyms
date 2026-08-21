@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "full",
+  "mode": "weekly",
   "observations": [
     {
       "gymId": "osm-node-10047742013",
@@ -3120,6 +3120,52 @@
       "catalogSourceUrl": "https://thecoremvmt.com/pricing"
     },
     {
+      "gymId": "osm-node-12132354827",
+      "gymName": "Perform for Golf — Hayes Valley",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "179",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 300.0,
+      "currency": "USD",
+      "rawLabel": "Gym/Sim Access Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": null,
+      "accessScope": "Gym/Sim Access Membership",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Perform for Golf - Hayes Valley | 1700 Market Street, San Francisco, CA 94102"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "fa31b4934010bacfea0c4833e54e80a5c09df07d5d44e0d8d904313ba085d63e",
+      "cardAssociationHash": "fa31b4934010bacfea0c4833e54e80a5c09df07d5d44e0d8d904313ba085d63e",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0"
+    },
+    {
       "gymId": "osm-node-12152934880",
       "gymName": "LuxFit SF Mission Rock",
       "capturedAt": "2026-08-21",
@@ -3434,6 +3480,515 @@
       "exactLocationMatch": "candidate",
       "sourceUrl": "https://bodyrok.com/studio/fidi/",
       "autoPublishEligible": false
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "first-time-drop-in",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "bija-yoga-ca-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 25.0,
+      "currency": "USD",
+      "rawLabel": "1st Time Drop in",
+      "categoryLabel": "Class Passes",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "1st Time Drop in",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "a1da4a31982e7b487d1621084323fce84d98a65235d584c06835d38c25d80458",
+      "cardAssociationHash": "a1da4a31982e7b487d1621084323fce84d98a65235d584c06835d38c25d80458",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "single-class",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "bija-yoga-ca-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 35.0,
+      "currency": "USD",
+      "rawLabel": "Regular Drop in",
+      "categoryLabel": "Class Passes",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "Regular Drop in",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "faf6991de4af23204841d3e5242fd98ac9f5d241cc8f78bc758fc22f294f70d1",
+      "cardAssociationHash": "faf6991de4af23204841d3e5242fd98ac9f5d241cc8f78bc758fc22f294f70d1",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "102",
+      "sourceProductAliases": [
+        "membership-4",
+        "four-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 129.0,
+      "currency": "USD",
+      "rawLabel": "4 class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 4.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "4 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "2cfe389076412a4c547e814406fb5424c4e9266c62fcc4449a74c2903490b124",
+      "cardAssociationHash": "2cfe389076412a4c547e814406fb5424c4e9266c62fcc4449a74c2903490b124",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "five-class-pass",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 155.0,
+      "currency": "USD",
+      "rawLabel": "5 Class Pass (2-Month Expiration)",
+      "categoryLabel": "Class Passes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "5 Class Pass (2-Month Expiration)",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 2
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d500ed71bd8ed754e817ec325a26ceb91f34a45b1f91971a517391b6a7481cf7",
+      "cardAssociationHash": "d500ed71bd8ed754e817ec325a26ceb91f34a45b1f91971a517391b6a7481cf7",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "104",
+      "sourceProductAliases": [
+        "membership-8",
+        "eight-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 189.0,
+      "currency": "USD",
+      "rawLabel": "8 Class Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 8.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "8 classes per month at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "cfa608e7794908e3629917e2e8cf09b23239f26971b6be009967294c1f8cc121",
+      "cardAssociationHash": "cfa608e7794908e3629917e2e8cf09b23239f26971b6be009967294c1f8cc121",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "106",
+      "sourceProductAliases": [
+        "membership-unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 239.0,
+      "currency": "USD",
+      "rawLabel": "Unlimited Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "c54b5623148bef8588375933ac621050c61028f269b73a2f552a0ba733f844a7",
+      "cardAssociationHash": "c54b5623148bef8588375933ac621050c61028f269b73a2f552a0ba733f844a7",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "107",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 289.0,
+      "currency": "USD",
+      "rawLabel": "Premuim Monthly Membership",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": null,
+      "accessScope": "Premuim Monthly Membership",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d57de27d133021e8058488b5b7f77f3b6c143bb3a8e1b9282e6994282614e483",
+      "cardAssociationHash": "d57de27d133021e8058488b5b7f77f3b6c143bb3a8e1b9282e6994282614e483",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ten-class-pass",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 300.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Pass (3-Month Expiration Period)",
+      "categoryLabel": "Class Passes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "10 Class Pass (3-Month Expiration Period)",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d38a988f65835d5338be920f41af48a09b752da295791441b2d515d984e23d67",
+      "cardAssociationHash": "d38a988f65835d5338be920f41af48a09b752da295791441b2d515d984e23d67",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "108",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 429.0,
+      "currency": "USD",
+      "rawLabel": "Couples and Family Monthly Pass",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": null,
+      "accessScope": "Couples and Family Monthly Pass",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "couples-only",
+        "restrictions": [
+          "Couples, family, or household contract"
+        ]
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 12
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "890231afa9b94f4f6b53116808c300ffe9a6ecd967f6d9825318eeef6c13dd95",
+      "cardAssociationHash": "890231afa9b94f4f6b53116808c300ffe9a6ecd967f6d9825318eeef6c13dd95",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "gymName": "Bija Yoga",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "twenty-class-pass",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 550.0,
+      "currency": "USD",
+      "rawLabel": "20 Class Pass (4-Month Expiration)",
+      "categoryLabel": "Class Passes",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 20.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "20 Class Pass (4-Month Expiration)",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 4
+      },
+      "fees": [],
+      "locations": [
+        "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "ab13e8ee12f71cd093f720ce6c40591352d5e700b4b19246f45ea40d886f389d",
+      "cardAssociationHash": "ab13e8ee12f71cd093f720ce6c40591352d5e700b4b19246f45ea40d886f389d",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41"
     },
     {
       "gymId": "osm-node-12337873692",
@@ -11620,6 +12175,317 @@
       "autoPublishEligible": false
     },
     {
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10976",
+      "sourceProductAliases": [
+        "japantown-three-pack"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 39.0,
+      "currency": "USD",
+      "rawLabel": "Adults: 3 Class Pack Intro",
+      "categoryLabel": "Adults Jiu-Jitsu",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 3.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "Adults: 3 Class Pack Intro",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": true,
+        "label": "Adults Jiu-Jitsu Adults: 3 Class Pack Intro"
+      },
+      "eligibility": {
+        "type": "new-client",
+        "restrictions": [
+          "Promotional or seasonal product"
+        ]
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d8d31037714dfd0ea6e890939ecf9dc6993431032d239d3a536210bae413bbef",
+      "cardAssociationHash": "d8d31037714dfd0ea6e890939ecf9dc6993431032d239d3a536210bae413bbef",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing"
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10108",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "japantown-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 40.0,
+      "currency": "USD",
+      "rawLabel": "Adults: Day Pass",
+      "categoryLabel": "Adults Jiu-Jitsu",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "Adults: Day Pass",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "0e8bcdb2771e22a2437399fb873fb86d1df26f798081b0bfb0a6af0d2a8460c0",
+      "cardAssociationHash": "0e8bcdb2771e22a2437399fb873fb86d1df26f798081b0bfb0a6af0d2a8460c0",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing"
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10406",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 100.0,
+      "currency": "USD",
+      "rawLabel": "Adults: 1 Week of Unlimited Classes",
+      "categoryLabel": "Adults Jiu-Jitsu",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Adults: 1 Week of Unlimited Classes",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "0e68b11faef29830ce8ac84179139568b8538e153bd2a9ce07c553b6771fb0ff",
+      "cardAssociationHash": "0e68b11faef29830ce8ac84179139568b8538e153bd2a9ce07c553b6771fb0ff",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing"
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "190",
+      "sourceProductAliases": [
+        "membership-5",
+        "5-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 150.0,
+      "currency": "USD",
+      "rawLabel": "Adults: Casual Membership (5 classes per month)",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": 5.0,
+        "period": "month",
+        "unlimited": false
+      },
+      "accessScope": "5 classes per month at the selected studio",
+      "scopeType": "multi-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "06dcc41cc6725d7e1f955a44c5d8ebd0d61fc123936876c80fb1dbc779281582",
+      "cardAssociationHash": "06dcc41cc6725d7e1f955a44c5d8ebd0d61fc123936876c80fb1dbc779281582",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing"
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "137",
+      "sourceProductAliases": [
+        "membership-unlimited",
+        "unlimited-monthly"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "Adults: Unlimited Monthly",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "Unlimited classes at the selected studio",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "month-to-month",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "4b8c669a970d12c4947b3f48ab8521cf0901092c4495f1e7a3ea3dcaad0103c6",
+      "cardAssociationHash": "4b8c669a970d12c4947b3f48ab8521cf0901092c4495f1e7a3ea3dcaad0103c6",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing"
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "10891",
+      "sourceProductAliases": [
+        "japantown-one-month-nonrenewing"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 275.0,
+      "currency": "USD",
+      "rawLabel": "Adults: One Month of Classes",
+      "categoryLabel": "Adults Jiu-Jitsu",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": null,
+      "accessScope": "Adults: One Month of Classes",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "8fee88663811264b8f51e064ea1af428c686ae8dda249f949b25f1b9cb72ac0b",
+      "cardAssociationHash": "8fee88663811264b8f51e064ea1af428c686ae8dda249f949b25f1b9cb72ac0b",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing"
+    },
+    {
       "gymId": "osm-node-6815206679",
       "gymName": "BODYROK Haight",
       "capturedAt": "2026-08-21",
@@ -12299,6 +13165,349 @@
       "sourceUrl": "https://bodyrok.com/studio/haight/",
       "autoPublishEligible": false,
       "catalogSourceUrl": "https://bodyrok.com/studio/haight/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "annual-prepay",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 1.0,
+      "currency": "USD",
+      "rawLabel": "1 Year Membership",
+      "categoryLabel": "Yoga",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": null,
+      "accessScope": "1 Year Membership",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "d34e0741b6e6f29d63a1b96e11be1cbac886e5712b4893e68a0f6f0d7d471598",
+      "cardAssociationHash": "d34e0741b6e6f29d63a1b96e11be1cbac886e5712b4893e68a0f6f0d7d471598",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "drop-in",
+      "sourceProductAliases": [
+        "class-drop-in",
+        "hot-yoga-plus-seacliff-drop-in"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 30.0,
+      "currency": "USD",
+      "rawLabel": "Drop In Class",
+      "categoryLabel": "Yoga",
+      "cadence": "visit",
+      "intervalCount": 1,
+      "productType": "drop-in",
+      "classAllowance": {
+        "count": 1.0,
+        "period": "visit",
+        "unlimited": false
+      },
+      "accessScope": "Drop In Class",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "b0f2a001ad3a596172d5224e89dd067b6d66bddeed58cc1ac11575eb3792ae7f",
+      "cardAssociationHash": "b0f2a001ad3a596172d5224e89dd067b6d66bddeed58cc1ac11575eb3792ae7f",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "visitor-week",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 75.0,
+      "currency": "USD",
+      "rawLabel": "1 WEEK Visitor Unlimited Use",
+      "categoryLabel": "Yoga",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": null,
+        "period": "month",
+        "unlimited": true
+      },
+      "accessScope": "1 WEEK Visitor Unlimited Use",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "479b36459a0551833045dd5302c3cafd4ca6a945e0c6026c5cfef8bd70ba382c",
+      "cardAssociationHash": "479b36459a0551833045dd5302c3cafd4ca6a945e0c6026c5cfef8bd70ba382c",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "131",
+      "sourceProductAliases": [
+        "monthly-autopay"
+      ],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 149.0,
+      "currency": "USD",
+      "rawLabel": "Auto Pay $149 Monthly",
+      "categoryLabel": "Contracts",
+      "cadence": "month",
+      "intervalCount": 1,
+      "productType": "monthly",
+      "classAllowance": null,
+      "accessScope": "Auto Pay $149 Monthly",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 3
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": true,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-contract",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "3fe54a01cf31873d1db85721faa65cb094acf42f0d15c416e6a977551a252fa7",
+      "cardAssociationHash": "3fe54a01cf31873d1db85721faa65cb094acf42f0d15c416e6a977551a252fa7",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "one-month-unlimited",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 190.0,
+      "currency": "USD",
+      "rawLabel": "1 Month Membership",
+      "categoryLabel": "Yoga",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": null,
+      "accessScope": "1 Month Membership",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "fixed-term",
+        "minimumMonths": 1
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "192b9c3c50f165891620c1c5bb9760f7e8b679d1b0ec934f4034b87a6406b791",
+      "cardAssociationHash": "192b9c3c50f165891620c1c5bb9760f7e8b679d1b0ec934f4034b87a6406b791",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "ten-class-card",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 250.0,
+      "currency": "USD",
+      "rawLabel": "10 Class Card",
+      "categoryLabel": "Yoga",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 10.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "10 Class Card",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "f71db50bd7bb1e8640b3072d8733701d58bf917338d7b6c79817635af61d71e4",
+      "cardAssociationHash": "f71db50bd7bb1e8640b3072d8733701d58bf917338d7b6c79817635af61d71e4",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "gymName": "Hot Yoga Plus Seacliff",
+      "capturedAt": "2026-08-21",
+      "sourceProductId": "twenty-five-class-card",
+      "sourceProductAliases": [],
+      "sourceProductIdAuthority": "operator-widget",
+      "amount": 525.0,
+      "currency": "USD",
+      "rawLabel": "25 Class Card",
+      "categoryLabel": "Yoga",
+      "cadence": "one-time",
+      "intervalCount": 1,
+      "productType": "offer",
+      "classAllowance": {
+        "count": 25.0,
+        "period": "purchase",
+        "unlimited": false
+      },
+      "accessScope": "25 Class Card",
+      "scopeType": "single-location",
+      "promotion": {
+        "isPromotion": false,
+        "label": ""
+      },
+      "eligibility": {
+        "type": "standard-adult",
+        "restrictions": []
+      },
+      "commitment": {
+        "type": "none",
+        "minimumMonths": null
+      },
+      "fees": [],
+      "locations": [
+        "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121"
+      ],
+      "ordinaryUse": false,
+      "bestValueLabel": false,
+      "purchaseMethod": "direct-public",
+      "method": "captured-public-mindbody-purchase-item",
+      "adapter": "mindbody",
+      "evidenceTier": "official-public",
+      "exactLocationMatch": "exact-location",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "autoPublishEligible": false,
+      "contentHash": "b98d7399861d42e1baa65aa42d0b282a43ffc8f8812a2240d6728ae4e3772b74",
+      "cardAssociationHash": "b98d7399861d42e1baa65aa42d0b282a43ffc8f8812a2240d6728ae4e3772b74",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/"
     },
     {
       "gymId": "osm-node-7044717960",

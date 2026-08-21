@@ -584,7 +584,7 @@
     "studio": 105
   },
   "verifiedMonthlyCount": 156,
-  "verifiedDayPassCount": 122,
+  "verifiedDayPassCount": 123,
   "staleVerifiedCount": 0,
   "approvedCrawlObservationsApplied": 136,
   "approvedOperatorCatalogLocationsApplied": 85,
@@ -614,11 +614,11 @@
     "sourcePlanFragmentCount": 0,
     "selectedOnlyPlanCatalogCount": 0,
     "noPlanCatalogCount": 61,
-    "sourceDropInCatalogCount": 130,
+    "sourceDropInCatalogCount": 131,
     "sourceDropInFragmentCount": 0,
     "selectedOnlyDropInCatalogCount": 0,
-    "noDropInCatalogCount": 117,
-    "selectedUnknownCommitmentCount": 46,
+    "noDropInCatalogCount": 116,
+    "selectedUnknownCommitmentCount": 45,
     "selectedUndisclosedClassAllowanceCount": 5,
     "typicalPlanSelectedCount": 156,
     "highestAccessPlanSelectedCount": 156,
@@ -656,9 +656,9 @@
   },
   "crawlSummary": {
     "attemptedGyms": 288,
-    "requestCount": 1877,
+    "requestCount": 1888,
     "statusCounts": {
-      "access-blocked": 68,
+      "access-blocked": 64,
       "fetched": 1034,
       "host-backoff-after-429": 1,
       "http-301": 2,
@@ -668,27 +668,27 @@
       "http-502": 2,
       "network-error": 41,
       "not-modified": 209,
-      "render-error": 11,
-      "rendered": 308,
+      "render-error": 28,
+      "rendered": 306,
       "robots-disallowed": 73
     },
-    "staticAccessBlockedRequests": 68,
+    "staticAccessBlockedRequests": 64,
     "staticAccessBlockerCounts": {
-      "captcha-required": 3,
+      "captcha-required": 2,
       "identity-session-reset-required": 16,
-      "platform-security-check": 49
+      "platform-security-check": 46
     },
     "selectedPlanPriceAuditStatusCounts": {
-      "matched-within-threshold": 135,
-      "selected-plan-not-observed": 21
+      "matched-within-threshold": 139,
+      "selected-plan-not-observed": 17
     },
     "reviewCandidatePages": 487,
     "linkedStorefrontRequests": 1206,
-    "renderedRequests": 383,
-    "renderedAccessBlockedRequests": 52,
+    "renderedRequests": 394,
+    "renderedAccessBlockedRequests": 48,
     "renderedAccessBlockerCounts": {
-      "captcha-required": 3,
-      "platform-security-check": 49
+      "captcha-required": 2,
+      "platform-security-check": 46
     },
     "renderedAvailabilitySignalCounts": {
       "enrollment-paused": 1

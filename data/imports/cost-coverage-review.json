@@ -1609,15 +1609,15 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6693646146:plan:adult-unlimited-monthly",
+      "selectedPlanId": "osm-node-6693646146:plan:190",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
           "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "source-catalog",
+          "reason": "Reviewed public visit or class offers are retained before deterministic selection."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -1641,8 +1641,18 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=-2&subTab=info",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
           "url": "https://www.bayjiujitsu.com/locations",
-          "status": "rendered",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.bayjiujitsu.com/pricing",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -1931,7 +1941,7 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-12300049959:plan:four-monthly",
+      "selectedPlanId": "osm-node-12300049959:plan:102",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -1988,23 +1998,28 @@
           "candidateCount": 6
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2f12%2f2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
-          "status": "access-blocked",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?fl=true&tabID=7",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-7&sView=day&sLoc=0",
-          "status": "access-blocked",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
-          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=-8&sTG=8&sVT=9&sView=day&sLoc=0",
-          "status": "access-blocked",
+          "url": "https://clients.mindbodyonline.com/classic/mainclass?studioid=672&tg=&vt=&lvl=&stype=&view=&trn=0&page=&catid=&prodid=&date=9%2F12%2F2025&classid=0&prodGroupId=&sSU=&optForwardingLink=&qParam=&justloggedin=&nLgIn=&pMode=0&loc=1",
+          "status": "render-error",
           "candidateCount": 0
         },
         {
-          "url": "https://www.bijayoga.com/",
-          "status": "access-blocked",
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.bijayoga.com/contact-4",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -2023,7 +2038,7 @@
       "priceReports": [],
       "publicationStatus": "publish",
       "planValidationErrors": [],
-      "selectedPlanId": "osm-node-6829148264:plan:monthly-autopay",
+      "selectedPlanId": "osm-node-6829148264:plan:131",
       "catalogStatus": {
         "plans": {
           "status": "source-catalog",
@@ -2065,8 +2080,28 @@
           "candidateCount": 0
         },
         {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=42&sLoc=0&giftCardID=10114",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
           "url": "https://hotyogaplus-sf.com/",
-          "status": "rendered",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://hotyogaplus-sf.com/class-descriptions/",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -2716,9 +2751,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -2726,7 +2761,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -5228,9 +5263,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -5238,7 +5273,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -6269,9 +6304,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -6279,7 +6314,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -7463,9 +7498,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -7473,7 +7508,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -8466,9 +8501,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -8476,7 +8511,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -12176,9 +12211,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -12186,7 +12221,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -12293,9 +12328,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires a personal-information form before disclosing location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -12303,7 +12338,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,
@@ -12572,6 +12607,26 @@
         {
           "url": "https://www.performforgolf.com/locations/hayes-valley",
           "status": "fetched",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&tg=2&pMode=1",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+          "status": "render-error",
+          "candidateCount": 0
+        },
+        {
+          "url": "https://www.performforgolf.com/locations",
+          "status": "render-error",
           "candidateCount": 0
         }
       ]
@@ -17037,9 +17092,9 @@
       "pricingStatus": "estimated",
       "pricingBlocker": "The operator requires direct contact to disclose location pricing. A separately labeled, cross-validated cohort estimate is available.",
       "estimatedMonthly": {
-        "point": 225.0,
-        "low": 195.0,
-        "high": 250.0,
+        "point": 220.0,
+        "low": 145.0,
+        "high": 260.0,
         "currency": "USD",
         "confidence": "medium",
         "basis": "Comparable verified San Francisco and Bay Area cohort: martial-arts-boxing|class-membership|independent",
@@ -17047,7 +17102,7 @@
         "generatedAt": "2026-08-21",
         "estimatorVersion": "sf-bay-area-v5-withheld-price-calibrated",
         "rangeMethod": "cross-validated-80-percent-residual-interval",
-        "validationMedianAbsolutePercentageError": 0.0686,
+        "validationMedianAbsolutePercentageError": 0.1114,
         "validationRangeCoverage": 1.0
       },
       "reportedMonthly": null,

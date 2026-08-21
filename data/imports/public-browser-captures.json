@@ -142,6 +142,113 @@
       ]
     },
     {
+      "gymId": "osm-node-12132354827",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5734215&stype=41",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/ASP/main_shop.asp?studioid=5734215&stype=41&pMode=0",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Perform for Golf - Hayes Valley | 1700 Market Street, San Francisco, CA 94102",
+      "contractCards": [
+        {
+          "productId": "179",
+          "productName": "Gym/Sim Access Membership",
+          "contractText": "Gym/Sim Access Membership\nDesignated open-gym and golf-simulator access at all operator locations\n$300.00 every month\nAuto renews monthly; month-to-month commitment."
+        }
+      ],
+      "purchaseRows": []
+    },
+    {
+      "gymId": "osm-node-12300049959",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "catalogSourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=672&stype=41",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Bija Yoga CA | 1348 9th Avenue, San Francisco, CA 94122",
+      "contractCards": [
+        {
+          "productId": "102",
+          "productName": "4 class Monthly Membership",
+          "contractText": "4-Class Monthly Membership\n4 classes each month\n$129.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+        },
+        {
+          "productId": "104",
+          "productName": "8 Class Monthly Membership",
+          "contractText": "8 Class Monthly Membership\n8 classes each month\n$189.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+        },
+        {
+          "productId": "108",
+          "productName": "Couples and Family Monthly Pass",
+          "contractText": "Couples Unlimited Monthly Membership\n$429.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+        },
+        {
+          "productId": "107",
+          "productName": "Premuim Monthly Membership",
+          "contractText": "Premuim Monthly Membership\n$289.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+        },
+        {
+          "productId": "106",
+          "productName": "Unlimited Monthly Membership",
+          "contractText": "Unlimited Monthly Membership\nUnlimited classes at Bija Yoga\n$239.00 every month for 12 months\nContract auto-renews every 12 months until canceled."
+        }
+      ],
+      "purchaseRows": [
+        {"categoryLabel":"Class Passes","productId":"first-time-drop-in","cardText":"1st Time Drop in\n$25.00"},
+        {"categoryLabel":"Class Passes","productId":"single-class","cardText":"Regular Drop in\n$35.00"},
+        {"categoryLabel":"Class Passes","productId":"five-class-pass","cardText":"5 Class Pass (2-Month Expiration)\n$155.00"},
+        {"categoryLabel":"Class Passes","productId":"ten-class-pass","cardText":"10 Class Pass (3-Month Expiration Period)\n$300.00"},
+        {"categoryLabel":"Class Passes","productId":"twenty-class-pass","cardText":"20 Class Pass (4-Month Expiration)\n$550.00"}
+      ]
+    },
+    {
+      "gymId": "osm-node-6693646146",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "catalogSourceUrl": "https://www.bayjiujitsu.com/pricing",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Bay Jiu-Jitsu - Japantown | 1628 Post Street, San Francisco, CA 94115",
+      "contractCards": [
+        {
+          "productId": "190",
+          "productName": "Adults: Casual Membership (5 classes per month)",
+          "contractText": "Adults: Casual Membership (5 classes per month)\nUp to 5 adult classes per month at either operator location; unused classes do not roll over\n$150.00 every month for 12 months\nThe operator pricing page and contract agreement identify this as month-to-month; it auto-renews monthly with 30 days' cancellation notice."
+        },
+        {
+          "productId": "137",
+          "productName": "Adults: Unlimited Monthly",
+          "contractText": "Adults: Unlimited Monthly\nUnlimited adult classes, open gyms, and open mats at all operator locations\n$250.00 every month\nMonth-to-month commitment; auto-renews monthly with 30 days' cancellation notice."
+        }
+      ],
+      "purchaseRows": [
+        {"categoryLabel":"Adults Jiu-Jitsu","productId":"10976","cardText":"Adults: 3 Class Pack Intro\n$39.00"},
+        {"categoryLabel":"Adults Jiu-Jitsu","productId":"10108","cardText":"Adults: Day Pass\nValid for one day from first use\n$40.00"},
+        {"categoryLabel":"Adults Jiu-Jitsu","productId":"10406","cardText":"Adults: 1 Week of Unlimited Classes\nValid for 8 days from first use\n$100.00"},
+        {"categoryLabel":"Adults Jiu-Jitsu","productId":"10891","cardText":"Adults: One Month of Classes\nValid for one month from first use\n$275.00"}
+      ]
+    },
+    {
+      "gymId": "osm-node-6829148264",
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=133564&stype=41",
+      "catalogSourceUrl": "https://hotyogaplus-sf.com/bikram-hot-yoga-seacliff-rates-memberships/",
+      "capturedAt": "2026-08-21",
+      "captureMethod": "interactive-public-browser",
+      "locationLabel": "Hot Yoga Plus Seacliff | 5644 Geary Blvd., San Francisco, CA 94121",
+      "contractCards": [
+        {
+          "productId": "131",
+          "productName": "Auto Pay $149 Monthly",
+          "contractText": "Hot Yoga Plus Seacliff Monthly Unlimited Auto-Pay\n3 month minimum commitment required; can be cancelled anytime after 3 months with two weeks notice\n$149.00 every month for 99 months\nThe operator contract describes month-to-month auto-pay after the initial 3-month minimum."
+        }
+      ],
+      "purchaseRows": [
+        {"categoryLabel":"Yoga","productId":"one-month-unlimited","cardText":"1 Month Membership\nExpires one month from first use\n$190.00"},
+        {"categoryLabel":"Yoga","productId":"visitor-week","cardText":"1 WEEK Visitor Unlimited Use\nExpires 7 days from first use\n$75.00"},
+        {"categoryLabel":"Yoga","productId":"annual-prepay","cardText":"1 Year Membership\nExpires 12 months from first use\n$1,450.00"},
+        {"categoryLabel":"Yoga","productId":"ten-class-card","cardText":"10 Class Card\nExpires 12 months from first use\n$250.00"},
+        {"categoryLabel":"Yoga","productId":"twenty-five-class-card","cardText":"25 Class Card\nExpires 12 months from first use\n$525.00"},
+        {"categoryLabel":"Yoga","productId":"drop-in","cardText":"Drop In Class\n$30.00"}
+      ]
+    },
+    {
       "gymId": "osm-node-6471124709",
       "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=5732277&stype=41",
       "catalogSourceUrl": "https://yogaflowsf.com/membership/",

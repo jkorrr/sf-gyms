@@ -1,6 +1,6 @@
 {
   "generatedAt": "2026-08-21",
-  "mode": "full",
+  "mode": "weekly",
   "deals": [
     {
       "id": "f3c4cb1e60d3d20611c5",
@@ -1023,6 +1023,22 @@
       "sourceUrl": "https://www.solunayogaandwellness.com/",
       "capturedAt": "2026-08-21",
       "contentHash": "74cadcf85302d759081d1a6bbaba4bb8b5afc3be0c19a02149c81c902c80f42b",
+      "reviewStatus": "pending",
+      "replacesOrdinaryPrice": false
+    },
+    {
+      "id": "e5a4dfc3b4946e1d0fa9",
+      "gymId": "osm-node-6693646146",
+      "gymName": "Bay Jiu-Jitsu San Francisco",
+      "amount": 39.0,
+      "currency": "USD",
+      "productType": "offer",
+      "cadence": "one-time",
+      "label": "Adults Jiu-Jitsu Adults: 3 Class Pack Intro",
+      "expiresAt": null,
+      "sourceUrl": "https://clients.mindbodyonline.com/classic/ws?studioid=102787&stype=41",
+      "capturedAt": "2026-08-21",
+      "contentHash": "ab84b0fa1cc07a35f253838c9e1b1a4129900d510c1dd14421be6e08528ce01b",
       "reviewStatus": "pending",
       "replacesOrdinaryPrice": false
     },

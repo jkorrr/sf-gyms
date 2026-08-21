@@ -178,12 +178,28 @@ def class_allowance(node: dict[str, Any], label: str, cadence: str) -> dict[str,
 def commitment(node: dict[str, Any], label: str, recurring: bool) -> dict[str, Any]:
     months = number(first(node, COMMITMENT_KEYS))
     if months is None:
-        match = re.search(r"\b(\d{1,2})[ -]month(?: minimum| commitment| contract)?\b", label, re.IGNORECASE)
-        months = float(match.group(1)) if match else None
+        explicit_minimum = re.search(
+            r"\b(?:(\d{1,2})[ -]months?\s+(?:minimum|commitment|contract)"
+            r"|(?:minimum|commitment|contract)(?:\s+of)?\s+(\d{1,2})[ -]months?)\b",
+            label,
+            re.IGNORECASE,
+        )
+        months = float(next(value for value in explicit_minimum.groups() if value)) if explicit_minimum else None
     if months:
         return {"type": "fixed-term", "minimumMonths": int(months)}
     if recurring and re.search(r"\b(?:month[ -]to[ -]month|no commitment|cancel anytime)\b", label, re.IGNORECASE):
         return {"type": "month-to-month", "minimumMonths": None}
+    if months is None:
+        renewal_term = re.search(
+            r"\b(?:every\s+month\s+for|auto[ -]?renews?\s+every)\s+(\d{1,2})[ -]months?\b",
+            label,
+            re.IGNORECASE,
+        )
+        generic_term = re.search(r"\b(\d{1,2})[ -]months?\b", label, re.IGNORECASE)
+        match = renewal_term or generic_term
+        months = float(match.group(1)) if match else None
+    if months:
+        return {"type": "fixed-term", "minimumMonths": int(months)}
     return {"type": "unknown" if recurring else "none", "minimumMonths": None}
 
 
@@ -949,7 +965,11 @@ def mindbody_contract_candidates(
         })
     allowance = class_allowance({}, label, cadence)
     unlimited = bool(re.search(r"\bunlimited\b", label, re.IGNORECASE))
-    multi_location = bool(re.search(r"\b(?:all studios|all locations)\b", combined, re.IGNORECASE))
+    multi_location = bool(re.search(
+        r"\b(?:all studios|all (?:gym )?locations|any .{0,40} locations?|either (?:the )?.{0,40} locations?)\b",
+        combined,
+        re.IGNORECASE,
+    ))
     location = " ".join(text(location_label).split())[:160]
     aliases: list[str] = []
     allowance_count = allowance.get("count") if isinstance(allowance, dict) else None
@@ -959,13 +979,28 @@ def mindbody_contract_candidates(
         aliases.extend([f"membership-{count}", f"{number_words.get(count, count)}-monthly"])
     if unlimited:
         aliases.extend(["membership-unlimited", "unlimited-monthly"])
+    if re.search(r"\bauto[ -]?pay\b", combined, re.IGNORECASE):
+        aliases.append("monthly-autopay")
     if unlimited:
         access_scope = "Unlimited classes across all studios" if multi_location else "Unlimited classes at the selected studio"
     elif allowance_count is not None:
         access_scope = f"{int(allowance_count)} classes per month at the selected studio"
     else:
         access_scope = label
-    eligibility_type = "new-client" if label_promotion else "standard-adult"
+    youth_plan = bool(re.search(r"\b(?:kids?|youth|teen)\b", label, re.IGNORECASE))
+    couples_plan = bool(re.search(r"\b(?:couples?|family|household)\b", label, re.IGNORECASE))
+    eligibility_type = (
+        "new-client" if label_promotion
+        else "youth" if youth_plan
+        else "couples-only" if couples_plan
+        else "standard-adult"
+    )
+    eligibility_restrictions = (
+        ["Promotional contract"] if label_promotion
+        else ["Youth-only contract"] if youth_plan
+        else ["Couples, family, or household contract"] if couples_plan
+        else []
+    )
     base_candidate = {
         "sourceProductId": text(source_product_id),
         "sourceProductAliases": aliases,
@@ -983,12 +1018,12 @@ def mindbody_contract_candidates(
         "promotion": {"isPromotion": label_promotion, "label": label if label_promotion else ""},
         "eligibility": {
             "type": eligibility_type,
-            "restrictions": ["Promotional contract"] if label_promotion else [],
+            "restrictions": eligibility_restrictions,
         },
         "commitment": commitment({}, combined, True),
         "fees": fees,
         "locations": [location] if location else [],
-        "ordinaryUse": not label_promotion,
+        "ordinaryUse": eligibility_type == "standard-adult",
         "bestValueLabel": bool(BEST_VALUE_RE.search(combined)),
         "purchaseMethod": "direct-public",
         "method": "rendered-mindbody-contract",
