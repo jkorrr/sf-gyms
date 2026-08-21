@@ -304,6 +304,230 @@ class OfficialCrawlerTests(unittest.TestCase):
         self.assertEqual(observations[0]["kind"], "range")
         self.assertFalse(attempts[0]["priceChangeOver20Percent"])
 
+    def test_selected_plan_price_audit_ignores_more_expensive_alternatives(self) -> None:
+        gym = {
+            "id": "multi-plan",
+            "monthlyPrice": 30,
+            "selectedPlanId": "multi-plan:plan:silver",
+            "priceSourceUrl": "https://operator.example/pricing",
+            "plans": [{
+                "id": "multi-plan:plan:silver", "sourceProductId": "silver", "name": "Silver Monthly",
+                "billing": {"amount": 30, "normalizedMonthly": 30},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Silver Monthly"},
+            }],
+        }
+        observations = [
+            {"gymId": "multi-plan", "sourceUrl": "https://operator.example/pricing", "sourceProductId": "silver",
+             "name": "Silver Monthly", "amount": 30, "cadence": "month", "promotion": {"isPromotion": False}},
+            {"gymId": "multi-plan", "sourceUrl": "https://operator.example/pricing", "sourceProductId": "platinum",
+             "name": "Platinum Monthly", "amount": 90, "cadence": "month", "promotion": {"isPromotion": False}},
+        ]
+
+        audit = crawler.audit_selected_plan_price(gym, observations)
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "source-product-id")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 30)
+
+    def test_selected_plan_price_audit_normalizes_four_week_billing(self) -> None:
+        gym = {
+            "id": "four-week-plan",
+            "monthlyPrice": 130,
+            "selectedPlanId": "four-week-plan:plan:basic",
+            "plans": [{
+                "id": "four-week-plan:plan:basic", "sourceProductId": "basic", "name": "Basic",
+                "billing": {"amount": 120, "normalizedMonthly": 130},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Basic"},
+            }],
+        }
+        observations = [{
+            "gymId": "four-week-plan", "sourceUrl": "https://operator.example/pricing",
+            "sourceProductId": "basic", "name": "Basic", "amount": 120, "cadence": "4 weeks",
+            "promotion": {"isPromotion": False},
+        }]
+
+        audit = crawler.audit_selected_plan_price(gym, observations)
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 130)
+
+    def test_selected_plan_price_audit_flags_only_a_matched_current_change(self) -> None:
+        gym = {
+            "id": "changed-plan",
+            "monthlyPrice": 100,
+            "selectedPlanId": "changed-plan:plan:basic",
+            "plans": [{
+                "id": "changed-plan:plan:basic", "sourceProductId": "basic", "name": "Basic",
+                "billing": {"amount": 100, "normalizedMonthly": 100},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Basic"},
+            }],
+        }
+        observations = [{
+            "gymId": "changed-plan", "sourceUrl": "https://operator.example/pricing",
+            "sourceProductId": "basic", "name": "Basic", "amount": 125, "cadence": "month",
+            "promotion": {"isPromotion": False},
+        }]
+        attempts = [
+            {"gymId": "changed-plan", "url": "https://operator.example/", "reviewedSeedCount": 2,
+             "requiresReview": False, "priceChangeOver20Percent": True},
+            {"gymId": "changed-plan", "url": "https://operator.example/pricing", "linkedFrom": "reviewed-record",
+             "requiresReview": False, "priceChangeOver20Percent": False},
+        ]
+
+        crawler.reconcile_selected_plan_price_audits([gym], attempts, observations)
+
+        self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "changed-over-20-percent")
+        self.assertFalse(attempts[0]["priceChangeOver20Percent"])
+        self.assertTrue(attempts[1]["priceChangeOver20Percent"])
+        self.assertEqual(attempts[1]["priceChangeEvidence"]["candidateNormalizedMonthly"], 125)
+
+    def test_selected_plan_price_audit_fails_closed_on_current_variant_conflict(self) -> None:
+        gym = {
+            "id": "variant-plan",
+            "monthlyPrice": 100,
+            "selectedPlanId": "variant-plan:plan:basic",
+            "plans": [{
+                "id": "variant-plan:plan:basic", "sourceProductId": "basic", "name": "Basic",
+                "billing": {"amount": 100, "normalizedMonthly": 100},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Basic"},
+            }],
+        }
+        observations = [
+            {"gymId": "variant-plan", "sourceUrl": "https://operator.example/pricing", "sourceProductId": "basic",
+             "name": "Basic", "amount": 125, "cadence": "month", "promotion": {"isPromotion": False}},
+            {"gymId": "variant-plan", "sourceUrl": "https://operator.example/pricing", "sourceProductId": "basic",
+             "name": "Basic", "amount": 140, "cadence": "month", "promotion": {"isPromotion": False}},
+        ]
+        attempts = [{
+            "gymId": "variant-plan", "url": "https://operator.example/pricing", "reviewedSeedCount": 1,
+            "requiresReview": False, "priceChangeOver20Percent": True,
+        }]
+
+        crawler.reconcile_selected_plan_price_audits([gym], attempts, observations)
+
+        self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "ambiguous-current-variants")
+        self.assertFalse(attempts[0]["priceChangeOver20Percent"])
+        self.assertTrue(attempts[0]["requiresReview"])
+        self.assertFalse(attempts[0]["requiresReviewBeforePriceAudit"])
+
+        crawler.reconcile_selected_plan_price_audits([gym], attempts, observations[:1])
+
+        self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "changed-over-20-percent")
+        self.assertTrue(attempts[0]["requiresReview"])
+        self.assertFalse(attempts[0]["requiresReviewBeforePriceAudit"])
+
+        observations[0]["amount"] = 100
+        crawler.reconcile_selected_plan_price_audits([gym], attempts, observations[:1])
+
+        self.assertEqual(attempts[0]["selectedPlanPriceAuditStatus"], "matched-within-threshold")
+        self.assertFalse(attempts[0]["requiresReview"])
+        self.assertNotIn("requiresReviewBeforePriceAudit", attempts[0])
+
+    def test_selected_plan_label_match_rejects_multi_price_visible_snippet(self) -> None:
+        selected = {"name": "Unlimited Month-to-Month", "sourceProductId": ""}
+        candidate = {
+            "rawLabel": "Unlimited $180, Unlimited $200, Part-Time Membership $140 per month",
+            "sourceProductId": "",
+        }
+
+        self.assertIsNone(crawler.selected_plan_candidate_match(selected, candidate))
+
+    def test_selected_plan_price_audit_rejects_add_on_with_same_plan_name(self) -> None:
+        gym = {
+            "id": "core-access",
+            "monthlyPrice": 165,
+            "selectedPlanId": "core-access:plan:core",
+            "plans": [{
+                "id": "core-access:plan:core", "sourceProductId": "core", "name": "Core Access",
+                "billing": {"amount": 165, "normalizedMonthly": 165},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Core Access"},
+            }],
+        }
+        observations = [{
+            "gymId": "core-access", "sourceUrl": "https://operator.example/pricing",
+            "rawLabel": "Additional fee: Core Access for just $50/month", "amount": 50,
+            "cadence": "month", "promotion": {"isPromotion": False},
+        }]
+
+        audit = crawler.audit_selected_plan_price(gym, observations)
+
+        self.assertEqual(audit["status"], "selected-plan-not-observed")
+
+    def test_selected_plan_price_audit_matches_adult_month_to_month_facets(self) -> None:
+        gym = {
+            "id": "adult-membership",
+            "monthlyPrice": 250,
+            "selectedPlanId": "adult-membership:plan:monthly",
+            "plans": [{
+                "id": "adult-membership:plan:monthly", "sourceProductId": "monthly",
+                "name": "Adult Month-to-Month", "billing": {"amount": 250, "normalizedMonthly": 250},
+                "evidence": {"url": "https://operator.example/join", "rawLabel": "Adult Month-to-Month"},
+            }],
+        }
+        observations = [
+            {"gymId": "adult-membership", "sourceUrl": "https://operator.example/join",
+             "rawLabel": "Additional children $125/mo", "amount": 125, "cadence": "month",
+             "promotion": {"isPromotion": False}},
+            {"gymId": "adult-membership", "sourceUrl": "https://operator.example/join",
+             "rawLabel": "Month-to-month contract. Adult Membership $220/mo", "amount": 220,
+             "cadence": "month", "promotion": {"isPromotion": False}},
+        ]
+
+        audit = crawler.audit_selected_plan_price(gym, observations)
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "plan-facets")
+        self.assertEqual(audit["candidateNormalizedMonthly"], 220)
+
+    def test_selected_plan_price_audit_rejects_unlimited_alternative(self) -> None:
+        selected = {
+            "name": "3x Weekly Month-to-Month", "sourceProductId": "",
+            "classAllowance": {"count": 3, "period": "week", "unlimited": False},
+        }
+        candidate = {
+            "rawLabel": "Unlimited memberships — Month-to-Month $320/month", "sourceProductId": "",
+            "classAllowance": {"count": None, "period": "month", "unlimited": True},
+        }
+
+        self.assertIsNone(crawler.selected_plan_candidate_match(selected, candidate))
+
+    def test_selected_plan_match_ignores_attached_setup_fee_amount(self) -> None:
+        selected = {
+            "name": "1x/Week Reservation Plan", "sourceProductId": "",
+            "classAllowance": {"count": 1, "period": "week", "unlimited": False},
+        }
+        candidate = {
+            "rawLabel": "+$75 setup 1x Per Week $129.00 / month", "amount": 129,
+            "sourceProductId": "",
+        }
+
+        match = crawler.selected_plan_candidate_match(selected, candidate)
+
+        self.assertEqual(match[1], "distinctive-label-tokens")
+
+    def test_selected_plan_price_audit_can_reconfirm_by_amount_and_allowance(self) -> None:
+        gym = {
+            "id": "partner-plan",
+            "monthlyPrice": 490,
+            "selectedPlanId": "partner-plan:plan:eight",
+            "plans": [{
+                "id": "partner-plan:plan:eight", "sourceProductId": "eight", "name": "Partner Membership",
+                "classAllowance": {"count": 8, "period": "month", "unlimited": False},
+                "billing": {"amount": 490, "normalizedMonthly": 490},
+                "evidence": {"url": "https://operator.example/pricing", "rawLabel": "Partner Membership"},
+            }],
+        }
+        observations = [{
+            "gymId": "partner-plan", "sourceUrl": "https://operator.example/pricing",
+            "rawLabel": "Pricing: 8 sessions/month $490/month", "amount": 490, "cadence": "month",
+            "classAllowance": {"count": 8, "period": "month"}, "promotion": {"isPromotion": False},
+        }]
+
+        audit = crawler.audit_selected_plan_price(gym, observations)
+
+        self.assertEqual(audit["status"], "matched-within-threshold")
+        self.assertEqual(audit["matchMethod"], "amount-and-class-allowance")
+
     def test_worker_error_isolated_as_review_attempt(self) -> None:
         gym = {"id": "broken", "name": "Broken Gym", "officialUrl": "https://broken.example/"}
 

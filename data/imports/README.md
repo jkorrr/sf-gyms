@@ -92,6 +92,12 @@ The GitHub Actions workflow starts at `01:17`, `07:17`, `13:17`, and `19:17 UTC`
 
 Verified observations are considered stale after 35 days unless reconfirmed. Approved deal cards require evidence no more than seven days old. Private operator confirmations remain current for 90 days. The local inquiry worker will not resubmit the same approved form for 180 days.
 
+Price-change review is selected-plan-aware: the crawler matches a current public product ID, plan card, or conservative plan signature to the published `selectedPlanId`, normalizes its original cadence, and ignores premium alternatives, promotions, savings arithmetic, add-ons, and plan-linked fees. Recompute those alerts from retained evidence without making network requests or changing the original crawl/deal run metadata:
+
+```powershell
+python data/imports/crawl_official_sources.py --reconcile-only --date YYYY-MM-DD
+```
+
 ## Approval-gated pricing inquiries
 
 `contact_research.py` is intentionally local-only and is not called by GitHub Actions. Discovery renders gated/unresolved operator pages without filling a field and writes only form metadata, consent labels, and hashes:

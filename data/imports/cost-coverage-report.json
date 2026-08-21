@@ -677,6 +677,10 @@
       "identity-session-reset-required": 2,
       "platform-security-check": 31
     },
+    "selectedPlanPriceAuditStatusCounts": {
+      "matched-within-threshold": 52,
+      "selected-plan-not-observed": 104
+    },
     "reviewCandidatePages": 299,
     "linkedStorefrontRequests": 978,
     "renderedRequests": 321,
@@ -685,7 +689,7 @@
       "captcha-required": 3,
       "platform-security-check": 31
     },
-    "priceChangeFlags": 30,
+    "priceChangeFlags": 0,
     "allReviewedSeedsGoneFlags": 2
   },
   "publicSourceDiscoverySummary": {
