@@ -28,6 +28,36 @@ def gym(identifier: str, name: str, monthly: float | None, **extra: object) -> d
 
 
 class CostCoverageTests(unittest.TestCase):
+    def test_enrichment_is_idempotent_for_fixed_date(self) -> None:
+        value = gym("stable", "Stable Gym", 80, dayPassPrice=25)
+        value["planOffers"] = [{
+            "sourceProductId": "basic",
+            "name": "Basic Membership",
+            "amount": 80,
+            "billingInterval": "month",
+            "commitmentType": "month-to-month",
+            "fees": [],
+        }]
+        value["dropInOffers"] = [{
+            "sourceProductId": "single-visit",
+            "name": "Single Visit",
+            "amount": 25,
+            "billingInterval": "one-time",
+            "commitmentType": "none",
+            "fees": [],
+        }]
+
+        first_document, first_report, first_review = coverage.enrich_document(
+            {"_meta": {}, "gyms": [value]}, "2026-08-21"
+        )
+        second_document, second_report, second_review = coverage.enrich_document(
+            first_document, "2026-08-21"
+        )
+
+        self.assertEqual(second_document, first_document)
+        self.assertEqual(second_report, first_report)
+        self.assertEqual(second_review, first_review)
+
     def test_classifies_public_and_outdoor_assets_separately(self) -> None:
         public = gym("public", "Richmond Recreation Center", None)
         equipment = gym("equipment", "CHIN-UP", None)
@@ -562,6 +592,31 @@ class CostCoverageTests(unittest.TestCase):
         self.assertEqual(context["normalizedMonthlyLow"], 238.33)
         self.assertEqual(context["conflictFlags"], ["duplicate-contradictory-terms"])
         self.assertTrue(report["publicationChecks"]["costContextNeverLeaksIntoVerifiedFields"])
+
+    def test_catalog_coverage_reports_selected_only_price_as_reconstruction_priority(self) -> None:
+        selected_only = gym("selected-only", "Selected Only Gym", 99)
+        full = gym("full", "Full Catalog Gym", 119)
+        full["planOffers"] = [{
+            "sourceProductId": "basic",
+            "name": "Basic Membership",
+            "amount": 119,
+            "billingInterval": "month",
+            "billingIntervalCount": 1,
+            "productType": "membership",
+            "accessScope": "Normal gym access",
+            "eligibility": {"type": "standard-adult", "restrictions": []},
+            "promotion": {"isPromotion": False, "label": "", "expiresAt": None},
+            "fees": [],
+            "evidence": {"url": "https://example.com/full", "observedAt": "2026-08-21", "source": "Official", "method": "fixture", "rawLabel": "Basic Membership"},
+        }]
+        document, report, _review = coverage.enrich_document({"_meta": {}, "gyms": [selected_only, full]}, "2026-08-21")
+        self.assertEqual(len(document["gyms"]), 2)
+        queue = report["catalogReconstructionQueue"]
+        self.assertEqual(queue["publiclyPricedCommercialListings"], 2)
+        self.assertEqual(queue["reconstructedRelevantCatalogListings"], 1)
+        self.assertEqual(queue["reconstructedRelevantCatalogCoverage"], 0.5)
+        self.assertEqual([item["id"] for item in queue["priorityRecords"]], ["selected-only"])
+        self.assertFalse(report["releaseGates"]["commercialCatalogCoverageAtLeast90Percent"])
 
     def test_selected_only_catalog_does_not_invent_typical_or_highest_access(self) -> None:
         document, _report, _review = coverage.enrich_document({"_meta": {}, "gyms": [gym("legacy", "Legacy Gym", 99)]}, "2026-08-19")

@@ -29,6 +29,10 @@ DATA_SF_ENDPOINT = "https://data.sfgov.org/resource/g8m3-pdis.json"
 DATA_SF_DATASET_URL = "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data"
 USER_AGENT = "sf-gyms-public-research/1.0 (+https://github.com/jkorrr/sf-gyms)"
 GENERIC_NAMES = {"gym", "fitness center", "fitness centre", "hot yoga", "body curl", "leg stretch", "hand walk", "hop kick", "vault bar"}
+FITNESS_NAME_TOKENS = {
+    "barre", "boxing", "crossfit", "dojo", "fitness", "gym", "gymnastics", "jiu", "karate",
+    "martial", "pilates", "strength", "taekwondo", "training", "wellness", "wushu", "yoga",
+}
 
 
 def text(value: Any) -> str:
@@ -42,6 +46,30 @@ def normalized(value: Any) -> str:
 def address_number(value: Any) -> str:
     match = re.search(r"\b(\d{1,6})\b", text(value))
     return match.group(1) if match else ""
+
+
+def canonical_street(value: Any) -> str:
+    """Return a conservative unit/ZIP-insensitive numbered street key."""
+
+    street = normalized(text(value).split(",", 1)[0])
+    replacements = {
+        r"\bfirst\b": "1st",
+        r"\bsecond\b": "2nd",
+        r"\bthird\b": "3rd",
+        r"\bfourth\b": "4th",
+        r"\bfifth\b": "5th",
+        r"\bstreet\b": "st",
+        r"\bavenue\b": "ave",
+        r"\bboulevard\b": "blvd",
+        r"\broad\b": "rd",
+        r"\bdrive\b": "dr",
+        r"\blane\b": "ln",
+        r"\bplace\b": "pl",
+    }
+    for pattern, replacement in replacements.items():
+        street = re.sub(pattern, replacement, street)
+    street = re.sub(r"\b(?:suite|ste|unit|floor|fl|level)\b.*$", "", street).strip()
+    return re.sub(r"\s+", " ", street)
 
 
 def identity_score(listing: dict[str, Any], business: dict[str, Any]) -> float:
@@ -72,7 +100,8 @@ def parse_date(value: Any) -> date | None:
 
 
 def status_signal(business: dict[str, Any], today: date) -> str:
-    admin_closed = normalized(business.get("administratively_closed")) in {"true", "yes", "y", "1"}
+    admin_value = normalized(business.get("administratively_closed"))
+    admin_closed = admin_value in {"true", "yes", "y", "1"} or "administratively closed" in admin_value
     end_dates = [parse_date(business.get(field)) for field in ("location_end_date", "dba_end_date")]
     ended = any(value is not None and value <= today for value in end_dates)
     if admin_closed or ended:
@@ -84,8 +113,19 @@ def status_signal(business: dict[str, Any], today: date) -> str:
 
 def query_url(name: str, limit: int = 25) -> str:
     params = {
-        "$select": "uniqueid,dba_name,full_business_address,business_zip,dba_start_date,dba_end_date,location_start_date,location_end_date,administratively_closed",
+        "$select": "uniqueid,certificate_number,ownership_name,dba_name,full_business_address,business_zip,dba_start_date,dba_end_date,location_start_date,location_end_date,administratively_closed,self_reported_naics_code,data_as_of",
         "$q": name,
+        "$limit": str(limit),
+    }
+    return f"{DATA_SF_ENDPOINT}?{urlencode(params)}"
+
+
+def query_address_url(address: str, limit: int = 50) -> str:
+    """Search the registry by numbered street to surface renamed/replacement operators."""
+
+    params = {
+        "$select": "uniqueid,certificate_number,ownership_name,dba_name,full_business_address,business_zip,dba_start_date,dba_end_date,location_start_date,location_end_date,administratively_closed,self_reported_naics_code,data_as_of",
+        "$q": canonical_street(address),
         "$limit": str(limit),
     }
     return f"{DATA_SF_ENDPOINT}?{urlencode(params)}"
@@ -102,7 +142,61 @@ def fetch_json(url: str, timeout: float) -> tuple[str, list[dict[str, Any]]]:
         return "network-error", []
 
 
-def research_listing(listing: dict[str, Any], rows: list[dict[str, Any]], today: date) -> dict[str, Any]:
+def is_fitness_business(business: dict[str, Any]) -> bool:
+    naics = normalized(business.get("self_reported_naics_code")).replace(" ", "")
+    if naics.startswith("713940"):
+        return True
+    tokens = set(normalized(f"{text(business.get('dba_name'))} {text(business.get('ownership_name'))}").split())
+    return bool(tokens & FITNESS_NAME_TOKENS)
+
+
+def replacement_candidates(listing: dict[str, Any], rows: list[dict[str, Any]], today: date) -> list[dict[str, Any]]:
+    """Return exact-address current fitness identities for reviewed replacement decisions.
+
+    Different names at one address are never merged automatically. This queue is
+    specifically for human review of stale OSM/directory identities.
+    """
+
+    listing_street = canonical_street(listing.get("address"))
+    if not re.search(r"\d", listing_street):
+        return []
+    candidates: list[dict[str, Any]] = []
+    seen: set[tuple[str, str]] = set()
+    for row in rows:
+        business_street = canonical_street(row.get("full_business_address"))
+        if business_street != listing_street or status_signal(row, today) == "closed-signal":
+            continue
+        if not is_fitness_business(row) or identity_score(listing, row) >= 0.78:
+            continue
+        key = (normalized(row.get("dba_name")), text(row.get("uniqueid")))
+        if key in seen:
+            continue
+        seen.add(key)
+        candidates.append(
+            {
+                "dbaName": text(row.get("dba_name")),
+                "ownershipName": text(row.get("ownership_name")),
+                "address": text(row.get("full_business_address")),
+                "postalCode": text(row.get("business_zip")),
+                "naicsCode": text(row.get("self_reported_naics_code")),
+                "businessStartDate": text(row.get("dba_start_date")),
+                "locationStartDate": text(row.get("location_start_date")),
+                "statusSignal": status_signal(row, today),
+                "sourceRecordId": text(row.get("uniqueid")),
+                "certificateNumber": text(row.get("certificate_number")),
+                "dataAsOf": text(row.get("data_as_of")),
+                "autoApply": False,
+            }
+        )
+    return candidates
+
+
+def research_listing(
+    listing: dict[str, Any],
+    rows: list[dict[str, Any]],
+    today: date,
+    address_rows: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     ranked = sorted(((identity_score(listing, row), row) for row in rows), key=lambda item: item[0], reverse=True)
     matches = []
     for score, row in ranked[:5]:
@@ -123,7 +217,10 @@ def research_listing(listing: dict[str, Any], rows: list[dict[str, Any]], today:
                 "sourceRecordId": text(row.get("uniqueid")),
             }
         )
-    if not matches:
+    replacements = replacement_candidates(listing, address_rows or [], today)
+    if replacements and (not matches or matches[0]["score"] < 0.78):
+        disposition = "possible-replacement-review"
+    elif not matches:
         disposition = "no-match"
     elif matches[0]["score"] >= 0.78 and (len(matches) == 1 or matches[0]["score"] - matches[1]["score"] >= 0.08):
         disposition = "strong-match-review"
@@ -136,12 +233,18 @@ def research_listing(listing: dict[str, Any], rows: list[dict[str, Any]], today:
         "query": listing["name"],
         "disposition": disposition,
         "matches": matches,
+        "replacementCandidates": replacements,
         "sourceUrl": DATA_SF_DATASET_URL,
         "autoApply": False,
     }
 
 
-def manual_search_record(listing: dict[str, Any], gym: dict[str, Any], operator_urls: dict[str, list[str]]) -> dict[str, Any]:
+def manual_search_record(
+    listing: dict[str, Any],
+    gym: dict[str, Any],
+    operator_urls: dict[str, list[str]],
+    replacements: list[dict[str, Any]] | None = None,
+) -> dict[str, Any]:
     name = text(listing.get("name"))
     address = text(listing.get("address"))
     operator = text(gym.get("operatorKey"))
@@ -158,6 +261,7 @@ def manual_search_record(listing: dict[str, Any], gym: dict[str, Any], operator_
         "likelyOperator": operator,
         "queries": queries,
         "sameOperatorOfficialUrls": operator_urls.get(operator, [])[:8],
+        "registryReplacementCandidates": replacements or [],
         "reviewInstructions": "Locate the operator-owned location or pricing page. Aggregators may be leads only; approve no fact without an official page or linked operator-owned public storefront.",
     }
 
@@ -200,14 +304,29 @@ def main() -> int:
         cached = cache.get(key, {})
         fetched_at = parse_date(cached.get("fetchedAt"))
         if not args.refresh and fetched_at and today - fetched_at <= timedelta(days=30):
-            status, rows = "cached", cached.get("rows", [])
+            status, rows = "cached", cached.get("nameRows", cached.get("rows", []))
+            address_status, address_rows = "cached", cached.get("addressRows", [])
         else:
             status, rows = fetch_json(query_url(name), args.timeout)
             request_count += 1
-            if status == "fetched":
-                cache[key] = {"fetchedAt": today.isoformat(), "rows": rows}
+            address_status, address_rows = "skipped-no-numbered-address", []
+            if re.search(r"\d", canonical_street(listing.get("address"))):
+                address_status, address_rows = fetch_json(query_address_url(text(listing.get("address"))), args.timeout)
+                request_count += 1
+            if status == "fetched" or address_status == "fetched":
+                cache[key] = {
+                    "fetchedAt": today.isoformat(),
+                    "nameRows": rows if status == "fetched" else [],
+                    "addressRows": address_rows if address_status == "fetched" else [],
+                }
             time.sleep(0.2)
-        observations.append({**research_listing(listing, rows, today), "fetchStatus": status})
+        observations.append(
+            {
+                **research_listing(listing, rows, today, address_rows),
+                "fetchStatus": status,
+                "addressFetchStatus": address_status,
+            }
+        )
     output = {
         "generatedAt": today.isoformat(),
         "source": DATA_SF_DATASET_URL,
@@ -216,13 +335,22 @@ def main() -> int:
         "requests": request_count,
         "dispositionCounts": {
             key: sum(item["disposition"] == key for item in observations)
-            for key in ("strong-match-review", "ambiguous-match-review", "no-match")
+            for key in ("strong-match-review", "possible-replacement-review", "ambiguous-match-review", "no-match")
         },
         "observations": observations,
     }
     save_json(CACHE_PATH, cache)
     save_json(OBSERVATIONS_PATH, output)
-    manual_records = [manual_search_record(listing, gyms_by_id.get(text(listing.get("id")), {}), operator_urls) for listing in listings]
+    observations_by_id = {text(item.get("gymId")): item for item in observations}
+    manual_records = [
+        manual_search_record(
+            listing,
+            gyms_by_id.get(text(listing.get("id")), {}),
+            operator_urls,
+            observations_by_id.get(text(listing.get("id")), {}).get("replacementCandidates", []),
+        )
+        for listing in listings
+    ]
     save_json(
         MANUAL_SEARCH_PATH,
         {

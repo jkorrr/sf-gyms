@@ -1080,8 +1080,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -2188,37 +2188,6 @@
       ]
     },
     {
-      "id": "osm-node-4238377195",
-      "name": "Classical Pilates Studio",
-      "address": "2636 Ocean Avenue, San Francisco, CA 94132",
-      "websiteUrl": "",
-      "entityKind": "studio",
-      "modality": "pilates-lagree-barre",
-      "pricingStatus": "unresolved",
-      "pricingBlocker": "No current official operator website or public booking storefront was verified for this location.",
-      "estimatedMonthly": null,
-      "reportedMonthly": null,
-      "priceReports": [],
-      "publicationStatus": "publish",
-      "planValidationErrors": [],
-      "selectedPlanId": null,
-      "catalogStatus": {
-        "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
-        },
-        "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
-        }
-      },
-      "discoveryStatus": "needs-official-site",
-      "crawlStatus": "not-applicable",
-      "sourceAttemptStatus": "reviewed-source-attempt",
-      "sourceAttemptBlocker": "",
-      "crawlAttempts": []
-    },
-    {
       "id": "osm-node-10917024236",
       "name": "Club Pilates SOMA",
       "address": "635 8th Street, San Francisco, CA 94103",
@@ -3207,8 +3176,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -3332,8 +3301,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6343,12 +6312,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -6804,8 +6773,8 @@
           "reason": "Reviewed source offers are retained before deterministic selection."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7329,8 +7298,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -7728,8 +7697,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -7807,8 +7776,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -9191,12 +9160,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10406,8 +10375,8 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
           "status": "none",
@@ -10799,12 +10768,12 @@
       "selectedPlanId": null,
       "catalogStatus": {
         "plans": {
-          "status": "none",
-          "reason": "No public recurring or package catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10840,8 +10809,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10882,8 +10851,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10924,8 +10893,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -10966,8 +10935,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",
@@ -11008,8 +10977,8 @@
           "reason": "Only the reviewed selected price was available in the legacy input; alternative plans still require source reconstruction."
         },
         "dropIns": {
-          "status": "none",
-          "reason": "No ordinary public single-visit or single-class catalog was verified."
+          "status": "selected-only",
+          "reason": "Only the reviewed selected visit price was available in the legacy input; alternative visit products still require source reconstruction."
         }
       },
       "discoveryStatus": "official-page-present",

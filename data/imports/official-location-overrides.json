@@ -1,7 +1,7 @@
 {
   "_meta": {
-    "observedAt": "2026-08-17",
-    "methodology": "Manual identity/status corrections backed by current official operator locators. Suppressions remove stale or incomplete aliases, not distinct verified locations."
+    "observedAt": "2026-08-21",
+    "methodology": "Manual identity/status corrections backed by current official operator locators, exact-address SF business registrations, and source-history review. Suppressions remove stale or incomplete aliases, not distinct verified locations."
   },
   "distinctPairs": [
     {"leftId": "osm-node-5270986784", "rightId": "osm-way-545151976", "reason": "Hamilton Pool and Hamilton Recreation Center are distinct access products within the same complex."}
@@ -101,7 +101,28 @@
     {"id": "osm-node-10874914162", "action": "suppress", "reason": "The current official studioDetails payload marks Orangetheory Mission Bay permanently closed; generic coming-soon template copy and stale product data are not treated as current.", "sourceUrl": "https://www.orangetheory.com/en-us/locations/san-francisco-california-0455"},
     {"id": "osm-way-981481297", "action": "suppress", "reason": "Point Bonita is absent from the current YMCA branch locator, is outside San Francisco, and the National Park Service describes it as an outdoor-education and retreat facility rather than an ordinary consumer gym.", "sourceUrl": "https://www.nps.gov/places/000/point-bonita-ymca.htm"},
     {"id": "osm-node-6496135009", "action": "update", "name": "Live Fit Gym Elite Training", "address": "675 Valencia Street, San Francisco, CA 94110", "websiteUrl": "https://lfgelitetraining.com/", "recordStatus": "open", "entityKindOverride": "studio", "accessModelOverride": "restricted", "modalityOverride": "personal-training", "accessAvailability": "members-only", "pricingAccess": "form-required", "reason": "The official operator describes appointment- and invitation-based one-to-one and four-to-one coaching, not an ordinary full-service Live Fit membership.", "sourceUrl": "https://lfgelitetraining.com/group-class/"},
-    {"id": "osm-node-4238377195", "action": "update", "address": "2636 Ocean Avenue, San Francisco, CA 94132", "recordStatus": "open", "pricingAccess": "official-operator-unverified", "entityKindOverride": "studio", "accessModelOverride": "class-pack", "modalityOverride": "pilates-lagree-barre", "reason": "A current operator-owned co-tenant page confirms Classical Pilates Studio at this address, but no direct operator page exists and Fitness2Function is retained as a distinct same-address operator.", "sourceUrl": "https://oceanmyofascialrelease.com/office-locations"},
+    {
+      "id": "osm-node-4238377195",
+      "action": "suppress",
+      "canonicalId": "web-23d7cf590fcf77",
+      "reason": "Reviewed stale-alias decision: the OSM identity was created in 2016 and received no later name verification; the current 2026 SF business registry contains no Classical Pilates Studio DBA at 2636 Ocean, while Fitness2Function has been continuously registered there since 2013 and now publishes the exact-address official studio and rate card. Retain Fitness2Function as the canonical consumer listing and preserve Classical Pilates Studio only as a source alias.",
+      "sourceUrl": "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
+      "sourceUrls": [
+        "https://api.openstreetmap.org/api/0.6/node/4238377195/history.json",
+        "https://data.sfgov.org/Economy-and-Community/Registered-Business-Locations-San-Francisco/g8m3-pdis/about_data",
+        "https://fitness2function.com/",
+        "https://oceanmyofascialrelease.com/office-locations"
+      ],
+      "evidence": {
+        "osmCreatedAt": "2016-06-11T23:27:44Z",
+        "osmLastIdentityUpdateAt": "2016-06-11T23:27:44Z",
+        "registryDataAsOf": "2026-08-20T00:00:00",
+        "currentDba": "Fitness2function",
+        "currentCertificateNumber": "1115105",
+        "currentLocationStartDate": "2020-06-18T00:00:00",
+        "predecessorSoleProprietorStartDate": "2013-09-19T00:00:00"
+      }
+    },
     {"id": "osm-node-368174394", "action": "update", "name": "Koret Health and Recreation Center", "address": "2130 Fulton Street, San Francisco, CA 94117", "websiteUrl": "https://www.usfca.edu/koret", "recordStatus": "open", "entityKindOverride": "gym", "accessModelOverride": "drop-in", "modalityOverride": "institutional-recreation", "reason": "USF publishes a public adult drop-in alongside eligibility-restricted memberships; it is not a free public recreation center.", "sourceUrl": "https://www.usfca.edu/koret/membership/membership-types"},
     {"id": "web-9cd1abdefbbb83", "action": "suppress", "reason": "This building wellness center is not a generally purchasable public gym and is restricted to eligible building users and guests.", "sourceUrl": "https://activewellnesscenter.com/guest/"},
     {"id": "osm-node-4022645782", "action": "suppress", "reason": "The official operator is a performing dance company, not a generally purchasable consumer gym location.", "sourceUrl": "https://www.lilycaidance.org/"},
