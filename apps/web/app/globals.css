@@ -955,3 +955,56 @@ button { cursor: pointer; }
 @media (prefers-reduced-motion: reduce) {
   .compare-loading-dot { animation: none; }
 }
+
+/* Moderated gym experiences are deliberately separate from aggregate ratings. */
+.detail-page-experiences { grid-column: 1 / -1; }
+.experience-count {
+  flex: 0 0 auto;
+  padding: .38rem .58rem;
+  border-radius: 999px;
+  background: var(--mint);
+  color: #4f8262;
+  font-family: var(--mono-font);
+  font-size: .56rem;
+  font-weight: 800;
+  letter-spacing: .04em;
+  text-transform: uppercase;
+}
+.experience-state, .experience-empty {
+  margin: 0;
+  padding: 1rem;
+  border: 1px dashed var(--line);
+  border-radius: 14px;
+  background: var(--paper);
+  color: var(--muted);
+  font-family: var(--mono-font);
+  font-size: .66rem;
+  line-height: 1.55;
+}
+.experience-error { color: #8b4b4b; }
+.experience-empty { display: grid; gap: .35rem; }
+.experience-empty strong { color: var(--forest); font-size: .88rem; }
+.experience-empty p, .experience-empty small { margin: 0; }
+.experience-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .8rem; }
+.experience-card {
+  display: grid;
+  align-content: start;
+  gap: .75rem;
+  min-width: 0;
+  padding: 1rem;
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  background: var(--paper);
+}
+.experience-context, .experience-disclosure { margin: 0; color: var(--muted); font-family: var(--mono-font); font-size: .58rem; line-height: 1.5; }
+.experience-context { color: #4f8262; font-weight: 800; }
+.experience-signals { display: flex; flex-wrap: wrap; gap: .38rem; margin: 0; padding: 0; list-style: none; }
+.experience-signals li { padding: .38rem .52rem; border-radius: 999px; background: var(--mint); color: var(--forest); font-family: var(--mono-font); font-size: .56rem; font-weight: 700; }
+.experience-body { margin: 0; color: var(--forest); font-size: .78rem; line-height: 1.65; }
+.experience-disclosure { padding-top: .65rem; border-top: 1px solid var(--line); }
+
+@media (max-width: 680px) {
+  .detail-page-experiences { grid-column: auto; }
+  .experience-list { grid-template-columns: 1fr; }
+  .experience-count { display: none; }
+}

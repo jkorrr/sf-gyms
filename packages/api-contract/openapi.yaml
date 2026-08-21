@@ -44,6 +44,55 @@ paths:
       responses:
         '200': { description: Gym details }
         '404': { description: Gym not found }
+  /api/v1/gyms/{gym_id}/experience-reports:
+    get:
+      operationId: listGymExperienceReports
+      parameters:
+        - name: gym_id
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+        - name: cursor
+          in: query
+          schema: { type: string, maxLength: 500 }
+        - name: limit
+          in: query
+          schema: { type: integer, minimum: 1, maximum: 50, default: 10 }
+      responses:
+        '200':
+          description: Published, moderated gym experiences ordered newest first
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExperienceReportPage' }
+        '400': { description: Invalid cursor }
+    post:
+      operationId: createGymExperienceReport
+      security: [{ bearerAuth: [] }]
+      parameters:
+        - name: gym_id
+          in: path
+          required: true
+          schema: { type: string, format: uuid }
+        - $ref: '#/components/parameters/IdempotencyKey'
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema: { $ref: '#/components/schemas/ExperienceReportCreate' }
+      responses:
+        '201':
+          description: Submitted for moderation
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExperienceReportSubmission' }
+        '200':
+          description: A previously completed identical request
+          content:
+            application/json:
+              schema: { $ref: '#/components/schemas/ExperienceReportSubmission' }
+        '401': { description: Authentication required }
+        '404': { description: Gym not found }
+        '409': { description: Idempotency conflict or request still processing }
   /api/v1/me:
     get:
       operationId: getCurrentUser
@@ -84,6 +133,69 @@ components:
         - recreation_sports
         - outdoor_fitness
         - dance_movement
+    ExperienceReportCreate:
+      type: object
+      required: [visit_date, relationship]
+      properties:
+        visit_date: { type: string, format: date }
+        time_bucket:
+          type: string
+          enum: [early_morning, morning, midday, evening, late_night]
+        relationship:
+          type: string
+          enum: [member, former_member, trial, day_pass, guest, other]
+        equipment_availability:
+          type: string
+          enum: [available, short_wait, long_wait, not_available]
+        crowding:
+          type: string
+          enum: [quiet, moderate, busy, packed]
+        cleanliness:
+          type: string
+          enum: [needs_attention, acceptable, clean, exceptionally_clean]
+        value_assessment:
+          type: string
+          enum: [poor, fair, good, excellent]
+        billing_transparency:
+          type: string
+          enum: [unclear, partly_clear, clear]
+        listing_accuracy:
+          type: string
+          enum: [inaccurate, partly_accurate, accurate]
+        body: { type: string, minLength: 1, maxLength: 2000 }
+      anyOf:
+        - required: [equipment_availability]
+        - required: [crowding]
+        - required: [cleanliness]
+        - required: [value_assessment]
+        - required: [billing_transparency]
+        - required: [listing_accuracy]
+        - required: [body]
+    ExperienceReport:
+      allOf:
+        - $ref: '#/components/schemas/ExperienceReportCreate'
+        - type: object
+          required: [id, gym_location_id, published_at]
+          properties:
+            id: { type: string, format: uuid }
+            gym_location_id: { type: string, format: uuid }
+            published_at: { type: string, format: date-time }
+    ExperienceReportPage:
+      type: object
+      required: [items, demo_mode]
+      properties:
+        items:
+          type: array
+          items: { $ref: '#/components/schemas/ExperienceReport' }
+        next_cursor: { type: [string, 'null'] }
+        demo_mode: { type: boolean }
+    ExperienceReportSubmission:
+      type: object
+      required: [id, status, already_processed]
+      properties:
+        id: { type: string, format: uuid }
+        status: { type: string, enum: [pending] }
+        already_processed: { type: boolean }
   parameters:
     IdempotencyKey:
       name: Idempotency-Key

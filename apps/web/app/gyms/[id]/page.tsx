@@ -1,7 +1,9 @@
 import GymDetailActions from "../../../components/GymDetailActions";
+import GymExperienceReports from "../../../components/GymExperienceReports";
 import { basePath } from "../../../lib/config";
 import { demoGyms, venueTypeLabels } from "../../../lib/demo-data";
 import { getGymById, priceFreshnessText, priceText, safeExternalUrl } from "../../../lib/gym-detail";
+import { reviewLocationId } from "../../../lib/experience-reports";
 import { notFound } from "next/navigation";
 
 type GymPageProps = {
@@ -83,6 +85,8 @@ export default async function GymPage({ params }: GymPageProps) {
             </dl>
             <p className="detail-muted">Hours and access details can change. Confirm with the gym before visiting.</p>
           </section>
+
+          <GymExperienceReports gymLocationId={reviewLocationId(gym)} gymName={gym.name} />
 
           <section className="detail-page-card detail-page-about">
             <div className="eyebrow">About this listing</div>

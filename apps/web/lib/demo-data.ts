@@ -21,6 +21,7 @@ export const venueTypes = Object.keys(venueTypeLabels) as VenueType[];
 
 export type Gym = {
   id: string;
+  databaseId?: string;
   name: string;
   neighborhood: string;
   address: string;

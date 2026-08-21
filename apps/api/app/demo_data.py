@@ -1,9 +1,19 @@
+from datetime import UTC, date, datetime
 from decimal import Decimal
-from uuid import UUID
+from uuid import UUID, uuid4
 
 from pydantic import HttpUrl
 
-from .schemas import GymDetail, GymSummary, PriceSnapshot, VenueType
+from .schemas import (
+    ExperienceReport,
+    ExperienceReportCreate,
+    ExperienceReportPage,
+    ExperienceReportSubmission,
+    GymDetail,
+    GymSummary,
+    PriceSnapshot,
+    VenueType,
+)
 
 DEMO_GYMS: list[GymDetail] = [
     GymDetail(
@@ -102,3 +112,63 @@ class DemoGymRepository:
 
     async def get(self, gym_id: UUID) -> GymDetail | None:
         return next((gym for gym in DEMO_GYMS if gym.id == gym_id), None)
+
+
+DEMO_EXPERIENCES: list[ExperienceReport] = [
+    ExperienceReport(
+        id=UUID("aaaaaaaa-aaaa-4aaa-8aaa-aaaaaaaaaaaa"),
+        gym_location_id=UUID("11111111-1111-4111-8111-111111111111"),
+        visit_date=date(2026, 8, 12),
+        time_bucket="evening",
+        relationship="day_pass",
+        equipment_availability="short_wait",
+        crowding="busy",
+        cleanliness="clean",
+        value_assessment="good",
+        listing_accuracy="accurate",
+        body="Demo observation for exercising the read contract; it is not a real member review.",
+        published_at=datetime(2026, 8, 13, 18, 0, tzinfo=UTC),
+    )
+]
+
+
+class DemoExperienceRepository:
+    def __init__(self):
+        self._submissions: dict[
+            str,
+            tuple[UUID, ExperienceReportCreate, ExperienceReportSubmission],
+        ] = {}
+
+    async def list_published(
+        self,
+        gym_location_id: UUID,
+        *,
+        cursor: str | None,
+        limit: int,
+    ) -> ExperienceReportPage:
+        del cursor
+        items = [item for item in DEMO_EXPERIENCES if item.gym_location_id == gym_location_id]
+        return ExperienceReportPage(items=items[:limit], demo_mode=True)
+
+    async def create_pending(
+        self,
+        *,
+        gym_location_id: UUID,
+        payload: ExperienceReportCreate,
+        idempotency_key: str,
+    ) -> ExperienceReportSubmission:
+        if not any(gym.id == gym_location_id for gym in DEMO_GYMS):
+            from .experience_repository import ExperienceGymNotFoundError
+
+            raise ExperienceGymNotFoundError
+        existing = self._submissions.get(idempotency_key)
+        if existing:
+            previous_gym_id, previous_payload, previous_response = existing
+            if previous_gym_id != gym_location_id or previous_payload != payload:
+                from .experience_repository import ExperienceIdempotencyConflictError
+
+                raise ExperienceIdempotencyConflictError
+            return previous_response.model_copy(update={"already_processed": True})
+        response = ExperienceReportSubmission(id=uuid4())
+        self._submissions[idempotency_key] = (gym_location_id, payload, response)
+        return response
